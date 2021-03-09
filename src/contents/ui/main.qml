@@ -37,6 +37,10 @@ Kirigami.ApplicationWindow {
             delegate: Kirigami.BasicListItem {
                 text: model.display
             }
+            Controls.BusyIndicator {
+                anchors.centerIn: parent
+                visible: searchModel.loading
+            }
         }
     }
 }

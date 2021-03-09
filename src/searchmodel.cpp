@@ -18,10 +18,12 @@ SearchModel::SearchModel(QObject *parent)
             return;
         }
 
+        setLoading(true);
         m_ytm.search(m_searchQuery);
     });
     connect(&m_ytm, &AsyncYTMusic::searchFinished, this, [=](const std::vector<search::SearchResultItem> &results) {
         beginResetModel();
+        setLoading(false);
         m_searchResults = results;
         endResetModel();
     });
@@ -72,4 +74,15 @@ void SearchModel::setSearchQuery(const QString &searchQuery)
 {
     m_searchQuery = searchQuery;
     Q_EMIT searchQueryChanged();
+}
+
+bool SearchModel::loading() const
+{
+    return m_loading;
+}
+
+void SearchModel::setLoading(bool loading)
+{
+    m_loading = loading;
+    Q_EMIT loadingChanged();
 }
