@@ -40,13 +40,7 @@ meta::Thumbnail extract_thumbnail(const py::handle &thumbnail) {
 meta::Artist extract_meta_artist(const py::handle &artist) {
     return {
         artist["name"].cast<std::string>(),
-        [&]() -> std::optional<std::string> {
-            if (artist["id"].is_none()) {
-                return std::nullopt;
-            }
-
-            return artist["id"].cast<std::string>();
-        }()
+        artist["id"].cast<std::optional<std::string>>()
     };
 };
 
@@ -55,9 +49,9 @@ album::Track extract_album_track(const py::handle &track) {
         track["index"].cast<std::string>(),
         track["title"].cast<std::string>(),
         track["artists"].cast<std::string>(),
-        track["videoId"].cast<std::string>(),
-        track["lengthMs"].cast<std::string>(),
-        track["likeStatus"].cast<std::string>()
+        track["videoId"].cast<std::optional<std::string>>(),  // E rated songs don't have a videoId
+        track["lengthMs"].cast<std::optional<std::string>>(), //
+        track["likeStatus"].cast<std::optional<std::string>>()
     };
 }
 playlist::Track extract_playlist_track(const py::handle &track);
@@ -87,18 +81,13 @@ inline auto extract_py_list(const py::handle &obj) {
 meta::Album extract_meta_album(const py::handle &album) {
     return meta::Album {
         album["name"].cast<std::string>(),
-        album["id"].cast<std::string>()
+        album["id"].cast<std::optional<std::string>>()
     };
 }
 
 playlist::Track extract_playlist_track(const py::handle &track) {
     return {
-        [&]() -> std::optional<std::string> {
-            if (track["videoId"].is_none()) {
-                return std::nullopt;
-            }
-            return track["videoId"].cast<std::string>();
-        }(),
+        track["videoId"].cast<std::optional<std::string>>(),
         track["title"].cast<std::string>(),
         extract_py_list<meta::Artist>(track["artists"]),
         [&]() -> std::optional<meta::Album> {
@@ -109,12 +98,7 @@ playlist::Track extract_playlist_track(const py::handle &track) {
             return extract_meta_album(track["album"]);
         }(),
         track["duration"].cast<std::string>(),
-        [&]() -> std::optional<std::string> {
-            if (track["likeStatus"].is_none()) {
-                return std::nullopt;
-            }
-            return track["likeStatus"].cast<std::string>();
-        }(),
+        track["likeStatus"].cast<std::optional<std::string>>(),
         extract_py_list<meta::Thumbnail>(track["thumbnails"]),
         track["isAvailable"].cast<bool>(),
         track["isExplicit"].cast<bool>()

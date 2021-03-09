@@ -58,9 +58,25 @@ Kirigami.ApplicationWindow {
             }
             delegate: Kirigami.BasicListItem {
                 required property int index
-                required property string display
+                required property string title
+                required property int type
 
-                text: display
+                text: title
+                icon: {
+                    switch (type) {
+                    case SearchModel.Artist:
+                        return "view-media-artist"
+                    case SearchModel.Album:
+                        return "media-album-cover"
+                    case SearchModel.Playlist:
+                        return "view-media-playlist"
+                    case SearchModel.Song:
+                        return "emblem-music-symbolic"
+                    case SearchModel.Video:
+                        return "emblem-videos-symbolic"
+                    }
+                }
+
                 onClicked: searchModel.triggerItem(index)
             }
             Controls.BusyIndicator {

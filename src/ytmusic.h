@@ -19,6 +19,10 @@ struct Thumbnail {
     std::string url;
     int width;
     int height;
+
+    bool operator<(const Thumbnail other) const {
+        return height < other.height;
+    }
 };
 struct Artist {
     std::string name;
@@ -26,7 +30,7 @@ struct Artist {
 };
 struct Album {
     std::string name;
-    std::string id;
+    std::optional<std::string> id;
 };
 }
 
@@ -142,9 +146,9 @@ namespace album {
         std::string index;
         std::string title;
         std::string artists;
-        std::string video_id;
-        std::string length_ms;
-        std::string like_status;
+        std::optional<std::string> video_id;
+        std::optional<std::string> length_ms;
+        std::optional<std::string> like_status;
     };
 
     struct Album {

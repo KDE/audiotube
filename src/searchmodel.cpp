@@ -30,13 +30,13 @@ SearchModel::~SearchModel()
 
 int SearchModel::rowCount(const QModelIndex &parent) const
 {
-    return m_searchQuery.size();
+    return parent.isValid() ? 0 : m_searchResults.size();
 }
 
 QVariant SearchModel::data(const QModelIndex &index, int role) const
 {
     switch (role) {
-    case Qt::DisplayRole:
+    case Title:
         return QString::fromStdString(std::visit([&](auto&& arg) {
             using T = std::decay_t<decltype(arg)>;
             if constexpr (std::is_same_v<T, search::Album>) {
@@ -53,9 +53,34 @@ QVariant SearchModel::data(const QModelIndex &index, int role) const
                 return std::string();
             }
         }, m_searchResults.at(index.row())));
+    case Type:
+        return std::visit([&](auto&& arg) {
+            using T = std::decay_t<decltype(arg)>;
+            if constexpr (std::is_same_v<T, search::Album>) {
+                return Type::Album;
+            } else if constexpr (std::is_same_v<T, search::Artist>) {
+                return Type::Artist;
+            } else if constexpr (std::is_same_v<T, search::Playlist>) {
+                return Type::Playlist;
+            } else if constexpr (std::is_same_v<T, search::Song>) {
+                return Type::Song;
+            } else if constexpr (std::is_same_v<T, search::Video>) {
+                return Type::Video;
+            } else {
+                return std::string();
+            }
+        }, m_searchResults.at(index.row()));
     }
 
     return {};
+}
+
+QHash<int, QByteArray> SearchModel::roleNames() const
+{
+    return {
+        {Title, "title"},
+        {Type, "type"}
+    };
 }
 
 QString SearchModel::searchQuery() const

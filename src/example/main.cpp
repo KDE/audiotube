@@ -8,7 +8,7 @@
 
 int main() {
     const auto ytm = YTMusic();
-    const auto results = ytm.search("Big data");
+    const auto results = ytm.search("cage the elephant");
 
     std::cout << "Found " << results.size() << " results." << std::endl;
 

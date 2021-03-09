@@ -14,11 +14,26 @@ class SearchModel : public QAbstractListModel
     Q_PROPERTY(bool loading READ loading WRITE setLoading NOTIFY loadingChanged)
 
 public:
+    enum Type {
+        Artist,
+        Album,
+        Playlist,
+        Song,
+        Video
+    };
+    Q_ENUM(Type)
+
+    enum Role {
+        Title = Qt::UserRole + 1,
+        Type
+    };
+
     explicit SearchModel(QObject *parent = nullptr);
     ~SearchModel();
 
     int rowCount(const QModelIndex &parent) const override;
     QVariant data(const QModelIndex &index, int role) const override;
+    QHash<int, QByteArray> roleNames() const override;
 
     QString searchQuery() const;
     void setSearchQuery(const QString &searchQuery);

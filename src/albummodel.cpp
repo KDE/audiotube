@@ -14,19 +14,26 @@ AlbumModel::AlbumModel(QObject *parent)
 
         beginResetModel();
         m_album = album;
+        std::sort(m_album.thumbnails.begin(), m_album.thumbnails.end());
         endResetModel();
         Q_EMIT titleChanged();
+        Q_EMIT thumbnailUrlChanged();
     });
 }
 
 int AlbumModel::rowCount(const QModelIndex &parent) const
 {
-    return m_album.tracks.size();
+    return parent.isValid() ? 0 : m_album.tracks.size();
 }
 
 QVariant AlbumModel::data(const QModelIndex &index, int role) const
 {
-    return QString::fromStdString(m_album.tracks.at(index.row()).title);
+    switch (role) {
+    case Qt::DisplayRole:
+        return QString::fromStdString(m_album.tracks.at(index.row()).title);
+    }
+
+    return {};
 }
 
 QString AlbumModel::browseId() const
@@ -54,4 +61,15 @@ void AlbumModel::setLoading(bool loading)
 {
     m_loading = loading;
     Q_EMIT loadingChanged();
+}
+
+
+QUrl AlbumModel::thumbnailUrl() const
+{
+    if (m_album.thumbnails.empty()) {
+        return QUrl();
+    }
+
+    qDebug() << "found thumbnail";
+    return QUrl(QString::fromStdString(m_album.thumbnails.back().url));
 }

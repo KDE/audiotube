@@ -10,12 +10,18 @@ Kirigami.ScrollablePage {
     title: albumModel.title
 
     ListView {
+        header: Kirigami.ItemViewHeader {
+            backgroundImage.source: albumModel.thumbnailUrl
+            title: albumModel.title
+        }
+
         model: AlbumModel {
             id: albumModel
         }
         delegate: Kirigami.BasicListItem {
             required property string display
 
+            icon: "emblem-music-symbolic"
             text: display
         }
 
