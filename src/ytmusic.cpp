@@ -20,6 +20,15 @@ struct UNEXPORT YTMusicPrivate {
     py::object ytmusic;
 };
 
+template <typename T>
+std::optional<T> optional_key(const py::handle &obj, const char *name) {
+    if (!obj.cast<py::dict>().contains(name)) {
+        return std::nullopt;
+    }
+
+    return obj[name].cast<T>();
+}
+
 meta::Thumbnail extract_thumbnail(const py::handle &thumbnail) {
     return {
         thumbnail["url"].cast<std::string>(),
@@ -119,14 +128,6 @@ artist::Artist::Song::Album extract_song_album(const py::handle &album) {
     };
 };
 
-std::optional<std::string> extract_section_params(const py::handle &section) {
-    if (section.cast<py::dict>().contains("params")) {
-        return section["params"].cast<std::string>();
-    } else {
-        return std::nullopt;
-    }
-}
-
 template <typename T>
 auto extract_artist_section_results(const py::handle &section) {
     const py::list py_results = section["results"];
@@ -159,12 +160,7 @@ auto extract_artist_section_results(const py::handle &section) {
             return artist::Artist::Video {
                 result["title"].cast<std::string>(),
                 extract_py_list<meta::Thumbnail>(result["thumbnails"]),
-                [&]() -> std::optional<std::string> {
-                    if (!result.cast<py::dict>().contains("views")) {
-                        return std::nullopt;
-                    }
-                    return result["views"].cast<std::string>();
-                }(),
+                optional_key<std::string>(result, "views"),
                 result["videoId"].cast<std::string>(),
                 result["playlistId"].cast<std::string>()
             };
@@ -183,7 +179,7 @@ std::optional<artist::Artist::Section<T>> extract_artist_section(const py::handl
         return artist::Artist::Section<T> {
             section["browseId"].cast<std::optional<std::string>>(),
             extract_artist_section_results<T>(section),
-            extract_section_params(section)
+            optional_key<std::string>(section, "params")
         };
     } else {
         return std::nullopt;
@@ -233,8 +229,8 @@ search::SearchResultItem extract_search_result(const py::handle &result) {
         return search::Artist {
             result["browseId"].cast<std::string>(),
             result["artist"].cast<std::string>(),
-            result["shuffleId"].cast<std::string>(),
-            result["radioId"].cast<std::string>()
+            optional_key<std::string>(result, "shuffleId"),
+            optional_key<std::string>(result, "radioId")
         };
     } else {
         Py_UNREACHABLE();

@@ -70,8 +70,8 @@ struct Album {
 struct Artist {
     std::string browse_id;
     std::string artist;
-    std::string shuffle_id;
-    std::string radio_id;
+    std::optional<std::string> shuffle_id;
+    std::optional<std::string> radio_id;
 };
 
 using SearchResultItem = std::variant<Video, Playlist, Song, Album, Artist>;
