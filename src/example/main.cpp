@@ -1,0 +1,44 @@
+// SPDX-FileCopyrightText: 2021 Jonah Brüchert <jbb@kaidan.im>
+//
+// SPDX-License-Identifier: LGPL-2.0-or-later
+
+#include <ytmusic.h>
+
+#include <iostream>
+
+int main() {
+    const auto ytm = YTMusic();
+    const auto results = ytm.search("Big data");
+
+    std::cout << "Found " << results.size() << " results." << std::endl;
+
+    for (const auto &result : results) {
+        std::visit([&](auto&& arg) {
+            using T = std::decay_t<decltype(arg)>;
+            if constexpr (std::is_same_v<T, search::Album>) {
+                std::cout << arg.title << std::endl;
+                ytm.get_album(arg.browse_id);
+            } else if constexpr (std::is_same_v<T, search::Artist>) {
+                std::cout << arg.artist << std::endl;
+                const artist::Artist artist = ytm.get_artist(arg.browse_id);
+                if (artist.albums->params) {
+                    const auto albums = ytm.get_artist_albums(artist.channel_id, *artist.albums->params);
+                } else {
+                    std::cerr << " ! Album params not available";
+                }
+            } else if constexpr (std::is_same_v<T, search::Playlist>) {
+                std::cout << arg.title << std::endl;
+                ytm.get_playlist(arg.browse_id);
+            } else if constexpr (std::is_same_v<T, search::Song>) {
+                ytm.get_song(arg.video_id);
+                std::cout << arg.title << std::endl;
+            } else if constexpr (std::is_same_v<T, search::Video>) {
+                std::cout << arg.title << std::endl;
+            } else {
+                std::cout << "non excaustive visitor";
+            }
+        }, result);
+    }
+
+    std::flush(std::cout);
+}
