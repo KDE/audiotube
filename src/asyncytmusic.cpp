@@ -1,5 +1,13 @@
 ﻿#include "asyncytmusic.h"
 
+#include <QThread>
+
+static QThread *ytmthread = []() -> QThread * {
+    auto *thread = new QThread();
+    thread->setObjectName("YTMusicAPI");
+    return thread;
+}();
+
 AsyncYTMusic::AsyncYTMusic(QObject *parent)
     : QObject(parent)
 {
@@ -16,6 +24,25 @@ AsyncYTMusic::AsyncYTMusic(QObject *parent)
     connect(this, &AsyncYTMusic::startFetchSong, this, &AsyncYTMusic::internalFetchSong);
     connect(this, &AsyncYTMusic::startFetchPlaylist, this, &AsyncYTMusic::internalFetchPlaylist);
     connect(this, &AsyncYTMusic::startFetchArtistAlbums, this, &AsyncYTMusic::internalFetchArtistAlbums);
+}
+
+AsyncYTMusic &AsyncYTMusic::instance()
+{
+    static AsyncYTMusic &inst = []() -> AsyncYTMusic& {
+        static AsyncYTMusic ytm;
+        ytm.moveToThread(ytmthread);
+        ytmthread->start();
+
+        return ytm;
+    }();
+
+    return inst;
+}
+
+void AsyncYTMusic::stopInstance()
+{
+    ytmthread->quit();
+    ytmthread->wait();
 }
 
 //

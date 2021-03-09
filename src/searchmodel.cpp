@@ -4,12 +4,7 @@
 
 SearchModel::SearchModel(QObject *parent)
     : QAbstractListModel(parent)
-    , m_thread(new QThread(this))
 {
-    m_thread->setObjectName("YTMusicThread");
-    m_ytm.moveToThread(m_thread);
-    m_thread->start();
-
     connect(this, &SearchModel::searchQueryChanged, this, [=] {
         if (m_searchQuery.isEmpty()) {
             beginResetModel();
@@ -19,9 +14,9 @@ SearchModel::SearchModel(QObject *parent)
         }
 
         setLoading(true);
-        m_ytm.search(m_searchQuery);
+        AsyncYTMusic::instance().search(m_searchQuery);
     });
-    connect(&m_ytm, &AsyncYTMusic::searchFinished, this, [=](const std::vector<search::SearchResultItem> &results) {
+    connect(&AsyncYTMusic::instance(), &AsyncYTMusic::searchFinished, this, [=](const std::vector<search::SearchResultItem> &results) {
         beginResetModel();
         setLoading(false);
         m_searchResults = results;
@@ -31,8 +26,6 @@ SearchModel::SearchModel(QObject *parent)
 
 SearchModel::~SearchModel()
 {
-    m_thread->quit();
-    m_thread->wait();
 }
 
 int SearchModel::rowCount(const QModelIndex &parent) const
@@ -85,4 +78,24 @@ void SearchModel::setLoading(bool loading)
 {
     m_loading = loading;
     Q_EMIT loadingChanged();
+}
+
+void SearchModel::triggerItem(int row)
+{
+    std::visit([&](auto&& arg) {
+        using T = std::decay_t<decltype(arg)>;
+        if constexpr (std::is_same_v<T, search::Album>) {
+            Q_EMIT openAlbum(QString::fromStdString(arg.browse_id));
+        } else if constexpr (std::is_same_v<T, search::Artist>) {
+            Q_EMIT openArtist(QString::fromStdString(arg.browse_id));
+        } else if constexpr (std::is_same_v<T, search::Playlist>) {
+            Q_EMIT openPlaylist(QString::fromStdString(arg.browse_id));
+        } else if constexpr (std::is_same_v<T, search::Song>) {
+            Q_EMIT openSong(QString::fromStdString(arg.video_id));
+        } else if constexpr (std::is_same_v<T, search::Video>) {
+            Q_EMIT openVideo(QString::fromStdString(arg.video_id));
+        } else {
+            Q_UNREACHABLE();
+        }
+    }, m_searchResults.at(row));
 }

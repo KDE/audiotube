@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=youtube_music
+Comment=youtube_music Kirigami Application
+Version=1.0
+Exec=youtube_music
+Icon=applications-development
+Type=Application
+Terminal=false
+Categories=Qt;KDE;

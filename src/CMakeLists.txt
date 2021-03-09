@@ -11,6 +11,7 @@ add_executable(youtube_music
     main.cpp
     asyncytmusic.cpp
     searchmodel.cpp
+    albummodel.cpp
     resources.qrc
 )
 

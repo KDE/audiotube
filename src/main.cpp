@@ -5,6 +5,7 @@
 #include <KLocalizedContext>
 
 #include "searchmodel.h"
+#include "albummodel.h"
 
 constexpr auto URI = "org.kde.ytmusic";
 
@@ -19,6 +20,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     QQmlApplicationEngine engine;
 
     qmlRegisterType<SearchModel>(URI, 1, 0, "SearchModel");
+    qmlRegisterType<AlbumModel>(URI, 1, 0, "AlbumModel");
 
     engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
     engine.load(QUrl(QStringLiteral("qrc:///main.qml")));
@@ -27,5 +29,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
         return -1;
     }
 
-    return app.exec();
+    int ret = app.exec();
+    AsyncYTMusic::stopInstance();
+    return ret;
 }

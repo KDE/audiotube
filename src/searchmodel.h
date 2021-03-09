@@ -28,11 +28,16 @@ public:
     void setLoading(bool loading);
     Q_SIGNAL void loadingChanged();
 
+    Q_INVOKABLE void triggerItem(int row);
+
+    Q_SIGNAL void openAlbum(const QString &browseId);
+    Q_SIGNAL void openArtist(const QString &browseId);
+    Q_SIGNAL void openPlaylist(const QString &browseId);
+    Q_SIGNAL void openSong(const QString &videoId);
+    Q_SIGNAL void openVideo(const QString &videoId);
+
 private:
     QString m_searchQuery;
     std::vector<search::SearchResultItem> m_searchResults;
     bool m_loading = false;
-
-    AsyncYTMusic m_ytm;
-    QThread *m_thread;
 };

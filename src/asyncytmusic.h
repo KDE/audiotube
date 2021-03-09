@@ -21,6 +21,15 @@ class AsyncYTMusic : public QObject
 public:
     explicit AsyncYTMusic(QObject *parent = nullptr);
 
+    ///
+    /// Singleton instance of AsyncYtMusic running on it's own thread.
+    ///
+    /// It is necessary t call stopInstance before the application exits,
+    /// so the thread can properly finish.
+    ///
+    static AsyncYTMusic &instance();
+    static void stopInstance();
+
     // public functions need to be thread safe
     void search(const QString &query);
     Q_SIGNAL void searchFinished(std::vector<search::SearchResultItem>);

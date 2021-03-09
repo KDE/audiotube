@@ -33,9 +33,35 @@ Kirigami.ApplicationWindow {
         ListView {
             model: SearchModel {
                 id: searchModel
+
+                onOpenAlbum: (browseId) => {
+                    pageStack.push("qrc:/AlbumPage.qml", {
+                        "browseId": browseId
+                    })
+                }
+
+                onOpenArtist: (browseId) => {
+
+                }
+
+                onOpenPlaylist: (browseId) => {
+
+                }
+
+                onOpenSong: (videoId) => {
+
+                }
+
+                onOpenVideo: (videoId) => {
+
+                }
             }
             delegate: Kirigami.BasicListItem {
-                text: model.display
+                required property int index
+                required property string display
+
+                text: display
+                onClicked: searchModel.triggerItem(index)
             }
             Controls.BusyIndicator {
                 anchors.centerIn: parent
