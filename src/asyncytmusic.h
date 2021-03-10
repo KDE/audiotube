@@ -57,6 +57,8 @@ public:
     void extractVideoInfo(const QString &videoId);
     Q_SIGNAL void extractVideoInfoFinished(video_info::VideoInfo);
 
+    Q_SIGNAL void errorOccurred(const QString &error);
+
 private:
     Q_SIGNAL void startSearch(const QString &query);
     Q_SLOT void internalSearch(const QString &query);

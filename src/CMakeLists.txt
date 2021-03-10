@@ -24,6 +24,9 @@ target_link_libraries(youtube_music
     Qt5::QuickControls2
     Qt5::Svg
     KF5::I18n
-    ytm)
+    ytm
+)
+
+target_compile_definitions(youtube_music PRIVATE -DQT_NO_KEYWORDS)
 
 install(TARGETS youtube_music ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
