@@ -21,14 +21,10 @@ Kirigami.ApplicationWindow {
 
         header: Controls.Control {
             padding: Kirigami.Units.largeSpacing
-            contentItem: Kirigami.ActionTextField {
-                id: searchField
-                rightActions: [
-                    Kirigami.Action {
-                        icon.name: "search"
-                        onTriggered: searchModel.searchQuery = searchField.text
-                    }
-                ]
+            contentItem: Kirigami.SearchField {
+                onAccepted: {
+                    searchModel.searchQuery = text
+                }
             }
         }
 

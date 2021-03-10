@@ -85,6 +85,5 @@ QUrl AlbumModel::thumbnailUrl() const
         return QUrl();
     }
 
-    qDebug() << "found thumbnail";
     return QUrl(QString::fromStdString(m_album.thumbnails.back().url));
 }

@@ -57,8 +57,6 @@ QUrl VideoInfoExtractor::audioUrl() const
 
     std::sort(audioFormats.begin(), audioFormats.end(), qualitySort);
 
-    qDebug() << QString::fromStdString(audioFormats.front().url);
-
     return QUrl(QString::fromStdString(audioFormats.front().url));
 }
 
