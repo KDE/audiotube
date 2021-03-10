@@ -27,6 +27,7 @@ AsyncYTMusic::AsyncYTMusic(QObject *parent)
     qRegisterMetaType<song::Song>();
     qRegisterMetaType<playlist::Playlist>();
     qRegisterMetaType<video_info::VideoInfo>();
+    qRegisterMetaType<watch::Playlist>();
 
     connect(this, &AsyncYTMusic::startSearch, this, &AsyncYTMusic::internalSearch);
     connect(this, &AsyncYTMusic::startFetchArtist, this, &AsyncYTMusic::internalFetchArtist);
@@ -35,6 +36,7 @@ AsyncYTMusic::AsyncYTMusic(QObject *parent)
     connect(this, &AsyncYTMusic::startFetchPlaylist, this, &AsyncYTMusic::internalFetchPlaylist);
     connect(this, &AsyncYTMusic::startFetchArtistAlbums, this, &AsyncYTMusic::internalFetchArtistAlbums);
     connect(this, &AsyncYTMusic::startExtractVideoInfo, this, &AsyncYTMusic::internalExtractVideoInfo);
+    connect(this, &AsyncYTMusic::startFetchWatchPlaylist, this, &AsyncYTMusic::internalFetchWatchPlaylist);
 }
 
 AsyncYTMusic &AsyncYTMusic::instance()
@@ -167,6 +169,23 @@ void AsyncYTMusic::extractVideoInfo(const QString &videoId) {
 void AsyncYTMusic::internalExtractVideoInfo(const QString &videoId) {
     try {
         Q_EMIT extractVideoInfoFinished(m_ytdl.extract_video_info(videoId.toStdString()));
+    } catch (const py::error_already_set &error) {
+        Q_EMIT errorOccurred(QString::fromUtf8(error.what()));
+    }
+}
+
+//
+// fetchWatchPlaylist
+//
+void AsyncYTMusic::fetchWatchPlaylist(const QString &videoId)
+{
+    Q_EMIT startFetchWatchPlaylist(videoId);
+}
+
+void AsyncYTMusic::internalFetchWatchPlaylist(const QString &videoId)
+{
+    try {
+        Q_EMIT fetchWatchPlaylistFinished(m_ytdl.get_watch_playlist(videoId.toStdString()));
     } catch (const py::error_already_set &error) {
         Q_EMIT errorOccurred(QString::fromUtf8(error.what()));
     }

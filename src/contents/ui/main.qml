@@ -38,8 +38,10 @@ Kirigami.ApplicationWindow {
                     })
                 }
 
-                onOpenArtist: (browseId) => {
-
+                onOpenArtist: (channelId) => {
+                    pageStack.push("qrc:/ArtistPage.qml", {
+                        "channelId": channelId
+                    })
                 }
 
                 onOpenPlaylist: (browseId) => {
@@ -169,6 +171,12 @@ Kirigami.ApplicationWindow {
                     from: 0
                     to: audio.duration
                     value: audio.position
+
+                    enabled: audio.seekable
+                    onMoved: {
+                        console.log("Value:", value)
+                        audio.seek(Math.floor(value))
+                    }
                 }
             }
 

@@ -18,6 +18,7 @@ using namespace py::literals;
 struct UNEXPORT YTMusicPrivate {
     py::scoped_interpreter guard {};
     py::object ytmusic;
+    py::object ytdl = py::none();
 };
 
 template <typename T>
@@ -55,8 +56,6 @@ album::Track extract_album_track(const py::handle &track) {
     };
 }
 
-playlist::Track extract_playlist_track(const py::handle &track);
-
 video_info::Format extract_format(const py::handle &format) {
     return {
         format["quality"].cast<int>(),
@@ -65,6 +64,9 @@ video_info::Format extract_format(const py::handle &format) {
         format["acodec"].cast<std::string>()
     };
 }
+
+playlist::Track extract_playlist_track(const py::handle &track);
+watch::Playlist::Track extract_watch_track(const py::handle &track);
 
 template <typename T>
 inline auto extract_py_list(const py::handle &obj) {
@@ -82,6 +84,8 @@ inline auto extract_py_list(const py::handle &obj) {
             return extract_playlist_track(item);
         } else if constexpr(std::is_same_v<T, video_info::Format>) {
             return extract_format(item);
+        } else if constexpr(std::is_same_v<T, watch::Playlist::Track>) {
+            return extract_watch_track(item);
         } else {
             return item.cast<T>();
         }
@@ -96,6 +100,21 @@ meta::Album extract_meta_album(const py::handle &album) {
         album["id"].cast<std::optional<std::string>>()
     };
 }
+
+watch::Playlist::Track extract_watch_track(const py::handle &track) {
+    py::print(track);
+    return {
+        track["title"].cast<std::string>(),
+        track["length"].cast<std::string>(),
+        track["videoId"].cast<std::string>(),
+        track["playlistId"].cast<std::string>(),
+        extract_py_list<meta::Thumbnail>(track["thumbnail"]),
+        track["likeStatus"].cast<std::optional<std::string>>(),
+        extract_py_list<meta::Artist>(track["artists"]),
+        extract_meta_album(track["album"])
+    };
+}
+
 
 playlist::Track extract_playlist_track(const py::handle &track) {
     return {
@@ -379,16 +398,32 @@ video_info::VideoInfo YTMusic::extract_video_info(const std::string &video_id) c
 {
     using namespace pybind11::literals;
 
-    const auto module = py::module::import("youtube_dl");
-    py::dict options;
-    const auto ytdl = module.attr("YoutubeDL")(options);
+    // lazy initialization
+    if (d->ytdl.is_none()) {
+        const auto module = py::module::import("youtube_dl");
+        py::dict options;
+        d->ytdl = module.attr("YoutubeDL")(options);
+    }
 
-    const auto info = ytdl.attr("extract_info")(video_id, "download"_a=py::bool_(false));
+    const auto info = d->ytdl.attr("extract_info")(video_id, "download"_a=py::bool_(false));
     //py::print(py::module::import("json").attr("dumps")(info, "indent"_a=4));
 
     return {
         info["id"].cast<std::string>(),
         info["title"].cast<std::string>(),
         extract_py_list<video_info::Format>(info["formats"])
+    };
+}
+
+watch::Playlist YTMusic::get_watch_playlist(const std::optional<std::string> &videoId,
+                                            const std::optional<std::string> &playlistId,
+                                            int limit,
+                                            const std::optional<std::string> &params) const
+{
+    const auto playlist = d->ytmusic.attr("get_watch_playlist")(videoId, playlistId, limit, params);
+
+    return {
+        extract_py_list<watch::Playlist::Track>(playlist["tracks"]),
+        playlist["lyrics"].cast<std::optional<std::string>>()
     };
 }

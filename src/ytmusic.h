@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2021 Jonah Brüchert <jbb@kaidan.im>
+﻿// SPDX-FileCopyrightText: 2021 Jonah Brüchert <jbb@kaidan.im>
 //
 // SPDX-License-Identifier: LGPL-2.0-or-later
 
@@ -227,22 +227,40 @@ struct Playlist {
 }
 
 namespace video_info {
-    struct Format {
-        int quality;
-        std::string url;
-        std::string vcodec;
-        std::string acodec;
+struct Format {
+    int quality;
+    std::string url;
+    std::string vcodec;
+    std::string acodec;
 
-        // More, but not interesting for us right now
-    };
+    // More, but not interesting for us right now
+};
 
-    struct VideoInfo {
-        std::string id;
+struct VideoInfo {
+    std::string id;
+    std::string title;
+    std::vector<Format> formats;
+
+    // More, but not interesting for us right now
+};
+}
+
+namespace watch {
+struct Playlist {
+    struct Track {
         std::string title;
-        std::vector<Format> formats;
-
-        // More, but not interesting for us right now
+        std::string length;
+        std::string videoId;
+        std::string playlistId;
+        std::vector<meta::Thumbnail> thumbnail;
+        std::optional<std::string> like_status;
+        std::vector<meta::Artist> artists;
+        meta::Album album;
     };
+
+    const std::vector<Track> tracks;
+    const std::optional<std::string> lyrics;
+};
 }
 
 class YTMusic
@@ -276,7 +294,14 @@ public:
     /// https://ytmusicapi.readthedocs.io/en/latest/reference.html#ytmusicapi.YTMusic.get_artist_albums
     std::vector<artist::Artist::Album> get_artist_albums(const std::string &channel_id, const std::string &params) const;
 
+    /// youtube-dl's extract_info function
     video_info::VideoInfo extract_video_info(const std::string &video_id) const;
+
+    /// https://ytmusicapi.readthedocs.io/en/latest/reference.html#ytmusicapi.YTMusic.get_watch_playlist
+    watch::Playlist get_watch_playlist(const std::optional<std::string> &videoId = std::nullopt,
+                                      const std::optional<std::string> &playlistId = std::nullopt,
+                                      int limit = 25,
+                                      const std::optional<std::string> &params = std::nullopt) const;
 
     // TODO wrap more methods
 

@@ -8,7 +8,7 @@
 
 int main() {
     const auto ytm = YTMusic();
-    const auto results = ytm.search("cage the elephant");
+    const auto results = ytm.search("leoniden");
 
     std::cout << "Found " << results.size() << " results." << std::endl;
 
@@ -24,7 +24,7 @@ int main() {
                 if (artist.albums->params) {
                     const auto albums = ytm.get_artist_albums(artist.channel_id, *artist.albums->params);
                 } else {
-                    std::cerr << " ! Album params not available";
+                    std::cerr << " ! Album params not available" << std::endl;
                 }
             } else if constexpr (std::is_same_v<T, search::Playlist>) {
                 std::cout << arg.title << std::endl;
@@ -32,6 +32,7 @@ int main() {
             } else if constexpr (std::is_same_v<T, search::Song>) {
                 ytm.get_song(arg.video_id);
                 ytm.extract_video_info(arg.video_id);
+                ytm.get_watch_playlist(arg.video_id);
                 std::cout << arg.title << std::endl;
             } else if constexpr (std::is_same_v<T, search::Video>) {
                 std::cout << arg.title << std::endl;

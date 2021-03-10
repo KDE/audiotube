@@ -11,6 +11,7 @@
 #include "searchmodel.h"
 #include "albummodel.h"
 #include "videoinfoextractor.h"
+#include "artistmodel.h"
 
 constexpr auto URI = "org.kde.ytmusic";
 
@@ -27,6 +28,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlRegisterType<SearchModel>(URI, 1, 0, "SearchModel");
     qmlRegisterType<AlbumModel>(URI, 1, 0, "AlbumModel");
     qmlRegisterType<VideoInfoExtractor>(URI, 1, 0, "VideoInfoExtractor");
+    qmlRegisterType<ArtistModel>(URI, 1, 0, "ArtistModel");
 
     engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
     engine.load(QUrl(QStringLiteral("qrc:///main.qml")));

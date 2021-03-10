@@ -13,6 +13,7 @@ add_executable(youtube_music
     searchmodel.cpp
     albummodel.cpp
     videoinfoextractor.cpp
+    artistmodel.cpp
     resources.qrc
 )
 

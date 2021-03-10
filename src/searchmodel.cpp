@@ -76,6 +76,8 @@ QVariant SearchModel::data(const QModelIndex &index, int role) const
         }, m_searchResults.at(index.row()));
     }
 
+    Q_UNREACHABLE();
+
     return {};
 }
 

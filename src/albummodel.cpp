@@ -40,6 +40,8 @@ QVariant AlbumModel::data(const QModelIndex &index, int role) const
         return QString::fromStdString(m_album.tracks.at(index.row()).video_id.value_or(std::string()));
     }
 
+    Q_UNREACHABLE();
+
     return {};
 }
 
