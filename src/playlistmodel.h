@@ -37,7 +37,7 @@ public:
 
 private:
     QString m_videoId;
-    bool m_loading;
+    bool m_loading = false;
 
     watch::Playlist m_playlist;
 };
