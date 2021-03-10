@@ -90,7 +90,6 @@ Kirigami.ApplicationWindow {
 
     function play(videoId) {
         footer.videoId = videoId
-        audio.play()
     }
 
     footer: RowLayout {
@@ -101,6 +100,7 @@ Kirigami.ApplicationWindow {
 
         VideoInfoExtractor {
             id: info
+            onSongChanged: audio.play()
         }
 
         Audio {

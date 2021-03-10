@@ -19,6 +19,7 @@ VideoInfoExtractor::VideoInfoExtractor(QObject *parent)
         m_videoInfo = info;
         Q_EMIT audioUrlChanged();
         Q_EMIT titleChanged();
+        Q_EMIT songChanged();
     });
 }
 

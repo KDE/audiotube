@@ -13,7 +13,6 @@ class VideoInfoExtractor : public QObject
 {
     Q_OBJECT
 
-
     Q_PROPERTY(QString videoId READ videoId WRITE setVideoId NOTIFY videoIdChanged)
 
     Q_PROPERTY(QUrl audioUrl READ audioUrl NOTIFY audioUrlChanged)
@@ -31,6 +30,8 @@ public:
 
     QString title() const;
     Q_SIGNAL void titleChanged();
+
+    Q_SIGNAL void songChanged();
 
 private:
     QString m_videoId;
