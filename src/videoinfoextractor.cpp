@@ -12,11 +12,17 @@ VideoInfoExtractor::VideoInfoExtractor(QObject *parent)
     : QObject(parent)
 {
     connect(this, &VideoInfoExtractor::videoIdChanged, this, [=] {
+        if (m_videoId.isEmpty()) {
+            return;
+        }
+
+        setLoading(true);
         AsyncYTMusic::instance().extractVideoInfo(QString::fromStdString(m_videoId.toStdString()));
     });
 
     connect(&AsyncYTMusic::instance(), &AsyncYTMusic::extractVideoInfoFinished, this, [=](const video_info::VideoInfo &info) {
         m_videoInfo = info;
+        setLoading(false);
         Q_EMIT audioUrlChanged();
         Q_EMIT titleChanged();
         Q_EMIT songChanged();
@@ -70,4 +76,15 @@ void VideoInfoExtractor::setVideoId(const QString &videoId)
 QString VideoInfoExtractor::title() const
 {
     return QString::fromStdString(m_videoInfo.title);
+}
+
+bool VideoInfoExtractor::loading() const
+{
+    return m_loading;
+}
+
+void VideoInfoExtractor::setLoading(bool loading)
+{
+    m_loading = loading;
+    Q_EMIT loadingChanged();
 }

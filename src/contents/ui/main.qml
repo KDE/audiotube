@@ -94,16 +94,38 @@ Kirigami.ApplicationWindow {
 
     footer: ColumnLayout {
         property alias videoId: info.videoId
+        property bool maximized: false
 
         anchors.left: parent.left
         anchors.right: parent.right
+        height: maximized ? applicationWindow().height : player.preferredHeight
+
+        Item {
+            Layout.fillHeight: footer.maximized
+            Layout.fillWidth: true
+            visible: footer.maximized
+
+            Kirigami.Heading {
+                anchors.centerIn: parent
+                text: "Nothing here yet"
+            }
+        }
+
+        Behavior on height {
+            NumberAnimation {
+
+            }
+        }
 
         Kirigami.Separator {
             Layout.fillWidth: true
         }
+
         RowLayout {
+            id: player
+
             Layout.fillWidth: true
-            Layout.fillHeight: true
+            Layout.fillHeight: !footer.maximized
 
             VideoInfoExtractor {
                 id: info
@@ -116,16 +138,32 @@ Kirigami.ApplicationWindow {
             }
 
             Controls.ToolButton {
+                display: Controls.AbstractButton.IconOnly
+                Layout.preferredWidth: parent.height
                 Layout.fillHeight: true
+
+                enabled: info.audioUrl != ""
+
+                text: audio.playbackState === Audio.PlayingState ?  i18n("Pause") : i18n("Play")
+
+                visible: !info.loading
 
                 icon.name: audio.playbackState === Audio.PlayingState ? "media-playback-pause" : "media-playback-start"
                 onClicked: audio.playbackState === Audio.PlayingState ? audio.pause() : audio.play()
             }
 
+            Controls.BusyIndicator {
+                Layout.fillHeight: true
+                visible: info.loading
+            }
+
             ColumnLayout {
                 Layout.fillHeight: true
+                Layout.topMargin: Kirigami.Units.largeSpacing
+                Layout.bottomMargin: Kirigami.Units.largeSpacing
 
                 Kirigami.Heading {
+                    level: 2
                     text: info.title ? info.title : i18n("No media playing")
                 }
 
@@ -136,6 +174,18 @@ Kirigami.ApplicationWindow {
                     to: audio.duration
                     value: audio.position
                 }
+            }
+
+            Controls.ToolButton {
+                display: Controls.AbstractButton.IconOnly
+                Layout.preferredWidth: parent.height
+
+                text: i18n("Expand")
+
+                Layout.fillHeight: true
+                icon.name: footer.maximized ? "arrow-down" : "arrow-up"
+
+                onClicked: footer.maximized = !footer.maximized
             }
         }
     }
