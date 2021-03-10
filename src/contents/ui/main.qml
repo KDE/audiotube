@@ -49,7 +49,9 @@ Kirigami.ApplicationWindow {
                 }
 
                 onOpenSong: (videoId) => {
-
+                    pageStack.push("qrc:/PlayerPage.qml", {
+                        "videoId": videoId
+                    })
                 }
 
                 onOpenVideo: (videoId) => {

@@ -31,6 +31,7 @@ int main() {
                 ytm.get_playlist(arg.browse_id);
             } else if constexpr (std::is_same_v<T, search::Song>) {
                 ytm.get_song(arg.video_id);
+                ytm.extract_video_info(arg.video_id);
                 std::cout << arg.title << std::endl;
             } else if constexpr (std::is_same_v<T, search::Video>) {
                 std::cout << arg.title << std::endl;

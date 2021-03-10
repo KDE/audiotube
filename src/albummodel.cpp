@@ -14,8 +14,9 @@ AlbumModel::AlbumModel(QObject *parent)
 
         beginResetModel();
         m_album = album;
-        std::sort(m_album.thumbnails.begin(), m_album.thumbnails.end());
         endResetModel();
+        std::sort(m_album.thumbnails.begin(), m_album.thumbnails.end());
+
         Q_EMIT titleChanged();
         Q_EMIT thumbnailUrlChanged();
     });

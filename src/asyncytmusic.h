@@ -13,6 +13,7 @@ Q_DECLARE_METATYPE(artist::Artist)
 Q_DECLARE_METATYPE(album::Album)
 Q_DECLARE_METATYPE(song::Song)
 Q_DECLARE_METATYPE(playlist::Playlist)
+Q_DECLARE_METATYPE(video_info::VideoInfo)
 
 class AsyncYTMusic : public QObject
 {
@@ -49,6 +50,9 @@ public:
     void fetchArtistAlbums(const QString &channelId, const QString &params);
     Q_SIGNAL void fetchArtistAlbumsFinished(std::vector<artist::Artist::Album>);
 
+    void extractVideoInfo(const QString &videoId);
+    Q_SIGNAL void extractVideoInfoFinished(video_info::VideoInfo);
+
 private:
     Q_SIGNAL void startSearch(const QString &query);
     Q_SLOT void internalSearch(const QString &query);
@@ -67,6 +71,9 @@ private:
 
     Q_SIGNAL void startFetchArtistAlbums(const QString &channelid, const QString &params);
     Q_SLOT void internalFetchArtistAlbums(const QString &channelid, const QString &params);
+
+    Q_SIGNAL void startExtractVideoInfo(const QString &videoId);
+    Q_SLOT void internalExtractVideoInfo(const QString &videoId);
 
     YTMusic m_ytdl;
 };

@@ -54,7 +54,17 @@ album::Track extract_album_track(const py::handle &track) {
         track["likeStatus"].cast<std::optional<std::string>>()
     };
 }
+
 playlist::Track extract_playlist_track(const py::handle &track);
+
+video_info::Format extract_format(const py::handle &format) {
+    return {
+        format["quality"].cast<int>(),
+        format["url"].cast<std::string>(),
+        format["vcodec"].cast<std::string>(),
+        format["acodec"].cast<std::string>()
+    };
+}
 
 template <typename T>
 inline auto extract_py_list(const py::handle &obj) {
@@ -70,6 +80,8 @@ inline auto extract_py_list(const py::handle &obj) {
             return extract_album_track(item);
         } else if constexpr(std::is_same_v<T, playlist::Track>) {
             return extract_playlist_track(item);
+        } else if constexpr(std::is_same_v<T, video_info::Format>) {
+            return extract_format(item);
         } else {
             return item.cast<T>();
         }
@@ -361,4 +373,22 @@ std::vector<artist::Artist::Album> YTMusic::get_artist_albums(const std::string 
     });
 
     return albums;
+}
+
+video_info::VideoInfo YTMusic::extract_video_info(const std::string &video_id) const
+{
+    using namespace pybind11::literals;
+
+    const auto module = py::module::import("youtube_dl");
+    py::dict options;
+    const auto ytdl = module.attr("YoutubeDL")(options);
+
+    const auto info = ytdl.attr("extract_info")(video_id, "download"_a=py::bool_(false));
+    //py::print(py::module::import("json").attr("dumps")(info, "indent"_a=4));
+
+    return {
+        info["id"].cast<std::string>(),
+        info["title"].cast<std::string>(),
+        extract_py_list<video_info::Format>(info["formats"])
+    };
 }

@@ -50,7 +50,7 @@ QVariant SearchModel::data(const QModelIndex &index, int role) const
             } else if constexpr (std::is_same_v<T, search::Video>) {
                 return arg.title;
             } else {
-                return std::string();
+                Q_UNREACHABLE();
             }
         }, m_searchResults.at(index.row())));
     case Type:
@@ -67,7 +67,7 @@ QVariant SearchModel::data(const QModelIndex &index, int role) const
             } else if constexpr (std::is_same_v<T, search::Video>) {
                 return Type::Video;
             } else {
-                return std::string();
+                Q_UNREACHABLE();
             }
         }, m_searchResults.at(index.row()));
     }

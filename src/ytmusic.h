@@ -226,6 +226,25 @@ struct Playlist {
 };
 }
 
+namespace video_info {
+    struct Format {
+        int quality;
+        std::string url;
+        std::string vcodec;
+        std::string acodec;
+
+        // More, but not interesting for us right now
+    };
+
+    struct VideoInfo {
+        std::string id;
+        std::string title;
+        std::vector<Format> formats;
+
+        // More, but not interesting for us right now
+    };
+}
+
 class YTMusic
 {
 public:
@@ -256,6 +275,8 @@ public:
 
     /// https://ytmusicapi.readthedocs.io/en/latest/reference.html#ytmusicapi.YTMusic.get_artist_albums
     std::vector<artist::Artist::Album> get_artist_albums(const std::string &channel_id, const std::string &params) const;
+
+    video_info::VideoInfo extract_video_info(const std::string &video_id) const;
 
     // TODO wrap more methods
 

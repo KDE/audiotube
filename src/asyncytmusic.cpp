@@ -17,6 +17,7 @@ AsyncYTMusic::AsyncYTMusic(QObject *parent)
     qRegisterMetaType<album::Album>();
     qRegisterMetaType<song::Song>();
     qRegisterMetaType<playlist::Playlist>();
+    qRegisterMetaType<video_info::VideoInfo>();
 
     connect(this, &AsyncYTMusic::startSearch, this, &AsyncYTMusic::internalSearch);
     connect(this, &AsyncYTMusic::startFetchArtist, this, &AsyncYTMusic::internalFetchArtist);
@@ -24,6 +25,7 @@ AsyncYTMusic::AsyncYTMusic(QObject *parent)
     connect(this, &AsyncYTMusic::startFetchSong, this, &AsyncYTMusic::internalFetchSong);
     connect(this, &AsyncYTMusic::startFetchPlaylist, this, &AsyncYTMusic::internalFetchPlaylist);
     connect(this, &AsyncYTMusic::startFetchArtistAlbums, this, &AsyncYTMusic::internalFetchArtistAlbums);
+    connect(this, &AsyncYTMusic::startExtractVideoInfo, this, &AsyncYTMusic::internalExtractVideoInfo);
 }
 
 AsyncYTMusic &AsyncYTMusic::instance()
@@ -120,4 +122,15 @@ void AsyncYTMusic::fetchArtistAlbums(const QString &channelId, const QString &pa
 void AsyncYTMusic::internalFetchArtistAlbums(const QString &channelid, const QString &params)
 {
     Q_EMIT fetchArtistAlbumsFinished(m_ytdl.get_artist_albums(channelid.toStdString(), params.toStdString()));
+}
+
+//
+// extractVideoInfo
+//
+void AsyncYTMusic::extractVideoInfo(const QString &videoId) {
+    Q_EMIT startExtractVideoInfo(videoId);
+}
+
+void AsyncYTMusic::internalExtractVideoInfo(const QString &videoId) {
+    Q_EMIT extractVideoInfoFinished(m_ytdl.extract_video_info(videoId.toStdString()));
 }
