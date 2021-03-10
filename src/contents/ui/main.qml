@@ -92,42 +92,50 @@ Kirigami.ApplicationWindow {
         footer.videoId = videoId
     }
 
-    footer: RowLayout {
+    footer: ColumnLayout {
+        property alias videoId: info.videoId
+
         anchors.left: parent.left
         anchors.right: parent.right
 
-        property alias videoId: info.videoId
-
-        VideoInfoExtractor {
-            id: info
-            onSongChanged: audio.play()
+        Kirigami.Separator {
+            Layout.fillWidth: true
         }
-
-        Audio {
-            id: audio
-            source: info.audioUrl
-        }
-
-        Controls.ToolButton {
+        RowLayout {
+            Layout.fillWidth: true
             Layout.fillHeight: true
 
-            icon.name: audio.playbackState === Audio.PlayingState ? "media-playback-pause" : "media-playback-start"
-            onClicked: audio.playbackState === Audio.PlayingState ? audio.pause() : audio.play()
-        }
-
-        ColumnLayout {
-            Layout.fillHeight: true
-
-            Kirigami.Heading {
-                text: info.title ? info.title : i18n("No media playing")
+            VideoInfoExtractor {
+                id: info
+                onSongChanged: audio.play()
             }
 
-            Controls.Slider {
-                Layout.fillWidth: true
+            Audio {
+                id: audio
+                source: info.audioUrl
+            }
 
-                from: 0
-                to: audio.duration
-                value: audio.position
+            Controls.ToolButton {
+                Layout.fillHeight: true
+
+                icon.name: audio.playbackState === Audio.PlayingState ? "media-playback-pause" : "media-playback-start"
+                onClicked: audio.playbackState === Audio.PlayingState ? audio.pause() : audio.play()
+            }
+
+            ColumnLayout {
+                Layout.fillHeight: true
+
+                Kirigami.Heading {
+                    text: info.title ? info.title : i18n("No media playing")
+                }
+
+                Controls.Slider {
+                    Layout.fillWidth: true
+
+                    from: 0
+                    to: audio.duration
+                    value: audio.position
+                }
             }
         }
     }
