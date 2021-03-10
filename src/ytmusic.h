@@ -116,7 +116,7 @@ struct Artist {
         std::string title;
         std::vector<meta::Thumbnail> thumbnails;
         std::optional<std::string> views;
-        std::string videoId;
+        std::string video_id;
         std::string playlist_id;
     };
 
@@ -124,7 +124,7 @@ struct Artist {
         std::string title;
         std::vector<meta::Thumbnail> thumnnails;
         std::string year;
-        std::string browseId;
+        std::string browse_id;
     };
 
     std::optional<std::string> description;
@@ -250,7 +250,7 @@ struct Playlist {
     struct Track {
         std::string title;
         std::string length;
-        std::string videoId;
+        std::string video_id;
         std::string playlistId;
         std::vector<meta::Thumbnail> thumbnail;
         std::optional<std::string> like_status;
@@ -258,8 +258,8 @@ struct Playlist {
         meta::Album album;
     };
 
-    const std::vector<Track> tracks;
-    const std::optional<std::string> lyrics;
+    std::vector<Track> tracks;
+    std::optional<std::string> lyrics;
 };
 }
 

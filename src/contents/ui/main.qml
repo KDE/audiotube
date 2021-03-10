@@ -91,6 +91,7 @@ Kirigami.ApplicationWindow {
     }
 
     footer: ColumnLayout {
+        id: footerLayout
         property alias videoId: info.videoId
         property bool maximized: false
 
@@ -98,14 +99,44 @@ Kirigami.ApplicationWindow {
         anchors.right: parent.right
         height: maximized ? applicationWindow().height : player.preferredHeight
 
-        Item {
-            Layout.fillHeight: footer.maximized
+        Controls.ScrollView {
+            Layout.fillHeight: footerLayout.maximized
             Layout.fillWidth: true
-            visible: footer.maximized
+            visible: footerLayout.maximized
 
-            Kirigami.Heading {
-                anchors.centerIn: parent
-                text: "Nothing here yet"
+            ListView {
+                anchors.fill: parent
+
+                model: PlaylistModel {
+                    id: playlistModel
+                    videoId: footer.videoId
+                }
+                delegate: Kirigami.BasicListItem {
+                    required property string title
+                    required property string videoId
+                    required property string artists
+
+                    ColumnLayout {
+                        anchors.fill: parent
+
+                        Kirigami.Heading {
+                            Layout.fillWidth: true
+
+                            level: 2
+                            text: title
+                        }
+                        Controls.Label {
+                            Layout.fillWidth: true
+
+                            text: artists
+                        }
+                    }
+                }
+
+                Controls.BusyIndicator {
+                    anchors.centerIn: parent
+                    visible: playlistModel.loading
+                }
             }
         }
 

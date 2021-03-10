@@ -13,6 +13,20 @@ Kirigami.ScrollablePage {
     ListView {
         model: ArtistModel {
             id: artistModel
+
+            onOpenAlbum: (browseId) => {
+                pageStack.push("qrc:/AlbumPage.qml", {
+                    "browseId": browseId
+                })
+            }
+
+            onOpenSong: (videoId) => {
+                play(videoId)
+            }
+
+            onOpenVideo: (videoId) => {
+
+            }
         }
         section.property: "type"
         section.delegate: Kirigami.ListSectionHeader {
@@ -32,6 +46,7 @@ Kirigami.ScrollablePage {
         delegate: Kirigami.BasicListItem {
             required property string title
             required property int type
+            required property int index
 
             text: title
             icon: {
@@ -45,6 +60,7 @@ Kirigami.ScrollablePage {
                     return "emblem-videos-symbolic"
                 }
             }
+            onClicked: artistModel.triggerItem(index)
         }
 
         Controls.BusyIndicator {
