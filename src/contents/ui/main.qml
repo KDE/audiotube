@@ -116,6 +116,8 @@ Kirigami.ApplicationWindow {
                     required property string videoId
                     required property string artists
 
+                    onClicked: play(videoId)
+
                     ColumnLayout {
                         anchors.fill: parent
 
