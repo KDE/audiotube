@@ -34,11 +34,21 @@ int AlbumModel::rowCount(const QModelIndex &parent) const
 QVariant AlbumModel::data(const QModelIndex &index, int role) const
 {
     switch (role) {
-    case Qt::DisplayRole:
+    case Title:
         return QString::fromStdString(m_album.tracks.at(index.row()).title);
+    case VideoId:
+        return QString::fromStdString(m_album.tracks.at(index.row()).video_id.value_or(std::string()));
     }
 
     return {};
+}
+
+QHash<int, QByteArray> AlbumModel::roleNames() const
+{
+    return {
+        {Title, "title"},
+        {VideoId, "videoId"}
+    };
 }
 
 QString AlbumModel::browseId() const

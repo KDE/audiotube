@@ -19,10 +19,16 @@ class AlbumModel : public QAbstractListModel
     Q_PROPERTY(bool loading READ loading WRITE setLoading NOTIFY loadingChanged)
 
 public:
+    enum Role {
+        Title,
+        VideoId
+    };
+
     explicit AlbumModel(QObject *parent = nullptr);
 
     int rowCount(const QModelIndex &parent) const override;
     QVariant data(const QModelIndex &index, int role) const override;
+    QHash<int, QByteArray> roleNames() const override;
 
     QString browseId() const;
     void setBrowseId(const QString &value);

@@ -19,10 +19,14 @@ Kirigami.ScrollablePage {
             id: albumModel
         }
         delegate: Kirigami.BasicListItem {
-            required property string display
+            required property string title
+            required property string videoId
 
             icon: "emblem-music-symbolic"
-            text: display
+            text: title
+            onClicked: pageStack.push("qrc:/PlayerPage.qml", {
+                "videoId": videoId
+            })
         }
 
         Controls.BusyIndicator {
