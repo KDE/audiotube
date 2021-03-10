@@ -13,10 +13,11 @@ class VideoInfoExtractor : public QObject
 {
     Q_OBJECT
 
-    Q_PROPERTY(QString videoId READ videoId WRITE setVideoId NOTIFY videoIdChanged REQUIRED)
+
+    Q_PROPERTY(QString videoId READ videoId WRITE setVideoId NOTIFY videoIdChanged)
 
     Q_PROPERTY(QUrl audioUrl READ audioUrl NOTIFY audioUrlChanged)
-    Q_PROPERTY(QString Title READ title NOTIFY titleChanged)
+    Q_PROPERTY(QString title READ title NOTIFY titleChanged)
 
 public:
     VideoInfoExtractor(QObject *parent = nullptr);

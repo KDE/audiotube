@@ -3,6 +3,8 @@ import org.kde.kirigami 2.14 as Kirigami
 import QtQuick.Controls 2.14 as Controls
 import QtQuick.Layouts 1.3
 
+import QtMultimedia 5.12
+
 import org.kde.ytmusic 1.0
 
 Kirigami.ApplicationWindow {
@@ -49,9 +51,7 @@ Kirigami.ApplicationWindow {
                 }
 
                 onOpenSong: (videoId) => {
-                    pageStack.push("qrc:/PlayerPage.qml", {
-                        "videoId": videoId
-                    })
+                    play(videoId)
                 }
 
                 onOpenVideo: (videoId) => {
@@ -84,6 +84,50 @@ Kirigami.ApplicationWindow {
             Controls.BusyIndicator {
                 anchors.centerIn: parent
                 visible: searchModel.loading
+            }
+        }
+    }
+
+    function play(videoId) {
+        footer.videoId = videoId
+        audio.play()
+    }
+
+    footer: RowLayout {
+        anchors.left: parent.left
+        anchors.right: parent.right
+
+        property alias videoId: info.videoId
+
+        VideoInfoExtractor {
+            id: info
+        }
+
+        Audio {
+            id: audio
+            source: info.audioUrl
+        }
+
+        Controls.ToolButton {
+            Layout.fillHeight: true
+
+            icon.name: audio.playbackState === Audio.PlayingState ? "media-playback-pause" : "media-playback-start"
+            onClicked: audio.playbackState === Audio.PlayingState ? audio.pause() : audio.play()
+        }
+
+        ColumnLayout {
+            Layout.fillHeight: true
+
+            Kirigami.Heading {
+                text: info.title ? info.title : i18n("No media playing")
+            }
+
+            Controls.Slider {
+                Layout.fillWidth: true
+
+                from: 0
+                to: audio.duration
+                value: audio.position
             }
         }
     }

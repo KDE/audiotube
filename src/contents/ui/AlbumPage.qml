@@ -24,9 +24,7 @@ Kirigami.ScrollablePage {
 
             icon: "emblem-music-symbolic"
             text: title
-            onClicked: pageStack.push("qrc:/PlayerPage.qml", {
-                "videoId": videoId
-            })
+            onClicked: play(videoId)
         }
 
         Controls.BusyIndicator {

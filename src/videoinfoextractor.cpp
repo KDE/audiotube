@@ -15,11 +15,13 @@ VideoInfoExtractor::VideoInfoExtractor(QObject *parent)
         AsyncYTMusic::instance().extractVideoInfo(QString::fromStdString(m_videoId.toStdString()));
     });
 
-    connect(&AsyncYTMusic::instance(), &AsyncYTMusic::extractVideoInfoFinished, this, [=](video_info::VideoInfo info) {
+    connect(&AsyncYTMusic::instance(), &AsyncYTMusic::extractVideoInfoFinished, this, [=](const video_info::VideoInfo &info) {
         m_videoInfo = info;
         Q_EMIT audioUrlChanged();
+        Q_EMIT titleChanged();
     });
 }
+
 
 QUrl VideoInfoExtractor::audioUrl() const
 {
