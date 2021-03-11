@@ -1,0 +1,38 @@
+{
+    "id": "org.kde.audiotube",
+    "runtime": "org.kde.Platform",
+    "runtime-version": "5.15",
+    "sdk": "org.kde.Sdk",
+    "command": "audiotube",
+    "tags": ["nightly"],
+    "desktop-file-name-suffix": " (Nightly)",
+    "finish-args": [
+        "--share=ipc",
+        "--share=network",
+        "--socket=x11",
+        "--socket=wayland",
+        "--socket=pulseaudio",
+        "--device=dri"
+    ],
+    "separate-locales": false,
+
+    "modules": [
+        "flatpak/python3-youtube_dl.json",
+        "flatpak/python3-ytmusicapi.json",
+        {
+            "name": "pybind11",
+            "config-opts": ["-DPYBIND11_FINDPYTHON=ON", "-DPYBIND11_TEST=OFF"],
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "sources": [ { "type": "git", "url": "https://github.com/pybind/pybind11" } ]
+        },
+        {
+            "name": "org.kde.audiotube",
+            "config-opts": ["-DPYBIND11_FINDPYTHON=ON"],
+            "buildsystem": "cmake-ninja",
+            "builddir": true,
+            "sources": [ { "type": "dir", "path": ".", "skip": [".git"] } ]
+        }
+    ]
+}
+

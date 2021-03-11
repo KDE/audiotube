@@ -1,0 +1,14 @@
+{
+    "name": "python3-youtube_dl",
+    "buildsystem": "simple",
+    "build-commands": [
+        "pip3 install --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"youtube_dl\" --no-build-isolation"
+    ],
+    "sources": [
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/be/d5/15995c54364497d2706011439c94a8629ccffc5c2ce0c406929b3958f27a/youtube_dl-2021.3.3.tar.gz",
+            "sha256": "02432aa2dd0e859e64d74fca2ad624abf3bead3dba811d594100e1cb7897dce7"
+        }
+    ]
+}
