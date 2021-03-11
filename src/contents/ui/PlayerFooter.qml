@@ -21,6 +21,12 @@ ColumnLayout {
     anchors.right: parent.right
     height: maximized ? applicationWindow().height : player.preferredHeight
 
+    Image {
+        Layout.fillWidth: true
+        Layout.fillHeight: true
+        source: info.thumbnail
+    }
+
     Controls.ScrollView {
         Layout.fillHeight: footerLayout.maximized
         Layout.fillWidth: true

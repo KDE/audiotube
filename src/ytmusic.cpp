@@ -420,7 +420,8 @@ video_info::VideoInfo YTMusic::extract_video_info(const std::string &video_id) c
     return {
         info["id"].cast<std::string>(),
         info["title"].cast<std::string>(),
-        extract_py_list<video_info::Format>(info["formats"])
+        extract_py_list<video_info::Format>(info["formats"]),
+        info["thumbnail"].cast<std::string>()
     };
 }
 
