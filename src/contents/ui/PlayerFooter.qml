@@ -27,9 +27,10 @@ ColumnLayout {
         Layout.fillWidth: true
 
         flow: width > height ? GridLayout.LeftToRight : GridLayout.TopToBottom
-        readonly property bool mobile: flow == GridLayout.TopToBottom
+        readonly property bool mobile: width > height
 
         visible: footerLayout.maximized
+
         Item {
             Layout.fillWidth: true
             Layout.fillHeight: true
@@ -48,7 +49,6 @@ ColumnLayout {
             Layout.fillHeight: true
             Layout.preferredWidth: !playerLayout.mobile && playerLayout.width * 0.5
             Layout.preferredHeight: playerLayout.mobile && playerLayout.height * 0.5
-            visible: footerLayout.maximized
 
             ListView {
                 id: playlistView
@@ -196,9 +196,9 @@ ColumnLayout {
             text: i18n("Expand")
 
             Layout.fillHeight: true
-            icon.name: footer.maximized ? "arrow-down" : "arrow-up"
+            icon.name: footerLayout.maximized ? "arrow-down" : "arrow-up"
 
-            onClicked: footer.maximized = !footer.maximized
+            onClicked: footerLayout.maximized = !footerLayout.maximized
         }
     }
 }
