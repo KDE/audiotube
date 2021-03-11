@@ -171,11 +171,9 @@ Kirigami.ApplicationWindow {
                 id: audio
                 source: info.audioUrl
 
-                property int lastStatus
 
                 onStatusChanged: {
-                    if (status == Audio.EndOfMedia && status != lastStatus) {
-                        lastStatus = status
+                    if (status == Audio.EndOfMedia) {
                         console.log("Song ended")
                         playlistModel.next()
                     }
