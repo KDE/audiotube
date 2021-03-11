@@ -22,7 +22,7 @@ struct UNEXPORT YTMusicPrivate {
 };
 
 template <typename T>
-std::optional<T> optional_key(const py::handle &obj, const char *name) {
+std::optional<T> optional_key(py::handle obj, const char *name) {
     if (!obj.cast<py::dict>().contains(name)) {
         return std::nullopt;
     }
@@ -30,7 +30,7 @@ std::optional<T> optional_key(const py::handle &obj, const char *name) {
     return obj[name].cast<T>();
 }
 
-meta::Thumbnail extract_thumbnail(const py::handle &thumbnail) {
+meta::Thumbnail extract_thumbnail(py::handle thumbnail) {
     return {
         thumbnail["url"].cast<std::string>(),
         thumbnail["width"].cast<int>(),
@@ -38,14 +38,14 @@ meta::Thumbnail extract_thumbnail(const py::handle &thumbnail) {
     };
 }
 
-meta::Artist extract_meta_artist(const py::handle &artist) {
+meta::Artist extract_meta_artist(py::handle artist) {
     return {
         artist["name"].cast<std::string>(),
         artist["id"].cast<std::optional<std::string>>()
     };
 };
 
-album::Track extract_album_track(const py::handle &track) {
+album::Track extract_album_track(py::handle track) {
     return {
         track["index"].cast<std::string>(),
         track["title"].cast<std::string>(),
@@ -56,7 +56,7 @@ album::Track extract_album_track(const py::handle &track) {
     };
 }
 
-video_info::Format extract_format(const py::handle &format) {
+video_info::Format extract_format(py::handle format) {
     return {
         format["quality"].cast<int>(),
         format["url"].cast<std::string>(),
@@ -65,15 +65,15 @@ video_info::Format extract_format(const py::handle &format) {
     };
 }
 
-playlist::Track extract_playlist_track(const py::handle &track);
-watch::Playlist::Track extract_watch_track(const py::handle &track);
+playlist::Track extract_playlist_track(py::handle track);
+watch::Playlist::Track extract_watch_track(py::handle track);
 
 template <typename T>
-inline auto extract_py_list(const py::handle &obj) {
-    const py::list list = obj.cast<py::list>();
+inline auto extract_py_list(py::handle obj) {
+    const auto list = obj.cast<py::list>();
     std::vector<T> output;
 
-    std::transform(list.begin(), list.end(), std::back_inserter(output), [](const py::handle &item) {
+    std::transform(list.begin(), list.end(), std::back_inserter(output), [](py::handle item) {
         if constexpr(std::is_same_v<T, meta::Thumbnail>) {
             return extract_thumbnail(item);
         } else if constexpr(std::is_same_v<T, meta::Artist>) {
@@ -94,17 +94,18 @@ inline auto extract_py_list(const py::handle &obj) {
     return output;
 }
 
-meta::Album extract_meta_album(const py::handle &album) {
+meta::Album extract_meta_album(py::handle album) {
     return meta::Album {
         album["name"].cast<std::string>(),
         album["id"].cast<std::optional<std::string>>()
     };
 }
 
-watch::Playlist::Track extract_watch_track(const py::handle &track) {
+watch::Playlist::Track extract_watch_track(py::handle track) {
+    py::print(track);
     return {
         track["title"].cast<std::string>(),
-        track["length"].cast<std::string>(),
+        track["length"].cast<std::optional<std::string>>(),
         track["videoId"].cast<std::string>(),
         track["playlistId"].cast<std::string>(),
         extract_py_list<meta::Thumbnail>(track["thumbnail"]),
@@ -121,7 +122,7 @@ watch::Playlist::Track extract_watch_track(const py::handle &track) {
 }
 
 
-playlist::Track extract_playlist_track(const py::handle &track) {
+playlist::Track extract_playlist_track(py::handle track) {
     return {
         track["videoId"].cast<std::optional<std::string>>(),
         track["title"].cast<std::string>(),
@@ -141,7 +142,7 @@ playlist::Track extract_playlist_track(const py::handle &track) {
     };
 }
 
-artist::Artist::Song::Album extract_song_album(const py::handle &album) {
+artist::Artist::Song::Album extract_song_album(py::handle album) {
     return {
         album["name"].cast<std::string>(),
         album["id"].cast<std::string>()
@@ -149,14 +150,14 @@ artist::Artist::Song::Album extract_song_album(const py::handle &album) {
 };
 
 template <typename T>
-auto extract_artist_section_results(const py::handle &section) {
+auto extract_artist_section_results(py::handle section) {
     if (!section.cast<py::dict>().contains("results")) {
         return std::vector<T>();
     }
 
     const py::list py_results = section["results"];
     std::vector<T> results;
-    std::transform(py_results.begin(), py_results.end(), std::back_inserter(results), [](const py::handle &result) {
+    std::transform(py_results.begin(), py_results.end(), std::back_inserter(results), [](py::handle result) {
         if constexpr(std::is_same_v<T, artist::Artist::Song>) {
             return artist::Artist::Song {
                 result["videoId"].cast<std::string>(),
@@ -197,7 +198,7 @@ auto extract_artist_section_results(const py::handle &section) {
 }
 
 template<typename T>
-std::optional<artist::Artist::Section<T>> extract_artist_section(const py::handle &artist, const char* name) {
+std::optional<artist::Artist::Section<T>> extract_artist_section(py::handle artist, const char* name) {
     if (artist.cast<py::dict>().contains(name)) {
         const auto section = artist[name];
         return artist::Artist::Section<T> {
@@ -210,8 +211,8 @@ std::optional<artist::Artist::Section<T>> extract_artist_section(const py::handl
     }
 }
 
-search::SearchResultItem extract_search_result(const py::handle &result) {
-    const std::string resultType = result["resultType"].cast<std::string>();
+search::SearchResultItem extract_search_result(py::handle result) {
+    const auto resultType = result["resultType"].cast<std::string>();
     if (resultType == "video") {
         return search::Video {
             {
@@ -390,7 +391,7 @@ std::vector<artist::Artist::Album> YTMusic::get_artist_albums(const std::string 
     const auto py_albums = d->ytmusic.attr("get_artist_albums")(channel_id, params);
     std::vector<artist::Artist::Album> albums;
 
-    std::transform(py_albums.begin(), py_albums.end(), std::back_inserter(albums), [](const py::handle &album) {
+    std::transform(py_albums.begin(), py_albums.end(), std::back_inserter(albums), [](py::handle album) {
         return artist::Artist::Album {
             album["title"].cast<std::string>(),
             extract_py_list<meta::Thumbnail>(album["thumbnails"]),

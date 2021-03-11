@@ -35,13 +35,13 @@ PlaylistModel::PlaylistModel(QObject *parent)
         }
         endResetModel();
 
-        currentVideoIdChanged();
+        Q_EMIT currentVideoIdChanged();
     });
 }
 
 int PlaylistModel::rowCount(const QModelIndex &parent) const
 {
-    return parent.isValid() ? 0 : m_playlist.tracks.size();
+    return parent.isValid() ? 0 : int(m_playlist.tracks.size());
 }
 
 QVariant PlaylistModel::data(const QModelIndex &index, int role) const
@@ -57,7 +57,7 @@ QVariant PlaylistModel::data(const QModelIndex &index, int role) const
         std::transform(artists.begin(), artists.end(), std::back_inserter(artistNames), [](const meta::Artist &artist) {
             return QString::fromStdString(artist.name);
         });
-        return artistNames.join(", ");
+        return artistNames.join(QStringLiteral(", "));
     }
     case IsCurrent:
         return m_playlist.tracks[index.row()].video_id == m_currentVideoId.toStdString();
@@ -157,8 +157,8 @@ void PlaylistModel::emitCurrentVideoChanged(const QString &oldVideoId)
     int oldIndex = std::distance(m_playlist.tracks.begin(), oldVideoIt);
     int newIndex = std::distance(m_playlist.tracks.begin(), currentVideoIt);
 
-    dataChanged(index(oldIndex), index(oldIndex), {IsCurrent});
-    dataChanged(index(newIndex), index(newIndex), {IsCurrent});
+    Q_EMIT dataChanged(index(oldIndex), index(oldIndex), {IsCurrent});
+    Q_EMIT dataChanged(index(newIndex), index(newIndex), {IsCurrent});
 }
 
 QString PlaylistModel::playlistId() const

@@ -20,7 +20,7 @@ struct Thumbnail {
     int width;
     int height;
 
-    bool operator<(const Thumbnail other) const {
+    bool operator<(const Thumbnail &other) const {
         return height < other.height;
     }
 };
@@ -250,7 +250,7 @@ namespace watch {
 struct Playlist {
     struct Track {
         std::string title;
-        std::string length;
+        std::optional<std::string> length;
         std::string video_id;
         std::string playlistId;
         std::vector<meta::Thumbnail> thumbnail;

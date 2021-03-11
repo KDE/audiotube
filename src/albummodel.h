@@ -50,7 +50,7 @@ public:
 
 private:
     QString m_browseId;
-    bool m_loading;
+    bool m_loading = false;
 
     album::Album m_album;
 };

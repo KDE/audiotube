@@ -28,13 +28,11 @@ SearchModel::SearchModel(QObject *parent)
     });
 }
 
-SearchModel::~SearchModel()
-{
-}
+SearchModel::~SearchModel() = default;
 
 int SearchModel::rowCount(const QModelIndex &parent) const
 {
-    return parent.isValid() ? 0 : m_searchResults.size();
+    return parent.isValid() ? 0 : int(m_searchResults.size());
 }
 
 QVariant SearchModel::data(const QModelIndex &index, int role) const

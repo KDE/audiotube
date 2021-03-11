@@ -20,9 +20,9 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 {
     QGuiApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QApplication app(argc, argv);
-    QCoreApplication::setOrganizationName("KDE");
-    QCoreApplication::setOrganizationDomain("kde.org");
-    QCoreApplication::setApplicationName("audiotube");
+    QCoreApplication::setOrganizationName(QStringLiteral("KDE"));
+    QCoreApplication::setOrganizationDomain(QStringLiteral("kde.org"));
+    QCoreApplication::setApplicationName(QStringLiteral("audiotube"));
 
     QQmlApplicationEngine engine;
 

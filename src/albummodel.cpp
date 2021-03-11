@@ -29,7 +29,7 @@ AlbumModel::AlbumModel(QObject *parent)
 
 int AlbumModel::rowCount(const QModelIndex &parent) const
 {
-    return parent.isValid() ? 0 : m_album.tracks.size();
+    return parent.isValid() ? 0 : int(m_album.tracks.size());
 }
 
 QVariant AlbumModel::data(const QModelIndex &index, int role) const

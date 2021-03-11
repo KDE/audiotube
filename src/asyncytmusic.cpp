@@ -12,9 +12,9 @@
 
 namespace py = pybind11;
 
-static QThread *ytmthread = []() -> QThread * {
+static QThread *const ytmthread = []() -> QThread * {
     auto *thread = new QThread();
-    thread->setObjectName("YTMusicAPI");
+    thread->setObjectName(QStringLiteral("YTMusicAPI"));
     return thread;
 }();
 
