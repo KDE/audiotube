@@ -197,6 +197,8 @@ ColumnLayout {
 
             text: i18n("Expand")
 
+            enabled: playlistView.count > 0
+
             Layout.fillHeight: true
             icon.name: footerLayout.maximized ? "arrow-down" : "arrow-up"
 
