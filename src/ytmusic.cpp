@@ -150,6 +150,10 @@ artist::Artist::Song::Album extract_song_album(const py::handle &album) {
 
 template <typename T>
 auto extract_artist_section_results(const py::handle &section) {
+    if (!section.cast<py::dict>().contains("results")) {
+        return std::vector<T>();
+    }
+
     const py::list py_results = section["results"];
     std::vector<T> results;
     std::transform(py_results.begin(), py_results.end(), std::back_inserter(results), [](const py::handle &result) {
@@ -402,8 +406,6 @@ std::vector<artist::Artist::Album> YTMusic::get_artist_albums(const std::string 
 video_info::VideoInfo YTMusic::extract_video_info(const std::string &video_id) const
 {
     using namespace pybind11::literals;
-
-    std::cout << "Extracting video " << video_id << std::endl;
 
     // lazy initialization
     if (d->ytdl.is_none()) {
