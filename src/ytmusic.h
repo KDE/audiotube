@@ -240,6 +240,7 @@ struct VideoInfo {
     std::string id;
     std::string title;
     std::vector<Format> formats;
+    std::string thumnnail;
 
     // More, but not interesting for us right now
 };

@@ -26,6 +26,7 @@ VideoInfoExtractor::VideoInfoExtractor(QObject *parent)
         Q_EMIT audioUrlChanged();
         Q_EMIT titleChanged();
         Q_EMIT songChanged();
+        Q_EMIT thumbnailChanged();
     });
 }
 
@@ -74,6 +75,12 @@ void VideoInfoExtractor::setVideoId(const QString &videoId)
 QString VideoInfoExtractor::title() const
 {
     return QString::fromStdString(m_videoInfo.title);
+}
+
+QString VideoInfoExtractor::thumbnail() const
+{
+    qDebug() << "thumb" << QString::fromStdString(m_videoInfo.thumnnail);
+    return QString::fromStdString(m_videoInfo.thumnnail);
 }
 
 bool VideoInfoExtractor::loading() const
