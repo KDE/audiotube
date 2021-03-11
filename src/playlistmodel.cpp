@@ -17,12 +17,22 @@ PlaylistModel::PlaylistModel(QObject *parent)
         setLoading(true);
         AsyncYTMusic::instance().fetchWatchPlaylist(m_initialVideoId);
     });
+    connect(this, &PlaylistModel::playlistIdChanged, this, [=] {
+        if (m_playlistId.isEmpty()) {
+            return;
+        }
+
+        setLoading(true);
+        AsyncYTMusic::instance().fetchWatchPlaylist(std::nullopt, m_playlistId);
+    });
     connect(&AsyncYTMusic::instance(), &AsyncYTMusic::fetchWatchPlaylistFinished, this, [=](const watch::Playlist &playlist) {
         setLoading(false);
 
         beginResetModel();
         m_playlist = playlist;
-        m_currentVideoId = m_initialVideoId;
+        if (!m_playlist.tracks.empty()) {
+            m_currentVideoId = QString::fromStdString(m_playlist.tracks.front().video_id);
+        }
         endResetModel();
 
         currentVideoIdChanged();
@@ -149,4 +159,15 @@ void PlaylistModel::emitCurrentVideoChanged(const QString &oldVideoId)
 
     dataChanged(index(oldIndex), index(oldIndex), {IsCurrent});
     dataChanged(index(newIndex), index(newIndex), {IsCurrent});
+}
+
+QString PlaylistModel::playlistId() const
+{
+    return m_playlistId;
+}
+
+void PlaylistModel::setPlaylistId(const QString &playlistId)
+{
+    m_playlistId = playlistId;
+    Q_EMIT playlistIdChanged();
 }

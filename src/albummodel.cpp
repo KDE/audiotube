@@ -23,6 +23,7 @@ AlbumModel::AlbumModel(QObject *parent)
 
         Q_EMIT titleChanged();
         Q_EMIT thumbnailUrlChanged();
+        Q_EMIT playlistIdChanged();
     });
 }
 
@@ -88,4 +89,9 @@ QUrl AlbumModel::thumbnailUrl() const
     }
 
     return QUrl(QString::fromStdString(m_album.thumbnails.back().url));
+}
+
+QString AlbumModel::playlistId() const
+{
+    return QString::fromStdString(m_album.playlist_id);
 }

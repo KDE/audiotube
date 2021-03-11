@@ -9,6 +9,16 @@ Kirigami.ScrollablePage {
     property alias browseId: albumModel.browseId
     title: albumModel.title
 
+    actions {
+        main: Kirigami.Action {
+            icon.name: "media-playback-start"
+            text: i18n("Play")
+            onTriggered: {
+                applicationWindow().playPlaylist(albumModel.playlistId)
+            }
+        }
+    }
+
     ListView {
         header: Kirigami.ItemViewHeader {
             backgroundImage.source: albumModel.thumbnailUrl

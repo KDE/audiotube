@@ -17,6 +17,7 @@ class AlbumModel : public QAbstractListModel
     Q_PROPERTY(QString title READ title NOTIFY titleChanged)
     Q_PROPERTY(QUrl thumbnailUrl READ thumbnailUrl NOTIFY thumbnailUrlChanged)
     Q_PROPERTY(bool loading READ loading WRITE setLoading NOTIFY loadingChanged)
+    Q_PROPERTY(QString playlistId READ playlistId NOTIFY playlistIdChanged)
 
 public:
     enum Role {
@@ -43,6 +44,9 @@ public:
 
     QUrl thumbnailUrl() const;
     Q_SIGNAL void thumbnailUrlChanged();
+
+    QString playlistId() const;
+    Q_SIGNAL void playlistIdChanged();
 
 private:
     QString m_browseId;

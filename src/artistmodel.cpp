@@ -156,7 +156,6 @@ void ArtistModel::setLoading(bool loading)
     Q_EMIT loadingChanged();
 }
 
-
 void ArtistModel::triggerItem(int row)
 {
     if (row >= countItems(m_artist.songs)

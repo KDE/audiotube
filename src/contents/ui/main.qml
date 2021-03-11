@@ -90,9 +90,17 @@ Kirigami.ApplicationWindow {
         footer.videoId = videoId
     }
 
+    function playPlaylist(playlistId) {
+        footer.playlistId = playlistId
+    }
+
     footer: ColumnLayout {
         id: footerLayout
+
+        // input only
         property alias videoId: playlistModel.initialVideoId
+        property alias playlistId: playlistModel.playlistId
+
         property bool maximized: false
 
         anchors.left: parent.left

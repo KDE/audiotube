@@ -19,6 +19,7 @@ Q_DECLARE_METATYPE(song::Song)
 Q_DECLARE_METATYPE(playlist::Playlist)
 Q_DECLARE_METATYPE(video_info::VideoInfo)
 Q_DECLARE_METATYPE(watch::Playlist)
+Q_DECLARE_METATYPE(std::optional<QString>)
 
 class AsyncYTMusic : public QObject
 {
@@ -58,7 +59,8 @@ public:
     void extractVideoInfo(const QString &videoId);
     Q_SIGNAL void extractVideoInfoFinished(video_info::VideoInfo);
 
-    void fetchWatchPlaylist(const QString &videoId);
+    void fetchWatchPlaylist(const std::optional<QString> &videoId = std::nullopt ,
+                            const std::optional<QString> &playlistId = std::nullopt);
     Q_SIGNAL void fetchWatchPlaylistFinished(watch::Playlist);
 
     Q_SIGNAL void errorOccurred(const QString &error);
@@ -85,8 +87,8 @@ private:
     Q_SIGNAL void startExtractVideoInfo(const QString &videoId);
     Q_SLOT void internalExtractVideoInfo(const QString &videoId);
 
-    Q_SIGNAL void startFetchWatchPlaylist(const QString &videoId);
-    Q_SLOT void internalFetchWatchPlaylist(const QString &videoId);
+    Q_SIGNAL void startFetchWatchPlaylist(const std::optional<QString> &videoId, const std::optional<QString> &playlistId);
+    Q_SLOT void internalFetchWatchPlaylist(const std::optional<QString> &videoId, const std::optional<QString> &playlistId);
 
     YTMusic m_ytdl;
 };

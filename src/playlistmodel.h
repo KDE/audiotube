@@ -11,8 +11,11 @@ class PlaylistModel : public QAbstractListModel
 {
     Q_OBJECT
 
+    // input
     Q_PROPERTY(QString initialVideoId READ initialVideoId WRITE setInitialVideoId NOTIFY initialVideoIdChanged)
+    Q_PROPERTY(QString playlistId READ playlistId WRITE setPlaylistId NOTIFY playlistIdChanged)
 
+    // output
     Q_PROPERTY(bool loading READ loading WRITE setLoading NOTIFY loadingChanged)
     Q_PROPERTY(QString currentVideoId READ currentVideoId NOTIFY currentVideoIdChanged)
 
@@ -47,10 +50,15 @@ public:
     Q_INVOKABLE void next();
     Q_INVOKABLE void skipTo(const QString &videoId);
 
+    QString playlistId() const;
+    void setPlaylistId(const QString &playlistId);
+    Q_SIGNAL void playlistIdChanged();
+
 private:
     void emitCurrentVideoChanged(const QString &oldVideoId);
 
     QString m_initialVideoId;
+    QString m_playlistId;
     QString m_currentVideoId;
     bool m_loading = false;
 

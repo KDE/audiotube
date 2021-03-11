@@ -29,6 +29,7 @@ AsyncYTMusic::AsyncYTMusic(QObject *parent)
     qRegisterMetaType<playlist::Playlist>();
     qRegisterMetaType<video_info::VideoInfo>();
     qRegisterMetaType<watch::Playlist>();
+    qRegisterMetaType<std::optional<QString>>();
 
     connect(this, &AsyncYTMusic::startSearch, this, &AsyncYTMusic::internalSearch);
     connect(this, &AsyncYTMusic::startFetchArtist, this, &AsyncYTMusic::internalFetchArtist);
@@ -180,12 +181,26 @@ void AsyncYTMusic::internalExtractVideoInfo(const QString &videoId) {
 //
 // fetchWatchPlaylist
 //
-void AsyncYTMusic::fetchWatchPlaylist(const QString &videoId)
+void AsyncYTMusic::fetchWatchPlaylist(const std::optional<QString> &videoId, const std::optional<QString> &playlistId)
 {
-    Q_EMIT startFetchWatchPlaylist(videoId);
+    Q_EMIT startFetchWatchPlaylist(videoId, playlistId);
 }
 
-void AsyncYTMusic::internalFetchWatchPlaylist(const QString &videoId)
+void AsyncYTMusic::internalFetchWatchPlaylist(const std::optional<QString> &videoId, const std::optional<QString> &playlistId)
 {
-    Q_EMIT fetchWatchPlaylistFinished(m_ytdl.get_watch_playlist(videoId.toStdString()));
+    Q_EMIT fetchWatchPlaylistFinished(m_ytdl.get_watch_playlist(
+    [&]() -> std::optional<std::string> {
+        if (!videoId.has_value()) {
+            return std::nullopt;
+        }
+
+        return videoId->toStdString();
+    }(),
+    [&]() -> std::optional<std::string> {
+        if (!playlistId.has_value()) {
+            return std::nullopt;
+        }
+
+        return playlistId->toStdString();
+    }()));
 }
