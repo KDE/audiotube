@@ -255,7 +255,7 @@ struct Playlist {
         std::vector<meta::Thumbnail> thumbnail;
         std::optional<std::string> like_status;
         std::vector<meta::Artist> artists;
-        meta::Album album;
+        std::optional<meta::Album> album;
     };
 
     std::vector<Track> tracks;

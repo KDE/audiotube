@@ -92,7 +92,7 @@ Kirigami.ApplicationWindow {
 
     footer: ColumnLayout {
         id: footerLayout
-        property alias videoId: info.videoId
+        property alias videoId: playlistModel.initialVideoId
         property bool maximized: false
 
         anchors.left: parent.left
@@ -105,11 +105,11 @@ Kirigami.ApplicationWindow {
             visible: footerLayout.maximized
 
             ListView {
+                id: playlistView
                 anchors.fill: parent
 
                 model: PlaylistModel {
                     id: playlistModel
-                    videoId: footer.videoId
                 }
                 delegate: Kirigami.BasicListItem {
                     required property string title
@@ -161,11 +161,22 @@ Kirigami.ApplicationWindow {
             VideoInfoExtractor {
                 id: info
                 onSongChanged: audio.play()
+                videoId: playlistModel.currentVideoId
             }
 
             Audio {
                 id: audio
                 source: info.audioUrl
+
+                property int lastStatus
+
+                onStatusChanged: {
+                    if (status == Audio.EndOfMedia && status != lastStatus) {
+                        lastStatus = status
+                        console.log("Song ended")
+                        playlistModel.next()
+                    }
+                }
             }
 
             Controls.ToolButton {
@@ -181,6 +192,19 @@ Kirigami.ApplicationWindow {
 
                 icon.name: audio.playbackState === Audio.PlayingState ? "media-playback-pause" : "media-playback-start"
                 onClicked: audio.playbackState === Audio.PlayingState ? audio.pause() : audio.play()
+            }
+
+            Controls.ToolButton {
+                display: Controls.AbstractButton.IconOnly
+                Layout.preferredWidth: parent.height
+                Layout.fillHeight: true
+
+                enabled: playlistView.count > 1
+
+                visible: !info.loading
+
+                icon.name: "media-skip-forward"
+                onClicked: playlistModel.next()
             }
 
             Controls.BusyIndicator {
@@ -209,6 +233,12 @@ Kirigami.ApplicationWindow {
                     onMoved: {
                         console.log("Value:", value)
                         audio.seek(Math.floor(value))
+                    }
+
+                    Behavior on value {
+                        NumberAnimation {
+
+                        }
                     }
                 }
             }

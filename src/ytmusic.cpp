@@ -111,7 +111,13 @@ watch::Playlist::Track extract_watch_track(const py::handle &track) {
         extract_py_list<meta::Thumbnail>(track["thumbnail"]),
         track["likeStatus"].cast<std::optional<std::string>>(),
         extract_py_list<meta::Artist>(track["artists"]),
-        extract_meta_album(track["album"])
+        [&]() -> std::optional<meta::Album> {
+            if (!track.cast<py::dict>().contains("album")) {
+                return std::nullopt;
+            }
+
+            return extract_meta_album(track["album"]);
+        }()
     };
 }
 
@@ -397,6 +403,8 @@ std::vector<artist::Artist::Album> YTMusic::get_artist_albums(const std::string 
 video_info::VideoInfo YTMusic::extract_video_info(const std::string &video_id) const
 {
     using namespace pybind11::literals;
+
+    std::cout << "Extracting video " << video_id << std::endl;
 
     // lazy initialization
     if (d->ytdl.is_none()) {

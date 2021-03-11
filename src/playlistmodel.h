@@ -11,12 +11,14 @@ class PlaylistModel : public QAbstractListModel
 {
     Q_OBJECT
 
-    Q_PROPERTY(QString videoId READ videoId WRITE setVideoId NOTIFY videoIdChanged)
+    Q_PROPERTY(QString initialVideoId READ initialVideoId WRITE setInitialVideoId NOTIFY initialVideoIdChanged)
+
     Q_PROPERTY(bool loading READ loading WRITE setLoading NOTIFY loadingChanged)
+    Q_PROPERTY(QString currentVideoId READ currentVideoId NOTIFY currentVideoIdChanged)
 
 public:
     enum Role {
-        Title,
+        Title = Qt::UserRole + 1,
         VideoId,
         Artists
     };
@@ -27,16 +29,24 @@ public:
     QVariant data(const QModelIndex &index, int role) const override;
     QHash<int, QByteArray> roleNames() const override;
 
-    QString videoId() const;
-    void setVideoId(const QString &videoId);
-    Q_SIGNAL void videoIdChanged();
+    QString initialVideoId() const;
+    void setInitialVideoId(const QString &videoId);
+    Q_SIGNAL void initialVideoIdChanged();
 
     bool loading() const;
     void setLoading(bool loading);
     Q_SIGNAL void loadingChanged();
 
+    QString nextVideoId() const;
+
+    QString currentVideoId() const;
+    Q_SIGNAL void currentVideoIdChanged();
+
+    Q_INVOKABLE void next();
+
 private:
-    QString m_videoId;
+    QString m_initialVideoId;
+    QString m_currentVideoId;
     bool m_loading = false;
 
     watch::Playlist m_playlist;

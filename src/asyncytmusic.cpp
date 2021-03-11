@@ -6,6 +6,7 @@
 
 #include <QThread>
 #include <exception>
+#include <QDebug>
 
 #include <pybind11/embed.h>
 
@@ -163,11 +164,13 @@ void AsyncYTMusic::internalFetchArtistAlbums(const QString &channelid, const QSt
 // extractVideoInfo
 //
 void AsyncYTMusic::extractVideoInfo(const QString &videoId) {
+    qDebug() << "extract video " << videoId;
     Q_EMIT startExtractVideoInfo(videoId);
 }
 
 void AsyncYTMusic::internalExtractVideoInfo(const QString &videoId) {
     try {
+        qDebug() << "extract video2" << videoId;
         Q_EMIT extractVideoInfoFinished(m_ytdl.extract_video_info(videoId.toStdString()));
     } catch (const py::error_already_set &error) {
         Q_EMIT errorOccurred(QString::fromUtf8(error.what()));
@@ -184,9 +187,5 @@ void AsyncYTMusic::fetchWatchPlaylist(const QString &videoId)
 
 void AsyncYTMusic::internalFetchWatchPlaylist(const QString &videoId)
 {
-    try {
-        Q_EMIT fetchWatchPlaylistFinished(m_ytdl.get_watch_playlist(videoId.toStdString()));
-    } catch (const py::error_already_set &error) {
-        Q_EMIT errorOccurred(QString::fromUtf8(error.what()));
-    }
+    Q_EMIT fetchWatchPlaylistFinished(m_ytdl.get_watch_playlist(videoId.toStdString()));
 }

@@ -20,7 +20,7 @@ class AlbumModel : public QAbstractListModel
 
 public:
     enum Role {
-        Title,
+        Title = Qt::UserRole + 1,
         VideoId
     };
 
