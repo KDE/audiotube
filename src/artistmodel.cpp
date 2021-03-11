@@ -25,9 +25,11 @@ ArtistModel::ArtistModel(QObject *parent)
 
         beginResetModel();
         m_artist = artist;
+        std::sort(m_artist.thumbnails.begin(), m_artist.thumbnails.end());
         endResetModel();
 
         Q_EMIT titleChanged();
+        Q_EMIT thumbnailUrlChanged();
     });
 }
 
@@ -132,6 +134,15 @@ void ArtistModel::setChannelId(const QString &channelId)
 QString ArtistModel::title() const
 {
     return QString::fromStdString(m_artist.name);
+}
+
+QUrl ArtistModel::thumbnailUrl() const
+{
+    if (m_artist.thumbnails.empty()) {
+        return QUrl();
+    }
+
+    return QUrl(QString::fromStdString(m_artist.thumbnails.back().url));
 }
 
 bool ArtistModel::loading() const

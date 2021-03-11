@@ -5,6 +5,7 @@
 #pragma once
 
 #include <QAbstractListModel>
+#include <QUrl>
 
 #include <ytmusic.h>
 
@@ -15,6 +16,7 @@ class ArtistModel : public QAbstractListModel
     Q_PROPERTY(QString channelId READ channelId WRITE setChannelId NOTIFY channelIdChanged REQUIRED)
 
     Q_PROPERTY(QString title READ title NOTIFY titleChanged)
+    Q_PROPERTY(QUrl thumbnailUrl READ thumbnailUrl NOTIFY thumbnailUrlChanged)
     Q_PROPERTY(bool loading READ loading WRITE setLoading NOTIFY loadingChanged)
 
 public:
@@ -43,6 +45,9 @@ public:
 
     QString title() const;
     Q_SIGNAL void titleChanged();
+
+    QUrl thumbnailUrl() const;
+    Q_SIGNAL void thumbnailUrlChanged();
 
     bool loading() const;
     void setLoading(bool loading);

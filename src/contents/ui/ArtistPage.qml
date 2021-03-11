@@ -11,6 +11,10 @@ Kirigami.ScrollablePage {
     title: artistModel.title
 
     ListView {
+        header: Kirigami.ItemViewHeader {
+            backgroundImage.source: artistModel.thumbnailUrl
+            title: artistModel.title
+        }
         model: ArtistModel {
             id: artistModel
 
