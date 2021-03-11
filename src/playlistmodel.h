@@ -43,6 +43,7 @@ public:
     Q_SIGNAL void currentVideoIdChanged();
 
     Q_INVOKABLE void next();
+    Q_INVOKABLE void skipTo(const QString &videoId);
 
 private:
     QString m_initialVideoId;

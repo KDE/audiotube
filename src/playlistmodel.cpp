@@ -110,3 +110,9 @@ void PlaylistModel::next()
     m_currentVideoId = nextVideoId();
     Q_EMIT currentVideoIdChanged();
 }
+
+void PlaylistModel::skipTo(const QString &videoId)
+{
+    m_currentVideoId = videoId;
+    Q_EMIT currentVideoIdChanged();
+}
