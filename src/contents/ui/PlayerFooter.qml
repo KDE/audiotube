@@ -62,7 +62,7 @@ ColumnLayout {
 
             Controls.BusyIndicator {
                 anchors.centerIn: parent
-                visible: playlistModel.loading
+                visible: playlistModel.loading || playlistModel.loading
             }
         }
     }
