@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <component type="desktop-application">
-  <id>org.kde.youtube_music</id>
+  <id>org.kde.audiotube</id>
   <name>Kirigami Application</name>
   <summary>A short summary describing what this software is about</summary>
   <metadata_license>A permissive license for this metadata, e.g. "FSFAP"</metadata_license>

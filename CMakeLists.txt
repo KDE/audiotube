@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.14)
 
-project(youtube_music)
+project(audiotube)
 
 include(FeatureSummary)
 
@@ -29,7 +29,7 @@ find_package(pybind11 REQUIRED)
 
 add_subdirectory(src)
 
-install(PROGRAMS org.kde.youtube_music.desktop DESTINATION ${KDE_INSTALL_APPDIR})
-install(FILES org.kde.youtube_music.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
+install(PROGRAMS org.kde.audiotube.desktop DESTINATION ${KDE_INSTALL_APPDIR})
+install(FILES org.kde.audiotube.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)

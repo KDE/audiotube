@@ -7,7 +7,7 @@ target_include_directories(ytm PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 add_subdirectory(example)
 
-add_executable(youtube_music
+add_executable(audiotube
     main.cpp
     asyncytmusic.cpp
     searchmodel.cpp
@@ -18,7 +18,7 @@ add_executable(youtube_music
     resources.qrc
 )
 
-target_link_libraries(youtube_music
+target_link_libraries(audiotube
     Qt5::Core
     Qt5::Gui
     Qt5::Qml
@@ -29,6 +29,6 @@ target_link_libraries(youtube_music
     ytm
 )
 
-target_compile_definitions(youtube_music PRIVATE -DQT_NO_KEYWORDS)
+target_compile_definitions(audiotube PRIVATE -DQT_NO_KEYWORDS)
 
-install(TARGETS youtube_music ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS audiotube ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

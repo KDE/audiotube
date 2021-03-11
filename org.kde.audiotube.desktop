@@ -1,8 +1,8 @@
 [Desktop Entry]
-Name=youtube_music
+Name=AudioTube
 Comment=youtube_music Kirigami Application
 Version=1.0
-Exec=youtube_music
+Exec=audiotube
 Icon=applications-development
 Type=Application
 Terminal=false

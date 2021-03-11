@@ -10,7 +10,7 @@ import org.kde.ytmusic 1.0
 Kirigami.ApplicationWindow {
     id: root
 
-    title: i18n("Youtube Music")
+    title: i18n("AudioTube")
 
     contextDrawer: Kirigami.ContextDrawer {
         id: contextDrawer
