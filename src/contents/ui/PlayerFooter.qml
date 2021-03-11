@@ -165,6 +165,8 @@ ColumnLayout {
 
             Kirigami.Heading {
                 level: 3
+                Layout.fillWidth: true
+                elide: Qt.ElideRight
                 text: info.title ? info.title : i18n("No media playing")
             }
 
