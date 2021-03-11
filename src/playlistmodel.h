@@ -20,7 +20,8 @@ public:
     enum Role {
         Title = Qt::UserRole + 1,
         VideoId,
-        Artists
+        Artists,
+        IsCurrent
     };
 
     explicit PlaylistModel(QObject *parent = nullptr);
@@ -40,12 +41,15 @@ public:
     QString nextVideoId() const;
 
     QString currentVideoId() const;
+    void setCurrentVideoId(const QString &videoId);
     Q_SIGNAL void currentVideoIdChanged();
 
     Q_INVOKABLE void next();
     Q_INVOKABLE void skipTo(const QString &videoId);
 
 private:
+    void emitCurrentVideoChanged(const QString &oldVideoId);
+
     QString m_initialVideoId;
     QString m_currentVideoId;
     bool m_loading = false;

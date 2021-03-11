@@ -22,9 +22,9 @@ PlaylistModel::PlaylistModel(QObject *parent)
 
         beginResetModel();
         m_playlist = playlist;
+        m_currentVideoId = m_initialVideoId;
         endResetModel();
 
-        m_currentVideoId = m_initialVideoId;
         currentVideoIdChanged();
     });
 }
@@ -41,13 +41,16 @@ QVariant PlaylistModel::data(const QModelIndex &index, int role) const
         return QString::fromStdString(m_playlist.tracks[index.row()].title);
     case VideoId:
         return QString::fromStdString(m_playlist.tracks[index.row()].video_id);
-    case Artists:
+    case Artists: {
         const auto artists = m_playlist.tracks[index.row()].artists;
         QStringList artistNames;
         std::transform(artists.begin(), artists.end(), std::back_inserter(artistNames), [](const meta::Artist &artist) {
             return QString::fromStdString(artist.name);
         });
         return artistNames.join(", ");
+    }
+    case IsCurrent:
+        return m_playlist.tracks[index.row()].video_id == m_currentVideoId.toStdString();
     }
 
     Q_UNREACHABLE();
@@ -60,7 +63,8 @@ QHash<int, QByteArray> PlaylistModel::roleNames() const
     return {
         {Title, "title"},
         {VideoId, "videoId"},
-        {Artists, "artists"}
+        {Artists, "artists"},
+        {IsCurrent, "isCurrent"}
     };
 }
 
@@ -105,14 +109,44 @@ QString PlaylistModel::currentVideoId() const
     return m_currentVideoId;
 }
 
+void PlaylistModel::setCurrentVideoId(const QString &videoId)
+{
+    const auto old = m_currentVideoId;
+    m_currentVideoId = videoId;
+    emitCurrentVideoChanged(old);
+    Q_EMIT currentVideoIdChanged();
+}
+
 void PlaylistModel::next()
 {
+    const auto old = m_currentVideoId;
     m_currentVideoId = nextVideoId();
+    emitCurrentVideoChanged(old);
     Q_EMIT currentVideoIdChanged();
 }
 
 void PlaylistModel::skipTo(const QString &videoId)
 {
+    const auto old = m_currentVideoId;
     m_currentVideoId = videoId;
+    emitCurrentVideoChanged(old);
     Q_EMIT currentVideoIdChanged();
+}
+
+void PlaylistModel::emitCurrentVideoChanged(const QString &oldVideoId)
+{
+    const auto oldVideoIt = std::find_if(m_playlist.tracks.begin(), m_playlist.tracks.end(),
+                                             [=](const watch::Playlist::Track &track) {
+        return track.video_id == oldVideoId.toStdString();
+    });
+    const auto currentVideoIt = std::find_if(m_playlist.tracks.begin(), m_playlist.tracks.end(),
+                                             [=](const watch::Playlist::Track &track) {
+        return track.video_id == m_currentVideoId.toStdString();
+    });
+
+    int oldIndex = std::distance(m_playlist.tracks.begin(), oldVideoIt);
+    int newIndex = std::distance(m_playlist.tracks.begin(), currentVideoIt);
+
+    dataChanged(index(oldIndex), index(oldIndex), {IsCurrent});
+    dataChanged(index(newIndex), index(newIndex), {IsCurrent});
 }

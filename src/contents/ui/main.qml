@@ -115,6 +115,9 @@ Kirigami.ApplicationWindow {
                     required property string title
                     required property string videoId
                     required property string artists
+                    required property bool isCurrent
+
+                    highlighted: isCurrent
 
                     onClicked: playlistModel.skipTo(videoId)
 
