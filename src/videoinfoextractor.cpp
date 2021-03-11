@@ -79,7 +79,6 @@ QString VideoInfoExtractor::title() const
 
 QString VideoInfoExtractor::thumbnail() const
 {
-    qDebug() << "thumb" << QString::fromStdString(m_videoInfo.thumnnail);
     return QString::fromStdString(m_videoInfo.thumnnail);
 }
 

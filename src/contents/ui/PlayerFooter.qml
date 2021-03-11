@@ -21,58 +21,75 @@ ColumnLayout {
     anchors.right: parent.right
     height: maximized ? applicationWindow().height : player.preferredHeight
 
-    Image {
-        Layout.fillWidth: true
-        Layout.fillHeight: true
-        source: info.thumbnail
-    }
-
-    Controls.ScrollView {
+    GridLayout {
+        id: playerLayout
         Layout.fillHeight: footerLayout.maximized
         Layout.fillWidth: true
+
+        flow: width > height ? GridLayout.LeftToRight : GridLayout.TopToBottom
+        readonly property bool mobile: flow == GridLayout.TopToBottom
+
         visible: footerLayout.maximized
+        Item {
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            Layout.preferredWidth: !playerLayout.mobile && playerLayout.width * 0.5
+            Layout.preferredHeight: playerLayout.mobile && playerLayout.height * 0.5
 
-        ListView {
-            id: playlistView
-            anchors.fill: parent
-
-            model: PlaylistModel {
-                id: playlistModel
+            Image {
+                source: info.thumbnail
+                anchors.fill: parent
+                fillMode: Image.PreserveAspectFit
             }
-            delegate: Kirigami.BasicListItem {
-                required property string title
-                required property string videoId
-                required property string artists
-                required property bool isCurrent
+        }
 
-                highlighted: isCurrent
+        Controls.ScrollView {
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            Layout.preferredWidth: !playerLayout.mobile && playerLayout.width * 0.5
+            Layout.preferredHeight: playerLayout.mobile && playerLayout.height * 0.5
+            visible: footerLayout.maximized
 
-                onClicked: playlistModel.skipTo(videoId)
+            ListView {
+                id: playlistView
 
-                ColumnLayout {
-                    anchors.fill: parent
+                model: PlaylistModel {
+                    id: playlistModel
+                }
+                delegate: Kirigami.BasicListItem {
+                    required property string title
+                    required property string videoId
+                    required property string artists
+                    required property bool isCurrent
 
-                    Kirigami.Heading {
-                        Layout.fillWidth: true
+                    highlighted: isCurrent
 
-                        level: 2
-                        text: title
-                    }
-                    Controls.Label {
-                        Layout.fillWidth: true
+                    onClicked: playlistModel.skipTo(videoId)
 
-                        text: artists
+                    ColumnLayout {
+                        anchors.fill: parent
+
+                        Kirigami.Heading {
+                            Layout.fillWidth: true
+
+                            level: 2
+                            text: title
+                        }
+                        Controls.Label {
+                            Layout.fillWidth: true
+
+                            text: artists
+                        }
                     }
                 }
-            }
 
-            Controls.BusyIndicator {
-                anchors.centerIn: parent
-                visible: playlistModel.loading || playlistModel.loading
+                Controls.BusyIndicator {
+                    anchors.centerIn: parent
+                    visible: playlistModel.loading || playlistModel.loading
+                }
             }
         }
     }
-
     Behavior on height {
         NumberAnimation {
 
