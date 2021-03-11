@@ -141,7 +141,6 @@ void AsyncYTMusic::internalFetchArtistAlbums(const QString &channelid, const QSt
 // extractVideoInfo
 //
 void AsyncYTMusic::extractVideoInfo(const QString &videoId) {
-    qDebug() << "extract video " << videoId;
     Q_EMIT startExtractVideoInfo(videoId);
 }
 

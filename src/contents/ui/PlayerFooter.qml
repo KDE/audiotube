@@ -53,6 +53,8 @@ ColumnLayout {
             ListView {
                 id: playlistView
 
+                clip: true
+
                 model: PlaylistModel {
                     id: playlistModel
                 }
