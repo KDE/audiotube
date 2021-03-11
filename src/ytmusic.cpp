@@ -102,7 +102,6 @@ meta::Album extract_meta_album(const py::handle &album) {
 }
 
 watch::Playlist::Track extract_watch_track(const py::handle &track) {
-    py::print(track);
     return {
         track["title"].cast<std::string>(),
         track["length"].cast<std::string>(),
