@@ -160,11 +160,11 @@ ColumnLayout {
 
         ColumnLayout {
             Layout.fillHeight: true
-            Layout.topMargin: Kirigami.Units.largeSpacing
-            Layout.bottomMargin: Kirigami.Units.largeSpacing
+            Layout.topMargin: Kirigami.Units.smallSpacing
+            Layout.bottomMargin: Kirigami.Units.smallSpacing
 
             Kirigami.Heading {
-                level: 2
+                level: 3
                 text: info.title ? info.title : i18n("No media playing")
             }
 
