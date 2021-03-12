@@ -273,6 +273,8 @@ YTMusic::YTMusic(
     const auto module = py::module::import("ytmusicapi");
     d->ytmusic = module.attr("YTMusic")(auth, user, requests_session, proxies, language);
 
+    setenv("LC_ALL", "en_US.utf8", true);
+
     const auto version = module.attr("_version").attr("__version__").cast<std::string>();
     if (version != "0.14.3") {
         std::cerr << "Running with untested version of ytmusicapi." << std::endl;
