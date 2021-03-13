@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=AudioTube
-Comment=youtube_music Kirigami Application
+Comment=YouTube Music client
 Version=1.0
 Exec=audiotube
 Icon=org.kde.audiotube
