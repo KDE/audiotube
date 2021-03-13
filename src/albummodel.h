@@ -22,7 +22,8 @@ class AlbumModel : public QAbstractListModel
 public:
     enum Role {
         Title = Qt::UserRole + 1,
-        VideoId
+        VideoId,
+        Artists
     };
 
     explicit AlbumModel(QObject *parent = nullptr);

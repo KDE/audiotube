@@ -47,23 +47,47 @@ Kirigami.ScrollablePage {
                 }
             }
         }
-        delegate: Kirigami.BasicListItem {
+        delegate: Kirigami.SwipeListItem {
+            id: delegateItem
+
             required property string title
             required property int type
             required property int index
+            required property var artists
+            required property string videoId
 
-            text: title
-            icon: {
-                switch (type) {
-                case ArtistModel.Album:
-                    return "media-album-cover"
-                case ArtistModel.Single:
-                case ArtistModel.Song:
-                    return "emblem-music-symbolic"
-                case ArtistModel.Video:
-                    return "emblem-videos-symbolic"
+            RowLayout {
+                Layout.fillHeight: true
+                Kirigami.Icon {
+                    Layout.fillHeight: true
+                    source: {
+                        switch (type) {
+                        case ArtistModel.Album:
+                            return "media-album-cover"
+                        case ArtistModel.Single:
+                        case ArtistModel.Song:
+                            return "emblem-music-symbolic"
+                        case ArtistModel.Video:
+                            return "emblem-videos-symbolic"
+                        }
+                    }
+                }
+
+                Controls.Label {
+                    Layout.fillWidth: true
+                    text: title
                 }
             }
+
+            actions: [
+                Kirigami.Action {
+                    icon.name: "media-playlist-append"
+                    text: i18n("Add to playlist")
+                    visible: type == ArtistModel.Song
+                    onTriggered: PlaylistModel.playNext(delegateItem.videoId, delegateItem.title, delegateItem.artists)
+                }
+            ]
+
             onClicked: artistModel.triggerItem(index)
         }
 

@@ -28,12 +28,34 @@ Kirigami.ScrollablePage {
         model: AlbumModel {
             id: albumModel
         }
-        delegate: Kirigami.BasicListItem {
+        delegate: Kirigami.SwipeListItem {
+            id: delegateItem
+
             required property string title
             required property string videoId
+            required property var artists
 
-            icon: "emblem-music-symbolic"
-            text: title
+            RowLayout {
+                Layout.fillHeight: true
+                Kirigami.Icon {
+                    Layout.fillHeight: true
+                    source: "emblem-music-symbolic"
+                }
+
+                Controls.Label {
+                    Layout.fillWidth: true
+                    text: title
+                }
+            }
+
+            actions: [
+                Kirigami.Action {
+                    icon.name: "media-playlist-append"
+                    text: i18n("Add to playlist")
+                    onTriggered: PlaylistModel.playNext(delegateItem.videoId, delegateItem.title, delegateItem.artists)
+                }
+            ]
+
             onClicked: play(videoId)
         }
 

@@ -105,6 +105,33 @@ QVariant ArtistModel::data(const QModelIndex &index, int role) const
         } else {
             return Song;
         }
+    case Artists:
+        return QVariant::fromValue(std::vector<meta::Artist> {
+            {
+                m_artist.name,
+                m_artist.channel_id
+            }
+        });
+    case VideoId:
+        if (index.row() >= countItems(m_artist.songs)
+                + countItems(m_artist.albums)
+                + countItems(m_artist.singles)) {
+
+            int videoIndex = index.row() - (countItems(m_artist.songs)
+                    + countItems(m_artist.albums)
+                    + countItems(m_artist.singles));
+
+            if (m_artist.videos.has_value()) {
+                return QString::fromStdString(m_artist.videos.value().results[videoIndex].video_id);
+            }
+            break;
+        } else if (index.row() >= countItems(m_artist.songs) + countItems(m_artist.albums)) {
+            return QVariant();
+        } else if (index.row() >= countItems(m_artist.songs)) {
+            return QVariant();
+        } else {
+            return QString::fromStdString(m_artist.songs.value().results[index.row()].video_id);
+        }
     }
 
     Q_UNREACHABLE();
@@ -116,7 +143,9 @@ QHash<int, QByteArray> ArtistModel::roleNames() const
 {
     return {
         {Title, "title"},
-        {Type, "type"}
+        {Type, "type"},
+        {Artists, "artists"},
+        {VideoId, "videoId"}
     };
 }
 

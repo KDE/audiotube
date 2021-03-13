@@ -30,7 +30,9 @@ public:
 
     enum Role {
         Title,
-        Type
+        Type,
+        Artists,
+        VideoId
     };
 
     explicit ArtistModel(QObject *parent = nullptr);

@@ -36,9 +36,16 @@ QVariant AlbumModel::data(const QModelIndex &index, int role) const
 {
     switch (role) {
     case Title:
-        return QString::fromStdString(m_album.tracks.at(index.row()).title);
+        return QString::fromStdString(m_album.tracks[index.row()].title);
     case VideoId:
-        return QString::fromStdString(m_album.tracks.at(index.row()).video_id.value_or(std::string()));
+        return QString::fromStdString(m_album.tracks[index.row()].video_id.value_or(std::string()));
+    case Artists:
+        return QVariant::fromValue(std::vector<meta::Artist> {
+            {
+                m_album.tracks[index.row()].artists,
+                std::nullopt
+            }
+        });
     }
 
     Q_UNREACHABLE();
@@ -50,7 +57,8 @@ QHash<int, QByteArray> AlbumModel::roleNames() const
 {
     return {
         {Title, "title"},
-        {VideoId, "videoId"}
+        {VideoId, "videoId"},
+        {Artists, "artists"}
     };
 }
 

@@ -134,7 +134,7 @@ bool PlaylistModel::canSkip() const
         return track.video_id == m_currentVideoId.toStdString();
     });
 
-    return currentTrackIt != m_playlist.tracks.end() - 1;
+    return currentTrackIt != m_playlist.tracks.end() - 1 && !m_playlist.tracks.empty();
 }
 
 void PlaylistModel::next()
