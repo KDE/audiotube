@@ -192,6 +192,22 @@ void PlaylistModel::playNext(const QString &videoId, const QString &title, const
     Q_EMIT canSkipChanged();
 }
 
+void PlaylistModel::append(const QString &videoId, const QString &title, const std::vector<meta::Artist> &artists)
+{
+    watch::Playlist::Track track;
+    track.video_id = videoId.toStdString();
+    track.title = title.toStdString();
+    track.artists = artists;
+
+    beginInsertRows({}, m_playlist.tracks.size(), m_playlist.tracks.size());
+    m_playlist.tracks.push_back(std::move(track));
+    endInsertRows();
+
+    if (m_playlist.tracks.size() == 1) {
+        setCurrentVideoId(videoId);
+    }
+}
+
 void PlaylistModel::emitCurrentVideoChanged(const QString &oldVideoId)
 {
     const auto oldVideoIt = std::find_if(m_playlist.tracks.begin(), m_playlist.tracks.end(),

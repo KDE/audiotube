@@ -50,9 +50,14 @@ Kirigami.ScrollablePage {
 
             actions: [
                 Kirigami.Action {
+                    icon.name: "go-next"
+                    text: i18n("Play next")
+                    onTriggered: PlaylistModel.playNext(delegateItem.videoId, delegateItem.title, delegateItem.artists)
+                },
+                Kirigami.Action {
                     icon.name: "media-playlist-append"
                     text: i18n("Add to playlist")
-                    onTriggered: PlaylistModel.playNext(delegateItem.videoId, delegateItem.title, delegateItem.artists)
+                    onTriggered: PlaylistModel.append(delegateItem.videoId, delegateItem.title, delegateItem.artists)
                 }
             ]
 
