@@ -30,7 +30,9 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlRegisterType<AlbumModel>(URI, 1, 0, "AlbumModel");
     qmlRegisterType<VideoInfoExtractor>(URI, 1, 0, "VideoInfoExtractor");
     qmlRegisterType<ArtistModel>(URI, 1, 0, "ArtistModel");
-    qmlRegisterType<PlaylistModel>(URI, 1, 0, "PlaylistModel");
+    qmlRegisterSingletonType<PlaylistModel>(URI, 1, 0, "PlaylistModel", [](QQmlEngine *, QJSEngine *) {
+        return new PlaylistModel();
+    });
 
     engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
     engine.load(QUrl(QStringLiteral("qrc:///main.qml")));

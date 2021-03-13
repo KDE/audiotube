@@ -28,7 +28,9 @@ public:
 
     enum Role {
         Title = Qt::UserRole + 1,
-        Type
+        Type,
+        VideoId,
+        Artists
     };
 
     explicit SearchModel(QObject *parent = nullptr);

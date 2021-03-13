@@ -20,6 +20,7 @@ Q_DECLARE_METATYPE(playlist::Playlist)
 Q_DECLARE_METATYPE(video_info::VideoInfo)
 Q_DECLARE_METATYPE(watch::Playlist)
 Q_DECLARE_METATYPE(std::optional<QString>)
+Q_DECLARE_METATYPE(std::vector<meta::Artist>)
 
 class AsyncYTMusic : public QObject
 {

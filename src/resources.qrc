@@ -4,5 +4,6 @@
         <file alias="AlbumPage.qml">contents/ui/AlbumPage.qml</file>
         <file alias="ArtistPage.qml">contents/ui/ArtistPage.qml</file>
         <file alias="PlayerFooter.qml">contents/ui/PlayerFooter.qml</file>
+        <file alias="SearchPage.qml">contents/ui/SearchPage.qml</file>
     </qresource>
 </RCC>

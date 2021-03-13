@@ -252,7 +252,7 @@ struct Playlist {
         std::string title;
         std::optional<std::string> length;
         std::string video_id;
-        std::string playlistId;
+        std::optional<std::string> playlistId;
         std::vector<meta::Thumbnail> thumbnail;
         std::optional<std::string> like_status;
         std::vector<meta::Artist> artists;

@@ -30,6 +30,7 @@ AsyncYTMusic::AsyncYTMusic(QObject *parent)
     qRegisterMetaType<video_info::VideoInfo>();
     qRegisterMetaType<watch::Playlist>();
     qRegisterMetaType<std::optional<QString>>();
+    qRegisterMetaType<std::vector<meta::Artist>>();
 
     connect(this, &AsyncYTMusic::startSearch, this, &AsyncYTMusic::internalSearch);
     connect(this, &AsyncYTMusic::startFetchArtist, this, &AsyncYTMusic::internalFetchArtist);

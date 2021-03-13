@@ -49,6 +49,7 @@ public:
 
     Q_INVOKABLE void next();
     Q_INVOKABLE void skipTo(const QString &videoId);
+    Q_INVOKABLE void playNext(const QString &videoId, const QString &title, const std::vector<meta::Artist> &artists);
 
     QString playlistId() const;
     void setPlaylistId(const QString &playlistId);

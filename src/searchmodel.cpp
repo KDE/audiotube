@@ -72,6 +72,40 @@ QVariant SearchModel::data(const QModelIndex &index, int role) const
                 Q_UNREACHABLE();
             }
         }, m_searchResults.at(index.row()));
+    case VideoId:
+        return std::visit([&](auto&& arg) {
+            using T = std::decay_t<decltype(arg)>;
+            if constexpr (std::is_same_v<T, search::Album>) {
+                return QString();
+            } else if constexpr (std::is_same_v<T, search::Artist>) {
+                return QString();
+            } else if constexpr (std::is_same_v<T, search::Playlist>) {
+                return QString();
+            } else if constexpr (std::is_same_v<T, search::Song>) {
+                return QString::fromStdString(arg.video_id);
+            } else if constexpr (std::is_same_v<T, search::Video>) {
+                return QString::fromStdString(arg.video_id);
+            } else {
+                Q_UNREACHABLE();
+            }
+        }, m_searchResults.at(index.row()));
+    case Artists:
+        return QVariant::fromValue(std::visit([&](auto&& arg) {
+            using T = std::decay_t<decltype(arg)>;
+            if constexpr (std::is_same_v<T, search::Album>) {
+                return std::vector<meta::Artist>();
+            } else if constexpr (std::is_same_v<T, search::Artist>) {
+                return std::vector<meta::Artist>();
+            } else if constexpr (std::is_same_v<T, search::Playlist>) {
+                return std::vector<meta::Artist>();
+            } else if constexpr (std::is_same_v<T, search::Song>) {
+                return arg.artists;
+            } else if constexpr (std::is_same_v<T, search::Video>) {
+                return arg.artists;
+            } else {
+                Q_UNREACHABLE();
+            }
+        }, m_searchResults.at(index.row())));
     }
 
     Q_UNREACHABLE();
@@ -83,7 +117,9 @@ QHash<int, QByteArray> SearchModel::roleNames() const
 {
     return {
         {Title, "title"},
-        {Type, "type"}
+        {Type, "type"},
+        {VideoId, "videoId"},
+        {Artists, "artists"}
     };
 }
 

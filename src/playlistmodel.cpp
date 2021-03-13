@@ -143,6 +143,39 @@ void PlaylistModel::skipTo(const QString &videoId)
     Q_EMIT currentVideoIdChanged();
 }
 
+void PlaylistModel::playNext(const QString &videoId, const QString &title, const std::vector<meta::Artist> &artists)
+{
+    const auto currentIt = std::find_if(m_playlist.tracks.begin(), m_playlist.tracks.end(), [=](const watch::Playlist::Track &track) {
+        return track.video_id == m_currentVideoId.toStdString();
+    });
+
+    watch::Playlist::Track track;
+    track.video_id = videoId.toStdString();
+    track.title = title.toStdString();
+    track.artists = artists;
+
+    if (currentIt == m_playlist.tracks.end() || m_playlist.tracks.empty()) {
+        beginInsertRows({}, 0, 0);
+        m_playlist.tracks.push_back(std::move(track));
+        endInsertRows();
+        setCurrentVideoId(videoId);
+        return;
+    }
+
+    if (currentIt == m_playlist.tracks.end() - 1) {
+        int index = std::distance(m_playlist.tracks.begin(), currentIt + 1);
+        beginInsertRows({}, index, index);
+        m_playlist.tracks.push_back(std::move(track));
+        endInsertRows();
+        return;
+    }
+
+    int index = std::distance(m_playlist.tracks.begin(), currentIt + 1);
+    beginInsertRows({}, index, index);
+    m_playlist.tracks.insert(currentIt + 1, std::move(track));
+    endInsertRows();
+}
+
 void PlaylistModel::emitCurrentVideoChanged(const QString &oldVideoId)
 {
     const auto oldVideoIt = std::find_if(m_playlist.tracks.begin(), m_playlist.tracks.end(),

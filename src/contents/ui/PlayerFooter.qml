@@ -1,19 +1,12 @@
 import QtQuick 2.7
 import QtQuick.Layouts 1.3
-
 import QtQuick.Controls 2.12 as Controls
 import org.kde.kirigami 2.12 as Kirigami
-
 import org.kde.ytmusic 1.0
-
 import QtMultimedia 5.12
 
 ColumnLayout {
     id: footerLayout
-
-    // input only
-    property alias videoId: playlistModel.initialVideoId
-    property alias playlistId: playlistModel.playlistId
 
     property bool maximized: false
 
@@ -23,12 +16,12 @@ ColumnLayout {
 
     GridLayout {
         id: playerLayout
-        Layout.fillHeight: footerLayout.maximized
-        Layout.fillWidth: true
 
-        flow: width > height ? GridLayout.LeftToRight : GridLayout.TopToBottom
         readonly property bool mobile: width > height
 
+        Layout.fillHeight: footerLayout.maximized
+        Layout.fillWidth: true
+        flow: width > height ? GridLayout.LeftToRight : GridLayout.TopToBottom
         visible: footerLayout.maximized
 
         Item {
@@ -42,6 +35,7 @@ ColumnLayout {
                 anchors.fill: parent
                 fillMode: Image.PreserveAspectFit
             }
+
         }
 
         Controls.ScrollView {
@@ -55,9 +49,13 @@ ColumnLayout {
 
                 clip: true
 
-                model: PlaylistModel {
-                    id: playlistModel
+                Controls.BusyIndicator {
+                    anchors.centerIn: parent
+                    visible: PlaylistModel.loading || PlaylistModel.loading
                 }
+
+                model: PlaylistModel
+
                 delegate: Kirigami.BasicListItem {
                     required property string title
                     required property string videoId
@@ -65,37 +63,30 @@ ColumnLayout {
                     required property bool isCurrent
 
                     highlighted: isCurrent
-
-                    onClicked: playlistModel.skipTo(videoId)
+                    onClicked: PlaylistModel.skipTo(videoId)
 
                     ColumnLayout {
                         anchors.fill: parent
 
                         Kirigami.Heading {
                             Layout.fillWidth: true
-
                             level: 2
                             text: title
                         }
+
                         Controls.Label {
                             Layout.fillWidth: true
-
                             text: artists
                         }
+
                     }
+
                 }
 
-                Controls.BusyIndicator {
-                    anchors.centerIn: parent
-                    visible: playlistModel.loading || playlistModel.loading
-                }
             }
-        }
-    }
-    Behavior on height {
-        NumberAnimation {
 
         }
+
     }
 
     Kirigami.Separator {
@@ -110,19 +101,19 @@ ColumnLayout {
 
         VideoInfoExtractor {
             id: info
+
             onSongChanged: audio.play()
-            videoId: playlistModel.currentVideoId
+            videoId: PlaylistModel.currentVideoId
         }
 
         Audio {
             id: audio
+
             source: info.audioUrl
-
-
             onStatusChanged: {
                 if (status === Audio.EndOfMedia) {
-                    console.log("Song ended")
-                    playlistModel.next()
+                    console.log("Song ended");
+                    PlaylistModel.next();
                 }
             }
         }
@@ -131,13 +122,9 @@ ColumnLayout {
             display: Controls.AbstractButton.IconOnly
             Layout.preferredWidth: parent.height
             Layout.fillHeight: true
-
             enabled: info.audioUrl != ""
-
-            text: audio.playbackState === Audio.PlayingState ?  i18n("Pause") : i18n("Play")
-
+            text: audio.playbackState === Audio.PlayingState ? i18n("Pause") : i18n("Play")
             visible: !info.loading
-
             icon.name: audio.playbackState === Audio.PlayingState ? "media-playback-pause" : "media-playback-start"
             onClicked: audio.playbackState === Audio.PlayingState ? audio.pause() : audio.play()
         }
@@ -146,13 +133,10 @@ ColumnLayout {
             display: Controls.AbstractButton.IconOnly
             Layout.preferredWidth: parent.height
             Layout.fillHeight: true
-
             enabled: playlistView.count > 1
-
             visible: !info.loading
-
             icon.name: "media-skip-forward"
-            onClicked: playlistModel.next()
+            onClicked: PlaylistModel.next()
         }
 
         Controls.BusyIndicator {
@@ -174,37 +158,41 @@ ColumnLayout {
 
             Controls.Slider {
                 Layout.fillWidth: true
-
                 from: 0
                 to: audio.duration
                 value: audio.position
-
                 enabled: audio.seekable
                 onMoved: {
-                    console.log("Value:", value)
-                    audio.seek(Math.floor(value))
+                    console.log("Value:", value);
+                    audio.seek(Math.floor(value));
                 }
 
                 Behavior on value {
                     NumberAnimation {
-
                     }
+
                 }
+
             }
+
         }
 
         Controls.ToolButton {
             display: Controls.AbstractButton.IconOnly
             Layout.preferredWidth: parent.height
-
             text: i18n("Expand")
-
             enabled: playlistView.count > 0
-
             Layout.fillHeight: true
             icon.name: footerLayout.maximized ? "arrow-down" : "arrow-up"
-
             onClicked: footerLayout.maximized = !footerLayout.maximized
         }
+
     }
+
+    Behavior on height {
+        NumberAnimation {
+        }
+
+    }
+
 }
