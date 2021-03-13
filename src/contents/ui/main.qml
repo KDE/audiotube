@@ -10,6 +10,8 @@ Kirigami.ApplicationWindow {
 
     title: i18n("AudioTube")
 
+    controlsVisible: !footer.maximized
+
     contextDrawer: Kirigami.ContextDrawer {
         id: contextDrawer
     }
