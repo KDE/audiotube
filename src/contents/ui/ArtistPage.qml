@@ -76,6 +76,7 @@ Kirigami.ScrollablePage {
                 Controls.Label {
                     Layout.fillWidth: true
                     text: title
+                    elide: Qt.ElideRight
                 }
             }
 
