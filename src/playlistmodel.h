@@ -18,6 +18,7 @@ class PlaylistModel : public QAbstractListModel
     // output
     Q_PROPERTY(bool loading READ loading WRITE setLoading NOTIFY loadingChanged)
     Q_PROPERTY(QString currentVideoId READ currentVideoId NOTIFY currentVideoIdChanged)
+    Q_PROPERTY(bool canSkip READ canSkip NOTIFY canSkipChanged)
 
 public:
     enum Role {
@@ -46,6 +47,9 @@ public:
     QString currentVideoId() const;
     void setCurrentVideoId(const QString &videoId);
     Q_SIGNAL void currentVideoIdChanged();
+
+    bool canSkip() const;
+    Q_SIGNAL void canSkipChanged();
 
     Q_INVOKABLE void next();
     Q_INVOKABLE void skipTo(const QString &videoId);

@@ -133,7 +133,7 @@ ColumnLayout {
             display: Controls.AbstractButton.IconOnly
             Layout.preferredWidth: parent.height
             Layout.fillHeight: true
-            enabled: playlistView.count > 1
+            enabled: PlaylistModel.canSkip
             visible: !info.loading
             icon.name: "media-skip-forward"
             onClicked: PlaylistModel.next()
