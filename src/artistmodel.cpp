@@ -18,9 +18,9 @@ ArtistModel::ArtistModel(QObject *parent)
 
         setLoading(true);
 
-        AsyncYTMusic::instance().fetchArtist(m_channelId);
+        YTMusicThread::instance()->fetchArtist(m_channelId);
     });
-    connect(&AsyncYTMusic::instance(), &AsyncYTMusic::fetchArtistFinished, this, [=](const artist::Artist &artist) {
+    connect(&YTMusicThread::instance().get(), &AsyncYTMusic::fetchArtistFinished, this, [=](const artist::Artist &artist) {
         setLoading(false);
 
         beginResetModel();
@@ -31,7 +31,7 @@ ArtistModel::ArtistModel(QObject *parent)
         Q_EMIT titleChanged();
         Q_EMIT thumbnailUrlChanged();
     });
-    connect(&AsyncYTMusic::instance(), &AsyncYTMusic::errorOccurred, this, [=] {
+    connect(&YTMusicThread::instance().get(), &AsyncYTMusic::errorOccurred, this, [=] {
         setLoading(false);
     });
 }

@@ -17,10 +17,10 @@ VideoInfoExtractor::VideoInfoExtractor(QObject *parent)
         }
 
         setLoading(true);
-        AsyncYTMusic::instance().extractVideoInfo(QString::fromStdString(m_videoId.toStdString()));
+        YTMusicThread::instance()->extractVideoInfo(QString::fromStdString(m_videoId.toStdString()));
     });
 
-    connect(&AsyncYTMusic::instance(), &AsyncYTMusic::extractVideoInfoFinished, this, [=](const video_info::VideoInfo &info) {
+    connect(&YTMusicThread::instance().get(), &AsyncYTMusic::extractVideoInfoFinished, this, [=](const video_info::VideoInfo &info) {
         m_videoInfo = info;
         setLoading(false);
         Q_EMIT audioUrlChanged();

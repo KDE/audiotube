@@ -18,15 +18,15 @@ SearchModel::SearchModel(QObject *parent)
         }
 
         setLoading(true);
-        AsyncYTMusic::instance().search(m_searchQuery);
+        YTMusicThread::instance()->search(m_searchQuery);
     });
-    connect(&AsyncYTMusic::instance(), &AsyncYTMusic::searchFinished, this, [=](const std::vector<search::SearchResultItem> &results) {
+    connect(&YTMusicThread::instance().get(), &AsyncYTMusic::searchFinished, this, [=](const std::vector<search::SearchResultItem> &results) {
         beginResetModel();
         setLoading(false);
         m_searchResults = results;
         endResetModel();
     });
-    connect(&AsyncYTMusic::instance(), &AsyncYTMusic::errorOccurred, this, [=] {
+    connect(&YTMusicThread::instance().get(), &AsyncYTMusic::errorOccurred, this, [=] {
         setLoading(false);
     });
 }

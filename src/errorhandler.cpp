@@ -9,5 +9,5 @@
 ErrorHandler::ErrorHandler(QObject *parent)
     : QObject(parent)
 {
-    connect(&AsyncYTMusic::instance(), &AsyncYTMusic::errorOccurred, this, &ErrorHandler::errorOccurred);
+    connect(&YTMusicThread::instance().get(), &AsyncYTMusic::errorOccurred, this, &ErrorHandler::errorOccurred);
 }

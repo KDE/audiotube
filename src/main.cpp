@@ -45,7 +45,5 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
         return -1;
     }
 
-    int ret = app.exec();
-    AsyncYTMusic::stopInstance();
-    return ret;
+    return app.exec();
 }

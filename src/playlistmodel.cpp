@@ -15,7 +15,7 @@ PlaylistModel::PlaylistModel(QObject *parent)
         }
 
         setLoading(true);
-        AsyncYTMusic::instance().fetchWatchPlaylist(m_initialVideoId);
+        YTMusicThread::instance()->fetchWatchPlaylist(m_initialVideoId);
     });
     connect(this, &PlaylistModel::playlistIdChanged, this, [=] {
         if (m_playlistId.isEmpty()) {
@@ -23,9 +23,9 @@ PlaylistModel::PlaylistModel(QObject *parent)
         }
 
         setLoading(true);
-        AsyncYTMusic::instance().fetchWatchPlaylist(std::nullopt, m_playlistId);
+        YTMusicThread::instance()->fetchWatchPlaylist(std::nullopt, m_playlistId);
     });
-    connect(&AsyncYTMusic::instance(), &AsyncYTMusic::fetchWatchPlaylistFinished, this, [=](const watch::Playlist &playlist) {
+    connect(&YTMusicThread::instance().get(), &AsyncYTMusic::fetchWatchPlaylistFinished, this, [=](const watch::Playlist &playlist) {
         setLoading(false);
 
         beginResetModel();
@@ -37,7 +37,7 @@ PlaylistModel::PlaylistModel(QObject *parent)
 
         Q_EMIT currentVideoIdChanged();
     });
-    connect(&AsyncYTMusic::instance(), &AsyncYTMusic::errorOccurred, this, [=] {
+    connect(&YTMusicThread::instance().get(), &AsyncYTMusic::errorOccurred, this, [=] {
         setLoading(false);
     });
 }

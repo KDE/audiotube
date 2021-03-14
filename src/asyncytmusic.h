@@ -46,20 +46,11 @@ private:
 
 class AsyncYTMusic : public QObject
 {
+    friend class YTMusicThread;
+
     Q_OBJECT
 
 public:
-    explicit AsyncYTMusic(QObject *parent = nullptr);
-
-    ///
-    /// Singleton instance of AsyncYtMusic running on it's own thread.
-    ///
-    /// It is necessary t call stopInstance before the application exits,
-    /// so the thread can properly finish.
-    ///
-    static AsyncYTMusic &instance();
-    static void stopInstance();
-
     // public functions need to be thread safe
     void search(const QString &query);
     Q_SIGNAL void searchFinished(std::vector<search::SearchResultItem>);
@@ -88,6 +79,9 @@ public:
 
     Q_SIGNAL void errorOccurred(const QString &error);
 
+protected:
+    explicit AsyncYTMusic(QObject *parent = nullptr);
+
 private:
     Q_SIGNAL void startSearch(const QString &query);
     Q_SLOT void internalSearch(const QString &query);
@@ -114,4 +108,18 @@ private:
     Q_SLOT void internalFetchWatchPlaylist(const std::optional<QString> &videoId, const std::optional<QString> &playlistId);
 
     Lazy<YTMusic> m_ytm;
+};
+
+class YTMusicThread : private QThread {
+public:
+    static YTMusicThread &instance();
+    ~YTMusicThread();
+
+    AsyncYTMusic *operator->();
+    AsyncYTMusic &get();
+
+private:
+    YTMusicThread();
+
+    AsyncYTMusic m_ytm;
 };

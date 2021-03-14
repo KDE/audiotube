@@ -12,11 +12,6 @@
 
 namespace py = pybind11;
 
-static QThread *const ytmthread = []() -> QThread * {
-    auto *thread = new QThread();
-    thread->setObjectName(QStringLiteral("YTMusicAPI"));
-    return thread;
-}();
 
 AsyncYTMusic::AsyncYTMusic(QObject *parent)
     : QObject(parent)
@@ -45,25 +40,6 @@ AsyncYTMusic::AsyncYTMusic(QObject *parent)
     connect(this, &AsyncYTMusic::errorOccurred, this, [](const QString &err) {
         qDebug() << err;
     });
-}
-
-AsyncYTMusic &AsyncYTMusic::instance()
-{
-    static AsyncYTMusic &inst = []() -> AsyncYTMusic& {
-        static AsyncYTMusic ytm;
-        ytm.moveToThread(ytmthread);
-        ytmthread->start();
-
-        return ytm;
-    }();
-
-    return inst;
-}
-
-void AsyncYTMusic::stopInstance()
-{
-    ytmthread->quit();
-    ytmthread->wait();
 }
 
 //
@@ -213,4 +189,33 @@ void AsyncYTMusic::internalFetchWatchPlaylist(const std::optional<QString> &vide
     } catch (const py::error_already_set &err) {
         Q_EMIT errorOccurred(QString::fromLocal8Bit(err.what()));
     }
+}
+
+YTMusicThread &YTMusicThread::instance()
+{
+    static YTMusicThread thread;
+    return thread;
+}
+
+YTMusicThread::~YTMusicThread()
+{
+    quit();
+    wait();
+}
+
+AsyncYTMusic *YTMusicThread::operator->()
+{
+    return &m_ytm;
+}
+
+AsyncYTMusic &YTMusicThread::get()
+{
+    return m_ytm;
+}
+
+YTMusicThread::YTMusicThread()
+{
+    setObjectName(QStringLiteral("YTMusicAPI"));
+    m_ytm.moveToThread(this);
+    start();
 }
