@@ -26,7 +26,7 @@ Q_DECLARE_METATYPE(meta::Artist)
 ///
 /// Lazy initialized unique_ptr
 ///
-template <class T>
+template <typename T>
 class Lazy {
 public:
     T *operator->() {

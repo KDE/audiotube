@@ -4,6 +4,7 @@ add_library(ytm STATIC
 
 target_link_libraries(ytm PUBLIC pybind11::embed)
 target_include_directories(ytm PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_compile_definitions(ytm PRIVATE -DRANDALL_WAS_HERE)
 
 add_subdirectory(example)
 

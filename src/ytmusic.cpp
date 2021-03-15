@@ -102,7 +102,6 @@ meta::Album extract_meta_album(py::handle album) {
 }
 
 watch::Playlist::Track extract_watch_track(py::handle track) {
-    py::print(track);
     return {
         track["title"].cast<std::string>(),
         track["length"].cast<std::optional<std::string>>(),
@@ -211,7 +210,7 @@ std::optional<artist::Artist::Section<T>> extract_artist_section(py::handle arti
     }
 }
 
-search::SearchResultItem extract_search_result(py::handle result) {
+std::optional<search::SearchResultItem> extract_search_result(py::handle result) {
     const auto resultType = result["resultType"].cast<std::string>();
     if (resultType == "video") {
         return search::Video {
@@ -258,8 +257,10 @@ search::SearchResultItem extract_search_result(py::handle result) {
             optional_key<std::string>(result, "radioId")
         };
     } else {
-        Py_UNREACHABLE();
-    };
+        std::cerr << "Warning: Unsupported search result type found" << std::endl;
+        std::cerr << "It's called: " << resultType;
+        return std::nullopt;
+    }
 }
 
 YTMusic::YTMusic(
@@ -291,9 +292,13 @@ std::vector<search::SearchResultItem> YTMusic::search(
         const bool ignore_spelling) const
 {
     const auto results = d->ytmusic.attr("search")(query, filter, limit, ignore_spelling).cast<py::list>();
-    std::vector<search::SearchResultItem> output;
 
-    std::transform(results.begin(), results.end(), std::back_inserter(output), extract_search_result);
+    std::vector<search::SearchResultItem> output;
+    for (const auto &result : results) {
+        if (const auto opt = extract_search_result(result); opt.has_value()) {
+            output.push_back(opt.value());
+        }
+    };
 
     return output;
 }

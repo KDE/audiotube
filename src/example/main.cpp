@@ -8,7 +8,7 @@
 
 int main() {
     const auto ytm = YTMusic();
-    const auto results = ytm.search("Leoniden Iron Tusk");
+    const auto results = ytm.search("arte concert");
 
     std::cout << "Found " << results.size() << " results." << std::endl;
 
