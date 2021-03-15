@@ -128,6 +128,7 @@ void PlaylistModel::setCurrentVideoId(const QString &videoId)
     m_currentVideoId = videoId;
     emitCurrentVideoChanged(old);
     Q_EMIT currentVideoIdChanged();
+    Q_EMIT canSkipChanged();
 }
 
 bool PlaylistModel::canSkip() const
@@ -143,8 +144,7 @@ bool PlaylistModel::canSkip() const
 void PlaylistModel::next()
 {
     const auto old = m_currentVideoId;
-    m_currentVideoId = nextVideoId();
-    emitCurrentVideoChanged(old);
+    setCurrentVideoId(nextVideoId());
     Q_EMIT currentVideoIdChanged();
     Q_EMIT canSkipChanged();
 }
@@ -209,6 +209,33 @@ void PlaylistModel::append(const QString &videoId, const QString &title, const s
     if (m_playlist.tracks.size() == 1) {
         setCurrentVideoId(videoId);
     }
+}
+
+void PlaylistModel::clear()
+{
+    beginResetModel();
+    m_playlist.tracks.clear();
+    endResetModel();
+
+    setCurrentVideoId({});
+    Q_EMIT canSkipChanged();
+}
+
+void PlaylistModel::remove(const QString &videoId)
+{
+    if (m_currentVideoId == videoId) {
+        setCurrentVideoId(nextVideoId());
+    }
+
+    const auto trackIt = std::find_if(m_playlist.tracks.begin(), m_playlist.tracks.end(), [&](const watch::Playlist::Track &track) {
+        return track.video_id == videoId.toStdString();
+    });
+    int index = std::distance(m_playlist.tracks.begin(), trackIt);
+    beginRemoveRows({}, index, index);
+    m_playlist.tracks.erase(trackIt);
+    endRemoveRows();
+
+    Q_EMIT canSkipChanged();
 }
 
 void PlaylistModel::emitCurrentVideoChanged(const QString &oldVideoId)

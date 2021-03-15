@@ -13,6 +13,11 @@ VideoInfoExtractor::VideoInfoExtractor(QObject *parent)
 {
     connect(this, &VideoInfoExtractor::videoIdChanged, this, [=] {
         if (m_videoId.isEmpty()) {
+            m_videoInfo = {};
+            Q_EMIT audioUrlChanged();
+            Q_EMIT titleChanged();
+            Q_EMIT songChanged();
+            Q_EMIT thumbnailChanged();
             return;
         }
 

@@ -45,6 +45,7 @@ ColumnLayout {
             Layout.preferredHeight: playerLayout.mobile && playerLayout.height * 0.5
 
             ListView {
+                anchors.fill: parent
                 id: playlistView
 
                 clip: true
@@ -54,9 +55,16 @@ ColumnLayout {
                     visible: PlaylistModel.loading || PlaylistModel.loading
                 }
 
+                onCountChanged: {
+                    if (count < 1) {
+                        footerLayout.maximized = false
+                    }
+                }
+
                 model: PlaylistModel
 
-                delegate: Kirigami.BasicListItem {
+                delegate: Kirigami.SwipeListItem {
+                    id: delegateItem
                     required property string title
                     required property string videoId
                     required property string artists
@@ -66,8 +74,6 @@ ColumnLayout {
                     onClicked: PlaylistModel.skipTo(videoId)
 
                     ColumnLayout {
-                        anchors.fill: parent
-
                         Kirigami.Heading {
                             Layout.fillWidth: true
                             level: 2
@@ -78,15 +84,34 @@ ColumnLayout {
                             Layout.fillWidth: true
                             text: artists
                         }
-
                     }
 
+                    actions: [
+                        Kirigami.Action {
+                            text: i18n("Remove track")
+                            icon.name: "list-remove"
+                            onTriggered: PlaylistModel.remove(delegateItem.videoId)
+                        }
+                    ]
                 }
 
+                header: Controls.ToolBar {
+                    anchors.left: parent.left
+                    anchors.right: parent.right
+                    RowLayout {
+                        anchors.fill: parent
+                        Item {
+                            Layout.fillWidth: true
+                        }
+
+                        Controls.ToolButton {
+                            icon.name: "edit-clear-all"
+                            onClicked: PlaylistModel.clear()
+                        }
+                    }
+                }
             }
-
         }
-
     }
 
     Kirigami.Separator {
@@ -122,7 +147,7 @@ ColumnLayout {
             display: Controls.AbstractButton.IconOnly
             Layout.preferredWidth: parent.height
             Layout.fillHeight: true
-            enabled: info.audioUrl != ""
+            enabled: info.audioUrl !== ""
             text: audio.playbackState === Audio.PlayingState ? i18n("Pause") : i18n("Play")
             visible: !info.loading
             icon.name: audio.playbackState === Audio.PlayingState ? "media-playback-pause" : "media-playback-start"
