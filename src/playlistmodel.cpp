@@ -37,6 +37,9 @@ PlaylistModel::PlaylistModel(QObject *parent)
 
         Q_EMIT currentVideoIdChanged();
     });
+    connect(&AsyncYTMusic::instance(), &AsyncYTMusic::errorOccurred, this, [=] {
+        setLoading(false);
+    });
 }
 
 int PlaylistModel::rowCount(const QModelIndex &parent) const

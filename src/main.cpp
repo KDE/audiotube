@@ -13,6 +13,7 @@
 #include "videoinfoextractor.h"
 #include "artistmodel.h"
 #include "playlistmodel.h"
+#include "errorhandler.h"
 
 constexpr auto URI = "org.kde.ytmusic";
 
@@ -32,6 +33,9 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlRegisterType<ArtistModel>(URI, 1, 0, "ArtistModel");
     qmlRegisterSingletonType<PlaylistModel>(URI, 1, 0, "PlaylistModel", [](QQmlEngine *, QJSEngine *) {
         return new PlaylistModel();
+    });
+    qmlRegisterSingletonType<ErrorHandler>(URI, 1, 0, "ErrorHandler", [](QQmlEngine *, QJSEngine *) {
+        return new ErrorHandler();
     });
 
     engine.rootContext()->setContextObject(new KLocalizedContext(&engine));

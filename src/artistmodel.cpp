@@ -31,6 +31,9 @@ ArtistModel::ArtistModel(QObject *parent)
         Q_EMIT titleChanged();
         Q_EMIT thumbnailUrlChanged();
     });
+    connect(&AsyncYTMusic::instance(), &AsyncYTMusic::errorOccurred, this, [=] {
+        setLoading(false);
+    });
 }
 
 template <typename T>

@@ -25,6 +25,9 @@ AlbumModel::AlbumModel(QObject *parent)
         Q_EMIT thumbnailUrlChanged();
         Q_EMIT playlistIdChanged();
     });
+    connect(&AsyncYTMusic::instance(), &AsyncYTMusic::errorOccurred, this, [=] {
+        setLoading(false);
+    });
 }
 
 int AlbumModel::rowCount(const QModelIndex &parent) const

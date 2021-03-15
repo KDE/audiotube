@@ -26,6 +26,9 @@ SearchModel::SearchModel(QObject *parent)
         m_searchResults = results;
         endResetModel();
     });
+    connect(&AsyncYTMusic::instance(), &AsyncYTMusic::errorOccurred, this, [=] {
+        setLoading(false);
+    });
 }
 
 SearchModel::~SearchModel() = default;

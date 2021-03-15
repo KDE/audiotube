@@ -23,6 +23,27 @@ Q_DECLARE_METATYPE(std::optional<QString>)
 Q_DECLARE_METATYPE(std::vector<meta::Artist>)
 Q_DECLARE_METATYPE(meta::Artist)
 
+///
+/// Lazy initialized unique_ptr
+///
+template <class T>
+class Lazy {
+public:
+    T *operator->() {
+        return get().operator->();
+    }
+
+    inline std::unique_ptr<T> &get() {
+        if (!m_item) {
+            m_item = std::make_unique<T>();
+        }
+        return m_item;
+    }
+
+private:
+    std::unique_ptr<T> m_item = nullptr;
+};
+
 class AsyncYTMusic : public QObject
 {
     Q_OBJECT
@@ -92,5 +113,5 @@ private:
     Q_SIGNAL void startFetchWatchPlaylist(const std::optional<QString> &videoId, const std::optional<QString> &playlistId);
     Q_SLOT void internalFetchWatchPlaylist(const std::optional<QString> &videoId, const std::optional<QString> &playlistId);
 
-    YTMusic m_ytdl;
+    Lazy<YTMusic> m_ytm;
 };

@@ -15,6 +15,7 @@ add_executable(audiotube
     videoinfoextractor.cpp
     artistmodel.cpp
     playlistmodel.cpp
+    errorhandler.cpp
     resources.qrc
 )
 

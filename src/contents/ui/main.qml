@@ -24,5 +24,13 @@ Kirigami.ApplicationWindow {
         PlaylistModel.playlistId = playlistId
     }
 
+    Connections {
+        target: ErrorHandler
+
+        function onErrorOccurred(error) {
+            showPassiveNotification(error)
+        }
+    }
+
     footer: PlayerFooter {}
 }
