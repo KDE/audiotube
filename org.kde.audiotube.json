@@ -15,6 +15,10 @@
         "--device=dri"
     ],
     "separate-locales": false,
+    "cleanup": [
+        "/include/",
+        "/share/cmake/"
+    ],
 
     "modules": [
         "flatpak/python3-youtube_dl.json",
@@ -24,7 +28,7 @@
             "config-opts": ["-DPYBIND11_FINDPYTHON=ON", "-DPYBIND11_TEST=OFF"],
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://github.com/pybind/pybind11" } ]
+            "sources": [ { "type": "git", "url": "https://github.com/pybind/pybind11", "tag": "v2.6.2" } ]
         },
         {
             "name": "org.kde.audiotube",
