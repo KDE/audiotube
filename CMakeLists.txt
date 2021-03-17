@@ -4,7 +4,7 @@ project(audiotube)
 
 include(FeatureSummary)
 
-set(QT5_MIN_VERSION 5.12)
+set(QT5_MIN_VERSION 5.15)
 set(KF5_MIN_VERSION 5.65)
 
 set(CMAKE_CXX_STANDARD 17)
