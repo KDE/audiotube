@@ -1,0 +1,2 @@
+ytmusicapi
+youtube_dl
