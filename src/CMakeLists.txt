@@ -16,6 +16,8 @@ add_executable(audiotube
     videoinfoextractor.cpp
     artistmodel.cpp
     userplaylistmodel.cpp
+    playlistmodel.cpp
+    playlistutils.cpp
     errorhandler.cpp
     resources.qrc
 )
@@ -31,6 +33,6 @@ target_link_libraries(audiotube
     ytm
 )
 
-target_compile_definitions(audiotube PRIVATE -DQT_NO_KEYWORDS)
+target_compile_definitions(audiotube PRIVATE -DQT_NO_KEYWORDS -DQT_NO_URL_CAST_FROM_STRING)
 
 install(TARGETS audiotube ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

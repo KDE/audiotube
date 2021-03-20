@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2021 Jonah Brüchert <jbb@kaidan.im>
+//
+// SPDX-License-Identifier: GPL-2.0-or-later
+
 import QtQuick 2.0
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.14 as Controls
@@ -34,7 +38,9 @@ Kirigami.ScrollablePage {
             }
 
             onOpenPlaylist: (browseId) => {
-
+                pageStack.push("qrc:/PlaylistPage.qml", {
+                    "playlistId": browseId
+                })
             }
 
             onOpenSong: (videoId) => {

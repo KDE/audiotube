@@ -14,6 +14,7 @@
 #include "artistmodel.h"
 #include "userplaylistmodel.h"
 #include "errorhandler.h"
+#include "playlistmodel.h"
 
 constexpr auto URI = "org.kde.ytmusic";
 
@@ -31,6 +32,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlRegisterType<AlbumModel>(URI, 1, 0, "AlbumModel");
     qmlRegisterType<VideoInfoExtractor>(URI, 1, 0, "VideoInfoExtractor");
     qmlRegisterType<ArtistModel>(URI, 1, 0, "ArtistModel");
+    qmlRegisterType<PlaylistModel>(URI, 1, 0, "PlaylistModel");
     qmlRegisterSingletonType<UserPlaylistModel>(URI, 1, 0, "UserPlaylistModel", [](QQmlEngine *, QJSEngine *) {
         return new UserPlaylistModel();
     });

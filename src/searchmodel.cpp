@@ -31,8 +31,6 @@ SearchModel::SearchModel(QObject *parent)
     });
 }
 
-SearchModel::~SearchModel() = default;
-
 int SearchModel::rowCount(const QModelIndex &parent) const
 {
     return parent.isValid() ? 0 : int(m_searchResults.size());

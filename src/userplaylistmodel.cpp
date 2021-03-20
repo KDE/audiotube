@@ -6,6 +6,8 @@
 
 #include <asyncytmusic.h>
 
+#include "playlistutils.h"
+
 UserPlaylistModel::UserPlaylistModel(QObject *parent)
     : QAbstractListModel(parent)
 {
@@ -55,12 +57,7 @@ QVariant UserPlaylistModel::data(const QModelIndex &index, int role) const
     case VideoId:
         return QString::fromStdString(m_playlist.tracks[index.row()].video_id);
     case Artists: {
-        const auto artists = m_playlist.tracks[index.row()].artists;
-        QStringList artistNames;
-        std::transform(artists.begin(), artists.end(), std::back_inserter(artistNames), [](const meta::Artist &artist) {
-            return QString::fromStdString(artist.name);
-        });
-        return artistNames.join(QStringLiteral(", "));
+        return PlaylistUtils::artistsToString(m_playlist.tracks[index.row()].artists);
     }
     case IsCurrent:
         return m_playlist.tracks[index.row()].video_id == m_currentVideoId.toStdString();

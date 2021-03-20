@@ -2,42 +2,40 @@
 //
 // SPDX-License-Identifier: GPL-2.0-or-later
 
-import QtQuick 2.1
-import org.kde.kirigami 2.14 as Kirigami
-import QtQuick.Controls 2.14 as Controls
-import QtQuick.Layouts 1.3
+import QtQuick 2.0
+import QtQuick.Layouts 1.12
+import QtQuick.Controls 2.12 as Controls
+import org.kde.kirigami 2.12 as Kirigami
 
 import org.kde.ytmusic 1.0
 
 Kirigami.ScrollablePage {
-    property alias browseId: albumModel.browseId
-    title: albumModel.title
+    property alias playlistId: playlistModel.playlistId
+    title: playlistModel.title
 
     actions {
         main: Kirigami.Action {
             icon.name: "media-playback-start"
             text: i18n("Play")
             onTriggered: {
-                applicationWindow().playPlaylist(albumModel.playlistId)
+                applicationWindow().playPlaylist(playlistModel.playlistId)
             }
         }
     }
 
     ListView {
         header: Kirigami.ItemViewHeader {
-            backgroundImage.source: albumModel.thumbnailUrl
-            title: albumModel.title
+            backgroundImage.source: playlistModel.thumbnailUrl
+            title: playlistModel.title
         }
-
-        model: AlbumModel {
-            id: albumModel
+        model: PlaylistModel {
+            id: playlistModel
         }
         delegate: Kirigami.SwipeListItem {
             id: delegateItem
-
             required property string title
             required property string videoId
-            required property var artists
+            required property string artists
 
             RowLayout {
                 Layout.fillHeight: true
@@ -65,13 +63,11 @@ Kirigami.ScrollablePage {
                     onTriggered: UserPlaylistModel.append(delegateItem.videoId, delegateItem.title, delegateItem.artists)
                 }
             ]
-
-            onClicked: play(videoId)
         }
 
         Controls.BusyIndicator {
             anchors.centerIn: parent
-            visible: albumModel.loading
+            visible: playlistModel.loading
         }
     }
 }
