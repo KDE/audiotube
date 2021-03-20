@@ -29,7 +29,7 @@ Kirigami.ScrollablePage {
             }
 
             onOpenVideo: (videoId) => {
-
+                askPlayVideoAudio(videoId)
             }
         }
         section.property: "type"

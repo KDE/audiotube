@@ -42,12 +42,7 @@ Kirigami.ScrollablePage {
             }
 
             onOpenVideo: (videoId) => {
-                showPassiveNotification(i18n("Video playback is not supported yet."),
-                                    "long",
-                                    i18n("Play only audio"),
-                                    function() {
-                                        play(videoId)
-                                    })
+                askPlayVideoAudio(videoId)
             }
         }
         delegate: Kirigami.SwipeListItem {
