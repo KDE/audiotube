@@ -64,7 +64,10 @@ QVariant PlaylistModel::data(const QModelIndex &index, int role) const
 
 QString PlaylistModel::playlistId() const
 {
-    return m_playlistId;
+    auto id = m_playlistId;
+    id.remove(QStringLiteral("VL")); // Workaround: get_watch_playlist only accepts
+                                     // the playlists without the leading VL
+    return id;
 }
 
 void PlaylistModel::setPlaylistId(const QString &playlistId)

@@ -438,7 +438,10 @@ watch::Playlist YTMusic::get_watch_playlist(const std::optional<std::string> &vi
                                             int limit,
                                             const std::optional<std::string> &params) const
 {
-    const auto playlist = d->ytmusic.attr("get_watch_playlist")(videoId, playlistId, limit, params);
+    const auto playlist = d->ytmusic.attr("get_watch_playlist")("videoId"_a = videoId,
+                                                                "playlistId"_a = playlistId,
+                                                                "limit"_a = py::int_(limit),
+                                                                "params"_a = params);
 
     return {
         extract_py_list<watch::Playlist::Track>(playlist["tracks"]),
