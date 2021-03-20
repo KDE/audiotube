@@ -12,7 +12,7 @@
 
 QString PlaylistUtils::artistsToString(const std::vector<meta::Artist> &artists)
 {
-    if (artists.size() > 0) {
+    if (!artists.empty()) {
         return std::accumulate(artists.begin() + 1, artists.end(),
                                QString::fromStdString(artists.front().name),
                                [](QString &string, const meta::Artist &artist) {

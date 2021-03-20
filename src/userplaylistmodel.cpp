@@ -56,9 +56,8 @@ QVariant UserPlaylistModel::data(const QModelIndex &index, int role) const
         return QString::fromStdString(m_playlist.tracks[index.row()].title);
     case VideoId:
         return QString::fromStdString(m_playlist.tracks[index.row()].video_id);
-    case Artists: {
+    case Artists:
         return PlaylistUtils::artistsToString(m_playlist.tracks[index.row()].artists);
-    }
     case IsCurrent:
         return m_playlist.tracks[index.row()].video_id == m_currentVideoId.toStdString();
     }

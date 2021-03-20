@@ -5,7 +5,6 @@
 #include "asyncytmusic.h"
 
 #include <QThread>
-#include <exception>
 #include <QDebug>
 
 #include <pybind11/embed.h>

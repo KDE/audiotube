@@ -6,8 +6,6 @@
 
 #include <asyncytmusic.h>
 
-#include <QDebug>
-
 VideoInfoExtractor::VideoInfoExtractor(QObject *parent)
     : QObject(parent)
 {

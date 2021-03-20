@@ -4,8 +4,6 @@
 
 #include "searchmodel.h"
 
-#include <QDebug>
-
 SearchModel::SearchModel(QObject *parent)
     : QAbstractListModel(parent)
 {

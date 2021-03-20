@@ -4,8 +4,6 @@
 
 #include "errorhandler.h"
 
-#include <QDebug>
-
 ErrorHandler::ErrorHandler(QObject *parent)
     : QObject(parent)
 {

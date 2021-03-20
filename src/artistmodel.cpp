@@ -6,8 +6,6 @@
 
 #include <asyncytmusic.h>
 
-#include <QDebug>
-
 ArtistModel::ArtistModel(QObject *parent)
     : QAbstractListModel(parent)
 {
