@@ -31,11 +31,11 @@ PlaylistModel::PlaylistModel(QObject *parent)
         beginResetModel();
         m_playlist = playlist;
         if (!m_playlist.tracks.empty()) {
-            m_currentVideoId = QString::fromStdString(m_playlist.tracks.front().video_id);
+            setCurrentVideoId(QString::fromStdString(m_playlist.tracks.front().video_id));
+        } else {
+            setCurrentVideoId({});
         }
         endResetModel();
-
-        Q_EMIT currentVideoIdChanged();
     });
     connect(&YTMusicThread::instance().get(), &AsyncYTMusic::errorOccurred, this, [=] {
         setLoading(false);
@@ -143,7 +143,6 @@ bool PlaylistModel::canSkip() const
 
 void PlaylistModel::next()
 {
-    const auto old = m_currentVideoId;
     setCurrentVideoId(nextVideoId());
     Q_EMIT currentVideoIdChanged();
     Q_EMIT canSkipChanged();
