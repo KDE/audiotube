@@ -17,11 +17,11 @@ Kirigami.ApplicationWindow {
     pageStack.initialPage: "qrc:/SearchPage.qml"
 
     function play(videoId) {
-        PlaylistModel.initialVideoId = videoId
+        UserPlaylistModel.initialVideoId = videoId
     }
 
     function playPlaylist(playlistId) {
-        PlaylistModel.playlistId = playlistId
+        UserPlaylistModel.playlistId = playlistId
     }
 
     function askPlayVideoAudio(videoId) {

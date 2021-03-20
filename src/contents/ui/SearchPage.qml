@@ -85,13 +85,13 @@ Kirigami.ScrollablePage {
                     icon.name: "go-next"
                     text: i18n("Play next")
                     visible: type === SearchModel.Song
-                    onTriggered: PlaylistModel.playNext(delegateItem.videoId, delegateItem.title, delegateItem.artists)
+                    onTriggered: UserPlaylistModel.playNext(delegateItem.videoId, delegateItem.title, delegateItem.artists)
                 },
                 Kirigami.Action {
                     icon.name: "media-playlist-append"
                     text: i18n("Add to playlist")
                     visible: type === SearchModel.Song
-                    onTriggered: PlaylistModel.append(delegateItem.videoId, delegateItem.title, delegateItem.artists)
+                    onTriggered: UserPlaylistModel.append(delegateItem.videoId, delegateItem.title, delegateItem.artists)
                 }
             ]
 

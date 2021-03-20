@@ -7,7 +7,7 @@
 
 #include <ytmusic.h>
 
-class PlaylistModel : public QAbstractListModel
+class UserPlaylistModel : public QAbstractListModel
 {
     Q_OBJECT
 
@@ -28,7 +28,7 @@ public:
         IsCurrent
     };
 
-    explicit PlaylistModel(QObject *parent = nullptr);
+    explicit UserPlaylistModel(QObject *parent = nullptr);
 
     int rowCount(const QModelIndex &parent) const override;
     QVariant data(const QModelIndex &index, int role) const override;

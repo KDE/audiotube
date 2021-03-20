@@ -52,7 +52,7 @@ ColumnLayout {
 
                 Controls.BusyIndicator {
                     anchors.centerIn: parent
-                    visible: PlaylistModel.loading || PlaylistModel.loading
+                    visible: UserPlaylistModel.loading || UserPlaylistModel.loading
                 }
 
                 onCountChanged: {
@@ -61,7 +61,7 @@ ColumnLayout {
                     }
                 }
 
-                model: PlaylistModel
+                model: UserPlaylistModel
 
                 delegate: Kirigami.SwipeListItem {
                     id: delegateItem
@@ -71,7 +71,7 @@ ColumnLayout {
                     required property bool isCurrent
 
                     highlighted: isCurrent
-                    onClicked: PlaylistModel.skipTo(videoId)
+                    onClicked: UserPlaylistModel.skipTo(videoId)
 
                     ColumnLayout {
                         Kirigami.Heading {
@@ -90,7 +90,7 @@ ColumnLayout {
                         Kirigami.Action {
                             text: i18n("Remove track")
                             icon.name: "list-remove"
-                            onTriggered: PlaylistModel.remove(delegateItem.videoId)
+                            onTriggered: UserPlaylistModel.remove(delegateItem.videoId)
                         }
                     ]
                 }
@@ -106,7 +106,7 @@ ColumnLayout {
 
                         Controls.ToolButton {
                             icon.name: "edit-clear-all"
-                            onClicked: PlaylistModel.clear()
+                            onClicked: UserPlaylistModel.clear()
                         }
                     }
                 }
@@ -128,7 +128,7 @@ ColumnLayout {
             id: info
 
             onSongChanged: audio.play()
-            videoId: PlaylistModel.currentVideoId
+            videoId: UserPlaylistModel.currentVideoId
         }
 
         Audio {
@@ -138,7 +138,7 @@ ColumnLayout {
             onStatusChanged: {
                 if (status === Audio.EndOfMedia) {
                     console.log("Song ended");
-                    PlaylistModel.next();
+                    UserPlaylistModel.next();
                 }
             }
         }
@@ -158,10 +158,10 @@ ColumnLayout {
             display: Controls.AbstractButton.IconOnly
             Layout.preferredWidth: parent.height
             Layout.fillHeight: true
-            enabled: PlaylistModel.canSkip
+            enabled: UserPlaylistModel.canSkip
             visible: !info.loading
             icon.name: "media-skip-forward"
-            onClicked: PlaylistModel.next()
+            onClicked: UserPlaylistModel.next()
         }
 
         Controls.BusyIndicator {
