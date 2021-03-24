@@ -31,86 +31,85 @@ ColumnLayout {
         Item {
             Layout.fillWidth: true
             Layout.fillHeight: true
-            Layout.preferredWidth: !playerLayout.mobile && playerLayout.width * 0.5
-            Layout.preferredHeight: playerLayout.mobile && playerLayout.height * 0.5
-
             Image {
-                source: info.thumbnail
                 anchors.fill: parent
+
+                source: info.thumbnail
                 fillMode: Image.PreserveAspectFit
             }
-
         }
 
-        Controls.ScrollView {
+        Item {
             Layout.fillWidth: true
             Layout.fillHeight: true
-            Layout.preferredWidth: !playerLayout.mobile && playerLayout.width * 0.5
-            Layout.preferredHeight: playerLayout.mobile && playerLayout.height * 0.5
 
-            ListView {
+            Controls.ScrollView {
                 anchors.fill: parent
-                id: playlistView
 
-                clip: true
+                ListView {
+                    anchors.fill: parent
+                    id: playlistView
 
-                Controls.BusyIndicator {
-                    anchors.centerIn: parent
-                    visible: UserPlaylistModel.loading || UserPlaylistModel.loading
-                }
+                    clip: true
 
-                onCountChanged: {
-                    if (count < 1) {
-                        footerLayout.maximized = false
+                    Controls.BusyIndicator {
+                        anchors.centerIn: parent
+                        visible: UserPlaylistModel.loading || UserPlaylistModel.loading
                     }
-                }
 
-                model: UserPlaylistModel
-
-                delegate: Kirigami.SwipeListItem {
-                    id: delegateItem
-                    required property string title
-                    required property string videoId
-                    required property string artists
-                    required property bool isCurrent
-
-                    highlighted: isCurrent
-                    onClicked: UserPlaylistModel.skipTo(videoId)
-
-                    ColumnLayout {
-                        Kirigami.Heading {
-                            Layout.fillWidth: true
-                            level: 2
-                            text: title
-                        }
-
-                        Controls.Label {
-                            Layout.fillWidth: true
-                            text: artists
+                    onCountChanged: {
+                        if (count < 1) {
+                            footerLayout.maximized = false
                         }
                     }
 
-                    actions: [
-                        Kirigami.Action {
-                            text: i18n("Remove track")
-                            icon.name: "list-remove"
-                            onTriggered: UserPlaylistModel.remove(delegateItem.videoId)
-                        }
-                    ]
-                }
+                    model: UserPlaylistModel
 
-                header: Controls.ToolBar {
-                    anchors.left: parent.left
-                    anchors.right: parent.right
-                    RowLayout {
-                        anchors.fill: parent
-                        Item {
-                            Layout.fillWidth: true
+                    delegate: Kirigami.SwipeListItem {
+                        id: delegateItem
+                        required property string title
+                        required property string videoId
+                        required property string artists
+                        required property bool isCurrent
+
+                        highlighted: isCurrent
+                        onClicked: UserPlaylistModel.skipTo(videoId)
+
+                        ColumnLayout {
+                            Kirigami.Heading {
+                                Layout.fillWidth: true
+                                level: 2
+                                text: title
+                            }
+
+                            Controls.Label {
+                                Layout.fillWidth: true
+                                text: artists
+                            }
                         }
 
-                        Controls.ToolButton {
-                            icon.name: "edit-clear-all"
-                            onClicked: UserPlaylistModel.clear()
+                        actions: [
+                            Kirigami.Action {
+                                text: i18n("Remove track")
+                                icon.name: "list-remove"
+                                onTriggered: UserPlaylistModel.remove(delegateItem.videoId)
+                            }
+                        ]
+                    }
+
+                    header: Controls.ToolBar {
+                        anchors.left: parent.left
+                        anchors.right: parent.right
+                        RowLayout {
+                            anchors.fill: parent
+                            Item {
+                                Layout.fillWidth: true
+                            }
+
+                            Controls.ToolButton {
+                                icon.name: "edit-clear-all"
+                                onClicked: UserPlaylistModel.clear()
+                            }
                         }
                     }
                 }
