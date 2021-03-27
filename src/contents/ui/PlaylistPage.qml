@@ -21,6 +21,13 @@ Kirigami.ScrollablePage {
                 applicationWindow().playPlaylist(playlistModel.playlistId)
             }
         }
+        right: Kirigami.Action {
+            icon.name: "media-playlist-shuffle"
+            text: i18n("Shuffle")
+            onTriggered: {
+                applicationWindow().playShufflePlaylist(playlistModel.playlistId)
+            }
+        }
     }
 
     ListView {

@@ -110,6 +110,10 @@ ColumnLayout {
                                 icon.name: "edit-clear-all"
                                 onClicked: UserPlaylistModel.clear()
                             }
+                            Controls.ToolButton {
+                                icon.name: "media-playlist-shuffle"
+                                onClicked: UserPlaylistModel.shufflePlaylist()
+                            }
                         }
                     }
                 }

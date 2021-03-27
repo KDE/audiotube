@@ -28,6 +28,11 @@ Kirigami.ApplicationWindow {
         UserPlaylistModel.playlistId = playlistId
     }
 
+    function playShufflePlaylist(playlistId) {
+        UserPlaylistModel.shuffle = true
+        UserPlaylistModel.playlistId = playlistId
+    }
+
     function askPlayVideoAudio(videoId) {
         showPassiveNotification(i18n("Video playback is not supported yet."),
                             "long",

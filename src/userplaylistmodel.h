@@ -14,6 +14,7 @@ class UserPlaylistModel : public QAbstractListModel
     // input
     Q_PROPERTY(QString initialVideoId READ initialVideoId WRITE setInitialVideoId NOTIFY initialVideoIdChanged)
     Q_PROPERTY(QString playlistId READ playlistId WRITE setPlaylistId NOTIFY playlistIdChanged)
+    Q_PROPERTY(bool shuffle READ shuffle WRITE setShuffle NOTIFY shuffleChanged)
 
     // output
     Q_PROPERTY(bool loading READ loading WRITE setLoading NOTIFY loadingChanged)
@@ -55,12 +56,17 @@ public:
     void setPlaylistId(const QString &playlistId);
     Q_SIGNAL void playlistIdChanged();
 
+    void setShuffle(bool shuffle);
+    bool shuffle() const;
+    Q_SIGNAL void shuffleChanged();
+
     Q_INVOKABLE void next();
     Q_INVOKABLE void skipTo(const QString &videoId);
     Q_INVOKABLE void playNext(const QString &videoId, const QString &title, const std::vector<meta::Artist> &artists);
     Q_INVOKABLE void append(const QString &videoId, const QString &title, const std::vector<meta::Artist> &artists);
     Q_INVOKABLE void clear();
     Q_INVOKABLE void remove(const QString &videoId);
+    Q_INVOKABLE void shufflePlaylist();
 
 private:
     void emitCurrentVideoChanged(const QString &oldVideoId);
@@ -69,6 +75,7 @@ private:
     QString m_playlistId;
     QString m_currentVideoId;
     bool m_loading = false;
+    bool m_shuffle = false;
 
     watch::Playlist m_playlist;
 };

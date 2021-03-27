@@ -5,6 +5,7 @@
 #include "userplaylistmodel.h"
 
 #include <asyncytmusic.h>
+#include <algorithm>
 
 #include "playlistutils.h"
 
@@ -32,12 +33,18 @@ UserPlaylistModel::UserPlaylistModel(QObject *parent)
 
         beginResetModel();
         m_playlist = playlist;
+        endResetModel();
+        if (m_shuffle) {
+            shufflePlaylist();
+
+            // reset shuffle
+            setShuffle(false);
+        }
         if (!m_playlist.tracks.empty()) {
             setCurrentVideoId(QString::fromStdString(m_playlist.tracks.front().video_id));
         } else {
             setCurrentVideoId({});
         }
-        endResetModel();
     });
     connect(&YTMusicThread::instance().get(), &AsyncYTMusic::errorOccurred, this, [=] {
         setLoading(false);
@@ -233,6 +240,22 @@ void UserPlaylistModel::remove(const QString &videoId)
     Q_EMIT canSkipChanged();
 }
 
+void UserPlaylistModel::shufflePlaylist()
+{
+    // Only shuffle playlist after current track
+    if (!m_currentVideoId.isEmpty()) {
+        const auto currentIt = std::find_if(m_playlist.tracks.begin(), m_playlist.tracks.end(),
+                                                           [=](const watch::Playlist::Track &track) {
+            return track.video_id == m_currentVideoId.toStdString();
+        });
+
+        std::random_shuffle(currentIt + 1, m_playlist.tracks.end());
+    } else {
+        std::random_shuffle(m_playlist.tracks.begin(), m_playlist.tracks.end());
+    }
+    Q_EMIT dataChanged(index(0), index(m_playlist.tracks.size() - 1), {});
+}
+
 void UserPlaylistModel::emitCurrentVideoChanged(const QString &oldVideoId)
 {
     const auto oldVideoIt = std::find_if(m_playlist.tracks.begin(), m_playlist.tracks.end(),
@@ -249,6 +272,17 @@ void UserPlaylistModel::emitCurrentVideoChanged(const QString &oldVideoId)
 
     Q_EMIT dataChanged(index(oldIndex), index(oldIndex), {IsCurrent});
     Q_EMIT dataChanged(index(newIndex), index(newIndex), {IsCurrent});
+}
+
+bool UserPlaylistModel::shuffle() const
+{
+    return m_shuffle;
+}
+
+void UserPlaylistModel::setShuffle(bool shuffle)
+{
+    m_shuffle = shuffle;
+    Q_EMIT shuffleChanged();
 }
 
 QString UserPlaylistModel::playlistId() const
