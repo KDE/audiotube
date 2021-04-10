@@ -154,7 +154,7 @@ ColumnLayout {
             display: Controls.AbstractButton.IconOnly
             Layout.preferredWidth: parent.height
             Layout.fillHeight: true
-            enabled: info.audioUrl !== ""
+            enabled: info.audioUrl != ""
             text: audio.playbackState === Audio.PlayingState ? i18n("Pause") : i18n("Play")
             visible: !info.loading
             icon.name: audio.playbackState === Audio.PlayingState ? "media-playback-pause" : "media-playback-start"
