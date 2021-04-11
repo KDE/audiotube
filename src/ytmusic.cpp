@@ -106,7 +106,7 @@ watch::Playlist::Track extract_watch_track(py::handle track) {
         track["title"].cast<std::string>(),
         track["length"].cast<std::optional<std::string>>(),
         track["videoId"].cast<std::string>(),
-        track["playlistId"].cast<std::string>(),
+        optional_key<std::string>(track, "playlistId"),
         extract_py_list<meta::Thumbnail>(track["thumbnail"]),
         track["likeStatus"].cast<std::optional<std::string>>(),
         extract_py_list<meta::Artist>(track["artists"]),
