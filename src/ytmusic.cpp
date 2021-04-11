@@ -15,6 +15,8 @@ using namespace py::literals;
 
 #define UNEXPORT __attribute__ ((visibility("hidden")))
 
+constexpr auto TESTED_YTMUSICAPI_VERSION = "0.15.1";
+
 struct UNEXPORT YTMusicPrivate {
     py::scoped_interpreter guard {};
     py::object ytmusic;
@@ -277,9 +279,9 @@ YTMusic::YTMusic(
     setenv("LC_ALL", "en_US.utf8", true);
 
     const auto version = module.attr("_version").attr("__version__").cast<std::string>();
-    if (version != "0.14.3") {
+    if (version != TESTED_YTMUSICAPI_VERSION) {
         std::cerr << "Running with untested version of ytmusicapi." << std::endl;
-        std::cerr << "The currently tested and supported version is 0.14.3" << std::endl;
+        std::cerr << "The currently tested and supported version is " << TESTED_YTMUSICAPI_VERSION << std::endl;
     }
 }
 
