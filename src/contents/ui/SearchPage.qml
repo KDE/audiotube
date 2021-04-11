@@ -15,6 +15,7 @@ Kirigami.ScrollablePage {
     header: Controls.Control {
         padding: Kirigami.Units.largeSpacing
         contentItem: Kirigami.SearchField {
+            selectByMouse: true
             onAccepted: {
                 searchModel.searchQuery = text
             }
@@ -90,13 +91,13 @@ Kirigami.ScrollablePage {
                 Kirigami.Action {
                     icon.name: "go-next"
                     text: i18n("Play next")
-                    visible: type === SearchModel.Song
+                    visible: delegateItem.type === SearchModel.Song
                     onTriggered: UserPlaylistModel.playNext(delegateItem.videoId, delegateItem.title, delegateItem.artists)
                 },
                 Kirigami.Action {
                     icon.name: "media-playlist-append"
                     text: i18n("Add to playlist")
-                    visible: type === SearchModel.Song
+                    visible: delegateItem.type === SearchModel.Song
                     onTriggered: UserPlaylistModel.append(delegateItem.videoId, delegateItem.title, delegateItem.artists)
                 }
             ]
