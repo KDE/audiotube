@@ -7,13 +7,8 @@
     "sources": [
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/06/a9/cd1fd8ee13f73a4d4f491ee219deeeae20afefa914dfb4c130cfc9dc397a/certifi-2020.12.5.tar.gz",
-            "sha256": "1a4995114262bffbc2413b159f2a1a480c969de6e6eb13ee966d470af86af59c"
-        },
-        {
-            "type": "file",
-            "url": "https://files.pythonhosted.org/packages/ee/2d/9cdc2b527e127b4c9db64b86647d567985940ac3698eeabc7ffaccb4ea61/chardet-4.0.0.tar.gz",
-            "sha256": "0d6f53a15db4120f2b08c94f11e7d93d2c911ee118b6b30a04ec3ee8310179fa"
+            "url": "https://files.pythonhosted.org/packages/cb/cf/871177f1fc795c6c10787bc0e1f27bb6cf7b81dbde399fd35860472cecbc/urllib3-1.26.4.tar.gz",
+            "sha256": "e7b021f7241115872f92f43c6508082facffbd1c048e3c6e2bb9c2a157e28937"
         },
         {
             "type": "file",
@@ -22,8 +17,13 @@
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/d7/8d/7ee68c6b48e1ec8d41198f694ecdc15f7596356f2ff8e6b1420300cf5db3/urllib3-1.26.3.tar.gz",
-            "sha256": "de3eedaad74a2683334e282005cd8d7f22f4d55fa690a2a1020a416cb0a47e73"
+            "url": "https://files.pythonhosted.org/packages/ee/2d/9cdc2b527e127b4c9db64b86647d567985940ac3698eeabc7ffaccb4ea61/chardet-4.0.0.tar.gz",
+            "sha256": "0d6f53a15db4120f2b08c94f11e7d93d2c911ee118b6b30a04ec3ee8310179fa"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/06/a9/cd1fd8ee13f73a4d4f491ee219deeeae20afefa914dfb4c130cfc9dc397a/certifi-2020.12.5.tar.gz",
+            "sha256": "1a4995114262bffbc2413b159f2a1a480c969de6e6eb13ee966d470af86af59c"
         },
         {
             "type": "file",
@@ -32,8 +32,8 @@
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/03/23/5a59520207daae74b5c8d45cc80273c57ad6345761e841f118e0101d36e9/ytmusicapi-0.14.3.tar.gz",
-            "sha256": "83251a95d5bd74116353d29dfda2d0c5055b88276a0876a313a66f8b9c691344"
+            "url": "https://files.pythonhosted.org/packages/88/59/4bdacd74c9ce3d902a3b3e8fe175f459a1facefcb7d375785ed32ac6880f/ytmusicapi-0.15.1.tar.gz",
+            "sha256": "5bf799b9b27f48d2c1c9ad52eb02d4c13c190940fec02439140b8d712a65fbd6"
         }
     ]
 }
