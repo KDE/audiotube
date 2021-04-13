@@ -9,6 +9,8 @@
 
 #include <pybind11/embed.h>
 
+#include <iostream>
+
 namespace py = pybind11;
 
 
@@ -37,7 +39,7 @@ AsyncYTMusic::AsyncYTMusic(QObject *parent)
     connect(this, &AsyncYTMusic::startFetchWatchPlaylist, this, &AsyncYTMusic::internalFetchWatchPlaylist);
 
     connect(this, &AsyncYTMusic::errorOccurred, this, [](const QString &err) {
-        qDebug() << err;
+        std::cerr << qPrintable(err);
     });
 }
 
