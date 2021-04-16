@@ -76,13 +76,16 @@ ColumnLayout {
                         onClicked: UserPlaylistModel.skipTo(videoId)
 
                         ColumnLayout {
+                            Layout.fillWidth: true
                             Kirigami.Heading {
+                                elide: Text.ElideRight
                                 Layout.fillWidth: true
                                 level: 2
                                 text: title
                             }
 
                             Controls.Label {
+                                elide: Text.ElideRight
                                 Layout.fillWidth: true
                                 text: artists
                             }
