@@ -15,6 +15,7 @@ Kirigami.ScrollablePage {
     header: Controls.Control {
         padding: Kirigami.Units.largeSpacing
         contentItem: Kirigami.SearchField {
+            delaySearch: true
             selectByMouse: true
             onAccepted: {
                 searchModel.searchQuery = text
