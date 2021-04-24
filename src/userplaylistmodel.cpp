@@ -6,6 +6,9 @@
 
 #include <asyncytmusic.h>
 #include <algorithm>
+#include <random>
+
+#include <QRandomGenerator>
 
 #include "playlistutils.h"
 
@@ -249,9 +252,9 @@ void UserPlaylistModel::shufflePlaylist()
             return track.video_id == m_currentVideoId.toStdString();
         });
 
-        std::random_shuffle(currentIt + 1, m_playlist.tracks.end());
+        std::shuffle(currentIt + 1, m_playlist.tracks.end(), *QRandomGenerator::global());
     } else {
-        std::random_shuffle(m_playlist.tracks.begin(), m_playlist.tracks.end());
+        std::shuffle(m_playlist.tracks.begin(), m_playlist.tracks.end(), *QRandomGenerator::global());
     }
     Q_EMIT dataChanged(index(0), index(m_playlist.tracks.size() - 1), {});
 }
