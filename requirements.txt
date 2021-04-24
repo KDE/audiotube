@@ -1,2 +1,2 @@
-ytmusicapi==0.15.1
+ytmusicapi==0.16.0
 youtube_dl
