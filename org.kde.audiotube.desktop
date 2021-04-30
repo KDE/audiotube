@@ -6,4 +6,4 @@ Exec=audiotube
 Icon=org.kde.audiotube
 Type=Application
 Terminal=false
-Categories=Qt;KDE;
+Categories=Qt;KDE;AudioVideo;Player;
