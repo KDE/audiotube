@@ -24,7 +24,12 @@ ArtistModel::ArtistModel(QObject *parent)
         beginResetModel();
         m_artist = artist;
         std::sort(m_artist.thumbnails.begin(), m_artist.thumbnails.end());
+        m_view = std::optional(MultiIterableView(m_artist.albums->results,
+                                                 m_artist.singles->results,
+                                                 m_artist.songs->results,
+                                                 m_artist.videos->results));
         endResetModel();
+
 
         Q_EMIT titleChanged();
         Q_EMIT thumbnailUrlChanged();
@@ -34,78 +39,48 @@ ArtistModel::ArtistModel(QObject *parent)
     });
 }
 
-template <typename T>
-int countItems(const std::optional<artist::Artist::Section<T>> &section) {
-    if (!section.has_value()) {
-        return 0;
-    }
-
-    return section.value().results.size();
-};
-
 int ArtistModel::rowCount(const QModelIndex &parent) const
 {
-    return parent.isValid() ? 0 : countItems(m_artist.songs)
-            + countItems(m_artist.albums)
-            + countItems(m_artist.singles)
-            + countItems(m_artist.videos);
+    return parent.isValid() ? 0 : m_view ? int(m_view->size()) : 0;
 }
 
 QVariant ArtistModel::data(const QModelIndex &index, int role) const
 {
+    if (!m_view) {
+        return {};
+    }
+
     switch (role) {
     case Title:
-        if (index.row() >= countItems(m_artist.songs)
-                + countItems(m_artist.albums)
-                + countItems(m_artist.singles)) {
-
-            int videoIndex = index.row() - (countItems(m_artist.songs)
-                    + countItems(m_artist.albums)
-                    + countItems(m_artist.singles));
-
-            if (m_artist.videos.has_value()) {
-                return QString::fromStdString(m_artist.videos.value().results[videoIndex].title);
+        return QString::fromStdString(std::visit([&](auto&& item) {
+            using T = std::decay_t<decltype(item)>;
+            if constexpr(std::is_same_v<T, artist::Artist::Album>) {
+                return item.title;
+            } else if constexpr(std::is_same_v<T, artist::Artist::Single>) {
+                return item.title;
+            } else if constexpr(std::is_same_v<T, artist::Artist::Song>) {
+                return item.title;
+            } else if constexpr(std::is_same_v<T, artist::Artist::Video>) {
+                return item.title;
             }
-            break;
-        } else if (index.row() >= countItems(m_artist.songs) + countItems(m_artist.albums)) {
-            int singleIndex = index.row() - (countItems(m_artist.songs) + countItems(m_artist.albums));
 
-            if (m_artist.singles.has_value()) {
-               return QString::fromStdString(m_artist.singles.value().results[singleIndex].title);
-            }
-            break;
-        } else if (index.row() >= countItems(m_artist.songs)) {
-            int albumIndex = index.row() - countItems(m_artist.songs);
-
-            if (m_artist.albums.has_value()) {
-                return QString::fromStdString(m_artist.albums.value().results[albumIndex].title);
-            }
-            break;
-        } else {
-            return QString::fromStdString(m_artist.songs.value().results[index.row()].title);
-        }
+            Q_UNREACHABLE();
+        }, m_view.value()[index.row()]));
     case Type:
-        if (index.row() >= countItems(m_artist.songs)
-                + countItems(m_artist.albums)
-                + countItems(m_artist.singles)) {
+        return std::visit([&](auto&& item) {
+            using T = std::decay_t<decltype(item)>;
+            if constexpr(std::is_same_v<T, artist::Artist::Album>) {
+                return Type::Album;
+            } else if constexpr(std::is_same_v<T, artist::Artist::Single>) {
+                return Type::Single;
+            } else if constexpr(std::is_same_v<T, artist::Artist::Song>) {
+                return Type::Song;
+            } else if constexpr(std::is_same_v<T, artist::Artist::Video>) {
+                return Type::Video;
+            }
 
-            if (m_artist.videos.has_value()) {
-                return Video;
-            }
-            break;
-        } else if (index.row() >= countItems(m_artist.songs) + countItems(m_artist.albums)) {
-            if (m_artist.singles.has_value()) {
-               return Single;
-            }
-            break;
-        } else if (index.row() >= countItems(m_artist.songs)) {
-            if (m_artist.albums.has_value()) {
-                return Album;
-            }
-            break;
-        } else {
-            return Song;
-        }
+            Q_UNREACHABLE();
+        }, m_view.value()[index.row()]);
     case Artists:
         return QVariant::fromValue(std::vector<meta::Artist> {
             {
@@ -114,25 +89,20 @@ QVariant ArtistModel::data(const QModelIndex &index, int role) const
             }
         });
     case VideoId:
-        if (index.row() >= countItems(m_artist.songs)
-                + countItems(m_artist.albums)
-                + countItems(m_artist.singles)) {
-
-            int videoIndex = index.row() - (countItems(m_artist.songs)
-                    + countItems(m_artist.albums)
-                    + countItems(m_artist.singles));
-
-            if (m_artist.videos.has_value()) {
-                return QString::fromStdString(m_artist.videos.value().results[videoIndex].video_id);
+        return std::visit([&](auto&& item) {
+            using T = std::decay_t<decltype(item)>;
+            if constexpr(std::is_same_v<T, artist::Artist::Album>) {
+                return QVariant();
+            } else if constexpr(std::is_same_v<T, artist::Artist::Single>) {
+                return QVariant();
+            } else if constexpr(std::is_same_v<T, artist::Artist::Song>) {
+                return QVariant(QString::fromStdString(item.video_id));
+            } else if constexpr(std::is_same_v<T, artist::Artist::Video>) {
+                return QVariant(QString::fromStdString(item.video_id));
             }
-            break;
-        } else if (index.row() >= countItems(m_artist.songs) + countItems(m_artist.albums)) {
-            return QVariant();
-        } else if (index.row() >= countItems(m_artist.songs)) {
-            return QVariant();
-        } else {
-            return QString::fromStdString(m_artist.songs.value().results[index.row()].video_id);
-        }
+
+            Q_UNREACHABLE();
+        }, m_view.value()[index.row()]);
     }
 
     Q_UNREACHABLE();
@@ -188,30 +158,20 @@ void ArtistModel::setLoading(bool loading)
 
 void ArtistModel::triggerItem(int row)
 {
-    if (row >= countItems(m_artist.songs)
-            + countItems(m_artist.albums)
-            + countItems(m_artist.singles)) {
-
-        int videoIndex = row - (countItems(m_artist.songs)
-                + countItems(m_artist.albums)
-                + countItems(m_artist.singles));
-
-        if (m_artist.videos.has_value()) {
-            Q_EMIT openVideo(QString::fromStdString(m_artist.videos.value().results[videoIndex].video_id));
-        }
-    } else if (row >= countItems(m_artist.songs) + countItems(m_artist.albums)) {
-        int singleIndex = row - (countItems(m_artist.songs) + countItems(m_artist.albums));
-
-        if (m_artist.singles.has_value()) {
-           Q_EMIT openAlbum(QString::fromStdString(m_artist.singles.value().results[singleIndex].browse_id));
-        }
-    } else if (row >= countItems(m_artist.songs)) {
-        int albumIndex = row - countItems(m_artist.songs);
-
-        if (m_artist.albums.has_value()) {
-            Q_EMIT openAlbum(QString::fromStdString(m_artist.albums.value().results[albumIndex].browseId));
-        }
-    } else {
-        Q_EMIT openSong(QString::fromStdString(m_artist.songs.value().results[row].video_id));
+    if (m_view) {
+        std::visit([&](auto&& item) {
+            using T = std::decay_t<decltype(item)>;
+            if constexpr(std::is_same_v<T, artist::Artist::Album>) {
+                Q_EMIT openAlbum(QString::fromStdString(item.browse_id));
+            } else if constexpr(std::is_same_v<T, artist::Artist::Single>) {
+                Q_EMIT openAlbum(QString::fromStdString(item.browse_id));
+            } else if constexpr(std::is_same_v<T, artist::Artist::Song>) {
+                Q_EMIT openSong(QString::fromStdString(item.video_id));
+            } else if constexpr(std::is_same_v<T, artist::Artist::Video>) {
+                Q_EMIT openVideo(QString::fromStdString(item.video_id));
+            } else {
+                Q_UNREACHABLE();
+            }
+        }, m_view.value()[row]);
     }
 }

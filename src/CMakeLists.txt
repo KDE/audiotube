@@ -19,6 +19,7 @@ add_executable(audiotube
     playlistmodel.cpp
     playlistutils.cpp
     errorhandler.cpp
+    multiiterableview.h
     resources.qrc
 )
 
@@ -32,7 +33,6 @@ target_link_libraries(audiotube
     KF5::I18n
     ytm
 )
-
 target_compile_definitions(audiotube PRIVATE -DQT_NO_KEYWORDS -DQT_NO_URL_CAST_FROM_STRING)
 
 install(TARGETS audiotube ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

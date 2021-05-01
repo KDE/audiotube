@@ -7,7 +7,10 @@
 #include <QAbstractListModel>
 #include <QUrl>
 
+#include <optional>
+
 #include <ytmusic.h>
+#include "multiiterableview.h"
 
 class ArtistModel : public QAbstractListModel
 {
@@ -66,4 +69,7 @@ private:
     bool m_loading = false;
 
     artist::Artist m_artist;
+    std::optional<MultiIterableView<
+        artist::Artist::Album, artist::Artist::Single, artist::Artist::Song, artist::Artist::Video
+    >> m_view;
 };
