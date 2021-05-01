@@ -171,7 +171,7 @@ auto extract_artist_section_results(py::handle section) {
             return artist::Artist::Album {
                 result["title"].cast<std::string>(),
                 extract_py_list<meta::Thumbnail>(result["thumbnails"]),
-                result["year"].cast<std::string>(),
+                result["year"].cast<std::optional<std::string>>(),
                 result["browseId"].cast<std::string>(),
                 std::nullopt
             };
