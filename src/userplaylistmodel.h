@@ -7,6 +7,9 @@
 
 #include <ytmusic.h>
 
+#include "mprisapplication.h"
+#include "mprisplayer.h"
+
 class UserPlaylistModel : public QAbstractListModel
 {
     Q_OBJECT
@@ -78,4 +81,7 @@ private:
     bool m_shuffle = false;
 
     watch::Playlist m_playlist;
+
+    MprisApplication m_mprisApp;
+    MprisPlayer m_mprisPlayer;
 };

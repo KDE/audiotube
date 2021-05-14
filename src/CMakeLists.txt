@@ -1,3 +1,5 @@
+add_subdirectory(mpris2)
+
 add_library(ytm STATIC
     ytmusic.cpp
 )
@@ -32,6 +34,7 @@ target_link_libraries(audiotube
     Qt5::Svg
     KF5::I18n
     ytm
+    mpris2
 )
 target_compile_definitions(audiotube PRIVATE -DQT_NO_KEYWORDS -DQT_NO_URL_CAST_FROM_STRING)
 

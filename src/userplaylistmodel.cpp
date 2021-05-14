@@ -14,6 +14,8 @@
 
 UserPlaylistModel::UserPlaylistModel(QObject *parent)
     : QAbstractListModel(parent)
+    , m_mprisApp(QStringLiteral("audiotube"))
+    , m_mprisPlayer()
 {
     connect(this, &UserPlaylistModel::initialVideoIdChanged, this, [=] {
         if (m_initialVideoId.isEmpty()) {
@@ -52,6 +54,10 @@ UserPlaylistModel::UserPlaylistModel(QObject *parent)
     connect(&YTMusicThread::instance().get(), &AsyncYTMusic::errorOccurred, this, [=] {
         setLoading(false);
     });
+
+    m_mprisApp.setCanQuit(true);
+    m_mprisApp.setDesktopEntry("org.kde.audiotube.desktop");
+    m_mprisApp.setIdentity(QStringLiteral("AudioTube"));
 }
 
 int UserPlaylistModel::rowCount(const QModelIndex &parent) const
