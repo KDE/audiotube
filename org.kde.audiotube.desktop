@@ -1,6 +1,20 @@
 [Desktop Entry]
 Name=AudioTube
+Name[ca]=AudioTube
+Name[de]=AudioTube
+Name[es]=AudioTube
+Name[nl]=AudioTube
+Name[sv]=AudioTube
+Name[uk]=AudioTube
+Name[x-test]=xxAudioTubexx
 Comment=YouTube Music client
+Comment[ca]=Client de música de YouTube
+Comment[de]=YouTube-Musikprogramm
+Comment[es]=Cliente de música de YouTube
+Comment[nl]=Muziekclient van YouTube
+Comment[sv]=YouTube-musikprogram
+Comment[uk]=Музичний клієнт YouTube
+Comment[x-test]=xxYouTube Music clientxx
 Version=1.0
 Exec=audiotube
 Icon=org.kde.audiotube
