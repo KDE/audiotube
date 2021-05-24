@@ -191,24 +191,56 @@ ColumnLayout {
                 text: info.title ? info.title : i18n("No media playing")
             }
 
-            Controls.Slider {
-                Layout.fillWidth: true
-                from: 0
-                to: audio.duration
-                value: audio.position
-                enabled: audio.seekable
-                onMoved: {
-                    console.log("Value:", value);
-                    audio.seek(Math.floor(value));
+            RowLayout{
+
+                Controls.Label{
+                    text: {
+                        var hours = new Date(audio.position).getUTCHours()
+                        var minutes = new Date(audio.position).getUTCMinutes()
+                        var seconds = new Date(audio.position).getUTCSeconds()
+
+                        if(hours>0)
+                            return hours+":"+minutes+":"+seconds;
+
+                        return minutes+":"+seconds;
+                    }
                 }
 
-                Behavior on value {
-                    NumberAnimation {
+                Controls.Slider {
+                    Layout.fillWidth: true
+                    from: 0
+                    to: audio.duration
+                    value: audio.position
+                    enabled: audio.seekable
+                    onMoved: {
+                        console.log("Value:", value);
+                        audio.seek(Math.floor(value));
+                    }
+
+                    Behavior on value {
+                        NumberAnimation {
+                        }
+
                     }
 
                 }
 
+                Controls.Label{
+                    text: {
+                        var hours = new Date(audio.duration).getUTCHours()
+                        var minutes = new Date(audio.duration).getUTCMinutes()
+                        var seconds = new Date(audio.duration).getUTCSeconds()
+
+                        if(hours>0)
+                            return hours+":"+minutes+":"+seconds;
+
+                        return minutes+":"+seconds;
+                    }
+                }
+
             }
+
+
 
         }
 
