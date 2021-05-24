@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=AudioTube
 Name[ca]=AudioTube
+Name[ca@valencia]=AudioTube
 Name[de]=AudioTube
 Name[es]=AudioTube
 Name[ko]=AudioTube
@@ -10,6 +11,7 @@ Name[uk]=AudioTube
 Name[x-test]=xxAudioTubexx
 Comment=YouTube Music client
 Comment[ca]=Client de música de YouTube
+Comment[ca@valencia]=Client de música de YouTube
 Comment[de]=YouTube-Musikprogramm
 Comment[es]=Cliente de música de YouTube
 Comment[ko]=YouTube Music 클라이언트
