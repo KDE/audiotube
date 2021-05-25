@@ -194,15 +194,21 @@ ColumnLayout {
             RowLayout{
 
                 Controls.Label{
+                    visible: audio.duration > 0
                     text: {
                         var hours = new Date(audio.position).getUTCHours()
-                        var minutes = new Date(audio.position).getUTCMinutes()
-                        var seconds = new Date(audio.position).getUTCSeconds()
-
                         if(hours>0)
-                            return hours+":"+minutes+":"+seconds;
+                            hours = (("0"+hours).slice(-2)) + ":"
+                        else
+                            hours = ""
 
-                        return minutes+":"+seconds;
+                        var minutes = new Date(audio.position).getUTCMinutes()
+                        minutes = ("0"+minutes).slice(-2)
+
+                        var seconds = new Date(audio.position).getUTCSeconds()
+                        seconds = ("0"+seconds).slice(-2)
+
+                        return hours+minutes+":"+seconds;
                     }
                 }
 
@@ -226,15 +232,21 @@ ColumnLayout {
                 }
 
                 Controls.Label{
+                    visible: audio.duration > 0
                     text: {
                         var hours = new Date(audio.duration).getUTCHours()
-                        var minutes = new Date(audio.duration).getUTCMinutes()
-                        var seconds = new Date(audio.duration).getUTCSeconds()
-
                         if(hours>0)
-                            return hours+":"+minutes+":"+seconds;
+                            hours = (("0"+hours).slice(-2)) + ":"
+                        else
+                            hours = ""
 
-                        return minutes+":"+seconds;
+                        var minutes = new Date(audio.duration).getUTCMinutes()
+                        minutes = ("0"+minutes).slice(-2)
+
+                        var seconds = new Date(audio.duration).getUTCSeconds()
+                        seconds = ("0"+seconds).slice(-2)
+
+                        return hours+minutes+":"+seconds;
                     }
                 }
 
