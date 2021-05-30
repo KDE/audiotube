@@ -9,6 +9,7 @@
   <name xml:lang="it">AudioTube</name>
   <name xml:lang="ko">AudioTube</name>
   <name xml:lang="nl">AudioTube</name>
+  <name xml:lang="sk">AudioTube</name>
   <name xml:lang="sv">AudioTube</name>
   <name xml:lang="uk">AudioTube</name>
   <name xml:lang="x-test">xxAudioTubexx</name>
@@ -33,6 +34,7 @@
   <developer_name xml:lang="it">Comunità KDE</developer_name>
   <developer_name xml:lang="ko">KDE 커뮤니티</developer_name>
   <developer_name xml:lang="nl">KDE-gemeenschap</developer_name>
+  <developer_name xml:lang="sk">KDE komunita</developer_name>
   <developer_name xml:lang="sv">KDE-gemenskapen</developer_name>
   <developer_name xml:lang="uk">Спільнота KDE</developer_name>
   <developer_name xml:lang="x-test">xxKDE Communityxx</developer_name>
