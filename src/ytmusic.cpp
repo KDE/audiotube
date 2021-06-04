@@ -15,7 +15,7 @@ using namespace py::literals;
 
 #define UNEXPORT __attribute__ ((visibility("hidden")))
 
-constexpr auto TESTED_YTMUSICAPI_VERSION = "0.17.1";
+constexpr auto TESTED_YTMUSICAPI_VERSION = "0.17.3";
 
 struct UNEXPORT YTMusicPrivate {
     py::scoped_interpreter guard {};
