@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
-import QtQuick 2.0
+import QtQuick 2.15
 import QtQuick.Layouts 1.12
 import QtQuick.Controls 2.12 as Controls
 import org.kde.kirigami 2.12 as Kirigami
@@ -38,6 +38,9 @@ Kirigami.ScrollablePage {
         model: PlaylistModel {
             id: playlistModel
         }
+
+        reuseItems: true
+
         delegate: Kirigami.SwipeListItem {
             id: delegateItem
             required property string title

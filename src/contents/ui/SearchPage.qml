@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
-import QtQuick 2.0
+import QtQuick 2.15
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.14 as Controls
 import org.kde.kirigami 2.14 as Kirigami
@@ -24,6 +24,8 @@ Kirigami.ScrollablePage {
     }
 
     ListView {
+        reuseItems: true
+
         model: SearchModel {
             id: searchModel
 

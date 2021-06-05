@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
-import QtQuick 2.1
+import QtQuick 2.15
 import org.kde.kirigami 2.14 as Kirigami
 import QtQuick.Controls 2.14 as Controls
 import QtQuick.Layouts 1.3
@@ -19,6 +19,9 @@ Kirigami.ScrollablePage {
             backgroundImage.source: artistModel.thumbnailUrl
             title: artistModel.title
         }
+
+        reuseItems: true
+
         model: ArtistModel {
             id: artistModel
 
