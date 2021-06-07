@@ -17,7 +17,9 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="ko">AudioTube</name>
   <name xml:lang="nl">AudioTube</name>
   <name xml:lang="pl">AudioTube</name>
+  <name xml:lang="pt">AudioTube</name>
   <name xml:lang="sk">AudioTube</name>
+  <name xml:lang="sl">AudioTube</name>
   <name xml:lang="sv">AudioTube</name>
   <name xml:lang="uk">AudioTube</name>
   <name xml:lang="x-test">xxAudioTubexx</name>
@@ -31,6 +33,8 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="ko">올인원 YouTube Music 클라이언트</summary>
   <summary xml:lang="nl">Convergente muziekclient van YouTube</summary>
   <summary xml:lang="pl">Całościowy program do muzyki z YouTube</summary>
+  <summary xml:lang="pt">Cliente de música do YouTube convergente</summary>
+  <summary xml:lang="sl">Konvergentni odjemalec glasbe YouTube</summary>
   <summary xml:lang="sv">Konvergent YouTube-musikprogram</summary>
   <summary xml:lang="uk">Зручний музичний клієнт YouTube</summary>
   <summary xml:lang="x-test">xxConvergent YouTube Music clientxx</summary>
@@ -47,7 +51,9 @@ SPDX-License-Identifier: CC0-1.0
   <developer_name xml:lang="ko">KDE 커뮤니티</developer_name>
   <developer_name xml:lang="nl">KDE-gemeenschap</developer_name>
   <developer_name xml:lang="pl">Społeczność KDE</developer_name>
+  <developer_name xml:lang="pt">Comunidade do KDE</developer_name>
   <developer_name xml:lang="sk">KDE komunita</developer_name>
+  <developer_name xml:lang="sl">Skupnost KDE</developer_name>
   <developer_name xml:lang="sv">KDE-gemenskapen</developer_name>
   <developer_name xml:lang="uk">Спільнота KDE</developer_name>
   <developer_name xml:lang="x-test">xxKDE Communityxx</developer_name>
@@ -62,6 +68,8 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="ko">AudioTube는 YouTube Music을 검색하고, 앨범과 아티스트를 표시하고, 자동 생성된 재생 목록, 앨범을 재생하고, 사용자 정의 재생 목록을 만들 수 있습니다.</p>
     <p xml:lang="nl">AudioTube kan in YouTube Music zoeken, een lijst maken van albums en artiesten, automatically gegenereerde afspeellijsten, albums afspelen en biedt u het samenstellen van uw eigen afspeellijst.</p>
     <p xml:lang="pl">AudioTube może wyszukać muzyki na YouTube, wypisać albumy i wykonawców, odtwarzać samoczynnie utworzone listy odtwarzania, albumy oraz umożliwia tworzenie własnych list odtwarzania.</p>
+    <p xml:lang="pt">O AudioTube consegue pesquisar no YouTube Music, enumerar os álbuns e artistas, reproduzir listas geradas automaticamente, álbuns e permite-lhe reproduzir as suas próprias listas de reprodução.</p>
+    <p xml:lang="sl">AudioTube lahko išče po YouTube Music, izdela sezname albumov in avtorjev, samodejno predvaja generirane sezname, albume in sestavlja vaše sezname predvajanja.</p>
     <p xml:lang="sv">AudioTube kan söka på YouTube Music, lista album och artister, spela upp automatiskt genererade spellistor, albums och låter dig sammanställa egna spellistor.</p>
     <p xml:lang="uk">AudioTube може виконувати пошук на YouTube Music, показувати списки альбомів та виконавців, відтворювати створені автоматично списки відтворення, альбоми та надає вам змогу створювати власні списки відворення.</p>
     <p xml:lang="x-test">xxAudioTube can search YouTube Music, list albums and artists, play automatically generated playlists, albums and allows to put your own playlist together.xx</p>
