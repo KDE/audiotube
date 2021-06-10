@@ -67,6 +67,11 @@ SPDX-License-Identifier: CC0-1.0
       <image>https://cdn.kde.org/screenshots/audiotube/mobile_playlist.png</image>
     </screenshot>
   </screenshots>
+  <recommends>
+    <control>pointing</control>
+    <control>keyboard</control>
+    <control>touch</control>
+  </recommends>
   <description>
     <p>AudioTube can search YouTube Music, list albums and artists, play automatically generated playlists, albums and allows to put your own playlist together.</p>
     <p xml:lang="ca">L'AudioTube pot cercar música a YouTube, llistar àlbums i artistes, reproduir llistes de reproducció generades automàticament, àlbums i permet crear la vostra pròpia llista de reproducció.</p>
