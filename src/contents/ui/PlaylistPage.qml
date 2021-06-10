@@ -45,7 +45,7 @@ Kirigami.ScrollablePage {
             id: delegateItem
             required property string title
             required property string videoId
-            required property string artists
+            required property var artists
 
             RowLayout {
                 Layout.fillHeight: true
@@ -73,6 +73,8 @@ Kirigami.ScrollablePage {
                     onTriggered: UserPlaylistModel.append(delegateItem.videoId, delegateItem.title, delegateItem.artists)
                 }
             ]
+
+            onClicked: play(videoId)
         }
 
         Controls.BusyIndicator {

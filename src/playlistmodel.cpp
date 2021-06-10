@@ -49,7 +49,7 @@ QVariant PlaylistModel::data(const QModelIndex &index, int role) const
     case Title:
         return QString::fromStdString(m_playlist.tracks[index.row()].title);
     case Artists:
-        return PlaylistUtils::artistsToString(m_playlist.tracks[index.row()].artists);
+        return QVariant::fromValue(m_playlist.tracks[index.row()].artists);
     case VideoId:
         if (m_playlist.tracks[index.row()].video_id) {
             return QString::fromStdString(*m_playlist.tracks[index.row()].video_id);
