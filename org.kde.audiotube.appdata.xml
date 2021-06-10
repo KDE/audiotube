@@ -57,6 +57,16 @@ SPDX-License-Identifier: CC0-1.0
   <developer_name xml:lang="sv">KDE-gemenskapen</developer_name>
   <developer_name xml:lang="uk">Спільнота KDE</developer_name>
   <developer_name xml:lang="x-test">xxKDE Communityxx</developer_name>
+  <content_rating type="oars-1.0" />
+  <url type="homepage">https://apps.kde.org/en/audiotube</url>
+  <screenshots>
+    <screenshot>
+      <image>https://cdn.kde.org/screenshots/audiotube/desktop.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://cdn.kde.org/screenshots/audiotube/mobile_playlist.png</image>
+    </screenshot>
+  </screenshots>
   <description>
     <p>AudioTube can search YouTube Music, list albums and artists, play automatically generated playlists, albums and allows to put your own playlist together.</p>
     <p xml:lang="ca">L'AudioTube pot cercar música a YouTube, llistar àlbums i artistes, reproduir llistes de reproducció generades automàticament, àlbums i permet crear la vostra pròpia llista de reproducció.</p>
