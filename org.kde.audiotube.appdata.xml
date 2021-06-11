@@ -57,7 +57,7 @@ SPDX-License-Identifier: CC0-1.0
   <developer_name xml:lang="sv">KDE-gemenskapen</developer_name>
   <developer_name xml:lang="uk">Спільнота KDE</developer_name>
   <developer_name xml:lang="x-test">xxKDE Communityxx</developer_name>
-  <content_rating type="oars-1.0" />
+  <content_rating type="oars-1.0"/>
   <url type="homepage">https://apps.kde.org/en/audiotube</url>
   <screenshots>
     <screenshot>
