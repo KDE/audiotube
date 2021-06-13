@@ -23,6 +23,7 @@ add_executable(audiotube
     playlistmodel.cpp
     playlistutils.cpp
     errorhandler.cpp
+    playerutils.cpp
     multiiterableview.h
     resources.qrc
 )
@@ -35,6 +36,7 @@ target_link_libraries(audiotube
     Qt5::QuickControls2
     Qt5::Svg
     KF5::I18n
+    KF5::CoreAddons
     ytm
 )
 target_compile_definitions(audiotube PRIVATE -DQT_NO_KEYWORDS -DQT_NO_URL_CAST_FROM_STRING)

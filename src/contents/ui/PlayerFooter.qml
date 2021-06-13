@@ -195,21 +195,7 @@ ColumnLayout {
 
                 Controls.Label{
                     visible: audio.duration > 0
-                    text: {
-                        var hours = new Date(audio.position).getUTCHours()
-                        if(hours>0)
-                            hours = (("0"+hours).slice(-2)) + ":"
-                        else
-                            hours = ""
-
-                        var minutes = new Date(audio.position).getUTCMinutes()
-                        minutes = ("0"+minutes).slice(-2)
-
-                        var seconds = new Date(audio.position).getUTCSeconds()
-                        seconds = ("0"+seconds).slice(-2)
-
-                        return hours+minutes+":"+seconds;
-                    }
+                    text: PlayerUtils.formatTimestamp(audio.position)
                 }
 
                 Controls.Slider {
@@ -233,21 +219,7 @@ ColumnLayout {
 
                 Controls.Label{
                     visible: audio.duration > 0
-                    text: {
-                        var hours = new Date(audio.duration).getUTCHours()
-                        if(hours>0)
-                            hours = (("0"+hours).slice(-2)) + ":"
-                        else
-                            hours = ""
-
-                        var minutes = new Date(audio.duration).getUTCMinutes()
-                        minutes = ("0"+minutes).slice(-2)
-
-                        var seconds = new Date(audio.duration).getUTCSeconds()
-                        seconds = ("0"+seconds).slice(-2)
-
-                        return hours+minutes+":"+seconds;
-                    }
+                    text: PlayerUtils.formatTimestamp(audio.duration)
                 }
 
             }

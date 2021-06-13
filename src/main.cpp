@@ -15,6 +15,7 @@
 #include "userplaylistmodel.h"
 #include "errorhandler.h"
 #include "playlistmodel.h"
+#include "playerutils.h"
 
 constexpr auto URI = "org.kde.ytmusic";
 
@@ -38,6 +39,9 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     });
     qmlRegisterSingletonType<ErrorHandler>(URI, 1, 0, "ErrorHandler", [](QQmlEngine *, QJSEngine *) {
         return new ErrorHandler();
+    });
+    qmlRegisterSingletonType<PlayerUtils>(URI, 1, 0, "PlayerUtils", [](QQmlEngine *, QJSEngine *) {
+        return new PlayerUtils();
     });
 
     engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
