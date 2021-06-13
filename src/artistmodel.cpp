@@ -24,10 +24,16 @@ ArtistModel::ArtistModel(QObject *parent)
         beginResetModel();
         m_artist = artist;
         std::sort(m_artist.thumbnails.begin(), m_artist.thumbnails.end());
-        m_view = std::optional(MultiIterableView(m_artist.albums->results,
-                                                 m_artist.singles->results,
-                                                 m_artist.songs->results,
-                                                 m_artist.videos->results));
+
+        auto albums = m_artist.albums ? m_artist.albums->results : std::vector<artist::Artist::Album>();
+        auto singles = m_artist.singles ? m_artist.singles->results : std::vector<artist::Artist::Single>();
+        auto songs = m_artist.songs ? m_artist.songs->results : std::vector<artist::Artist::Song>();
+        auto videos = m_artist.videos ? m_artist.videos->results : std::vector<artist::Artist::Video>();
+
+        m_view = std::optional(MultiIterableView(std::move(albums),
+                                                 std::move(singles),
+                                                 std::move(songs),
+                                                 std::move(videos)));
         endResetModel();
 
 

@@ -52,7 +52,7 @@ private:
         }
     }
 public:
-    explicit MultiIterableView(const std::vector<Arguments> &...lists)
+    explicit MultiIterableView(std::vector<Arguments> &&...lists)
         : m_vectors(std::make_tuple(lists...))
     {
     }
