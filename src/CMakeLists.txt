@@ -37,6 +37,7 @@ target_link_libraries(audiotube
     Qt5::Svg
     KF5::I18n
     KF5::CoreAddons
+    KF5::Crash
     ytm
 )
 target_compile_definitions(audiotube PRIVATE -DQT_NO_KEYWORDS -DQT_NO_URL_CAST_FROM_STRING)

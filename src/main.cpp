@@ -8,6 +8,7 @@
 #include <QUrl>
 #include <KLocalizedContext>
 #include <KLocalizedString>
+#include <KCrash>
 
 #include "searchmodel.h"
 #include "albummodel.h"
@@ -29,6 +30,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     QCoreApplication::setApplicationName(QStringLiteral("audiotube"));
 
     KLocalizedString::setApplicationDomain("audiotube");
+    KCrash::initialize();
 
     QQmlApplicationEngine engine;
 
