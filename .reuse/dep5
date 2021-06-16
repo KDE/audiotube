@@ -1,0 +1,4 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: AudioTube
+Upstream-Contact: Jonah Brüchert <jbb@kaidan.im>
+Source: https://invent.kde.org/plasma-mobile/audiotube
