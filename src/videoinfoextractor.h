@@ -21,7 +21,7 @@ class VideoInfoExtractor : public QObject
     Q_PROPERTY(bool loading READ loading WRITE setLoading NOTIFY loadingChanged)
 
 public:
-    VideoInfoExtractor(QObject *parent = nullptr);
+    explicit VideoInfoExtractor(QObject *parent = nullptr);
 
     QUrl audioUrl() const;
     Q_SIGNAL void audioUrlChanged();
