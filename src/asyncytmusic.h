@@ -107,7 +107,7 @@ private:
     Q_SIGNAL void startFetchWatchPlaylist(const std::optional<QString> &videoId, const std::optional<QString> &playlistId);
     Q_SLOT void internalFetchWatchPlaylist(const std::optional<QString> &videoId, const std::optional<QString> &playlistId);
 
-    // Python interpreter will be ininitalized from the thread calling the methods
+    // Python interpreter will be initialized from the thread calling the methods
     Lazy<YTMusic> m_ytm;
 };
 
