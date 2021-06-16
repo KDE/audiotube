@@ -276,6 +276,7 @@ YTMusic::YTMusic(
     const auto module = py::module::import("ytmusicapi");
     d->ytmusic = module.attr("YTMusic")(auth, user, requests_session, proxies, language);
 
+    // Some of the called python code randomly fails if the encoding is not utf8
     setenv("LC_ALL", "en_US.utf8", true);
 
     const auto version = module.attr("_version").attr("__version__").cast<std::string>();
