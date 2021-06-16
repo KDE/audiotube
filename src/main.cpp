@@ -44,7 +44,9 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
         return new PlayerUtils();
     });
 
-    engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
+    auto *localizedContext = new KLocalizedContext(&engine);
+    localizedContext->setTranslationDomain(QStringLiteral("audiotube"));
+    engine.rootContext()->setContextObject(localizedContext);
     engine.load(QUrl(QStringLiteral("qrc:///main.qml")));
 
     if (engine.rootObjects().isEmpty()) {
