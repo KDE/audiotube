@@ -36,7 +36,7 @@ Kirigami.ApplicationWindow {
     function askPlayVideoAudio(videoId) {
         showPassiveNotification(i18n("Video playback is not supported yet."),
                             "long",
-                            i18n("Play only audio"),
+                            i18n("Play only Audio"),
                             function() {
                                 play(videoId)
                             })

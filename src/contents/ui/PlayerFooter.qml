@@ -93,7 +93,7 @@ ColumnLayout {
 
                         actions: [
                             Kirigami.Action {
-                                text: i18n("Remove track")
+                                text: i18n("Remove Track")
                                 icon.name: "list-remove"
                                 onTriggered: UserPlaylistModel.remove(delegateItem.videoId)
                             }

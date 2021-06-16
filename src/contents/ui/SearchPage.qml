@@ -99,7 +99,7 @@ Kirigami.ScrollablePage {
                 },
                 Kirigami.Action {
                     icon.name: "media-playlist-append"
-                    text: i18n("Add to playlist")
+                    text: i18n("Add to Playlist")
                     visible: delegateItem.type === SearchModel.Song
                     onTriggered: UserPlaylistModel.append(delegateItem.videoId, delegateItem.title, delegateItem.artists)
                 }
