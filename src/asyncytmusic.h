@@ -114,7 +114,7 @@ private:
 class YTMusicThread : private QThread {
 public:
     static YTMusicThread &instance();
-    ~YTMusicThread();
+    ~YTMusicThread() override;
 
     AsyncYTMusic *operator->();
     AsyncYTMusic &get();
