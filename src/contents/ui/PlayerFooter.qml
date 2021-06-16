@@ -110,10 +110,12 @@ ColumnLayout {
                             }
 
                             Controls.ToolButton {
+                                text: i18n("Clear")
                                 icon.name: "edit-clear-all"
                                 onClicked: UserPlaylistModel.clear()
                             }
                             Controls.ToolButton {
+                                text: i18n("Shuffle")
                                 icon.name: "media-playlist-shuffle"
                                 onClicked: UserPlaylistModel.shufflePlaylist()
                             }
