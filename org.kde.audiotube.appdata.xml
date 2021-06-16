@@ -62,6 +62,7 @@ SPDX-License-Identifier: CC0-1.0
   <developer_name xml:lang="x-test">xxKDE Communityxx</developer_name>
   <content_rating type="oars-1.0"/>
   <url type="homepage">https://apps.kde.org/en/audiotube</url>
+  <launchable type="desktop-id">org.kde.audiotube.desktop</launchable>
   <screenshots>
     <screenshot>
       <image>https://cdn.kde.org/screenshots/audiotube/desktop.png</image>
