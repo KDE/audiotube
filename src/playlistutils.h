@@ -11,10 +11,6 @@ namespace meta {
 struct Artist;
 }
 
-class PlaylistUtils
-{
-public:
-    PlaylistUtils() = delete;
-
-    static QString artistsToString(const std::vector<meta::Artist> &artists);
+namespace PlaylistUtils {
+    QString artistsToString(const std::vector<meta::Artist> &artists);
 };

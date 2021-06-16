@@ -10,7 +10,9 @@
 
 #include <ytmusic.h>
 
-QString PlaylistUtils::artistsToString(const std::vector<meta::Artist> &artists)
+namespace PlaylistUtils {
+
+QString artistsToString(const std::vector<meta::Artist> &artists)
 {
     if (!artists.empty()) {
         return std::accumulate(artists.begin() + 1, artists.end(),
@@ -21,4 +23,6 @@ QString PlaylistUtils::artistsToString(const std::vector<meta::Artist> &artists)
     }
 
     return {};
+}
+
 }
