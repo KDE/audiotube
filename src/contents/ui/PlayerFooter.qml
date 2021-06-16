@@ -29,8 +29,8 @@ ColumnLayout {
         visible: footerLayout.maximized
 
         Item {
-            Layout.fillWidth: true
-            Layout.fillHeight: true
+            Layout.fillWidth: info.thumbnail
+            Layout.fillHeight: info.thumbnail
             Image {
                 anchors.fill: parent
 
