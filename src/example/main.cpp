@@ -42,7 +42,7 @@ int main() {
             } else if constexpr (std::is_same_v<T, search::Video>) {
                 std::cout << arg.title << std::endl;
             } else {
-                std::cout << "non excaustive visitor";
+                std::cout << "non exaustive visitor";
             }
         }, result);
     }
