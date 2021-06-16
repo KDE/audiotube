@@ -7,6 +7,7 @@
 #include <QtQml>
 #include <QUrl>
 #include <KLocalizedContext>
+#include <KLocalizedString>
 
 #include "searchmodel.h"
 #include "albummodel.h"
@@ -27,6 +28,8 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     QCoreApplication::setOrganizationDomain(QStringLiteral("kde.org"));
     QCoreApplication::setApplicationName(QStringLiteral("audiotube"));
 
+    KLocalizedString::setApplicationDomain("audiotube");
+
     QQmlApplicationEngine engine;
 
     qmlRegisterType<SearchModel>(URI, 1, 0, "SearchModel");
@@ -44,9 +47,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
         return new PlayerUtils();
     });
 
-    auto *localizedContext = new KLocalizedContext(&engine);
-    localizedContext->setTranslationDomain(QStringLiteral("audiotube"));
-    engine.rootContext()->setContextObject(localizedContext);
+    engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
     engine.load(QUrl(QStringLiteral("qrc:///main.qml")));
 
     if (engine.rootObjects().isEmpty()) {
