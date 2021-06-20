@@ -33,8 +33,9 @@ Kirigami.ApplicationWindow {
         UserPlaylistModel.playlistId = playlistId
     }
 
-    function askPlayVideoAudio(videoId) {
-        showPassiveNotification(i18n("Video playback is not supported yet."),
+    function askPlayVideoAudio(videoId, title) {
+        showPassiveNotification(i18n("Video playback is not supported yet. Do you want to play only the audio of \"%1\"?")
+                                .arg(title),
                             "long",
                             i18n("Play only Audio"),
                             function() {

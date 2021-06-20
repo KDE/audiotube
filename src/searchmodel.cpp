@@ -157,7 +157,7 @@ void SearchModel::triggerItem(int row)
         } else if constexpr (std::is_same_v<T, search::Song>) {
             Q_EMIT openSong(QString::fromStdString(arg.video_id));
         } else if constexpr (std::is_same_v<T, search::Video>) {
-            Q_EMIT openVideo(QString::fromStdString(arg.video_id));
+            Q_EMIT openVideo(QString::fromStdString(arg.video_id), QString::fromStdString(arg.title));
         } else {
             Q_UNREACHABLE();
         }

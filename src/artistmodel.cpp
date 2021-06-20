@@ -174,7 +174,7 @@ void ArtistModel::triggerItem(int row)
             } else if constexpr(std::is_same_v<T, artist::Artist::Song>) {
                 Q_EMIT openSong(QString::fromStdString(item.video_id));
             } else if constexpr(std::is_same_v<T, artist::Artist::Video>) {
-                Q_EMIT openVideo(QString::fromStdString(item.video_id));
+                Q_EMIT openVideo(QString::fromStdString(item.video_id), QString::fromStdString(item.title));
             } else {
                 Q_UNREACHABLE();
             }

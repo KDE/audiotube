@@ -53,7 +53,7 @@ public:
     Q_SIGNAL void openArtist(const QString &browseId);
     Q_SIGNAL void openPlaylist(const QString &browseId);
     Q_SIGNAL void openSong(const QString &videoId);
-    Q_SIGNAL void openVideo(const QString &videoId);
+    Q_SIGNAL void openVideo(const QString &videoId, const QString &title);
 
 private:
     QString m_searchQuery;

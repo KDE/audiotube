@@ -51,8 +51,8 @@ Kirigami.ScrollablePage {
                 play(videoId)
             }
 
-            onOpenVideo: (videoId) => {
-                askPlayVideoAudio(videoId)
+            onOpenVideo: (videoId, title) => {
+                askPlayVideoAudio(videoId, title)
             }
         }
         delegate: Kirigami.SwipeListItem {
