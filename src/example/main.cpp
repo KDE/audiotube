@@ -8,7 +8,7 @@
 
 int main() {
     const auto ytm = YTMusic();
-    const auto results = ytm.search("arte concert");
+    const auto results = ytm.search("Thomas Bangalter");
 
     std::cout << "Found " << results.size() << " results." << std::endl;
 
