@@ -72,6 +72,10 @@ watch::Playlist::Track extract_watch_track(py::handle track);
 
 template <typename T>
 inline auto extract_py_list(py::handle obj) {
+    if (obj.is_none()) {
+        return std::vector<T>();
+    }
+
     const auto list = obj.cast<py::list>();
     std::vector<T> output;
 
