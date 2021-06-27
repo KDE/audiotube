@@ -62,6 +62,7 @@ Kirigami.ScrollablePage {
             required property int type
             required property string videoId
             required property var artists
+            required property string radioPlaylistId
 
             RowLayout {
                 Layout.fillHeight: true
@@ -102,6 +103,12 @@ Kirigami.ScrollablePage {
                     text: i18n("Add to Playlist")
                     visible: delegateItem.type === SearchModel.Song
                     onTriggered: UserPlaylistModel.append(delegateItem.videoId, delegateItem.title, delegateItem.artists)
+                },
+                Kirigami.Action {
+                    icon.name: "radio"
+                    text: i18n("Radio")
+                    visible: delegateItem.type === SearchModel.Artist && delegateItem.radioPlaylistId
+                    onTriggered: playPlaylist(delegateItem.radioPlaylistId)
                 }
             ]
 

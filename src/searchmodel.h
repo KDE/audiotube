@@ -30,7 +30,8 @@ public:
         Title = Qt::UserRole + 1,
         Type,
         VideoId,
-        Artists
+        Artists,
+        RadioPlaylistId
     };
 
     explicit SearchModel(QObject *parent = nullptr);

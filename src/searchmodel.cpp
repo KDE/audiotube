@@ -105,6 +105,18 @@ QVariant SearchModel::data(const QModelIndex &index, int role) const
                 Q_UNREACHABLE();
             }
         }, m_searchResults.at(index.row())));
+    case RadioPlaylistId:
+        return std::visit([&](auto &&arg) {
+            using T = std::decay_t<decltype(arg)>;
+
+            if constexpr (std::is_same_v<T, search::Artist>) {
+                if (arg.radio_id) {
+                    return QString::fromStdString(*arg.radio_id);
+                }
+            }
+
+            return QString();
+        }, m_searchResults.at(index.row()));
     }
 
     Q_UNREACHABLE();
@@ -118,7 +130,8 @@ QHash<int, QByteArray> SearchModel::roleNames() const
         {Title, "title"},
         {Type, "type"},
         {VideoId, "videoId"},
-        {Artists, "artists"}
+        {Artists, "artists"},
+        {RadioPlaylistId, "radioPlaylistId"},
     };
 }
 
