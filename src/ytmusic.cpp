@@ -19,7 +19,42 @@ constexpr auto TESTED_YTMUSICAPI_VERSION = "0.17.3";
 
 struct UNEXPORT YTMusicPrivate {
     py::scoped_interpreter guard {};
-    py::object ytmusic;
+
+    std::optional<std::string> auth;
+    std::optional<std::string> user;
+    std::optional<bool> requests_session;
+    std::optional<std::map<std::string, std::string> > proxies;
+    std::string language;
+
+    py::object get_ytmusic() {
+        if (ytmusic.is_none()) {
+            const auto module = py::module::import("ytmusicapi");
+            ytmusic = module.attr("YTMusic")(auth, user, requests_session, proxies, language);
+
+            // Some of the called python code randomly fails if the encoding is not utf8
+            setenv("LC_ALL", "en_US.utf8", true);
+
+            const auto version = module.attr("_version").attr("__version__").cast<std::string>();
+            if (version != TESTED_YTMUSICAPI_VERSION) {
+                std::cerr << "Running with untested version of ytmusicapi." << std::endl;
+                std::cerr << "The currently tested and supported version is " << TESTED_YTMUSICAPI_VERSION << std::endl;
+            }
+        }
+
+        return ytmusic;
+    }
+
+    py::object get_ytdl() {
+        // lazy initialization
+        if (ytdl.is_none()) {
+             ytdl = py::module::import("youtube_dl").attr("YoutubeDL")(py::dict());
+        }
+
+        return ytdl;
+    }
+
+private:
+    py::object ytmusic = py::none();
     py::object ytdl = py::none();
 };
 
@@ -277,17 +312,11 @@ YTMusic::YTMusic(
         const std::string &language)
     : d(std::make_unique<YTMusicPrivate>())
 {
-    const auto module = py::module::import("ytmusicapi");
-    d->ytmusic = module.attr("YTMusic")(auth, user, requests_session, proxies, language);
-
-    // Some of the called python code randomly fails if the encoding is not utf8
-    setenv("LC_ALL", "en_US.utf8", true);
-
-    const auto version = module.attr("_version").attr("__version__").cast<std::string>();
-    if (version != TESTED_YTMUSICAPI_VERSION) {
-        std::cerr << "Running with untested version of ytmusicapi." << std::endl;
-        std::cerr << "The currently tested and supported version is " << TESTED_YTMUSICAPI_VERSION << std::endl;
-    }
+    d->auth = auth;
+    d->user = user;
+    d->requests_session = requests_session;
+    d->proxies = proxies;
+    d->language = language;
 }
 
 YTMusic::~YTMusic() = default;
@@ -298,7 +327,7 @@ std::vector<search::SearchResultItem> YTMusic::search(
         const int limit,
         const bool ignore_spelling) const
 {
-    const auto results = d->ytmusic.attr("search")(query, filter, limit, ignore_spelling).cast<py::list>();
+    const auto results = d->get_ytmusic().attr("search")(query, filter, limit, ignore_spelling).cast<py::list>();
 
     std::vector<search::SearchResultItem> output;
     for (const auto &result : results) {
@@ -312,7 +341,7 @@ std::vector<search::SearchResultItem> YTMusic::search(
 
 artist::Artist YTMusic::get_artist(const std::string &channel_id) const
 {
-    const auto artist = d->ytmusic.attr("get_artist")(channel_id);
+    const auto artist = d->get_ytmusic().attr("get_artist")(channel_id);
     return artist::Artist {
         artist["description"].cast<std::optional<std::string>>(),
         artist["views"].cast<std::optional<std::string>>(),
@@ -330,7 +359,7 @@ artist::Artist YTMusic::get_artist(const std::string &channel_id) const
 
 album::Album YTMusic::get_album(const std::string &browseId) const
 {
-    const auto album = d->ytmusic.attr("get_album")(browseId);
+    const auto album = d->get_ytmusic().attr("get_album")(browseId);
 
     return {
         album["title"].cast<std::string>(),
@@ -353,7 +382,7 @@ album::Album YTMusic::get_album(const std::string &browseId) const
 
 song::Song YTMusic::get_song(const std::string &video_id) const
 {
-    const auto song = d->ytmusic.attr("get_song")(video_id);
+    const auto song = d->get_ytmusic().attr("get_song")(video_id);
 
     return {
         song["videoId"].cast<std::string>(),
@@ -385,7 +414,7 @@ song::Song YTMusic::get_song(const std::string &video_id) const
 
 playlist::Playlist YTMusic::get_playlist(const std::string &playlist_id, int limit) const
 {
-    const auto playlist = d->ytmusic.attr("get_playlist")(playlist_id, limit);
+    const auto playlist = d->get_ytmusic().attr("get_playlist")(playlist_id, limit);
 
     return {
         playlist["id"].cast<std::string>(),
@@ -402,7 +431,7 @@ playlist::Playlist YTMusic::get_playlist(const std::string &playlist_id, int lim
 
 std::vector<artist::Artist::Album> YTMusic::get_artist_albums(const std::string &channel_id, const std::string &params) const
 {
-    const auto py_albums = d->ytmusic.attr("get_artist_albums")(channel_id, params);
+    const auto py_albums = d->get_ytmusic().attr("get_artist_albums")(channel_id, params);
     std::vector<artist::Artist::Album> albums;
 
     std::transform(py_albums.begin(), py_albums.end(), std::back_inserter(albums), [](py::handle album) {
@@ -422,15 +451,7 @@ video_info::VideoInfo YTMusic::extract_video_info(const std::string &video_id) c
 {
     using namespace pybind11::literals;
 
-    // lazy initialization
-    if (d->ytdl.is_none()) {
-        const auto module = py::module::import("youtube_dl");
-        py::dict options;
-        d->ytdl = module.attr("YoutubeDL")(options);
-    }
-
-    const auto info = d->ytdl.attr("extract_info")(video_id, "download"_a=py::bool_(false));
-    //py::print(py::module::import("json").attr("dumps")(info, "indent"_a=4));
+    const auto info = d->get_ytdl().attr("extract_info")(video_id, "download"_a=py::bool_(false));
 
     return {
         info["id"].cast<std::string>(),
@@ -445,7 +466,7 @@ watch::Playlist YTMusic::get_watch_playlist(const std::optional<std::string> &vi
                                             int limit,
                                             const std::optional<std::string> &params) const
 {
-    const auto playlist = d->ytmusic.attr("get_watch_playlist")("videoId"_a = videoId,
+    const auto playlist = d->get_ytmusic().attr("get_watch_playlist")("videoId"_a = videoId,
                                                                 "playlistId"_a = playlistId,
                                                                 "limit"_a = py::int_(limit),
                                                                 "params"_a = params);

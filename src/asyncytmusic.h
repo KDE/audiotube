@@ -37,6 +37,7 @@ public:
         if (!m_item) {
             m_item = std::make_unique<T>();
         }
+        Q_ASSERT(m_item);
         return m_item;
     }
 

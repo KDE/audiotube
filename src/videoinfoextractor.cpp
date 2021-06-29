@@ -33,7 +33,6 @@ VideoInfoExtractor::VideoInfoExtractor(QObject *parent)
     });
 }
 
-
 QUrl VideoInfoExtractor::audioUrl() const
 {
     if (m_videoInfo.formats.empty()) {
