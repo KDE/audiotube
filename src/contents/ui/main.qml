@@ -15,6 +15,7 @@ Kirigami.ApplicationWindow {
     property alias searchField: searchField
 
     header: Controls.Control {
+        visible: !footer.maximized
         padding: Kirigami.Units.largeSpacing
 
         background: Rectangle {
