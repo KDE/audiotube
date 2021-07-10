@@ -196,7 +196,7 @@ ColumnLayout {
             RowLayout{
 
                 Controls.Label{
-                    visible: audio.duration > 0
+                    visible: info.title
                     text: PlayerUtils.formatTimestamp(audio.position)
                 }
 
@@ -220,7 +220,7 @@ ColumnLayout {
                 }
 
                 Controls.Label{
-                    visible: audio.duration > 0
+                    visible: info.title
                     text: PlayerUtils.formatTimestamp(audio.duration)
                 }
 
