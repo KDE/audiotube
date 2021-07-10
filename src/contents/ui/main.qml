@@ -12,6 +12,8 @@ import org.kde.ytmusic 1.0
 Kirigami.ApplicationWindow {
     id: root
 
+    property alias searchField: searchField
+
     header: Controls.Control {
         padding: Kirigami.Units.largeSpacing
 
@@ -28,6 +30,7 @@ Kirigami.ApplicationWindow {
                 Layout.fillWidth: true
             }
             Kirigami.SearchField {
+                id: searchField
                 delaySearch: true
                 selectByMouse: true
                 Layout.fillWidth: true

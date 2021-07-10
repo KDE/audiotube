@@ -12,8 +12,7 @@ import org.kde.ytmusic 1.0
 Kirigami.ScrollablePage {
     property alias searchQuery: searchModel.searchQuery
 
-    title: i18n("Youtube Music")
-
+    title: searchQuery
 
     ListView {
         reuseItems: true
@@ -109,6 +108,19 @@ Kirigami.ScrollablePage {
         Controls.BusyIndicator {
             anchors.centerIn: parent
             visible: searchModel.loading
+        }
+        Kirigami.PlaceholderMessage {
+            anchors.centerIn: parent
+            width: parent.width - (Kirigami.Units.largeSpacing * 4)
+
+            visible: parent.count === 0 && !searchModel.loading
+
+            text: i18n("Find music on YouTube Music")
+            helpfulAction: Kirigami.Action {
+                onTriggered: searchField.forceActiveFocus()
+                text: "Search"
+                icon.name: "search"
+            }
         }
     }
 }
