@@ -118,7 +118,7 @@ Kirigami.ScrollablePage {
             text: i18n("Find music on YouTube Music")
             helpfulAction: Kirigami.Action {
                 onTriggered: searchField.forceActiveFocus()
-                text: "Search"
+                text: i18n("Search")
                 icon.name: "search"
             }
         }
