@@ -10,18 +10,10 @@ import org.kde.kirigami 2.14 as Kirigami
 import org.kde.ytmusic 1.0
 
 Kirigami.ScrollablePage {
+    property alias searchQuery: searchModel.searchQuery
+
     title: i18n("Youtube Music")
 
-    header: Controls.Control {
-        padding: Kirigami.Units.largeSpacing
-        contentItem: Kirigami.SearchField {
-            delaySearch: true
-            selectByMouse: true
-            onAccepted: {
-                searchModel.searchQuery = text
-            }
-        }
-    }
 
     ListView {
         reuseItems: true
