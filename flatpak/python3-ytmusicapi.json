@@ -32,8 +32,8 @@
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/1b/8e/2bc4c8160083bbfaac215637f1e9f4a43263833c2e81212cba3073aeaa25/ytmusicapi-0.17.3.tar.gz",
-            "sha256": "9a249cc53efd6408034f401a9a4375272a9b339e8eb64f3a2e713a1ccd06d55b"
+            "url": "https://files.pythonhosted.org/packages/83/aa/3e2c231fbef90d5bd75614e3739bb27e7e33e28c9891d6ee0561fe52a9df/ytmusicapi-0.18.0.tar.gz",
+            "sha256": "447d1b6a594f49942f7ac75412cba59c191b6f3540d98ac65a1333445beec16d"
         }
     ]
 }
