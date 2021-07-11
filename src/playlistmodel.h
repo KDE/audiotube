@@ -7,7 +7,9 @@
 #include <QAbstractListModel>
 #include <ytmusic.h>
 
-class PlaylistModel : public QAbstractListModel
+#include "abstractytmusicmodel.h"
+
+class PlaylistModel : public AbstractYTMusicModel
 {
     Q_OBJECT
 
@@ -15,7 +17,6 @@ class PlaylistModel : public QAbstractListModel
     Q_PROPERTY(QString playlistId READ playlistId WRITE setPlaylistId NOTIFY playlistIdChanged REQUIRED)
 
     // output
-    Q_PROPERTY(bool loading READ loading WRITE setLoading NOTIFY loadingChanged)
     Q_PROPERTY(QUrl thumbnailUrl READ thumbnailUrl NOTIFY thumbnailUrlChanged)
     Q_PROPERTY(QString title READ title NOTIFY titleChanged)
 
@@ -36,10 +37,6 @@ public:
     void setPlaylistId(const QString &playlistId);
     Q_SIGNAL void playlistIdChanged();
 
-    bool loading() const;
-    void setLoading(bool loading);
-    Q_SIGNAL void loadingChanged();
-
     QUrl thumbnailUrl() const;
     Q_SIGNAL void thumbnailUrlChanged();
 
@@ -48,7 +45,6 @@ public:
 
 private:
     QString m_playlistId;
-    bool m_loading = false;
 
     playlist::Playlist m_playlist {};
 };

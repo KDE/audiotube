@@ -13,7 +13,7 @@
 #include "playlistutils.h"
 
 UserPlaylistModel::UserPlaylistModel(QObject *parent)
-    : QAbstractListModel(parent)
+    : AbstractYTMusicModel(parent)
 {
     connect(this, &UserPlaylistModel::initialVideoIdChanged, this, [=] {
         if (m_initialVideoId.isEmpty()) {
@@ -96,17 +96,6 @@ void UserPlaylistModel::setInitialVideoId(const QString &videoId)
 {
     m_initialVideoId = videoId;
     Q_EMIT initialVideoIdChanged();
-}
-
-bool UserPlaylistModel::loading() const
-{
-    return m_loading;
-}
-
-void UserPlaylistModel::setLoading(bool loading)
-{
-    m_loading = loading;
-    Q_EMIT loadingChanged();
 }
 
 QString UserPlaylistModel::nextVideoId() const

@@ -8,13 +8,13 @@
 #include <QThread>
 
 #include "asyncytmusic.h"
+#include "abstractytmusicmodel.h"
 
-class SearchModel : public QAbstractListModel
+class SearchModel : public AbstractYTMusicModel
 {
     Q_OBJECT
 
     Q_PROPERTY(QString searchQuery READ searchQuery WRITE setSearchQuery NOTIFY searchQueryChanged)
-    Q_PROPERTY(bool loading READ loading WRITE setLoading NOTIFY loadingChanged)
 
 public:
     enum Type {
@@ -44,10 +44,6 @@ public:
     void setSearchQuery(const QString &searchQuery);
     Q_SIGNAL void searchQueryChanged();
 
-    bool loading() const;
-    void setLoading(bool loading);
-    Q_SIGNAL void loadingChanged();
-
     Q_INVOKABLE void triggerItem(int row);
 
     Q_SIGNAL void openAlbum(const QString &browseId);
@@ -59,5 +55,4 @@ public:
 private:
     QString m_searchQuery;
     std::vector<search::SearchResultItem> m_searchResults;
-    bool m_loading = false;
 };

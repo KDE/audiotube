@@ -24,6 +24,7 @@ add_executable(audiotube
     playlistutils.cpp
     errorhandler.cpp
     playerutils.cpp
+    abstractytmusicmodel.cpp
     multiiterableview.h
     resources.qrc
 )

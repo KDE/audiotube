@@ -7,7 +7,7 @@
 #include <asyncytmusic.h>
 
 ArtistModel::ArtistModel(QObject *parent)
-    : QAbstractListModel(parent)
+    : AbstractYTMusicModel(parent)
 {
     connect(this, &ArtistModel::channelIdChanged, this, [=] {
         if (m_channelId.isEmpty()) {
@@ -149,17 +149,6 @@ QUrl ArtistModel::thumbnailUrl() const
     }
 
     return QUrl(QString::fromStdString(m_artist.thumbnails.back().url));
-}
-
-bool ArtistModel::loading() const
-{
-    return m_loading;
-}
-
-void ArtistModel::setLoading(bool loading)
-{
-    m_loading = loading;
-    Q_EMIT loadingChanged();
 }
 
 void ArtistModel::triggerItem(int row)

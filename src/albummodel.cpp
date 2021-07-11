@@ -7,7 +7,7 @@
 #include <QDebug>
 
 AlbumModel::AlbumModel(QObject *parent)
-    : QAbstractListModel(parent)
+    : AbstractYTMusicModel(parent)
 {
     connect(this, &AlbumModel::browseIdChanged, this, [=] {
         setLoading(true);
@@ -80,18 +80,6 @@ QString AlbumModel::title() const
 {
     return QString::fromStdString(m_album.title);
 }
-
-bool AlbumModel::loading() const
-{
-    return m_loading;
-}
-
-void AlbumModel::setLoading(bool loading)
-{
-    m_loading = loading;
-    Q_EMIT loadingChanged();
-}
-
 
 QUrl AlbumModel::thumbnailUrl() const
 {

@@ -10,9 +10,12 @@
 #include <optional>
 
 #include <ytmusic.h>
-#include "multiiterableview.h"
 
-class ArtistModel : public QAbstractListModel
+#include "multiiterableview.h"
+#include "abstractytmusicmodel.h"
+
+
+class ArtistModel : public AbstractYTMusicModel
 {
     Q_OBJECT
 
@@ -20,7 +23,6 @@ class ArtistModel : public QAbstractListModel
 
     Q_PROPERTY(QString title READ title NOTIFY titleChanged)
     Q_PROPERTY(QUrl thumbnailUrl READ thumbnailUrl NOTIFY thumbnailUrlChanged)
-    Q_PROPERTY(bool loading READ loading WRITE setLoading NOTIFY loadingChanged)
 
 public:
     enum Type {
@@ -54,10 +56,6 @@ public:
     QUrl thumbnailUrl() const;
     Q_SIGNAL void thumbnailUrlChanged();
 
-    bool loading() const;
-    void setLoading(bool loading);
-    Q_SIGNAL void loadingChanged();
-
     Q_INVOKABLE void triggerItem(int row);
 
     Q_SIGNAL void openAlbum(const QString &browseId);
@@ -66,7 +64,6 @@ public:
 
 private:
     QString m_channelId;
-    bool m_loading = false;
 
     artist::Artist m_artist;
     std::optional<MultiIterableView<

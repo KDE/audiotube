@@ -7,7 +7,9 @@
 
 #include <ytmusic.h>
 
-class UserPlaylistModel : public QAbstractListModel
+#include "abstractytmusicmodel.h"
+
+class UserPlaylistModel : public AbstractYTMusicModel
 {
     Q_OBJECT
 
@@ -17,7 +19,6 @@ class UserPlaylistModel : public QAbstractListModel
     Q_PROPERTY(bool shuffle READ shuffle WRITE setShuffle NOTIFY shuffleChanged)
 
     // output
-    Q_PROPERTY(bool loading READ loading WRITE setLoading NOTIFY loadingChanged)
     Q_PROPERTY(QString currentVideoId READ currentVideoId NOTIFY currentVideoIdChanged)
     Q_PROPERTY(bool canSkip READ canSkip NOTIFY canSkipChanged)
 
@@ -38,10 +39,6 @@ public:
     QString initialVideoId() const;
     void setInitialVideoId(const QString &videoId);
     Q_SIGNAL void initialVideoIdChanged();
-
-    bool loading() const;
-    void setLoading(bool loading);
-    Q_SIGNAL void loadingChanged();
 
     QString nextVideoId() const;
 
@@ -74,7 +71,6 @@ private:
     QString m_initialVideoId;
     QString m_playlistId;
     QString m_currentVideoId;
-    bool m_loading = false;
     bool m_shuffle = false;
 
     watch::Playlist m_playlist;

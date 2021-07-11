@@ -5,7 +5,7 @@
 #include "searchmodel.h"
 
 SearchModel::SearchModel(QObject *parent)
-    : QAbstractListModel(parent)
+    : AbstractYTMusicModel(parent)
 {
     connect(this, &SearchModel::searchQueryChanged, this, [=] {
         if (m_searchQuery.isEmpty()) {
@@ -144,17 +144,6 @@ void SearchModel::setSearchQuery(const QString &searchQuery)
 {
     m_searchQuery = searchQuery;
     Q_EMIT searchQueryChanged();
-}
-
-bool SearchModel::loading() const
-{
-    return m_loading;
-}
-
-void SearchModel::setLoading(bool loading)
-{
-    m_loading = loading;
-    Q_EMIT loadingChanged();
 }
 
 void SearchModel::triggerItem(int row)

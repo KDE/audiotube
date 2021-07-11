@@ -8,15 +8,15 @@
 #include <QUrl>
 
 #include "asyncytmusic.h"
+#include "abstractytmusicmodel.h"
 
-class AlbumModel : public QAbstractListModel
+class AlbumModel : public AbstractYTMusicModel
 {
     Q_OBJECT
     Q_PROPERTY(QString browseId READ browseId WRITE setBrowseId NOTIFY browseIdChanged REQUIRED)
 
     Q_PROPERTY(QString title READ title NOTIFY titleChanged)
     Q_PROPERTY(QUrl thumbnailUrl READ thumbnailUrl NOTIFY thumbnailUrlChanged)
-    Q_PROPERTY(bool loading READ loading WRITE setLoading NOTIFY loadingChanged)
     Q_PROPERTY(QString playlistId READ playlistId NOTIFY playlistIdChanged)
 
 public:
@@ -39,10 +39,6 @@ public:
     QString title() const;
     Q_SIGNAL void titleChanged();
 
-    bool loading() const;
-    void setLoading(bool loading);
-    Q_SIGNAL void loadingChanged();
-
     QUrl thumbnailUrl() const;
     Q_SIGNAL void thumbnailUrlChanged();
 
@@ -51,7 +47,6 @@ public:
 
 private:
     QString m_browseId;
-    bool m_loading = false;
 
     album::Album m_album;
 };

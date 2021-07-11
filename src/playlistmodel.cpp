@@ -11,7 +11,7 @@
 #include "playlistutils.h"
 
 PlaylistModel::PlaylistModel(QObject *parent)
-    : QAbstractListModel(parent)
+    : AbstractYTMusicModel(parent)
 {
     connect(this, &PlaylistModel::playlistIdChanged, this, [=] {
         setLoading(true);
@@ -74,17 +74,6 @@ void PlaylistModel::setPlaylistId(const QString &playlistId)
 {
     m_playlistId = playlistId;
     Q_EMIT playlistIdChanged();
-}
-
-bool PlaylistModel::loading() const
-{
-    return m_loading;
-}
-
-void PlaylistModel::setLoading(bool loading)
-{
-    m_loading = loading;
-    Q_EMIT loadingChanged();
 }
 
 QUrl PlaylistModel::thumbnailUrl() const
