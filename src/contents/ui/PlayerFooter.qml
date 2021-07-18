@@ -9,243 +9,252 @@ import org.kde.kirigami 2.12 as Kirigami
 import org.kde.ytmusic 1.0
 import QtMultimedia 5.12
 
-ColumnLayout {
-    id: footerLayout
-
+Item {
+    id: footerItem
     property bool maximized: false
 
     anchors.left: parent.left
     anchors.right: parent.right
-    height: maximized ? applicationWindow().height : player.preferredHeight
+    height: maximized ? applicationWindow().height : 75
 
-    GridLayout {
-        id: playerLayout
+    Rectangle {
+        color: Kirigami.Theme.backgroundColor
+        Kirigami.Theme.colorSet: Kirigami.Theme.Window
+        anchors.fill: footerLayout
+    }
 
-        readonly property bool mobile: width > height
+    ColumnLayout {
+        id: footerLayout
+        height: parent.height
+        anchors.fill: parent
 
-        Layout.fillHeight: footerLayout.maximized
-        Layout.fillWidth: true
-        flow: width > height ? GridLayout.LeftToRight : GridLayout.TopToBottom
-        visible: footerLayout.maximized
+        GridLayout {
+            id: playerLayout
 
-        Item {
-            Layout.fillWidth: info.thumbnail
-            Layout.fillHeight: info.thumbnail
-            Image {
-                anchors.fill: parent
+            readonly property bool mobile: width > height
 
-                source: info.thumbnail
-                fillMode: Image.PreserveAspectFit
-            }
-        }
-
-        Item {
+            Layout.fillHeight: footerItem.maximized
             Layout.fillWidth: true
-            Layout.fillHeight: true
+            flow: width > height ? GridLayout.LeftToRight : GridLayout.TopToBottom
+            visible: footerItem.maximized
 
-            Controls.ScrollView {
-                anchors.fill: parent
-
-                ListView {
+            Item {
+                Layout.fillWidth: info.thumbnail
+                Layout.fillHeight: info.thumbnail
+                Image {
                     anchors.fill: parent
-                    id: playlistView
 
-                    clip: true
-
-                    Controls.BusyIndicator {
-                        anchors.centerIn: parent
-                        visible: UserPlaylistModel.loading || UserPlaylistModel.loading
-                    }
-
-                    onCountChanged: {
-                        if (count < 1) {
-                            footerLayout.maximized = false
-                        }
-                    }
-
-                    model: UserPlaylistModel
-
-                    delegate: Kirigami.SwipeListItem {
-                        id: delegateItem
-                        required property string title
-                        required property string videoId
-                        required property string artists
-                        required property bool isCurrent
-
-                        highlighted: isCurrent
-                        onClicked: UserPlaylistModel.skipTo(videoId)
-
-                        ColumnLayout {
-                            Layout.fillWidth: true
-                            Kirigami.Heading {
-                                elide: Text.ElideRight
-                                Layout.fillWidth: true
-                                level: 2
-                                text: title
-                            }
-
-                            Controls.Label {
-                                elide: Text.ElideRight
-                                Layout.fillWidth: true
-                                text: artists
-                            }
-                        }
-
-                        actions: [
-                            Kirigami.Action {
-                                text: i18n("Remove Track")
-                                icon.name: "list-remove"
-                                onTriggered: UserPlaylistModel.remove(delegateItem.videoId)
-                            }
-                        ]
-                    }
-
-                    header: Controls.ToolBar {
-                        anchors.left: parent.left
-                        anchors.right: parent.right
-                        RowLayout {
-                            anchors.fill: parent
-                            Item {
-                                Layout.fillWidth: true
-                            }
-
-                            Controls.ToolButton {
-                                text: i18n("Clear")
-                                icon.name: "edit-clear-all"
-                                onClicked: UserPlaylistModel.clear()
-                            }
-                            Controls.ToolButton {
-                                text: i18n("Shuffle")
-                                icon.name: "media-playlist-shuffle"
-                                onClicked: UserPlaylistModel.shufflePlaylist()
-                            }
-                        }
-                    }
+                    source: info.thumbnail
+                    fillMode: Image.PreserveAspectFit
                 }
             }
-        }
-    }
 
-    Kirigami.Separator {
-        Layout.fillWidth: true
-    }
-
-    RowLayout {
-        id: player
-
-        Layout.fillWidth: true
-        Layout.fillHeight: !footer.maximized
-
-        VideoInfoExtractor {
-            id: info
-
-            onSongChanged: audio.play()
-            videoId: UserPlaylistModel.currentVideoId
-        }
-
-        Audio {
-            id: audio
-
-            source: info.audioUrl
-            onStatusChanged: {
-                if (status === Audio.EndOfMedia) {
-                    console.log("Song ended");
-                    UserPlaylistModel.next();
-                }
-            }
-        }
-
-        Controls.ToolButton {
-            display: Controls.AbstractButton.IconOnly
-            Layout.preferredWidth: parent.height
-            Layout.fillHeight: true
-            enabled: info.audioUrl != ""
-            text: audio.playbackState === Audio.PlayingState ? i18n("Pause") : i18n("Play")
-            visible: !info.loading
-            icon.name: audio.playbackState === Audio.PlayingState ? "media-playback-pause" : "media-playback-start"
-            onClicked: audio.playbackState === Audio.PlayingState ? audio.pause() : audio.play()
-        }
-
-        Controls.ToolButton {
-            display: Controls.AbstractButton.IconOnly
-            Layout.preferredWidth: parent.height
-            Layout.fillHeight: true
-            enabled: UserPlaylistModel.canSkip
-            visible: !info.loading
-            icon.name: "media-skip-forward"
-            onClicked: UserPlaylistModel.next()
-        }
-
-        Controls.BusyIndicator {
-            Layout.fillHeight: true
-            visible: info.loading
-        }
-
-        ColumnLayout {
-            Layout.fillHeight: true
-            Layout.topMargin: Kirigami.Units.smallSpacing
-            Layout.bottomMargin: Kirigami.Units.smallSpacing
-
-            Kirigami.Heading {
-                level: 3
+            Item {
                 Layout.fillWidth: true
-                elide: Qt.ElideRight
-                text: info.title ? info.title : i18n("No media playing")
+                Layout.fillHeight: true
+
+                Controls.ScrollView {
+                    anchors.fill: parent
+
+                    ListView {
+                        anchors.fill: parent
+                        id: playlistView
+
+                        clip: true
+
+                        Controls.BusyIndicator {
+                            anchors.centerIn: parent
+                            visible: UserPlaylistModel.loading || UserPlaylistModel.loading
+                        }
+
+                        onCountChanged: {
+                            if (count < 1) {
+                                footerItem.maximized = false
+                            }
+                        }
+
+                        model: UserPlaylistModel
+
+                        delegate: Kirigami.SwipeListItem {
+                            id: delegateItem
+                            required property string title
+                            required property string videoId
+                            required property string artists
+                            required property bool isCurrent
+
+                            highlighted: isCurrent
+                            onClicked: UserPlaylistModel.skipTo(videoId)
+
+                            ColumnLayout {
+                                Layout.fillWidth: true
+                                Kirigami.Heading {
+                                    elide: Text.ElideRight
+                                    Layout.fillWidth: true
+                                    level: 2
+                                    text: title
+                                }
+
+                                Controls.Label {
+                                    elide: Text.ElideRight
+                                    Layout.fillWidth: true
+                                    text: artists
+                                }
+                            }
+
+                            actions: [
+                                Kirigami.Action {
+                                    text: i18n("Remove Track")
+                                    icon.name: "list-remove"
+                                    onTriggered: UserPlaylistModel.remove(delegateItem.videoId)
+                                }
+                            ]
+                        }
+
+                        header: Controls.ToolBar {
+                            anchors.left: parent.left
+                            anchors.right: parent.right
+                            RowLayout {
+                                anchors.fill: parent
+                                Item {
+                                    Layout.fillWidth: true
+                                }
+
+                                Controls.ToolButton {
+                                    text: i18n("Clear")
+                                    icon.name: "edit-clear-all"
+                                    onClicked: UserPlaylistModel.clear()
+                                }
+                                Controls.ToolButton {
+                                    text: i18n("Shuffle")
+                                    icon.name: "media-playlist-shuffle"
+                                    onClicked: UserPlaylistModel.shufflePlaylist()
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        Kirigami.Separator {
+            Layout.fillWidth: true
+        }
+
+        RowLayout {
+            id: player
+
+            Layout.fillWidth: true
+            Layout.fillHeight: !footer.maximized
+
+            VideoInfoExtractor {
+                id: info
+
+                onSongChanged: audio.play()
+                videoId: UserPlaylistModel.currentVideoId
             }
 
-            RowLayout{
+            Audio {
+                id: audio
 
-                Controls.Label{
-                    visible: info.title
-                    text: PlayerUtils.formatTimestamp(audio.position)
+                source: info.audioUrl
+                onStatusChanged: {
+                    if (status === Audio.EndOfMedia) {
+                        console.log("Song ended");
+                        UserPlaylistModel.next();
+                    }
+                }
+            }
+
+            Controls.ToolButton {
+                display: Controls.AbstractButton.IconOnly
+                Layout.preferredWidth: parent.height
+                Layout.fillHeight: true
+                enabled: info.audioUrl != ""
+                text: audio.playbackState === Audio.PlayingState ? i18n("Pause") : i18n("Play")
+                visible: !info.loading
+                icon.name: audio.playbackState === Audio.PlayingState ? "media-playback-pause" : "media-playback-start"
+                onClicked: audio.playbackState === Audio.PlayingState ? audio.pause() : audio.play()
+            }
+
+            Controls.ToolButton {
+                display: Controls.AbstractButton.IconOnly
+                Layout.preferredWidth: parent.height
+                Layout.fillHeight: true
+                enabled: UserPlaylistModel.canSkip
+                visible: !info.loading
+                icon.name: "media-skip-forward"
+                onClicked: UserPlaylistModel.next()
+            }
+
+            Controls.BusyIndicator {
+                Layout.fillHeight: true
+                visible: info.loading
+            }
+
+            ColumnLayout {
+                Layout.fillHeight: true
+                Layout.topMargin: Kirigami.Units.smallSpacing
+                Layout.bottomMargin: Kirigami.Units.smallSpacing
+
+                Kirigami.Heading {
+                    level: 3
+                    Layout.fillWidth: true
+                    elide: Qt.ElideRight
+                    text: info.title ? info.title : i18n("No media playing")
                 }
 
-                Controls.Slider {
-                    Layout.fillWidth: true
-                    from: 0
-                    to: audio.duration
-                    value: audio.position
-                    enabled: audio.seekable
-                    onMoved: {
-                        console.log("Value:", value);
-                        audio.seek(Math.floor(value));
+                RowLayout{
+
+                    Controls.Label{
+                        visible: info.title
+                        text: PlayerUtils.formatTimestamp(audio.position)
                     }
 
-                    Behavior on value {
-                        NumberAnimation {
+                    Controls.Slider {
+                        Layout.fillWidth: true
+                        from: 0
+                        to: audio.duration
+                        value: audio.position
+                        enabled: audio.seekable
+                        onMoved: {
+                            console.log("Value:", value);
+                            audio.seek(Math.floor(value));
+                        }
+
+                        Behavior on value {
+                            NumberAnimation {
+                            }
+
                         }
 
                     }
 
+                    Controls.Label{
+                        visible: info.title
+                        text: PlayerUtils.formatTimestamp(audio.duration)
+                    }
+
                 }
 
-                Controls.Label{
-                    visible: info.title
-                    text: PlayerUtils.formatTimestamp(audio.duration)
-                }
+
 
             }
 
-
+            Controls.ToolButton {
+                display: Controls.AbstractButton.IconOnly
+                Layout.preferredWidth: parent.height
+                text: i18n("Expand")
+                enabled: playlistView.count > 0
+                Layout.fillHeight: true
+                icon.name: footerItem.maximized ? "arrow-down" : "arrow-up"
+                onClicked: footerItem.maximized = !footerItem.maximized
+            }
 
         }
-
-        Controls.ToolButton {
-            display: Controls.AbstractButton.IconOnly
-            Layout.preferredWidth: parent.height
-            text: i18n("Expand")
-            enabled: playlistView.count > 0
-            Layout.fillHeight: true
-            icon.name: footerLayout.maximized ? "arrow-down" : "arrow-up"
-            onClicked: footerLayout.maximized = !footerLayout.maximized
-        }
-
     }
 
     Behavior on height {
         NumberAnimation {
         }
-
     }
-
 }
