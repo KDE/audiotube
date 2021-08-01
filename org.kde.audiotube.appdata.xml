@@ -42,7 +42,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="it">Client YouTube Music convergente</summary>
   <summary xml:lang="ko">올인원 YouTube Music 클라이언트</summary>
   <summary xml:lang="nl">Convergente muziekclient van YouTube</summary>
-  <summary xml:lang="pl">Całościowy program do muzyki z YouTube</summary>
+  <summary xml:lang="pl">Adaptacyjny program do YouTube Music</summary>
   <summary xml:lang="pt">Cliente de música do YouTube convergente</summary>
   <summary xml:lang="pt-BR">Um cliente convergente para o YouTube Music</summary>
   <summary xml:lang="sl">Konvergentni odjemalec glasbe YouTube</summary>
@@ -104,7 +104,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="it">AudioTube può eseguire ricerche su YouTube Music, elencare album e artisti, riprodurre scalette e album generati automaticamente e ti consente di creare la tua scaletta.</p>
     <p xml:lang="ko">AudioTube는 YouTube Music을 검색하고, 앨범과 아티스트를 표시하고, 자동 생성된 재생 목록, 앨범을 재생하고, 사용자 정의 재생 목록을 만들 수 있습니다.</p>
     <p xml:lang="nl">AudioTube kan in YouTube Music zoeken, een lijst maken van albums en artiesten, automatically gegenereerde afspeellijsten, albums afspelen en biedt u het samenstellen van uw eigen afspeellijst.</p>
-    <p xml:lang="pl">AudioTube może wyszukać muzyki na YouTube, wypisać albumy i wykonawców, odtwarzać samoczynnie utworzone listy odtwarzania, albumy oraz umożliwia tworzenie własnych list odtwarzania.</p>
+    <p xml:lang="pl">AudioTube może przeszukiwać serwis YouTube Music, wypisać albumy i wykonawców, odtwarzać samoczynnie utworzone listy odtwarzania, albumy oraz umożliwia tworzenie własnych list odtwarzania.</p>
     <p xml:lang="pt">O AudioTube consegue pesquisar no YouTube Music, enumerar os álbuns e artistas, reproduzir listas geradas automaticamente, álbuns e permite-lhe reproduzir as suas próprias listas de reprodução.</p>
     <p xml:lang="pt-BR">O AudioTube pode pesquisar no YouTube Music, listar álbuns e artistas, rodar listas de reprodução geradas automaticamente, álbuns inteiros, e criar a sua própria lista de reprodução.</p>
     <p xml:lang="sl">AudioTube lahko išče po YouTube Music, izdela sezname albumov in avtorjev, samodejno predvaja generirane sezname, albume in sestavlja vaše sezname predvajanja.</p>
