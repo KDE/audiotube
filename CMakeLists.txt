@@ -8,6 +8,7 @@ project(audiotube)
 
 include(FeatureSummary)
 
+set(PROJECT_VERSION "21.07")
 set(QT5_MIN_VERSION 5.15)
 set(KF5_MIN_VERSION 5.81)
 
@@ -24,6 +25,11 @@ include(KDECompilerSettings NO_POLICY_SCOPE)
 include(ECMSetupVersion)
 include(ECMGenerateHeaders)
 include(ECMPoQmTools)
+
+ecm_setup_version(${PROJECT_VERSION}
+    VARIABLE_PREFIX AUDIOTUBE
+    VERSION_HEADER ${CMAKE_CURRENT_BINARY_DIR}/version.h
+)
 
 kde_enable_exceptions()
 
