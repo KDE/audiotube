@@ -76,6 +76,11 @@ SPDX-License-Identifier: CC0-1.0
   <developer_name xml:lang="x-test">xxKDE Communityxx</developer_name>
   <content_rating type="oars-1.0"/>
   <url type="homepage">https://apps.kde.org/en/audiotube</url>
+  <releases>
+    <release version="21.08" date="2021-08-31">
+      <url>https://www.plasma-mobile.org/2021/08/31/plasma-mobile-gear-21-08/</url>
+    </release>
+  </releases>
   <launchable type="desktop-id">org.kde.audiotube.desktop</launchable>
   <screenshots>
     <screenshot>
