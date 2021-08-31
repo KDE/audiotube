@@ -8,7 +8,7 @@ project(audiotube)
 
 include(FeatureSummary)
 
-set(PROJECT_VERSION "21.07")
+set(PROJECT_VERSION "21.08")
 set(QT5_MIN_VERSION 5.15)
 set(KF5_MIN_VERSION 5.81)
 
