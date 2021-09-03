@@ -17,6 +17,27 @@ Kirigami.ScrollablePage {
     ListView {
         reuseItems: true
 
+        section.delegate: Kirigami.ListSectionHeader {
+            required property string section
+            text: {
+                switch (parseInt(section)) {
+                case SearchModel.Album:
+                    return i18n("Albums")
+                case SearchModel.Artist:
+                    return i18n("Artists")
+                case SearchModel.Playlist:
+                    return i18n("Playlists")
+                case SearchModel.Song:
+                    return i18n("Songs")
+                case SearchModel.Video:
+                    return i18n("Videos")
+                }
+
+                return i18n("Unknown")
+            }
+        }
+        section.property: "type"
+
         model: SearchModel {
             id: searchModel
 
