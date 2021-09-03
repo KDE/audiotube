@@ -164,7 +164,7 @@ namespace album {
         std::string duration;
         std::string audio_playlist_id;
         std::string year;
-        std::string description;
+        std::optional<std::string> description;
         std::vector<meta::Thumbnail> thumbnails;
         std::vector<Track> tracks;
         std::vector<meta::Artist> artists;

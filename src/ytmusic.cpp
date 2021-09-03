@@ -374,7 +374,7 @@ album::Album YTMusic::get_album(const std::string &browseId) const
         album["duration"].cast<std::string>(),
         album["audioPlaylistId"].cast<std::string>(),
         album["year"].cast<std::string>(),
-        album["description"].cast<std::string>(),
+        optional_key<std::string>(album, "description"),
         extract_py_list<meta::Thumbnail>(album["thumbnails"]),
         extract_py_list<album::Track>(album["tracks"]),
         extract_py_list<meta::Artist>(album["artists"])
