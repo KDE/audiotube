@@ -307,6 +307,7 @@ std::optional<search::SearchResultItem> extract_search_result(py::handle result)
     } else {
         std::cerr << "Warning: Unsupported search result type found" << std::endl;
         std::cerr << "It's called: " << resultType << std::endl;
+        pyPrintPretty(result);
         return std::nullopt;
     }
 }
