@@ -12,13 +12,13 @@
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/ea/b7/e0e3c1c467636186c39925827be42f16fee389dc404ac29e930e9136be70/idna-2.10.tar.gz",
-            "sha256": "b307872f855b18632ce0c21c5e45be78c0ea7ae4c15c828c20788b26921eb3f6"
+            "url": "https://files.pythonhosted.org/packages/cb/38/4c4d00ddfa48abe616d7e572e02a04273603db446975ab46bbcd36552005/idna-3.2.tar.gz",
+            "sha256": "467fbad99067910785144ce333826c71fb0e63a425657295239737f7ecd125f3"
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/ee/2d/9cdc2b527e127b4c9db64b86647d567985940ac3698eeabc7ffaccb4ea61/chardet-4.0.0.tar.gz",
-            "sha256": "0d6f53a15db4120f2b08c94f11e7d93d2c911ee118b6b30a04ec3ee8310179fa"
+            "url": "https://files.pythonhosted.org/packages/e7/4e/2af0238001648ded297fb54ceb425ca26faa15b341b4fac5371d3938666e/charset-normalizer-2.0.4.tar.gz",
+            "sha256": "f23667ebe1084be45f6ae0538e4a5a865206544097e4e8bbcacf42cd02a348f3"
         },
         {
             "type": "file",
@@ -27,13 +27,13 @@
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/6b/47/c14abc08432ab22dc18b9892252efaf005ab44066de871e72a38d6af464b/requests-2.25.1.tar.gz",
-            "sha256": "27973dd4a904a4f13b263a19c866c13b92a39ed1c964655f025f3f8d3d75b804"
+            "url": "https://files.pythonhosted.org/packages/e7/01/3569e0b535fb2e4a6c384bdbed00c55b9d78b5084e0fb7f4d0bf523d7670/requests-2.26.0.tar.gz",
+            "sha256": "b8aa58f8cf793ffd8782d3d8cb19e66ef36f7aba4353eec859e74678b01b07a7"
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/83/aa/3e2c231fbef90d5bd75614e3739bb27e7e33e28c9891d6ee0561fe52a9df/ytmusicapi-0.18.0.tar.gz",
-            "sha256": "447d1b6a594f49942f7ac75412cba59c191b6f3540d98ac65a1333445beec16d"
+            "url": "https://files.pythonhosted.org/packages/3c/f0/80c58082e0715d0974a71ab4c458ca2158e3742d96c8b7c9777f2b9a008c/ytmusicapi-0.19.1.tar.gz",
+            "sha256": "1b8a050e2208b3d05359106d8c44c3d62e60edf6753529bd8a207788a6caeb95"
         }
     ]
 }

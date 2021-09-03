@@ -13,9 +13,15 @@ namespace py = pybind11;
 
 using namespace py::literals;
 
+/// Useful for debugging
+void pyPrintPretty(py::handle obj) {
+    auto json = py::module::import("json");
+    py::print(json.attr("dumps")(obj, "indent"_a=py::int_(4)));
+}
+
 #define UNEXPORT __attribute__ ((visibility("hidden")))
 
-constexpr auto TESTED_YTMUSICAPI_VERSION = "0.18.0";
+constexpr auto TESTED_YTMUSICAPI_VERSION = "0.19.1";
 
 struct UNEXPORT YTMusicPrivate {
     py::scoped_interpreter guard {};
@@ -84,11 +90,12 @@ meta::Artist extract_meta_artist(py::handle artist) {
 
 album::Track extract_album_track(py::handle track) {
     return {
-        track["index"].cast<std::string>(),
+        track["isExplicit"].cast<bool>(),
         track["title"].cast<std::string>(),
-        track["artists"].cast<std::string>(),
+        track["artists"].cast<std::optional<std::string>>(),
+        track["album"].cast<std::optional<std::string>>(),
         track["videoId"].cast<std::optional<std::string>>(),  // E rated songs don't have a videoId
-        track["lengthMs"].cast<std::optional<std::string>>(), //
+        track["duration"].cast<std::optional<std::string>>(), //
         track["likeStatus"].cast<std::optional<std::string>>()
     };
 }
@@ -299,7 +306,7 @@ std::optional<search::SearchResultItem> extract_search_result(py::handle result)
         };
     } else {
         std::cerr << "Warning: Unsupported search result type found" << std::endl;
-        std::cerr << "It's called: " << resultType;
+        std::cerr << "It's called: " << resultType << std::endl;
         return std::nullopt;
     }
 }
@@ -324,10 +331,11 @@ YTMusic::~YTMusic() = default;
 std::vector<search::SearchResultItem> YTMusic::search(
         const std::string &query,
         const std::optional<std::string> &filter,
+        const std::optional<std::string> &scope,
         const int limit,
         const bool ignore_spelling) const
 {
-    const auto results = d->get_ytmusic().attr("search")(query, filter, limit, ignore_spelling).cast<py::list>();
+    const auto results = d->get_ytmusic().attr("search")("query"_a=query, "filter"_a=filter, "scope"_a=scope, "limit"_a = limit, "ignore_spelling"_a = ignore_spelling).cast<py::list>();
 
     std::vector<search::SearchResultItem> output;
     for (const auto &result : results) {
@@ -360,23 +368,16 @@ artist::Artist YTMusic::get_artist(const std::string &channel_id) const
 album::Album YTMusic::get_album(const std::string &browseId) const
 {
     const auto album = d->get_ytmusic().attr("get_album")(browseId);
-
     return {
         album["title"].cast<std::string>(),
-        album["trackCount"].cast<std::string>(),
-        album["durationMs"].cast<std::string>(),
-        album["playlistId"].cast<std::string>(),
-        [&]() -> album::Album::ReleaseDate {
-            const auto date = album["releaseDate"];
-            return {
-                date["year"].cast<int>(),
-                date["month"].cast<int>(),
-                date["day"].cast<int>()
-            };
-        }(),
+        album["trackCount"].cast<int>(),
+        album["duration"].cast<std::string>(),
+        album["audioPlaylistId"].cast<std::string>(),
+        album["year"].cast<std::string>(),
         album["description"].cast<std::string>(),
         extract_py_list<meta::Thumbnail>(album["thumbnails"]),
-        extract_py_list<album::Track>(album["tracks"])
+        extract_py_list<album::Track>(album["tracks"]),
+        extract_py_list<meta::Artist>(album["artists"])
     };
 }
 

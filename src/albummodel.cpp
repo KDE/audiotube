@@ -45,7 +45,13 @@ QVariant AlbumModel::data(const QModelIndex &index, int role) const
     case Artists:
         return QVariant::fromValue(std::vector<meta::Artist> {
             {
-                m_album.tracks[index.row()].artists,
+                [this, index] {
+                    if (auto artists = m_album.tracks[index.row()].artists) {
+                        return *artists;
+                    } else {
+                        return std::string();
+                    }
+                }(),
                 std::nullopt
             }
         });
@@ -92,5 +98,5 @@ QUrl AlbumModel::thumbnailUrl() const
 
 QString AlbumModel::playlistId() const
 {
-    return QString::fromStdString(m_album.playlist_id);
+    return QString::fromStdString(m_album.audio_playlist_id);
 }

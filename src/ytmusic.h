@@ -143,11 +143,12 @@ struct Artist {
 
 namespace album {
     struct Track {
-        std::string index;
+        bool is_explicit;
         std::string title;
-        std::string artists;
+        std::optional<std::string> artists;
+        std::optional<std::string> album;
         std::optional<std::string> video_id;
-        std::optional<std::string> length_ms;
+        std::optional<std::string> duration;
         std::optional<std::string> like_status;
     };
 
@@ -159,13 +160,14 @@ namespace album {
         };
 
         std::string title;
-        std::string track_count;
-        std::string duration_ms;
-        std::string playlist_id;
-        ReleaseDate release_date;
+        int track_count;
+        std::string duration;
+        std::string audio_playlist_id;
+        std::string year;
         std::string description;
         std::vector<meta::Thumbnail> thumbnails;
         std::vector<Track> tracks;
+        std::vector<meta::Artist> artists;
     };
 }
 
@@ -277,6 +279,7 @@ public:
 
     std::vector<search::SearchResultItem> search(const std::string &query,
                                                  const std::optional<std::string> &filter = std::nullopt,
+                                                 const std::optional<std::string> &scope = std::nullopt,
                                                  const int limit = 20,
                                                  const bool ignore_spelling = false) const;
 
