@@ -70,7 +70,7 @@ std::optional<T> optional_key(py::handle obj, const char *name) {
         return std::nullopt;
     }
 
-    return obj[name].cast<T>();
+    return obj[name].cast<std::optional<T>>();
 }
 
 meta::Thumbnail extract_thumbnail(py::handle thumbnail) {
