@@ -352,7 +352,7 @@ artist::Artist YTMusic::get_artist(const std::string &channel_id) const
 {
     const auto artist = d->get_ytmusic().attr("get_artist")(channel_id);
     return artist::Artist {
-        artist["description"].cast<std::optional<std::string>>(),
+        optional_key<std::string>(artist, "description"),
         artist["views"].cast<std::optional<std::string>>(),
         artist["name"].cast<std::string>(),
         artist["channelId"].cast<std::string>(),
