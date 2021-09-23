@@ -287,7 +287,7 @@ std::optional<search::SearchResultItem> extract_search_result(py::handle result)
             result["title"].cast<std::string>(),
             result["type"].cast<std::string>(),
             extract_py_list<meta::Artist>(result["artists"]),
-            result["year"].cast<std::string>(),
+            result["year"].cast<std::optional<std::string>>(),
             result["isExplicit"].cast<bool>()
         };
     } else if (resultType == "playlist") {
@@ -382,11 +382,15 @@ album::Album YTMusic::get_album(const std::string &browseId) const
     };
 }
 
-song::Song YTMusic::get_song(const std::string &video_id) const
+std::optional<song::Song> YTMusic::get_song(const std::string &video_id) const
 {
     const auto song = d->get_ytmusic().attr("get_song")(video_id);
 
-    return {
+    if (!song.cast<py::dict>().contains("videoId")) {
+        return std::nullopt;
+    }
+
+    return song::Song {
         song["videoId"].cast<std::string>(),
         song["title"].cast<std::string>(),
         song["lengthSeconds"].cast<std::string>(),

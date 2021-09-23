@@ -113,7 +113,10 @@ void AsyncYTMusic::fetchSong(const QString &videoId)
 void AsyncYTMusic::internalFetchSong(const QString &videoId)
 {
     try {
-        Q_EMIT fetchSongFinished(m_ytm->get_song(videoId.toStdString()));
+        auto maybeSong = m_ytm->get_song(videoId.toStdString());
+        if (maybeSong.has_value()) {
+            Q_EMIT fetchSongFinished(*maybeSong);
+        }
     } catch (const py::error_already_set &err) {
         Q_EMIT errorOccurred(QString::fromLocal8Bit(err.what()));
     }

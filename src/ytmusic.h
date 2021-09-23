@@ -67,7 +67,7 @@ struct Album {
     std::string title;
     std::string type;
     std::vector<meta::Artist> artists;
-    std::string year;
+    std::optional<std::string> year;
     bool is_explicit;
 };
 
@@ -290,7 +290,7 @@ public:
     album::Album get_album(const std::string &browse_id) const;
 
     /// https://ytmusicapi.readthedocs.io/en/latest/reference.html#ytmusicapi.YTMusic.get_song
-    song::Song get_song(const std::string &video_id) const;
+    std::optional<song::Song> get_song(const std::string &video_id) const;
 
     /// https://ytmusicapi.readthedocs.io/en/latest/reference.html#ytmusicapi.YTMusic.get_playlist
     playlist::Playlist get_playlist(const std::string &playlist_id, int limit = 100) const;
