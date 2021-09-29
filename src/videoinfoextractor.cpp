@@ -81,7 +81,7 @@ QString VideoInfoExtractor::title() const
 
 QString VideoInfoExtractor::thumbnail() const
 {
-    return QString::fromStdString(m_videoInfo.thumnnail);
+    return QString::fromStdString(m_videoInfo.thumbnail);
 }
 
 bool VideoInfoExtractor::loading() const

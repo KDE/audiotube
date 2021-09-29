@@ -122,7 +122,7 @@ struct Artist {
 
     struct Single {
         std::string title;
-        std::vector<meta::Thumbnail> thumnnails;
+        std::vector<meta::Thumbnail> thumbnails;
         std::string year;
         std::string browse_id;
     };
@@ -242,7 +242,7 @@ struct VideoInfo {
     std::string id;
     std::string title;
     std::vector<Format> formats;
-    std::string thumnnail;
+    std::string thumbnail;
 
     // More, but not interesting for us right now
 };
