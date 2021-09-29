@@ -145,7 +145,7 @@ namespace album {
     struct Track {
         bool is_explicit;
         std::string title;
-        std::optional<std::string> artists;
+        std::vector<meta::Artist> artists;
         std::optional<std::string> album;
         std::optional<std::string> video_id;
         std::optional<std::string> duration;

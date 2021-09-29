@@ -88,29 +88,10 @@ meta::Artist extract_meta_artist(py::handle artist) {
     };
 };
 
-album::Track extract_album_track(py::handle track) {
-    return {
-        track["isExplicit"].cast<bool>(),
-        track["title"].cast<std::string>(),
-        track["artists"].cast<std::optional<std::string>>(),
-        track["album"].cast<std::optional<std::string>>(),
-        track["videoId"].cast<std::optional<std::string>>(),  // E rated songs don't have a videoId
-        track["duration"].cast<std::optional<std::string>>(), //
-        track["likeStatus"].cast<std::optional<std::string>>()
-    };
-}
-
-video_info::Format extract_format(py::handle format) {
-    return {
-        optional_key<int>(format, "quality"),
-        format["url"].cast<std::string>(),
-        format["vcodec"].cast<std::string>(),
-        format["acodec"].cast<std::string>()
-    };
-}
-
 playlist::Track extract_playlist_track(py::handle track);
 watch::Playlist::Track extract_watch_track(py::handle track);
+album::Track extract_album_track(py::handle track);
+video_info::Format extract_format(py::handle format);
 
 template <typename T>
 inline auto extract_py_list(py::handle obj) {
@@ -140,6 +121,27 @@ inline auto extract_py_list(py::handle obj) {
     });
 
     return output;
+}
+
+album::Track extract_album_track(py::handle track) {
+    return {
+        track["isExplicit"].cast<bool>(),
+        track["title"].cast<std::string>(),
+        extract_py_list<meta::Artist>(track["artists"]),
+        track["album"].cast<std::optional<std::string>>(),
+        track["videoId"].cast<std::optional<std::string>>(),  // E rated songs don't have a videoId
+        track["duration"].cast<std::optional<std::string>>(), //
+        track["likeStatus"].cast<std::optional<std::string>>()
+    };
+}
+
+video_info::Format extract_format(py::handle format) {
+    return {
+        optional_key<int>(format, "quality"),
+        format["url"].cast<std::string>(),
+        format["vcodec"].cast<std::string>(),
+        format["acodec"].cast<std::string>()
+    };
 }
 
 meta::Album extract_meta_album(py::handle album) {

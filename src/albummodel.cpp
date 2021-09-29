@@ -43,18 +43,7 @@ QVariant AlbumModel::data(const QModelIndex &index, int role) const
     case VideoId:
         return QString::fromStdString(m_album.tracks[index.row()].video_id.value_or(std::string()));
     case Artists:
-        return QVariant::fromValue(std::vector<meta::Artist> {
-            {
-                [this, index] {
-                    if (auto artists = m_album.tracks[index.row()].artists) {
-                        return *artists;
-                    } else {
-                        return std::string();
-                    }
-                }(),
-                std::nullopt
-            }
-        });
+        return QVariant::fromValue(m_album.tracks[index.row()].artists);
     }
 
     Q_UNREACHABLE();
