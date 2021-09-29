@@ -21,7 +21,7 @@ void pyPrintPretty(py::handle obj) {
 
 #define UNEXPORT __attribute__ ((visibility("hidden")))
 
-constexpr auto TESTED_YTMUSICAPI_VERSION = "0.19.1";
+constexpr auto TESTED_YTMUSICAPI_VERSION = "0.19.3";
 
 struct UNEXPORT YTMusicPrivate {
     py::scoped_interpreter guard {};
