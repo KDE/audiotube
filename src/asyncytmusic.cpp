@@ -51,12 +51,8 @@ AsyncYTMusic::AsyncYTMusic(QObject *parent)
 //
 void AsyncYTMusic::search(const QString &query)
 {
-    QMetaObject::invokeMethod(this, [=]() {
-        try {
-            Q_EMIT searchFinished(m_ytm->search(query.toStdString()));
-        } catch (const py::error_already_set &err) {
-            Q_EMIT errorOccurred(QString::fromLocal8Bit(err.what()));
-        }
+    invokeAndCatchOnThread([=]() {
+        Q_EMIT searchFinished(m_ytm->search(query.toStdString()));
     });
 }
 
@@ -65,12 +61,8 @@ void AsyncYTMusic::search(const QString &query)
 //
 void AsyncYTMusic::fetchArtist(const QString &channelId)
 {
-    QMetaObject::invokeMethod(this, [=]() {
-        try {
-            Q_EMIT fetchArtistFinished(m_ytm->get_artist(channelId.toStdString()));
-        } catch (const py::error_already_set &err) {
-            Q_EMIT errorOccurred(QString::fromLocal8Bit(err.what()));
-        }
+    invokeAndCatchOnThread([=]() {
+        Q_EMIT fetchArtistFinished(m_ytm->get_artist(channelId.toStdString()));
     });
 }
 
@@ -79,12 +71,8 @@ void AsyncYTMusic::fetchArtist(const QString &channelId)
 //
 void AsyncYTMusic::fetchAlbum(const QString &browseId)
 {
-    QMetaObject::invokeMethod(this, [=]() {
-        try {
-            Q_EMIT fetchAlbumFinished(m_ytm->get_album(browseId.toStdString()));
-        } catch (const py::error_already_set &err) {
-            Q_EMIT errorOccurred(QString::fromLocal8Bit(err.what()));
-        }
+    invokeAndCatchOnThread([=]() {
+        Q_EMIT fetchAlbumFinished(m_ytm->get_album(browseId.toStdString()));
     });
 }
 
@@ -93,14 +81,10 @@ void AsyncYTMusic::fetchAlbum(const QString &browseId)
 //
 void AsyncYTMusic::fetchSong(const QString &videoId)
 {
-    QMetaObject::invokeMethod(this, [=]() {
-        try {
-            auto maybeSong = m_ytm->get_song(videoId.toStdString());
-            if (maybeSong.has_value()) {
-                Q_EMIT fetchSongFinished(*maybeSong);
-            }
-        } catch (const py::error_already_set &err) {
-            Q_EMIT errorOccurred(QString::fromLocal8Bit(err.what()));
+    invokeAndCatchOnThread([=]() {
+        auto maybeSong = m_ytm->get_song(videoId.toStdString());
+        if (maybeSong.has_value()) {
+            Q_EMIT fetchSongFinished(*maybeSong);
         }
     });
 }
@@ -109,12 +93,8 @@ void AsyncYTMusic::fetchSong(const QString &videoId)
 // fetchPlaylist
 //
 void AsyncYTMusic::fetchPlaylist(const QString &playlistId) {
-    QMetaObject::invokeMethod(this, [=]() {
-        try {
-            Q_EMIT fetchPlaylistFinished(m_ytm->get_playlist(playlistId.toStdString()));
-        } catch (const py::error_already_set &err) {
-            Q_EMIT errorOccurred(QString::fromLocal8Bit(err.what()));
-        }
+    invokeAndCatchOnThread([=]() {
+        Q_EMIT fetchPlaylistFinished(m_ytm->get_playlist(playlistId.toStdString()));
     });
 }
 
@@ -123,12 +103,8 @@ void AsyncYTMusic::fetchPlaylist(const QString &playlistId) {
 //
 void AsyncYTMusic::fetchArtistAlbums(const QString &channelId, const QString &params)
 {
-    QMetaObject::invokeMethod(this, [=]() {
-        try {
-            Q_EMIT fetchArtistAlbumsFinished(m_ytm->get_artist_albums(channelId.toStdString(), params.toStdString()));
-        } catch (const py::error_already_set &err) {
-            Q_EMIT errorOccurred(QString::fromLocal8Bit(err.what()));
-        }
+    invokeAndCatchOnThread([=]() {
+        Q_EMIT fetchArtistAlbumsFinished(m_ytm->get_artist_albums(channelId.toStdString(), params.toStdString()));
     });
 }
 
@@ -137,12 +113,8 @@ void AsyncYTMusic::fetchArtistAlbums(const QString &channelId, const QString &pa
 //
 void AsyncYTMusic::extractVideoInfo(const QString &videoId)
 {
-    QMetaObject::invokeMethod(this, [=]() {
-        try {
-            Q_EMIT extractVideoInfoFinished(m_ytm->extract_video_info(videoId.toStdString()));
-        } catch (const py::error_already_set &err) {
-            Q_EMIT errorOccurred(QString::fromLocal8Bit(err.what()));
-        }
+    invokeAndCatchOnThread([=]() {
+        Q_EMIT extractVideoInfoFinished(m_ytm->extract_video_info(videoId.toStdString()));
     });
 }
 
@@ -151,12 +123,18 @@ void AsyncYTMusic::extractVideoInfo(const QString &videoId)
 //
 void AsyncYTMusic::fetchWatchPlaylist(const std::optional<QString> &videoId, const std::optional<QString> &playlistId)
 {
+    invokeAndCatchOnThread([=]() {
+        Q_EMIT fetchWatchPlaylistFinished(m_ytm->get_watch_playlist(
+            map_optional<std::string>(videoId, &QString::toStdString),
+            map_optional<std::string>(playlistId,  &QString::toStdString)
+        ));
+    });
+}
+
+void AsyncYTMusic::invokeAndCatchOnThread(const std::function<void()> &fun) {
     QMetaObject::invokeMethod(this, [=]() {
         try {
-            Q_EMIT fetchWatchPlaylistFinished(m_ytm->get_watch_playlist(
-                map_optional<std::string>(videoId, &QString::toStdString),
-                map_optional<std::string>(playlistId,  &QString::toStdString)
-            ));
+            fun();
         } catch (const py::error_already_set &err) {
             Q_EMIT errorOccurred(QString::fromLocal8Bit(err.what()));
         }
