@@ -223,6 +223,7 @@ Item {
 
                         Behavior on value {
                             NumberAnimation {
+                                duration: 1000
                             }
 
                         }
