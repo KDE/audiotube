@@ -84,6 +84,9 @@ protected:
     explicit AsyncYTMusic(QObject *parent = nullptr);
 
 private:
+    /// Invokes the given function on the thread of the YTMusic object, and handles exceptions that occur while invoking it.
+    void invokeAndCatchOnThread(const std::function<void()> &fun);
+
     // Python interpreter will be initialized from the thread calling the methods
     Lazy<YTMusic> m_ytm;
 };
