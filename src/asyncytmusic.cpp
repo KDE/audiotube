@@ -16,7 +16,11 @@ namespace py = pybind11;
 template <typename R, typename T, typename OP>
 std::optional<R> map_optional(const std::optional<T> &optional, OP op) {
     if (optional.has_value()) {
-        return op(optional.value());
+        if constexpr (std::is_member_function_pointer<OP>::value) {
+            return (&optional.value()->*op)();
+        } else {
+            return op(optional.value());
+        }
     }
 
     return std::nullopt;
@@ -150,8 +154,8 @@ void AsyncYTMusic::fetchWatchPlaylist(const std::optional<QString> &videoId, con
     QMetaObject::invokeMethod(this, [=]() {
         try {
             Q_EMIT fetchWatchPlaylistFinished(m_ytm->get_watch_playlist(
-                map_optional<std::string>(videoId, [](const QString &value) { return value.toStdString(); }),
-                                                                        map_optional<std::string>(playlistId, [](const QString &value) { return value.toStdString(); })
+                map_optional<std::string>(videoId, &QString::toStdString),
+                map_optional<std::string>(playlistId,  &QString::toStdString)
             ));
         } catch (const py::error_already_set &err) {
             Q_EMIT errorOccurred(QString::fromLocal8Bit(err.what()));
