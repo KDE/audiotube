@@ -53,7 +53,7 @@ struct UNEXPORT YTMusicPrivate {
     py::object get_ytdl() {
         // lazy initialization
         if (ytdl.is_none()) {
-             ytdl = py::module::import("youtube_dl").attr("YoutubeDL")(py::dict());
+             ytdl = py::module::import("yt_dlp").attr("YoutubeDL")(py::dict());
         }
 
         return ytdl;

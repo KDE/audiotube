@@ -1,0 +1,29 @@
+{
+    "name": "python3-yt-dlp",
+    "buildsystem": "simple",
+    "build-commands": [
+        "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"yt-dlp\" --no-build-isolation"
+    ],
+    "sources": [
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/5e/2a/3cbe2e29926784d8718eb2f92357d7e22caf393f24e19287746076ffc9f2/yt_dlp-2021.11.10.1-py2.py3-none-any.whl",
+            "sha256": "9c3d85fdeeac3d61cfc85fd72d55fe6b63fcf1d19d05e2841cf2e544922ed157"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/69/77/591bbc51a5ed6a906a7813e60a9627f988f9546513fcf9d250eb31ec8689/websockets-10.1.tar.gz",
+            "sha256": "181d2b25de5a437b36aefedaf006ecb6fa3aa1328ec0236cdde15f32f9d3ff6d"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/16/b3/f7aa8edf2ff4495116f95fd442b2a346aa55d1d46313143c8814886dbcdb/mutagen-1.45.1-py3-none-any.whl",
+            "sha256": "9c9f243fcec7f410f138cb12c21c84c64fde4195481a30c9bfb05b5f003adfed"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/47/14/dd9ad29cd29ea4cc521286f2cb401ca7ac6fd5db0791c5e9bacaf2c9ac78/pycryptodomex-3.11.0.tar.gz",
+            "sha256": "0398366656bb55ebdb1d1d493a7175fc48ade449283086db254ac44c7d318d6d"
+        }
+    ]
+}

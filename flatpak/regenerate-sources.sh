@@ -16,5 +16,5 @@ else
 	git -C flatpak-builder-tools pull
 fi
 
-./flatpak-builder-tools/pip/flatpak-pip-generator youtube_dl
+./flatpak-builder-tools/pip/flatpak-pip-generator yt-dlp
 ./flatpak-builder-tools/pip/flatpak-pip-generator ytmusicapi

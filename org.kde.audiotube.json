@@ -21,7 +21,7 @@
     ],
 
     "modules": [
-        "flatpak/python3-youtube_dl.json",
+        "flatpak/python3-yt-dlp.json",
         "flatpak/python3-ytmusicapi.json",
         {
             "name": "pybind11",
