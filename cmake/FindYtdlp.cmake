@@ -4,8 +4,8 @@
 
 find_package(Python3 REQUIRED COMPONENTS Interpreter)
 
-execute_process(COMMAND ${Python3_EXECUTABLE} -c "import youtube_dl" RESULT_VARIABLE YTDL_CHECK_RESULT)
+execute_process(COMMAND ${Python3_EXECUTABLE} -c "import yt_dlp" RESULT_VARIABLE YTDLP_CHECK_RESULT)
 
-if (${YTDL_CHECK_RESULT} EQUAL 0)
-	set(YoutubeDL_FOUND TRUE)
+if (${YTDLP_CHECK_RESULT} EQUAL 0)
+	set(Ytdlp_FOUND TRUE)
 endif()

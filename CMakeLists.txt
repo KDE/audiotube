@@ -36,7 +36,7 @@ kde_enable_exceptions()
 find_package(Qt5 ${QT5_MIN_VERSION} REQUIRED COMPONENTS Core Gui Qml QuickControls2 Svg)
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS Kirigami2 I18n CoreAddons Crash)
 find_package(pybind11 REQUIRED)
-find_package(YoutubeDL REQUIRED RUNTIME)
+find_package(Ytdlp REQUIRED RUNTIME)
 find_package(YTMusicAPI REQUIRED RUNTIME)
 
 add_subdirectory(src)
