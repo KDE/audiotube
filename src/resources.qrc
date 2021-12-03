@@ -12,5 +12,6 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
         <file alias="PlayerFooter.qml">contents/ui/PlayerFooter.qml</file>
         <file alias="SearchPage.qml">contents/ui/SearchPage.qml</file>
         <file alias="PlaylistPage.qml">contents/ui/PlaylistPage.qml</file>
+        <file alias="ConfirmationMessage.qml">contents/ui/ConfirmationMessage.qml</file>
     </qresource>
 </RCC>
