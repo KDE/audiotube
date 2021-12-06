@@ -22,6 +22,10 @@ SearchModel::SearchModel(QObject *parent)
         beginResetModel();
         setLoading(false);
         m_searchResults = results;
+        std::sort(m_searchResults.begin(), m_searchResults.end(),
+                  [](search::SearchResultItem const & a, search::SearchResultItem const & b) {
+                      return SearchModel::itemType(a) < SearchModel::itemType(b);
+                  });
         endResetModel();
     });
     connect(&YTMusicThread::instance().get(), &AsyncYTMusic::errorOccurred, this, [this] {
@@ -164,4 +168,25 @@ void SearchModel::triggerItem(int row)
             Q_UNREACHABLE();
         }
     }, m_searchResults.at(row));
+}
+
+
+int SearchModel::itemType(search::SearchResultItem const &item)
+{
+    return std::visit([&](auto &&arg) {
+        using T = std::decay_t<decltype(arg)>;
+        if constexpr(std::is_same_v<T, search::Album>) {
+            return SearchModel::Type::Album;
+        } else if constexpr(std::is_same_v<T, search::Artist>) {
+            return SearchModel::Type::Artist;
+        } else if constexpr(std::is_same_v<T, search::Playlist>) {
+            return SearchModel::Type::Playlist;
+        } else if constexpr(std::is_same_v<T, search::Song>) {
+            return SearchModel::Type::Song;
+        } else if constexpr(std::is_same_v<T, search::Video>) {
+            return SearchModel::Type::Video;
+        } else {
+            Q_UNREACHABLE();
+        }
+    }, item);
 }
