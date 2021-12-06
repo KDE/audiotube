@@ -75,8 +75,9 @@ Kirigami.ScrollablePage {
                 }
             }
         }
-        delegate: Kirigami.SwipeListItem {
+        delegate: Kirigami.AbstractListItem {
             id: delegateItem
+            property bool showActionButtons: false
             required property int index
             required property string title
             required property int type
@@ -84,55 +85,72 @@ Kirigami.ScrollablePage {
             required property var artists
             required property string radioPlaylistId
 
-            RowLayout {
-                Layout.fillHeight: true
-                Kirigami.Icon {
-                    Layout.fillHeight: true
-                    source: {
-                        switch (type) {
-                        case SearchModel.Artist:
-                            return "view-media-artist"
-                        case SearchModel.Album:
-                            return "media-album-cover"
-                        case SearchModel.Playlist:
-                            return "view-media-playlist"
-                        case SearchModel.Song:
-                            return "emblem-music-symbolic"
-                        case SearchModel.Video:
-                            return "emblem-videos-symbolic"
+            ColumnLayout {
+                RowLayout {
+                    Layout.fillWidth: true
+                    Kirigami.Icon {
+                        Layout.fillHeight: true
+                        source: {
+                            switch (type) {
+                            case SearchModel.Artist:
+                                return "view-media-artist"
+                            case SearchModel.Album:
+                                return "media-album-cover"
+                            case SearchModel.Playlist:
+                                return "view-media-playlist"
+                            case SearchModel.Song:
+                                return "emblem-music-symbolic"
+                            case SearchModel.Video:
+                                return "emblem-videos-symbolic"
+                            }
                         }
+                    }
+
+                    Controls.Label {
+                        Layout.fillWidth: true
+                        text: title
+                        elide: Qt.ElideRight
                     }
                 }
 
-                Controls.Label {
+                Kirigami.Separator {
+                    visible: showActionButtons
                     Layout.fillWidth: true
-                    text: title
-                    elide: Qt.ElideRight
+                }
+
+                Kirigami.ActionToolBar {
+                    Layout.fillWidth: true
+                    alignment: Qt.AlignLeft
+                    visible: showActionButtons
+                    actions: [
+                        Kirigami.Action {
+                            icon.name: "media-playback-start"
+                            text: i18n("Play")
+                            onTriggered: searchModel.triggerItem(index)
+                        } ,
+                        Kirigami.Action {
+                            icon.name: "go-next"
+                            text: i18n("Play next")
+                            visible: delegateItem.type === SearchModel.Song || delegateItem.type == SearchModel.Video
+                            onTriggered: UserPlaylistModel.playNext(delegateItem.videoId, delegateItem.title, delegateItem.artists)
+                        },
+                        Kirigami.Action {
+                            icon.name: "media-playlist-append"
+                            text: i18n("Add to Playlist")
+                            visible: delegateItem.type === SearchModel.Song || delegateItem.type == SearchModel.Video
+                            onTriggered: UserPlaylistModel.append(delegateItem.videoId, delegateItem.title, delegateItem.artists)
+                        },
+                        Kirigami.Action {
+                            icon.name: "radio"
+                            text: i18n("Radio")
+                            visible: delegateItem.type === SearchModel.Artist && delegateItem.radioPlaylistId
+                            onTriggered: playPlaylist(delegateItem.radioPlaylistId)
+                        }
+                    ]
                 }
             }
 
-            actions: [
-                Kirigami.Action {
-                    icon.name: "go-next"
-                    text: i18n("Play next")
-                    visible: delegateItem.type === SearchModel.Song || delegateItem.type == SearchModel.Video
-                    onTriggered: UserPlaylistModel.playNext(delegateItem.videoId, delegateItem.title, delegateItem.artists)
-                },
-                Kirigami.Action {
-                    icon.name: "media-playlist-append"
-                    text: i18n("Add to Playlist")
-                    visible: delegateItem.type === SearchModel.Song || delegateItem.type == SearchModel.Video
-                    onTriggered: UserPlaylistModel.append(delegateItem.videoId, delegateItem.title, delegateItem.artists)
-                },
-                Kirigami.Action {
-                    icon.name: "radio"
-                    text: i18n("Radio")
-                    visible: delegateItem.type === SearchModel.Artist && delegateItem.radioPlaylistId
-                    onTriggered: playPlaylist(delegateItem.radioPlaylistId)
-                }
-            ]
-
-            onClicked: searchModel.triggerItem(index)
+            onClicked: showActionButtons = !showActionButtons
         }
         Controls.BusyIndicator {
             anchors.centerIn: parent
