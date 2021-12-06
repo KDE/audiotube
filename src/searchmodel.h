@@ -55,4 +55,5 @@ public:
 private:
     QString m_searchQuery;
     std::vector<search::SearchResultItem> m_searchResults;
+    static int itemType(search::SearchResultItem const &item);
 };
