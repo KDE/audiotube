@@ -7,8 +7,8 @@
     "sources": [
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/7b/77/f341b20e7307f18ede4625867cbb8e18c20199117e0c23f7c6b53fe6597d/ytmusicapi-0.19.4-py3-none-any.whl",
-            "sha256": "d0e980b35cf290eae409dcdc6ee31c5c358b28baebf1052e9fc9f446fc7901b7"
+            "url": "https://files.pythonhosted.org/packages/87/5a/ef90afb6dbef7a2cf8418c050f2e9e32be449f97ddad085e41e568bf4a15/ytmusicapi-0.19.5-py3-none-any.whl",
+            "sha256": "23ed35df2b7977e3e7662c0ac478864fb23d025ba5de8f2c269cabf2903b8d25"
         },
         {
             "type": "file",
@@ -17,13 +17,13 @@
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/c8/27/141554fc0f42c05dd318fbb0be0e3e018da686544a3ff452762e49ccac58/charset_normalizer-2.0.8-py3-none-any.whl",
-            "sha256": "83fcdeb225499d6344c8f7f34684c2981270beacc32ede2e669e94f7fa544405"
+            "url": "https://files.pythonhosted.org/packages/37/45/946c02767aabb873146011e665728b680884cd8fe70dde973c640e45b775/certifi-2021.10.8-py2.py3-none-any.whl",
+            "sha256": "d62a0163eb4c2344ac042ab2bdf75399a71a2d8c7d47eac2e2ee91b9d6339569"
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/37/45/946c02767aabb873146011e665728b680884cd8fe70dde973c640e45b775/certifi-2021.10.8-py2.py3-none-any.whl",
-            "sha256": "d62a0163eb4c2344ac042ab2bdf75399a71a2d8c7d47eac2e2ee91b9d6339569"
+            "url": "https://files.pythonhosted.org/packages/47/84/b06f6729fac8108c5fa3e13cde19b0b3de66ba5538c325496dbe39f5ff8e/charset_normalizer-2.0.9-py3-none-any.whl",
+            "sha256": "1eecaa09422db5be9e29d7fc65664e6c33bd06f9ced7838578ba40d58bdf3721"
         },
         {
             "type": "file",

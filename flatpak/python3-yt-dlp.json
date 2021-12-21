@@ -7,8 +7,13 @@
     "sources": [
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/5e/2a/3cbe2e29926784d8718eb2f92357d7e22caf393f24e19287746076ffc9f2/yt_dlp-2021.11.10.1-py2.py3-none-any.whl",
-            "sha256": "9c3d85fdeeac3d61cfc85fd72d55fe6b63fcf1d19d05e2841cf2e544922ed157"
+            "url": "https://files.pythonhosted.org/packages/f6/06/e2ad9e93210790be86d36c6e2d5524ba54928c3ed27dd0be9b2ced7c57f1/pycryptodomex-3.12.0.zip",
+            "sha256": "922e9dac0166e4617e5c7980d2cff6912a6eb5cb5c13e7ece222438650bd7f66"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/0f/cc/c31d3561b536752c779c4a7c4a12809ab2f50af082b6927fc6cf871bb9e7/yt_dlp-2021.12.1-py2.py3-none-any.whl",
+            "sha256": "78bca71906c40a69dcdd9b5a07b736c73579e1b166ebe70c9f93cdcd03e1c757"
         },
         {
             "type": "file",
@@ -19,11 +24,6 @@
             "type": "file",
             "url": "https://files.pythonhosted.org/packages/16/b3/f7aa8edf2ff4495116f95fd442b2a346aa55d1d46313143c8814886dbcdb/mutagen-1.45.1-py3-none-any.whl",
             "sha256": "9c9f243fcec7f410f138cb12c21c84c64fde4195481a30c9bfb05b5f003adfed"
-        },
-        {
-            "type": "file",
-            "url": "https://files.pythonhosted.org/packages/47/14/dd9ad29cd29ea4cc521286f2cb401ca7ac6fd5db0791c5e9bacaf2c9ac78/pycryptodomex-3.11.0.tar.gz",
-            "sha256": "0398366656bb55ebdb1d1d493a7175fc48ade449283086db254ac44c7d318d6d"
         }
     ]
 }
