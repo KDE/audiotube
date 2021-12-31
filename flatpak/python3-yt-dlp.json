@@ -7,13 +7,13 @@
     "sources": [
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/f6/06/e2ad9e93210790be86d36c6e2d5524ba54928c3ed27dd0be9b2ced7c57f1/pycryptodomex-3.12.0.zip",
-            "sha256": "922e9dac0166e4617e5c7980d2cff6912a6eb5cb5c13e7ece222438650bd7f66"
+            "url": "https://files.pythonhosted.org/packages/27/7e/5bf52a334a0638639b57b7699e6a3adaaaa8e7bd6f7ad33e62a9e2be7bb7/yt_dlp-2021.12.27-py2.py3-none-any.whl",
+            "sha256": "bb46898a175d149c9c6bb2846056590d297aa4eafad8487c3e1315d2c6090896"
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/0f/cc/c31d3561b536752c779c4a7c4a12809ab2f50af082b6927fc6cf871bb9e7/yt_dlp-2021.12.1-py2.py3-none-any.whl",
-            "sha256": "78bca71906c40a69dcdd9b5a07b736c73579e1b166ebe70c9f93cdcd03e1c757"
+            "url": "https://files.pythonhosted.org/packages/f6/06/e2ad9e93210790be86d36c6e2d5524ba54928c3ed27dd0be9b2ced7c57f1/pycryptodomex-3.12.0.zip",
+            "sha256": "922e9dac0166e4617e5c7980d2cff6912a6eb5cb5c13e7ece222438650bd7f66"
         },
         {
             "type": "file",
