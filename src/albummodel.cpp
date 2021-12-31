@@ -11,21 +11,22 @@ AlbumModel::AlbumModel(QObject *parent)
 {
     connect(this, &AlbumModel::browseIdChanged, this, [this] {
         setLoading(true);
-        YTMusicThread::instance()->fetchAlbum(m_browseId);
-    });
-    connect(&YTMusicThread::instance().get(), &AsyncYTMusic::fetchAlbumFinished, this, [this](const album::Album &album) {
-        setLoading(false);
+        auto future = YTMusicThread::instance()->fetchAlbum(m_browseId);
+        connectFuture(future, this, [=, this](const album::Album &album) {
+            setLoading(false);
 
-        beginResetModel();
-        m_album = album;
-        endResetModel();
-        std::sort(m_album.thumbnails.begin(), m_album.thumbnails.end());
+            beginResetModel();
+            m_album = album;
+            endResetModel();
+            std::sort(m_album.thumbnails.begin(), m_album.thumbnails.end());
 
-        Q_EMIT titleChanged();
-        Q_EMIT thumbnailUrlChanged();
-        Q_EMIT playlistIdChanged();
+            Q_EMIT titleChanged();
+            Q_EMIT thumbnailUrlChanged();
+            Q_EMIT playlistIdChanged();
+        });
     });
-    connect(&YTMusicThread::instance().get(), &AsyncYTMusic::errorOccurred, this, [this] {
+
+    connect(&YTMusicThread::instance().get(), &AsyncYTMusic::errorOccurred, this, [=, this] {
         setLoading(false);
     });
 }

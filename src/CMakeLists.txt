@@ -26,6 +26,7 @@ add_executable(audiotube
     playerutils.cpp
     abstractytmusicmodel.cpp
     multiiterableview.h
+    library.cpp
     resources.qrc
 )
 
@@ -40,6 +41,7 @@ target_link_libraries(audiotube
     KF5::CoreAddons
     KF5::Crash
     ytm
+    qpersistentdata
 )
 target_compile_definitions(audiotube PRIVATE -DQT_NO_KEYWORDS -DQT_NO_URL_CAST_FROM_STRING)
 

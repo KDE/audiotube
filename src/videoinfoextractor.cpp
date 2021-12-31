@@ -4,7 +4,10 @@
 
 #include "videoinfoextractor.h"
 
-#include <asyncytmusic.h>
+#include <QFutureWatcher>
+
+#include "asyncytmusic.h"
+#include "library.h"
 
 VideoInfoExtractor::VideoInfoExtractor(QObject *parent)
     : QObject(parent)
@@ -20,16 +23,17 @@ VideoInfoExtractor::VideoInfoExtractor(QObject *parent)
         }
 
         setLoading(true);
-        YTMusicThread::instance()->extractVideoInfo(QString::fromStdString(m_videoId.toStdString()));
-    });
 
-    connect(&YTMusicThread::instance().get(), &AsyncYTMusic::extractVideoInfoFinished, this, [this](const video_info::VideoInfo &info) {
-        m_videoInfo = info;
-        setLoading(false);
-        Q_EMIT audioUrlChanged();
-        Q_EMIT titleChanged();
-        Q_EMIT songChanged();
-        Q_EMIT thumbnailChanged();
+        auto future = YTMusicThread::instance()->extractVideoInfo(QString::fromStdString(m_videoId.toStdString()));
+        connectFuture(future, this, [this](const video_info::VideoInfo &videoInfo) {
+            m_videoInfo = videoInfo;
+            setLoading(false);
+            Library::instance().addVideoTitle(m_videoId, QString::fromStdString(m_videoInfo.title));
+            Q_EMIT audioUrlChanged();
+            Q_EMIT titleChanged();
+            Q_EMIT songChanged();
+            Q_EMIT thumbnailChanged();
+        });
     });
 }
 
@@ -66,6 +70,9 @@ QString VideoInfoExtractor::videoId() const
 
 void VideoInfoExtractor::setVideoId(const QString &videoId)
 {
+    if (m_videoId == videoId || videoId.isEmpty()) {
+        return;
+    }
     m_videoId = videoId;
     Q_EMIT videoIdChanged();
 }

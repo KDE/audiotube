@@ -9,29 +9,14 @@
 #include <random>
 
 #include <QRandomGenerator>
+#include <QFutureWatcher>
 
 #include "playlistutils.h"
 
 UserPlaylistModel::UserPlaylistModel(QObject *parent)
     : AbstractYTMusicModel(parent)
 {
-    connect(this, &UserPlaylistModel::initialVideoIdChanged, this, [this] {
-        if (m_initialVideoId.isEmpty()) {
-            return;
-        }
-
-        setLoading(true);
-        YTMusicThread::instance()->fetchWatchPlaylist(m_initialVideoId);
-    });
-    connect(this, &UserPlaylistModel::playlistIdChanged, this, [this] {
-        if (m_playlistId.isEmpty()) {
-            return;
-        }
-
-        setLoading(true);
-        YTMusicThread::instance()->fetchWatchPlaylist(std::nullopt, m_playlistId);
-    });
-    connect(&YTMusicThread::instance().get(), &AsyncYTMusic::fetchWatchPlaylistFinished, this, [this](const watch::Playlist &playlist) {
+    auto handleResult = [=, this](const watch::Playlist &playlist) {
         setLoading(false);
 
         beginResetModel();
@@ -48,6 +33,24 @@ UserPlaylistModel::UserPlaylistModel(QObject *parent)
         } else {
             setCurrentVideoId({});
         }
+    };
+    connect(this, &UserPlaylistModel::initialVideoIdChanged, this, [=, this] {
+        if (m_initialVideoId.isEmpty()) {
+            return;
+        }
+
+        setLoading(true);
+        auto future = YTMusicThread::instance()->fetchWatchPlaylist(m_initialVideoId);
+        connectFuture(future, this, handleResult);
+    });
+    connect(this, &UserPlaylistModel::playlistIdChanged, this, [=, this] {
+        if (m_playlistId.isEmpty()) {
+            return;
+        }
+
+        setLoading(true);
+        auto future = YTMusicThread::instance()->fetchWatchPlaylist(std::nullopt, m_playlistId);
+        connectFuture(future, this, handleResult);;
     });
     connect(&YTMusicThread::instance().get(), &AsyncYTMusic::errorOccurred, this, [this] {
         setLoading(false);

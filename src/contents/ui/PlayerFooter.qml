@@ -38,14 +38,17 @@ Item {
             flow: width > height ? GridLayout.LeftToRight : GridLayout.TopToBottom
             visible: footerItem.maximized
 
-            Item {
+            ColumnLayout {
                 Layout.fillWidth: info.thumbnail
                 Layout.fillHeight: info.thumbnail
                 Image {
-                    anchors.fill: parent
-
                     source: info.thumbnail
+                    Layout.preferredWidth: footerLayout.width * 0.5
                     fillMode: Image.PreserveAspectFit
+                }
+                Controls.ToolButton{
+                    text: "Fav"
+                    onClicked: Library.addFavourite(info.videoId)
                 }
             }
 

@@ -36,10 +36,49 @@ Kirigami.ApplicationWindow {
                 selectByMouse: true
                 Layout.fillWidth: true
                 Layout.maximumWidth: 400
+                onFocusChanged: {
+                    if (focus)
+                        popup.open()
+                }
+                onTextChanged: {
+                    if (!popup.opened) {
+                        popup.open()
+                    }
+                }
+
+                Controls.Popup {
+                    id: popup
+                    x: searchField.y
+                    y: searchField.y + searchField.height
+                    visible: true
+                    width: searchField.width
+                    height: contentItem.implicitHeight
+
+                    contentItem: Controls.ScrollView {
+                        Controls.ScrollBar.horizontal.policy: Controls.ScrollBar.AlwaysOff
+                        ListView {
+                            id: completionList
+                            model: Library.searches
+                            delegate: Controls.ItemDelegate {
+                                width: parent.width
+                                text: modelData
+                                onClicked: {
+                                    searchField.text = modelData
+                                    searchField.accepted()
+                                }
+                            }
+                        }
+                    }
+                }
+
                 onAccepted: {
                     pageStack.clear()
+                    if (text) {
+                        Library.addSearch(text)
+                    }
                     pageStack.push("qrc:/SearchPage.qml", {
                                "searchQuery": text})
+                    popup.close()
                 }
             }
             Item {
@@ -56,7 +95,7 @@ Kirigami.ApplicationWindow {
         id: contextDrawer
     }
 
-    pageStack.initialPage: "qrc:/SearchPage.qml"
+    pageStack.initialPage: "qrc:/LibraryPage.qml"
 
     function play(videoId) {
         UserPlaylistModel.initialVideoId = videoId
