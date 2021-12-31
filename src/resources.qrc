@@ -1,9 +1,3 @@
-<!--
-SPDX-FileCopyrightText: 2021 Jonah Brüchert <jbb@kaidan.im>
-
-SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
--->
-
 <RCC>
     <qresource prefix="/">
         <file alias="main.qml">contents/ui/main.qml</file>
@@ -13,5 +7,6 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
         <file alias="SearchPage.qml">contents/ui/SearchPage.qml</file>
         <file alias="PlaylistPage.qml">contents/ui/PlaylistPage.qml</file>
         <file alias="ConfirmationMessage.qml">contents/ui/ConfirmationMessage.qml</file>
+        <file alias="LibraryPage.qml">contents/ui/LibraryPage.qml</file>
     </qresource>
 </RCC>

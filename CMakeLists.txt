@@ -42,6 +42,7 @@ find_package(YTMusicAPI REQUIRED RUNTIME)
 ki18n_install(po)
 
 add_subdirectory(src)
+add_subdirectory(qpersistentdata)
 
 install(PROGRAMS org.kde.audiotube.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 install(FILES org.kde.audiotube.appdata.xml DESTINATION ${KDE_INSTALL_METAINFODIR})

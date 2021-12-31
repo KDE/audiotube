@@ -16,17 +16,13 @@ SearchModel::SearchModel(QObject *parent)
         }
 
         setLoading(true);
-        YTMusicThread::instance()->search(m_searchQuery);
-    });
-    connect(&YTMusicThread::instance().get(), &AsyncYTMusic::searchFinished, this, [this](const std::vector<search::SearchResultItem> &results) {
-        beginResetModel();
-        setLoading(false);
-        m_searchResults = results;
-        std::sort(m_searchResults.begin(), m_searchResults.end(),
-                  [](search::SearchResultItem const & a, search::SearchResultItem const & b) {
-                      return SearchModel::itemType(a) < SearchModel::itemType(b);
-                  });
-        endResetModel();
+        auto future = YTMusicThread::instance()->search(m_searchQuery);
+        connectFuture(future, this, [=, this](const std::vector<search::SearchResultItem> &results) {
+            beginResetModel();
+            setLoading(false);
+            m_searchResults = results;
+            endResetModel();
+        });
     });
     connect(&YTMusicThread::instance().get(), &AsyncYTMusic::errorOccurred, this, [this] {
         setLoading(false);
