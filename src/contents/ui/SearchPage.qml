@@ -124,8 +124,8 @@ Kirigami.ScrollablePage {
                     visible: showActionButtons
                     actions: [
                         Kirigami.Action {
-                            icon.name: "media-playback-start"
-                            text: i18n("Play")
+                            icon.name: (delegateItem.type === SearchModel.Song || delegateItem.type == SearchModel.Video) ? "media-playback-start" : "project-open"
+                            text: (delegateItem.type === SearchModel.Song || delegateItem.type == SearchModel.Video) ? i18n("Play") : i18n("Open")
                             onTriggered: searchModel.triggerItem(index)
                         } ,
                         Kirigami.Action {
