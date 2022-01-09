@@ -6,3 +6,4 @@
 *.kdev4
 CMakeLists.txt.user
 flatpak/flatpak-builder-tools/
+build/

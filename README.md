@@ -6,7 +6,7 @@ AudioTube is a client for YouTube Music.
 
 It depends on Qt, Kirigami, KI18n, KCoreAddons and KCrash in addition to a few python packages:
  * ytmusicapi
- * youtube_dl
+ * yt_dlp
 
 YouTube uses webp images for the cover art, so you will need to install qtimageformats.
 
