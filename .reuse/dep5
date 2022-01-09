@@ -2,3 +2,24 @@ Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: AudioTube
 Upstream-Contact: Jonah Brüchert <jbb@kaidan.im>
 Source: https://invent.kde.org/plasma-mobile/audiotube
+
+# Sample paragraph, commented out:
+#
+# Files: ...
+# Copyright: $YEAR $NAME <$CONTACT>
+# License: ...
+# Comment: ...
+
+Files: README.md
+Copyright: 2021 Jonah Brüchert <jbb@kaidan.im>
+License: CC0-1.0
+
+Files: org.kde.audiotube.desktop
+       org.kde.audiotube.json
+Copyright: 2021 Jonah Brüchert <jbb@kaidan.im>
+License: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+
+Files: logo.png
+       org.kde.audiotube.svg
+Copyright: 2021 Mathis Brüchert <mbblp@protonmail.ch>
+License: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
