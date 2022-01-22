@@ -7,13 +7,8 @@
     "sources": [
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/87/5a/ef90afb6dbef7a2cf8418c050f2e9e32be449f97ddad085e41e568bf4a15/ytmusicapi-0.19.5-py3-none-any.whl",
-            "sha256": "23ed35df2b7977e3e7662c0ac478864fb23d025ba5de8f2c269cabf2903b8d25"
-        },
-        {
-            "type": "file",
-            "url": "https://files.pythonhosted.org/packages/92/96/144f70b972a9c0eabbd4391ef93ccd49d0f2747f4f6a2a2738e99e5adc65/requests-2.26.0-py2.py3-none-any.whl",
-            "sha256": "6c1246513ecd5ecd4528a0906f910e8f0f9c6b8ec72030dc9fd154dc1a6efd24"
+            "url": "https://files.pythonhosted.org/packages/33/d9/d18f3827dfd54acc48f29337059197514ad656ffc88e02a51e0457c5117a/ytmusicapi-0.20.0-py3-none-any.whl",
+            "sha256": "abdb90426baa14a7929ec810d65c1df228661b61d580678fc48c087909a9aea2"
         },
         {
             "type": "file",
@@ -22,8 +17,13 @@
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/47/84/b06f6729fac8108c5fa3e13cde19b0b3de66ba5538c325496dbe39f5ff8e/charset_normalizer-2.0.9-py3-none-any.whl",
-            "sha256": "1eecaa09422db5be9e29d7fc65664e6c33bd06f9ced7838578ba40d58bdf3721"
+            "url": "https://files.pythonhosted.org/packages/84/3e/1037abe6498e65d645ce7a22d3402605d49a3b2c7f20c3abb027760da4f0/charset_normalizer-2.0.10-py3-none-any.whl",
+            "sha256": "cb957888737fc0bbcd78e3df769addb41fd1ff8cf950dc9e7ad7793f1bf44455"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/2d/61/08076519c80041bc0ffa1a8af0cbd3bf3e2b62af10435d269a9d0f40564d/requests-2.27.1-py2.py3-none-any.whl",
+            "sha256": "f22fa1e554c9ddfd16e6e41ac79759e17be9e492b3587efa038054674760e72d"
         },
         {
             "type": "file",
@@ -32,8 +32,8 @@
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/af/f4/524415c0744552cce7d8bf3669af78e8a069514405ea4fcbd0cc44733744/urllib3-1.26.7-py2.py3-none-any.whl",
-            "sha256": "c4fdf4019605b6e5423637e01bc9fe4daef873709a7973e195ceba0a62bbc844"
+            "url": "https://files.pythonhosted.org/packages/4e/b8/f5a25b22e803f0578e668daa33ba3701bb37858ec80e08a150bd7d2cf1b1/urllib3-1.26.8-py2.py3-none-any.whl",
+            "sha256": "000ca7f471a233c2251c6c7023ee85305721bfdf18621ebff4fd17a8653427ed"
         }
     ]
 }
