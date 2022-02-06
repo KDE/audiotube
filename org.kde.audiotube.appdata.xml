@@ -25,6 +25,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="pl">AudioTube</name>
   <name xml:lang="pt">AudioTube</name>
   <name xml:lang="pt-BR">AudioTube</name>
+  <name xml:lang="ro">AudioTube</name>
   <name xml:lang="sk">AudioTube</name>
   <name xml:lang="sl">AudioTube</name>
   <name xml:lang="sv">AudioTube</name>
@@ -47,6 +48,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="pl">Adaptacyjny program do YouTube Music</summary>
   <summary xml:lang="pt">Cliente de música do YouTube convergente</summary>
   <summary xml:lang="pt-BR">Um cliente convergente para o YouTube Music</summary>
+  <summary xml:lang="ro">Client convergent de muzică pentru YouTube</summary>
   <summary xml:lang="sl">Konvergentni odjemalec glasbe YouTube</summary>
   <summary xml:lang="sv">Konvergent YouTube-musikprogram</summary>
   <summary xml:lang="uk">Зручний музичний клієнт YouTube</summary>
@@ -72,6 +74,7 @@ SPDX-License-Identifier: CC0-1.0
   <developer_name xml:lang="pl">Społeczność KDE</developer_name>
   <developer_name xml:lang="pt">Comunidade do KDE</developer_name>
   <developer_name xml:lang="pt-BR">A Comunidade KDE</developer_name>
+  <developer_name xml:lang="ro">Comunitatea KDE</developer_name>
   <developer_name xml:lang="sk">KDE komunita</developer_name>
   <developer_name xml:lang="sl">Skupnost KDE</developer_name>
   <developer_name xml:lang="sv">KDE-gemenskapen</developer_name>
