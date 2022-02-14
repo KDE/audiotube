@@ -26,7 +26,8 @@ inline constexpr void iterate_tuple(Tuple &tup, Func fun)
     iterate_impl<Tuple, Func, 0>(tup, fun);
 }
 
-
+/// MultiIterableView is a view over multiple contigous memory arrays, like std::vector or std::array.
+/// The elements of the arrays do not need to be of the same type.
 template <typename... Arguments>
 class MultiIterableView {
 public:
