@@ -72,7 +72,7 @@ private:
     std::vector<artist::Artist::Song> songs;
     std::vector<artist::Artist::Video> videos;
 
-    std::optional<MultiIterableView<
+    MultiIterableView<
         artist::Artist::Album, artist::Artist::Single, artist::Artist::Song, artist::Artist::Video
-    >> m_view;
+    > m_view;
 };

@@ -8,6 +8,7 @@
 
 ArtistModel::ArtistModel(QObject *parent)
     : AbstractYTMusicModel(parent)
+    , m_view(albums, singles, songs, videos)
 {
     connect(this, &ArtistModel::channelIdChanged, this, [=] {
         if (m_channelId.isEmpty()) {
@@ -29,11 +30,6 @@ ArtistModel::ArtistModel(QObject *parent)
         singles = m_artist.singles ? m_artist.singles->results : std::vector<artist::Artist::Single>();
         songs = m_artist.songs ? m_artist.songs->results : std::vector<artist::Artist::Song>();
         videos = m_artist.videos ? m_artist.videos->results : std::vector<artist::Artist::Video>();
-
-        m_view = std::optional(MultiIterableView(albums,
-                                                 singles,
-                                                 songs,
-                                                 videos));
         endResetModel();
 
 
@@ -47,15 +43,11 @@ ArtistModel::ArtistModel(QObject *parent)
 
 int ArtistModel::rowCount(const QModelIndex &parent) const
 {
-    return parent.isValid() ? 0 : m_view ? int(m_view->size()) : 0;
+    return parent.isValid() ? 0 : m_view.size();
 }
 
 QVariant ArtistModel::data(const QModelIndex &index, int role) const
 {
-    if (!m_view) {
-        return {};
-    }
-
     switch (role) {
     case Title:
         return QString::fromStdString(std::visit([&](auto&& item) {
@@ -71,7 +63,7 @@ QVariant ArtistModel::data(const QModelIndex &index, int role) const
             }
 
             Q_UNREACHABLE();
-        }, m_view.value()[index.row()]));
+        }, m_view[index.row()]));
     case Type:
         return std::visit([&](auto&& item) {
             using T = std::decay_t<decltype(item)>;
@@ -86,7 +78,7 @@ QVariant ArtistModel::data(const QModelIndex &index, int role) const
             }
 
             Q_UNREACHABLE();
-        }, m_view.value()[index.row()]);
+        }, m_view[index.row()]);
     case Artists:
         return QVariant::fromValue(std::vector<meta::Artist> {
             {
@@ -108,7 +100,7 @@ QVariant ArtistModel::data(const QModelIndex &index, int role) const
             }
 
             Q_UNREACHABLE();
-        }, m_view.value()[index.row()]);
+        }, m_view[index.row()]);
     }
 
     Q_UNREACHABLE();
@@ -153,20 +145,18 @@ QUrl ArtistModel::thumbnailUrl() const
 
 void ArtistModel::triggerItem(int row)
 {
-    if (m_view) {
-        std::visit([&](auto&& item) {
-            using T = std::decay_t<decltype(item)>;
-            if constexpr(std::is_same_v<T, artist::Artist::Album>) {
-                Q_EMIT openAlbum(QString::fromStdString(item.browse_id));
-            } else if constexpr(std::is_same_v<T, artist::Artist::Single>) {
-                Q_EMIT openAlbum(QString::fromStdString(item.browse_id));
-            } else if constexpr(std::is_same_v<T, artist::Artist::Song>) {
-                Q_EMIT openSong(QString::fromStdString(item.video_id));
-            } else if constexpr(std::is_same_v<T, artist::Artist::Video>) {
-                Q_EMIT openVideo(QString::fromStdString(item.video_id), QString::fromStdString(item.title));
-            } else {
-                Q_UNREACHABLE();
-            }
-        }, m_view.value()[row]);
-    }
+    std::visit([&](auto&& item) {
+        using T = std::decay_t<decltype(item)>;
+        if constexpr(std::is_same_v<T, artist::Artist::Album>) {
+            Q_EMIT openAlbum(QString::fromStdString(item.browse_id));
+        } else if constexpr(std::is_same_v<T, artist::Artist::Single>) {
+            Q_EMIT openAlbum(QString::fromStdString(item.browse_id));
+        } else if constexpr(std::is_same_v<T, artist::Artist::Song>) {
+            Q_EMIT openSong(QString::fromStdString(item.video_id));
+        } else if constexpr(std::is_same_v<T, artist::Artist::Video>) {
+            Q_EMIT openVideo(QString::fromStdString(item.video_id), QString::fromStdString(item.title));
+        } else {
+            Q_UNREACHABLE();
+        }
+    }, m_view[row]);
 }
