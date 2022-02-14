@@ -8,7 +8,7 @@
 
 ArtistModel::ArtistModel(QObject *parent)
     : AbstractYTMusicModel(parent)
-    , m_view(std::span{albums}, std::span{singles}, std::span{songs}, std::span{videos})
+    , m_view(albums, singles, songs, videos)
 {
     connect(this, &ArtistModel::channelIdChanged, this, [this] {
         if (m_channelId.isEmpty()) {
@@ -32,7 +32,7 @@ ArtistModel::ArtistModel(QObject *parent)
         videos = m_artist.videos ? m_artist.videos->results : std::vector<artist::Artist::Video>();
 
         // std::span can't know if the data pointer underneath it was changed, so re-create
-        m_view = MultiIterableView(std::span{albums}, std::span{singles}, std::span{songs}, std::span{videos});
+        m_view = MultiIterableView(albums, singles, songs, videos);
         endResetModel();
 
         Q_EMIT titleChanged();
