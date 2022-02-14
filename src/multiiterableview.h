@@ -6,7 +6,7 @@
 
 #include <variant>
 #include <tuple>
-#include <vector>
+#include <span>
 #include <QtGlobal>
 
 template <typename Tuple, typename Func, std::size_t i>
@@ -30,7 +30,7 @@ inline constexpr void iterate_tuple(Tuple &tup, Func fun)
 template <typename... Arguments>
 class MultiIterableView {
 public:
-    explicit MultiIterableView(std::vector<Arguments> &...lists)
+    explicit MultiIterableView(std::span<Arguments>... lists)
         : m_vectors(std::forward_as_tuple(lists...))
     {
     }
@@ -63,5 +63,5 @@ public:
         return empty;
     }
 private:
-    std::tuple<std::vector<Arguments> &...> m_vectors;
+    std::tuple<std::span<Arguments>...> m_vectors;
 };

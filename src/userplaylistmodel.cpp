@@ -15,7 +15,7 @@
 UserPlaylistModel::UserPlaylistModel(QObject *parent)
     : AbstractYTMusicModel(parent)
 {
-    connect(this, &UserPlaylistModel::initialVideoIdChanged, this, [=] {
+    connect(this, &UserPlaylistModel::initialVideoIdChanged, this, [this] {
         if (m_initialVideoId.isEmpty()) {
             return;
         }
@@ -23,7 +23,7 @@ UserPlaylistModel::UserPlaylistModel(QObject *parent)
         setLoading(true);
         YTMusicThread::instance()->fetchWatchPlaylist(m_initialVideoId);
     });
-    connect(this, &UserPlaylistModel::playlistIdChanged, this, [=] {
+    connect(this, &UserPlaylistModel::playlistIdChanged, this, [this] {
         if (m_playlistId.isEmpty()) {
             return;
         }
@@ -31,7 +31,7 @@ UserPlaylistModel::UserPlaylistModel(QObject *parent)
         setLoading(true);
         YTMusicThread::instance()->fetchWatchPlaylist(std::nullopt, m_playlistId);
     });
-    connect(&YTMusicThread::instance().get(), &AsyncYTMusic::fetchWatchPlaylistFinished, this, [=](const watch::Playlist &playlist) {
+    connect(&YTMusicThread::instance().get(), &AsyncYTMusic::fetchWatchPlaylistFinished, this, [this](const watch::Playlist &playlist) {
         setLoading(false);
 
         beginResetModel();
@@ -49,7 +49,7 @@ UserPlaylistModel::UserPlaylistModel(QObject *parent)
             setCurrentVideoId({});
         }
     });
-    connect(&YTMusicThread::instance().get(), &AsyncYTMusic::errorOccurred, this, [=] {
+    connect(&YTMusicThread::instance().get(), &AsyncYTMusic::errorOccurred, this, [this] {
         setLoading(false);
     });
 }
@@ -101,7 +101,7 @@ void UserPlaylistModel::setInitialVideoId(const QString &videoId)
 QString UserPlaylistModel::nextVideoId() const
 {
     auto currentTrack = std::find_if(m_playlist.tracks.begin(), m_playlist.tracks.end(),
-                                     [=](const watch::Playlist::Track &track) {
+                                     [this](const watch::Playlist::Track &track) {
         return track.video_id == m_currentVideoId.toStdString();
     });
 
@@ -129,7 +129,7 @@ void UserPlaylistModel::setCurrentVideoId(const QString &videoId)
 bool UserPlaylistModel::canSkip() const
 {
     const auto currentTrackIt = std::find_if(m_playlist.tracks.begin(), m_playlist.tracks.end(),
-                                        [=](const watch::Playlist::Track &track) {
+                                        [this](const watch::Playlist::Track &track) {
         return track.video_id == m_currentVideoId.toStdString();
     });
 
@@ -157,7 +157,7 @@ void UserPlaylistModel::skipTo(const QString &videoId)
 void UserPlaylistModel::playNext(const QString &videoId, const QString &title, const std::vector<meta::Artist> &artists)
 {
     const auto currentIt = std::find_if(m_playlist.tracks.begin(), m_playlist.tracks.end(),
-                                        [=](const watch::Playlist::Track &track) {
+                                        [this](const watch::Playlist::Track &track) {
         return track.video_id == m_currentVideoId.toStdString();
     });
 
@@ -239,7 +239,7 @@ void UserPlaylistModel::shufflePlaylist()
     // Only shuffle playlist after current track
     if (!m_currentVideoId.isEmpty()) {
         const auto currentIt = std::find_if(m_playlist.tracks.begin(), m_playlist.tracks.end(),
-                                                           [=](const watch::Playlist::Track &track) {
+                                                           [this](const watch::Playlist::Track &track) {
             return track.video_id == m_currentVideoId.toStdString();
         });
 
@@ -257,7 +257,7 @@ void UserPlaylistModel::emitCurrentVideoChanged(const QString &oldVideoId)
         return track.video_id == oldVideoId.toStdString();
     });
     const auto currentVideoIt = std::find_if(m_playlist.tracks.begin(), m_playlist.tracks.end(),
-                                             [=](const watch::Playlist::Track &track) {
+                                             [this](const watch::Playlist::Track &track) {
         return track.video_id == m_currentVideoId.toStdString();
     });
 

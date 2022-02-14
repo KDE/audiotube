@@ -8,9 +8,9 @@
 
 ArtistModel::ArtistModel(QObject *parent)
     : AbstractYTMusicModel(parent)
-    , m_view(albums, singles, songs, videos)
+    , m_view(std::span{albums}, std::span{singles}, std::span{songs}, std::span{videos})
 {
-    connect(this, &ArtistModel::channelIdChanged, this, [=] {
+    connect(this, &ArtistModel::channelIdChanged, this, [this] {
         if (m_channelId.isEmpty()) {
             return;
         }
@@ -19,7 +19,7 @@ ArtistModel::ArtistModel(QObject *parent)
 
         YTMusicThread::instance()->fetchArtist(m_channelId);
     });
-    connect(&YTMusicThread::instance().get(), &AsyncYTMusic::fetchArtistFinished, this, [=](const artist::Artist &artist) {
+    connect(&YTMusicThread::instance().get(), &AsyncYTMusic::fetchArtistFinished, this, [this](const artist::Artist &artist) {
         setLoading(false);
 
         beginResetModel();
@@ -30,13 +30,15 @@ ArtistModel::ArtistModel(QObject *parent)
         singles = m_artist.singles ? m_artist.singles->results : std::vector<artist::Artist::Single>();
         songs = m_artist.songs ? m_artist.songs->results : std::vector<artist::Artist::Song>();
         videos = m_artist.videos ? m_artist.videos->results : std::vector<artist::Artist::Video>();
-        endResetModel();
 
+        // std::span can't know if the data pointer underneath it was changed, so re-create
+        m_view = MultiIterableView(std::span{albums}, std::span{singles}, std::span{songs}, std::span{videos});
+        endResetModel();
 
         Q_EMIT titleChanged();
         Q_EMIT thumbnailUrlChanged();
     });
-    connect(&YTMusicThread::instance().get(), &AsyncYTMusic::errorOccurred, this, [=] {
+    connect(&YTMusicThread::instance().get(), &AsyncYTMusic::errorOccurred, this, [this] {
         setLoading(false);
     });
 }

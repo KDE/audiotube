@@ -15,11 +15,12 @@ namespace PlaylistUtils {
 QString artistsToString(const std::vector<meta::Artist> &artists)
 {
     if (!artists.empty()) {
-        return std::accumulate(artists.begin() + 1, artists.end(),
-                               QString::fromStdString(artists.front().name),
-                               [](QString &string, const meta::Artist &artist) {
-            return string.append(QStringLiteral(", %1").arg(QString::fromStdString(artist.name)));
+        QString string = QString::fromStdString(artists.front().name);
+        std::for_each(artists.begin() + 1, artists.end(),
+                               [&string](const meta::Artist &artist) {
+            string.append(QStringLiteral(", %1").arg(QString::fromStdString(artist.name)));
         });
+        return string;
     }
 
     return {};
