@@ -36,7 +36,7 @@ VideoInfoExtractor::VideoInfoExtractor(QObject *parent)
 QUrl VideoInfoExtractor::audioUrl() const
 {
     if (m_videoInfo.formats.empty()) {
-        return QUrl();
+        return {};
     }
 
     std::vector<video_info::Format> audioFormats;
@@ -48,17 +48,13 @@ QUrl VideoInfoExtractor::audioUrl() const
     });
 
     if (audioFormats.empty()) {
-        return QUrl();
+        return {};
     }
 
-
-    struct {
-        bool operator()(const video_info::Format &a, const video_info::Format &b) {
-            return a.quality > b.quality;
-        }
-    } qualitySort;
-
-    std::sort(audioFormats.begin(), audioFormats.end(), qualitySort);
+    std::sort(audioFormats.begin(), audioFormats.end(),
+              [](const video_info::Format &a, const video_info::Format &b) {
+        return a.quality > b.quality;
+    });
 
     return QUrl(QString::fromStdString(audioFormats.front().url));
 }
