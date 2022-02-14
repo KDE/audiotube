@@ -10,7 +10,7 @@
 #include <QtGlobal>
 
 template <typename Tuple, typename Func, std::size_t i>
-inline void iterate_impl(Tuple &tup, Func fun)
+inline constexpr void iterate_impl(Tuple &tup, Func fun)
 {
     if constexpr(i >= std::tuple_size_v<std::decay_t<decltype(tup)>>) {
         return;
@@ -21,7 +21,7 @@ inline void iterate_impl(Tuple &tup, Func fun)
 }
 
 template <typename Tuple, typename Func>
-inline void iterate_tuple(Tuple &tup, Func fun)
+inline constexpr void iterate_tuple(Tuple &tup, Func fun)
 {
     iterate_impl<Tuple, Func, 0>(tup, fun);
 }
@@ -29,14 +29,13 @@ inline void iterate_tuple(Tuple &tup, Func fun)
 
 template <typename... Arguments>
 class MultiIterableView {
-private:
 public:
-    explicit MultiIterableView(std::vector<Arguments> &&...lists)
-        : m_vectors(std::make_tuple(lists...))
+    explicit MultiIterableView(std::vector<Arguments> &...lists)
+        : m_vectors(std::forward_as_tuple(lists...))
     {
     }
 
-    size_t size() const {
+    [[nodiscard]] constexpr size_t size() const {
         size_t s = 0;
         iterate_tuple(m_vectors, [&](auto &vec) {
             s += vec.size();
@@ -44,7 +43,7 @@ public:
         return s;
     }
 
-    std::variant<Arguments...> operator[](size_t i) const {
+    [[nodiscard]] constexpr std::variant<Arguments...> operator[](size_t i) const {
         size_t s = 0;
         std::variant<Arguments...> out;
         iterate_tuple(m_vectors, [&](auto &vec) {
@@ -56,7 +55,7 @@ public:
         return out;
     }
 
-    bool empty() const {
+    [[nodiscard]] constexpr bool empty() const {
         bool empty = true;
         iterate_tuple(m_vectors, [&](auto &elem) {
             empty &= elem.empty();
@@ -64,5 +63,5 @@ public:
         return empty;
     }
 private:
-    std::tuple<std::vector<Arguments>...> m_vectors;
+    std::tuple<std::vector<Arguments> &...> m_vectors;
 };

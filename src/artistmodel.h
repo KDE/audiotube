@@ -66,6 +66,12 @@ private:
     QString m_channelId;
 
     artist::Artist m_artist;
+
+    std::vector<artist::Artist::Album> albums;
+    std::vector<artist::Artist::Single> singles;
+    std::vector<artist::Artist::Song> songs;
+    std::vector<artist::Artist::Video> videos;
+
     std::optional<MultiIterableView<
         artist::Artist::Album, artist::Artist::Single, artist::Artist::Song, artist::Artist::Video
     >> m_view;
