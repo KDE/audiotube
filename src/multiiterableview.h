@@ -36,6 +36,11 @@ public:
     {
     }
 
+    explicit MultiIterableView(std::vector<Arguments> &...lists)
+        : MultiIterableView(std::span{lists}...)
+    {
+    }
+
     [[nodiscard]] constexpr size_t size() const {
         size_t s = 0;
         iterate_tuple(m_vectors, [&](auto &vec) {
