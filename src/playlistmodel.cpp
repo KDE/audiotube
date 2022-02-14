@@ -13,11 +13,11 @@
 PlaylistModel::PlaylistModel(QObject *parent)
     : AbstractYTMusicModel(parent)
 {
-    connect(this, &PlaylistModel::playlistIdChanged, this, [=] {
+    connect(this, &PlaylistModel::playlistIdChanged, this, [=, this] {
         setLoading(true);
         YTMusicThread::instance()->fetchPlaylist(m_playlistId);
     });
-    connect(&YTMusicThread::instance().get(), &AsyncYTMusic::fetchPlaylistFinished, this, [=](const playlist::Playlist &playlist) {
+    connect(&YTMusicThread::instance().get(), &AsyncYTMusic::fetchPlaylistFinished, this, [this](const playlist::Playlist &playlist) {
         setLoading(false);
         beginResetModel();
         m_playlist = playlist;

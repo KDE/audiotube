@@ -9,7 +9,7 @@
 VideoInfoExtractor::VideoInfoExtractor(QObject *parent)
     : QObject(parent)
 {
-    connect(this, &VideoInfoExtractor::videoIdChanged, this, [=] {
+    connect(this, &VideoInfoExtractor::videoIdChanged, this, [this] {
         if (m_videoId.isEmpty()) {
             m_videoInfo = {};
             Q_EMIT audioUrlChanged();
@@ -23,7 +23,7 @@ VideoInfoExtractor::VideoInfoExtractor(QObject *parent)
         YTMusicThread::instance()->extractVideoInfo(QString::fromStdString(m_videoId.toStdString()));
     });
 
-    connect(&YTMusicThread::instance().get(), &AsyncYTMusic::extractVideoInfoFinished, this, [=](const video_info::VideoInfo &info) {
+    connect(&YTMusicThread::instance().get(), &AsyncYTMusic::extractVideoInfoFinished, this, [this](const video_info::VideoInfo &info) {
         m_videoInfo = info;
         setLoading(false);
         Q_EMIT audioUrlChanged();

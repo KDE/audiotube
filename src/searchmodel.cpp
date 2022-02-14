@@ -7,7 +7,7 @@
 SearchModel::SearchModel(QObject *parent)
     : AbstractYTMusicModel(parent)
 {
-    connect(this, &SearchModel::searchQueryChanged, this, [=] {
+    connect(this, &SearchModel::searchQueryChanged, this, [this] {
         if (m_searchQuery.isEmpty()) {
             beginResetModel();
             m_searchResults.clear();
@@ -18,13 +18,13 @@ SearchModel::SearchModel(QObject *parent)
         setLoading(true);
         YTMusicThread::instance()->search(m_searchQuery);
     });
-    connect(&YTMusicThread::instance().get(), &AsyncYTMusic::searchFinished, this, [=](const std::vector<search::SearchResultItem> &results) {
+    connect(&YTMusicThread::instance().get(), &AsyncYTMusic::searchFinished, this, [this](const std::vector<search::SearchResultItem> &results) {
         beginResetModel();
         setLoading(false);
         m_searchResults = results;
         endResetModel();
     });
-    connect(&YTMusicThread::instance().get(), &AsyncYTMusic::errorOccurred, this, [=] {
+    connect(&YTMusicThread::instance().get(), &AsyncYTMusic::errorOccurred, this, [this] {
         setLoading(false);
     });
 }

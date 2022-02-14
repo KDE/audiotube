@@ -9,11 +9,11 @@
 AlbumModel::AlbumModel(QObject *parent)
     : AbstractYTMusicModel(parent)
 {
-    connect(this, &AlbumModel::browseIdChanged, this, [=] {
+    connect(this, &AlbumModel::browseIdChanged, this, [this] {
         setLoading(true);
         YTMusicThread::instance()->fetchAlbum(m_browseId);
     });
-    connect(&YTMusicThread::instance().get(), &AsyncYTMusic::fetchAlbumFinished, this, [=](const album::Album &album) {
+    connect(&YTMusicThread::instance().get(), &AsyncYTMusic::fetchAlbumFinished, this, [this](const album::Album &album) {
         setLoading(false);
 
         beginResetModel();
@@ -25,7 +25,7 @@ AlbumModel::AlbumModel(QObject *parent)
         Q_EMIT thumbnailUrlChanged();
         Q_EMIT playlistIdChanged();
     });
-    connect(&YTMusicThread::instance().get(), &AsyncYTMusic::errorOccurred, this, [=] {
+    connect(&YTMusicThread::instance().get(), &AsyncYTMusic::errorOccurred, this, [this] {
         setLoading(false);
     });
 }
