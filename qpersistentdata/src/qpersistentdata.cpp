@@ -189,5 +189,35 @@ bool QPersistentData::isValid() const
     return d->handle;
 }
 
+int QPersistentData::remove(const QByteArray &key)
+{
+
+    if (!d->handle) {
+        return {};
+    }
+
+    MDB_txn *wtxn = nullptr;
+    if (int status = mdb_txn_begin(d->handle, nullptr, 0, &wtxn) != MDB_SUCCESS) {
+        return status;
+    }
+    MDB_dbi dbi {};
+    if (int status = mdb_dbi_open(wtxn, d->name, MDB_CREATE, &dbi) != MDB_SUCCESS) {
+        return status;
+    }
+
+    LMDBValueView k(key);
+
+    if (int status = mdb_del(wtxn, dbi, &k, 0) != MDB_SUCCESS) {
+        return status;
+    }
+
+    if (int status = mdb_txn_commit(wtxn) != MDB_SUCCESS) {
+        return status;
+    }
+    mdb_dbi_close(d->handle, dbi);
+    return {};
+
+}
+
 QPersistentData::~QPersistentData() = default;
 QPersistentData::QPersistentData(QPersistentData &&other) noexcept = default;

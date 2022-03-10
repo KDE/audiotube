@@ -22,6 +22,7 @@ public:
     QStringList favourites() const;
     Q_SIGNAL void favouritesChanged();
     Q_INVOKABLE void addFavourite(const QString &videoId);
+    Q_INVOKABLE void removeFavourite(const QString &videoid);
 
     QStringList searches() const;
     Q_SIGNAL void searchesChanged();

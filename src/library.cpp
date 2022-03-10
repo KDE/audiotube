@@ -33,7 +33,19 @@ QStringList Library::favourites() const
 void Library::addFavourite(const QString &videoId)
 {
     auto favs = favourites();
+    if (favs.contains(videoId)) {
+        return;
+    }
+
     favs.push_front(videoId);
+    m_storage.insert("favourites", favs);
+    Q_EMIT favouritesChanged();
+}
+
+void Library::removeFavourite(const QString &videoid)
+{
+    auto favs = favourites();
+    favs.removeAll(videoid);
     m_storage.insert("favourites", favs);
     Q_EMIT favouritesChanged();
 }
@@ -47,7 +59,13 @@ QStringList Library::searches() const
 
 void Library::addSearch(const QString &text)
 {
-    m_storage.insert("searches", searches() << text);
+    m_storage.remove("searches");
+
+    auto newSearches = searches() << text;
+    while (newSearches.size() > 10) {
+        newSearches.removeFirst();
+    }
+    m_storage.insert("searches", newSearches);
     Q_EMIT searchesChanged();
 }
 

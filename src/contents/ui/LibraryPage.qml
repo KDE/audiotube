@@ -40,6 +40,14 @@ Kirigami.ScrollablePage {
                                 fillMode: Image.PreserveAspectCrop
                                 asynchronous: true
                             }
+
+                            actions: [
+                                Kirigami.Action {
+                                    icon.name: "delete"
+                                    onTriggered: Library.removeFavourite(modelData)
+                                }
+
+                            ]
                         }
                         Controls.Label {
                             Layout.maximumWidth: 200

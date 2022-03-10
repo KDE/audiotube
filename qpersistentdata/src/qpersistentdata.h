@@ -60,6 +60,18 @@ public:
 
     [[nodiscard]] bool isValid() const;
 
+    int remove(const QByteArray &key);
+
+    template <typename KeyType>
+    void remove(const KeyType &key) {
+        QByteArray keyS;
+
+        QDataStream keyStream(&keyS, QIODevice::WriteOnly);
+        keyStream << key;
+
+        return remove(key);
+    }
+
 private:
     explicit QPersistentData(EnvHandle handle, const QByteArray &name);
     std::shared_ptr<QPersistentDataPrivate> d;
