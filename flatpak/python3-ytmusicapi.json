@@ -7,8 +7,8 @@
     "sources": [
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/33/d9/d18f3827dfd54acc48f29337059197514ad656ffc88e02a51e0457c5117a/ytmusicapi-0.20.0-py3-none-any.whl",
-            "sha256": "abdb90426baa14a7929ec810d65c1df228661b61d580678fc48c087909a9aea2"
+            "url": "https://files.pythonhosted.org/packages/cb/58/834a6445479c72544d9285badce0a58650520c8ba5adfae7b98e61d133bb/ytmusicapi-0.21.0-py3-none-any.whl",
+            "sha256": "29d8d44e1911458041882a453b05c37021ff850757c648f93a45d1775dddbae2"
         },
         {
             "type": "file",
@@ -17,8 +17,8 @@
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/84/3e/1037abe6498e65d645ce7a22d3402605d49a3b2c7f20c3abb027760da4f0/charset_normalizer-2.0.10-py3-none-any.whl",
-            "sha256": "cb957888737fc0bbcd78e3df769addb41fd1ff8cf950dc9e7ad7793f1bf44455"
+            "url": "https://files.pythonhosted.org/packages/06/b3/24afc8868eba069a7f03650ac750a778862dc34941a4bebeb58706715726/charset_normalizer-2.0.12-py3-none-any.whl",
+            "sha256": "6881edbebdb17b39b4eaaa821b438bf6eddffb4468cf344f09f89def34a8b1df"
         },
         {
             "type": "file",

@@ -7,23 +7,28 @@
     "sources": [
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/8e/10/7b43c0a779d4c6331088d64af7e4a2da27b47817f558e97ebbadfc41869f/yt_dlp-2022.1.21-py2.py3-none-any.whl",
-            "sha256": "182903b78a4645edd504dcd9f2603f76f9fdaf8bd279fd45d01992f7637b6d8a"
+            "url": "https://files.pythonhosted.org/packages/b4/7b/0960d02701f783bb052ec69ea32789d878d2cce05a03950adbd75f164758/websockets-10.2.tar.gz",
+            "sha256": "8351c3c86b08156337b0e4ece0e3c5ec3e01fcd14e8950996832a23c99416098"
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/f6/06/e2ad9e93210790be86d36c6e2d5524ba54928c3ed27dd0be9b2ced7c57f1/pycryptodomex-3.12.0.zip",
-            "sha256": "922e9dac0166e4617e5c7980d2cff6912a6eb5cb5c13e7ece222438650bd7f66"
-        },
-        {
-            "type": "file",
-            "url": "https://files.pythonhosted.org/packages/69/77/591bbc51a5ed6a906a7813e60a9627f988f9546513fcf9d250eb31ec8689/websockets-10.1.tar.gz",
-            "sha256": "181d2b25de5a437b36aefedaf006ecb6fa3aa1328ec0236cdde15f32f9d3ff6d"
+            "url": "https://files.pythonhosted.org/packages/2a/18/70c32fe9357f3eea18598b23aa9ed29b1711c3001835f7cf99a9818985d0/Brotli-1.0.9.zip",
+            "sha256": "4d1b810aa0ed773f81dceda2cc7b403d01057458730e309856356d4ef4188438"
         },
         {
             "type": "file",
             "url": "https://files.pythonhosted.org/packages/16/b3/f7aa8edf2ff4495116f95fd442b2a346aa55d1d46313143c8814886dbcdb/mutagen-1.45.1-py3-none-any.whl",
             "sha256": "9c9f243fcec7f410f138cb12c21c84c64fde4195481a30c9bfb05b5f003adfed"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/c0/61/3a08dc08c0c60498a0136a7eec1a098f08be79f75bf35fdd0a15a1bace70/yt_dlp-2022.3.8.2-py3-none-any.whl",
+            "sha256": "05179f0f2c34f06910003bb9f80af68ff798b072ca0f826c0e6704a3fbd5b306"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/24/40/e249ac3845a2333ce50f1bb02299ffb766babdfe80ca9d31e0158ad06afd/pycryptodomex-3.14.1.tar.gz",
+            "sha256": "2ce76ed0081fd6ac8c74edc75b9d14eca2064173af79843c24fa62573263c1f2"
         }
     ]
 }
