@@ -39,6 +39,8 @@ find_package(pybind11 REQUIRED)
 find_package(Ytdlp REQUIRED RUNTIME)
 find_package(YTMusicAPI REQUIRED RUNTIME)
 
+ki18n_install(po)
+
 add_subdirectory(src)
 
 install(PROGRAMS org.kde.audiotube.desktop DESTINATION ${KDE_INSTALL_APPDIR})
