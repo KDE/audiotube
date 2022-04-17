@@ -1,0 +1,155 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the audiotube package.
+#
+# Emir SARI <emir_sari@icloud.com>, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: audiotube\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-05 00:45+0000\n"
+"PO-Revision-Date: 2022-04-15 14:41+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Lokalize 21.12.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Emir SARI"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "emir_sari@icloud.com"
+
+#: contents/ui/AlbumPage.qml:19 contents/ui/PlayerFooter.qml:173
+#: contents/ui/PlaylistPage.qml:19
+#, kde-format
+msgid "Play"
+msgstr "Çal"
+
+#: contents/ui/AlbumPage.qml:61 contents/ui/ArtistPage.qml:101
+#: contents/ui/PlaylistPage.qml:67
+#, kde-format
+msgid "Play Next"
+msgstr "Sonrakini Çal"
+
+#: contents/ui/AlbumPage.qml:66 contents/ui/ArtistPage.qml:107
+#: contents/ui/PlaylistPage.qml:72 contents/ui/SearchPage.qml:123
+#, kde-format
+msgid "Add to Playlist"
+msgstr "Çalma Listesine Ekle"
+
+#: contents/ui/ArtistPage.qml:39 contents/ui/SearchPage.qml:67
+#, kde-format
+msgid ""
+"Video playback is not supported yet. Do you want to play only the audio of "
+"\"%1\"?"
+msgstr ""
+"Video oynatımı henüz desteklenmiyor. \"%1\" videosunun yalnızca sesinin "
+"çalınmasını ister misiniz?"
+
+#: contents/ui/ArtistPage.qml:55 contents/ui/SearchPage.qml:25
+#, kde-format
+msgid "Albums"
+msgstr "Albümler"
+
+#: contents/ui/ArtistPage.qml:57
+#, kde-format
+msgid "Singles"
+msgstr "Tekliler"
+
+#: contents/ui/ArtistPage.qml:59 contents/ui/SearchPage.qml:31
+#, kde-format
+msgid "Songs"
+msgstr "Şarkılar"
+
+#: contents/ui/ArtistPage.qml:61 contents/ui/SearchPage.qml:33
+#, kde-format
+msgid "Videos"
+msgstr "Videolar"
+
+#: contents/ui/ConfirmationMessage.qml:16
+#, kde-format
+msgid "OK"
+msgstr "Tamam"
+
+#: contents/ui/ConfirmationMessage.qml:21
+#, kde-format
+msgid "Cancel"
+msgstr "İptal"
+
+#: contents/ui/main.qml:51
+#, kde-format
+msgid "AudioTube"
+msgstr "AudioTube"
+
+#: contents/ui/PlayerFooter.qml:106
+#, kde-format
+msgid "Remove Track"
+msgstr "Parçayı Kaldır"
+
+#: contents/ui/PlayerFooter.qml:123
+#, kde-format
+msgid "Clear"
+msgstr "Temizle"
+
+#: contents/ui/PlayerFooter.qml:128 contents/ui/PlaylistPage.qml:26
+#, kde-format
+msgid "Shuffle"
+msgstr "Karıştır"
+
+#: contents/ui/PlayerFooter.qml:173
+#, kde-format
+msgid "Pause"
+msgstr "Duraklat"
+
+#: contents/ui/PlayerFooter.qml:203
+#, kde-format
+msgid "No media playing"
+msgstr "Ortam çalmıyor"
+
+#: contents/ui/PlayerFooter.qml:247
+#, kde-format
+msgid "Expand"
+msgstr "Genişlet"
+
+#: contents/ui/SearchPage.qml:27
+#, kde-format
+msgid "Artists"
+msgstr "Sanatçılar"
+
+#: contents/ui/SearchPage.qml:29
+#, kde-format
+msgid "Playlists"
+msgstr "Çalma Listeleri"
+
+#: contents/ui/SearchPage.qml:36
+#, kde-format
+msgid "Unknown"
+msgstr "Bilinmiyor"
+
+#: contents/ui/SearchPage.qml:117
+#, kde-format
+msgid "Play next"
+msgstr "Sonrakini çal"
+
+#: contents/ui/SearchPage.qml:129
+#, kde-format
+msgid "Radio"
+msgstr "Radyo"
+
+#: contents/ui/SearchPage.qml:147
+#, kde-format
+msgid "Find music on YouTube Music"
+msgstr "YouTube Müzik'te müzik bul"
+
+#: contents/ui/SearchPage.qml:150
+#, kde-format
+msgid "Search"
+msgstr "Ara"

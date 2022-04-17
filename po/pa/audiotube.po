@@ -1,0 +1,156 @@
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the audiotube package.
+#
+# A S Alam <aalam@satluj.org>, 2021, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: audiotube\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-05 00:45+0000\n"
+"PO-Revision-Date: 2022-01-01 09:11-0800\n"
+"Last-Translator: A S Alam <aalam@satluj.org>\n"
+"Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
+"Language: pa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.04.3\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "ਅਮਨਪਰੀਤ ਸਿੰਘ ਆਲਮ ੨੦੨੧"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "alam yellow @ gmail.com"
+
+#: contents/ui/AlbumPage.qml:19 contents/ui/PlayerFooter.qml:173
+#: contents/ui/PlaylistPage.qml:19
+#, kde-format
+msgid "Play"
+msgstr "ਚਲਾਓ"
+
+#: contents/ui/AlbumPage.qml:61 contents/ui/ArtistPage.qml:101
+#: contents/ui/PlaylistPage.qml:67
+#, kde-format
+msgid "Play Next"
+msgstr "ਅਗਲਾ ਚਲਾਓ"
+
+#: contents/ui/AlbumPage.qml:66 contents/ui/ArtistPage.qml:107
+#: contents/ui/PlaylistPage.qml:72 contents/ui/SearchPage.qml:123
+#, kde-format
+msgid "Add to Playlist"
+msgstr "ਪਲੇਅਲਿਸਟ ਵਿੱਚ ਜੋੜੋ"
+
+#: contents/ui/ArtistPage.qml:39 contents/ui/SearchPage.qml:67
+#, kde-format
+msgid ""
+"Video playback is not supported yet. Do you want to play only the audio of "
+"\"%1\"?"
+msgstr "ਵਿਡੀਓ ਪਲੇਅਬੈਕ ਹਾਲੇ ਸਹਾਇਕ ਨਹੀਂ ਹੈ। ਕੀ ਤੁਸੀਂ \"%1\" ਦਾ ਆਡੀਓ ਹੀ ਚਲਾਉਣਾ ਚਾਹੋਗੇ?"
+
+#: contents/ui/ArtistPage.qml:55 contents/ui/SearchPage.qml:25
+#, kde-format
+msgid "Albums"
+msgstr "ਐਲਬਮਾਂ"
+
+#: contents/ui/ArtistPage.qml:57
+#, kde-format
+msgid "Singles"
+msgstr "ਇਕੱਲੇ"
+
+#: contents/ui/ArtistPage.qml:59 contents/ui/SearchPage.qml:31
+#, kde-format
+msgid "Songs"
+msgstr "ਗੀਤ"
+
+#: contents/ui/ArtistPage.qml:61 contents/ui/SearchPage.qml:33
+#, kde-format
+msgid "Videos"
+msgstr "ਵਿਡੀਓ"
+
+#: contents/ui/ConfirmationMessage.qml:16
+#, kde-format
+msgid "OK"
+msgstr "ਠੀਕ ਹੈ"
+
+#: contents/ui/ConfirmationMessage.qml:21
+#, kde-format
+msgid "Cancel"
+msgstr "ਰੱਦ ਕਰੋ"
+
+#: contents/ui/main.qml:51
+#, kde-format
+msgid "AudioTube"
+msgstr "ਆਡੀਓ-ਟਿਊਬ"
+
+#: contents/ui/PlayerFooter.qml:106
+#, kde-format
+msgid "Remove Track"
+msgstr "ਟਰੈਕ ਨੂੰ ਹਟਾਓ"
+
+#: contents/ui/PlayerFooter.qml:123
+#, kde-format
+msgid "Clear"
+msgstr "ਮਿਟਾਓ"
+
+#: contents/ui/PlayerFooter.qml:128 contents/ui/PlaylistPage.qml:26
+#, kde-format
+msgid "Shuffle"
+msgstr "ਰਲਵੇਂ"
+
+#: contents/ui/PlayerFooter.qml:173
+#, kde-format
+msgid "Pause"
+msgstr "ਵਿਰਾਮ"
+
+#: contents/ui/PlayerFooter.qml:203
+#, kde-format
+msgid "No media playing"
+msgstr "ਕੋਈ ਮੀਡੀਆ ਨਹੀਂ ਚੱਲਦਾ"
+
+#: contents/ui/PlayerFooter.qml:247
+#, kde-format
+msgid "Expand"
+msgstr "ਫੈਲਾਓ"
+
+#: contents/ui/SearchPage.qml:27
+#, kde-format
+msgid "Artists"
+msgstr "ਕਲਾਕਾਰ"
+
+#: contents/ui/SearchPage.qml:29
+#, kde-format
+msgid "Playlists"
+msgstr "ਪਲੇਅਲਿਸਟਾਂ"
+
+#: contents/ui/SearchPage.qml:36
+#, kde-format
+msgid "Unknown"
+msgstr "ਅਣਪਛਾਤਾ"
+
+#: contents/ui/SearchPage.qml:117
+#, kde-format
+msgid "Play next"
+msgstr "ਅਗਲਾ ਚਲਾਓ"
+
+#: contents/ui/SearchPage.qml:129
+#, kde-format
+msgid "Radio"
+msgstr "ਰੇਡੀਓ"
+
+#: contents/ui/SearchPage.qml:147
+#, kde-format
+msgid "Find music on YouTube Music"
+msgstr "ਯੂਟਿਊਬ ਸੰਗੀਤ ਉੱਤੇ ਸੰਗੀਤ ਲੱਭੋ"
+
+#: contents/ui/SearchPage.qml:150
+#, kde-format
+msgid "Search"
+msgstr "ਖੋਜੋ"
+
+#~ msgid "Play only Audio"
+#~ msgstr "ਸਿਰਫ਼ ਆਡੀਓ ਹੀ ਚਲਾਓ"

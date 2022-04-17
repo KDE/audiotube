@@ -1,0 +1,155 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the audiotube package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: audiotube\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2021-12-05 00:45+0000\n"
+"PO-Revision-Date: 2021-12-05 01:46+0000\n"
+"Last-Translator: transxx.py program <null@kde.org>\n"
+"Language-Team: KDE Test Language <kde-i18n-doc@kde.org>\n"
+"Language: x-test\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "xxYour namesxx"
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "xxYour emailsxx"
+
+#: contents/ui/AlbumPage.qml:19 contents/ui/PlayerFooter.qml:173
+#: contents/ui/PlaylistPage.qml:19
+#, kde-format
+msgid "Play"
+msgstr "xxPlayxx"
+
+#: contents/ui/AlbumPage.qml:61 contents/ui/ArtistPage.qml:101
+#: contents/ui/PlaylistPage.qml:67
+#, kde-format
+msgid "Play Next"
+msgstr "xxPlay Nextxx"
+
+#: contents/ui/AlbumPage.qml:66 contents/ui/ArtistPage.qml:107
+#: contents/ui/PlaylistPage.qml:72 contents/ui/SearchPage.qml:123
+#, kde-format
+msgid "Add to Playlist"
+msgstr "xxAdd to Playlistxx"
+
+#: contents/ui/ArtistPage.qml:39 contents/ui/SearchPage.qml:67
+#, kde-format
+msgid ""
+"Video playback is not supported yet. Do you want to play only the audio of "
+"\"%1\"?"
+msgstr ""
+"xxVideo playback is not supported yet. Do you want to play only the audio of "
+"\"%1\"?xx"
+
+#: contents/ui/ArtistPage.qml:55 contents/ui/SearchPage.qml:25
+#, kde-format
+msgid "Albums"
+msgstr "xxAlbumsxx"
+
+#: contents/ui/ArtistPage.qml:57
+#, kde-format
+msgid "Singles"
+msgstr "xxSinglesxx"
+
+#: contents/ui/ArtistPage.qml:59 contents/ui/SearchPage.qml:31
+#, kde-format
+msgid "Songs"
+msgstr "xxSongsxx"
+
+#: contents/ui/ArtistPage.qml:61 contents/ui/SearchPage.qml:33
+#, kde-format
+msgid "Videos"
+msgstr "xxVideosxx"
+
+#: contents/ui/ConfirmationMessage.qml:16
+#, kde-format
+msgid "OK"
+msgstr "xxOKxx"
+
+#: contents/ui/ConfirmationMessage.qml:21
+#, kde-format
+msgid "Cancel"
+msgstr "xxCancelxx"
+
+#: contents/ui/main.qml:51
+#, kde-format
+msgid "AudioTube"
+msgstr "xxAudioTubexx"
+
+#: contents/ui/PlayerFooter.qml:106
+#, kde-format
+msgid "Remove Track"
+msgstr "xxRemove Trackxx"
+
+#: contents/ui/PlayerFooter.qml:123
+#, kde-format
+msgid "Clear"
+msgstr "xxClearxx"
+
+#: contents/ui/PlayerFooter.qml:128 contents/ui/PlaylistPage.qml:26
+#, kde-format
+msgid "Shuffle"
+msgstr "xxShufflexx"
+
+#: contents/ui/PlayerFooter.qml:173
+#, kde-format
+msgid "Pause"
+msgstr "xxPausexx"
+
+#: contents/ui/PlayerFooter.qml:203
+#, kde-format
+msgid "No media playing"
+msgstr "xxNo media playingxx"
+
+#: contents/ui/PlayerFooter.qml:247
+#, kde-format
+msgid "Expand"
+msgstr "xxExpandxx"
+
+#: contents/ui/SearchPage.qml:27
+#, kde-format
+msgid "Artists"
+msgstr "xxArtistsxx"
+
+#: contents/ui/SearchPage.qml:29
+#, kde-format
+msgid "Playlists"
+msgstr "xxPlaylistsxx"
+
+#: contents/ui/SearchPage.qml:36
+#, kde-format
+msgid "Unknown"
+msgstr "xxUnknownxx"
+
+#: contents/ui/SearchPage.qml:117
+#, kde-format
+msgid "Play next"
+msgstr "xxPlay nextxx"
+
+#: contents/ui/SearchPage.qml:129
+#, kde-format
+msgid "Radio"
+msgstr "xxRadioxx"
+
+#: contents/ui/SearchPage.qml:147
+#, kde-format
+msgid "Find music on YouTube Music"
+msgstr "xxFind music on YouTube Musicxx"
+
+#: contents/ui/SearchPage.qml:150
+#, kde-format
+msgid "Search"
+msgstr "xxSearchxx"
