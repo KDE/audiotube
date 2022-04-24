@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=AudioTube
 Name[ar]=تيوب الصوتي
+Name[az]=AudioTube
 Name[ca]=AudioTube
 Name[ca@valencia]=AudioTube
 Name[cs]=AudioTube
@@ -28,6 +29,7 @@ Name[x-test]=xxAudioTubexx
 Name[zh_CN]=AudioTube
 Comment=YouTube Music client
 Comment[ar]=عميل يوتيوب ميوزيك
+Comment[az]=YouTube Musiqi müştərisi
 Comment[ca]=Client de música de YouTube
 Comment[ca@valencia]=Client de música de YouTube
 Comment[cs]=Hudební klient YouTube
