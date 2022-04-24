@@ -8,6 +8,7 @@ SPDX-License-Identifier: CC0-1.0
   <id>org.kde.audiotube</id>
   <name>AudioTube</name>
   <name xml:lang="ar">تيوب الصوتي</name>
+  <name xml:lang="az">AudioTube</name>
   <name xml:lang="ca">AudioTube</name>
   <name xml:lang="ca-valencia">AudioTube</name>
   <name xml:lang="cs">AudioTube</name>
@@ -35,6 +36,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="zh-CN">AudioTube</name>
   <summary>Convergent YouTube Music client</summary>
   <summary xml:lang="ar">عميل موسيقى يوتيوب متعدد المنصات</summary>
+  <summary xml:lang="az">Birləşmiş YouTube Musiqi müştərisi</summary>
   <summary xml:lang="ca">Client convergent de música de YouTube</summary>
   <summary xml:lang="ca-valencia">Client convergent de música de YouTube</summary>
   <summary xml:lang="de">Konvergentes YouTube-Musikprogramm</summary>
@@ -61,6 +63,7 @@ SPDX-License-Identifier: CC0-1.0
   <project_license>GPL-2.0+</project_license>
   <developer_name>KDE Community</developer_name>
   <developer_name xml:lang="ar">مجتمع كدي</developer_name>
+  <developer_name xml:lang="az">KDE İcması</developer_name>
   <developer_name xml:lang="ca">La comunitat KDE</developer_name>
   <developer_name xml:lang="ca-valencia">La comunitat KDE</developer_name>
   <developer_name xml:lang="cs">Komunita KDE</developer_name>
@@ -130,6 +133,7 @@ SPDX-License-Identifier: CC0-1.0
   <description>
     <p>AudioTube can search YouTube Music, list albums and artists, play automatically generated playlists, albums and allows to put your own playlist together.</p>
     <p xml:lang="ar">يمكن لتيوب الصوتي البحث في موسيقى يوتيوب، وعرض الألبومات والفنانين، وتشغيل القوائم والألبومات المولدة تلقائيًا، ويسمح لك بوضع قائمة التشغيل الخاصة بك معًا.</p>
+    <p xml:lang="az">AudioTube YouTube Musiqi, albomların və ifaçıların siyahısı üzrə axtarış etməyə, yaradılmış mahnı siyahısı və albomları avtomatik oxutmağa və öz mahnı siyahınızı yaratmağa imkan verir.</p>
     <p xml:lang="ca">L'AudioTube pot cercar música a YouTube, llistar àlbums i artistes, reproduir llistes de reproducció generades automàticament, àlbums i permet crear la vostra pròpia llista de reproducció.</p>
     <p xml:lang="ca-valencia">L'AudioTube pot buscar música a YouTube, llistar àlbums i artistes, reproduir llistes de reproducció generades automàticament, àlbums i permet crear la vostra pròpia llista de reproducció.</p>
     <p xml:lang="de">AudioTube kann Musik auf YouTube durchsuchen, Alben und Interpreten auflisten, automatisch generierte Wiedergabelisten und Alben abspielen und erlaubt es, eine eigene Wiedergabeliste zusammenzustellen.</p>
