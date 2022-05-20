@@ -7,16 +7,17 @@
 #include <QNetworkRequest>
 #include <QStringBuilder>
 
-#include <qpersistentdata.h>
+#include <lib.rs.h>
+
+namespace ranges = std::ranges;
 
 Library::Library(QObject *parent)
     : QObject{parent}
-    , m_storage("library")
-    , m_cachedVideoTitles("videoTitles")
+    , m_database(new_library_database(
+        QString(
+            QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) % QDir::separator() % "library.sqlite")
+                .toStdString()))
 {
-    connect(this, &Library::favouritesChanged, this, []() {
-        qDebug() << "Favs changed" ;
-    });
 }
 
 Library &Library::instance()
@@ -25,73 +26,62 @@ Library &Library::instance()
     return inst;
 }
 
-QStringList Library::favourites() const
+FavouritesModel *Library::favourites()
 {
-    return m_storage.value<QStringList>("favourites");
+    return new FavouritesModel(m_database->favourites(), this);
 }
 
-void Library::addFavourite(const QString &videoId)
+void Library::addFavourite(const QString &videoId, const QString &title, const QString &artist)
 {
-    auto favs = favourites();
-    if (favs.contains(videoId)) {
-        return;
-    }
-
-    favs.push_front(videoId);
-    m_storage.insert("favourites", favs);
-    Q_EMIT favouritesChanged();
+    m_database->add_favourite(Song {
+        videoId.toStdString(),
+        title.toStdString(),
+        artist.toStdString()
+    });
 }
 
 void Library::removeFavourite(const QString &videoid)
 {
-    auto favs = favourites();
-    favs.removeAll(videoid);
-    m_storage.insert("favourites", favs);
+    m_database->remove_favourite(videoid.toStdString());
     Q_EMIT favouritesChanged();
+}
+
+bool Library::isFavourited(const QString &videoId)
+{
+    return m_database->is_favourited(videoId.toStdString());
 }
 
 QStringList Library::searches() const
 {
-    auto s = m_storage.value<QStringList>("searches");
-    qDebug() << "searches" << s;
-    return s;
+    QStringList out;
+    const auto searches = m_database->searches();
+
+    ranges::transform(searches, std::back_inserter(out), [](auto string) {
+        return QString::fromStdString(std::string(string));
+    });
+
+    return out;
 }
 
 void Library::addSearch(const QString &text)
 {
-    m_storage.remove("searches");
-
-    auto newSearches = searches() << text;
-    while (newSearches.size() > 10) {
-        newSearches.removeFirst();
-    }
-    m_storage.insert("searches", newSearches);
+    m_database->add_search(text.toStdString());
     Q_EMIT searchesChanged();
 }
 
-QStringList Library::playbackHistory() const
+PlaybackHistoryModel *Library::playbackHistory()
 {
-    auto h = m_storage.value<QStringList>("playbackHistory");
-    return h;
+    return new PlaybackHistoryModel(m_database->plays(), this);
 }
 
-void Library::addPlaybackHistoryItem(const QString &videoId)
+void Library::addPlaybackHistoryItem(const QString &videoId, const QString &title, const QString &artist)
 {
-    m_storage.insert("playbackHistory", playbackHistory() << videoId);
+    m_database->increment_plays(Song {
+        videoId.toStdString(),
+        title.toStdString(),
+        artist.toStdString()
+    });
     Q_EMIT playbackHistoryChanged();
-}
-
-QString Library::videoTitle(const QString &videoId)
-{
-    qDebug() << "Fetching video title" << videoId;
-    auto t = m_cachedVideoTitles.value<QString>(videoId);
-    qDebug() << "title" << t;
-    return t;
-}
-
-void Library::addVideoTitle(const QString &videoId, const QString &title)
-{
-    m_cachedVideoTitles.insert(videoId, title);
 }
 
 QNetworkAccessManager &Library::nam()

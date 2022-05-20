@@ -12,6 +12,11 @@ target_compile_definitions(ytm PRIVATE -DRANDALL_WAS_HERE)
 
 add_subdirectory(example)
 
+corrosion_import_crate(MANIFEST_PATH ${CMAKE_CURRENT_SOURCE_DIR}/rs/Cargo.toml)
+
+# Teach cmake that this static library needs to be linked against SQLite to find all symbols
+set_property(TARGET audiotube-rust APPEND PROPERTY INTERFACE_LINK_LIBRARIES SQLite::SQLite3)
+
 add_executable(audiotube
     main.cpp
     asyncytmusic.cpp
@@ -41,8 +46,12 @@ target_link_libraries(audiotube
     KF5::CoreAddons
     KF5::Crash
     ytm
-    qpersistentdata
+    audiotube-rust
 )
+
+target_include_directories(audiotube PRIVATE
+    ${CMAKE_BINARY_DIR}/cargo/build/${Rust_CARGO_TARGET}/cxxbridge/audiotube-rust/src/)
+
 target_compile_definitions(audiotube PRIVATE -DQT_NO_KEYWORDS -DQT_NO_URL_CAST_FROM_STRING)
 
 install(TARGETS audiotube ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

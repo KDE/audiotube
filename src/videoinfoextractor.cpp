@@ -28,7 +28,6 @@ VideoInfoExtractor::VideoInfoExtractor(QObject *parent)
         connectFuture(future, this, [this](const video_info::VideoInfo &videoInfo) {
             m_videoInfo = videoInfo;
             setLoading(false);
-            Library::instance().addVideoTitle(m_videoId, QString::fromStdString(m_videoInfo.title));
             Q_EMIT audioUrlChanged();
             Q_EMIT titleChanged();
             Q_EMIT songChanged();

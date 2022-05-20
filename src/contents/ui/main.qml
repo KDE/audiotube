@@ -36,15 +36,14 @@ Kirigami.ApplicationWindow {
                 selectByMouse: true
                 Layout.fillWidth: true
                 Layout.maximumWidth: 400
-                onFocusChanged: {
-                    if (focus)
-                        popup.open()
+                onPressed: {
+                    popup.open()
                 }
-                onTextChanged: {
-                    if (!popup.opened) {
-                        popup.open()
-                    }
-                }
+//                onTextChanged: {
+//                    if (!popup.opened) {
+//                        popup.open()
+//                    }
+//                }
 
                 Controls.Popup {
                     id: popup
@@ -52,7 +51,7 @@ Kirigami.ApplicationWindow {
                     y: searchField.y + searchField.height
                     visible: true
                     width: searchField.width
-                    height: contentItem.implicitHeight
+                    height: Math.min(completionDelegate.height * completionList.rowCount, Kirigami.Units.gridUnit * 10)
 
                     contentItem: Controls.ScrollView {
                         Controls.ScrollBar.horizontal.policy: Controls.ScrollBar.AlwaysOff
@@ -60,6 +59,7 @@ Kirigami.ApplicationWindow {
                             id: completionList
                             model: Library.searches
                             delegate: Controls.ItemDelegate {
+                                id: completionDelegate
                                 width: parent.width
                                 text: modelData
                                 onClicked: {
@@ -73,11 +73,15 @@ Kirigami.ApplicationWindow {
 
                 onAccepted: {
                     pageStack.clear()
+
                     if (text) {
                         Library.addSearch(text)
+                        pageStack.push("qrc:/SearchPage.qml", {
+                                   "searchQuery": text})
+                    } else {
+                        pageStack.replace("qrc:/LibraryPage.qml")
                     }
-                    pageStack.push("qrc:/SearchPage.qml", {
-                               "searchQuery": text})
+
                     popup.close()
                 }
             }

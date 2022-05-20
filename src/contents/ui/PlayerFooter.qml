@@ -44,11 +44,13 @@ Item {
                 Image {
                     source: info.thumbnail
                     Layout.preferredWidth: footerLayout.width * 0.5
+                    Layout.preferredHeight: width
                     fillMode: Image.PreserveAspectFit
                 }
-                Controls.ToolButton{
-                    text: "Fav"
-                    onClicked: Library.addFavourite(info.videoId)
+                Controls.RoundButton {
+                    Layout.alignment: Qt.AlignHCenter
+                    icon.name: Library.isFavourited(info.videoId) ? "starred-symbolic" : "non-starred-symbolic"
+                    onClicked: Library.addFavourite(info.videoId, info.title, info.artist)
                 }
             }
 

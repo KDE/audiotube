@@ -18,20 +18,22 @@ Kirigami.ScrollablePage {
                     model: Library.favourites
                     onCountChanged: () => console.log("Count:", count)
                     delegate: ColumnLayout {
+                        id: delegateItem
+                        required property string title
+                        required property string artist
+                        required property string videoId
+
                         Layout.fillWidth: false
                         Layout.maximumWidth: 200
-                        Component.onCompleted: {
-                            console.log(modelData)
-                        }
                         Kirigami.Card {
                             id: card
                             Layout.preferredHeight: 200
 
-                            onClicked: play(modelData)
+                            onClicked: play(delegateItem.videoId)
 
                             ThumbnailSource {
                                 id: thumbnailSource
-                                videoId: modelData
+                                videoId: delegateItem.videoId
                             }
 
                             header: Image {
@@ -44,14 +46,14 @@ Kirigami.ScrollablePage {
                             actions: [
                                 Kirigami.Action {
                                     icon.name: "delete"
-                                    onTriggered: Library.removeFavourite(modelData)
+                                    onTriggered: Library.removeFavourite(delegateItem.videoId)
                                 }
 
                             ]
                         }
                         Controls.Label {
                             Layout.maximumWidth: 200
-                            text: Library.videoTitle(modelData)
+                            text: delegateItem.title
                             elide: Qt.ElideRight
                         }
                     }
