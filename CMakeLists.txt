@@ -33,12 +33,15 @@ ecm_setup_version(${PROJECT_VERSION}
 
 kde_enable_exceptions()
 
-find_package(Qt5 ${QT5_MIN_VERSION} REQUIRED COMPONENTS Core Gui Qml QuickControls2 Svg)
+find_package(Qt5 ${QT5_MIN_VERSION} REQUIRED COMPONENTS Core Gui Qml QuickControls2 Svg Sql)
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS Kirigami2 I18n CoreAddons Crash)
 find_package(pybind11 REQUIRED)
 find_package(Ytdlp REQUIRED RUNTIME)
 find_package(YTMusicAPI REQUIRED RUNTIME)
 find_package(SQLite3 REQUIRED)
+find_package(QCoro REQUIRED)
+
+qcoro_enable_coroutines()
 
 find_package(Corrosion)
 set_package_properties(Corrosion PROPERTIES

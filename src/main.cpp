@@ -21,6 +21,8 @@
 #include "playerutils.h"
 #include "library.h"
 
+#include "asyncdatabase.h"
+
 constexpr auto URI = "org.kde.ytmusic";
 
 Q_DECL_EXPORT int main(int argc, char *argv[])
@@ -32,6 +34,8 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     QCoreApplication::setApplicationName(QStringLiteral("audiotube"));
 
     KLocalizedString::setApplicationDomain("audiotube");
+
+    QTimer::singleShot(0, test);
 
     KAboutData::setApplicationData(KAboutData(QStringLiteral("audiotube"), QStringLiteral("AudioTube")));
     KCrash::initialize();

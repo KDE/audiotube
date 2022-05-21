@@ -32,6 +32,7 @@ add_executable(audiotube
     abstractytmusicmodel.cpp
     multiiterableview.h
     library.cpp
+    asyncdatabase.cpp
     resources.qrc
 )
 
@@ -45,6 +46,8 @@ target_link_libraries(audiotube
     KF5::I18n
     KF5::CoreAddons
     KF5::Crash
+    Qt5::Sql
+    QCoro::QCoro
     ytm
     audiotube-rust
 )
