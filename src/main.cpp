@@ -35,8 +35,6 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 
     KLocalizedString::setApplicationDomain("audiotube");
 
-    QTimer::singleShot(0, test);
-
     KAboutData::setApplicationData(KAboutData(QStringLiteral("audiotube"), QStringLiteral("AudioTube")));
     KCrash::initialize();
 
@@ -56,10 +54,9 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlRegisterSingletonType<PlayerUtils>(URI, 1, 0, "PlayerUtils", [](QQmlEngine *, QJSEngine *) {
         return new PlayerUtils();
     });
-    qmlRegisterSingletonType<Library>(URI, 1, 0, "Library", [](QQmlEngine *, QJSEngine *) {
-        return new Library();
-    });
+    qmlRegisterSingletonInstance<Library>(URI, 1, 0, "Library", &Library::instance());
     qmlRegisterType<ThumbnailSource>(URI, 1, 0, "ThumbnailSource");
+    qmlRegisterAnonymousType<FavouriteWatcher>(URI, 1);
 
     engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
     engine.load(QUrl(QStringLiteral("qrc:///main.qml")));

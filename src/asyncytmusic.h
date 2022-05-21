@@ -47,15 +47,48 @@ private:
     std::unique_ptr<T> m_item = nullptr;
 };
 
-template <typename T, typename Function>
-void connectFuture(const QFuture<T> &future, QObject *self, const Function &fun) {
+///
+/// Similar to QObject::connect, except that the first two arguments are replaced with a QFuture.
+///
+template <typename T, typename QObjectDerivedType, typename Function>
+void connectFuture(const QFuture<T> &future, QObjectDerivedType *self, const Function &fun) {
     auto watcher = std::make_shared<QFutureWatcher<T>>();
     watcher->setFuture(future);
-    QObject::connect(watcher.get(), &QFutureWatcherBase::finished, self, [watcher, fun, future] {
-        if (future.resultCount() > 0) {
-            fun(watcher->result());
+    QObject::connect(watcher.get(), &QFutureWatcherBase::finished, self, [self, watcher, fun, future] {
+        if constexpr (std::is_same_v<void, T>) {
+            if constexpr (std::is_member_function_pointer_v<Function>) {
+                (self->*fun)();
+            } else {
+                fun();
+            }
+        } else if (future.resultCount() > 0) {
+            if constexpr (std::is_member_function_pointer_v<Function>) {
+                (self->*fun)(watcher->result());
+            } else {
+                fun(watcher->result());
+            }
         }
     });
+}
+
+///
+/// Applies a function to a the contained value of a QFuture once it finishes.
+/// @returns a QFuture that finishes once the future given as first argument finished
+///
+template <typename T, typename U, typename Func>
+QFuture<U> mapFuture(const QFuture<T> &future, Func mapFunction) {
+    auto watcher = std::make_shared<QFutureWatcher<T>>();
+    watcher->setFuture(future);
+
+    auto interface = std::make_shared<QFutureInterface<U>>();
+    QObject::connect(watcher.get(), &QFutureWatcherBase::finished, watcher.get(), [interface, watcher, mapFunction] {
+        auto result = watcher->result();
+        auto mapped = mapFunction(std::move(result));
+        interface->reportResult(mapped);
+        interface->reportFinished();
+    });
+
+    return interface->future();
 }
 
 class AsyncYTMusic : public QObject

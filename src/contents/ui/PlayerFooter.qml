@@ -23,6 +23,7 @@ Item {
         anchors.fill: footerLayout
     }
 
+
     ColumnLayout {
         id: footerLayout
         height: parent.height
@@ -39,24 +40,36 @@ Item {
             visible: footerItem.maximized
 
             ColumnLayout {
-                Layout.fillWidth: info.thumbnail
-                Layout.fillHeight: info.thumbnail
-                Image {
-                    source: info.thumbnail
-                    Layout.preferredWidth: footerLayout.width * 0.5
-                    Layout.preferredHeight: width
-                    fillMode: Image.PreserveAspectFit
+                Layout.preferredWidth: footerLayout.width * (playerLayout.mobile ? 1 : 0.5)
+                Layout.preferredHeight: footerLayout.height * (playerLayout.mobile ? 0.5 : 1)
+
+                Item {
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+
+                    Image {
+                        anchors.fill: parent
+                        source: info.thumbnail
+                        fillMode: Image.PreserveAspectFit
+                    }
                 }
                 Controls.RoundButton {
+                    readonly property QtObject favouriteWatcher: Library.favouriteWatcher(info.videoId)
+
                     Layout.alignment: Qt.AlignHCenter
-                    icon.name: Library.isFavourited(info.videoId) ? "starred-symbolic" : "non-starred-symbolic"
-                    onClicked: Library.addFavourite(info.videoId, info.title, info.artist)
+                    icon.name: favouriteWatcher ? (favouriteWatcher.isFavourite ? "starred-symbolic" : "non-starred-symbolic") : ""
+                    onClicked: if (favouriteWatcher)
+                                   favouriteWatcher.isFavourite
+                                    ? Library.removeFavourite(info.videoId)
+                                    : Library.addFavourite(info.videoId, info.title)
                 }
             }
 
             Item {
                 Layout.fillWidth: true
                 Layout.fillHeight: true
+                Layout.preferredWidth: footerLayout.width * (playerLayout.mobile ? 1 : 0.5)
+                Layout.preferredHeight: footerLayout.height * (playerLayout.mobile ? 0.5 : 1)
 
                 Controls.ScrollView {
                     anchors.fill: parent
@@ -156,6 +169,7 @@ Item {
 
                 onSongChanged: audio.play()
                 videoId: UserPlaylistModel.currentVideoId
+                onTitleChanged: Library.addPlaybackHistoryItem(info.videoId, info.title)
             }
 
             Audio {

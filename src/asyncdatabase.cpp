@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2022 Jonah Brüchert <jbb@kaidan.im>
+//
+// SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+
 #include "asyncdatabase.h"
 
 #include <QDir>
@@ -8,30 +12,42 @@
 #include <QVariant>
 #include <QSqlResult>
 #include <QSqlError>
+#include <QLoggingCategory>
+
+#define SCHAMA_MIGRATIONS_TABLE "__qt_schema_migrations"
+
+Q_DECLARE_LOGGING_CATEGORY(asyncdatabase)
+Q_LOGGING_CATEGORY(asyncdatabase, "asyncdatabase")
 
 namespace asyncdatabase_private {
 
 // migrations
-void create_internal_table(QSqlDatabase &database) {
-    QSqlQuery query(QStringLiteral("CREATE TABLE IF NOT EXISTS __qt_schema_migrations ("
-                                        "version TEXT PRIMARY KEY NOT NULL, "
-                                        "run_on TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP)"), database);
-    query.exec();
+void createInternalTable(QSqlDatabase &database) {
+    QSqlQuery query(QStringLiteral("create table if not exists " SCHAMA_MIGRATIONS_TABLE " ("
+                                        "version Text primary key not null, "
+                                        "run_on timestamp not null default current_timestamp)"), database);
+    if (!query.exec()) {
+        printSqlError(query);
+    }
 }
 
-void mark_migration_run(QSqlDatabase &database, const QString &name) {
-    qDebug() << "Marking migration" << name << "as done.";
+void markMigrationRun(QSqlDatabase &database, const QString &name) {
+    qCDebug(asyncdatabase) << "Marking migration" << name << "as done.";
 
     QSqlQuery query(database);
-    query.prepare(QStringLiteral("INSERT INTO __qt_schema_migrations (version) VALUES (:name)"));
+    if (!query.prepare(QStringLiteral("insert into " SCHAMA_MIGRATIONS_TABLE " (version) values (:name)"))) {
+        printSqlError(query);
+    }
     query.bindValue(QStringLiteral(":name"), QVariant(name));
-    query.exec();
+    if (!query.exec()) {
+        printSqlError(query);
+    }
 }
 
-bool check_migration_already_run(QSqlDatabase &database, const QString &name) {
-    qDebug() << "Checking whether migration" << name << "is already applied...";
+bool checkMigrationAlreadyRun(QSqlDatabase &database, const QString &name) {
+    qCDebug(asyncdatabase) << "Checking whether migration" << name << "is already applied";
     QSqlQuery query(database);
-    query.prepare(QStringLiteral("SELECT COUNT(*) FROM __qt_schema_migrations WHERE version = :name"));
+    query.prepare(QStringLiteral("select count(*) from " SCHAMA_MIGRATIONS_TABLE " where version = :name"));
     query.bindValue(QStringLiteral(":name"), QVariant(name));
     query.exec();
 
@@ -39,36 +55,59 @@ bool check_migration_already_run(QSqlDatabase &database, const QString &name) {
     int count = query.value(0).toInt();
     bool isApplied = count > 0;
     if (isApplied) {
-        qDebug() << "... yes";
+        qCDebug(asyncdatabase) << "… yes";
     } else {
-        qDebug() << "... no";
+        qDebug(asyncdatabase) << "… no";
     }
     return isApplied;
 }
 
 void runDatabaseMigrations(QSqlDatabase &database, const QString &migrationDirectory)
 {
-    create_internal_table(database);
+    createInternalTable(database);
 
     QDir dir(migrationDirectory);
     auto entries = dir.entryList(QDir::Filter::Dirs | QDir::Filter::NoDotAndDotDot, QDir::SortFlag::Name);
 
     for (const auto &entry : entries) {
         QDir subdir(entry);
-        if (!check_migration_already_run(database, subdir.dirName())) {
+        if (!checkMigrationAlreadyRun(database, subdir.dirName())) {
             QFile file(migrationDirectory % QDir::separator() % entry % QDir::separator() % "up.sql");
             if (!file.open(QFile::ReadOnly)) {
-                qDebug() << "Failed to open migration file";
+                qCDebug(asyncdatabase) << "Failed to open migration file" << file.fileName();
             }
-            qDebug() << "Running migration" << subdir.dirName();
-            database.exec(file.readAll());
-            mark_migration_run(database, subdir.dirName());
+            qCDebug(asyncdatabase) << "Running migration" << subdir.dirName();
+
+            // Hackish
+            const auto statements = file.readAll().split(';');
+
+            bool migrationSuccessful = true;
+            for (const QByteArray &statement : statements) {
+                const auto trimmedStatement = statement.trimmed();
+                QSqlQuery query(database);
+
+                if (!trimmedStatement.isEmpty()) {
+                    qCDebug(asyncdatabase) << "Running" << trimmedStatement;
+                    if (!query.prepare(trimmedStatement)) {
+                        printSqlError(query);
+                    } else {
+                        bool success = query.exec();
+                        migrationSuccessful &= success;
+                        if (!success) {
+                            printSqlError(query);
+                        }
+                    }
+                }
+            }
+            if (migrationSuccessful) {
+                markMigrationRun(database, subdir.dirName());
+            }
         }
     }
+    qCDebug(asyncdatabase) << "Migrations finished";
 }
 
 // Internal asynchronous database class
-
 QFuture<void> AsyncSqlDatabase::establishConnection(const DatabaseConfiguration &configuration)
 {
     return runAsync<void>([=, this] {
@@ -96,11 +135,62 @@ AsyncSqlDatabase::AsyncSqlDatabase()
 {
 }
 
+Row AsyncSqlDatabase::retrieveRow(const QSqlQuery &query) {
+    Row row;
+    int i = 0;
+
+    while (true) {
+        if (query.isValid()) {
+            QVariant value = query.value(i);
+            if (value.isValid()) {
+                row.push_back(std::move(value));
+                i++;
+            } else {
+                break;
+            }
+        } else {
+            break;
+        }
+    }
+    return row;
+}
+
+Rows AsyncSqlDatabase::retrieveRows(QSqlQuery &query)
+{
+    Rows rows;
+    while (query.next()) {
+        rows.push_back(retrieveRow(query));
+    }
+
+    return rows;
+}
+
+std::optional<Row> AsyncSqlDatabase::retrieveOptionalRow(QSqlQuery &query)
+{
+    query.next();
+
+    if (query.isValid()) {
+        return retrieveRow(query);
+    } else {
+        return std::nullopt;
+    }
+}
+
 AsyncSqlDatabase::~AsyncSqlDatabase() = default;
 
 void printSqlError(const QSqlQuery &query)
 {
-    qDebug() << "SQL error:" << query.lastError().text();
+    qCDebug(asyncdatabase) << "SQL error:" << query.lastError().text();
+}
+
+QSqlQuery prepareQuery(const QSqlDatabase &database, const QString &sqlQuery)
+{
+    qCDebug(asyncdatabase) << "Running" << sqlQuery;
+    QSqlQuery query(database);
+    if (!query.prepare(sqlQuery)) {
+        printSqlError(query);
+    }
+    return query;
 }
 
 }
@@ -160,12 +250,12 @@ const std::optional<QString> &DatabaseConfiguration::password() const {
 }
 
 
-std::unique_ptr<ThreadedDatabase> ThreadedDatabase::establishConnection(DatabaseConfiguration &config) {
+std::unique_ptr<ThreadedDatabase> ThreadedDatabase::establishConnection(DatabaseConfiguration config) {
     auto threadedDb = std::make_unique<ThreadedDatabase>();
     threadedDb->setObjectName(QStringLiteral("database thread"));
-    threadedDb->m_db->establishConnection(config);
     threadedDb->m_db->moveToThread(&*threadedDb);
     threadedDb->start();
+    threadedDb->m_db->establishConnection(config);
     return threadedDb;
 }
 

@@ -39,11 +39,6 @@ Kirigami.ApplicationWindow {
                 onPressed: {
                     popup.open()
                 }
-//                onTextChanged: {
-//                    if (!popup.opened) {
-//                        popup.open()
-//                    }
-//                }
 
                 Controls.Popup {
                     id: popup
@@ -51,7 +46,9 @@ Kirigami.ApplicationWindow {
                     y: searchField.y + searchField.height
                     visible: true
                     width: searchField.width
-                    height: Math.min(completionDelegate.height * completionList.rowCount, Kirigami.Units.gridUnit * 10)
+                    height: completionList
+                            ? Math.min(completionList.count * Kirigami.Units.gridUnit * 2, Kirigami.Units.gridUnit * 20)
+                            : Kirigami.Units.gridUnit * 20
 
                     contentItem: Controls.ScrollView {
                         Controls.ScrollBar.horizontal.policy: Controls.ScrollBar.AlwaysOff
@@ -61,9 +58,9 @@ Kirigami.ApplicationWindow {
                             delegate: Controls.ItemDelegate {
                                 id: completionDelegate
                                 width: parent.width
-                                text: modelData
+                                text: model.display
                                 onClicked: {
-                                    searchField.text = modelData
+                                    searchField.text = model.display
                                     searchField.accepted()
                                 }
                             }

@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2022 Jonah Brüchert <jbb@kaidan.im>
+//
+// SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+
 #pragma once
 
 class QUrl;
@@ -11,9 +15,6 @@ class QSqlDatabase;
 #include <QDebug>
 #include <QThread>
 #include <QSharedDataPointer>
-
-#include <QCoro/Task>
-#include <QCoro/QCoroFuture>
 
 #include <memory>
 #include <optional>
@@ -98,7 +99,12 @@ auto parseRows(const Rows &rows) -> std::vector<std::tuple<RowTypes...>> {
 
 class ThreadedDatabase : public QThread {
 public:
-    static std::unique_ptr<ThreadedDatabase> establishConnection(DatabaseConfiguration &config);
+    ///
+    /// \brief Connect to a database
+    /// \param configuration of the database connection
+    /// \return
+    ///
+    static std::unique_ptr<ThreadedDatabase> establishConnection(DatabaseConfiguration config);
 
     ///
     /// \brief Execute an SQL query on the database, ignoring the result.
@@ -139,7 +145,7 @@ public:
     /// \brief Like getResults, but for retrieving just one row.
     ///
     template <typename ...Args>
-    auto getResult(const QString &sqlQuery, Args... args) -> QFuture<Row> {
+    auto getResult(const QString &sqlQuery, Args... args) -> QFuture<std::optional<Row>> {
         return m_db->getResult(sqlQuery, args...);
     }
 
@@ -149,23 +155,3 @@ public:
 private:
     std::unique_ptr<asyncdatabase_private::AsyncSqlDatabase> m_db;
 };
-
-inline QCoro::Task<> test() {
-    DatabaseConfiguration config;
-    config.setDatabaseName("test.sqlite");
-    config.setType(DATABASE_TYPE_SQLITE);
-
-    auto db = ThreadedDatabase::establishConnection(config);
-    co_await db->runMigrations("/tmp/migrations/");
-
-    co_await db->execute(QStringLiteral("INSERT OR IGNORE INTO searches (id, query) VALUES (?, ?)"), 0, "Hello World");
-    co_await db->execute(QStringLiteral("INSERT OR IGNORE INTO searches (id, query) VALUES (?, ?)"), 1, "Rammstein");
-    const auto row = co_await db->getResult(QStringLiteral("SELECT * FROM searches LIMIT 1"));
-    const auto tuple = parseRow<int, QString>(row);
-    const auto rows = co_await db->getResults(QStringLiteral("SELECT * FROM searches WHERE id = ? OR id = ?"), 1, 0);
-    const auto tuples = parseRows<int, QString>(rows);
-
-    for (const auto &row : tuples) {
-        qDebug() << std::get<0>(row) << std::get<1>(row);
-    }
-}

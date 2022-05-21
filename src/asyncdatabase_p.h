@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2022 Jonah Brüchert <jbb@kaidan.im>
+//
+// SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+
 #pragma once
 
 #include <memory>
@@ -8,6 +12,7 @@
 #include <QFutureWatcher>
 #include <QSqlQuery>
 #include <QSqlDatabase>
+#include <QThread>
 
 class DatabaseConfiguration;
 
@@ -59,6 +64,8 @@ void runDatabaseMigrations(QSqlDatabase &database, const QString &migrationDirec
 
 void printSqlError(const QSqlQuery &query);
 
+QSqlQuery prepareQuery(const QSqlDatabase &database, const QString &sqlQuery);
+
 class AsyncSqlDatabase : public QObject {
     Q_OBJECT
 
@@ -69,28 +76,15 @@ public:
     auto getResults(const QString &sqlQuery, Args... args) -> QFuture<Rows> {
         return runAsync<Rows>([=, this] {
             auto query = executeQuery(sqlQuery, args...);
-            // Position on first row
-            query.next();
-            Rows rows;
-            do {
-                rows.push_back(retrieveRow(query));
-            } while (query.next());
-
-            return rows;
+            return retrieveRows(query);
         });
     }
 
     template <typename ...Args>
-    auto getResult(const QString &sqlQuery, Args... args) -> QFuture<Row> {
-        return runAsync<Row>([=, this] {
+    auto getResult(const QString &sqlQuery, Args... args) -> QFuture<std::optional<Row>> {
+        return runAsync<std::optional<Row>>([=, this] {
             auto query = executeQuery(sqlQuery, args...);
-            query.next();
-
-            if (query.isValid()) {
-                return retrieveRow(query);
-            } else {
-                return Row {};
-            }
+            return retrieveOptionalRow(query);
         });
     }
 
@@ -113,11 +107,8 @@ public:
 private:
     template <typename ...Args>
     QSqlQuery executeQuery(const QString &sqlQuery, Args... args) {
+        auto query = prepareQuery(*m_database, sqlQuery);
         auto argsTuple = std::make_tuple<Args...>(std::move(args)...);
-        QSqlQuery query(*m_database);
-        if (!query.prepare(sqlQuery)) {
-            printSqlError(query);
-        }
         int i = 0;
         asyncdatabase_private::iterate_tuple(argsTuple, [&](auto &arg) {
             query.bindValue(i, arg);
@@ -134,7 +125,6 @@ private:
     template <typename T, typename Functor>
     QFuture<T> runAsync(Functor func) {
         auto interface = std::make_shared<QFutureInterface<T>>();
-
         QMetaObject::invokeMethod(this, [interface, func] {
             if constexpr (!std::is_same_v<T, void>) {
                 auto result = func();
@@ -149,21 +139,9 @@ private:
         return interface->future();
     }
 
-    Row retrieveRow(const QSqlQuery &query) {
-        Row row;
-        int i = 0;
-
-        while (true) {
-            QVariant value = query.value(i);
-            if (value.isValid()) {
-                row.push_back(std::move(value));
-                i++;
-            } else {
-                break;
-            }
-        }
-        return row;
-    }
+    Row retrieveRow(const QSqlQuery &query);
+    Rows retrieveRows(QSqlQuery &query);
+    std::optional<Row> retrieveOptionalRow(QSqlQuery &query);
 
     std::unique_ptr<QSqlDatabase> m_database;
 };

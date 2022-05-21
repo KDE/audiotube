@@ -38,17 +38,6 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS Kirigami2 I18n CoreAddon
 find_package(pybind11 REQUIRED)
 find_package(Ytdlp REQUIRED RUNTIME)
 find_package(YTMusicAPI REQUIRED RUNTIME)
-find_package(SQLite3 REQUIRED)
-find_package(QCoro REQUIRED)
-
-qcoro_enable_coroutines()
-
-find_package(Corrosion)
-set_package_properties(Corrosion PROPERTIES
-    PURPOSE "Required to build the encryption support"
-    DESCRIPTION "CMake scripts to seamlessly build and link to targets using cargo"
-    URL https://github.com/AndrewGaspar/corrosion
-)
 
 ki18n_install(po)
 

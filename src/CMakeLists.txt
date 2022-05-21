@@ -10,12 +10,15 @@ target_link_libraries(ytm PUBLIC pybind11::embed)
 target_include_directories(ytm PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 target_compile_definitions(ytm PRIVATE -DRANDALL_WAS_HERE)
 
+add_library(asyncdatabase STATIC
+    asyncdatabase.cpp
+    asyncdatabase_p.h
+)
+
+target_include_directories(asyncdatabase PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_link_libraries(asyncdatabase PUBLIC Qt5::Sql)
+
 add_subdirectory(example)
-
-corrosion_import_crate(MANIFEST_PATH ${CMAKE_CURRENT_SOURCE_DIR}/rs/Cargo.toml)
-
-# Teach cmake that this static library needs to be linked against SQLite to find all symbols
-set_property(TARGET audiotube-rust APPEND PROPERTY INTERFACE_LINK_LIBRARIES SQLite::SQLite3)
 
 add_executable(audiotube
     main.cpp
@@ -32,7 +35,6 @@ add_executable(audiotube
     abstractytmusicmodel.cpp
     multiiterableview.h
     library.cpp
-    asyncdatabase.cpp
     resources.qrc
 )
 
@@ -46,15 +48,10 @@ target_link_libraries(audiotube
     KF5::I18n
     KF5::CoreAddons
     KF5::Crash
-    Qt5::Sql
-    QCoro::QCoro
     ytm
-    audiotube-rust
+    asyncdatabase
 )
 
-target_include_directories(audiotube PRIVATE
-    ${CMAKE_BINARY_DIR}/cargo/build/${Rust_CARGO_TARGET}/cxxbridge/audiotube-rust/src/)
-
-target_compile_definitions(audiotube PRIVATE -DQT_NO_KEYWORDS -DQT_NO_URL_CAST_FROM_STRING)
+target_compile_definitions(audiotube PRIVATE -DQT_NO_KEYWORDS -DQT_NO_URL_CAST_FROM_STRING -DQT_QML_DEBUG)
 
 install(TARGETS audiotube ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
