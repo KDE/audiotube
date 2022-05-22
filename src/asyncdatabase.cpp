@@ -78,6 +78,8 @@ void runDatabaseMigrations(QSqlDatabase &database, const QString &migrationDirec
             }
             qCDebug(asyncdatabase) << "Running migration" << subdir.dirName();
 
+            database.transaction();
+
             // Hackish
             const auto statements = file.readAll().split(';');
 
@@ -99,8 +101,12 @@ void runDatabaseMigrations(QSqlDatabase &database, const QString &migrationDirec
                     }
                 }
             }
+
             if (migrationSuccessful) {
+                database.commit();
                 markMigrationRun(database, subdir.dirName());
+            } else {
+                database.rollback();
             }
         }
     }
