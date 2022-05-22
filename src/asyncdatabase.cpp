@@ -113,31 +113,35 @@ void runDatabaseMigrations(QSqlDatabase &database, const QString &migrationDirec
     qCDebug(asyncdatabase) << "Migrations finished";
 }
 
+struct AsyncSqlDatabasePrivate {
+    QSqlDatabase database;
+};
+
 // Internal asynchronous database class
 QFuture<void> AsyncSqlDatabase::establishConnection(const DatabaseConfiguration &configuration)
 {
     return runAsync<void>([=, this] {
-        m_database = std::make_unique<QSqlDatabase>(QSqlDatabase::addDatabase(configuration.type()));
+        d->database = QSqlDatabase::addDatabase(configuration.type());
         if (configuration.databaseName()) {
-            m_database->setDatabaseName(*configuration.databaseName());
+            d->database.setDatabaseName(*configuration.databaseName());
         }
         if (configuration.hostName()) {
-            m_database->setHostName(*configuration.hostName());
+            d->database.setHostName(*configuration.hostName());
         }
         if (configuration.userName()) {
-            m_database->setUserName(*configuration.userName());
+            d->database.setUserName(*configuration.userName());
         }
         if (configuration.password()) {
-            m_database->setPassword(*configuration.password());
+            d->database.setPassword(*configuration.password());
         }
 
-        m_database->open();
+        d->database.open();
     });
 }
 
 AsyncSqlDatabase::AsyncSqlDatabase()
     : QObject()
-    , m_database(nullptr)
+    , d(std::make_unique<AsyncSqlDatabasePrivate>())
 {
 }
 
@@ -182,6 +186,11 @@ std::optional<Row> AsyncSqlDatabase::retrieveOptionalRow(QSqlQuery &query)
     }
 }
 
+QSqlDatabase &AsyncSqlDatabase::db()
+{
+    return d->database;
+}
+
 AsyncSqlDatabase::~AsyncSqlDatabase() = default;
 
 void printSqlError(const QSqlQuery &query)
@@ -194,6 +203,14 @@ QSqlQuery prepareQuery(const QSqlDatabase &database, const QString &sqlQuery)
     qCDebug(asyncdatabase) << "Running" << sqlQuery;
     QSqlQuery query(database);
     if (!query.prepare(sqlQuery)) {
+        printSqlError(query);
+    }
+    return query;
+}
+
+QSqlQuery runQuery(QSqlQuery &query)
+{
+    if (!query.exec()) {
         printSqlError(query);
     }
     return query;
@@ -256,18 +273,22 @@ const std::optional<QString> &DatabaseConfiguration::password() const {
 }
 
 
+struct ThreadedDatabasePrivate {
+    asyncdatabase_private::AsyncSqlDatabase db;
+};
+
 std::unique_ptr<ThreadedDatabase> ThreadedDatabase::establishConnection(DatabaseConfiguration config) {
     auto threadedDb = std::make_unique<ThreadedDatabase>();
     threadedDb->setObjectName(QStringLiteral("database thread"));
-    threadedDb->m_db->moveToThread(&*threadedDb);
+    threadedDb->d->db.moveToThread(&*threadedDb);
     threadedDb->start();
-    threadedDb->m_db->establishConnection(config);
+    threadedDb->d->db.establishConnection(config);
     return threadedDb;
 }
 
 ThreadedDatabase::ThreadedDatabase()
     : QThread()
-    , m_db(std::make_unique<asyncdatabase_private::AsyncSqlDatabase>())
+    , d(std::make_unique<ThreadedDatabasePrivate>())
 {
 }
 
@@ -275,4 +296,9 @@ ThreadedDatabase::~ThreadedDatabase()
 {
     quit();
     wait();
+}
+
+asyncdatabase_private::AsyncSqlDatabase &ThreadedDatabase::db()
+{
+    return d->db;
 }

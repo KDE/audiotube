@@ -64,7 +64,11 @@ void runDatabaseMigrations(QSqlDatabase &database, const QString &migrationDirec
 
 void printSqlError(const QSqlQuery &query);
 
+// non-template helper functions to allow patching a much as possible in the shared library
 QSqlQuery prepareQuery(const QSqlDatabase &database, const QString &sqlQuery);
+QSqlQuery runQuery(QSqlQuery &query);
+
+struct AsyncSqlDatabasePrivate;
 
 class AsyncSqlDatabase : public QObject {
     Q_OBJECT
@@ -97,7 +101,7 @@ public:
 
     auto runMigrations(const QString &migrationDirectory) -> QFuture<void> {
         return runAsync<void>([=, this] {
-            runDatabaseMigrations(*m_database, migrationDirectory);
+            runDatabaseMigrations(db(), migrationDirectory);
         });
     }
 
@@ -107,19 +111,14 @@ public:
 private:
     template <typename ...Args>
     QSqlQuery executeQuery(const QString &sqlQuery, Args... args) {
-        auto query = prepareQuery(*m_database, sqlQuery);
+        auto query = prepareQuery(db(), sqlQuery);
         auto argsTuple = std::make_tuple<Args...>(std::move(args)...);
         int i = 0;
         asyncdatabase_private::iterate_tuple(argsTuple, [&](auto &arg) {
             query.bindValue(i, arg);
             i++;
         });
-
-        if (!query.exec()) {
-            printSqlError(query);
-        }
-
-        return query;
+        return runQuery(query);
     }
 
     template <typename T, typename Functor>
@@ -143,7 +142,9 @@ private:
     Rows retrieveRows(QSqlQuery &query);
     std::optional<Row> retrieveOptionalRow(QSqlQuery &query);
 
-    std::unique_ptr<QSqlDatabase> m_database;
+    QSqlDatabase &db();
+
+    std::unique_ptr<AsyncSqlDatabasePrivate> d;
 };
 
 }

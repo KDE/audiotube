@@ -97,6 +97,8 @@ auto parseRows(const Rows &rows) -> std::vector<std::tuple<RowTypes...>> {
     return parsedRows;
 }
 
+struct ThreadedDatabasePrivate;
+
 class ThreadedDatabase : public QThread {
 public:
     ///
@@ -114,7 +116,7 @@ public:
     ///
     template <typename ...Args>
     auto execute(const QString &sqlQuery, Args... args) -> QFuture<void> {
-        return m_db->execute(sqlQuery, args...);
+        return db().execute(sqlQuery, args...);
     }
 
     ///
@@ -127,7 +129,7 @@ public:
     /// \return
     ///
     auto runMigrations(const QString &migrationDirectory) -> QFuture<void> {
-        return m_db->runMigrations(migrationDirectory);
+        return db().runMigrations(migrationDirectory);
     }
 
     ///
@@ -138,7 +140,7 @@ public:
     ///
     template <typename ...Args>
     auto getResults(const QString &sqlQuery, Args... args) -> QFuture<Rows> {
-        return m_db->getResults(sqlQuery, args...);
+        return db().getResults(sqlQuery, args...);
     }
 
     ///
@@ -146,12 +148,14 @@ public:
     ///
     template <typename ...Args>
     auto getResult(const QString &sqlQuery, Args... args) -> QFuture<std::optional<Row>> {
-        return m_db->getResult(sqlQuery, args...);
+        return db().getResult(sqlQuery, args...);
     }
 
     ThreadedDatabase();
     ~ThreadedDatabase();
 
 private:
-    std::unique_ptr<asyncdatabase_private::AsyncSqlDatabase> m_db;
+    asyncdatabase_private::AsyncSqlDatabase &db();
+
+    std::unique_ptr<ThreadedDatabasePrivate> d;
 };
