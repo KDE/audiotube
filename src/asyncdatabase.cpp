@@ -135,7 +135,12 @@ QFuture<void> AsyncSqlDatabase::establishConnection(const DatabaseConfiguration 
             d->database.setPassword(*configuration.password());
         }
 
-        d->database.open();
+        if (!d->database.open()) {
+            qCDebug(asyncdatabase) << "Failed to open database" << d->database.lastError().text();
+            if (configuration.databaseName()) {
+                qCDebug(asyncdatabase) << "Tried to use database" << *configuration.databaseName();
+            }
+        }
     });
 }
 
