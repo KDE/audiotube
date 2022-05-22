@@ -7,13 +7,18 @@
     "sources": [
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/b4/7b/0960d02701f783bb052ec69ea32789d878d2cce05a03950adbd75f164758/websockets-10.2.tar.gz",
-            "sha256": "8351c3c86b08156337b0e4ece0e3c5ec3e01fcd14e8950996832a23c99416098"
+            "url": "https://files.pythonhosted.org/packages/9a/bf/1bc7e3096ddc2c398b3d04176530a9c02efe08546d9730c9eef0b07a0a43/yt_dlp-2022.5.18-py2.py3-none-any.whl",
+            "sha256": "deec1009442312c1e2ee5298966842194d0e950b433f0d4fc844ef464b9c32a7"
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/2a/18/70c32fe9357f3eea18598b23aa9ed29b1711c3001835f7cf99a9818985d0/Brotli-1.0.9.zip",
-            "sha256": "4d1b810aa0ed773f81dceda2cc7b403d01057458730e309856356d4ef4188438"
+            "url": "https://files.pythonhosted.org/packages/11/dd/e015f3780f42dd9af62cf0107b44ea1298926627ecd70c17b0e484e95bcd/certifi-2022.5.18.1-py3-none-any.whl",
+            "sha256": "f1d53542ee8cbedbe2118b5686372fb33c297fcd6379b050cca0ef13a597382a"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/f8/a3/622d9acbfb9a71144b5d7609906bc648c62e3ca5fdbb1c8cca222949d82c/websockets-10.3.tar.gz",
+            "sha256": "fc06cc8073c8e87072138ba1e431300e2d408f054b27047d047b549455066ff4"
         },
         {
             "type": "file",
@@ -22,8 +27,8 @@
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/c0/61/3a08dc08c0c60498a0136a7eec1a098f08be79f75bf35fdd0a15a1bace70/yt_dlp-2022.3.8.2-py3-none-any.whl",
-            "sha256": "05179f0f2c34f06910003bb9f80af68ff798b072ca0f826c0e6704a3fbd5b306"
+            "url": "https://files.pythonhosted.org/packages/2a/18/70c32fe9357f3eea18598b23aa9ed29b1711c3001835f7cf99a9818985d0/Brotli-1.0.9.zip",
+            "sha256": "4d1b810aa0ed773f81dceda2cc7b403d01057458730e309856356d4ef4188438"
         },
         {
             "type": "file",
