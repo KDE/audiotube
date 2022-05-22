@@ -17,8 +17,12 @@ namespace ranges = std::ranges;
 Library::Library(QObject *parent)
     : QObject{parent}
     , m_database(ThreadedDatabase::establishConnection([]() -> DatabaseConfiguration {
+        const auto databaseDirectory = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation);
+        // Make sure the database directory exists
+        QDir(databaseDirectory).mkpath(QStringLiteral("."));
+
         DatabaseConfiguration config;
-        config.setDatabaseName(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) % QDir::separator() % "library.sqlite");
+        config.setDatabaseName(databaseDirectory % QDir::separator() % "library.sqlite");
         config.setType(DATABASE_TYPE_SQLITE);
         return config;
     }()))
