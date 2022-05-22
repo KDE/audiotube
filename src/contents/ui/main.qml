@@ -36,10 +36,50 @@ Kirigami.ApplicationWindow {
                 selectByMouse: true
                 Layout.fillWidth: true
                 Layout.maximumWidth: 400
+                onPressed: {
+                    popup.open()
+                }
+
+                Controls.Popup {
+                    id: popup
+                    x: searchField.y
+                    y: searchField.y + searchField.height
+                    visible: true
+                    width: searchField.width
+                    height: completionList
+                            ? Math.min(completionList.count * Kirigami.Units.gridUnit * 2, Kirigami.Units.gridUnit * 20)
+                            : Kirigami.Units.gridUnit * 20
+
+                    contentItem: Controls.ScrollView {
+                        Controls.ScrollBar.horizontal.policy: Controls.ScrollBar.AlwaysOff
+                        ListView {
+                            id: completionList
+                            model: Library.searches
+                            delegate: Controls.ItemDelegate {
+                                id: completionDelegate
+                                width: parent.width
+                                text: model.display
+                                onClicked: {
+                                    searchField.text = model.display
+                                    searchField.accepted()
+                                }
+                            }
+                        }
+                    }
+                }
+
                 onAccepted: {
                     pageStack.clear()
-                    pageStack.push("qrc:/SearchPage.qml", {
-                               "searchQuery": text})
+
+                    if (text) {
+                        Library.addSearch(text)
+                        pageStack.push("qrc:/SearchPage.qml", {
+                                   "searchQuery": text})
+                    } else {
+                        pageStack.replace("qrc:/LibraryPage.qml")
+                    }
+
+                    popup.close()
                 }
             }
             Item {
@@ -56,7 +96,7 @@ Kirigami.ApplicationWindow {
         id: contextDrawer
     }
 
-    pageStack.initialPage: "qrc:/SearchPage.qml"
+    pageStack.initialPage: "qrc:/LibraryPage.qml"
 
     function play(videoId) {
         UserPlaylistModel.initialVideoId = videoId

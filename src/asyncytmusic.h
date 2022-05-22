@@ -6,6 +6,8 @@
 
 #include <QObject>
 #include <QThread>
+#include <QFuture>
+#include <QFutureWatcher>
 
 #include <vector>
 
@@ -45,6 +47,50 @@ private:
     std::unique_ptr<T> m_item = nullptr;
 };
 
+///
+/// Similar to QObject::connect, except that the first two arguments are replaced with a QFuture.
+///
+template <typename T, typename QObjectDerivedType, typename Function>
+void connectFuture(const QFuture<T> &future, QObjectDerivedType *self, const Function &fun) {
+    auto watcher = std::make_shared<QFutureWatcher<T>>();
+    watcher->setFuture(future);
+    QObject::connect(watcher.get(), &QFutureWatcherBase::finished, self, [self, watcher, fun, future] {
+        if constexpr (std::is_same_v<void, T>) {
+            if constexpr (std::is_member_function_pointer_v<Function>) {
+                (self->*fun)();
+            } else {
+                fun();
+            }
+        } else if (future.resultCount() > 0) {
+            if constexpr (std::is_member_function_pointer_v<Function>) {
+                (self->*fun)(watcher->result());
+            } else {
+                fun(watcher->result());
+            }
+        }
+    });
+}
+
+///
+/// Applies a function to a the contained value of a QFuture once it finishes.
+/// @returns a QFuture that finishes once the future given as first argument finished
+///
+template <typename T, typename U, typename Func>
+QFuture<U> mapFuture(const QFuture<T> &future, Func mapFunction) {
+    auto watcher = std::make_shared<QFutureWatcher<T>>();
+    watcher->setFuture(future);
+
+    auto interface = std::make_shared<QFutureInterface<U>>();
+    QObject::connect(watcher.get(), &QFutureWatcherBase::finished, watcher.get(), [interface, watcher, mapFunction] {
+        auto result = watcher->result();
+        auto mapped = mapFunction(std::move(result));
+        interface->reportResult(mapped);
+        interface->reportFinished();
+    });
+
+    return interface->future();
+}
+
 class AsyncYTMusic : public QObject
 {
     friend class YTMusicThread;
@@ -53,30 +99,22 @@ class AsyncYTMusic : public QObject
 
 public:
     // public functions need to be thread safe
-    void search(const QString &query);
-    Q_SIGNAL void searchFinished(std::vector<search::SearchResultItem>);
+    QFuture<std::vector<search::SearchResultItem>> search(const QString &query);
 
-    void fetchArtist(const QString &channelId);
-    Q_SIGNAL void fetchArtistFinished(artist::Artist);
+    QFuture<artist::Artist> fetchArtist(const QString &channelId);
 
-    void fetchAlbum(const QString &browseId);
-    Q_SIGNAL void fetchAlbumFinished(album::Album);
+    QFuture<album::Album> fetchAlbum(const QString &browseId);
 
-    void fetchSong(const QString &videoId);
-    Q_SIGNAL void fetchSongFinished(song::Song);
+    QFuture<std::optional<song::Song> > fetchSong(const QString &videoId);
 
-    void fetchPlaylist(const QString &playlistId);
-    Q_SIGNAL void fetchPlaylistFinished(playlist::Playlist);
+    QFuture<playlist::Playlist> fetchPlaylist(const QString &playlistId);
 
-    void fetchArtistAlbums(const QString &channelId, const QString &params);
-    Q_SIGNAL void fetchArtistAlbumsFinished(std::vector<artist::Artist::Album>);
+    QFuture<std::vector<artist::Artist::Album>> fetchArtistAlbums(const QString &channelId, const QString &params);
 
-    void extractVideoInfo(const QString &videoId);
-    Q_SIGNAL void extractVideoInfoFinished(video_info::VideoInfo);
+    QFuture<video_info::VideoInfo> extractVideoInfo(const QString &videoId);
 
-    void fetchWatchPlaylist(const std::optional<QString> &videoId = std::nullopt ,
+    QFuture<watch::Playlist> fetchWatchPlaylist(const std::optional<QString> &videoId = std::nullopt ,
                             const std::optional<QString> &playlistId = std::nullopt);
-    Q_SIGNAL void fetchWatchPlaylistFinished(watch::Playlist);
 
     Q_SIGNAL void errorOccurred(const QString &error);
 
@@ -85,7 +123,21 @@ protected:
 
 private:
     /// Invokes the given function on the thread of the YTMusic object, and handles exceptions that occur while invoking it.
-    void invokeAndCatchOnThread(const std::function<void()> &fun);
+    template <typename ReturnType>
+    QFuture<ReturnType> invokeAndCatchOnThread(const std::function<ReturnType()> &fun) {
+        auto interface = std::make_shared<QFutureInterface<ReturnType>>();
+        QMetaObject::invokeMethod(this, [=, this]() {
+            try {
+                ReturnType val = fun();
+                interface->reportResult(val);
+                interface->reportFinished();
+            } catch (const std::exception &err) {
+                interface->reportFinished();
+                Q_EMIT errorOccurred(QString::fromLocal8Bit(err.what()));
+            }
+        });
+        return interface->future();
+    }
 
     // Python interpreter will be initialized from the thread calling the methods
     Lazy<YTMusic> m_ytm;

@@ -10,6 +10,14 @@ target_link_libraries(ytm PUBLIC pybind11::embed)
 target_include_directories(ytm PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 target_compile_definitions(ytm PRIVATE -DRANDALL_WAS_HERE)
 
+add_library(asyncdatabase STATIC
+    asyncdatabase.cpp
+    asyncdatabase_p.h
+)
+
+target_include_directories(asyncdatabase PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_link_libraries(asyncdatabase PUBLIC Qt5::Sql)
+
 add_subdirectory(example)
 
 add_executable(audiotube
@@ -26,6 +34,7 @@ add_executable(audiotube
     playerutils.cpp
     abstractytmusicmodel.cpp
     multiiterableview.h
+    library.cpp
     resources.qrc
 )
 
@@ -40,7 +49,9 @@ target_link_libraries(audiotube
     KF5::CoreAddons
     KF5::Crash
     ytm
+    asyncdatabase
 )
-target_compile_definitions(audiotube PRIVATE -DQT_NO_KEYWORDS -DQT_NO_URL_CAST_FROM_STRING)
+
+target_compile_definitions(audiotube PRIVATE -DQT_NO_KEYWORDS -DQT_NO_URL_CAST_FROM_STRING -DQT_QML_DEBUG)
 
 install(TARGETS audiotube ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

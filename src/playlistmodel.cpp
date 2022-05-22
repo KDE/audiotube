@@ -15,17 +15,17 @@ PlaylistModel::PlaylistModel(QObject *parent)
 {
     connect(this, &PlaylistModel::playlistIdChanged, this, [=, this] {
         setLoading(true);
-        YTMusicThread::instance()->fetchPlaylist(m_playlistId);
-    });
-    connect(&YTMusicThread::instance().get(), &AsyncYTMusic::fetchPlaylistFinished, this, [this](const playlist::Playlist &playlist) {
-        setLoading(false);
-        beginResetModel();
-        m_playlist = playlist;
-        std::sort(m_playlist.thumbnails.begin(), m_playlist.thumbnails.end());
-        endResetModel();
+        auto future = YTMusicThread::instance()->fetchPlaylist(m_playlistId);
+        connectFuture(future, this, [=, this](const playlist::Playlist &playlist) {
+            setLoading(false);
+            beginResetModel();
+            m_playlist = playlist;
+            std::sort(m_playlist.thumbnails.begin(), m_playlist.thumbnails.end());
+            endResetModel();
 
-        Q_EMIT titleChanged();
-        Q_EMIT thumbnailUrlChanged();
+            Q_EMIT titleChanged();
+            Q_EMIT thumbnailUrlChanged();
+        });
     });
 }
 

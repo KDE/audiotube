@@ -6,12 +6,22 @@
 
 #include <QThread>
 #include <QDebug>
+#include <QJsonObject>
+#include <QJsonArray>
+#include <QFutureInterface>
 
 #include <pybind11/embed.h>
 
 #include <iostream>
 
 namespace py = pybind11;
+
+#include <iostream>
+#include <algorithm>
+#include <unordered_map>
+#include <ranges>
+#include <type_traits>
+#include <memory>
 
 template <typename R, typename T, typename OP>
 std::optional<R> map_optional(const std::optional<T> &optional, OP op) {
@@ -49,95 +59,82 @@ AsyncYTMusic::AsyncYTMusic(QObject *parent)
 //
 // search
 //
-void AsyncYTMusic::search(const QString &query)
+QFuture<std::vector<search::SearchResultItem>> AsyncYTMusic::search(const QString &query)
 {
-    invokeAndCatchOnThread([=, this]() {
-        Q_EMIT searchFinished(m_ytm->search(query.toStdString()));
+    return invokeAndCatchOnThread<std::vector<search::SearchResultItem>>([=, this]() {
+        return m_ytm->search(query.toStdString());
     });
 }
 
 //
 // fetchArtist
 //
-void AsyncYTMusic::fetchArtist(const QString &channelId)
+QFuture<artist::Artist> AsyncYTMusic::fetchArtist(const QString &channelId)
 {
-    invokeAndCatchOnThread([=, this]() {
-        Q_EMIT fetchArtistFinished(m_ytm->get_artist(channelId.toStdString()));
+    return invokeAndCatchOnThread<artist::Artist>([=, this]() {
+        return m_ytm->get_artist(channelId.toStdString());
     });
 }
 
 //
 // fetchAlbum
 //
-void AsyncYTMusic::fetchAlbum(const QString &browseId)
+QFuture<album::Album> AsyncYTMusic::fetchAlbum(const QString &browseId)
 {
-    invokeAndCatchOnThread([=, this]() {
-        Q_EMIT fetchAlbumFinished(m_ytm->get_album(browseId.toStdString()));
+    return invokeAndCatchOnThread<album::Album>([=, this]() {
+        return m_ytm->get_album(browseId.toStdString());
     });
 }
 
 //
 // fetchSong
 //
-void AsyncYTMusic::fetchSong(const QString &videoId)
+QFuture<std::optional<song::Song>> AsyncYTMusic::fetchSong(const QString &videoId)
 {
-    invokeAndCatchOnThread([=, this]() {
-        auto maybeSong = m_ytm->get_song(videoId.toStdString());
-        if (maybeSong.has_value()) {
-            Q_EMIT fetchSongFinished(*maybeSong);
-        }
+    return invokeAndCatchOnThread<std::optional<song::Song>>([=, this]() {
+        return m_ytm->get_song(videoId.toStdString());
     });
 }
 
 //
 // fetchPlaylist
 //
-void AsyncYTMusic::fetchPlaylist(const QString &playlistId) {
-    invokeAndCatchOnThread([=, this]() {
-        Q_EMIT fetchPlaylistFinished(m_ytm->get_playlist(playlistId.toStdString()));
+QFuture<playlist::Playlist> AsyncYTMusic::fetchPlaylist(const QString &playlistId) {
+    return invokeAndCatchOnThread<playlist::Playlist>([=, this]() {
+        return m_ytm->get_playlist(playlistId.toStdString());
     });
 }
 
 //
 // fetchArtistAlbum
 //
-void AsyncYTMusic::fetchArtistAlbums(const QString &channelId, const QString &params)
+QFuture<std::vector<artist::Artist::Album>> AsyncYTMusic::fetchArtistAlbums(const QString &channelId, const QString &params)
 {
-    invokeAndCatchOnThread([=, this]() {
-        Q_EMIT fetchArtistAlbumsFinished(m_ytm->get_artist_albums(channelId.toStdString(), params.toStdString()));
+    return invokeAndCatchOnThread<std::vector<artist::Artist::Album>>([=, this]() {
+        return m_ytm->get_artist_albums(channelId.toStdString(), params.toStdString());
     });
 }
 
 //
 // extractVideoInfo
 //
-void AsyncYTMusic::extractVideoInfo(const QString &videoId)
+QFuture<video_info::VideoInfo> AsyncYTMusic::extractVideoInfo(const QString &videoId)
 {
-    invokeAndCatchOnThread([=, this]() {
-        Q_EMIT extractVideoInfoFinished(m_ytm->extract_video_info(videoId.toStdString()));
+    return invokeAndCatchOnThread<video_info::VideoInfo>([=, this]() {
+        return m_ytm->extract_video_info(videoId.toStdString());
     });
 }
 
 //
 // fetchWatchPlaylist
 //
-void AsyncYTMusic::fetchWatchPlaylist(const std::optional<QString> &videoId, const std::optional<QString> &playlistId)
+QFuture<watch::Playlist> AsyncYTMusic::fetchWatchPlaylist(const std::optional<QString> &videoId, const std::optional<QString> &playlistId)
 {
-    invokeAndCatchOnThread([=, this]() {
-        Q_EMIT fetchWatchPlaylistFinished(m_ytm->get_watch_playlist(
+    return invokeAndCatchOnThread<watch::Playlist>([=, this]() {
+        return m_ytm->get_watch_playlist(
             map_optional<std::string>(videoId, &QString::toStdString),
             map_optional<std::string>(playlistId,  &QString::toStdString)
-        ));
-    });
-}
-
-void AsyncYTMusic::invokeAndCatchOnThread(const std::function<void()> &fun) {
-    QMetaObject::invokeMethod(this, [=, this]() {
-        try {
-            fun();
-        } catch (const py::error_already_set &err) {
-            Q_EMIT errorOccurred(QString::fromLocal8Bit(err.what()));
-        }
+        );
     });
 }
 
