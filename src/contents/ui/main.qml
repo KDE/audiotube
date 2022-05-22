@@ -47,7 +47,7 @@ Kirigami.ApplicationWindow {
                     visible: true
                     width: searchField.width
                     height: completionList
-                            ? Math.min(completionList.count * Kirigami.Units.gridUnit * 2, Kirigami.Units.gridUnit * 20)
+                            ? Math.min(completionList.count * Kirigami.Units.gridUnit * 2 + Kirigami.Units.gridUnit * 2, Kirigami.Units.gridUnit * 20)
                             : Kirigami.Units.gridUnit * 20
 
                     contentItem: Controls.ScrollView {
@@ -58,6 +58,7 @@ Kirigami.ApplicationWindow {
                             delegate: Controls.ItemDelegate {
                                 id: completionDelegate
                                 width: parent.width
+                                height: Kirigami.Units.gridUnit * 2
                                 text: model.display
                                 onClicked: {
                                     searchField.text = model.display
