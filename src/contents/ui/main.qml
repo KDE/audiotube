@@ -56,6 +56,8 @@ Kirigami.ApplicationWindow {
                             id: completionList
                             model: Library.searches
                             delegate: Controls.ItemDelegate {
+                                Kirigami.Theme.colorSet: Kirigami.Theme.Window
+                                Kirigami.Theme.inherit: false
                                 id: completionDelegate
                                 width: parent.width
                                 height: Kirigami.Units.gridUnit * 2
