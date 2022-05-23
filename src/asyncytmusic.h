@@ -75,12 +75,13 @@ void connectFuture(const QFuture<T> &future, QObjectDerivedType *self, const Fun
 /// Applies a function to a the contained value of a QFuture once it finishes.
 /// @returns a QFuture that finishes once the future given as first argument finished
 ///
-template <typename T, typename U, typename Func>
-QFuture<U> mapFuture(const QFuture<T> &future, Func mapFunction) {
+template <typename T, typename Func>
+QFuture<std::invoke_result_t<Func, T>> mapFuture(const QFuture<T> &future, Func mapFunction) {
+    using ReturnType = std::invoke_result_t<Func, T>;
     auto watcher = std::make_shared<QFutureWatcher<T>>();
     watcher->setFuture(future);
 
-    auto interface = std::make_shared<QFutureInterface<U>>();
+    auto interface = std::make_shared<QFutureInterface<ReturnType>>();
     QObject::connect(watcher.get(), &QFutureWatcherBase::finished, watcher.get(), [interface, watcher, mapFunction] {
         auto result = watcher->result();
         auto mapped = mapFunction(std::move(result));
@@ -123,8 +124,9 @@ protected:
 
 private:
     /// Invokes the given function on the thread of the YTMusic object, and handles exceptions that occur while invoking it.
-    template <typename ReturnType>
-    QFuture<ReturnType> invokeAndCatchOnThread(const std::function<ReturnType()> &fun) {
+    template <typename Func>
+    QFuture<std::invoke_result_t<Func>> invokeAndCatchOnThread(Func fun) {
+        using ReturnType = std::invoke_result_t<Func>;
         auto interface = std::make_shared<QFutureInterface<ReturnType>>();
         QMetaObject::invokeMethod(this, [=, this]() {
             try {

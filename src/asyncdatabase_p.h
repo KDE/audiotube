@@ -98,7 +98,7 @@ public:
 
     template <typename T, typename ...Args>
     auto getResults(const QString &sqlQuery, Args... args) -> QFuture<std::vector<T>> {
-        return runAsync<std::vector<T>>([=, this] {
+        return runAsync([=, this] {
             auto query = executeQuery(sqlQuery, args...);
             const auto rows = parseRows<typename T::ColumnTypes>(retrieveRows(query));
 
@@ -110,7 +110,7 @@ public:
 
     template <typename T, typename ...Args>
     auto getResult(const QString &sqlQuery, Args... args) -> QFuture<std::optional<T>> {
-        return runAsync<std::optional<T>>([=, this]() -> std::optional<T> {
+        return runAsync([=, this]() -> std::optional<T> {
             auto query = executeQuery(sqlQuery, args...);
             if (const auto row = retrieveOptionalRow(query)) {
                 return T::fromSql(parseRow<typename T::ColumnTypes>(*row));
@@ -122,13 +122,13 @@ public:
 
     template <typename ...Args>
     auto execute(const QString &sqlQuery, Args... args) -> QFuture<void> {
-        return runAsync<void>([=, this] {
+        return runAsync([=, this] {
             executeQuery(sqlQuery, args...);
         });
     }
 
     auto runMigrations(const QString &migrationDirectory) -> QFuture<void> {
-        return runAsync<void>([=, this] {
+        return runAsync([=, this] {
             runDatabaseMigrations(db(), migrationDirectory);
         });
     }
@@ -149,11 +149,12 @@ private:
         return runQuery(query);
     }
 
-    template <typename T, typename Functor>
-    QFuture<T> runAsync(Functor func) {
-        auto interface = std::make_shared<QFutureInterface<T>>();
+    template <typename Functor>
+    QFuture<std::invoke_result_t<Functor>> runAsync(Functor func) {
+        using ReturnType = std::invoke_result_t<Functor>;
+        auto interface = std::make_shared<QFutureInterface<ReturnType>>();
         QMetaObject::invokeMethod(this, [interface, func] {
-            if constexpr (!std::is_same_v<T, void>) {
+            if constexpr (!std::is_same_v<ReturnType, void>) {
                 auto result = func();
                 interface->reportResult(result);
             } else {

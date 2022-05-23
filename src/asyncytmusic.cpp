@@ -23,8 +23,8 @@ namespace py = pybind11;
 #include <type_traits>
 #include <memory>
 
-template <typename R, typename T, typename OP>
-std::optional<R> map_optional(const std::optional<T> &optional, OP op) {
+template <typename T, typename OP>
+std::optional<std::invoke_result_t<OP, T>> mapOptional(const std::optional<T> &optional, OP op) {
     if (optional.has_value()) {
         if constexpr (std::is_member_function_pointer<OP>::value) {
             return (&optional.value()->*op)();
@@ -61,7 +61,7 @@ AsyncYTMusic::AsyncYTMusic(QObject *parent)
 //
 QFuture<std::vector<search::SearchResultItem>> AsyncYTMusic::search(const QString &query)
 {
-    return invokeAndCatchOnThread<std::vector<search::SearchResultItem>>([=, this]() {
+    return invokeAndCatchOnThread([=, this]() {
         return m_ytm->search(query.toStdString());
     });
 }
@@ -71,7 +71,7 @@ QFuture<std::vector<search::SearchResultItem>> AsyncYTMusic::search(const QStrin
 //
 QFuture<artist::Artist> AsyncYTMusic::fetchArtist(const QString &channelId)
 {
-    return invokeAndCatchOnThread<artist::Artist>([=, this]() {
+    return invokeAndCatchOnThread([=, this]() {
         return m_ytm->get_artist(channelId.toStdString());
     });
 }
@@ -81,7 +81,7 @@ QFuture<artist::Artist> AsyncYTMusic::fetchArtist(const QString &channelId)
 //
 QFuture<album::Album> AsyncYTMusic::fetchAlbum(const QString &browseId)
 {
-    return invokeAndCatchOnThread<album::Album>([=, this]() {
+    return invokeAndCatchOnThread([=, this]() {
         return m_ytm->get_album(browseId.toStdString());
     });
 }
@@ -91,7 +91,7 @@ QFuture<album::Album> AsyncYTMusic::fetchAlbum(const QString &browseId)
 //
 QFuture<std::optional<song::Song>> AsyncYTMusic::fetchSong(const QString &videoId)
 {
-    return invokeAndCatchOnThread<std::optional<song::Song>>([=, this]() {
+    return invokeAndCatchOnThread([=, this]() {
         return m_ytm->get_song(videoId.toStdString());
     });
 }
@@ -100,7 +100,7 @@ QFuture<std::optional<song::Song>> AsyncYTMusic::fetchSong(const QString &videoI
 // fetchPlaylist
 //
 QFuture<playlist::Playlist> AsyncYTMusic::fetchPlaylist(const QString &playlistId) {
-    return invokeAndCatchOnThread<playlist::Playlist>([=, this]() {
+    return invokeAndCatchOnThread([=, this]() {
         return m_ytm->get_playlist(playlistId.toStdString());
     });
 }
@@ -110,7 +110,7 @@ QFuture<playlist::Playlist> AsyncYTMusic::fetchPlaylist(const QString &playlistI
 //
 QFuture<std::vector<artist::Artist::Album>> AsyncYTMusic::fetchArtistAlbums(const QString &channelId, const QString &params)
 {
-    return invokeAndCatchOnThread<std::vector<artist::Artist::Album>>([=, this]() {
+    return invokeAndCatchOnThread([=, this]() {
         return m_ytm->get_artist_albums(channelId.toStdString(), params.toStdString());
     });
 }
@@ -120,7 +120,7 @@ QFuture<std::vector<artist::Artist::Album>> AsyncYTMusic::fetchArtistAlbums(cons
 //
 QFuture<video_info::VideoInfo> AsyncYTMusic::extractVideoInfo(const QString &videoId)
 {
-    return invokeAndCatchOnThread<video_info::VideoInfo>([=, this]() {
+    return invokeAndCatchOnThread([=, this]() {
         return m_ytm->extract_video_info(videoId.toStdString());
     });
 }
@@ -130,10 +130,10 @@ QFuture<video_info::VideoInfo> AsyncYTMusic::extractVideoInfo(const QString &vid
 //
 QFuture<watch::Playlist> AsyncYTMusic::fetchWatchPlaylist(const std::optional<QString> &videoId, const std::optional<QString> &playlistId)
 {
-    return invokeAndCatchOnThread<watch::Playlist>([=, this]() {
+    return invokeAndCatchOnThread([=, this]() {
         return m_ytm->get_watch_playlist(
-            map_optional<std::string>(videoId, &QString::toStdString),
-            map_optional<std::string>(playlistId,  &QString::toStdString)
+            mapOptional(videoId, &QString::toStdString),
+            mapOptional(playlistId,  &QString::toStdString)
         );
     });
 }

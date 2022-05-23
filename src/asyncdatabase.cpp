@@ -120,7 +120,7 @@ struct AsyncSqlDatabasePrivate {
 // Internal asynchronous database class
 QFuture<void> AsyncSqlDatabase::establishConnection(const DatabaseConfiguration &configuration)
 {
-    return runAsync<void>([=, this] {
+    return runAsync([=, this] {
         d->database = QSqlDatabase::addDatabase(configuration.type());
         if (configuration.databaseName()) {
             d->database.setDatabaseName(*configuration.databaseName());
