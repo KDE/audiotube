@@ -10,10 +10,6 @@ class QSqlDatabase;
 #include <QString>
 #include <QObject>
 #include <QFuture>
-#include <QFutureWatcher>
-#include <QSqlQuery>
-#include <QDebug>
-#include <QThread>
 #include <QSharedDataPointer>
 
 #include <memory>
