@@ -60,6 +60,26 @@ void connectFuture(const QFuture<T> &future, QObjectDerivedType *self, const Fun
 using Row  = std::vector<QVariant>;
 using Rows = std::vector<Row>;
 
+template <typename RowTypesTuple>
+auto parseRow(const Row &row) -> RowTypesTuple
+{
+    auto tuple = RowTypesTuple();
+    int i = 0;
+    asyncdatabase_private::iterate_tuple(tuple, [&](auto &elem) {
+        elem = row.at(i).value<std::decay_t<decltype(elem)>>();
+        i++;
+    });
+    return tuple;
+}
+
+template <typename RowTypesTuple>
+auto parseRows(const Rows &rows) -> std::vector<RowTypesTuple> {
+    std::vector<RowTypesTuple> parsedRows;
+    parsedRows.reserve(rows.size());
+    std::ranges::transform(rows, std::back_inserter(parsedRows), parseRow<RowTypesTuple>);
+    return parsedRows;
+}
+
 void runDatabaseMigrations(QSqlDatabase &database, const QString &migrationDirectory);
 
 void printSqlError(const QSqlQuery &query);

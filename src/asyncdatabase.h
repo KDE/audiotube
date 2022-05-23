@@ -23,9 +23,6 @@ class QSqlDatabase;
 
 #include "asyncdatabase_p.h"
 
-using Row  = std::vector<QVariant>;
-using Rows = std::vector<Row>;
-
 struct DatabaseConfigurationPrivate;
 
 ///
@@ -65,37 +62,6 @@ private:
 /// The SQLite database driver
 ///
 const QString DATABASE_TYPE_SQLITE = QStringLiteral("QSQLITE");
-
-///
-/// Parse the row into a tuple of the given types.
-/// The types need to be deserializable from QVariant.
-///
-template <typename RowTypesTuple>
-auto parseRow(const Row &row) -> RowTypesTuple
-{
-    auto tuple = RowTypesTuple();
-    int i = 0;
-    asyncdatabase_private::iterate_tuple(tuple, [&](auto &elem) {
-        elem = row.at(i).value<std::decay_t<decltype(elem)>>();
-        i++;
-    });
-    return tuple;
-}
-
-///
-/// Parse the rows into a list of tuples of the given types.
-/// The types need to be deserializable from QVariant.
-///
-template <typename RowTypesTuple>
-auto parseRows(const Rows &rows) -> std::vector<RowTypesTuple> {
-    std::vector<RowTypesTuple> parsedRows;
-    parsedRows.reserve(rows.size());
-    for (const auto &row : rows) {
-        parsedRows.push_back(parseRow<RowTypesTuple>(row));
-    }
-
-    return parsedRows;
-}
 
 template <typename T>
 concept FromSql = requires(T v, typename T::ColumnTypes row)
