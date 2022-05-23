@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-05 00:45+0000\n"
+"POT-Creation-Date: 2022-05-23 00:47+0000\n"
 "PO-Revision-Date: 2021-12-05 16:48+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -27,7 +27,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "freekdekruijf@kde.nl"
 
-#: contents/ui/AlbumPage.qml:19 contents/ui/PlayerFooter.qml:173
+#: contents/ui/AlbumPage.qml:19 contents/ui/PlayerFooter.qml:192
 #: contents/ui/PlaylistPage.qml:19
 #, kde-format
 msgid "Play"
@@ -84,37 +84,47 @@ msgstr "OK"
 msgid "Cancel"
 msgstr "Annuleren"
 
-#: contents/ui/main.qml:51
+#: contents/ui/LibraryPage.qml:15
+#, kde-format
+msgid "Favourites"
+msgstr ""
+
+#: contents/ui/LibraryPage.qml:67
+#, kde-format
+msgid "Most played"
+msgstr ""
+
+#: contents/ui/main.qml:94
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
 
-#: contents/ui/PlayerFooter.qml:106
+#: contents/ui/PlayerFooter.qml:124
 #, kde-format
 msgid "Remove Track"
 msgstr "Track verwijderen"
 
-#: contents/ui/PlayerFooter.qml:123
+#: contents/ui/PlayerFooter.qml:141
 #, kde-format
 msgid "Clear"
 msgstr "Wissen"
 
-#: contents/ui/PlayerFooter.qml:128 contents/ui/PlaylistPage.qml:26
+#: contents/ui/PlayerFooter.qml:146 contents/ui/PlaylistPage.qml:26
 #, kde-format
 msgid "Shuffle"
 msgstr "Willekeurig afspelen"
 
-#: contents/ui/PlayerFooter.qml:173
+#: contents/ui/PlayerFooter.qml:192
 #, kde-format
 msgid "Pause"
 msgstr "Pauzeren"
 
-#: contents/ui/PlayerFooter.qml:203
+#: contents/ui/PlayerFooter.qml:222
 #, kde-format
 msgid "No media playing"
 msgstr "Er speelt geen medium"
 
-#: contents/ui/PlayerFooter.qml:247
+#: contents/ui/PlayerFooter.qml:266
 #, kde-format
 msgid "Expand"
 msgstr "Uitbreiden"

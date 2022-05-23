@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-05 00:45+0000\n"
+"POT-Creation-Date: 2022-05-23 00:47+0000\n"
 "PO-Revision-Date: 2021-09-17 20:09+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -27,7 +27,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "raghu@raghukamath.com"
 
-#: contents/ui/AlbumPage.qml:19 contents/ui/PlayerFooter.qml:173
+#: contents/ui/AlbumPage.qml:19 contents/ui/PlayerFooter.qml:192
 #: contents/ui/PlaylistPage.qml:19
 #, kde-format
 msgid "Play"
@@ -83,37 +83,47 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-#: contents/ui/main.qml:51
+#: contents/ui/LibraryPage.qml:15
+#, kde-format
+msgid "Favourites"
+msgstr ""
+
+#: contents/ui/LibraryPage.qml:67
+#, kde-format
+msgid "Most played"
+msgstr ""
+
+#: contents/ui/main.qml:94
 #, kde-format
 msgid "AudioTube"
 msgstr "ओडियो-ट्यूब"
 
-#: contents/ui/PlayerFooter.qml:106
+#: contents/ui/PlayerFooter.qml:124
 #, kde-format
 msgid "Remove Track"
 msgstr "गाना हटाएँ"
 
-#: contents/ui/PlayerFooter.qml:123
+#: contents/ui/PlayerFooter.qml:141
 #, kde-format
 msgid "Clear"
 msgstr "साफ करें"
 
-#: contents/ui/PlayerFooter.qml:128 contents/ui/PlaylistPage.qml:26
+#: contents/ui/PlayerFooter.qml:146 contents/ui/PlaylistPage.qml:26
 #, kde-format
 msgid "Shuffle"
 msgstr "फेंटें"
 
-#: contents/ui/PlayerFooter.qml:173
+#: contents/ui/PlayerFooter.qml:192
 #, kde-format
 msgid "Pause"
 msgstr "रोकें"
 
-#: contents/ui/PlayerFooter.qml:203
+#: contents/ui/PlayerFooter.qml:222
 #, kde-format
 msgid "No media playing"
 msgstr "कोई मीडिया नहीं बजा रहा है"
 
-#: contents/ui/PlayerFooter.qml:247
+#: contents/ui/PlayerFooter.qml:266
 #, kde-format
 msgid "Expand"
 msgstr "विस्तृत करें"

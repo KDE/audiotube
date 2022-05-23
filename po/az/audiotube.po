@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-05 00:45+0000\n"
+"POT-Creation-Date: 2022-05-23 00:47+0000\n"
 "PO-Revision-Date: 2022-04-22 18:44+0400\n"
 "Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -27,7 +27,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "xxmn77@gmail.com"
 
-#: contents/ui/AlbumPage.qml:19 contents/ui/PlayerFooter.qml:173
+#: contents/ui/AlbumPage.qml:19 contents/ui/PlayerFooter.qml:192
 #: contents/ui/PlaylistPage.qml:19
 #, kde-format
 msgid "Play"
@@ -84,37 +84,47 @@ msgstr "OLDU"
 msgid "Cancel"
 msgstr "İmtina"
 
-#: contents/ui/main.qml:51
+#: contents/ui/LibraryPage.qml:15
+#, kde-format
+msgid "Favourites"
+msgstr ""
+
+#: contents/ui/LibraryPage.qml:67
+#, kde-format
+msgid "Most played"
+msgstr ""
+
+#: contents/ui/main.qml:94
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
 
-#: contents/ui/PlayerFooter.qml:106
+#: contents/ui/PlayerFooter.qml:124
 #, kde-format
 msgid "Remove Track"
 msgstr "Mahnını silin"
 
-#: contents/ui/PlayerFooter.qml:123
+#: contents/ui/PlayerFooter.qml:141
 #, kde-format
 msgid "Clear"
 msgstr "Təmizləyin"
 
-#: contents/ui/PlayerFooter.qml:128 contents/ui/PlaylistPage.qml:26
+#: contents/ui/PlayerFooter.qml:146 contents/ui/PlaylistPage.qml:26
 #, kde-format
 msgid "Shuffle"
 msgstr "Qarışıq"
 
-#: contents/ui/PlayerFooter.qml:173
+#: contents/ui/PlayerFooter.qml:192
 #, kde-format
 msgid "Pause"
 msgstr "Fasilə"
 
-#: contents/ui/PlayerFooter.qml:203
+#: contents/ui/PlayerFooter.qml:222
 #, kde-format
 msgid "No media playing"
 msgstr "Media faylı oynadılmır"
 
-#: contents/ui/PlayerFooter.qml:247
+#: contents/ui/PlayerFooter.qml:266
 #, kde-format
 msgid "Expand"
 msgstr "Açmaq"

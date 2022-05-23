@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2021-12-05 00:45+0000\n"
+"POT-Creation-Date: 2022-05-23 00:47+0000\n"
 "PO-Revision-Date: 2022-05-15 15:46\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -27,7 +27,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "weearc@kde.org, tysontan@tysontan.com"
 
-#: contents/ui/AlbumPage.qml:19 contents/ui/PlayerFooter.qml:173
+#: contents/ui/AlbumPage.qml:19 contents/ui/PlayerFooter.qml:192
 #: contents/ui/PlaylistPage.qml:19
 #, kde-format
 msgid "Play"
@@ -82,37 +82,47 @@ msgstr "确定"
 msgid "Cancel"
 msgstr "取消"
 
-#: contents/ui/main.qml:51
+#: contents/ui/LibraryPage.qml:15
+#, kde-format
+msgid "Favourites"
+msgstr ""
+
+#: contents/ui/LibraryPage.qml:67
+#, kde-format
+msgid "Most played"
+msgstr ""
+
+#: contents/ui/main.qml:94
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
 
-#: contents/ui/PlayerFooter.qml:106
+#: contents/ui/PlayerFooter.qml:124
 #, kde-format
 msgid "Remove Track"
 msgstr "移除曲目"
 
-#: contents/ui/PlayerFooter.qml:123
+#: contents/ui/PlayerFooter.qml:141
 #, kde-format
 msgid "Clear"
 msgstr "清除"
 
-#: contents/ui/PlayerFooter.qml:128 contents/ui/PlaylistPage.qml:26
+#: contents/ui/PlayerFooter.qml:146 contents/ui/PlaylistPage.qml:26
 #, kde-format
 msgid "Shuffle"
 msgstr "随机播放"
 
-#: contents/ui/PlayerFooter.qml:173
+#: contents/ui/PlayerFooter.qml:192
 #, kde-format
 msgid "Pause"
 msgstr "暂停"
 
-#: contents/ui/PlayerFooter.qml:203
+#: contents/ui/PlayerFooter.qml:222
 #, kde-format
 msgid "No media playing"
 msgstr "没有正在播放的媒体"
 
-#: contents/ui/PlayerFooter.qml:247
+#: contents/ui/PlayerFooter.qml:266
 #, kde-format
 msgid "Expand"
 msgstr "展开"
