@@ -17,7 +17,9 @@
 class FavouriteWatcher;
 
 struct Song {
-    static Song fromSql(std::tuple<QString, QString, QString, QString> tuple) {
+    using ColumnTypes = std::tuple<QString, QString, QString, QString>;
+
+    static Song fromSql(ColumnTypes tuple) {
         auto [videoId, title, artist, album] = tuple;
         return Song {videoId, title, artist, album};
     }
@@ -49,7 +51,9 @@ private:
 };
 
 struct PlayedSong {
-    static PlayedSong fromSql(std::tuple<QString, int, QString, QString, QString> tuple) {
+    using ColumnTypes = std::tuple<QString, int, QString, QString, QString>;
+
+    static PlayedSong fromSql(ColumnTypes tuple) {
         auto [videoId, plays, title, artist, album] = tuple;
         return PlayedSong {videoId, title, artist, album, plays};
     }
@@ -86,12 +90,12 @@ class SearchHistoryModel : public QAbstractListModel {
     Q_OBJECT
 
 public:
-    SearchHistoryModel(QFuture<std::vector<QString> > &&historyFuture, QObject *parent = nullptr);
+    SearchHistoryModel(QFuture<std::vector<SingleValue<QString>>> &&historyFuture, QObject *parent = nullptr);
     int rowCount(const QModelIndex &parent) const override;
     QVariant data(const QModelIndex &index, int role) const override;
 
 private:
-    std::vector<QString> m_history;
+    std::vector<SingleValue<QString>> m_history;
 };
 
 class Library : public QObject

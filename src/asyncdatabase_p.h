@@ -76,19 +76,27 @@ class AsyncSqlDatabase : public QObject {
 public:
     QFuture<void> establishConnection(const DatabaseConfiguration &configuration);
 
-    template <typename ...Args>
-    auto getResults(const QString &sqlQuery, Args... args) -> QFuture<Rows> {
-        return runAsync<Rows>([=, this] {
+    template <typename T, typename ...Args>
+    auto getResults(const QString &sqlQuery, Args... args) -> QFuture<std::vector<T>> {
+        return runAsync<std::vector<T>>([=, this] {
             auto query = executeQuery(sqlQuery, args...);
-            return retrieveRows(query);
+            const auto rows = parseRows<typename T::ColumnTypes>(retrieveRows(query));
+
+            std::vector<T> deserializedRows;
+            std::ranges::transform(rows, std::back_inserter(deserializedRows), T::fromSql);
+            return deserializedRows;
         });
     }
 
-    template <typename ...Args>
-    auto getResult(const QString &sqlQuery, Args... args) -> QFuture<std::optional<Row>> {
-        return runAsync<std::optional<Row>>([=, this] {
+    template <typename T, typename ...Args>
+    auto getResult(const QString &sqlQuery, Args... args) -> QFuture<std::optional<T>> {
+        return runAsync<std::optional<T>>([=, this]() -> std::optional<T> {
             auto query = executeQuery(sqlQuery, args...);
-            return retrieveOptionalRow(query);
+            if (const auto row = retrieveOptionalRow(query)) {
+                return T::fromSql(parseRow<typename T::ColumnTypes>(*row));
+            }
+
+            return std::nullopt;
         });
     }
 
