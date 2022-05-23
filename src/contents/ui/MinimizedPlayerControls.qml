@@ -21,11 +21,14 @@ Item {
     required property var info // VideoInfoExtractor object
     required property var audio // Audio object
     
+    readonly property bool isWidescreen: width >= Kirigami.Units.gridUnit * 40
+    
     signal requestOpen()
     
     Rectangle {
         id: miniProgressBar
         z: 1
+        visible: root.isWidescreen
         anchors.top: parent.top
         anchors.left: parent.left
         height: root.progressBarHeight
@@ -40,6 +43,8 @@ Item {
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
+            Layout.maximumWidth: Kirigami.Units.gridUnit * 20
+            Layout.preferredWidth: Kirigami.Units.gridUnit * 20
             color: Qt.rgba(0, 0, 0, trackClick.containsMouse ? 0.1 : trackClick.pressed ? 0.3 : 0)
 
             RowLayout {
@@ -116,6 +121,49 @@ Item {
                 anchors.fill: parent
                 hoverEnabled: true
                 onClicked: root.requestOpen()
+            }
+        }
+        
+        RowLayout {
+            visible: root.isWidescreen
+            Layout.preferredWidth: 0
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+            Layout.leftMargin: Kirigami.Units.largeSpacing
+            Layout.rightMargin: Kirigami.Units.largeSpacing
+            spacing: Kirigami.Units.smallSpacing
+            
+            Label {
+                Layout.alignment: Qt.AlignVCenter
+                color: "white"
+                visible: info.title
+                text: PlayerUtils.formatTimestamp(audio.position)
+            }
+
+            Slider {
+                Layout.alignment: Qt.AlignVCenter
+                Layout.fillWidth: true
+                from: 0
+                to: audio.duration
+                value: audio.position
+                enabled: audio.seekable
+                onMoved: {
+                    console.log("Value:", value);
+                    audio.seek(Math.floor(value));
+                }
+
+                Behavior on value {
+                    NumberAnimation {
+                        duration: 1000
+                    }
+                }
+            }
+
+            Label {
+                Layout.alignment: Qt.AlignVCenter
+                color: "white"
+                visible: info.title
+                text: PlayerUtils.formatTimestamp(audio.duration)
             }
         }
         
