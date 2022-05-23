@@ -40,16 +40,7 @@ Library &Library::instance()
 
 FavouritesModel *Library::favourites()
 {
-    auto future = mapFuture<Rows, std::vector<Song>>(
-        m_database->getResults("select * from favourites natural join songs"),
-        [](auto rows)
-    {
-        std::vector<Song> songs;
-        ranges::transform(parseRows<QString, QString, QString, QString>(rows),
-                          std::back_inserter(songs),
-                          Song::fromSql);
-        return songs;
-    });
+    auto future = m_database->getResults<Song>("select * from favourites natural join songs");
     return new FavouritesModel(std::move(future), this);
 }
 
@@ -75,16 +66,7 @@ FavouriteWatcher *Library::favouriteWatcher(const QString &videoId)
 
 SearchHistoryModel *Library::searches()
 {
-    return new SearchHistoryModel(mapFuture<Rows, std::vector<QString>>(
-        m_database->getResults("select (search_query) from searches order by search_id desc"),
-        [](const auto &rows)
-    {
-        std::vector<QString> out;
-        ranges::transform(rows, std::back_inserter(out), [](auto row) {
-            return row[0].toString();
-        });
-        return out;
-    }), this);
+    return new SearchHistoryModel(m_database->getResults<Search>("select (search_query) from searches order by search_id desc"), this);
 }
 
 void Library::addSearch(const QString &text)
@@ -94,16 +76,7 @@ void Library::addSearch(const QString &text)
 
 PlaybackHistoryModel *Library::playbackHistory()
 {
-    auto future = mapFuture<Rows, std::vector<PlayedSong>>(
-        m_database->getResults("select * from played_songs natural join songs"),
-        [](auto rows)
-    {
-        std::vector<PlayedSong> playedSongs;
-        ranges::transform(parseRows<QString, int, QString, QString, QString>(rows),
-                          std::back_inserter(playedSongs),
-                          PlayedSong::fromSql);
-        return playedSongs;
-    });
+    auto future = m_database->getResults<PlayedSong>("select * from played_songs natural join songs");
     return new PlaybackHistoryModel(std::move(future), this);
 }
 
@@ -118,16 +91,7 @@ void Library::addPlaybackHistoryItem(const QString &videoId, const QString &titl
 
 PlaybackHistoryModel *Library::mostPlayed()
 {
-    auto future = mapFuture<Rows, std::vector<PlayedSong>>(
-        m_database->getResults("select * from played_songs natural join songs order by plays desc limit 10"),
-        [](auto rows)
-    {
-        std::vector<PlayedSong> playedSongs;
-        ranges::transform(parseRows<QString, int, QString, QString, QString>(rows),
-                          std::back_inserter(playedSongs),
-                          PlayedSong::fromSql);
-        return playedSongs;
-    });
+    auto future = m_database->getResults<PlayedSong>("select * from played_songs natural join songs order by plays desc limit 10");
     return new PlaybackHistoryModel(std::move(future), this);
 }
 
@@ -247,10 +211,9 @@ FavouriteWatcher::FavouriteWatcher(Library *library, const QString &videoId)
     : QObject(library), m_videoId(videoId), m_library(library)
 {
     auto update = [this] {
-        connectFuture(m_library->database().getResult("select count(*) from favourites where video_id = ?", m_videoId), this, [this](auto row) {
-            if (row) {
-                auto [favCount] = parseRow<int>(*row);
-                m_isFavourite = favCount > 0;
+        connectFuture(m_library->database().getResult<Count>("select count(*) from favourites where video_id = ?", m_videoId), this, [this](auto count) {
+            if (count) {
+                m_isFavourite = (*count).count > 0;
                 Q_EMIT isFavouriteChanged();
             }
         });
@@ -263,7 +226,7 @@ bool FavouriteWatcher::isFavourite() const {
     return m_isFavourite;
 }
 
-SearchHistoryModel::SearchHistoryModel(QFuture<std::vector<QString>> &&historyFuture, QObject *parent)
+SearchHistoryModel::SearchHistoryModel(QFuture<std::vector<Search> > &&historyFuture, QObject *parent)
     : QAbstractListModel(parent)
 {
     connectFuture(historyFuture, this, [this](const auto history) {
@@ -280,7 +243,7 @@ int SearchHistoryModel::rowCount(const QModelIndex &parent) const {
 QVariant SearchHistoryModel::data(const QModelIndex &index, int role) const {
     switch (role) {
     case Qt::DisplayRole:
-        return m_history[index.row()];
+        return m_history[index.row()].query;
     }
 
     Q_UNREACHABLE();

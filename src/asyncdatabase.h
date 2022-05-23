@@ -70,10 +70,10 @@ const QString DATABASE_TYPE_SQLITE = QStringLiteral("QSQLITE");
 /// Parse the row into a tuple of the given types.
 /// The types need to be deserializable from QVariant.
 ///
-template <typename ...RowTypes>
-auto parseRow(const Row &row) -> std::tuple<RowTypes...>
+template <typename RowTypesTuple>
+auto parseRow(const Row &row) -> RowTypesTuple
 {
-    auto tuple = std::tuple<RowTypes...>();
+    auto tuple = RowTypesTuple();
     int i = 0;
     asyncdatabase_private::iterate_tuple(tuple, [&](auto &elem) {
         elem = row.at(i).value<std::decay_t<decltype(elem)>>();
@@ -86,12 +86,12 @@ auto parseRow(const Row &row) -> std::tuple<RowTypes...>
 /// Parse the rows into a list of tuples of the given types.
 /// The types need to be deserializable from QVariant.
 ///
-template <typename ...RowTypes>
-auto parseRows(const Rows &rows) -> std::vector<std::tuple<RowTypes...>> {
-    std::vector<std::tuple<RowTypes...>> parsedRows;
+template <typename RowTypesTuple>
+auto parseRows(const Rows &rows) -> std::vector<RowTypesTuple> {
+    std::vector<RowTypesTuple> parsedRows;
     parsedRows.reserve(rows.size());
     for (const auto &row : rows) {
-        parsedRows.push_back(parseRow<RowTypes...>(row));
+        parsedRows.push_back(parseRow<RowTypesTuple>(row));
     }
 
     return parsedRows;
@@ -138,17 +138,17 @@ public:
     /// \param parameters to bind to the placeholders in the SQL query.
     /// \return Future of a list of lists of variants.
     ///
-    template <typename ...Args>
-    auto getResults(const QString &sqlQuery, Args... args) -> QFuture<Rows> {
-        return db().getResults(sqlQuery, args...);
+    template <typename T, typename ...Args>
+    auto getResults(const QString &sqlQuery, Args... args) -> QFuture<std::vector<T>> {
+        return db().getResults<T, Args...>(sqlQuery, args...);
     }
 
     ///
     /// \brief Like getResults, but for retrieving just one row.
     ///
-    template <typename ...Args>
-    auto getResult(const QString &sqlQuery, Args... args) -> QFuture<std::optional<Row>> {
-        return db().getResult(sqlQuery, args...);
+    template <typename T, typename ...Args>
+    auto getResult(const QString &sqlQuery, Args... args) -> QFuture<std::optional<T>> {
+        return db().getResult<T, Args...>(sqlQuery, args...);
     }
 
     ThreadedDatabase();
