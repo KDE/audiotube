@@ -97,6 +97,14 @@ auto parseRows(const Rows &rows) -> std::vector<RowTypesTuple> {
     return parsedRows;
 }
 
+template <typename T>
+concept FromSql = requires(T v, typename T::ColumnTypes row)
+{
+    typename T::ColumnTypes;
+    { std::tuple(row) } -> std::same_as<typename T::ColumnTypes>;
+    { T::fromSql(row) } -> std::same_as<T>;
+};
+
 struct ThreadedDatabasePrivate;
 
 class ThreadedDatabase : public QThread {
@@ -115,6 +123,7 @@ public:
     /// \return
     ///
     template <typename ...Args>
+    requires std::conjunction_v<std::is_convertible<Args, Args>...>
     auto execute(const QString &sqlQuery, Args... args) -> QFuture<void> {
         return db().execute(sqlQuery, args...);
     }
@@ -138,7 +147,11 @@ public:
     /// \param parameters to bind to the placeholders in the SQL query.
     /// \return Future of a list of lists of variants.
     ///
+    /// T must provide a tuple of the column types as `using ColumnTypes = std::tuple<...>`
+    /// and a `static T fromSql(ColumnTypes tuple)` deserialization method.
+    ///
     template <typename T, typename ...Args>
+    requires FromSql<T> && std::conjunction_v<std::is_convertible<Args, Args>...>
     auto getResults(const QString &sqlQuery, Args... args) -> QFuture<std::vector<T>> {
         return db().getResults<T, Args...>(sqlQuery, args...);
     }
@@ -147,6 +160,7 @@ public:
     /// \brief Like getResults, but for retrieving just one row.
     ///
     template <typename T, typename ...Args>
+    requires FromSql<T> && std::conjunction_v<std::is_convertible<Args, Args>...>
     auto getResult(const QString &sqlQuery, Args... args) -> QFuture<std::optional<T>> {
         return db().getResult<T, Args...>(sqlQuery, args...);
     }
@@ -160,6 +174,9 @@ private:
     std::unique_ptr<ThreadedDatabasePrivate> d;
 };
 
+///
+/// \brief Deserialize just a single value from a query result.
+///
 template <typename T>
 struct SingleValue {
     using ColumnTypes = std::tuple<T>;
