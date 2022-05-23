@@ -123,7 +123,7 @@ public:
     /// \return
     ///
     template <typename ...Args>
-    requires std::conjunction_v<std::is_convertible<Args, Args>...>
+    requires std::conjunction_v<std::is_convertible<Args, QVariant>...>
     auto execute(const QString &sqlQuery, Args... args) -> QFuture<void> {
         return db().execute(sqlQuery, args...);
     }
@@ -151,7 +151,7 @@ public:
     /// and a `static T fromSql(ColumnTypes tuple)` deserialization method.
     ///
     template <typename T, typename ...Args>
-    requires FromSql<T> && std::conjunction_v<std::is_convertible<Args, Args>...>
+    requires FromSql<T> && std::conjunction_v<std::is_convertible<Args, QVariant>...>
     auto getResults(const QString &sqlQuery, Args... args) -> QFuture<std::vector<T>> {
         return db().getResults<T, Args...>(sqlQuery, args...);
     }
@@ -160,7 +160,7 @@ public:
     /// \brief Like getResults, but for retrieving just one row.
     ///
     template <typename T, typename ...Args>
-    requires FromSql<T> && std::conjunction_v<std::is_convertible<Args, Args>...>
+    requires FromSql<T> && std::conjunction_v<std::is_convertible<Args, QVariant>...>
     auto getResult(const QString &sqlQuery, Args... args) -> QFuture<std::optional<T>> {
         return db().getResult<T, Args...>(sqlQuery, args...);
     }
