@@ -28,7 +28,7 @@ Item {
             anchors.fill: parent
             color: Qt.rgba(25, 25, 30, 1)
         }
-        
+
         Image {
             anchors.fill: parent
             asynchronous: true
@@ -171,7 +171,7 @@ Item {
                         height: 512
                     }
 
-                    fillMode: Image.PreserveAspectFit
+                    fillMode: Image.PreserveAspectCrop
                 }
             }
             

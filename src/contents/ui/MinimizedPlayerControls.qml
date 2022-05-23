@@ -72,7 +72,7 @@ Item {
 
                         sourceSize.width: 512
                         sourceSize.height: 512
-                        fillMode: Image.PreserveAspectFit
+                        fillMode: Image.PreserveAspectCrop
                     }
                 }
                 
