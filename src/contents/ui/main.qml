@@ -11,6 +11,8 @@ import org.kde.ytmusic 1.0
 
 Kirigami.ApplicationWindow {
     id: root
+    width: 360
+    height: 720
 
     property alias searchField: searchField
 

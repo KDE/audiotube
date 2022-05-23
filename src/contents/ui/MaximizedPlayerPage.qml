@@ -330,7 +330,7 @@ Item {
                     id: favouriteButton
                     readonly property QtObject favouriteWatcher: Library.favouriteWatcher(info.videoId)
                     Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
-                    Layout.preferredHeight: Kirigami.Units.gridUnit * 3
+                    Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
                     Layout.maximumWidth: height
                     Layout.preferredWidth: height
                     
@@ -340,8 +340,8 @@ Item {
                                     : Library.addFavourite(info.videoId, info.title)
                     
                     icon.name: favouriteWatcher ? (favouriteWatcher.isFavourite ? "starred-symbolic" : "non-starred-symbolic") : ""
-                    icon.width: Kirigami.Units.gridUnit * 2
-                    icon.height: Kirigami.Units.gridUnit * 2
+                    icon.width: Kirigami.Units.gridUnit * 1.5
+                    icon.height: Kirigami.Units.gridUnit * 1.5
                     icon.color: "white"
                     
                     Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
@@ -351,15 +351,15 @@ Item {
                 ToolButton {
                     id: skipBackwardButton
                     Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
-                    Layout.preferredHeight: Kirigami.Units.gridUnit * 3
+                    Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
                     Layout.maximumWidth: height
                     Layout.preferredWidth: height
                     
                     enabled: false
                     
                     icon.name: "media-skip-backward"
-                    icon.width: Kirigami.Units.gridUnit * 2
-                    icon.height: Kirigami.Units.gridUnit * 2
+                    icon.width: Kirigami.Units.gridUnit * 1.5
+                    icon.height: Kirigami.Units.gridUnit * 1.5
                     icon.color: "white"
                     
                     Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
@@ -388,7 +388,7 @@ Item {
                 ToolButton {
                     id: skipForwardButton
                     Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
-                    Layout.preferredHeight: Kirigami.Units.gridUnit * 3
+                    Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
                     Layout.maximumWidth: height
                     Layout.preferredWidth: height
                     
@@ -396,8 +396,8 @@ Item {
                     onClicked: UserPlaylistModel.next()
                     
                     icon.name: "media-skip-forward"
-                    icon.width: Kirigami.Units.gridUnit * 2
-                    icon.height: Kirigami.Units.gridUnit * 2
+                    icon.width: Kirigami.Units.gridUnit * 1.5
+                    icon.height: Kirigami.Units.gridUnit * 1.5
                     icon.color: "white"
                     
                     Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
@@ -407,15 +407,15 @@ Item {
                 ToolButton {
                     id: shuffleButton
                     Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
-                    Layout.preferredHeight: Kirigami.Units.gridUnit * 3
+                    Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
                     Layout.maximumWidth: height
                     Layout.preferredWidth: height
                     
                     onClicked: UserPlaylistModel.shufflePlaylist()
                     
                     icon.name: "media-playlist-shuffle"
-                    icon.width: Kirigami.Units.gridUnit * 2
-                    icon.height: Kirigami.Units.gridUnit * 2
+                    icon.width: Kirigami.Units.gridUnit * 1.5
+                    icon.height: Kirigami.Units.gridUnit * 1.5
                     icon.color: "white"
                     
                     Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
