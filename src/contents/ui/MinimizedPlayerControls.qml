@@ -28,7 +28,7 @@ Item {
     Rectangle {
         id: miniProgressBar
         z: 1
-        visible: root.isWidescreen
+        visible: !root.isWidescreen
         anchors.top: parent.top
         anchors.left: parent.left
         height: root.progressBarHeight
