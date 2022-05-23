@@ -460,10 +460,12 @@ video_info::VideoInfo YTMusic::extract_video_info(const std::string &video_id) c
     using namespace pybind11::literals;
 
     const auto info = d->get_ytdl().attr("extract_info")(video_id, "download"_a=py::bool_(false));
-
+    
     return {
         info["id"].cast<std::string>(),
         info["title"].cast<std::string>(),
+        info.contains("artist") ? info["artist"].cast<std::string>() : "",
+        info.contains("channel") ? info["channel"].cast<std::string>() : "",
         extract_py_list<video_info::Format>(info["formats"]),
         info["thumbnail"].cast<std::string>()
     };

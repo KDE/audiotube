@@ -15,7 +15,6 @@ Kirigami.ApplicationWindow {
     property alias searchField: searchField
 
     header: Controls.Control {
-        visible: !footer.maximized
         padding: Kirigami.Units.largeSpacing
 
         background: Rectangle {
@@ -93,8 +92,6 @@ Kirigami.ApplicationWindow {
 
     title: i18n("AudioTube")
 
-    controlsVisible: !footer.maximized
-
     contextDrawer: Kirigami.ContextDrawer {
         id: contextDrawer
     }
@@ -122,6 +119,16 @@ Kirigami.ApplicationWindow {
             showPassiveNotification(error)
         }
     }
+    
+    pageStack.anchors.bottomMargin: playerFooter.minimizedPlayerHeight + 1
 
-    footer: PlayerFooter {}
+    // media player
+    PlayerFooter {
+        id: playerFooter
+        anchors.topMargin: -root.header.height
+        anchors.fill: parent
+        
+        // only expand flicking area to full screen when it is open
+        z: (contentY === 0) ? -1 : 999
+    }
 }

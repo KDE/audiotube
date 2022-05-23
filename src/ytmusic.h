@@ -241,6 +241,8 @@ struct Format {
 struct VideoInfo {
     std::string id;
     std::string title;
+    std::string artist;
+    std::string channel;
     std::vector<Format> formats;
     std::string thumbnail;
 
