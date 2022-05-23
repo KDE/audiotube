@@ -17,6 +17,8 @@ class VideoInfoExtractor : public QObject
 
     Q_PROPERTY(QUrl audioUrl READ audioUrl NOTIFY audioUrlChanged)
     Q_PROPERTY(QString title READ title NOTIFY titleChanged)
+    Q_PROPERTY(QString artist READ artist NOTIFY artistChanged) // may be empty if it is a video
+    Q_PROPERTY(QString channel READ channel NOTIFY channelChanged)
     Q_PROPERTY(QString thumbnail READ thumbnail NOTIFY thumbnailChanged)
     Q_PROPERTY(bool loading READ loading WRITE setLoading NOTIFY loadingChanged)
 
@@ -32,6 +34,12 @@ public:
 
     QString title() const;
     Q_SIGNAL void titleChanged();
+    
+    QString artist() const;
+    Q_SIGNAL void artistChanged();
+    
+    QString channel() const;
+    Q_SIGNAL void channelChanged();
 
     QString thumbnail() const;
     Q_SIGNAL void thumbnailChanged();

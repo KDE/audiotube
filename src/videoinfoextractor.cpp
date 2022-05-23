@@ -17,6 +17,8 @@ VideoInfoExtractor::VideoInfoExtractor(QObject *parent)
             m_videoInfo = {};
             Q_EMIT audioUrlChanged();
             Q_EMIT titleChanged();
+            Q_EMIT artistChanged();
+            Q_EMIT channelChanged();
             Q_EMIT songChanged();
             Q_EMIT thumbnailChanged();
             return;
@@ -30,6 +32,8 @@ VideoInfoExtractor::VideoInfoExtractor(QObject *parent)
             setLoading(false);
             Q_EMIT audioUrlChanged();
             Q_EMIT titleChanged();
+            Q_EMIT artistChanged();
+            Q_EMIT channelChanged();
             Q_EMIT songChanged();
             Q_EMIT thumbnailChanged();
         });
@@ -79,6 +83,16 @@ void VideoInfoExtractor::setVideoId(const QString &videoId)
 QString VideoInfoExtractor::title() const
 {
     return QString::fromStdString(m_videoInfo.title);
+}
+
+QString VideoInfoExtractor::artist() const
+{
+    return QString::fromStdString(m_videoInfo.artist);
+}
+
+QString VideoInfoExtractor::channel() const
+{
+    return QString::fromStdString(m_videoInfo.channel);
 }
 
 QString VideoInfoExtractor::thumbnail() const

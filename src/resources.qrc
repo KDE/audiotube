@@ -14,6 +14,8 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
         <file alias="PlaylistPage.qml">contents/ui/PlaylistPage.qml</file>
         <file alias="ConfirmationMessage.qml">contents/ui/ConfirmationMessage.qml</file>
         <file alias="LibraryPage.qml">contents/ui/LibraryPage.qml</file>
+        <file alias="MinimizedPlayerControls.qml">contents/ui/MinimizedPlayerControls.qml</file>
+        <file alias="MaximizedPlayerPage.qml">contents/ui/MaximizedPlayerPage.qml</file>
         <file>migrations/2022-05-20-194850_init/down.sql</file>
         <file>migrations/2022-05-20-194850_init/up.sql</file>
     </qresource>
