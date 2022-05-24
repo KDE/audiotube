@@ -65,6 +65,8 @@ Item {
                     Image {
                         id: mainIcon
                         anchors.fill: parent
+                        
+                        visible: !loadingIndicator.visible
                         asynchronous: true
                         mipmap: true
 
@@ -73,6 +75,14 @@ Item {
                         sourceSize.width: 512
                         sourceSize.height: 512
                         fillMode: Image.PreserveAspectCrop
+                    }
+                    
+                    BusyIndicator {
+                        id: loadingIndicator
+                        anchors.centerIn: parent
+                        visible: UserPlaylistModel.loading
+                        Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
+                        Kirigami.Theme.inherit: false
                     }
                 }
                 
