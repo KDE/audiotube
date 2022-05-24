@@ -12,8 +12,11 @@ import org.kde.ytmusic 1.0
 Kirigami.ApplicationWindow {
     id: root
 
-    property alias searchField: searchField
-
+    property alias searchField: searchLoader.item // TODO
+    
+    property bool wideScreen: width >= 600
+    property bool showSearch: false // only applicable if not widescreen
+    
     header: Controls.Control {
         padding: Kirigami.Units.largeSpacing
 
@@ -25,67 +28,46 @@ Kirigami.ApplicationWindow {
              Kirigami.Theme.colorSet: Kirigami.Theme.Header
              color:  Kirigami.Theme.backgroundColor
          }
-        contentItem: RowLayout{
-            Item {
-                Layout.fillWidth: true
+         
+        contentItem: RowLayout {
+            Controls.ToolButton {
+                Layout.alignment: Qt.AlignLeft
+                visible: !root.wideScreen && root.showSearch && root.searchField.text == ""
+                text: i18n("Back")
+                icon.name: "go-previous-view"
+                display: Controls.ToolButton.IconOnly
+                onClicked: root.showSearch = false
             }
-            Kirigami.SearchField {
-                id: searchField
-                delaySearch: true
-                selectByMouse: true
+            
+            Kirigami.Heading {
+                Layout.alignment: Qt.AlignLeft
+                Layout.leftMargin: Kirigami.Units.largeSpacing
+                level: 1
+                font.weight: Font.Bold
+                text: "AudioTube"
+                visible: root.wideScreen || !root.showSearch
+            }
+            
+            Loader {
+                id: searchLoader
+                visible: root.wideScreen || root.showSearch
+                Layout.alignment: Qt.AlignRight
                 Layout.fillWidth: true
                 Layout.maximumWidth: 400
-                onPressed: {
-                    popup.open()
-                }
-
-                Controls.Popup {
-                    id: popup
-                    x: searchField.y
-                    y: searchField.y + searchField.height
-                    visible: true
-                    width: searchField.width
-                    height: completionList
-                            ? Math.min(completionList.count * Kirigami.Units.gridUnit * 2 + Kirigami.Units.gridUnit * 2, Kirigami.Units.gridUnit * 20)
-                            : Kirigami.Units.gridUnit * 20
-
-                    contentItem: Controls.ScrollView {
-                        Controls.ScrollBar.horizontal.policy: Controls.ScrollBar.AlwaysOff
-                        ListView {
-                            id: completionList
-                            model: Library.searches
-                            delegate: Controls.ItemDelegate {
-                                Kirigami.Theme.colorSet: Kirigami.Theme.Window
-                                Kirigami.Theme.inherit: false
-                                id: completionDelegate
-                                width: parent.width
-                                height: Kirigami.Units.gridUnit * 2
-                                text: model.display
-                                onClicked: {
-                                    searchField.text = model.display
-                                    searchField.accepted()
-                                }
-                            }
-                        }
-                    }
-                }
-
-                onAccepted: {
-                    pageStack.clear()
-
-                    if (text) {
-                        Library.addSearch(text)
-                        pageStack.push("qrc:/SearchPage.qml", {
-                                   "searchQuery": text})
-                    } else {
-                        pageStack.replace("qrc:/LibraryPage.qml")
-                    }
-
-                    popup.close()
-                }
+                sourceComponent: searchFieldComponent
             }
-            Item {
-                Layout.fillWidth: true
+            
+            Controls.ToolButton {
+                Layout.alignment: Qt.AlignRight
+                visible: !root.wideScreen && !root.showSearch
+                text: i18n("Search")
+                icon.name: "search"
+                display: Controls.ToolButton.TextBesideIcon
+                onClicked: {
+                    root.showSearch = true
+                    root.searchField.forceActiveFocus();
+                    root.searchField.popup.open();
+                }
             }
         }
     }
@@ -117,6 +99,65 @@ Kirigami.ApplicationWindow {
 
         function onErrorOccurred(error) {
             showPassiveNotification(error)
+        }
+    }
+    
+    Component {
+        id: searchFieldComponent
+        
+        Kirigami.SearchField {
+            id: searchField
+            delaySearch: true
+            selectByMouse: true
+            onPressed: {
+                popup.open()
+            }
+            
+            property alias popup: popup
+
+            Controls.Popup {
+                id: popup
+                x: searchField.y
+                y: searchField.y + searchField.height
+                width: searchField.width
+                height: completionList
+                        ? Math.min(completionList.count * Kirigami.Units.gridUnit * 2 + Kirigami.Units.gridUnit * 2, Kirigami.Units.gridUnit * 20)
+                        : Kirigami.Units.gridUnit * 20
+
+                contentItem: Controls.ScrollView {
+                    Controls.ScrollBar.horizontal.policy: Controls.ScrollBar.AlwaysOff
+                    ListView {
+                        id: completionList
+                        model: Library.searches
+                        delegate: Controls.ItemDelegate {
+                            Kirigami.Theme.colorSet: Kirigami.Theme.Window
+                            Kirigami.Theme.inherit: false
+                            id: completionDelegate
+                            width: parent.width
+                            height: Kirigami.Units.gridUnit * 2
+                            text: model.display
+                            onClicked: {
+                                searchField.text = model.display
+                                searchField.accepted()
+                            }
+                        }
+                    }
+                }
+            }
+
+            onAccepted: {
+                pageStack.clear()
+
+                if (text) {
+                    Library.addSearch(text)
+                    pageStack.push("qrc:/SearchPage.qml", {
+                                "searchQuery": text})
+                } else {
+                    pageStack.replace("qrc:/LibraryPage.qml")
+                }
+
+                popup.close()
+            }
         }
     }
     
