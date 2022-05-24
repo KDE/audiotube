@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the audiotube package.
 #
-# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2021.
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-23 00:47+0000\n"
-"PO-Revision-Date: 2021-12-05 11:41+0100\n"
+"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"PO-Revision-Date: 2022-05-23 17:51+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -27,8 +27,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "stefan.asserhall@bredband.net"
 
-#: contents/ui/AlbumPage.qml:19 contents/ui/PlayerFooter.qml:192
-#: contents/ui/PlaylistPage.qml:19
+#: contents/ui/AlbumPage.qml:19 contents/ui/PlaylistPage.qml:19
 #, kde-format
 msgid "Play"
 msgstr "Spela"
@@ -85,47 +84,44 @@ msgstr "Avbryt"
 #: contents/ui/LibraryPage.qml:15
 #, kde-format
 msgid "Favourites"
-msgstr ""
+msgstr "Favoriter"
 
 #: contents/ui/LibraryPage.qml:67
 #, kde-format
 msgid "Most played"
-msgstr ""
+msgstr "Mest spelade"
 
-#: contents/ui/main.qml:94
+#: contents/ui/main.qml:93
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
 
-#: contents/ui/PlayerFooter.qml:124
+#: contents/ui/MaximizedPlayerPage.qml:86
+#, fuzzy, kde-format
+#| msgid "No media playing"
+msgid "Now Playing"
+msgstr "Inga media spelar"
+
+#: contents/ui/MaximizedPlayerPage.qml:112
+#, kde-format
+msgid "Queue"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:224
 #, kde-format
 msgid "Remove Track"
 msgstr "Ta bort spår"
 
-#: contents/ui/PlayerFooter.qml:141
-#, kde-format
-msgid "Clear"
-msgstr "Rensa"
-
-#: contents/ui/PlayerFooter.qml:146 contents/ui/PlaylistPage.qml:26
-#, kde-format
-msgid "Shuffle"
-msgstr "Blanda"
-
-#: contents/ui/PlayerFooter.qml:192
-#, kde-format
-msgid "Pause"
-msgstr "Paus"
-
-#: contents/ui/PlayerFooter.qml:222
+#: contents/ui/MaximizedPlayerPage.qml:244
+#: contents/ui/MinimizedPlayerControls.qml:86
 #, kde-format
 msgid "No media playing"
 msgstr "Inga media spelar"
 
-#: contents/ui/PlayerFooter.qml:266
+#: contents/ui/PlaylistPage.qml:26
 #, kde-format
-msgid "Expand"
-msgstr "Expandera"
+msgid "Shuffle"
+msgstr "Blanda"
 
 #: contents/ui/SearchPage.qml:27
 #, kde-format
@@ -161,6 +157,15 @@ msgstr "Sök efter musik på YouTube musik"
 #, kde-format
 msgid "Search"
 msgstr "Sök"
+
+#~ msgid "Clear"
+#~ msgstr "Rensa"
+
+#~ msgid "Pause"
+#~ msgstr "Paus"
+
+#~ msgid "Expand"
+#~ msgstr "Expandera"
 
 #~ msgid "Play only Audio"
 #~ msgstr "Spela bara ljud"

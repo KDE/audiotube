@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-23 00:47+0000\n"
+"POT-Creation-Date: 2022-05-24 00:46+0000\n"
 "PO-Revision-Date: 2021-12-30 12:38+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -29,8 +29,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "lukasz.wojnilowicz@gmail.com, ignacy.kajdan@gmail.com"
 
-#: contents/ui/AlbumPage.qml:19 contents/ui/PlayerFooter.qml:192
-#: contents/ui/PlaylistPage.qml:19
+#: contents/ui/AlbumPage.qml:19 contents/ui/PlaylistPage.qml:19
 #, kde-format
 msgid "Play"
 msgstr "Odtwórz"
@@ -96,40 +95,37 @@ msgstr ""
 msgid "Most played"
 msgstr ""
 
-#: contents/ui/main.qml:94
+#: contents/ui/main.qml:93
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
 
-#: contents/ui/PlayerFooter.qml:124
+#: contents/ui/MaximizedPlayerPage.qml:86
+#, fuzzy, kde-format
+#| msgid "No media playing"
+msgid "Now Playing"
+msgstr "Nic nie jest odtwarzane"
+
+#: contents/ui/MaximizedPlayerPage.qml:112
+#, kde-format
+msgid "Queue"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:224
 #, kde-format
 msgid "Remove Track"
 msgstr "Usuń utwór"
 
-#: contents/ui/PlayerFooter.qml:141
-#, kde-format
-msgid "Clear"
-msgstr "Wyczyść"
-
-#: contents/ui/PlayerFooter.qml:146 contents/ui/PlaylistPage.qml:26
-#, kde-format
-msgid "Shuffle"
-msgstr "Wymieszaj"
-
-#: contents/ui/PlayerFooter.qml:192
-#, kde-format
-msgid "Pause"
-msgstr "Wstrzymaj"
-
-#: contents/ui/PlayerFooter.qml:222
+#: contents/ui/MaximizedPlayerPage.qml:244
+#: contents/ui/MinimizedPlayerControls.qml:86
 #, kde-format
 msgid "No media playing"
 msgstr "Nic nie jest odtwarzane"
 
-#: contents/ui/PlayerFooter.qml:266
+#: contents/ui/PlaylistPage.qml:26
 #, kde-format
-msgid "Expand"
-msgstr "Rozwiń"
+msgid "Shuffle"
+msgstr "Wymieszaj"
 
 #: contents/ui/SearchPage.qml:27
 #, kde-format
@@ -165,6 +161,15 @@ msgstr "Znajdź muzykę w serwisie YouTube Music"
 #, kde-format
 msgid "Search"
 msgstr "Szukaj"
+
+#~ msgid "Clear"
+#~ msgstr "Wyczyść"
+
+#~ msgid "Pause"
+#~ msgstr "Wstrzymaj"
+
+#~ msgid "Expand"
+#~ msgstr "Rozwiń"
 
 #~ msgid "Play only Audio"
 #~ msgstr "Odtwórz tylko dźwięk"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-23 00:47+0000\n"
+"POT-Creation-Date: 2022-05-24 00:46+0000\n"
 "PO-Revision-Date: 2021-12-09 13:26+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -28,8 +28,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "matjaz.jeran@amis.net"
 
-#: contents/ui/AlbumPage.qml:19 contents/ui/PlayerFooter.qml:192
-#: contents/ui/PlaylistPage.qml:19
+#: contents/ui/AlbumPage.qml:19 contents/ui/PlaylistPage.qml:19
 #, kde-format
 msgid "Play"
 msgstr "Predvajaj"
@@ -93,40 +92,37 @@ msgstr ""
 msgid "Most played"
 msgstr ""
 
-#: contents/ui/main.qml:94
+#: contents/ui/main.qml:93
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
 
-#: contents/ui/PlayerFooter.qml:124
+#: contents/ui/MaximizedPlayerPage.qml:86
+#, fuzzy, kde-format
+#| msgid "No media playing"
+msgid "Now Playing"
+msgstr "Niče se ne predvaja"
+
+#: contents/ui/MaximizedPlayerPage.qml:112
+#, kde-format
+msgid "Queue"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:224
 #, kde-format
 msgid "Remove Track"
 msgstr "Odstrani sled"
 
-#: contents/ui/PlayerFooter.qml:141
-#, kde-format
-msgid "Clear"
-msgstr "Očisti"
-
-#: contents/ui/PlayerFooter.qml:146 contents/ui/PlaylistPage.qml:26
-#, kde-format
-msgid "Shuffle"
-msgstr "Premešaj"
-
-#: contents/ui/PlayerFooter.qml:192
-#, kde-format
-msgid "Pause"
-msgstr "Premor"
-
-#: contents/ui/PlayerFooter.qml:222
+#: contents/ui/MaximizedPlayerPage.qml:244
+#: contents/ui/MinimizedPlayerControls.qml:86
 #, kde-format
 msgid "No media playing"
 msgstr "Niče se ne predvaja"
 
-#: contents/ui/PlayerFooter.qml:266
+#: contents/ui/PlaylistPage.qml:26
 #, kde-format
-msgid "Expand"
-msgstr "Razširi"
+msgid "Shuffle"
+msgstr "Premešaj"
 
 #: contents/ui/SearchPage.qml:27
 #, kde-format
@@ -162,6 +158,15 @@ msgstr "Najdi glasbo na Youtube Music"
 #, kde-format
 msgid "Search"
 msgstr "Išči"
+
+#~ msgid "Clear"
+#~ msgstr "Očisti"
+
+#~ msgid "Pause"
+#~ msgstr "Premor"
+
+#~ msgid "Expand"
+#~ msgstr "Razširi"
 
 #~ msgid "Play only Audio"
 #~ msgstr "Predvajaj samo zvok"

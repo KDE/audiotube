@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-23 00:47+0000\n"
-"PO-Revision-Date: 2022-04-15 14:41+0300\n"
+"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"PO-Revision-Date: 2022-05-23 16:20+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.04.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -27,8 +27,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "emir_sari@icloud.com"
 
-#: contents/ui/AlbumPage.qml:19 contents/ui/PlayerFooter.qml:192
-#: contents/ui/PlaylistPage.qml:19
+#: contents/ui/AlbumPage.qml:19 contents/ui/PlaylistPage.qml:19
 #, kde-format
 msgid "Play"
 msgstr "Çal"
@@ -87,47 +86,44 @@ msgstr "İptal"
 #: contents/ui/LibraryPage.qml:15
 #, kde-format
 msgid "Favourites"
-msgstr ""
+msgstr "Beğeniler"
 
 #: contents/ui/LibraryPage.qml:67
 #, kde-format
 msgid "Most played"
-msgstr ""
+msgstr "En Çok Çalınanlar"
 
-#: contents/ui/main.qml:94
+#: contents/ui/main.qml:93
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
 
-#: contents/ui/PlayerFooter.qml:124
+#: contents/ui/MaximizedPlayerPage.qml:86
+#, fuzzy, kde-format
+#| msgid "No media playing"
+msgid "Now Playing"
+msgstr "Ortam çalmıyor"
+
+#: contents/ui/MaximizedPlayerPage.qml:112
+#, kde-format
+msgid "Queue"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:224
 #, kde-format
 msgid "Remove Track"
 msgstr "Parçayı Kaldır"
 
-#: contents/ui/PlayerFooter.qml:141
-#, kde-format
-msgid "Clear"
-msgstr "Temizle"
-
-#: contents/ui/PlayerFooter.qml:146 contents/ui/PlaylistPage.qml:26
-#, kde-format
-msgid "Shuffle"
-msgstr "Karıştır"
-
-#: contents/ui/PlayerFooter.qml:192
-#, kde-format
-msgid "Pause"
-msgstr "Duraklat"
-
-#: contents/ui/PlayerFooter.qml:222
+#: contents/ui/MaximizedPlayerPage.qml:244
+#: contents/ui/MinimizedPlayerControls.qml:86
 #, kde-format
 msgid "No media playing"
 msgstr "Ortam çalmıyor"
 
-#: contents/ui/PlayerFooter.qml:266
+#: contents/ui/PlaylistPage.qml:26
 #, kde-format
-msgid "Expand"
-msgstr "Genişlet"
+msgid "Shuffle"
+msgstr "Karıştır"
 
 #: contents/ui/SearchPage.qml:27
 #, kde-format
@@ -163,3 +159,12 @@ msgstr "YouTube Müzik'te müzik bul"
 #, kde-format
 msgid "Search"
 msgstr "Ara"
+
+#~ msgid "Clear"
+#~ msgstr "Temizle"
+
+#~ msgid "Pause"
+#~ msgstr "Duraklat"
+
+#~ msgid "Expand"
+#~ msgstr "Genişlet"

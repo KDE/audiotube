@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the audiotube package.
 #
 # Automatically generated, 2021.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2021.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-23 00:47+0000\n"
-"PO-Revision-Date: 2021-12-06 00:36+0100\n"
+"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"PO-Revision-Date: 2022-05-23 19:31+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.11.90\n"
+"X-Generator: Lokalize 22.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -29,8 +29,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ecuadra@eloihr.net"
 
-#: contents/ui/AlbumPage.qml:19 contents/ui/PlayerFooter.qml:192
-#: contents/ui/PlaylistPage.qml:19
+#: contents/ui/AlbumPage.qml:19 contents/ui/PlaylistPage.qml:19
 #, kde-format
 msgid "Play"
 msgstr "Reproducir"
@@ -89,47 +88,44 @@ msgstr "Cancelar"
 #: contents/ui/LibraryPage.qml:15
 #, kde-format
 msgid "Favourites"
-msgstr ""
+msgstr "Favoritos"
 
 #: contents/ui/LibraryPage.qml:67
 #, kde-format
 msgid "Most played"
-msgstr ""
+msgstr "Más reproducidos"
 
-#: contents/ui/main.qml:94
+#: contents/ui/main.qml:93
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
 
-#: contents/ui/PlayerFooter.qml:124
+#: contents/ui/MaximizedPlayerPage.qml:86
+#, fuzzy, kde-format
+#| msgid "No media playing"
+msgid "Now Playing"
+msgstr "Ningún medio en reproducción"
+
+#: contents/ui/MaximizedPlayerPage.qml:112
+#, kde-format
+msgid "Queue"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:224
 #, kde-format
 msgid "Remove Track"
 msgstr "Eliminar pista"
 
-#: contents/ui/PlayerFooter.qml:141
-#, kde-format
-msgid "Clear"
-msgstr "Borrar todo"
-
-#: contents/ui/PlayerFooter.qml:146 contents/ui/PlaylistPage.qml:26
-#, kde-format
-msgid "Shuffle"
-msgstr "Desordenar"
-
-#: contents/ui/PlayerFooter.qml:192
-#, kde-format
-msgid "Pause"
-msgstr "Pausar"
-
-#: contents/ui/PlayerFooter.qml:222
+#: contents/ui/MaximizedPlayerPage.qml:244
+#: contents/ui/MinimizedPlayerControls.qml:86
 #, kde-format
 msgid "No media playing"
 msgstr "Ningún medio en reproducción"
 
-#: contents/ui/PlayerFooter.qml:266
+#: contents/ui/PlaylistPage.qml:26
 #, kde-format
-msgid "Expand"
-msgstr "Expandir"
+msgid "Shuffle"
+msgstr "Desordenar"
 
 #: contents/ui/SearchPage.qml:27
 #, kde-format
@@ -165,6 +161,15 @@ msgstr "Encuentre música en YouTube Music"
 #, kde-format
 msgid "Search"
 msgstr "Buscar"
+
+#~ msgid "Clear"
+#~ msgstr "Borrar todo"
+
+#~ msgid "Pause"
+#~ msgstr "Pausar"
+
+#~ msgid "Expand"
+#~ msgstr "Expandir"
 
 #~ msgid "Play only Audio"
 #~ msgstr "Reproducir solo el sonido"

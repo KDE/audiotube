@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the audiotube package.
 #
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2021.
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-23 00:47+0000\n"
-"PO-Revision-Date: 2021-12-05 16:48+0100\n"
+"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"PO-Revision-Date: 2022-05-23 11:35+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,20 +15,19 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.08.3\n"
+"X-Generator: Lokalize 22.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Freek de Kruijf - 2021"
+msgstr "Freek de Kruijf - 2021 t/m 2022"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "freekdekruijf@kde.nl"
 
-#: contents/ui/AlbumPage.qml:19 contents/ui/PlayerFooter.qml:192
-#: contents/ui/PlaylistPage.qml:19
+#: contents/ui/AlbumPage.qml:19 contents/ui/PlaylistPage.qml:19
 #, kde-format
 msgid "Play"
 msgstr "Afspelen"
@@ -87,47 +86,44 @@ msgstr "Annuleren"
 #: contents/ui/LibraryPage.qml:15
 #, kde-format
 msgid "Favourites"
-msgstr ""
+msgstr "Favorieten"
 
 #: contents/ui/LibraryPage.qml:67
 #, kde-format
 msgid "Most played"
-msgstr ""
+msgstr "Meest afgespeeld"
 
-#: contents/ui/main.qml:94
+#: contents/ui/main.qml:93
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
 
-#: contents/ui/PlayerFooter.qml:124
+#: contents/ui/MaximizedPlayerPage.qml:86
+#, fuzzy, kde-format
+#| msgid "No media playing"
+msgid "Now Playing"
+msgstr "Er speelt geen medium"
+
+#: contents/ui/MaximizedPlayerPage.qml:112
+#, kde-format
+msgid "Queue"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:224
 #, kde-format
 msgid "Remove Track"
 msgstr "Track verwijderen"
 
-#: contents/ui/PlayerFooter.qml:141
-#, kde-format
-msgid "Clear"
-msgstr "Wissen"
-
-#: contents/ui/PlayerFooter.qml:146 contents/ui/PlaylistPage.qml:26
-#, kde-format
-msgid "Shuffle"
-msgstr "Willekeurig afspelen"
-
-#: contents/ui/PlayerFooter.qml:192
-#, kde-format
-msgid "Pause"
-msgstr "Pauzeren"
-
-#: contents/ui/PlayerFooter.qml:222
+#: contents/ui/MaximizedPlayerPage.qml:244
+#: contents/ui/MinimizedPlayerControls.qml:86
 #, kde-format
 msgid "No media playing"
 msgstr "Er speelt geen medium"
 
-#: contents/ui/PlayerFooter.qml:266
+#: contents/ui/PlaylistPage.qml:26
 #, kde-format
-msgid "Expand"
-msgstr "Uitbreiden"
+msgid "Shuffle"
+msgstr "Willekeurig afspelen"
 
 #: contents/ui/SearchPage.qml:27
 #, kde-format
@@ -163,6 +159,15 @@ msgstr "Muziek zoeken op YouTube Music"
 #, kde-format
 msgid "Search"
 msgstr "Zoeken"
+
+#~ msgid "Clear"
+#~ msgstr "Wissen"
+
+#~ msgid "Pause"
+#~ msgstr "Pauzeren"
+
+#~ msgid "Expand"
+#~ msgstr "Uitbreiden"
 
 #~ msgid "Play only Audio"
 #~ msgstr "Alleen geluid afspelen"

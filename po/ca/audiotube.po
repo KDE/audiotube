@@ -1,23 +1,24 @@
 # Translation of audiotube.po to Catalan
-# Copyright (C) 2021 This_file_is_part_of_KDE
+# Copyright (C) 2021-2022 This_file_is_part_of_KDE
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2021.
+# Josep M. Ferrer <txemaq@gmail.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-23 00:47+0000\n"
-"PO-Revision-Date: 2021-12-05 16:03+0100\n"
-"Last-Translator: Antoni Bella Pérez <antonibella5@yahoo.com>\n"
+"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"PO-Revision-Date: 2022-05-23 11:38+0200\n"
+"Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.11.90\n"
+"X-Generator: Lokalize 20.12.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -29,8 +30,7 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "antonibella5@yahoo.com"
 
-#: contents/ui/AlbumPage.qml:19 contents/ui/PlayerFooter.qml:192
-#: contents/ui/PlaylistPage.qml:19
+#: contents/ui/AlbumPage.qml:19 contents/ui/PlaylistPage.qml:19
 #, kde-format
 msgid "Play"
 msgstr "Reprodueix"
@@ -89,47 +89,44 @@ msgstr "Cancel·la"
 #: contents/ui/LibraryPage.qml:15
 #, kde-format
 msgid "Favourites"
-msgstr ""
+msgstr "Preferides"
 
 #: contents/ui/LibraryPage.qml:67
 #, kde-format
 msgid "Most played"
-msgstr ""
+msgstr "Les més reproduïdes"
 
-#: contents/ui/main.qml:94
+#: contents/ui/main.qml:93
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
 
-#: contents/ui/PlayerFooter.qml:124
+#: contents/ui/MaximizedPlayerPage.qml:86
+#, fuzzy, kde-format
+#| msgid "No media playing"
+msgid "Now Playing"
+msgstr "No s'està reproduint cap suport"
+
+#: contents/ui/MaximizedPlayerPage.qml:112
+#, kde-format
+msgid "Queue"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:224
 #, kde-format
 msgid "Remove Track"
 msgstr "Elimina la pista"
 
-#: contents/ui/PlayerFooter.qml:141
-#, kde-format
-msgid "Clear"
-msgstr "Neteja"
-
-#: contents/ui/PlayerFooter.qml:146 contents/ui/PlaylistPage.qml:26
-#, kde-format
-msgid "Shuffle"
-msgstr "Barreja"
-
-#: contents/ui/PlayerFooter.qml:192
-#, kde-format
-msgid "Pause"
-msgstr "Pausa"
-
-#: contents/ui/PlayerFooter.qml:222
+#: contents/ui/MaximizedPlayerPage.qml:244
+#: contents/ui/MinimizedPlayerControls.qml:86
 #, kde-format
 msgid "No media playing"
 msgstr "No s'està reproduint cap suport"
 
-#: contents/ui/PlayerFooter.qml:266
+#: contents/ui/PlaylistPage.qml:26
 #, kde-format
-msgid "Expand"
-msgstr "Expandeix"
+msgid "Shuffle"
+msgstr "Barreja"
 
 #: contents/ui/SearchPage.qml:27
 #, kde-format
@@ -166,5 +163,11 @@ msgstr "Cerca a la Música de Youtube"
 msgid "Search"
 msgstr "Cerca"
 
-#~ msgid "Play only Audio"
-#~ msgstr "Reprodueix només l'àudio"
+#~ msgid "Clear"
+#~ msgstr "Neteja"
+
+#~ msgid "Pause"
+#~ msgstr "Pausa"
+
+#~ msgid "Expand"
+#~ msgstr "Expandeix"
