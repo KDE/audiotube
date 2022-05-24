@@ -13,10 +13,10 @@ Kirigami.ApplicationWindow {
     id: root
 
     property alias searchField: searchLoader.item // TODO
-    
+
     property bool wideScreen: width >= 600
     property bool showSearch: false // only applicable if not widescreen
-    
+
     header: Controls.Control {
         padding: Kirigami.Units.largeSpacing
 
@@ -28,35 +28,35 @@ Kirigami.ApplicationWindow {
              Kirigami.Theme.colorSet: Kirigami.Theme.Header
              color:  Kirigami.Theme.backgroundColor
          }
-         
+
         contentItem: RowLayout {
             Controls.ToolButton {
                 Layout.alignment: Qt.AlignLeft
-                visible: !root.wideScreen && root.showSearch && root.searchField.text == ""
+                visible: !root.wideScreen && root.showSearch && root.searchField.text === ""
                 text: i18n("Back")
                 icon.name: "go-previous-view"
                 display: Controls.ToolButton.IconOnly
                 onClicked: root.showSearch = false
             }
-            
+
             Kirigami.Heading {
                 Layout.alignment: Qt.AlignLeft
                 Layout.leftMargin: Kirigami.Units.largeSpacing
                 level: 1
-                font.weight: Font.Bold
                 text: "AudioTube"
-                visible: root.wideScreen || !root.showSearch
+                visible: !root.wideScreen && !root.showSearch
             }
-            
+
+
             Loader {
                 id: searchLoader
                 visible: root.wideScreen || root.showSearch
-                Layout.alignment: Qt.AlignRight
+                Layout.alignment: Qt.AlignHCenter
                 Layout.fillWidth: true
                 Layout.maximumWidth: 400
                 sourceComponent: searchFieldComponent
             }
-            
+
             Controls.ToolButton {
                 Layout.alignment: Qt.AlignRight
                 visible: !root.wideScreen && !root.showSearch
