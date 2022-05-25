@@ -34,6 +34,10 @@ Kirigami.ScrollablePage {
             required property string videoId
             required property string artists
 
+            onClicked: {
+                play(videoId)
+            }
+
             RowLayout {
                 ThumbnailSource {
                     id: thumbnailSource
@@ -67,12 +71,12 @@ Kirigami.ScrollablePage {
                 Kirigami.Action {
                     icon.name: "go-next"
                     text: i18n("Play Next")
-                    onTriggered: UserPlaylistModel.playNext(delegateItem.videoId, delegateItem.title, delegateItem.artists)
+                    onTriggered: UserPlaylistModel.playNext(delegateItem.videoId, delegateItem.title, [])
                 },
                 Kirigami.Action {
                     icon.name: "media-playlist-append"
                     text: i18n("Add to Playlist")
-                    onTriggered: UserPlaylistModel.append(delegateItem.videoId, delegateItem.title, delegateItem.artists)
+                    onTriggered: UserPlaylistModel.append(delegateItem.videoId, delegateItem.title, [])
                 }
             ]
         }
