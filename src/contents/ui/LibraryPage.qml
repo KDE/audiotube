@@ -21,8 +21,27 @@ Kirigami.ScrollablePage {
     }
     
     ColumnLayout {
-        Kirigami.Heading {
-            text: i18n("Favourites")
+        RowLayout {
+            Layout.fillWidth: true
+            Kirigami.Heading {
+                text: i18n("Favourites")
+                Layout.alignment: Qt.AlignLeft
+            }
+
+            // Spacer
+            Item {
+                Layout.fillWidth: true
+            }
+
+            Controls.ToolButton {
+                text: i18n("Show All")
+                Layout.alignment: Qt.AlignRight
+                icon.name: "arrow-right"
+                onClicked: pageStack.layers.push("qrc:/PlaybackHistory.qml", {
+                                                     "dataModel": Library.favourites,
+                                                     "title": i18n("Favourite Songs")
+                                                 })
+            }
         }
         Controls.ScrollView {
             Layout.fillWidth: true
@@ -33,7 +52,7 @@ Kirigami.ScrollablePage {
                     delegate: ColumnLayout {
                         id: delegateItem
                         required property string title
-                        required property string artist
+                        required property string artists
                         required property string videoId
 
                         Layout.fillWidth: false
@@ -73,8 +92,27 @@ Kirigami.ScrollablePage {
                 }
             }
         }
-        Kirigami.Heading {
-            text: i18n("Most played")
+        RowLayout {
+            Layout.fillWidth: true
+            Kirigami.Heading {
+                text: i18n("Most played")
+                Layout.alignment: Qt.AlignLeft
+            }
+
+            // Spacer
+            Item {
+                Layout.fillWidth: true
+            }
+
+            Controls.ToolButton {
+                text: i18n("Show All")
+                Layout.alignment: Qt.AlignRight
+                icon.name: "arrow-right"
+                onClicked: pageStack.layers.push("qrc:/PlaybackHistory.qml", {
+                                                     "dataModel": Library.playbackHistory,
+                                                     "title": i18n("Played Songs")
+                                                 })
+            }
         }
         Controls.ScrollView {
             Layout.fillWidth: true
@@ -85,7 +123,7 @@ Kirigami.ScrollablePage {
                     delegate: ColumnLayout {
                         id: mpdelegateItem
                         required property string title
-                        required property string artist
+                        required property string artists
                         required property string videoId
 
                         Layout.fillWidth: false

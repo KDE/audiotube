@@ -31,12 +31,18 @@ Kirigami.ApplicationWindow {
 
         contentItem: RowLayout {
             Controls.ToolButton {
+                id: searchBack
                 Layout.alignment: Qt.AlignLeft
-                visible: !root.wideScreen && root.showSearch && root.searchField.text === ""
+                visible:
+                    (!root.wideScreen && root.showSearch && root.searchField.text === "")
+                    || pageStack.layers.depth > 1
                 text: i18n("Back")
                 icon.name: "go-previous-view"
                 display: Controls.ToolButton.IconOnly
-                onClicked: root.showSearch = false
+                onClicked: if (root.showSearch)
+                               root.showSearch = false
+                           else
+                               pageStack.layers.pop()
             }
 
             Kirigami.Heading {
@@ -47,6 +53,10 @@ Kirigami.ApplicationWindow {
                 visible: !root.wideScreen && !root.showSearch
             }
 
+            // spacer
+            Item {
+                Layout.fillWidth: !root.wideScreen
+            }
 
             Loader {
                 id: searchLoader
@@ -147,6 +157,7 @@ Kirigami.ApplicationWindow {
 
             onAccepted: {
                 pageStack.clear()
+                pageStack.layers.clear()
 
                 if (text) {
                     Library.addSearch(text)
