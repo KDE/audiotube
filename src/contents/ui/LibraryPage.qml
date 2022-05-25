@@ -5,7 +5,7 @@
 import QtQuick 2.1
 import QtQuick.Controls 2.12 as Controls
 import QtQuick.Layouts 1.3
-import org.kde.kirigami 2.14 as Kirigami
+import org.kde.kirigami 2.19 as Kirigami
 
 import org.kde.ytmusic 1.0
 
@@ -150,6 +150,88 @@ Kirigami.ScrollablePage {
                             Layout.maximumWidth: 200
                             text: mpdelegateItem.title
                             elide: Qt.ElideRight
+                        }
+                    }
+                }
+            }
+        }
+        RowLayout {
+            Layout.fillWidth: true
+            Kirigami.Heading {
+                text: i18n("Playlists")
+                Layout.alignment: Qt.AlignLeft
+            }
+
+            // Spacer
+            Item {
+                Layout.fillWidth: true
+            }
+
+            Controls.ToolButton {
+                text: i18n("Add")
+                Layout.alignment: Qt.AlignRight
+                icon.name: "list-add"
+                onClicked: addPlaylistDialog.open()
+            }
+            Controls.ToolButton {
+                text: i18n("Show All")
+                Layout.alignment: Qt.AlignRight
+                icon.name: "arrow-right"
+            }
+        }
+
+        Kirigami.PromptDialog {
+            id: addPlaylistDialog
+            title: i18n("Add playlist")
+            standardButtons: Kirigami.Dialog.Ok | Kirigami.Dialog.Cancel
+
+            mainItem: Kirigami.FormLayout {
+                Controls.TextField {
+                    id: titleField
+
+                    Kirigami.FormData.label: i18n("Playlist Title")
+                }
+                Controls.TextField {
+                    id: descriptionField
+
+                    Kirigami.FormData.label: i18n("Playlist Description")
+                }
+            }
+
+            onAccepted: Library.addPlaylist(titleField.text, descriptionField.text)
+        }
+
+        Controls.ScrollView {
+            Layout.fillWidth: true
+            RowLayout {
+                Repeater {
+                    Layout.fillWidth: true
+                    model: LocalPlaylistsModel {
+                    }
+
+                    delegate: ColumnLayout {
+                        id: playlistDelegate
+                        required property string playlistId
+                        required property string title
+                        required property string description
+                        required property date createdOn
+
+                        Layout.fillWidth: false
+                        Layout.maximumWidth: 200
+                        Kirigami.Card {
+                            Layout.preferredHeight: 200
+
+                            header: Image {
+                                sourceSize: "200x200"
+                                source: ""
+                                fillMode: Image.PreserveAspectCrop
+                                asynchronous: true
+                            }
+                        }
+                        Controls.Label {
+                            Layout.maximumWidth: 200
+                            elide: Qt.ElideRight
+                            text: playlistDelegate.title
                         }
                     }
                 }

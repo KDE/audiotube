@@ -126,6 +126,11 @@ public:
     Q_SIGNAL void playbackHistoryChanged();
     Q_INVOKABLE void addPlaybackHistoryItem(const QString &videoId, const QString &title);
 
+    Q_SIGNAL void playlistsChanged();
+    Q_INVOKABLE void addPlaylist(const QString &title, const QString &description);
+    Q_INVOKABLE void addPlaylistEntry(qint64 playlistId, const QString &videoId, const QString &title);
+    Q_SIGNAL void playlistEntriesChanged(quint64 playlistId);
+
     PlaybackHistoryModel *mostPlayed();
 
     QNetworkAccessManager &nam();

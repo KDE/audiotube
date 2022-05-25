@@ -20,6 +20,8 @@
 #include "playlistmodel.h"
 #include "playerutils.h"
 #include "library.h"
+#include "localplaylistmodel.h"
+#include "localplaylistsmodel.h"
 
 #include "asyncdatabase.h"
 
@@ -45,6 +47,8 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlRegisterType<VideoInfoExtractor>(URI, 1, 0, "VideoInfoExtractor");
     qmlRegisterType<ArtistModel>(URI, 1, 0, "ArtistModel");
     qmlRegisterType<PlaylistModel>(URI, 1, 0, "PlaylistModel");
+    qmlRegisterType<LocalPlaylistModel>(URI, 1, 0, "LocalPlaylistModel");
+    qmlRegisterType<LocalPlaylistsModel>(URI, 1, 0, "LocalPlaylistsModel");
     qmlRegisterSingletonType<UserPlaylistModel>(URI, 1, 0, "UserPlaylistModel", [](QQmlEngine *, QJSEngine *) {
         return new UserPlaylistModel();
     });

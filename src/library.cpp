@@ -89,6 +89,20 @@ void Library::addPlaybackHistoryItem(const QString &videoId, const QString &titl
     });
 }
 
+void Library::addPlaylist(const QString &title, const QString &description)
+{
+    connectFuture(m_database->execute("insert into playlists (title, description) values (?, ?)", title, description), this, &Library::playlistsChanged);
+}
+
+void Library::addPlaylistEntry(qint64 playlistId, const QString &videoId, const QString &title)
+{
+    connectFuture(addSong(videoId, title), this, [=, this] {
+        connectFuture(m_database->execute("insert into playlist_entries (playlist_id, video_id) values (?, ?)", playlistId, videoId), this, [=, this] {
+            Q_EMIT playlistEntriesChanged(playlistId);
+        });
+    });
+}
+
 PlaybackHistoryModel *Library::mostPlayed()
 {
     auto future = m_database->getResults<PlayedSong>("select * from played_songs natural join songs order by plays desc limit 10");
