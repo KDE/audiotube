@@ -1,10 +1,10 @@
-# Xavier Besnard <xavier.besnard@neuf.fr>, 2021.
+# Xavier Besnard <xavier.besnard@neuf.fr>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
-"PO-Revision-Date: 2021-12-06 10:18+0100\n"
+"POT-Creation-Date: 2022-05-25 00:46+0000\n"
+"PO-Revision-Date: 2022-05-23 20:05+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
 "Language: fr\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 21.11.90\n"
+"X-Generator: Lokalize 22.04.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -83,12 +83,12 @@ msgstr "Annuler"
 #: contents/ui/LibraryPage.qml:15
 #, kde-format
 msgid "Favourites"
-msgstr ""
+msgstr "Favoris"
 
 #: contents/ui/LibraryPage.qml:67
 #, kde-format
 msgid "Most played"
-msgstr ""
+msgstr "Les plus lus"
 
 #: contents/ui/main.qml:93
 #, kde-format
@@ -112,7 +112,7 @@ msgid "Remove Track"
 msgstr "Supprimer une piste"
 
 #: contents/ui/MaximizedPlayerPage.qml:244
-#: contents/ui/MinimizedPlayerControls.qml:86
+#: contents/ui/MinimizedPlayerControls.qml:96
 #, kde-format
 msgid "No media playing"
 msgstr "Aucun média en lecture"

@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
-"PO-Revision-Date: 2022-05-23 11:35+0200\n"
+"POT-Creation-Date: 2022-05-25 00:46+0000\n"
+"PO-Revision-Date: 2022-05-24 10:48+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -99,15 +99,14 @@ msgid "AudioTube"
 msgstr "AudioTube"
 
 #: contents/ui/MaximizedPlayerPage.qml:86
-#, fuzzy, kde-format
-#| msgid "No media playing"
+#, kde-format
 msgid "Now Playing"
-msgstr "Er speelt geen medium"
+msgstr "Speelt nu"
 
 #: contents/ui/MaximizedPlayerPage.qml:112
 #, kde-format
 msgid "Queue"
-msgstr ""
+msgstr "Wachtrij"
 
 #: contents/ui/MaximizedPlayerPage.qml:224
 #, kde-format
@@ -115,7 +114,7 @@ msgid "Remove Track"
 msgstr "Track verwijderen"
 
 #: contents/ui/MaximizedPlayerPage.qml:244
-#: contents/ui/MinimizedPlayerControls.qml:86
+#: contents/ui/MinimizedPlayerControls.qml:96
 #, kde-format
 msgid "No media playing"
 msgstr "Er speelt geen medium"

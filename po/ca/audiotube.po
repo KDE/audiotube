@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
-"PO-Revision-Date: 2022-05-23 11:38+0200\n"
+"POT-Creation-Date: 2022-05-25 00:46+0000\n"
+"PO-Revision-Date: 2022-05-24 08:45+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -102,15 +102,14 @@ msgid "AudioTube"
 msgstr "AudioTube"
 
 #: contents/ui/MaximizedPlayerPage.qml:86
-#, fuzzy, kde-format
-#| msgid "No media playing"
+#, kde-format
 msgid "Now Playing"
-msgstr "No s'està reproduint cap suport"
+msgstr "Ara s'està reproduint"
 
 #: contents/ui/MaximizedPlayerPage.qml:112
 #, kde-format
 msgid "Queue"
-msgstr ""
+msgstr "Cua"
 
 #: contents/ui/MaximizedPlayerPage.qml:224
 #, kde-format
@@ -118,7 +117,7 @@ msgid "Remove Track"
 msgstr "Elimina la pista"
 
 #: contents/ui/MaximizedPlayerPage.qml:244
-#: contents/ui/MinimizedPlayerControls.qml:86
+#: contents/ui/MinimizedPlayerControls.qml:96
 #, kde-format
 msgid "No media playing"
 msgstr "No s'està reproduint cap suport"
@@ -162,12 +161,3 @@ msgstr "Cerca a la Música de Youtube"
 #, kde-format
 msgid "Search"
 msgstr "Cerca"
-
-#~ msgid "Clear"
-#~ msgstr "Neteja"
-
-#~ msgid "Pause"
-#~ msgstr "Pausa"
-
-#~ msgid "Expand"
-#~ msgstr "Expandeix"

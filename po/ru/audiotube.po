@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
+"POT-Creation-Date: 2022-05-25 00:46+0000\n"
 "PO-Revision-Date: 2022-05-10 21:39+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -113,7 +113,7 @@ msgid "Remove Track"
 msgstr "Удалить дорожку"
 
 #: contents/ui/MaximizedPlayerPage.qml:244
-#: contents/ui/MinimizedPlayerControls.qml:86
+#: contents/ui/MinimizedPlayerControls.qml:96
 #, kde-format
 msgid "No media playing"
 msgstr ""

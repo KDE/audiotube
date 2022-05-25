@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-24 00:46+0000\n"
-"PO-Revision-Date: 2022-05-23 19:31+0200\n"
+"POT-Creation-Date: 2022-05-25 00:46+0000\n"
+"PO-Revision-Date: 2022-05-25 00:18+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -101,15 +101,14 @@ msgid "AudioTube"
 msgstr "AudioTube"
 
 #: contents/ui/MaximizedPlayerPage.qml:86
-#, fuzzy, kde-format
-#| msgid "No media playing"
+#, kde-format
 msgid "Now Playing"
-msgstr "Ningún medio en reproducción"
+msgstr "Reproduciendo"
 
 #: contents/ui/MaximizedPlayerPage.qml:112
 #, kde-format
 msgid "Queue"
-msgstr ""
+msgstr "Cola"
 
 #: contents/ui/MaximizedPlayerPage.qml:224
 #, kde-format
@@ -117,7 +116,7 @@ msgid "Remove Track"
 msgstr "Eliminar pista"
 
 #: contents/ui/MaximizedPlayerPage.qml:244
-#: contents/ui/MinimizedPlayerControls.qml:86
+#: contents/ui/MinimizedPlayerControls.qml:96
 #, kde-format
 msgid "No media playing"
 msgstr "Ningún medio en reproducción"
