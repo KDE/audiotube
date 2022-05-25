@@ -148,7 +148,7 @@ QHash<int, QByteArray> PlaybackHistoryModel::roleNames() const {
     return {
         {Roles::VideoId, "videoId"},
         {Roles::Title, "title"},
-        {Roles::Artist, "artist"},
+        {Roles::Artist, "artists"},
         {Roles::Plays, "plays"}
     };
 }
@@ -186,7 +186,7 @@ QHash<int, QByteArray> FavouritesModel::roleNames() const {
     return {
         {Roles::VideoId, "videoId"},
         {Roles::Title, "title"},
-        {Roles::Artist, "artist"}
+        {Roles::Artist, "artists"}
     };
 }
 

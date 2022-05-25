@@ -155,7 +155,7 @@ Item {
             Item {
                 height: swipeView.width
                 width: swipeView.height
-                
+
                 Image {
                     anchors.centerIn: parent
                     width: swipeView.specWidth
