@@ -358,7 +358,7 @@ artist::Artist YTMusic::get_artist(const std::string &channel_id) const
         artist["views"].cast<std::optional<std::string>>(),
         artist["name"].cast<std::string>(),
         artist["channelId"].cast<std::string>(),
-        artist["subscribers"].cast<std::string>(),
+        artist["subscribers"].cast<std::optional<std::string>>(),
         artist["subscribed"].cast<bool>(),
         extract_py_list<meta::Thumbnail>(artist["thumbnails"]),
         extract_artist_section<artist::Artist::Song>(artist, "songs"),

@@ -131,7 +131,7 @@ struct Artist {
     std::optional<std::string> views;
     std::string name;
     std::string channel_id;
-    std::string subscribers;
+    std::optional<std::string> subscribers;
     bool subscribed;
     std::vector<meta::Thumbnail> thumbnails;
     std::optional<Section<Song>> songs;
