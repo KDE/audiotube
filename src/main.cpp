@@ -27,6 +27,8 @@
 #include "library.h"
 #include "thumbnailsource.h"
 #include "blur.h"
+#include "localplaylistmodel.h"
+#include "localplaylistsmodel.h"
 
 #include "asyncdatabase.h"
 
@@ -79,6 +81,8 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlRegisterUncreatableType<PlaybackHistoryModel>(URI, 1, 0, "PlaybackHistoryModel","");
     qmlRegisterType<QSortFilterProxyModel>(URI, 1, 0, "SortFilterModel");
     qmlRegisterType<Blur>(URI, 1, 0, "Blur");
+    qmlRegisterType<LocalPlaylistModel>(URI, 1, 0, "LocalPlaylistModel");
+    qmlRegisterType<LocalPlaylistsModel>(URI, 1, 0, "LocalPlaylistsModel");
     qmlRegisterSingletonType(URI, 1, 0, "About", [](QQmlEngine *engine, QJSEngine *) -> QJSValue {
         return engine->toScriptValue(KAboutData::applicationData());
     });

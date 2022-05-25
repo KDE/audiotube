@@ -123,7 +123,6 @@ void Library::addPlaybackHistoryItem(const QString &videoId, const QString &titl
         });
     });
 }
-
 void Library::removePlaybackHistoryItem(const QString &videoId)
 {
     connectFuture(m_database->execute("delete from played_songs where video_id = ?", videoId), this, &Library::changePlaybackHistory);
@@ -136,6 +135,8 @@ WasPlayedWatcher *Library::wasPlayedWatcher(const QString& videoId)
     }
     return new WasPlayedWatcher(this, videoId);
 }
+
+
 
 
 PlaybackHistoryModel *Library::mostPlayed()

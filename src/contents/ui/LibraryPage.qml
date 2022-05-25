@@ -5,9 +5,10 @@
 import QtQuick 2.1
 import QtQuick.Controls 2.12 as Controls
 import QtQuick.Layouts 1.3
-import org.kde.kirigami 2.14 as Kirigami
+import org.kde.kirigami 2.19 as Kirigami
 
 import org.kde.ytmusic 1.0
+import "dialogs"
 
 Kirigami.ScrollablePage {
     objectName: "libraryPage"
@@ -54,7 +55,7 @@ Kirigami.ScrollablePage {
             Controls.ToolButton {
                 Layout.fillHeight: true
                 icon.name: "view-more-symbolic"
-                onPressed: Kirigami.Settings.isMobile? favDrawer.open() : favMenu.open()
+                onPressed: Kirigami.Settings.isMobile? favDrawer.open() : favMenu.popup()
                 Controls.Menu {
                     id: favMenu
                     Controls.MenuItem {
@@ -349,7 +350,7 @@ Kirigami.ScrollablePage {
             Controls.ToolButton {
                 Layout.fillHeight: true
                 icon.name: "view-more-symbolic"
-                onPressed: Kirigami.Settings.isMobile? recDrawer.open() : recMenu.open()
+                onPressed: Kirigami.Settings.isMobile? recDrawer.open() : recMenu.popup()
                 Controls.Menu {
                     id: recMenu
                     Controls.MenuItem {
@@ -450,6 +451,7 @@ Kirigami.ScrollablePage {
             Layout.fillWidth: true
             RowLayout {
                 spacing: 20
+
                 Repeater {
                     id: mostPlayedRepeater
                     Layout.fillWidth: true
@@ -594,6 +596,259 @@ Kirigami.ScrollablePage {
                         }
                         Item {
                             height: 5
+                        }
+                    }
+                }
+            }
+        }
+        Item {
+            height: 20
+        }
+        RowLayout {
+            Layout.fillWidth: true
+            spacing: Kirigami.Units.MediumSpacing
+            Kirigami.Heading {
+                text: i18n("Playlists")
+                Layout.alignment: Qt.AlignLeft
+                leftPadding: 15
+            }
+
+
+            // Spacer
+            Item {
+                Layout.fillWidth: true
+            }
+
+            Controls.ToolButton {
+                text: i18n("Show All")
+                Layout.alignment: Qt.AlignRight
+                icon.name: "arrow-right"
+                onClicked: {pageStack.push("qrc:/LocalPlaylistsPage.qml", {
+                      "objectName": "playlists"
+                  })}
+            }
+        }
+
+        Kirigami.Icon {
+            id: playlistsPlaceholder
+
+            visible: mostPlayedRepeater.count == 0
+            Layout.margins: 20
+            isMask: true
+            opacity:0.4
+            color: Kirigami.Theme.hoverColor
+            Layout.alignment: Qt.AlignHCenter
+            Layout.fillWidth: true
+            implicitWidth: 190
+            implicitHeight: 190
+
+            source: "qrc:/resources/playlist_placeholder.svg"
+
+            Controls.Label {
+                visible: favouriteRepeater.count === 0
+                color: Kirigami.Theme.disabledTextColor
+                text: i18n("No Playlists Yet")
+
+                font {
+                    bold: true
+                    pointSize: 15
+                }
+
+                anchors.centerIn: playlistsPlaceholder
+            }
+        }
+
+        RenamePlaylistDialog{
+            id: renamePlaylistDialog
+            playlistsModel: localPlaylistsModel
+        }
+        BottomDrawer{
+            id: playlistDrawer
+            property var modelData
+            drawerContentItem: ColumnLayout {
+                Kirigami.BasicListItem{
+                    label: i18n("Rename")
+                    icon: "edit-entry"
+                    onClicked: {
+                        renamePlaylistDialog.modelData = playlistDrawer.modelData
+                        renamePlaylistDialog.open()
+                        playlistDrawer.close()
+                    }
+                }
+                Kirigami.BasicListItem{
+                    label: i18n("Delete")
+                    icon: "delete"
+                    onClicked: {
+                        localPlaylistsModel.deletePlaylist(playlistDrawer.modelData.playlistId)
+                        playlistDrawer.close()
+                    }
+                }
+            }
+        }
+        Controls.Menu {
+            id: playlistMenu
+            property var modelData
+            Controls.MenuItem {
+                text: i18n("Rename")
+                icon.name: "edit-entry"
+                onTriggered:{
+                    renamePlaylistDialog.modelData = playlistMenu.modelData
+                    renamePlaylistDialog.open()
+                }
+            }
+            Controls.MenuItem {
+                text: i18n("Delete")
+                icon.name: "delete"
+                onTriggered:{
+                    localPlaylistsModel.deletePlaylist(playlistMenu.modelData.playlistId)
+                }
+            }
+        }
+
+        Controls.ScrollView {
+            leftPadding: 15
+            rightPadding: 25
+            Layout.fillWidth: true
+            RowLayout {
+                spacing: 20
+                Repeater {
+                    id: playlistsRepeater
+                    Layout.fillWidth: true
+                    model: LocalPlaylistsModel {
+                        id: localPlaylistsModel
+                    }
+                    delegate: ColumnLayout {
+                        id: playlistDelegate
+                        required property var model
+                        required property string playlistId
+                        required property string title
+                        required property string description
+                        required property date createdOn
+                        required property var thumbnailIds
+                        onThumbnailIdsChanged: console.log(thumbnailIds)
+
+                        Layout.fillWidth: false
+                        Layout.maximumWidth: 200
+                        Layout.preferredWidth: 200
+                        Kirigami.ShadowedRectangle {
+                            color: Kirigami.Theme.backgroundColor
+                            id: playlistsCover
+                            MouseArea {
+                                id: playlistsArea
+                                anchors.fill: parent
+                                onClicked: pageStack.push("qrc:/LocalPlaylistPage.qml", {
+                                                                     "playlistId": playlistDelegate.playlistId,
+                                                                     "title": playlistDelegate.title
+                                                                 })
+                                hoverEnabled: !Kirigami.Settings.hasTransientTouchInput
+                                onEntered: {
+                                    if (!Kirigami.Settings.hasTransientTouchInput){
+                                        playlistSelected.visible = true
+                                        playlistTitle.color = Kirigami.Theme.hoverColor
+                                        playlistSubtitle.color = Kirigami.Theme.hoverColor
+                                        playlistTitle.font.bold = true
+                                    }
+
+                                }
+
+                                onExited:{
+                                    playlistSelected.visible = false
+                                    playlistTitle.color = Kirigami.Theme.textColor
+                                    playlistSubtitle.color = Kirigami.Theme.disabledTextColor
+                                    playlistTitle.font.bold = false
+                                }
+                            }
+                            Layout.margins: 5
+                            width: 200
+                            height: 200
+                            radius: 10
+                            shadow.size: 15
+                            shadow.xOffset: 5
+                            shadow.yOffset: 5
+                            shadow.color: Qt.rgba(0, 0, 0, 0.2)
+
+
+                            LocalPlaylistsModel{id:localPlaylistModel}
+
+                            ThumbnailSource {
+                                id: thumbnailSource1
+                                videoId: thumbnailIds[0]
+                            }
+                            ThumbnailSource {
+                                id: thumbnailSource2
+                                videoId: thumbnailIds[1] ?? thumbnailIds[0]
+                            }
+                            ThumbnailSource {
+                                id: thumbnailSource3
+                                videoId: thumbnailIds[2] ?? thumbnailIds[0]
+                            }
+                            ThumbnailSource {
+                                id: thumbnailSource4
+                                videoId: thumbnailIds[3] ?? thumbnailIds[0]
+                            }
+                            PlaylistCover {
+                                source1: thumbnailSource1.cachedPath
+                                source2: thumbnailSource2.cachedPath
+                                source3: thumbnailSource3.cachedPath
+                                source4: thumbnailSource4.cachedPath
+                                title: playlistDelegate.title
+                                height: 200
+                                width: height
+                                radius: 10
+                            }
+
+                            Rectangle {
+                                id: playlistSelected
+
+                                Rectangle {
+                                    anchors.fill: parent
+                                    color: Kirigami.Theme.hoverColor
+                                    radius: 10
+                                    opacity: 0.2
+                                }
+
+
+                                visible: false
+                                anchors.fill: parent
+
+                                radius: 9
+
+                                border.color: Kirigami.Theme.hoverColor
+                                border.width: 2
+                                color: "transparent"
+                            }
+                        }
+
+                        RowLayout {
+                            ColumnLayout {
+                                Controls.Label {
+                                    id: playlistTitle
+                                    text: playlistDelegate.title
+                                    Layout.maximumWidth: 200
+                                    Layout.fillWidth: true
+                                    leftPadding: 5
+                                    elide: Text.ElideRight
+
+                                }
+                                Controls.Label {
+                                    id: playlistSubtitle
+                                    Layout.fillWidth: true
+                                    Layout.maximumWidth: 200
+                                    leftPadding: 5
+                                    color: Kirigami.Theme.disabledTextColor
+                                    text: playlistDelegate.description
+                                    elide: Text.ElideRight
+                                }
+                            }
+                            Controls.ToolButton {
+                                Layout.fillHeight: true
+                                icon.name: "overflow-menu"
+                                onClicked:{
+                                    playlistMenu.modelData = playlistDelegate.model
+                                    playlistDrawer.modelData = playlistDelegate.model
+                                    Kirigami.Settings.isMobile? playlistDrawer.open() : playlistMenu.popup()
+                                }
+                            }
                         }
                     }
                 }

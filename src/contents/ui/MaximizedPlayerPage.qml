@@ -12,6 +12,8 @@ import QtMultimedia 5.12
 import org.kde.kirigami 2.19 as Kirigami
 import org.kde.ytmusic 1.0
 
+import "dialogs"
+
 Item {
     id: root
 
@@ -605,7 +607,7 @@ Item {
                         Layout.preferredWidth: height
                         onClicked: shareMenu.open()
 
-                        text: "Sharee Song"
+                        text: "Share Song"
                         icon.name: "emblem-shared-symbolic"
                         icon.color: "white"
                         display: AbstractButton.IconOnly
@@ -618,6 +620,35 @@ Item {
                             url: UserPlaylistModel.webUrl
                             inputTitle: info.title
                         }
+                    }
+
+                    PlaylistDialog{
+                        id: playlistsDialog
+                    }
+                    ToolButton {
+                        id: addToPlaylistButton
+                        Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
+                        Layout.maximumWidth: height
+                        Layout.preferredWidth: height
+
+                        onClicked: {
+                            let index = UserPlaylistModel.index(UserPlaylistModel.currentIndex, 0)
+                            let videoId = UserPlaylistModel.data(index, UserPlaylistModel.VideoId)
+                            let title = UserPlaylistModel.data(index, UserPlaylistModel.Title)
+                            let artist = UserPlaylistModel.data(index, UserPlaylistModel.Artists)
+                            let album = UserPlaylistModel.data(index, UserPlaylistModel.Album)
+                            playlistsDialog.videoId = videoId
+                            playlistsDialog.songTitle = title
+                            playlistsDialog.artists = artist
+                            playlistsDialog.album = album
+
+                            playlistsDialog.open()
+                        }
+
+                        icon.name: "media-playlist-append"
+                        icon.color: "white"
+                        Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
+                        Kirigami.Theme.inherit: false
                     }
                     Item {
                         Layout.fillWidth: true
@@ -785,9 +816,7 @@ Item {
 
                                     Layout.fillWidth: true
                                     Kirigami.Heading {
-    //                                        Layout.leftMargin: 5
-    //                                        Layout.rightMargin: 5
-    //                                        Layout.topMargin: 5
+
 
                                         elide: Text.ElideRight
                                         Layout.fillWidth: true
@@ -815,6 +844,7 @@ Item {
                         }
                     }
                 }
+
                 
                 Kirigami.Separator {
                     color: "white"

@@ -24,6 +24,7 @@ Kirigami.NavigationTabBar {
             text: i18n("Library")
             checked: pageStack.currentItem && pageStack.currentItem.objectName == "libraryPage"
             onTriggered: {
+                pageStack.clear()
                 pageStack.replace("qrc:/LibraryPage.qml")
                 applicationWindow().showSearch = false
 
@@ -35,6 +36,7 @@ Kirigami.NavigationTabBar {
             text: i18n("Search")
             checked: pageStack.currentItem && pageStack.currentItem.objectName == "searchPage"
             onTriggered: {
+                pageStack.clear()
                 pageStack.replace("qrc:/SearchHistoryPage.qml",)
                 applicationWindow().showSearch = true
                 applicationWindow().searchField.forceActiveFocus();
@@ -46,6 +48,7 @@ Kirigami.NavigationTabBar {
             text: i18n("Favourites")
             checked: pageStack.currentItem && pageStack.currentItem.objectName == "favourites"
             onTriggered: {
+                pageStack.clear()
                 pageStack.replace("qrc:/PlaybackHistory.qml", {
                                                 "dataModel": Library.favourites,
                                                 "title": i18n("Favourites"),
@@ -58,10 +61,24 @@ Kirigami.NavigationTabBar {
             text: i18n("Played Songs")
             checked: pageStack.currentItem && pageStack.currentItem.objectName == "history"
             onTriggered: {
+                pageStack.clear()
                 pageStack.replace("qrc:/PlaybackHistory.qml", {
                                                 "dataModel": Library.playbackHistory,
                                                 "title": i18n("Played Songs"),
                                                 "objectName": "history"})
+                applicationWindow().showSearch = false
+
+            }
+        },
+        Kirigami.Action {
+            iconName: "amarok_playlist"
+            text: i18n("Playlists")
+            checked: pageStack.currentItem && pageStack.currentItem.objectName == "playlists"
+            onTriggered: {
+                pageStack.clear()
+                pageStack.replace("qrc:/LocalPlaylistsPage.qml", {
+                  "objectName": "playlists"
+                })
                 applicationWindow().showSearch = false
 
             }

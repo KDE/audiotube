@@ -55,6 +55,9 @@ Rectangle {
 
             aboutButton.checked = !aboutButton.checked
             aboutButton.checked = !aboutButton.checked
+
+            playlistsButton.checked = !playlistsButton.checked
+            playlistsButton.checked = !playlistsButton.checked
         }
     }
     Kirigami.Separator {
@@ -153,6 +156,21 @@ Rectangle {
                           "dataModel": Library.playbackHistory,
                           "title": i18n("Played Songs"),
                           "objectName": "history"
+                      })}
+                }
+                Kirigami.NavigationTabButton {
+                    id: playlistsButton
+                    Layout.fillWidth: true
+                    width: column.width - column.Layout.leftMargin - column.Layout.rightMargin
+                    implicitHeight: 50
+                    display: Controls.AbstractButton.TextBesideIcon
+                    text: collapsed? "" : i18n("Playlists")
+                    icon.name: "amarok_playlist"
+                    checked: pageStack.currentItem && pageStack.currentItem.objectName == "playlists"
+                    onClicked: {
+                        pageStack.clear()
+                        pageStack.push("qrc:/LocalPlaylistsPage.qml", {
+                          "objectName": "playlists"
                       })}
                 }
             }

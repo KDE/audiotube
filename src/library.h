@@ -143,15 +143,17 @@ public:
     Q_INVOKABLE void removePlaybackHistoryItem(const QString &videoId);
     Q_INVOKABLE WasPlayedWatcher *wasPlayedWatcher(const QString &videoId);
 
+    Q_SIGNAL void playlistsChanged();
+
     PlaybackHistoryModel *mostPlayed();
 
     QNetworkAccessManager &nam();
     ThreadedDatabase &database() {
         return *m_database;
     }
+    QFuture<void> addSong(const QString &videoId, const QString &title, const QString &artist, const QString &album);
 
 private:
-    QFuture<void> addSong(const QString &videoId, const QString &title, const QString &artist, const QString &album);
 
     QNetworkAccessManager m_networkImageCacher;
     std::unique_ptr<ThreadedDatabase> m_database;

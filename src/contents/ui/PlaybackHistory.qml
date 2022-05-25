@@ -16,10 +16,7 @@ Kirigami.ScrollablePage {
 
     property QtObject dataModel: (objectName == "history") ? Library.playbackHistory : (objectName == "favourites" ? Library.favourites : null)
 
-    titleDelegate: ColumnLayout {
-        spacing: 0
-
-        RowLayout{
+    titleDelegate: RowLayout{
             spacing: Kirigami.Units.MediumSpacing
 
             Controls.ToolButton {
@@ -35,42 +32,35 @@ Kirigami.ScrollablePage {
                 }
             }
 
-            Controls.ToolButton {
-                text: i18n("Shuffle")
-                icon.name: "shuffle"
-                onClicked: {
-                    if(playbackHistoryPage.objectName == "favourites") {
-                        UserPlaylistModel.playFavourites(Library.favourites, true)
-                    }
-                    else if(playbackHistoryPage.objectName == "history") {
-                        onClicked: UserPlaylistModel.playPlaybackHistory(playbackHistoryPage.dataModel, true)
-                    }
+        Controls.ToolButton {
+            text: i18n("Shuffle")
+            icon.name: "shuffle"
+            onClicked: {
+                if(playbackHistoryPage.objectName == "favourites") {
+                    UserPlaylistModel.playFavourites(Library.favourites, true)
                 }
-            }
-            Controls.ToolButton {
-                text: i18n("Append to queue")
-                icon.name: "media-playlist-append"
-                onClicked: {
-                    if(playbackHistoryPage.objectName == "favourites") {
-                        UserPlaylistModel.appendFavourites(Library.favourites,false)
-                    }
-                    else if(playbackHistoryPage.objectName == "history") {
-                        UserPlaylistModel.appendPlaybackHistory(Library.mostPlayed, false)
-                    }
+                else if(playbackHistoryPage.objectName == "history") {
+                    onClicked: UserPlaylistModel.playPlaybackHistory(playbackHistoryPage.dataModel, true)
                 }
-            }
-            Item {
-                Layout.fillWidth: true
             }
         }
-
-        Kirigami.Separator {
-            color: white
-            opacity: 0.3
-
+        Controls.ToolButton {
+            text: i18n("Append to queue")
+            icon.name: "media-playlist-append"
+            onClicked: {
+                if(playbackHistoryPage.objectName == "favourites") {
+                    UserPlaylistModel.appendFavourites(Library.favourites,false)
+                }
+                else if(playbackHistoryPage.objectName == "history") {
+                    UserPlaylistModel.appendPlaybackHistory(playbackHistoryPage.dataModel, false)
+                }
+            }
+        }
+        Item {
             Layout.fillWidth: true
         }
     }
+
 
     SongMenu {
         id:menu

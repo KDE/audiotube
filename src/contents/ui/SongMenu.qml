@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2022 Mathis Brüchert <mbb@kaidan.im>
+// SPDX-FileCopyrightText: 2023 Mathis Brüchert <mbb@kaidan.im>
 //
 // SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
@@ -8,10 +8,18 @@ import org.kde.ytmusic 1.0
 import org.kde.kirigami 2.19 as Kirigami
 import QtQuick.Layouts 1.15
 
+import "dialogs"
 
 Item {
+    id:root
+    property string videoId
+    property list<Kirigami.Action> pageSpecificActions
+
     ShareMenu {
         id: shareMenu
+    }
+    PlaylistDialog{
+        id: playlistDialog
     }
     function openForSong(videoId, songTitle, artists, artistsDisplayString) {
         shareMenu.url = "https://music.youtube.com/watch?v=" + videoId
@@ -19,15 +27,20 @@ Item {
 
         menu.videoId = videoId
         drawer.videoId = videoId
+        playlistDialog.videoId = videoId
+        root.videoId = videoId
 
         menu.songTitle = songTitle
         drawer.songTitle = songTitle
+        playlistDialog.songTitle = songTitle
 
         menu.artists = artists
         drawer.artists = artists
 
         menu.artistsDisplayString = artistsDisplayString
         drawer.artistsDisplayString = artistsDisplayString
+        playlistDialog.artists = artistsDisplayString
+
 
         if (Kirigami.Settings.isMobile) {
             drawer.interactive = true
@@ -140,6 +153,33 @@ Item {
             Kirigami.BasicListItem{
                 readonly property QtObject wasPlayedWatcher: Library.wasPlayedWatcher(drawer.videoId)
 
+                label: i18n("Add to playlist")
+                icon: "media-playlist-append"
+                onClicked: {
+                    playlistDialog.open()
+                    drawer.close()
+                }
+            }
+
+            // Page specific actions //
+
+            Repeater {
+                model: root.pageSpecificActions
+                delegate: Kirigami.BasicListItem{
+                    required property var modelData
+                    label: modelData.text
+                    icon: modelData.icon.name
+                    onClicked: {
+                        modelData.triggered()
+                        drawer.close()
+                    }
+                }
+            }
+
+
+            Kirigami.BasicListItem{
+                readonly property QtObject wasPlayedWatcher: Library.wasPlayedWatcher(drawer.videoId)
+
                 label: i18n("Share Song")
                 icon: "emblem-shared-symbolic"
                 onClicked: {
@@ -200,6 +240,29 @@ Item {
             enabled: wasPlayedWatcher ? wasPlayedWatcher.wasPlayed : false
             visible: wasPlayedWatcher ? wasPlayedWatcher.wasPlayed : false
         }
+        Controls.MenuItem {
+            text: i18n("Add to playlist")
+            icon.name: "media-playlist-append"
+            onTriggered: playlistDialog.open()
+        }
+        // Page specific actions //
+
+        Controls.MenuSeparator{ visible: instantiator.count !== 0 }
+
+        Instantiator {
+            id: instantiator
+            model: root.pageSpecificActions
+            onObjectAdded: menu.insertItem(index+8, object)
+            onObjectRemoved: menu.removeItem(object)
+            delegate: Controls.MenuItem {
+                required property var modelData
+                icon.name: modelData.icon.name
+                text:modelData.text
+                onTriggered: modelData.triggered()
+            }
+        }
+
+
         Controls.MenuSeparator{}
 
         Controls.MenuItem {

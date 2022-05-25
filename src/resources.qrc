@@ -1,7 +1,9 @@
 <!--
+
 SPDX-FileCopyrightText: 2022 Jonah Brüchert <jbb@kaidan.im>
 
 SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+
 -->
 
 <RCC>
@@ -31,5 +33,14 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
         <file alias="AboutAudiotube.qml">contents/ui/AboutAudiotube.qml</file>
         <file alias="ShareMenu.qml">contents/ui/ShareMenu.qml</file>
         <file alias="BottomDrawer.qml">contents/ui/BottomDrawer.qml</file>
+        <file alias="LocalPlaylistPage.qml">contents/ui/LocalPlaylistPage.qml</file>
+        <file>migrations/2022-05-25-212054_playlists/down.sql</file>
+        <file>migrations/2022-05-25-212054_playlists/up.sql</file>
+        <file alias="LocalPlaylistsPage.qml">contents/ui/LocalPlaylistsPage.qml</file>
+        <file alias="PlaylistCover.qml">contents/ui/PlaylistCover.qml</file>
+        <file alias="dialogs/PlaylistDialog.qml">contents/ui/dialogs/PlaylistDialog.qml</file>
+        <file alias="dialogs/AddPlaylistDialog.qml">contents/ui/dialogs/AddPlaylistDialog.qml</file>
+        <file alias="dialogs/RenamePlaylistDialog.qml">contents/ui/dialogs/RenamePlaylistDialog.qml</file>
+        <file alias="resources/playlist_placeholder.svg">resources/playlist_placeholder.svg</file>
     </qresource>
 </RCC>

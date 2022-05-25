@@ -10,7 +10,7 @@
 
 class PlaylistModel;
 class AlbumModel;
-
+class LocalPlaylistModel;
 
 class UserPlaylistModel : public AbstractYTMusicModel
 {
@@ -96,6 +96,8 @@ public:
     Q_INVOKABLE void appendFavourites(FavouritesModel *favouriteModel, bool shuffled);
     Q_INVOKABLE void playPlaybackHistory(PlaybackHistoryModel *playbackHistory, bool shuffled);
     Q_INVOKABLE void appendPlaybackHistory(PlaybackHistoryModel *playbackHistory, bool shuffled);
+    Q_INVOKABLE void playLocalPlaylist(LocalPlaylistModel *playlistModel, bool shuffled);
+    Q_INVOKABLE void appendLocalPlaylist(LocalPlaylistModel *playlistModel, bool shuffled);
 
 private:
     void emitCurrentVideoChanged(const QString &oldVideoId);

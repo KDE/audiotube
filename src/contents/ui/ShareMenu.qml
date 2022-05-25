@@ -41,7 +41,6 @@ Item{
         standardButtons: Kirigami.Dialog.NoButton
         ColumnLayout {
             spacing:0
-            anchors.fill: inputSheet
             Kirigami.BasicListItem {
                 Layout.fillWidth: true
                 leading: Kirigami.Icon {

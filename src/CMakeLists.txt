@@ -36,6 +36,8 @@ add_executable(audiotube
     abstractytmusicmodel.cpp
     multiiterableview.h
     library.cpp
+    localplaylistmodel.cpp
+    localplaylistsmodel.cpp
     resources.qrc
     blur.cpp
     clipboard.cpp

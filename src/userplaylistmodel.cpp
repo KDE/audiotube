@@ -16,6 +16,7 @@
 #include <iostream>
 
 #include "albummodel.h"
+#include "localplaylistmodel.h"
 #include "playlistutils.h"
 #include "playlistmodel.h"
 
@@ -382,7 +383,7 @@ void UserPlaylistModel::appendFavourites(FavouritesModel *favouriteModel, bool s
 {
     std::vector<Song> favourites(favouriteModel->getFavouriteSongs());
     if(shuffled) {
-        std::shuffle(favourites.begin(), favourites.end(), *QRandomGenerator::global());
+        ranges::shuffle(favourites, *QRandomGenerator::global());
     }
     ranges::for_each(favourites, [this](const Song &song) {
         meta::Artist artist;
@@ -411,6 +412,24 @@ void UserPlaylistModel::appendPlaybackHistory(PlaybackHistoryModel *playbackHist
     });
 }
 
+void UserPlaylistModel::playLocalPlaylist(LocalPlaylistModel *playlistModel, bool shuffled)
+{
+    clear();
+    appendLocalPlaylist(playlistModel, shuffled);
+}
+
+void UserPlaylistModel::appendLocalPlaylist(LocalPlaylistModel *playlistModel, bool shuffled)
+{
+    std::vector<PlaylistEntry> entries = playlistModel->entries();
+    if (shuffled) {
+        ranges::shuffle(entries, *QRandomGenerator::global());
+    }
+    for (const auto &entry : entries) {
+        meta::Artist artist;
+        artist.name = entry.artists.toStdString();
+        append(entry.videoId, entry.title, std::vector<meta::Artist>({artist}));
+    }
+}
 
 void UserPlaylistModel::emitCurrentVideoChanged(const QString &oldVideoId)
 {

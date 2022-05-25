@@ -13,6 +13,7 @@ class ThumbnailSource : public QObject {
     Q_PROPERTY(QString videoId READ videoId WRITE setVideoId NOTIFY videoIdChanged)
     Q_PROPERTY(QUrl cachedPath READ cachedPath NOTIFY cachedPathChanged)
 
+public:
     QString videoId() const {
         return m_videoId;
     }
