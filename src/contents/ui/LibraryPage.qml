@@ -46,6 +46,7 @@ Kirigami.ScrollablePage {
         Controls.ScrollView {
             Layout.fillWidth: true
             RowLayout {
+                spacing: 20
                 Repeater {
                     Layout.fillWidth: true
                     model: Library.favourites
@@ -117,6 +118,8 @@ Kirigami.ScrollablePage {
         Controls.ScrollView {
             Layout.fillWidth: true
             RowLayout {
+                spacing: 20
+
                 Repeater {
                     Layout.fillWidth: true
                     model: Library.mostPlayed
@@ -204,6 +207,8 @@ Kirigami.ScrollablePage {
         Controls.ScrollView {
             Layout.fillWidth: true
             RowLayout {
+                spacing: 20
+
                 Repeater {
                     Layout.fillWidth: true
                     model: LocalPlaylistsModel {
@@ -227,6 +232,11 @@ Kirigami.ScrollablePage {
                                 fillMode: Image.PreserveAspectCrop
                                 asynchronous: true
                             }
+
+                            onClicked: pageStack.layers.push("qrc:/LocalPlaylistPage.qml", {
+                                                                 "playlistId": playlistDelegate.playlistId,
+                                                                 "title": playlistDelegate.title
+                                                             })
                         }
                         Controls.Label {
                             Layout.maximumWidth: 200

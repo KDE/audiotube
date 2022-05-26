@@ -353,6 +353,7 @@ std::vector<search::SearchResultItem> YTMusic::search(
 artist::Artist YTMusic::get_artist(const std::string &channel_id) const
 {
     const auto artist = d->get_ytmusic().attr("get_artist")(channel_id);
+    pyPrintPretty(artist);
     return artist::Artist {
         optional_key<std::string>(artist, "description"),
         artist["views"].cast<std::optional<std::string>>(),

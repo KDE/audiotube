@@ -347,6 +347,48 @@ Item {
                     Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
                     Kirigami.Theme.inherit: false
                 }
+
+                Kirigami.PromptDialog {
+                    id: playlistsDialog
+
+                    property string videoId
+
+                    mainItem: ListView {
+                        implicitHeight: 200
+                        model: LocalPlaylistsModel {
+                        }
+
+                        delegate: Kirigami.BasicListItem {
+                            required property string title
+                            required property int playlistId
+
+                            text: title
+
+                            onClicked: Library.addPlaylistEntry(playlistId, playlistsDialog.videoId, info.title)
+                        }
+                    }
+                }
+
+                ToolButton {
+                    id: addToPlaylistButton
+                    Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
+                    Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
+                    Layout.maximumWidth: height
+                    Layout.preferredWidth: height
+
+                    onClicked: {
+                        playlistsDialog.videoId = info.videoId
+                        playlistsDialog.open()
+                    }
+
+                    icon.name: "media-playlist-append"
+                    icon.width: Kirigami.Units.gridUnit * 1.5
+                    icon.height: Kirigami.Units.gridUnit * 1.5
+                    icon.color: "white"
+
+                    Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
+                    Kirigami.Theme.inherit: false
+                }
                 
                 ToolButton {
                     id: skipBackwardButton

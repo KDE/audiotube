@@ -26,7 +26,8 @@ class LocalPlaylistModel : public QAbstractListModel
     Q_PROPERTY(QString playlistId READ playlistId WRITE setPlaylistId NOTIFY playlistIdChanged)
 
     enum Roles {
-        VideoId = Qt::UserRole + 1
+        VideoId = Qt::UserRole + 1,
+        Title
     };
 
 public:

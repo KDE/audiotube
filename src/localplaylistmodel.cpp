@@ -23,14 +23,15 @@ int LocalPlaylistModel::rowCount(const QModelIndex &index) const
 QHash<int, QByteArray> LocalPlaylistModel::roleNames() const
 {
     return {
-        { Roles::VideoId, "videoId" }
+        { Roles::VideoId, "videoId" },
+        { Roles::Title, "title" }
     };
 }
 
 QVariant LocalPlaylistModel::data(const QModelIndex &index, int role) const
 {
     switch (role) {
-    case Qt::DisplayRole:
+    case Roles::Title:
         return m_entries[index.row()].title;
     case Roles::VideoId:
         return m_entries[index.row()].videoId;
@@ -55,8 +56,8 @@ void LocalPlaylistModel::refreshModel()
     auto future = Library::instance()
             .database()
             .getResults<PlaylistEntry>(
-                "select (video_id, title) from "
-                "playlists_entries natural join songs where playlist_id = ?", m_playlistId);
+                "select video_id, title from "
+                "playlist_entries natural join songs where playlist_id = ?", m_playlistId);
 
     connectFuture(future, this, [this](auto entries) {
         beginResetModel();
