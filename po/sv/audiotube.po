@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-25 00:46+0000\n"
+"POT-Creation-Date: 2022-05-26 00:46+0000\n"
 "PO-Revision-Date: 2022-05-23 17:51+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -32,14 +32,20 @@ msgstr "stefan.asserhall@bredband.net"
 msgid "Play"
 msgstr "Spela"
 
-#: contents/ui/AlbumPage.qml:61 contents/ui/ArtistPage.qml:101
-#: contents/ui/PlaylistPage.qml:67
+#: contents/ui/AlbumPage.qml:26 contents/ui/PlaylistPage.qml:26
+#, kde-format
+msgid "Shuffle"
+msgstr "Blanda"
+
+#: contents/ui/AlbumPage.qml:68 contents/ui/ArtistPage.qml:101
+#: contents/ui/PlaybackHistory.qml:73 contents/ui/PlaylistPage.qml:67
 #, kde-format
 msgid "Play Next"
 msgstr "Spela nästa"
 
-#: contents/ui/AlbumPage.qml:66 contents/ui/ArtistPage.qml:107
-#: contents/ui/PlaylistPage.qml:72 contents/ui/SearchPage.qml:123
+#: contents/ui/AlbumPage.qml:73 contents/ui/ArtistPage.qml:107
+#: contents/ui/PlaybackHistory.qml:78 contents/ui/PlaylistPage.qml:72
+#: contents/ui/SearchPage.qml:123
 #, kde-format
 msgid "Add to Playlist"
 msgstr "Lägg till i spellista"
@@ -81,17 +87,43 @@ msgstr "Ok"
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: contents/ui/LibraryPage.qml:15
+#: contents/ui/LibraryPage.qml:27
 #, kde-format
 msgid "Favourites"
 msgstr "Favoriter"
 
-#: contents/ui/LibraryPage.qml:67
+#: contents/ui/LibraryPage.qml:37 contents/ui/LibraryPage.qml:108
+#, kde-format
+msgid "Show All"
+msgstr ""
+
+#: contents/ui/LibraryPage.qml:42
+#, fuzzy, kde-format
+#| msgid "Favourites"
+msgid "Favourite Songs"
+msgstr "Favoriter"
+
+#: contents/ui/LibraryPage.qml:98
 #, kde-format
 msgid "Most played"
 msgstr "Mest spelade"
 
-#: contents/ui/main.qml:93
+#: contents/ui/LibraryPage.qml:113
+#, kde-format
+msgid "Played Songs"
+msgstr ""
+
+#: contents/ui/main.qml:39
+#, kde-format
+msgid "Back"
+msgstr ""
+
+#: contents/ui/main.qml:73 contents/ui/SearchPage.qml:150
+#, kde-format
+msgid "Search"
+msgstr "Sök"
+
+#: contents/ui/main.qml:85
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
@@ -118,10 +150,15 @@ msgstr "Ta bort spår"
 msgid "No media playing"
 msgstr "Inga media spelar"
 
-#: contents/ui/PlaylistPage.qml:26
+#: contents/ui/PlaybackHistory.qml:15
 #, kde-format
-msgid "Shuffle"
-msgstr "Blanda"
+msgid "Unknown list of songs"
+msgstr ""
+
+#: contents/ui/PlaybackHistory.qml:25
+#, kde-format
+msgid "No songs here yet"
+msgstr ""
 
 #: contents/ui/SearchPage.qml:27
 #, kde-format
@@ -152,11 +189,6 @@ msgstr "Radio"
 #, kde-format
 msgid "Find music on YouTube Music"
 msgstr "Sök efter musik på YouTube musik"
-
-#: contents/ui/SearchPage.qml:150
-#, kde-format
-msgid "Search"
-msgstr "Sök"
 
 #~ msgid "Clear"
 #~ msgstr "Rensa"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-25 00:46+0000\n"
+"POT-Creation-Date: 2022-05-26 00:46+0000\n"
 "PO-Revision-Date: 2022-05-15 15:46\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -32,14 +32,20 @@ msgstr "weearc@kde.org, tysontan@tysontan.com"
 msgid "Play"
 msgstr "播放"
 
-#: contents/ui/AlbumPage.qml:61 contents/ui/ArtistPage.qml:101
-#: contents/ui/PlaylistPage.qml:67
+#: contents/ui/AlbumPage.qml:26 contents/ui/PlaylistPage.qml:26
+#, kde-format
+msgid "Shuffle"
+msgstr "随机播放"
+
+#: contents/ui/AlbumPage.qml:68 contents/ui/ArtistPage.qml:101
+#: contents/ui/PlaybackHistory.qml:73 contents/ui/PlaylistPage.qml:67
 #, kde-format
 msgid "Play Next"
 msgstr "播放下一首"
 
-#: contents/ui/AlbumPage.qml:66 contents/ui/ArtistPage.qml:107
-#: contents/ui/PlaylistPage.qml:72 contents/ui/SearchPage.qml:123
+#: contents/ui/AlbumPage.qml:73 contents/ui/ArtistPage.qml:107
+#: contents/ui/PlaybackHistory.qml:78 contents/ui/PlaylistPage.qml:72
+#: contents/ui/SearchPage.qml:123
 #, kde-format
 msgid "Add to Playlist"
 msgstr "添加到播放列表"
@@ -81,17 +87,42 @@ msgstr "确定"
 msgid "Cancel"
 msgstr "取消"
 
-#: contents/ui/LibraryPage.qml:15
+#: contents/ui/LibraryPage.qml:27
 #, kde-format
 msgid "Favourites"
 msgstr ""
 
-#: contents/ui/LibraryPage.qml:67
+#: contents/ui/LibraryPage.qml:37 contents/ui/LibraryPage.qml:108
+#, kde-format
+msgid "Show All"
+msgstr ""
+
+#: contents/ui/LibraryPage.qml:42
+#, kde-format
+msgid "Favourite Songs"
+msgstr ""
+
+#: contents/ui/LibraryPage.qml:98
 #, kde-format
 msgid "Most played"
 msgstr ""
 
-#: contents/ui/main.qml:93
+#: contents/ui/LibraryPage.qml:113
+#, kde-format
+msgid "Played Songs"
+msgstr ""
+
+#: contents/ui/main.qml:39
+#, kde-format
+msgid "Back"
+msgstr ""
+
+#: contents/ui/main.qml:73 contents/ui/SearchPage.qml:150
+#, kde-format
+msgid "Search"
+msgstr "搜索"
+
+#: contents/ui/main.qml:85
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
@@ -118,10 +149,15 @@ msgstr "移除曲目"
 msgid "No media playing"
 msgstr "没有正在播放的媒体"
 
-#: contents/ui/PlaylistPage.qml:26
+#: contents/ui/PlaybackHistory.qml:15
 #, kde-format
-msgid "Shuffle"
-msgstr "随机播放"
+msgid "Unknown list of songs"
+msgstr ""
+
+#: contents/ui/PlaybackHistory.qml:25
+#, kde-format
+msgid "No songs here yet"
+msgstr ""
 
 #: contents/ui/SearchPage.qml:27
 #, kde-format
@@ -152,11 +188,6 @@ msgstr "电台"
 #, kde-format
 msgid "Find music on YouTube Music"
 msgstr "查找 YouTube Music 中的音乐"
-
-#: contents/ui/SearchPage.qml:150
-#, kde-format
-msgid "Search"
-msgstr "搜索"
 
 #~ msgid "Clear"
 #~ msgstr "清除"

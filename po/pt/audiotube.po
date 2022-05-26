@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-25 00:46+0000\n"
+"POT-Creation-Date: 2022-05-26 00:46+0000\n"
 "PO-Revision-Date: 2021-09-04 18:29+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -34,14 +34,20 @@ msgstr "zepires@gmail.com"
 msgid "Play"
 msgstr "Reproduzir"
 
-#: contents/ui/AlbumPage.qml:61 contents/ui/ArtistPage.qml:101
-#: contents/ui/PlaylistPage.qml:67
+#: contents/ui/AlbumPage.qml:26 contents/ui/PlaylistPage.qml:26
+#, kde-format
+msgid "Shuffle"
+msgstr "Baralhar"
+
+#: contents/ui/AlbumPage.qml:68 contents/ui/ArtistPage.qml:101
+#: contents/ui/PlaybackHistory.qml:73 contents/ui/PlaylistPage.qml:67
 #, kde-format
 msgid "Play Next"
 msgstr "Reproduzir o Seguinte"
 
-#: contents/ui/AlbumPage.qml:66 contents/ui/ArtistPage.qml:107
-#: contents/ui/PlaylistPage.qml:72 contents/ui/SearchPage.qml:123
+#: contents/ui/AlbumPage.qml:73 contents/ui/ArtistPage.qml:107
+#: contents/ui/PlaybackHistory.qml:78 contents/ui/PlaylistPage.qml:72
+#: contents/ui/SearchPage.qml:123
 #, kde-format
 msgid "Add to Playlist"
 msgstr "Adicionar à Lista de Reprodução"
@@ -85,17 +91,42 @@ msgstr "OK"
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: contents/ui/LibraryPage.qml:15
+#: contents/ui/LibraryPage.qml:27
 #, kde-format
 msgid "Favourites"
 msgstr ""
 
-#: contents/ui/LibraryPage.qml:67
+#: contents/ui/LibraryPage.qml:37 contents/ui/LibraryPage.qml:108
+#, kde-format
+msgid "Show All"
+msgstr ""
+
+#: contents/ui/LibraryPage.qml:42
+#, kde-format
+msgid "Favourite Songs"
+msgstr ""
+
+#: contents/ui/LibraryPage.qml:98
 #, kde-format
 msgid "Most played"
 msgstr ""
 
-#: contents/ui/main.qml:93
+#: contents/ui/LibraryPage.qml:113
+#, kde-format
+msgid "Played Songs"
+msgstr ""
+
+#: contents/ui/main.qml:39
+#, kde-format
+msgid "Back"
+msgstr ""
+
+#: contents/ui/main.qml:73 contents/ui/SearchPage.qml:150
+#, kde-format
+msgid "Search"
+msgstr "Procurar"
+
+#: contents/ui/main.qml:85
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
@@ -122,10 +153,15 @@ msgstr "Remover a Faixa"
 msgid "No media playing"
 msgstr "Nada em reprodução"
 
-#: contents/ui/PlaylistPage.qml:26
+#: contents/ui/PlaybackHistory.qml:15
 #, kde-format
-msgid "Shuffle"
-msgstr "Baralhar"
+msgid "Unknown list of songs"
+msgstr ""
+
+#: contents/ui/PlaybackHistory.qml:25
+#, kde-format
+msgid "No songs here yet"
+msgstr ""
 
 #: contents/ui/SearchPage.qml:27
 #, kde-format
@@ -156,11 +192,6 @@ msgstr "Rádio"
 #, kde-format
 msgid "Find music on YouTube Music"
 msgstr "Procurar música no YouTube Music"
-
-#: contents/ui/SearchPage.qml:150
-#, kde-format
-msgid "Search"
-msgstr "Procurar"
 
 #~ msgid "Clear"
 #~ msgstr "Limpar"

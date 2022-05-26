@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-25 00:46+0000\n"
+"POT-Creation-Date: 2022-05-26 00:46+0000\n"
 "PO-Revision-Date: 2021-12-08 00:45+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -32,14 +32,20 @@ msgstr "kde@peremen.name"
 msgid "Play"
 msgstr "재생"
 
-#: contents/ui/AlbumPage.qml:61 contents/ui/ArtistPage.qml:101
-#: contents/ui/PlaylistPage.qml:67
+#: contents/ui/AlbumPage.qml:26 contents/ui/PlaylistPage.qml:26
+#, kde-format
+msgid "Shuffle"
+msgstr "무순서 재생"
+
+#: contents/ui/AlbumPage.qml:68 contents/ui/ArtistPage.qml:101
+#: contents/ui/PlaybackHistory.qml:73 contents/ui/PlaylistPage.qml:67
 #, kde-format
 msgid "Play Next"
 msgstr "다음 재생"
 
-#: contents/ui/AlbumPage.qml:66 contents/ui/ArtistPage.qml:107
-#: contents/ui/PlaylistPage.qml:72 contents/ui/SearchPage.qml:123
+#: contents/ui/AlbumPage.qml:73 contents/ui/ArtistPage.qml:107
+#: contents/ui/PlaybackHistory.qml:78 contents/ui/PlaylistPage.qml:72
+#: contents/ui/SearchPage.qml:123
 #, kde-format
 msgid "Add to Playlist"
 msgstr "재생 목록에 추가"
@@ -81,17 +87,42 @@ msgstr "확인"
 msgid "Cancel"
 msgstr "취소"
 
-#: contents/ui/LibraryPage.qml:15
+#: contents/ui/LibraryPage.qml:27
 #, kde-format
 msgid "Favourites"
 msgstr ""
 
-#: contents/ui/LibraryPage.qml:67
+#: contents/ui/LibraryPage.qml:37 contents/ui/LibraryPage.qml:108
+#, kde-format
+msgid "Show All"
+msgstr ""
+
+#: contents/ui/LibraryPage.qml:42
+#, kde-format
+msgid "Favourite Songs"
+msgstr ""
+
+#: contents/ui/LibraryPage.qml:98
 #, kde-format
 msgid "Most played"
 msgstr ""
 
-#: contents/ui/main.qml:93
+#: contents/ui/LibraryPage.qml:113
+#, kde-format
+msgid "Played Songs"
+msgstr ""
+
+#: contents/ui/main.qml:39
+#, kde-format
+msgid "Back"
+msgstr ""
+
+#: contents/ui/main.qml:73 contents/ui/SearchPage.qml:150
+#, kde-format
+msgid "Search"
+msgstr "검색"
+
+#: contents/ui/main.qml:85
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
@@ -118,10 +149,15 @@ msgstr "트랙 삭제"
 msgid "No media playing"
 msgstr "재생 중인 미디어 없음"
 
-#: contents/ui/PlaylistPage.qml:26
+#: contents/ui/PlaybackHistory.qml:15
 #, kde-format
-msgid "Shuffle"
-msgstr "무순서 재생"
+msgid "Unknown list of songs"
+msgstr ""
+
+#: contents/ui/PlaybackHistory.qml:25
+#, kde-format
+msgid "No songs here yet"
+msgstr ""
 
 #: contents/ui/SearchPage.qml:27
 #, kde-format
@@ -152,11 +188,6 @@ msgstr "라디오"
 #, kde-format
 msgid "Find music on YouTube Music"
 msgstr "YouTube Music에서 음악 찾기"
-
-#: contents/ui/SearchPage.qml:150
-#, kde-format
-msgid "Search"
-msgstr "검색"
 
 #~ msgid "Clear"
 #~ msgstr "지우기"
