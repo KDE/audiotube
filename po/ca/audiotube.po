@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-05-26 00:46+0000\n"
-"PO-Revision-Date: 2022-05-24 08:45+0200\n"
+"PO-Revision-Date: 2022-05-26 09:09+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -100,13 +100,12 @@ msgstr "Preferides"
 #: contents/ui/LibraryPage.qml:37 contents/ui/LibraryPage.qml:108
 #, kde-format
 msgid "Show All"
-msgstr ""
+msgstr "Mostra-ho tot"
 
 #: contents/ui/LibraryPage.qml:42
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "Favourite Songs"
-msgstr "Preferides"
+msgstr "Cançons preferides"
 
 #: contents/ui/LibraryPage.qml:98
 #, kde-format
@@ -116,12 +115,12 @@ msgstr "Les més reproduïdes"
 #: contents/ui/LibraryPage.qml:113
 #, kde-format
 msgid "Played Songs"
-msgstr ""
+msgstr "Cançons reproduïdes"
 
 #: contents/ui/main.qml:39
 #, kde-format
 msgid "Back"
-msgstr ""
+msgstr "Enrere"
 
 #: contents/ui/main.qml:73 contents/ui/SearchPage.qml:150
 #, kde-format
@@ -157,12 +156,12 @@ msgstr "No s'està reproduint cap suport"
 #: contents/ui/PlaybackHistory.qml:15
 #, kde-format
 msgid "Unknown list of songs"
-msgstr ""
+msgstr "Llista desconeguda de cançons"
 
 #: contents/ui/PlaybackHistory.qml:25
 #, kde-format
 msgid "No songs here yet"
-msgstr ""
+msgstr "Encara no hi ha cap cançó"
 
 #: contents/ui/SearchPage.qml:27
 #, kde-format

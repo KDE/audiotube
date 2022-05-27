@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-05-26 00:46+0000\n"
-"PO-Revision-Date: 2022-05-24 10:48+0200\n"
+"PO-Revision-Date: 2022-05-26 13:17+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -97,13 +97,12 @@ msgstr "Favorieten"
 #: contents/ui/LibraryPage.qml:37 contents/ui/LibraryPage.qml:108
 #, kde-format
 msgid "Show All"
-msgstr ""
+msgstr "Alles tonen"
 
 #: contents/ui/LibraryPage.qml:42
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "Favourite Songs"
-msgstr "Favorieten"
+msgstr "Favoriete songs"
 
 #: contents/ui/LibraryPage.qml:98
 #, kde-format
@@ -113,12 +112,12 @@ msgstr "Meest afgespeeld"
 #: contents/ui/LibraryPage.qml:113
 #, kde-format
 msgid "Played Songs"
-msgstr ""
+msgstr "Afgespeelde songs"
 
 #: contents/ui/main.qml:39
 #, kde-format
 msgid "Back"
-msgstr ""
+msgstr "Terug"
 
 #: contents/ui/main.qml:73 contents/ui/SearchPage.qml:150
 #, kde-format
@@ -154,12 +153,12 @@ msgstr "Er speelt geen medium"
 #: contents/ui/PlaybackHistory.qml:15
 #, kde-format
 msgid "Unknown list of songs"
-msgstr ""
+msgstr "Onbekende lijst met songs"
 
 #: contents/ui/PlaybackHistory.qml:25
 #, kde-format
 msgid "No songs here yet"
-msgstr ""
+msgstr "Er zijn hier nog geen songs"
 
 #: contents/ui/SearchPage.qml:27
 #, kde-format

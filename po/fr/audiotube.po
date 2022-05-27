@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-05-26 00:46+0000\n"
-"PO-Revision-Date: 2022-05-23 20:05+0200\n"
+"PO-Revision-Date: 2022-05-25 07:20+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
 "Language: fr\n"
@@ -128,15 +128,14 @@ msgid "AudioTube"
 msgstr "AudioTube"
 
 #: contents/ui/MaximizedPlayerPage.qml:86
-#, fuzzy, kde-format
-#| msgid "No media playing"
+#, kde-format
 msgid "Now Playing"
-msgstr "Aucun média en lecture"
+msgstr "En cours de lecture"
 
 #: contents/ui/MaximizedPlayerPage.qml:112
 #, kde-format
 msgid "Queue"
-msgstr ""
+msgstr "Mettre en file d'attente"
 
 #: contents/ui/MaximizedPlayerPage.qml:224
 #, kde-format
