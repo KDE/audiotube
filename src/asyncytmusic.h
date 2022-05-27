@@ -156,5 +156,5 @@ public:
 private:
     YTMusicThread();
 
-    AsyncYTMusic m_ytm;
+    AsyncYTMusic *m_ytm;
 };

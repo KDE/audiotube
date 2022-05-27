@@ -9,6 +9,7 @@
 #include <QJsonObject>
 #include <QJsonArray>
 #include <QFutureInterface>
+#include <QCoreApplication>
 
 #include <pybind11/embed.h>
 
@@ -152,17 +153,19 @@ YTMusicThread::~YTMusicThread()
 
 AsyncYTMusic *YTMusicThread::operator->()
 {
-    return &m_ytm;
+    return m_ytm;
 }
 
 AsyncYTMusic &YTMusicThread::get()
 {
-    return m_ytm;
+    return *m_ytm;
 }
 
 YTMusicThread::YTMusicThread()
+    : m_ytm(new AsyncYTMusic())
 {
+    connect(QCoreApplication::instance(), &QCoreApplication::aboutToQuit, m_ytm, &QObject::deleteLater);
     setObjectName(QStringLiteral("YTMusicAPI"));
-    m_ytm.moveToThread(this);
+    m_ytm->moveToThread(this);
     start();
 }
