@@ -53,6 +53,7 @@ Kirigami.ScrollablePage {
                         sourceSize: "200x200"
                         source: thumbnailSource.cachedPath
                         fillMode: Image.PreserveAspectCrop
+                        asynchronous: true
 
                         width: Kirigami.Units.gridUnit * 3
                         height: Kirigami.Units.gridUnit * 3
