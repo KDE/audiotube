@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-05-26 00:46+0000\n"
-"PO-Revision-Date: 2022-05-15 15:46\n"
+"PO-Revision-Date: 2022-05-28 06:20\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -128,10 +128,9 @@ msgid "AudioTube"
 msgstr "AudioTube"
 
 #: contents/ui/MaximizedPlayerPage.qml:86
-#, fuzzy, kde-format
-#| msgid "No media playing"
+#, kde-format
 msgid "Now Playing"
-msgstr "没有正在播放的媒体"
+msgstr ""
 
 #: contents/ui/MaximizedPlayerPage.qml:112
 #, kde-format
@@ -188,12 +187,3 @@ msgstr "电台"
 #, kde-format
 msgid "Find music on YouTube Music"
 msgstr "查找 YouTube Music 中的音乐"
-
-#~ msgid "Clear"
-#~ msgstr "清除"
-
-#~ msgid "Pause"
-#~ msgstr "暂停"
-
-#~ msgid "Expand"
-#~ msgstr "展开"
