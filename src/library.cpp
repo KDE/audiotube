@@ -9,7 +9,7 @@
 #include <QStringBuilder>
 #include <QGuiApplication>
 
-#include "asyncdatabase.h"
+#include <ThreadedDatabase>
 
 namespace ranges = std::ranges;
 
@@ -22,7 +22,7 @@ Library::Library(QObject *parent)
 
         DatabaseConfiguration config;
         config.setDatabaseName(databaseDirectory % QDir::separator() % "library.sqlite");
-        config.setType(DATABASE_TYPE_SQLITE);
+        config.setType(DatabaseType::SQLite);
         return config;
     }()))
 {

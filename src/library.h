@@ -10,10 +10,11 @@
 #include <QAbstractListModel>
 #include <QSortFilterProxyModel>
 
+#include <ThreadedDatabase>
+
 #include <memory>
 
 #include "asyncytmusic.h"
-#include "asyncdatabase.h"
 
 class FavouriteWatcher;
 class WasPlayedWatcher;

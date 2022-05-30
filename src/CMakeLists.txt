@@ -10,14 +10,6 @@ target_link_libraries(ytm PUBLIC pybind11::embed)
 target_include_directories(ytm PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 target_compile_definitions(ytm PRIVATE -DRANDALL_WAS_HERE)
 
-add_library(asyncdatabase STATIC
-    asyncdatabase.cpp
-    asyncdatabase_p.h
-)
-
-target_include_directories(asyncdatabase PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
-target_link_libraries(asyncdatabase PUBLIC Qt::Sql)
-
 add_subdirectory(example)
 add_subdirectory(qtmpris)
 
@@ -57,9 +49,9 @@ target_link_libraries(audiotube
     KF5::CoreAddons
     KF5::Crash
     KF5::WindowSystem
-    ytm
-    asyncdatabase
+    FutureSQL${QT_MAJOR_VERSION}::FutureSQL
     declarative
+    ytm
 )
 
 target_compile_definitions(audiotube PRIVATE

@@ -7,7 +7,7 @@
 #include <QAbstractListModel>
 #include <QDateTime>
 
-#include <asyncdatabase.h>
+#include <ThreadedDatabase>
 
 struct Playlist {
     using ColumnTypes = std::tuple<qint64, QString, QString, QDateTime>;

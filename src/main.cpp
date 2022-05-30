@@ -32,7 +32,7 @@
 #include "localplaylistmodel.h"
 #include "localplaylistsmodel.h"
 
-#include "asyncdatabase.h"
+#include <ThreadedDatabase>
 
 constexpr auto URI = "org.kde.ytmusic";
 

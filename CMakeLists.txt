@@ -45,6 +45,7 @@ find_package(pybind11 REQUIRED)
 find_package(Ytdlp REQUIRED RUNTIME)
 find_package(YTMusicAPI 0.24.0 REQUIRED RUNTIME)
 find_package(KF5KirigamiAddons 0.6.0 REQUIRED)
+find_package(FutureSQL${QT_MAJOR_VERSION} REQUIRED)
 
 ki18n_install(po)
 
