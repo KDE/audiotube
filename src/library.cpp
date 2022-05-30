@@ -10,7 +10,7 @@
 #include <QNetworkRequest>
 #include <QStringBuilder>
 
-#include "asyncdatabase.h"
+#include <ThreadedDatabase>
 
 namespace ranges = std::ranges;
 

@@ -21,7 +21,7 @@
 #include "playerutils.h"
 #include "library.h"
 
-#include "asyncdatabase.h"
+#include <ThreadedDatabase>
 
 constexpr auto URI = "org.kde.ytmusic";
 

@@ -9,10 +9,11 @@
 #include <QNetworkAccessManager>
 #include <QAbstractListModel>
 
+#include <ThreadedDatabase>
+
 #include <memory>
 
 #include "asyncytmusic.h"
-#include "asyncdatabase.h"
 
 class FavouriteWatcher;
 
