@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-26 00:46+0000\n"
+"POT-Creation-Date: 2022-05-30 00:47+0000\n"
 "PO-Revision-Date: 2022-04-07 18:01+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -36,14 +36,14 @@ msgid "Shuffle"
 msgstr "Zamiešať"
 
 #: contents/ui/AlbumPage.qml:68 contents/ui/ArtistPage.qml:101
-#: contents/ui/PlaybackHistory.qml:73 contents/ui/PlaylistPage.qml:67
+#: contents/ui/PlaybackHistory.qml:74 contents/ui/PlaylistPage.qml:67
 #, fuzzy, kde-format
 #| msgid "Play"
 msgid "Play Next"
 msgstr "Prehrať"
 
 #: contents/ui/AlbumPage.qml:73 contents/ui/ArtistPage.qml:107
-#: contents/ui/PlaybackHistory.qml:78 contents/ui/PlaylistPage.qml:72
+#: contents/ui/PlaybackHistory.qml:79 contents/ui/PlaylistPage.qml:72
 #: contents/ui/SearchPage.qml:123
 #, kde-format
 msgid "Add to Playlist"

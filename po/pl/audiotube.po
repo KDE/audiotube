@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-26 00:46+0000\n"
+"POT-Creation-Date: 2022-05-30 00:47+0000\n"
 "PO-Revision-Date: 2021-12-30 12:38+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -40,13 +40,13 @@ msgid "Shuffle"
 msgstr "Wymieszaj"
 
 #: contents/ui/AlbumPage.qml:68 contents/ui/ArtistPage.qml:101
-#: contents/ui/PlaybackHistory.qml:73 contents/ui/PlaylistPage.qml:67
+#: contents/ui/PlaybackHistory.qml:74 contents/ui/PlaylistPage.qml:67
 #, kde-format
 msgid "Play Next"
 msgstr "Odtwórz następny"
 
 #: contents/ui/AlbumPage.qml:73 contents/ui/ArtistPage.qml:107
-#: contents/ui/PlaybackHistory.qml:78 contents/ui/PlaylistPage.qml:72
+#: contents/ui/PlaybackHistory.qml:79 contents/ui/PlaylistPage.qml:72
 #: contents/ui/SearchPage.qml:123
 #, kde-format
 msgid "Add to Playlist"
