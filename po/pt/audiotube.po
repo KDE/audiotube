@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-05-30 00:47+0000\n"
-"PO-Revision-Date: 2021-09-04 18:29+0100\n"
+"PO-Revision-Date: 2022-06-03 17:36+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -94,32 +94,32 @@ msgstr "Cancelar"
 #: contents/ui/LibraryPage.qml:27
 #, kde-format
 msgid "Favourites"
-msgstr ""
+msgstr "Favoritos"
 
 #: contents/ui/LibraryPage.qml:37 contents/ui/LibraryPage.qml:108
 #, kde-format
 msgid "Show All"
-msgstr ""
+msgstr "Mostrar Tudo"
 
 #: contents/ui/LibraryPage.qml:42
 #, kde-format
 msgid "Favourite Songs"
-msgstr ""
+msgstr "Músicas Favoritas"
 
 #: contents/ui/LibraryPage.qml:98
 #, kde-format
 msgid "Most played"
-msgstr ""
+msgstr "Mais Tocadas"
 
 #: contents/ui/LibraryPage.qml:113
 #, kde-format
 msgid "Played Songs"
-msgstr ""
+msgstr "Músicas Tocadas"
 
 #: contents/ui/main.qml:39
 #, kde-format
 msgid "Back"
-msgstr ""
+msgstr "Recuar"
 
 #: contents/ui/main.qml:73 contents/ui/SearchPage.qml:150
 #, kde-format
@@ -132,15 +132,14 @@ msgid "AudioTube"
 msgstr "AudioTube"
 
 #: contents/ui/MaximizedPlayerPage.qml:86
-#, fuzzy, kde-format
-#| msgid "No media playing"
+#, kde-format
 msgid "Now Playing"
-msgstr "Nada em reprodução"
+msgstr "Agora a Tocar"
 
 #: contents/ui/MaximizedPlayerPage.qml:112
 #, kde-format
 msgid "Queue"
-msgstr ""
+msgstr "Fila"
 
 #: contents/ui/MaximizedPlayerPage.qml:224
 #, kde-format
@@ -156,12 +155,12 @@ msgstr "Nada em reprodução"
 #: contents/ui/PlaybackHistory.qml:15
 #, kde-format
 msgid "Unknown list of songs"
-msgstr ""
+msgstr "Lista de músicas desconhecida"
 
 #: contents/ui/PlaybackHistory.qml:25
 #, kde-format
 msgid "No songs here yet"
-msgstr ""
+msgstr "Ainda sem músicas aqui"
 
 #: contents/ui/SearchPage.qml:27
 #, kde-format
@@ -192,15 +191,3 @@ msgstr "Rádio"
 #, kde-format
 msgid "Find music on YouTube Music"
 msgstr "Procurar música no YouTube Music"
-
-#~ msgid "Clear"
-#~ msgstr "Limpar"
-
-#~ msgid "Pause"
-#~ msgstr "Pausa"
-
-#~ msgid "Expand"
-#~ msgstr "Expandir"
-
-#~ msgid "Play only Audio"
-#~ msgstr "Reproduzir só o Áudio"
