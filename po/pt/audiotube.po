@@ -134,7 +134,7 @@ msgstr "AudioTube"
 #: contents/ui/MaximizedPlayerPage.qml:86
 #, kde-format
 msgid "Now Playing"
-msgstr "Agora a Tocar"
+msgstr "Agora a Ouvir"
 
 #: contents/ui/MaximizedPlayerPage.qml:112
 #, kde-format
