@@ -33,7 +33,7 @@ msgstr "antonibella5@yahoo.com"
 #: contents/ui/AlbumPage.qml:19 contents/ui/PlaylistPage.qml:19
 #, kde-format
 msgid "Play"
-msgstr "Reprodueix"
+msgstr "Reproduïx"
 
 #: contents/ui/AlbumPage.qml:26 contents/ui/PlaylistPage.qml:26
 #, kde-format
@@ -44,7 +44,7 @@ msgstr "Barreja"
 #: contents/ui/PlaybackHistory.qml:74 contents/ui/PlaylistPage.qml:67
 #, kde-format
 msgid "Play Next"
-msgstr "Reprodueix el següent"
+msgstr "Reproduïx el següent"
 
 #: contents/ui/AlbumPage.qml:73 contents/ui/ArtistPage.qml:107
 #: contents/ui/PlaybackHistory.qml:79 contents/ui/PlaylistPage.qml:72
@@ -151,7 +151,7 @@ msgstr "Elimina la pista"
 #: contents/ui/MinimizedPlayerControls.qml:96
 #, kde-format
 msgid "No media playing"
-msgstr "No s'està reproduint cap suport"
+msgstr "No s'està reproduint cap soport"
 
 #: contents/ui/PlaybackHistory.qml:15
 #, kde-format
@@ -181,7 +181,7 @@ msgstr "Desconeguda"
 #: contents/ui/SearchPage.qml:117
 #, kde-format
 msgid "Play next"
-msgstr "Reprodueix el següent"
+msgstr "Reproduïx el següent"
 
 #: contents/ui/SearchPage.qml:129
 #, kde-format
