@@ -90,7 +90,7 @@ msgstr "D'acord"
 #: contents/ui/ConfirmationMessage.qml:21
 #, kde-format
 msgid "Cancel"
-msgstr "Cancela"
+msgstr "Cancel·la"
 
 #: contents/ui/LibraryPage.qml:27
 #, kde-format
@@ -151,7 +151,7 @@ msgstr "Elimina la pista"
 #: contents/ui/MinimizedPlayerControls.qml:96
 #, kde-format
 msgid "No media playing"
-msgstr "No s'està reproduint cap soport"
+msgstr "No s'està reproduint cap suport"
 
 #: contents/ui/PlaybackHistory.qml:15
 #, kde-format
