@@ -7,15 +7,15 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-05-30 00:47+0000\n"
-"PO-Revision-Date: 2022-04-22 18:44+0400\n"
-"Last-Translator: Kheyyam Gojayev <xxmn77@gmail.com>\n"
+"PO-Revision-Date: 2022-06-19 12:16+0400\n"
+"Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
 "Language: az\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 22.04.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -92,32 +92,32 @@ msgstr "İmtina"
 #: contents/ui/LibraryPage.qml:27
 #, kde-format
 msgid "Favourites"
-msgstr ""
+msgstr "Süçilmişlər"
 
 #: contents/ui/LibraryPage.qml:37 contents/ui/LibraryPage.qml:108
 #, kde-format
 msgid "Show All"
-msgstr ""
+msgstr "Hamısı göstərilsin"
 
 #: contents/ui/LibraryPage.qml:42
 #, kde-format
 msgid "Favourite Songs"
-msgstr ""
+msgstr "Seçilmiş mahnılar"
 
 #: contents/ui/LibraryPage.qml:98
 #, kde-format
 msgid "Most played"
-msgstr ""
+msgstr "Daha çox dinlənilən"
 
 #: contents/ui/LibraryPage.qml:113
 #, kde-format
 msgid "Played Songs"
-msgstr ""
+msgstr "Oxudulan mahnılar"
 
 #: contents/ui/main.qml:39
 #, kde-format
 msgid "Back"
-msgstr ""
+msgstr "Geriyə"
 
 #: contents/ui/main.qml:73 contents/ui/SearchPage.qml:150
 #, kde-format
@@ -130,15 +130,14 @@ msgid "AudioTube"
 msgstr "AudioTube"
 
 #: contents/ui/MaximizedPlayerPage.qml:86
-#, fuzzy, kde-format
-#| msgid "No media playing"
+#, kde-format
 msgid "Now Playing"
-msgstr "Media faylı oynadılmır"
+msgstr "İndi səslənir"
 
 #: contents/ui/MaximizedPlayerPage.qml:112
 #, kde-format
 msgid "Queue"
-msgstr ""
+msgstr "Növbə"
 
 #: contents/ui/MaximizedPlayerPage.qml:224
 #, kde-format
@@ -154,12 +153,12 @@ msgstr "Media faylı oynadılmır"
 #: contents/ui/PlaybackHistory.qml:15
 #, kde-format
 msgid "Unknown list of songs"
-msgstr ""
+msgstr "Naməlum mahnı siyahısı"
 
 #: contents/ui/PlaybackHistory.qml:25
 #, kde-format
 msgid "No songs here yet"
-msgstr ""
+msgstr "Hələlik burada mahnılar yoxdur"
 
 #: contents/ui/SearchPage.qml:27
 #, kde-format
