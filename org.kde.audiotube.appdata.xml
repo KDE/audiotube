@@ -92,6 +92,16 @@ SPDX-License-Identifier: CC0-1.0
   <content_rating type="oars-1.0"/>
   <url type="homepage">https://apps.kde.org/en/audiotube</url>
   <releases>
+    <release version="22.06" date="2022-06-24">
+      <url>https://www.plasma-mobile.org/2022/06/28/plasma-mobile-gear-22-06/</url>
+      <description>
+        <ul>
+          <li>Add library page which shows favourites and most played songs</li>
+          <li>Improve layout of the search popup</li>
+          <li>General performance improvements including startup</li>
+        </ul>
+      </description>
+    </release>
     <release version="22.04" date="2022-04-26">
       <url>https://www.plasma-mobile.org/2022/04/26/plasma-mobile-gear-22-04/</url>
       <description>
