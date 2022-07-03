@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-05-30 00:47+0000\n"
-"PO-Revision-Date: 2022-06-15 11:16+0200\n"
+"PO-Revision-Date: 2022-07-02 12:04+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -154,12 +154,12 @@ msgstr "Es werden keine Medien wiedergegeben"
 #: contents/ui/PlaybackHistory.qml:15
 #, kde-format
 msgid "Unknown list of songs"
-msgstr ""
+msgstr "Unbekannte Liste von Liedern"
 
 #: contents/ui/PlaybackHistory.qml:25
 #, kde-format
 msgid "No songs here yet"
-msgstr ""
+msgstr "Bisher keine Lieder hier"
 
 #: contents/ui/SearchPage.qml:27
 #, kde-format
