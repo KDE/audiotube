@@ -129,10 +129,13 @@ SPDX-License-Identifier: CC0-1.0
   <launchable type="desktop-id">org.kde.audiotube.desktop</launchable>
   <screenshots>
     <screenshot>
-      <image>https://cdn.kde.org/screenshots/audiotube/desktop.png</image>
+      <image>https://cdn.kde.org/screenshots/audiotube/library.png</image>
     </screenshot>
     <screenshot>
       <image>https://cdn.kde.org/screenshots/audiotube/mobile_playlist.png</image>
+    </screenshot>
+    <screenshot>
+      <image>https://cdn.kde.org/screenshots/audiotube/desktop.png</image>
     </screenshot>
   </screenshots>
   <recommends>
