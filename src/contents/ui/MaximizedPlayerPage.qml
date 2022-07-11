@@ -83,14 +83,13 @@ Item {
             
             ToolButton {
                 id: nowPlayingTab
-                text: i18n("Now Playing")
                 padding: Kirigami.Units.largeSpacing
                 onClicked: swipeView.setCurrentIndex(0)
                 Layout.preferredHeight: Kirigami.Units.gridUnit * 2
                 Layout.preferredWidth: Kirigami.Units.gridUnit * 9
-                
+
                 contentItem: Label {
-                    text: nowPlayingTab.text
+                    text: i18n("Now Playing")
                     horizontalAlignment: Text.AlignHCenter
                     verticalAlignment: Text.AlignVCenter
                     elide: Text.ElideRight
@@ -109,14 +108,13 @@ Item {
             }
             ToolButton {
                 id: queueTab
-                text: i18n("Queue")
                 padding: Kirigami.Units.largeSpacing
                 onClicked: swipeView.setCurrentIndex(1)
                 Layout.preferredHeight: Kirigami.Units.gridUnit * 2
                 Layout.preferredWidth: Kirigami.Units.gridUnit * 9
                 
                 contentItem: Label {
-                    text: queueTab.text
+                    text: i18n("Queue")
                     horizontalAlignment: Text.AlignHCenter
                     verticalAlignment: Text.AlignVCenter
                     elide: Text.ElideRight
