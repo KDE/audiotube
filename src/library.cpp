@@ -211,9 +211,9 @@ FavouriteWatcher::FavouriteWatcher(Library *library, const QString &videoId)
     : QObject(library), m_videoId(videoId), m_library(library)
 {
     auto update = [this] {
-        connectFuture(m_library->database().getResult<SingleValue<int>>("select count(*) from favourites where video_id = ?", m_videoId), this, [this](auto count) {
+        connectFuture(m_library->database().getResult<SingleValue<bool>>("select count(*) > 0 from favourites where video_id = ?", m_videoId), this, [this](auto count) {
             if (count) {
-                m_isFavourite = count->value > 0;
+                m_isFavourite = count->value;
                 Q_EMIT isFavouriteChanged();
             }
         });
