@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-05-30 00:47+0000\n"
+"POT-Creation-Date: 2022-07-12 00:48+0000\n"
 "PO-Revision-Date: 2022-04-07 18:01+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -126,23 +126,23 @@ msgstr "Hľadať"
 msgid "AudioTube"
 msgstr "AudioTube"
 
-#: contents/ui/MaximizedPlayerPage.qml:86
+#: contents/ui/MaximizedPlayerPage.qml:92
 #, fuzzy, kde-format
 #| msgid "No media playing"
 msgid "Now Playing"
 msgstr "Neprehráva sa žiadne médium"
 
-#: contents/ui/MaximizedPlayerPage.qml:112
+#: contents/ui/MaximizedPlayerPage.qml:117
 #, kde-format
 msgid "Queue"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:224
+#: contents/ui/MaximizedPlayerPage.qml:222
 #, kde-format
 msgid "Remove Track"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:244
+#: contents/ui/MaximizedPlayerPage.qml:242
 #: contents/ui/MinimizedPlayerControls.qml:96
 #, kde-format
 msgid "No media playing"
