@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the audiotube package.
-# Shinjo Park <kde@peremen.name>, 2021.
+# Shinjo Park <kde@peremen.name>, 2021, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-12 00:48+0000\n"
-"PO-Revision-Date: 2021-12-08 00:45+0100\n"
+"PO-Revision-Date: 2022-07-13 15:34+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 21.08.1\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -90,32 +90,32 @@ msgstr "취소"
 #: contents/ui/LibraryPage.qml:27
 #, kde-format
 msgid "Favourites"
-msgstr ""
+msgstr "책갈피"
 
 #: contents/ui/LibraryPage.qml:37 contents/ui/LibraryPage.qml:108
 #, kde-format
 msgid "Show All"
-msgstr ""
+msgstr "모두 표시"
 
 #: contents/ui/LibraryPage.qml:42
 #, kde-format
 msgid "Favourite Songs"
-msgstr ""
+msgstr "책갈피에 등록된 노래"
 
 #: contents/ui/LibraryPage.qml:98
 #, kde-format
 msgid "Most played"
-msgstr ""
+msgstr "가장 많이 재생됨"
 
 #: contents/ui/LibraryPage.qml:113
 #, kde-format
 msgid "Played Songs"
-msgstr ""
+msgstr "재생한 노래"
 
 #: contents/ui/main.qml:39
 #, kde-format
 msgid "Back"
-msgstr ""
+msgstr "뒤로"
 
 #: contents/ui/main.qml:73 contents/ui/SearchPage.qml:150
 #, kde-format
@@ -128,15 +128,14 @@ msgid "AudioTube"
 msgstr "AudioTube"
 
 #: contents/ui/MaximizedPlayerPage.qml:92
-#, fuzzy, kde-format
-#| msgid "No media playing"
+#, kde-format
 msgid "Now Playing"
-msgstr "재생 중인 미디어 없음"
+msgstr "지금 재생 중"
 
 #: contents/ui/MaximizedPlayerPage.qml:117
 #, kde-format
 msgid "Queue"
-msgstr ""
+msgstr "대기열에 추가"
 
 #: contents/ui/MaximizedPlayerPage.qml:222
 #, kde-format
@@ -152,12 +151,12 @@ msgstr "재생 중인 미디어 없음"
 #: contents/ui/PlaybackHistory.qml:15
 #, kde-format
 msgid "Unknown list of songs"
-msgstr ""
+msgstr "알 수 없는 노래 목록"
 
 #: contents/ui/PlaybackHistory.qml:25
 #, kde-format
 msgid "No songs here yet"
-msgstr ""
+msgstr "목록에 등록된 곡 없음"
 
 #: contents/ui/SearchPage.qml:27
 #, kde-format
