@@ -5,6 +5,7 @@
 #include "ytmusic.h"
 
 #include <algorithm>
+#include <iostream>
 
 #include <pybind11/embed.h>
 #include <pybind11/stl.h>
