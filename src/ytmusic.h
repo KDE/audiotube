@@ -11,6 +11,7 @@
 #include <variant>
 #include <vector>
 #include <memory>
+#include <functional>
 
 struct YTMusicPrivate;
 
@@ -277,6 +278,13 @@ struct Lyrics {
     std::string lyrics;
 };
 
+struct YtDlDownloadStatus {
+    bool finished = false;
+    int playlist_length;
+    std::optional<int> current_track_index;
+    std::optional<std::string> current_track;
+};
+
 class YTMusic
 {
 public:
@@ -318,6 +326,9 @@ public:
                                       int limit = 25) const;
 
     Lyrics get_lyrics(const std::string &browse_id) const;
+
+    void download_playlist(const std::string &playlist_url,
+                           std::function<void(YtDlDownloadStatus)> progress_hook) const;
 
     // TODO wrap more methods
 

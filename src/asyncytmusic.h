@@ -123,6 +123,8 @@ public:
 
     QFuture<Lyrics> fetchLyrics(const QString &browseId);
 
+    QFuture<void> downloadPlaylist(const std::string &url, std::function<void(YtDlDownloadStatus)> progressHook);
+
     Q_SIGNAL void errorOccurred(const QString &error);
 
 protected:
@@ -136,8 +138,12 @@ private:
         auto interface = std::make_shared<QFutureInterface<ReturnType>>();
         QMetaObject::invokeMethod(this, [=, this]() {
             try {
-                ReturnType val = fun();
-                interface->reportResult(val);
+                if constexpr (!std::is_same_v<std::invoke_result_t<Func>, void>) {
+                    ReturnType val = fun();
+                    interface->reportResult(val);
+                } else {
+                    fun();
+                }
                 interface->reportFinished();
             } catch (const std::exception &err) {
                 interface->reportFinished();

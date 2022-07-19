@@ -10,6 +10,7 @@
 #include <QJsonArray>
 #include <QFutureInterface>
 #include <QCoreApplication>
+#include <QTimer>
 
 #include <pybind11/embed.h>
 
@@ -54,6 +55,17 @@ AsyncYTMusic::AsyncYTMusic(QObject *parent)
 
     connect(this, &AsyncYTMusic::errorOccurred, this, [](const QString &err) {
         std::cerr << qPrintable(err);
+    });
+
+    QTimer::singleShot(0, [this]() {
+        qDebug() << "Downloading album";
+        downloadPlaylist("https://music.youtube.com/watch?v=8rIjsa85UVk&list=RDAMVM8rIjsa85UVk", [](YtDlDownloadStatus status) {
+            if (!status.finished && status.current_track) {
+                std::cout << *status.current_track << std::endl;
+            } else if (status.finished) {
+                std::cout << "Download finished" << std::endl;
+            }
+        });
     });
 }
 
@@ -145,6 +157,13 @@ QFuture<Lyrics> AsyncYTMusic::fetchLyrics(const QString &browseId)
         return m_ytm->get_lyrics(
             browseId.toStdString()
         );
+    });
+}
+
+QFuture<void> AsyncYTMusic::downloadPlaylist(const std::string &url, std::function<void (YtDlDownloadStatus)> progressHook)
+{
+    return invokeAndCatchOnThread([=, this]() {
+        m_ytm->download_playlist(url, progressHook);
     });
 }
 

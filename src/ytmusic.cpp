@@ -497,7 +497,6 @@ watch::Playlist YTMusic::get_watch_playlist(const std::optional<std::string> &vi
     };
 }
 
-
 Lyrics YTMusic::get_lyrics(const std::string &browse_id) const
 {
     auto lyrics = d->get_ytmusic().attr("get_lyrics")(browse_id);
@@ -506,4 +505,31 @@ Lyrics YTMusic::get_lyrics(const std::string &browse_id) const
         lyrics["source"].cast<std::string>(),
         lyrics["lyrics"].cast<std::string>()
     };
+}
+
+void YTMusic::download_playlist(const std::string &playlist_url, std::function<void (YtDlDownloadStatus)> progress_hook) const
+{
+    py::module::import("ytmx.ytmx").attr("YTMX")(std::vector {playlist_url}, py::cpp_function([=](const py::dict &ytdl_status) {
+        if (ytdl_status["status"].cast<std::string>() == "finished") {
+            int current_track_index = ytdl_status["info_dict"]["playlist_index"].cast<int>();
+            int playlist_length = ytdl_status["info_dict"]["playlist_count"].cast<int>();
+            auto current_track = ytdl_status["info_dict"]["title"].cast<std::string>();
+
+            progress_hook(YtDlDownloadStatus {
+                .finished = true,
+                .playlist_length = playlist_length,
+                .current_track_index = current_track_index,
+            });
+        } else if (ytdl_status["status"].cast<std::string>() == "downloading") {
+            int current_track_index = ytdl_status["info_dict"]["playlist_index"].cast<int>();
+            int playlist_length = ytdl_status["info_dict"]["playlist_count"].cast<int>();
+            auto current_track = ytdl_status["info_dict"]["title"].cast<std::string>();
+
+            progress_hook(YtDlDownloadStatus {
+                  .playlist_length = playlist_length,
+                  .current_track_index = current_track_index,
+                  .current_track = current_track
+              });
+        }
+    }));
 }
