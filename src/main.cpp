@@ -11,6 +11,7 @@
 #include <KCrash>
 #include <KAboutData>
 
+#include "mpris2.h"
 #include "searchmodel.h"
 #include "albummodel.h"
 #include "videoinfoextractor.h"
@@ -21,7 +22,7 @@
 #include "playerutils.h"
 #include "library.h"
 
-#include "asyncdatabase.h"
+#include <mediaplayer2.h>
 
 constexpr auto URI = "org.kde.ytmusic";
 
@@ -57,6 +58,10 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlRegisterSingletonInstance<Library>(URI, 1, 0, "Library", &Library::instance());
     qmlRegisterType<ThumbnailSource>(URI, 1, 0, "ThumbnailSource");
     qmlRegisterAnonymousType<FavouriteWatcher>(URI, 1);
+
+    Mpris2 mp;
+    mp.setPlayerName("AudioTube");
+    mp.playerInterface();
 
     engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
     engine.load(QUrl(QStringLiteral("qrc:///main.qml")));

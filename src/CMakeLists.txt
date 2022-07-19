@@ -19,6 +19,7 @@ target_include_directories(asyncdatabase PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 target_link_libraries(asyncdatabase PUBLIC Qt5::Sql)
 
 add_subdirectory(example)
+add_subdirectory(mpris2)
 
 add_executable(audiotube
     main.cpp
@@ -50,6 +51,7 @@ target_link_libraries(audiotube
     KF5::Crash
     ytm
     asyncdatabase
+    mpris2
 )
 
 target_compile_definitions(audiotube PRIVATE -DQT_NO_KEYWORDS -DQT_NO_URL_CAST_FROM_STRING)
