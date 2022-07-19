@@ -7,16 +7,6 @@
     "sources": [
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/9a/bf/1bc7e3096ddc2c398b3d04176530a9c02efe08546d9730c9eef0b07a0a43/yt_dlp-2022.5.18-py2.py3-none-any.whl",
-            "sha256": "deec1009442312c1e2ee5298966842194d0e950b433f0d4fc844ef464b9c32a7"
-        },
-        {
-            "type": "file",
-            "url": "https://files.pythonhosted.org/packages/11/dd/e015f3780f42dd9af62cf0107b44ea1298926627ecd70c17b0e484e95bcd/certifi-2022.5.18.1-py3-none-any.whl",
-            "sha256": "f1d53542ee8cbedbe2118b5686372fb33c297fcd6379b050cca0ef13a597382a"
-        },
-        {
-            "type": "file",
             "url": "https://files.pythonhosted.org/packages/f8/a3/622d9acbfb9a71144b5d7609906bc648c62e3ca5fdbb1c8cca222949d82c/websockets-10.3.tar.gz",
             "sha256": "fc06cc8073c8e87072138ba1e431300e2d408f054b27047d047b549455066ff4"
         },
@@ -32,8 +22,18 @@
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/24/40/e249ac3845a2333ce50f1bb02299ffb766babdfe80ca9d31e0158ad06afd/pycryptodomex-3.14.1.tar.gz",
-            "sha256": "2ce76ed0081fd6ac8c74edc75b9d14eca2064173af79843c24fa62573263c1f2"
+            "url": "https://files.pythonhosted.org/packages/e9/06/d3d367b7af6305b16f0d28ae2aaeb86154fa91f144f036c2d5002a5a202b/certifi-2022.6.15-py3-none-any.whl",
+            "sha256": "fe86415d55e84719d75f8b69414f6438ac3547d2078ab91b67e779ef69378412"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/1f/13/b1f7b4e44b11584a5f077af87895961b57911217a629efb8d3a9efd2a491/yt_dlp-2022.7.18-py2.py3-none-any.whl",
+            "sha256": "d7d1f81d230756f094b4d9ee59b37b2c13b2e63ff5fb72cda53625edb072cdae"
+        },
+        {
+            "type": "file",
+            "url": "https://files.pythonhosted.org/packages/52/0d/6cc95a83f6961a1ca041798d222240890af79b381e97eda3b9b538dba16f/pycryptodomex-3.15.0.tar.gz",
+            "sha256": "7341f1bb2dadb0d1a0047f34c3a58208a92423cdbd3244d998e4b28df5eac0ed"
         }
     ]
 }
