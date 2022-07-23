@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-12 00:48+0000\n"
-"PO-Revision-Date: 2022-01-01 15:21+0000\n"
+"PO-Revision-Date: 2022-07-22 15:55+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
 "Language: en_GB\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.0\n"
+"X-Generator: Lokalize 22.04.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -92,32 +92,32 @@ msgstr "Cancel"
 #: contents/ui/LibraryPage.qml:27
 #, kde-format
 msgid "Favourites"
-msgstr ""
+msgstr "Favourites"
 
 #: contents/ui/LibraryPage.qml:37 contents/ui/LibraryPage.qml:108
 #, kde-format
 msgid "Show All"
-msgstr ""
+msgstr "Show All"
 
 #: contents/ui/LibraryPage.qml:42
 #, kde-format
 msgid "Favourite Songs"
-msgstr ""
+msgstr "Favourite Songs"
 
 #: contents/ui/LibraryPage.qml:98
 #, kde-format
 msgid "Most played"
-msgstr ""
+msgstr "Most played"
 
 #: contents/ui/LibraryPage.qml:113
 #, kde-format
 msgid "Played Songs"
-msgstr ""
+msgstr "Played Songs"
 
 #: contents/ui/main.qml:39
 #, kde-format
 msgid "Back"
-msgstr ""
+msgstr "Back"
 
 #: contents/ui/main.qml:73 contents/ui/SearchPage.qml:150
 #, kde-format
@@ -130,15 +130,14 @@ msgid "AudioTube"
 msgstr "AudioTube"
 
 #: contents/ui/MaximizedPlayerPage.qml:92
-#, fuzzy, kde-format
-#| msgid "No media playing"
+#, kde-format
 msgid "Now Playing"
-msgstr "No media playing"
+msgstr "Now Playing"
 
 #: contents/ui/MaximizedPlayerPage.qml:117
 #, kde-format
 msgid "Queue"
-msgstr ""
+msgstr "Queue"
 
 #: contents/ui/MaximizedPlayerPage.qml:222
 #, kde-format
@@ -154,12 +153,12 @@ msgstr "No media playing"
 #: contents/ui/PlaybackHistory.qml:15
 #, kde-format
 msgid "Unknown list of songs"
-msgstr ""
+msgstr "Unknown list of songs"
 
 #: contents/ui/PlaybackHistory.qml:25
 #, kde-format
 msgid "No songs here yet"
-msgstr ""
+msgstr "No songs here yet"
 
 #: contents/ui/SearchPage.qml:27
 #, kde-format
