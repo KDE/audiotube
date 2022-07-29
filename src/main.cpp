@@ -11,6 +11,7 @@
 #include <KCrash>
 #include <KAboutData>
 
+#include "declarativemprisplayer.h"
 #include "mpris2.h"
 #include "searchmodel.h"
 #include "albummodel.h"
@@ -46,6 +47,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlRegisterType<VideoInfoExtractor>(URI, 1, 0, "VideoInfoExtractor");
     qmlRegisterType<ArtistModel>(URI, 1, 0, "ArtistModel");
     qmlRegisterType<PlaylistModel>(URI, 1, 0, "PlaylistModel");
+    qmlRegisterType<DeclarativeMprisPlayer>(URI, 1, 0, "MprisPlayer");
     qmlRegisterSingletonType<UserPlaylistModel>(URI, 1, 0, "UserPlaylistModel", [](QQmlEngine *, QJSEngine *) {
         return new UserPlaylistModel();
     });
@@ -58,10 +60,6 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlRegisterSingletonInstance<Library>(URI, 1, 0, "Library", &Library::instance());
     qmlRegisterType<ThumbnailSource>(URI, 1, 0, "ThumbnailSource");
     qmlRegisterAnonymousType<FavouriteWatcher>(URI, 1);
-
-    Mpris2 mp;
-    mp.setPlayerName("AudioTube");
-    mp.playerInterface();
 
     engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
     engine.load(QUrl(QStringLiteral("qrc:///main.qml")));

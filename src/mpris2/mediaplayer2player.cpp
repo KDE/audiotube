@@ -29,8 +29,7 @@ MediaPlayer2Player::MediaPlayer2Player(QObject* parent)
     m_mediaPlayerPresent = 1;
 }
 
-MediaPlayer2Player::~MediaPlayer2Player()
-= default;
+MediaPlayer2Player::~MediaPlayer2Player() = default;
 
 QString MediaPlayer2Player::PlaybackStatus() const
 {
@@ -277,6 +276,11 @@ void MediaPlayer2Player::setCurrentTrackTitle(const QString &title)
     m_currentTrackTitle = title;
 }
 
+QString MediaPlayer2Player::currentTrackTitle() const
+{
+    return m_currentTrackTitle;
+}
+
 void MediaPlayer2Player::setCurrentTrackUrl(const QUrl &url)
 {
     m_currentTrackUrl = url;
@@ -287,14 +291,29 @@ void MediaPlayer2Player::setCurrentTrackAlbum(const QString &album)
     m_currentTrackAlbum = album;
 }
 
+QString MediaPlayer2Player::currentTrackAlbum() const
+{
+    return m_currentTrackAlbum;
+}
+
 void MediaPlayer2Player::setCurrentTrackArtist(const QString &artist)
 {
     m_currentTrackArtist = artist;
 }
 
+QString MediaPlayer2Player::currentTrackArtist() const
+{
+    return m_currentTrackArtist;
+}
+
 void MediaPlayer2Player::setCurrentTrackCoverArt(const QUrl &url)
 {
     m_coverArtUrl = url;
+}
+
+QUrl MediaPlayer2Player::currentTrackCoverArt() const
+{
+    return m_coverArtUrl;
 }
 
 void MediaPlayer2Player::setCurrentTrackCoverArt(const QImage &image)

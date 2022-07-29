@@ -8,6 +8,9 @@ add_library(mpris2 STATIC
     mediaplayer2player.cpp
     mediaplayer2player.h
     mpris2.cpp
-    mpris2.h)
+    mpris2.h
+    declarativemprisplayer.cpp
+    declarativemprisplayer.h
+)
 
 target_link_libraries(mpris2 PUBLIC Qt::Core Qt::Gui Qt::DBus KF5::CoreAddons)

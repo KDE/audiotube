@@ -80,11 +80,15 @@ public:
     /// Set the current playback state
     ///
     void setPlaybackState(PlaybackState newState);
+    PlaybackState playbackState() const {
+        return m_playbackState;
+    }
 
     ///
     /// Set the current track's title
     ///
     void setCurrentTrackTitle(const QString &title);
+    QString currentTrackTitle() const;
 
     ///
     /// Set the current track's URL
@@ -95,16 +99,19 @@ public:
     /// Set the album of the currently playing track
     ///
     void setCurrentTrackAlbum(const QString &album);
+    QString currentTrackAlbum() const;
 
     ///
     /// Set current track's artist
     ///
     void setCurrentTrackArtist(const QString &artist);
+    QString currentTrackArtist() const;
 
     ///
     /// Set cover art url
     ///
     void setCurrentTrackCoverArt(const QUrl &url);
+    QUrl currentTrackCoverArt() const;
 
     ///
     /// Set cover art image

@@ -98,7 +98,17 @@ Flickable {
         videoId: UserPlaylistModel.currentVideoId
         onTitleChanged: Library.addPlaybackHistoryItem(info.videoId, info.title)
     }
-    
+
+    MprisPlayer {
+        id: mpris
+
+        trackTitle: info.title
+        album: "Test Album"
+        playbackState: MprisPlayer.PlaybackRunning
+        playerName: "AudioTube"
+        trackDuration: audio.duration
+    }
+
     property var audioPlayer: Audio {
         id: audio
 

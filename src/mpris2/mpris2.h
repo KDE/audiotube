@@ -29,7 +29,7 @@ public:
 
     [[nodiscard]] QString playerName() const;
 
-    MediaPlayer2Player *playerInterface() {
+    MediaPlayer2Player *player() const {
         return m_mp2p.get();
     }
 
