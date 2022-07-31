@@ -120,7 +120,7 @@ msgstr "Cançons reproduïdes"
 #: contents/ui/main.qml:39
 #, kde-format
 msgid "Back"
-msgstr "Enrere"
+msgstr "Arrere"
 
 #: contents/ui/main.qml:73 contents/ui/SearchPage.qml:150
 #, kde-format
