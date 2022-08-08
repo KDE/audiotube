@@ -1,14 +1,14 @@
 # Translation of audiotube to Norwegian Nynorsk
 #
 # Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2022.
+# Karl Ove Hufthammer <karl@huftis.org>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-07-12 00:48+0000\n"
-"PO-Revision-Date: 2022-08-03 14:42+0200\n"
-"Last-Translator: Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail."
-"com>\n"
+"PO-Revision-Date: 2022-08-07 12:08+0200\n"
+"Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
@@ -138,7 +138,7 @@ msgstr "Spelar no"
 #: contents/ui/MaximizedPlayerPage.qml:117
 #, kde-format
 msgid "Queue"
-msgstr ""
+msgstr "Kø"
 
 #: contents/ui/MaximizedPlayerPage.qml:222
 #, kde-format
