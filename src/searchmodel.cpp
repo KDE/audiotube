@@ -4,25 +4,26 @@
 
 #include "searchmodel.h"
 
+#include <QCoroFuture>
+#include <QCoroTask>
+
 SearchModel::SearchModel(QObject *parent)
     : AbstractYTMusicModel(parent)
 {
-    connect(this, &SearchModel::searchQueryChanged, this, [this] {
+    connect(this, &SearchModel::searchQueryChanged, this, [this]() -> QCoro::Task<> {
         if (m_searchQuery.isEmpty()) {
             beginResetModel();
             m_searchResults.clear();
             endResetModel();
-            return;
+            co_return;
         }
 
         setLoading(true);
-        auto future = YTMusicThread::instance()->search(m_searchQuery);
-        connectFuture(future, this, [=, this](const std::vector<search::SearchResultItem> &results) {
-            beginResetModel();
-            setLoading(false);
-            m_searchResults = results;
-            endResetModel();
-        });
+        auto results = co_await YTMusicThread::instance()->search(m_searchQuery);
+        beginResetModel();
+        setLoading(false);
+        m_searchResults = results;
+        endResetModel();
     });
     connect(&YTMusicThread::instance().get(), &AsyncYTMusic::errorOccurred, this, [this] {
         setLoading(false);

@@ -4,26 +4,43 @@
 
 #include "albummodel.h"
 
-#include <QDebug>
+#include <QCoro/QCoroFuture>
+#include <QCoro/QCoroTask>
+
+
+#define AWAIT(coroutine) \
+    ({ \
+        bool __abort = false; \
+        connect(this, &QObject::destroyed, [&]() { \
+            __abort = true; \
+        }); \
+        auto val = co_await coroutine;  \
+        if (abort) { \
+            co_return; \
+        } \
+        val; \
+    })
+
+
 
 AlbumModel::AlbumModel(QObject *parent)
     : AbstractYTMusicModel(parent)
 {
-    connect(this, &AlbumModel::browseIdChanged, this, [this] {
+    connect(this, &AlbumModel::browseIdChanged, this, [this]() -> QCoro::Task<> {
         setLoading(true);
-        auto future = YTMusicThread::instance()->fetchAlbum(m_browseId);
-        connectFuture(future, this, [=, this](const album::Album &album) {
-            setLoading(false);
 
-            beginResetModel();
-            m_album = album;
-            endResetModel();
-            std::sort(m_album.thumbnails.begin(), m_album.thumbnails.end());
+        auto album = co_await YTMusicThread::instance()->fetchAlbum(m_browseId).withContext(this);
 
-            Q_EMIT titleChanged();
-            Q_EMIT thumbnailUrlChanged();
-            Q_EMIT playlistIdChanged();
-        });
+        setLoading(false);
+
+        beginResetModel();
+        m_album = album;
+        endResetModel();
+        std::sort(m_album.thumbnails.begin(), m_album.thumbnails.end());
+
+        Q_EMIT titleChanged();
+        Q_EMIT thumbnailUrlChanged();
+        Q_EMIT playlistIdChanged();
     });
 
     connect(&YTMusicThread::instance().get(), &AsyncYTMusic::errorOccurred, this, [=, this] {

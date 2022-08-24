@@ -11,6 +11,8 @@
 #include <KCrash>
 #include <KAboutData>
 
+#include <QCoroQml>
+
 #include "searchmodel.h"
 #include "albummodel.h"
 #include "videoinfoextractor.h"
@@ -37,6 +39,8 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 
     KAboutData::setApplicationData(KAboutData(QStringLiteral("audiotube"), QStringLiteral("AudioTube")));
     KCrash::initialize();
+
+    QCoro::Qml::registerTypes();
 
     QQmlApplicationEngine engine;
 

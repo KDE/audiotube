@@ -48,6 +48,9 @@ target_link_libraries(audiotube
     KF5::I18n
     KF5::CoreAddons
     KF5::Crash
+    QCoro5::Core
+    QCoro5::Qml
+    QCoro5::Network
     ytm
     asyncdatabase
 )

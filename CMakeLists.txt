@@ -32,12 +32,15 @@ ecm_setup_version(${PROJECT_VERSION}
 )
 
 kde_enable_exceptions()
+add_compile_options(-fsanitize=address)
+add_link_options(-fsanitize=address)
 
 find_package(Qt5 ${QT5_MIN_VERSION} REQUIRED COMPONENTS Core Gui Qml QuickControls2 Svg Sql)
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS Kirigami2 I18n CoreAddons Crash)
 find_package(pybind11 REQUIRED)
 find_package(Ytdlp REQUIRED RUNTIME)
 find_package(YTMusicAPI REQUIRED RUNTIME)
+find_package(QCoro5 REQUIRED COMPONENTS Core Qml Network)
 
 ki18n_install(po)
 

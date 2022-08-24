@@ -9,6 +9,8 @@
 #include <QNetworkAccessManager>
 #include <QAbstractListModel>
 
+#include <QCoroQmlTask>
+
 #include <memory>
 
 #include "asyncytmusic.h"
@@ -40,7 +42,7 @@ class FavouritesModel : public QAbstractListModel {
     };
 
 public:
-    FavouritesModel(QFuture<std::vector<Song>> &&songs, QObject *parent = nullptr);
+    FavouritesModel(QCoro::Task<std::vector<Song>> &&songs, QObject *parent = nullptr);
 
     QHash<int, QByteArray> roleNames() const override;
     int rowCount(const QModelIndex &parent) const override;
@@ -76,7 +78,7 @@ class PlaybackHistoryModel : public QAbstractListModel {
     };
 
 public:
-    PlaybackHistoryModel(QFuture<std::vector<PlayedSong>> &&songs, QObject *parent = nullptr);
+    PlaybackHistoryModel(QCoro::Task<std::vector<PlayedSong>> &&songs, QObject *parent = nullptr);
 
     QHash<int, QByteArray> roleNames() const override;
     int rowCount(const QModelIndex &parent) const override;
@@ -90,7 +92,7 @@ class SearchHistoryModel : public QAbstractListModel {
     Q_OBJECT
 
 public:
-    SearchHistoryModel(QFuture<std::vector<SingleValue<QString>>> &&historyFuture, QObject *parent = nullptr);
+    SearchHistoryModel(QCoro::Task<std::vector<SingleValue<QString>>> &&historyFuture, QObject *parent = nullptr);
     int rowCount(const QModelIndex &parent) const override;
     QVariant data(const QModelIndex &index, int role) const override;
 
@@ -114,8 +116,8 @@ public:
 
     FavouritesModel *favourites();
     Q_SIGNAL void favouritesChanged();
-    Q_INVOKABLE void addFavourite(const QString &videoId, const QString &title);
-    Q_INVOKABLE void removeFavourite(const QString &videoId);
+    Q_INVOKABLE QCoro::QmlTask addFavourite(const QString &videoId, const QString &title);
+    Q_INVOKABLE QCoro::QmlTask removeFavourite(const QString &videoId);
     Q_INVOKABLE FavouriteWatcher *favouriteWatcher(const QString &videoId);
 
     SearchHistoryModel *searches();
@@ -124,7 +126,7 @@ public:
 
     PlaybackHistoryModel *playbackHistory();
     Q_SIGNAL void playbackHistoryChanged();
-    Q_INVOKABLE void addPlaybackHistoryItem(const QString &videoId, const QString &title);
+    Q_INVOKABLE QCoro::QmlTask addPlaybackHistoryItem(const QString videoId, const QString title);
 
     PlaybackHistoryModel *mostPlayed();
 
@@ -134,7 +136,7 @@ public:
     }
 
 private:
-    QFuture<void> addSong(const QString &videoId, const QString &title);
+    QCoro::Task<> addSong(const QString videoId, const QString title);
 
     QNetworkAccessManager m_networkImageCacher;
     std::unique_ptr<ThreadedDatabase> m_database;
@@ -150,7 +152,7 @@ class ThumbnailSource : public QObject {
     QString videoId() const {
         return m_videoId;
     }
-    void setVideoId(const QString &id);
+    QCoro::Task<> setVideoId(const QString &id);
     Q_SIGNAL void videoIdChanged();
 
     QUrl cachedPath() const {

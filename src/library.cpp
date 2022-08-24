@@ -12,7 +12,17 @@
 
 #include "asyncdatabase.h"
 
+#include <QCoroTask>
+#include <QCoroFuture>
+#include <QCoroQmlTask>
+#include <QCoroNetworkReply>
+
 namespace ranges = std::ranges;
+
+template <typename T>
+QCoro::Task<T> toTask(QFuture<T> &&future) {
+    co_return co_await future;
+}
 
 Library::Library(QObject *parent)
     : QObject{parent}
@@ -41,19 +51,23 @@ Library &Library::instance()
 FavouritesModel *Library::favourites()
 {
     auto future = m_database->getResults<Song>("select * from favourites natural join songs");
-    return new FavouritesModel(std::move(future), this);
+    return new FavouritesModel(toTask(std::move(future)), this);
 }
 
-void Library::addFavourite(const QString &videoId, const QString &title)
+QCoro::QmlTask Library::addFavourite(const QString &videoId, const QString &title)
 {
-    connectFuture(addSong(videoId, title), this, [=, this] {
-        connectFuture(m_database->execute("insert or ignore into favourites (video_id) values (?)", videoId), this, &Library::favouritesChanged);
-    });
+    return [=, this]() -> QCoro::Task<> {
+        co_await addSong(videoId, title);
+        co_await m_database->execute("insert or ignore into favourites (video_id) values (?)", videoId);
+    }();
 }
 
-void Library::removeFavourite(const QString &videoId)
+QCoro::QmlTask Library::removeFavourite(const QString &videoId)
 {
-    connectFuture(m_database->execute("delete from favourites where video_id = ?", videoId), this, &Library::favouritesChanged);
+    return [=, this]() -> QCoro::Task<> {
+        co_await m_database->execute("delete from favourites where video_id = ?", videoId);
+        Library::favouritesChanged();
+    }();
 }
 
 FavouriteWatcher *Library::favouriteWatcher(const QString &videoId)
@@ -66,7 +80,7 @@ FavouriteWatcher *Library::favouriteWatcher(const QString &videoId)
 
 SearchHistoryModel *Library::searches()
 {
-    return new SearchHistoryModel(m_database->getResults<SingleValue<QString>>("select (search_query) from searches order by search_id desc"), this);
+    return new SearchHistoryModel(toTask(m_database->getResults<SingleValue<QString>>("select (search_query) from searches order by search_id desc")), this);
 }
 
 void Library::addSearch(const QString &text)
@@ -77,22 +91,22 @@ void Library::addSearch(const QString &text)
 PlaybackHistoryModel *Library::playbackHistory()
 {
     auto future = m_database->getResults<PlayedSong>("select * from played_songs natural join songs");
-    return new PlaybackHistoryModel(std::move(future), this);
+    return new PlaybackHistoryModel(toTask(std::move(future)), this);
 }
 
-void Library::addPlaybackHistoryItem(const QString &videoId, const QString &title)
+QCoro::QmlTask Library::addPlaybackHistoryItem(const QString videoId, const QString title)
 {
-    connectFuture(addSong(videoId, title), this, [=, this] {
-        connectFuture(m_database->execute("insert or ignore into played_songs (video_id, plays) values (?, ?)", videoId, 0), this, [=, this] {
-            connectFuture(m_database->execute("update played_songs set plays = plays + 1 where video_id = ? ", videoId), this, &Library::playbackHistoryChanged);
-        });
-    });
+    return [=, this]() -> QCoro::Task<> {
+        co_await addSong(videoId, title);
+        co_await m_database->execute("insert or ignore into played_songs (video_id, plays) values (?, ?)", videoId, 0);
+        co_await m_database->execute("update played_songs set plays = plays + 1 where video_id = ? ", videoId);
+    }();
 }
 
 PlaybackHistoryModel *Library::mostPlayed()
 {
     auto future = m_database->getResults<PlayedSong>("select * from played_songs natural join songs order by plays desc limit 10");
-    return new PlaybackHistoryModel(std::move(future), this);
+    return new PlaybackHistoryModel(toTask(std::move(future)), this);
 }
 
 QNetworkAccessManager &Library::nam()
@@ -100,14 +114,14 @@ QNetworkAccessManager &Library::nam()
     return m_networkImageCacher;
 }
 
-QFuture<void> Library::addSong(const QString &videoId, const QString &title)
+QCoro::Task<> Library::addSong(const QString videoId, const QString title)
 {
-    return m_database->execute("insert or ignore into songs (video_id, title, artist, album) values (?, ?, null, null)", videoId, title);
+    co_await m_database->execute("insert or ignore into songs (video_id, title, artist, album) values (?, ?, null, null)", videoId, title);
 }
 
-void ThumbnailSource::setVideoId(const QString &id) {
+QCoro::Task<> ThumbnailSource::setVideoId(const QString &id) {
     if (m_videoId == id) {
-        return;
+        co_return;
     }
 
     m_videoId = id;
@@ -119,25 +133,21 @@ void ThumbnailSource::setVideoId(const QString &id) {
 
     if (QFile::exists(cacheLocation)) {
         setCachedPath(QUrl::fromLocalFile(cacheLocation));
-        return;
+        co_return;
     }
 
-    auto future = YTMusicThread::instance()->extractVideoInfo(id);
-    connectFuture(future, this, [this, id, cacheLocation](video_info::VideoInfo &&info) {
-        auto *reply = Library::instance().nam().get(QNetworkRequest(QUrl(QString::fromStdString(info.thumbnail))));
-        connect(reply, &QNetworkReply::finished, this, [id, reply, this, cacheLocation]() {
-            QFile file(cacheLocation);
-            file.open(QFile::WriteOnly);
-            file.write(reply->readAll());
-            setCachedPath(QUrl::fromLocalFile(cacheLocation));
-        });
-    });
+    auto info = co_await YTMusicThread::instance()->extractVideoInfo(id);
+    auto *reply = co_await Library::instance().nam().get(QNetworkRequest(QUrl(QString::fromStdString(info.thumbnail))));
+    QFile file(cacheLocation);
+    file.open(QFile::WriteOnly);
+    file.write(reply->readAll());
+    setCachedPath(QUrl::fromLocalFile(cacheLocation));
 }
 
-PlaybackHistoryModel::PlaybackHistoryModel(QFuture<std::vector<PlayedSong> > &&songs, QObject *parent)
+PlaybackHistoryModel::PlaybackHistoryModel(QCoro::Task<std::vector<PlayedSong> > &&songs, QObject *parent)
     : QAbstractListModel(parent)
 {
-    connectFuture(songs, this, [this](const auto songs) {
+    songs.then([this](const auto songs) {
         beginResetModel();
         m_playedSongs = songs;
         endResetModel();
@@ -172,10 +182,10 @@ QVariant PlaybackHistoryModel::data(const QModelIndex &index, int role) const {
     Q_UNREACHABLE();
 }
 
-FavouritesModel::FavouritesModel(QFuture<std::vector<Song>> &&songs, QObject *parent)
+FavouritesModel::FavouritesModel(QCoro::Task<std::vector<Song>> &&songs, QObject *parent)
     : QAbstractListModel(parent)
 {
-    connectFuture(songs, this, [this](const auto songs) {
+    songs.then([this](const auto songs) {
         beginResetModel();
         m_favouriteSongs = songs;
         endResetModel();
@@ -207,16 +217,21 @@ QVariant FavouritesModel::data(const QModelIndex &index, int role) const {
     Q_UNREACHABLE();
 }
 
+template <typename T>
+QCoro::Task<T> toTask(QFuture<T> &future) {
+    auto result = co_await future;
+    co_return result;
+}
+
 FavouriteWatcher::FavouriteWatcher(Library *library, const QString &videoId)
     : QObject(library), m_videoId(videoId), m_library(library)
 {
-    auto update = [this] {
-        connectFuture(m_library->database().getResult<SingleValue<bool>>("select count(*) > 0 from favourites where video_id = ?", m_videoId), this, [this](auto count) {
-            if (count) {
-                m_isFavourite = count->value;
-                Q_EMIT isFavouriteChanged();
-            }
-        });
+    auto update = [this]() -> QCoro::Task<> {
+        auto count = co_await toTask(m_library->database().getResult<SingleValue<bool>>("select count(*) > 0 from favourites where video_id = ?", m_videoId)).withContext(this);
+        if (count) {
+             m_isFavourite = count->value;
+            Q_EMIT isFavouriteChanged();
+        }
     };
     update();
     connect(library, &Library::favouritesChanged, this, update);
@@ -226,10 +241,10 @@ bool FavouriteWatcher::isFavourite() const {
     return m_isFavourite;
 }
 
-SearchHistoryModel::SearchHistoryModel(QFuture<std::vector<SingleValue<QString>>> &&historyFuture, QObject *parent)
+SearchHistoryModel::SearchHistoryModel(QCoro::Task<std::vector<SingleValue<QString>>> &&historyFuture, QObject *parent)
     : QAbstractListModel(parent)
 {
-    connectFuture(historyFuture, this, [this](const auto history) {
+   historyFuture.then([this](const auto history) {
         beginResetModel();
         m_history = history;
         endResetModel();

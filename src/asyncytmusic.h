@@ -9,6 +9,9 @@
 #include <QFuture>
 #include <QFutureWatcher>
 
+#include <QCoroFuture>
+#include <QCoroTask>
+
 #include <vector>
 
 #include <ytmusic.h>
@@ -100,21 +103,21 @@ class AsyncYTMusic : public QObject
 
 public:
     // public functions need to be thread safe
-    QFuture<std::vector<search::SearchResultItem>> search(const QString &query);
+    QCoro::Task<std::vector<search::SearchResultItem>> search(const QString &query);
 
-    QFuture<artist::Artist> fetchArtist(const QString &channelId);
+    QCoro::Task<artist::Artist> fetchArtist(const QString &channelId);
 
-    QFuture<album::Album> fetchAlbum(const QString &browseId);
+    QCoro::Task<album::Album> fetchAlbum(const QString &browseId);
 
-    QFuture<std::optional<song::Song> > fetchSong(const QString &videoId);
+    QCoro::Task<std::optional<song::Song> > fetchSong(const QString &videoId);
 
-    QFuture<playlist::Playlist> fetchPlaylist(const QString &playlistId);
+    QCoro::Task<playlist::Playlist> fetchPlaylist(const QString &playlistId);
 
-    QFuture<std::vector<artist::Artist::Album>> fetchArtistAlbums(const QString &channelId, const QString &params);
+    QCoro::Task<std::vector<artist::Artist::Album>> fetchArtistAlbums(const QString &channelId, const QString &params);
 
-    QFuture<video_info::VideoInfo> extractVideoInfo(const QString &videoId);
+    QCoro::Task<video_info::VideoInfo> extractVideoInfo(const QString &videoId);
 
-    QFuture<watch::Playlist> fetchWatchPlaylist(const std::optional<QString> &videoId = std::nullopt ,
+    QCoro::Task<watch::Playlist> fetchWatchPlaylist(const std::optional<QString> &videoId = std::nullopt ,
                             const std::optional<QString> &playlistId = std::nullopt);
 
     Q_SIGNAL void errorOccurred(const QString &error);
@@ -125,7 +128,7 @@ protected:
 private:
     /// Invokes the given function on the thread of the YTMusic object, and handles exceptions that occur while invoking it.
     template <typename Func>
-    QFuture<std::invoke_result_t<Func>> invokeAndCatchOnThread(Func fun) {
+    QCoro::Task<std::invoke_result_t<Func>> invokeAndCatchOnThread(Func fun) {
         using ReturnType = std::invoke_result_t<Func>;
         auto interface = std::make_shared<QFutureInterface<ReturnType>>();
         QMetaObject::invokeMethod(this, [=, this]() {
@@ -138,7 +141,7 @@ private:
                 Q_EMIT errorOccurred(QString::fromLocal8Bit(err.what()));
             }
         });
-        return interface->future();
+        co_return co_await interface->future();
     }
 
     // Python interpreter will be initialized from the thread calling the methods

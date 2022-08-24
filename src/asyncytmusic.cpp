@@ -60,7 +60,7 @@ AsyncYTMusic::AsyncYTMusic(QObject *parent)
 //
 // search
 //
-QFuture<std::vector<search::SearchResultItem>> AsyncYTMusic::search(const QString &query)
+QCoro::Task<std::vector<search::SearchResultItem>> AsyncYTMusic::search(const QString &query)
 {
     return invokeAndCatchOnThread([=, this]() {
         return m_ytm->search(query.toStdString());
@@ -70,7 +70,7 @@ QFuture<std::vector<search::SearchResultItem>> AsyncYTMusic::search(const QStrin
 //
 // fetchArtist
 //
-QFuture<artist::Artist> AsyncYTMusic::fetchArtist(const QString &channelId)
+QCoro::Task<artist::Artist> AsyncYTMusic::fetchArtist(const QString &channelId)
 {
     return invokeAndCatchOnThread([=, this]() {
         return m_ytm->get_artist(channelId.toStdString());
@@ -80,7 +80,7 @@ QFuture<artist::Artist> AsyncYTMusic::fetchArtist(const QString &channelId)
 //
 // fetchAlbum
 //
-QFuture<album::Album> AsyncYTMusic::fetchAlbum(const QString &browseId)
+QCoro::Task<album::Album> AsyncYTMusic::fetchAlbum(const QString &browseId)
 {
     return invokeAndCatchOnThread([=, this]() {
         return m_ytm->get_album(browseId.toStdString());
@@ -90,7 +90,7 @@ QFuture<album::Album> AsyncYTMusic::fetchAlbum(const QString &browseId)
 //
 // fetchSong
 //
-QFuture<std::optional<song::Song>> AsyncYTMusic::fetchSong(const QString &videoId)
+QCoro::Task<std::optional<song::Song>> AsyncYTMusic::fetchSong(const QString &videoId)
 {
     return invokeAndCatchOnThread([=, this]() {
         return m_ytm->get_song(videoId.toStdString());
@@ -100,7 +100,7 @@ QFuture<std::optional<song::Song>> AsyncYTMusic::fetchSong(const QString &videoI
 //
 // fetchPlaylist
 //
-QFuture<playlist::Playlist> AsyncYTMusic::fetchPlaylist(const QString &playlistId) {
+QCoro::Task<playlist::Playlist> AsyncYTMusic::fetchPlaylist(const QString &playlistId) {
     return invokeAndCatchOnThread([=, this]() {
         return m_ytm->get_playlist(playlistId.toStdString());
     });
@@ -109,7 +109,7 @@ QFuture<playlist::Playlist> AsyncYTMusic::fetchPlaylist(const QString &playlistI
 //
 // fetchArtistAlbum
 //
-QFuture<std::vector<artist::Artist::Album>> AsyncYTMusic::fetchArtistAlbums(const QString &channelId, const QString &params)
+QCoro::Task<std::vector<artist::Artist::Album>> AsyncYTMusic::fetchArtistAlbums(const QString &channelId, const QString &params)
 {
     return invokeAndCatchOnThread([=, this]() {
         return m_ytm->get_artist_albums(channelId.toStdString(), params.toStdString());
@@ -119,7 +119,7 @@ QFuture<std::vector<artist::Artist::Album>> AsyncYTMusic::fetchArtistAlbums(cons
 //
 // extractVideoInfo
 //
-QFuture<video_info::VideoInfo> AsyncYTMusic::extractVideoInfo(const QString &videoId)
+QCoro::Task<video_info::VideoInfo> AsyncYTMusic::extractVideoInfo(const QString &videoId)
 {
     return invokeAndCatchOnThread([=, this]() {
         return m_ytm->extract_video_info(videoId.toStdString());
@@ -129,7 +129,7 @@ QFuture<video_info::VideoInfo> AsyncYTMusic::extractVideoInfo(const QString &vid
 //
 // fetchWatchPlaylist
 //
-QFuture<watch::Playlist> AsyncYTMusic::fetchWatchPlaylist(const std::optional<QString> &videoId, const std::optional<QString> &playlistId)
+QCoro::Task<watch::Playlist> AsyncYTMusic::fetchWatchPlaylist(const std::optional<QString> &videoId, const std::optional<QString> &playlistId)
 {
     return invokeAndCatchOnThread([=, this]() {
         return m_ytm->get_watch_playlist(

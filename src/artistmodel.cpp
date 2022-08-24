@@ -6,37 +6,38 @@
 
 #include <asyncytmusic.h>
 
+#include <QCoro/QCoroTask>
+#include <QCoro/QCoroFuture>
+
 ArtistModel::ArtistModel(QObject *parent)
     : AbstractYTMusicModel(parent)
     , m_view(albums, singles, songs, videos)
 {
-    connect(this, &ArtistModel::channelIdChanged, this, [this] {
+    connect(this, &ArtistModel::channelIdChanged, this, [this]() -> QCoro::Task<> {
         if (m_channelId.isEmpty()) {
-            return;
+            co_return;
         }
 
         setLoading(true);
 
-        auto future = YTMusicThread::instance()->fetchArtist(m_channelId);
-        connectFuture(future, this, [=, this](const artist::Artist &artist) {
-            setLoading(false);
+        auto artist = co_await YTMusicThread::instance()->fetchArtist(m_channelId);
+        setLoading(false);
 
-            beginResetModel();
-            m_artist = artist;
-            std::sort(m_artist.thumbnails.begin(), m_artist.thumbnails.end());
+        beginResetModel();
+        m_artist = artist;
+        std::sort(m_artist.thumbnails.begin(), m_artist.thumbnails.end());
 
-            albums = m_artist.albums ? m_artist.albums->results : std::vector<artist::Artist::Album>();
-            singles = m_artist.singles ? m_artist.singles->results : std::vector<artist::Artist::Single>();
-            songs = m_artist.songs ? m_artist.songs->results : std::vector<artist::Artist::Song>();
-            videos = m_artist.videos ? m_artist.videos->results : std::vector<artist::Artist::Video>();
+        albums = m_artist.albums ? m_artist.albums->results : std::vector<artist::Artist::Album>();
+        singles = m_artist.singles ? m_artist.singles->results : std::vector<artist::Artist::Single>();
+        songs = m_artist.songs ? m_artist.songs->results : std::vector<artist::Artist::Song>();
+        videos = m_artist.videos ? m_artist.videos->results : std::vector<artist::Artist::Video>();
 
-            // std::span can't know if the data pointer underneath it was changed, so re-create
-            m_view = MultiIterableView(albums, singles, songs, videos);
-            endResetModel();
+        // std::span can't know if the data pointer underneath it was changed, so re-create
+        m_view = MultiIterableView(albums, singles, songs, videos);
+        endResetModel();
 
-            Q_EMIT titleChanged();
-            Q_EMIT thumbnailUrlChanged();
-        });
+        Q_EMIT titleChanged();
+        Q_EMIT thumbnailUrlChanged();
     });
     connect(&YTMusicThread::instance().get(), &AsyncYTMusic::errorOccurred, this, [this] {
         setLoading(false);

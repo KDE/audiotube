@@ -41,7 +41,7 @@ UserPlaylistModel::UserPlaylistModel(QObject *parent)
 
         setLoading(true);
         auto future = YTMusicThread::instance()->fetchWatchPlaylist(m_initialVideoId);
-        connectFuture(future, this, handleResult);
+        future.then(this, handleResult);
     });
     connect(this, &UserPlaylistModel::playlistIdChanged, this, [=, this] {
         if (m_playlistId.isEmpty()) {
@@ -50,7 +50,7 @@ UserPlaylistModel::UserPlaylistModel(QObject *parent)
 
         setLoading(true);
         auto future = YTMusicThread::instance()->fetchWatchPlaylist(std::nullopt, m_playlistId);
-        connectFuture(future, this, handleResult);;
+        future.then(this, handleResult);
     });
     connect(&YTMusicThread::instance().get(), &AsyncYTMusic::errorOccurred, this, [this] {
         setLoading(false);
