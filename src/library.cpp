@@ -40,7 +40,7 @@ Library &Library::instance()
 
 FavouritesModel *Library::favourites()
 {
-    auto future = m_database->getResults<Song>("select * from favourites natural join songs");
+    auto future = m_database->getResults<Song>("select * from favourites natural join songs order by favourites.rowid desc");
     return new FavouritesModel(std::move(future), this);
 }
 
