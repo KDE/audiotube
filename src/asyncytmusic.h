@@ -59,12 +59,14 @@ void connectFuture(const QFuture<T> &future, QObjectDerivedType *self, const Fun
             if constexpr (std::is_member_function_pointer_v<Function>) {
                 (self->*fun)();
             } else {
+                Q_UNUSED(self);
                 fun();
             }
         } else if (future.resultCount() > 0) {
             if constexpr (std::is_member_function_pointer_v<Function>) {
                 (self->*fun)(watcher->result());
             } else {
+                Q_UNUSED(self);
                 fun(watcher->result());
             }
         }
