@@ -13,6 +13,8 @@
 
 #include <ytmusic.h>
 
+constexpr QStringView YTMUSIC_WEB_BASE_URL = u"https://music.youtube.com/";
+
 Q_DECLARE_METATYPE(std::vector<artist::Artist::Album>);
 Q_DECLARE_METATYPE(std::vector<search::SearchResultItem>)
 Q_DECLARE_METATYPE(artist::Artist)

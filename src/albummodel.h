@@ -18,6 +18,7 @@ class AlbumModel : public AbstractYTMusicModel
     Q_PROPERTY(QString title READ title NOTIFY titleChanged)
     Q_PROPERTY(QUrl thumbnailUrl READ thumbnailUrl NOTIFY thumbnailUrlChanged)
     Q_PROPERTY(QString playlistId READ playlistId NOTIFY playlistIdChanged)
+    Q_PROPERTY(QUrl webUrl READ webUrl NOTIFY webUrlChanged)
 
 public:
     enum Role {
@@ -44,6 +45,9 @@ public:
 
     QString playlistId() const;
     Q_SIGNAL void playlistIdChanged();
+
+    QUrl webUrl() const;
+    Q_SIGNAL void webUrlChanged();
 
 private:
     QString m_browseId;

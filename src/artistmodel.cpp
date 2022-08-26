@@ -4,6 +4,8 @@
 
 #include "artistmodel.h"
 
+#include <QStringBuilder>
+
 #include <asyncytmusic.h>
 
 ArtistModel::ArtistModel(QObject *parent)
@@ -143,6 +145,11 @@ QUrl ArtistModel::thumbnailUrl() const
     }
 
     return QUrl(QString::fromStdString(m_artist.thumbnails.back().url));
+}
+
+QUrl ArtistModel::webUrl() const
+{
+    return QUrl(YTMUSIC_WEB_BASE_URL % u"channel/" % QString::fromStdString(m_artist.channel_id));
 }
 
 void ArtistModel::triggerItem(int row)

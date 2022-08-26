@@ -14,6 +14,14 @@ Kirigami.ScrollablePage {
 
     title: artistModel.title
 
+    contextualActions: [
+        Kirigami.Action {
+            text: i18n("Open in Browser")
+            icon.name: "internet-services"
+            onTriggered: Qt.openUrlExternally(artistModel.webUrl)
+        }
+    ]
+
     ListView {
         header: Kirigami.ItemViewHeader {
             backgroundImage.source: artistModel.thumbnailUrl

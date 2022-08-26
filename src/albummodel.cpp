@@ -4,7 +4,7 @@
 
 #include "albummodel.h"
 
-#include <QDebug>
+#include <QStringBuilder>
 
 AlbumModel::AlbumModel(QObject *parent)
     : AbstractYTMusicModel(parent)
@@ -89,4 +89,9 @@ QUrl AlbumModel::thumbnailUrl() const
 QString AlbumModel::playlistId() const
 {
     return QString::fromStdString(m_album.audio_playlist_id);
+}
+
+QUrl AlbumModel::webUrl() const
+{
+    return QUrl(YTMUSIC_WEB_BASE_URL % "/playlist?list=" % QString::fromStdString(m_album.audio_playlist_id));
 }
