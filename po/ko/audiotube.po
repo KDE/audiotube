@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-12 00:48+0000\n"
+"POT-Creation-Date: 2022-08-27 00:50+0000\n"
 "PO-Revision-Date: 2022-07-13 15:34+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -37,42 +37,47 @@ msgstr "재생"
 msgid "Shuffle"
 msgstr "무순서 재생"
 
-#: contents/ui/AlbumPage.qml:68 contents/ui/ArtistPage.qml:101
+#: contents/ui/AlbumPage.qml:35 contents/ui/ArtistPage.qml:19
+#, kde-format
+msgid "Open in Browser"
+msgstr ""
+
+#: contents/ui/AlbumPage.qml:77 contents/ui/ArtistPage.qml:109
 #: contents/ui/PlaybackHistory.qml:74 contents/ui/PlaylistPage.qml:67
 #, kde-format
 msgid "Play Next"
 msgstr "다음 재생"
 
-#: contents/ui/AlbumPage.qml:73 contents/ui/ArtistPage.qml:107
+#: contents/ui/AlbumPage.qml:82 contents/ui/ArtistPage.qml:115
 #: contents/ui/PlaybackHistory.qml:79 contents/ui/PlaylistPage.qml:72
 #: contents/ui/SearchPage.qml:123
 #, kde-format
 msgid "Add to Playlist"
 msgstr "재생 목록에 추가"
 
-#: contents/ui/ArtistPage.qml:39 contents/ui/SearchPage.qml:67
+#: contents/ui/ArtistPage.qml:47 contents/ui/SearchPage.qml:67
 #, kde-format
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
 "\"%1\"?"
 msgstr "비디오 재생은 지원하지 않습니다. \"%1\"의 오디오만 재생하시겠습니까?"
 
-#: contents/ui/ArtistPage.qml:55 contents/ui/SearchPage.qml:25
+#: contents/ui/ArtistPage.qml:63 contents/ui/SearchPage.qml:25
 #, kde-format
 msgid "Albums"
 msgstr "앨범"
 
-#: contents/ui/ArtistPage.qml:57
+#: contents/ui/ArtistPage.qml:65
 #, kde-format
 msgid "Singles"
 msgstr "싱글"
 
-#: contents/ui/ArtistPage.qml:59 contents/ui/SearchPage.qml:31
+#: contents/ui/ArtistPage.qml:67 contents/ui/SearchPage.qml:31
 #, kde-format
 msgid "Songs"
 msgstr "곡"
 
-#: contents/ui/ArtistPage.qml:61 contents/ui/SearchPage.qml:33
+#: contents/ui/ArtistPage.qml:69 contents/ui/SearchPage.qml:33
 #, kde-format
 msgid "Videos"
 msgstr "비디오"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-12 00:48+0000\n"
+"POT-Creation-Date: 2022-08-27 00:50+0000\n"
 "PO-Revision-Date: 2022-05-26 09:09+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -40,20 +40,25 @@ msgstr "Reproduïx"
 msgid "Shuffle"
 msgstr "Barreja"
 
-#: contents/ui/AlbumPage.qml:68 contents/ui/ArtistPage.qml:101
+#: contents/ui/AlbumPage.qml:35 contents/ui/ArtistPage.qml:19
+#, kde-format
+msgid "Open in Browser"
+msgstr ""
+
+#: contents/ui/AlbumPage.qml:77 contents/ui/ArtistPage.qml:109
 #: contents/ui/PlaybackHistory.qml:74 contents/ui/PlaylistPage.qml:67
 #, kde-format
 msgid "Play Next"
 msgstr "Reproduïx el següent"
 
-#: contents/ui/AlbumPage.qml:73 contents/ui/ArtistPage.qml:107
+#: contents/ui/AlbumPage.qml:82 contents/ui/ArtistPage.qml:115
 #: contents/ui/PlaybackHistory.qml:79 contents/ui/PlaylistPage.qml:72
 #: contents/ui/SearchPage.qml:123
 #, kde-format
 msgid "Add to Playlist"
 msgstr "Afig a la llista de reproducció"
 
-#: contents/ui/ArtistPage.qml:39 contents/ui/SearchPage.qml:67
+#: contents/ui/ArtistPage.qml:47 contents/ui/SearchPage.qml:67
 #, kde-format
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
@@ -62,22 +67,22 @@ msgstr ""
 "Encara no s'admet la reproducció de vídeo. Voleu reproduir només l'àudio de "
 "«%1»?"
 
-#: contents/ui/ArtistPage.qml:55 contents/ui/SearchPage.qml:25
+#: contents/ui/ArtistPage.qml:63 contents/ui/SearchPage.qml:25
 #, kde-format
 msgid "Albums"
 msgstr "Àlbums"
 
-#: contents/ui/ArtistPage.qml:57
+#: contents/ui/ArtistPage.qml:65
 #, kde-format
 msgid "Singles"
 msgstr "Individuals"
 
-#: contents/ui/ArtistPage.qml:59 contents/ui/SearchPage.qml:31
+#: contents/ui/ArtistPage.qml:67 contents/ui/SearchPage.qml:31
 #, kde-format
 msgid "Songs"
 msgstr "Cançons"
 
-#: contents/ui/ArtistPage.qml:61 contents/ui/SearchPage.qml:33
+#: contents/ui/ArtistPage.qml:69 contents/ui/SearchPage.qml:33
 #, kde-format
 msgid "Videos"
 msgstr "Vídeos"

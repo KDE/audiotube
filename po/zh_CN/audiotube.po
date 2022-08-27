@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-07-12 00:48+0000\n"
+"POT-Creation-Date: 2022-08-27 00:50+0000\n"
 "PO-Revision-Date: 2022-08-20 14:18\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -37,42 +37,47 @@ msgstr "播放"
 msgid "Shuffle"
 msgstr "随机播放"
 
-#: contents/ui/AlbumPage.qml:68 contents/ui/ArtistPage.qml:101
+#: contents/ui/AlbumPage.qml:35 contents/ui/ArtistPage.qml:19
+#, kde-format
+msgid "Open in Browser"
+msgstr ""
+
+#: contents/ui/AlbumPage.qml:77 contents/ui/ArtistPage.qml:109
 #: contents/ui/PlaybackHistory.qml:74 contents/ui/PlaylistPage.qml:67
 #, kde-format
 msgid "Play Next"
 msgstr "播放下一首"
 
-#: contents/ui/AlbumPage.qml:73 contents/ui/ArtistPage.qml:107
+#: contents/ui/AlbumPage.qml:82 contents/ui/ArtistPage.qml:115
 #: contents/ui/PlaybackHistory.qml:79 contents/ui/PlaylistPage.qml:72
 #: contents/ui/SearchPage.qml:123
 #, kde-format
 msgid "Add to Playlist"
 msgstr "添加到播放列表"
 
-#: contents/ui/ArtistPage.qml:39 contents/ui/SearchPage.qml:67
+#: contents/ui/ArtistPage.qml:47 contents/ui/SearchPage.qml:67
 #, kde-format
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
 "\"%1\"?"
 msgstr "视频播放尚未被支持。您想要只播放“%1”中的音频吗？"
 
-#: contents/ui/ArtistPage.qml:55 contents/ui/SearchPage.qml:25
+#: contents/ui/ArtistPage.qml:63 contents/ui/SearchPage.qml:25
 #, kde-format
 msgid "Albums"
 msgstr "专辑"
 
-#: contents/ui/ArtistPage.qml:57
+#: contents/ui/ArtistPage.qml:65
 #, kde-format
 msgid "Singles"
 msgstr "单曲"
 
-#: contents/ui/ArtistPage.qml:59 contents/ui/SearchPage.qml:31
+#: contents/ui/ArtistPage.qml:67 contents/ui/SearchPage.qml:31
 #, kde-format
 msgid "Songs"
 msgstr "曲目"
 
-#: contents/ui/ArtistPage.qml:61 contents/ui/SearchPage.qml:33
+#: contents/ui/ArtistPage.qml:69 contents/ui/SearchPage.qml:33
 #, kde-format
 msgid "Videos"
 msgstr "视频"
