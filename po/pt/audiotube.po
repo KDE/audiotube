@@ -42,7 +42,7 @@ msgstr "Baralhar"
 #: contents/ui/AlbumPage.qml:35 contents/ui/ArtistPage.qml:19
 #, kde-format
 msgid "Open in Browser"
-msgstr ""
+msgstr "Abrir no Navegador"
 
 #: contents/ui/AlbumPage.qml:77 contents/ui/ArtistPage.qml:109
 #: contents/ui/PlaybackHistory.qml:74 contents/ui/PlaylistPage.qml:67
