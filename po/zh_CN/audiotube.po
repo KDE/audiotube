@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-08-27 00:50+0000\n"
-"PO-Revision-Date: 2022-08-20 14:18\n"
+"PO-Revision-Date: 2022-09-20 01:57\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -40,7 +40,7 @@ msgstr "随机播放"
 #: contents/ui/AlbumPage.qml:35 contents/ui/ArtistPage.qml:19
 #, kde-format
 msgid "Open in Browser"
-msgstr ""
+msgstr "在浏览器中打开"
 
 #: contents/ui/AlbumPage.qml:77 contents/ui/ArtistPage.qml:109
 #: contents/ui/PlaybackHistory.qml:74 contents/ui/PlaylistPage.qml:67
@@ -95,32 +95,32 @@ msgstr "取消"
 #: contents/ui/LibraryPage.qml:27
 #, kde-format
 msgid "Favourites"
-msgstr ""
+msgstr "收藏夹"
 
 #: contents/ui/LibraryPage.qml:37 contents/ui/LibraryPage.qml:108
 #, kde-format
 msgid "Show All"
-msgstr ""
+msgstr "显示全部"
 
 #: contents/ui/LibraryPage.qml:42
 #, kde-format
 msgid "Favourite Songs"
-msgstr ""
+msgstr "收藏的歌曲"
 
 #: contents/ui/LibraryPage.qml:98
 #, kde-format
 msgid "Most played"
-msgstr ""
+msgstr "最常播放"
 
 #: contents/ui/LibraryPage.qml:113
 #, kde-format
 msgid "Played Songs"
-msgstr ""
+msgstr "已播放歌曲"
 
 #: contents/ui/main.qml:39
 #, kde-format
 msgid "Back"
-msgstr ""
+msgstr "返回"
 
 #: contents/ui/main.qml:73 contents/ui/SearchPage.qml:150
 #, kde-format
@@ -135,12 +135,12 @@ msgstr "AudioTube"
 #: contents/ui/MaximizedPlayerPage.qml:92
 #, kde-format
 msgid "Now Playing"
-msgstr ""
+msgstr "正在播放"
 
 #: contents/ui/MaximizedPlayerPage.qml:117
 #, kde-format
 msgid "Queue"
-msgstr ""
+msgstr "播放队列"
 
 #: contents/ui/MaximizedPlayerPage.qml:222
 #, kde-format
@@ -156,12 +156,12 @@ msgstr "没有正在播放的媒体"
 #: contents/ui/PlaybackHistory.qml:15
 #, kde-format
 msgid "Unknown list of songs"
-msgstr ""
+msgstr "未知歌曲列表"
 
 #: contents/ui/PlaybackHistory.qml:25
 #, kde-format
 msgid "No songs here yet"
-msgstr ""
+msgstr "此处无歌曲"
 
 #: contents/ui/SearchPage.qml:27
 #, kde-format
