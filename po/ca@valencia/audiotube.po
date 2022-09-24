@@ -196,4 +196,4 @@ msgstr "Ràdio"
 #: contents/ui/SearchPage.qml:147
 #, kde-format
 msgid "Find music on YouTube Music"
-msgstr "Busca a la Música de Youtube"
+msgstr "Busca en la Música de Youtube"
