@@ -21,6 +21,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="hi">ओडियो-ट्यूब</name>
   <name xml:lang="id">AudioTube</name>
   <name xml:lang="it">AudioTube</name>
+  <name xml:lang="ka">AudioTube</name>
   <name xml:lang="ko">AudioTube</name>
   <name xml:lang="nl">AudioTube</name>
   <name xml:lang="nn">AudioTube</name>
@@ -50,6 +51,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="hi">अभिसृत यूट्यूब संगीत क्लाएंट</summary>
   <summary xml:lang="id">Klien YouTube Music konvergen</summary>
   <summary xml:lang="it">Client YouTube Music convergente</summary>
+  <summary xml:lang="ka">YouTube Music -ის კონვერგენტული კლიენტი</summary>
   <summary xml:lang="ko">올인원 YouTube Music 클라이언트</summary>
   <summary xml:lang="nl">Convergente muziekclient van YouTube</summary>
   <summary xml:lang="nn">YouTube Music-klient, tilpassa ulike brukarflater</summary>
@@ -80,6 +82,7 @@ SPDX-License-Identifier: CC0-1.0
   <developer_name xml:lang="hi">केडीई समुदाय</developer_name>
   <developer_name xml:lang="id">Komunitas KDE</developer_name>
   <developer_name xml:lang="it">Comunità KDE</developer_name>
+  <developer_name xml:lang="ka">KDE-ის საზოგადოება</developer_name>
   <developer_name xml:lang="ko">KDE 커뮤니티</developer_name>
   <developer_name xml:lang="nl">KDE-gemeenschap</developer_name>
   <developer_name xml:lang="nn">KDE-fellesskapet</developer_name>
