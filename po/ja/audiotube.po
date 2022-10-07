@@ -1,0 +1,191 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: audiotube\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-08-27 00:50+0000\n"
+"PO-Revision-Date: 2021-05-29 19:15-0700\n"
+"Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
+"Language-Team: Japanese <kde-jp@kde.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Accelerator-Marker: &\n"
+"X-Text-Markup: kde4\n"
+
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr ""
+
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr ""
+
+#: contents/ui/AlbumPage.qml:19 contents/ui/PlaylistPage.qml:19
+#, kde-format
+msgid "Play"
+msgstr ""
+
+#: contents/ui/AlbumPage.qml:26 contents/ui/PlaylistPage.qml:26
+#, kde-format
+msgid "Shuffle"
+msgstr ""
+
+#: contents/ui/AlbumPage.qml:35 contents/ui/ArtistPage.qml:19
+#, kde-format
+msgid "Open in Browser"
+msgstr ""
+
+#: contents/ui/AlbumPage.qml:77 contents/ui/ArtistPage.qml:109
+#: contents/ui/PlaybackHistory.qml:74 contents/ui/PlaylistPage.qml:67
+#, kde-format
+msgid "Play Next"
+msgstr ""
+
+#: contents/ui/AlbumPage.qml:82 contents/ui/ArtistPage.qml:115
+#: contents/ui/PlaybackHistory.qml:79 contents/ui/PlaylistPage.qml:72
+#: contents/ui/SearchPage.qml:123
+#, kde-format
+msgid "Add to Playlist"
+msgstr ""
+
+#: contents/ui/ArtistPage.qml:47 contents/ui/SearchPage.qml:67
+#, kde-format
+msgid ""
+"Video playback is not supported yet. Do you want to play only the audio of "
+"\"%1\"?"
+msgstr ""
+
+#: contents/ui/ArtistPage.qml:63 contents/ui/SearchPage.qml:25
+#, kde-format
+msgid "Albums"
+msgstr ""
+
+#: contents/ui/ArtistPage.qml:65
+#, kde-format
+msgid "Singles"
+msgstr ""
+
+#: contents/ui/ArtistPage.qml:67 contents/ui/SearchPage.qml:31
+#, kde-format
+msgid "Songs"
+msgstr ""
+
+#: contents/ui/ArtistPage.qml:69 contents/ui/SearchPage.qml:33
+#, kde-format
+msgid "Videos"
+msgstr ""
+
+#: contents/ui/ConfirmationMessage.qml:16
+#, kde-format
+msgid "OK"
+msgstr ""
+
+#: contents/ui/ConfirmationMessage.qml:21
+#, kde-format
+msgid "Cancel"
+msgstr ""
+
+#: contents/ui/LibraryPage.qml:27
+#, kde-format
+msgid "Favourites"
+msgstr ""
+
+#: contents/ui/LibraryPage.qml:37 contents/ui/LibraryPage.qml:108
+#, kde-format
+msgid "Show All"
+msgstr ""
+
+#: contents/ui/LibraryPage.qml:42
+#, kde-format
+msgid "Favourite Songs"
+msgstr ""
+
+#: contents/ui/LibraryPage.qml:98
+#, kde-format
+msgid "Most played"
+msgstr ""
+
+#: contents/ui/LibraryPage.qml:113
+#, kde-format
+msgid "Played Songs"
+msgstr ""
+
+#: contents/ui/main.qml:39
+#, kde-format
+msgid "Back"
+msgstr ""
+
+#: contents/ui/main.qml:73 contents/ui/SearchPage.qml:150
+#, kde-format
+msgid "Search"
+msgstr ""
+
+#: contents/ui/main.qml:85
+#, kde-format
+msgid "AudioTube"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:92
+#, kde-format
+msgid "Now Playing"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:117
+#, kde-format
+msgid "Queue"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:222
+#, kde-format
+msgid "Remove Track"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:242
+#: contents/ui/MinimizedPlayerControls.qml:96
+#, kde-format
+msgid "No media playing"
+msgstr ""
+
+#: contents/ui/PlaybackHistory.qml:15
+#, kde-format
+msgid "Unknown list of songs"
+msgstr ""
+
+#: contents/ui/PlaybackHistory.qml:25
+#, kde-format
+msgid "No songs here yet"
+msgstr ""
+
+#: contents/ui/SearchPage.qml:27
+#, kde-format
+msgid "Artists"
+msgstr ""
+
+#: contents/ui/SearchPage.qml:29
+#, kde-format
+msgid "Playlists"
+msgstr ""
+
+#: contents/ui/SearchPage.qml:36
+#, kde-format
+msgid "Unknown"
+msgstr ""
+
+#: contents/ui/SearchPage.qml:117
+#, kde-format
+msgid "Play next"
+msgstr ""
+
+#: contents/ui/SearchPage.qml:129
+#, kde-format
+msgid "Radio"
+msgstr ""
+
+#: contents/ui/SearchPage.qml:147
+#, kde-format
+msgid "Find music on YouTube Music"
+msgstr ""
