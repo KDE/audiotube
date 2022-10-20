@@ -16,7 +16,7 @@ add_library(asyncdatabase STATIC
 )
 
 target_include_directories(asyncdatabase PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
-target_link_libraries(asyncdatabase PUBLIC Qt5::Sql)
+target_link_libraries(asyncdatabase PUBLIC Qt::Sql)
 
 add_subdirectory(example)
 
@@ -39,12 +39,13 @@ add_executable(audiotube
 )
 
 target_link_libraries(audiotube
-    Qt5::Core
-    Qt5::Gui
-    Qt5::Qml
-    Qt5::Quick
-    Qt5::QuickControls2
-    Qt5::Svg
+    Qt::Core
+    Qt::Gui
+    Qt::Qml
+    Qt::Quick
+    Qt::QuickControls2
+    Qt::Svg
+    Qt::Widgets
     KF5::I18n
     KF5::CoreAddons
     KF5::Crash
