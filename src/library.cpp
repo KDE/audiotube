@@ -122,15 +122,12 @@ void ThumbnailSource::setVideoId(const QString &id) {
         return;
     }
 
-    auto future = YTMusicThread::instance()->extractVideoInfo(id);
-    connectFuture(future, this, [this, id, cacheLocation](video_info::VideoInfo &&info) {
-        auto *reply = Library::instance().nam().get(QNetworkRequest(QUrl(QString::fromStdString(info.thumbnail))));
-        connect(reply, &QNetworkReply::finished, this, [id, reply, this, cacheLocation]() {
-            QFile file(cacheLocation);
-            file.open(QFile::WriteOnly);
-            file.write(reply->readAll());
-            setCachedPath(QUrl::fromLocalFile(cacheLocation));
-        });
+    auto *reply = Library::instance().nam().get(QNetworkRequest(QUrl("https://i.ytimg.com/vi_webp/" % m_videoId % "/maxresdefault.webp")));
+    connect(reply, &QNetworkReply::finished, this, [id, reply, this, cacheLocation]() {
+        QFile file(cacheLocation);
+        file.open(QFile::WriteOnly);
+        file.write(reply->readAll());
+        setCachedPath(QUrl::fromLocalFile(cacheLocation));
     });
 }
 
