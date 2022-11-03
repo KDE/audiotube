@@ -22,7 +22,7 @@ void pyPrintPretty(py::handle obj) {
 
 #define UNEXPORT __attribute__ ((visibility("hidden")))
 
-constexpr auto TESTED_YTMUSICAPI_VERSION = "0.22.0";
+constexpr auto TESTED_YTMUSICAPI_VERSION = "0.24.0";
 
 struct UNEXPORT YTMusicPrivate {
     py::scoped_interpreter guard {};
@@ -41,7 +41,13 @@ struct UNEXPORT YTMusicPrivate {
             // Some of the called python code randomly fails if the encoding is not utf8
             setenv("LC_ALL", "en_US.utf8", true);
 
-            const auto version = module.attr("_version").attr("__version__").cast<std::string>();
+            auto oldVersion = module.attr("__dict__").contains("_version");
+            if (oldVersion) {
+                std::cerr << "Running with outdated and untested version of ytmusicapi." << std::endl;
+                std::cerr << "The currently tested and supported version is " << TESTED_YTMUSICAPI_VERSION << std::endl;
+            }
+
+            const auto version = module.attr("version")("ytmusicapi").cast<std::string>();
             if (version != TESTED_YTMUSICAPI_VERSION) {
                 std::cerr << "Running with untested version of ytmusicapi." << std::endl;
                 std::cerr << "The currently tested and supported version is " << TESTED_YTMUSICAPI_VERSION << std::endl;
@@ -474,13 +480,11 @@ video_info::VideoInfo YTMusic::extract_video_info(const std::string &video_id) c
 
 watch::Playlist YTMusic::get_watch_playlist(const std::optional<std::string> &videoId,
                                             const std::optional<std::string> &playlistId,
-                                            int limit,
-                                            const std::optional<std::string> &params) const
+                                            int limit) const
 {
     const auto playlist = d->get_ytmusic().attr("get_watch_playlist")("videoId"_a = videoId,
                                                                 "playlistId"_a = playlistId,
-                                                                "limit"_a = py::int_(limit),
-                                                                "params"_a = params);
+                                                                "limit"_a = py::int_(limit));
 
     return {
         extract_py_list<watch::Playlist::Track>(playlist["tracks"]),

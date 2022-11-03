@@ -306,8 +306,7 @@ public:
     /// https://ytmusicapi.readthedocs.io/en/latest/reference.html#ytmusicapi.YTMusic.get_watch_playlist
     watch::Playlist get_watch_playlist(const std::optional<std::string> &videoId = std::nullopt,
                                       const std::optional<std::string> &playlistId = std::nullopt,
-                                      int limit = 25,
-                                      const std::optional<std::string> &params = std::nullopt) const;
+                                      int limit = 25) const;
 
     // TODO wrap more methods
 
