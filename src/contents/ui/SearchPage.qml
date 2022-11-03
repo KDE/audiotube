@@ -83,6 +83,7 @@ Kirigami.ScrollablePage {
             required property string videoId
             required property var artists
             required property string radioPlaylistId
+            required property string thumbnailUrl
 
             RowLayout {
                 Layout.fillHeight: true
@@ -97,9 +98,9 @@ Kirigami.ScrollablePage {
                         case SearchModel.Playlist:
                             return "view-media-playlist"
                         case SearchModel.Song:
-                            return "emblem-music-symbolic"
+                            return delegateItem.thumbnailUrl
                         case SearchModel.Video:
-                            return "emblem-videos-symbolic"
+                            return delegateItem.thumbnailUrl
                         }
                     }
                 }

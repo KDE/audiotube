@@ -45,6 +45,10 @@ QVariant AlbumModel::data(const QModelIndex &index, int role) const
         return QString::fromStdString(m_album.tracks[index.row()].video_id.value_or(std::string()));
     case Artists:
         return QVariant::fromValue(m_album.tracks[index.row()].artists);
+    case ThumbnailUrl:
+        if (!m_album.thumbnails.empty()) {
+            return QString::fromStdString(m_album.thumbnails.front().url);
+        }
     }
 
     Q_UNREACHABLE();
@@ -57,7 +61,8 @@ QHash<int, QByteArray> AlbumModel::roleNames() const
     return {
         {Title, "title"},
         {VideoId, "videoId"},
-        {Artists, "artists"}
+        {Artists, "artists"},
+        {ThumbnailUrl, "thumbnailUrl"}
     };
 }
 

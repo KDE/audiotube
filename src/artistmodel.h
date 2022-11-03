@@ -38,7 +38,8 @@ public:
         Title,
         Type,
         Artists,
-        VideoId
+        VideoId,
+        ThumbnailUrl
     };
 
     explicit ArtistModel(QObject *parent = nullptr);

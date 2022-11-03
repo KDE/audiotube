@@ -46,12 +46,13 @@ Kirigami.ScrollablePage {
             required property string title
             required property string videoId
             required property var artists
+            required property string thumbnailUrl
 
             RowLayout {
                 Layout.fillHeight: true
                 Kirigami.Icon {
                     Layout.fillHeight: true
-                    source: "emblem-music-symbolic"
+                    source: delegateItem.thumbnailUrl
                 }
 
                 Controls.Label {

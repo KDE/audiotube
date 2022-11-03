@@ -28,9 +28,21 @@ ArtistModel::ArtistModel(QObject *parent)
             std::sort(m_artist.thumbnails.begin(), m_artist.thumbnails.end());
 
             albums = m_artist.albums ? m_artist.albums->results : std::vector<artist::Artist::Album>();
+            for (auto &album : albums) {
+                std::sort(album.thumbnails.begin(), album.thumbnails.end());
+            }
             singles = m_artist.singles ? m_artist.singles->results : std::vector<artist::Artist::Single>();
+            for (auto &single : singles) {
+                std::sort(single.thumbnails.begin(), single.thumbnails.end());
+            }
             songs = m_artist.songs ? m_artist.songs->results : std::vector<artist::Artist::Song>();
+            for (auto &song : songs) {
+                std::sort(song.thumbnails.begin(), song.thumbnails.end());
+            }
             videos = m_artist.videos ? m_artist.videos->results : std::vector<artist::Artist::Video>();
+            for (auto &video : videos) {
+                std::sort(video.thumbnails.begin(), video.thumbnails.end());
+            }
 
             // std::span can't know if the data pointer underneath it was changed, so re-create
             m_view = MultiIterableView(albums, singles, songs, videos);
@@ -105,6 +117,13 @@ QVariant ArtistModel::data(const QModelIndex &index, int role) const
 
             Q_UNREACHABLE();
         }, m_view[index.row()]);
+    case ThumbnailUrl:
+        return std::visit([&](auto&& item) {
+            if (!item.thumbnails.empty()) {
+                return QString::fromStdString(item.thumbnails.front().url);
+            }
+            return QString();
+        }, m_view[index.row()]);
     }
 
     Q_UNREACHABLE();
@@ -118,7 +137,8 @@ QHash<int, QByteArray> ArtistModel::roleNames() const
         {Title, "title"},
         {Type, "type"},
         {Artists, "artists"},
-        {VideoId, "videoId"}
+        {VideoId, "videoId"},
+        {ThumbnailUrl, "thumbnailUrl"}
     };
 }
 

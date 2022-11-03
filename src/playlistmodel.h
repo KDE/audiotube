@@ -26,7 +26,8 @@ public:
     enum Role {
         Title,
         Artists,
-        VideoId
+        VideoId,
+        ThumbnailUrl,
     };
 
     int rowCount(const QModelIndex &parent) const override;

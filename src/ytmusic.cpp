@@ -275,7 +275,8 @@ std::optional<search::SearchResultItem> extract_search_result(py::handle result)
                 result["videoId"].cast<std::string>(),
                 result["title"].cast<std::string>(),
                 extract_py_list<meta::Artist>(result["artists"]),
-                result["views"].cast<std::string>()
+                result["views"].cast<std::string>(),
+                extract_py_list<meta::Thumbnail>(result["thumbnails"])
             },
             result["duration"].cast<std::string>()
         };
@@ -285,7 +286,8 @@ std::optional<search::SearchResultItem> extract_search_result(py::handle result)
                 result["videoId"].cast<std::string>(),
                 result["title"].cast<std::string>(),
                 extract_py_list<meta::Artist>(result["artists"]),
-                result["duration"].cast<std::string>()
+                result["duration"].cast<std::string>(),
+                extract_py_list<meta::Thumbnail>(result["thumbnails"])
             },
             extract_meta_album(result["album"]),
             result["isExplicit"].cast<bool>()

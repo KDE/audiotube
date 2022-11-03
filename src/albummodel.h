@@ -24,7 +24,8 @@ public:
     enum Role {
         Title = Qt::UserRole + 1,
         VideoId,
-        Artists
+        Artists,
+        ThumbnailUrl,
     };
 
     explicit AlbumModel(QObject *parent = nullptr);

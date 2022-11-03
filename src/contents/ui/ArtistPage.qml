@@ -78,22 +78,13 @@ Kirigami.ScrollablePage {
             required property int index
             required property var artists
             required property string videoId
+            required property string thumbnailUrl
 
             RowLayout {
                 Layout.fillHeight: true
                 Kirigami.Icon {
                     Layout.fillHeight: true
-                    source: {
-                        switch (type) {
-                        case ArtistModel.Album:
-                            return "media-album-cover"
-                        case ArtistModel.Single:
-                        case ArtistModel.Song:
-                            return "emblem-music-symbolic"
-                        case ArtistModel.Video:
-                            return "emblem-videos-symbolic"
-                        }
-                    }
+                    source: delegateItem.thumbnailUrl
                 }
 
                 Controls.Label {

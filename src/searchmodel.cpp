@@ -4,6 +4,8 @@
 
 #include "searchmodel.h"
 
+#include <ranges>
+
 SearchModel::SearchModel(QObject *parent)
     : AbstractYTMusicModel(parent)
 {
@@ -21,6 +23,7 @@ SearchModel::SearchModel(QObject *parent)
             beginResetModel();
             setLoading(false);
             m_searchResults = results;
+
             endResetModel();
         });
     });
@@ -117,6 +120,18 @@ QVariant SearchModel::data(const QModelIndex &index, int role) const
 
             return QString();
         }, m_searchResults.at(index.row()));
+    case ThumbnailUrl:
+        return std::visit([&](auto &&arg) {
+            using T = std::decay_t<decltype(arg)>;
+
+            if constexpr (std::is_same_v<T, search::Video> || std::is_same_v<T, search::Song>) {
+                if (!arg.thumbnails.empty()) {
+                    return QString::fromStdString(arg.thumbnails.front().url);
+                }
+            }
+
+            return QString();
+        }, m_searchResults.at(index.row()));
     }
 
     Q_UNREACHABLE();
@@ -132,6 +147,7 @@ QHash<int, QByteArray> SearchModel::roleNames() const
         {VideoId, "videoId"},
         {Artists, "artists"},
         {RadioPlaylistId, "radioPlaylistId"},
+        {ThumbnailUrl, "thumbnailUrl"}
     };
 }
 

@@ -44,6 +44,7 @@ struct Media {
     std::string title;
     std::vector<meta::Artist> artists;
     std::string duration;
+    std::vector<meta::Thumbnail> thumbnails;
 };
 
 struct Video : public Media {

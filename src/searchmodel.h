@@ -31,7 +31,8 @@ public:
         Type,
         VideoId,
         Artists,
-        RadioPlaylistId
+        RadioPlaylistId,
+        ThumbnailUrl
     };
 
     explicit SearchModel(QObject *parent = nullptr);
