@@ -56,6 +56,7 @@ struct Playlist {
     std::string title;
     std::string author;
     std::string item_count;
+    std::vector<meta::Thumbnail> thumbnails;
 };
 
 struct Song : public Media {
@@ -70,6 +71,7 @@ struct Album {
     std::vector<meta::Artist> artists;
     std::optional<std::string> year;
     bool is_explicit;
+    std::vector<meta::Thumbnail> thumbnails;
 };
 
 struct Artist {
@@ -77,6 +79,7 @@ struct Artist {
     std::string artist;
     std::optional<std::string> shuffle_id;
     std::optional<std::string> radio_id;
+    std::vector<meta::Thumbnail> thumbnails;
 };
 
 using SearchResultItem = std::variant<Video, Playlist, Song, Album, Artist>;

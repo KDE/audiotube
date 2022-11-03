@@ -299,21 +299,24 @@ std::optional<search::SearchResultItem> extract_search_result(py::handle result)
             result["type"].cast<std::string>(),
             extract_py_list<meta::Artist>(result["artists"]),
             result["year"].cast<std::optional<std::string>>(),
-            result["isExplicit"].cast<bool>()
+            result["isExplicit"].cast<bool>(),
+            extract_py_list<meta::Thumbnail>(result["thumbnails"])
         };
     } else if (resultType == "playlist") {
         return search::Playlist {
             result["browseId"].cast<std::string>(),
             result["title"].cast<std::string>(),
             result["author"].cast<std::string>(),
-            result["itemCount"].cast<std::string>()
+            result["itemCount"].cast<std::string>(),
+            extract_py_list<meta::Thumbnail>(result["thumbnails"])
         };
     } else if (resultType == "artist") {
         return search::Artist {
             result["browseId"].cast<std::string>(),
             result["artist"].cast<std::string>(),
             optional_key<std::string>(result, "shuffleId"),
-            optional_key<std::string>(result, "radioId")
+            optional_key<std::string>(result, "radioId"),
+            extract_py_list<meta::Thumbnail>(result["thumbnails"])
         };
     } else {
         std::cerr << "Warning: Unsupported search result type found" << std::endl;

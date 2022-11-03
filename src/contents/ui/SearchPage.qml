@@ -89,20 +89,8 @@ Kirigami.ScrollablePage {
                 Layout.fillHeight: true
                 Kirigami.Icon {
                     Layout.fillHeight: true
-                    source: {
-                        switch (type) {
-                        case SearchModel.Artist:
-                            return "view-media-artist"
-                        case SearchModel.Album:
-                            return "media-album-cover"
-                        case SearchModel.Playlist:
-                            return "view-media-playlist"
-                        case SearchModel.Song:
-                            return delegateItem.thumbnailUrl
-                        case SearchModel.Video:
-                            return delegateItem.thumbnailUrl
-                        }
-                    }
+                    source: delegateItem.thumbnailUrl
+
                 }
 
                 Controls.Label {
