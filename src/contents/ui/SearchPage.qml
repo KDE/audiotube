@@ -82,6 +82,7 @@ Kirigami.ScrollablePage {
             required property int type
             required property string videoId
             required property var artists
+            required property string artistsDisplayString
             required property string radioPlaylistId
             required property string thumbnailUrl
 
@@ -93,10 +94,19 @@ Kirigami.ScrollablePage {
 
                 }
 
-                Controls.Label {
-                    Layout.fillWidth: true
-                    text: title
-                    elide: Qt.ElideRight
+                ColumnLayout {
+                    Controls.Label {
+                        Layout.fillWidth: true
+                        text: title
+                        elide: Qt.ElideRight
+                    }
+
+                    Controls.Label {
+                        Layout.fillWidth: true
+                        visible: delegateItem.artistsDisplayString
+                        color: Kirigami.Theme.disabledTextColor
+                        text: delegateItem.artistsDisplayString
+                    }
                 }
             }
 

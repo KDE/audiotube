@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
 #include "searchmodel.h"
+#include "playlistutils.h"
 
 #include <ranges>
 
@@ -130,6 +131,14 @@ QVariant SearchModel::data(const QModelIndex &index, int role) const
 
             return QString();
         }, m_searchResults.at(index.row()));
+    case ArtistsDisplayString:
+        return QVariant::fromValue(std::visit([&](auto&& arg) {
+            using T = std::decay_t<decltype(arg)>;
+            if constexpr (std::is_same_v<T, search::Song> || std::is_same_v<T, search::Video>) {
+                return PlaylistUtils::artistsToString(arg.artists);
+            }
+            return QString();
+        }, m_searchResults.at(index.row())));
     }
 
     Q_UNREACHABLE();
@@ -144,6 +153,7 @@ QHash<int, QByteArray> SearchModel::roleNames() const
         {Type, "type"},
         {VideoId, "videoId"},
         {Artists, "artists"},
+        {ArtistsDisplayString, "artistsDisplayString"},
         {RadioPlaylistId, "radioPlaylistId"},
         {ThumbnailUrl, "thumbnailUrl"}
     };

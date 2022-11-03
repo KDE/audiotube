@@ -19,6 +19,7 @@ class SearchModel : public AbstractYTMusicModel
 public:
     enum Type {
         Artist,
+        ArtistsDisplayString,
         Album,
         Playlist,
         Song,
