@@ -45,12 +45,12 @@ struct UNEXPORT YTMusicPrivate {
             if (oldVersion) {
                 std::cerr << "Running with outdated and untested version of ytmusicapi." << std::endl;
                 std::cerr << "The currently tested and supported version is " << TESTED_YTMUSICAPI_VERSION << std::endl;
-            }
-
-            const auto version = module.attr("version")("ytmusicapi").cast<std::string>();
-            if (version != TESTED_YTMUSICAPI_VERSION) {
-                std::cerr << "Running with untested version of ytmusicapi." << std::endl;
-                std::cerr << "The currently tested and supported version is " << TESTED_YTMUSICAPI_VERSION << std::endl;
+            } else {
+                const auto version = module.attr("version")("ytmusicapi").cast<std::string>();
+                if (version != TESTED_YTMUSICAPI_VERSION) {
+                    std::cerr << "Running with untested version of ytmusicapi." << std::endl;
+                    std::cerr << "The currently tested and supported version is " << TESTED_YTMUSICAPI_VERSION << std::endl;
+                }
             }
         }
 
