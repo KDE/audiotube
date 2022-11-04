@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-27 00:50+0000\n"
+"POT-Creation-Date: 2022-11-04 00:48+0000\n"
 "PO-Revision-Date: 2022-09-24 14:57+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -42,15 +42,15 @@ msgstr "Blanda"
 msgid "Open in Browser"
 msgstr "Öppna i webbläsare"
 
-#: contents/ui/AlbumPage.qml:77 contents/ui/ArtistPage.qml:109
-#: contents/ui/PlaybackHistory.qml:74 contents/ui/PlaylistPage.qml:67
+#: contents/ui/AlbumPage.qml:78 contents/ui/ArtistPage.qml:100
+#: contents/ui/PlaybackHistory.qml:74 contents/ui/PlaylistPage.qml:68
 #, kde-format
 msgid "Play Next"
 msgstr "Spela nästa"
 
-#: contents/ui/AlbumPage.qml:82 contents/ui/ArtistPage.qml:115
-#: contents/ui/PlaybackHistory.qml:79 contents/ui/PlaylistPage.qml:72
-#: contents/ui/SearchPage.qml:123
+#: contents/ui/AlbumPage.qml:83 contents/ui/ArtistPage.qml:106
+#: contents/ui/PlaybackHistory.qml:79 contents/ui/PlaylistPage.qml:73
+#: contents/ui/SearchPage.qml:122
 #, kde-format
 msgid "Add to Playlist"
 msgstr "Lägg till i spellista"
@@ -122,7 +122,7 @@ msgstr "Spelade låtar"
 msgid "Back"
 msgstr "Bakåt"
 
-#: contents/ui/main.qml:73 contents/ui/SearchPage.qml:150
+#: contents/ui/main.qml:73 contents/ui/SearchPage.qml:149
 #, kde-format
 msgid "Search"
 msgstr "Sök"
@@ -178,17 +178,17 @@ msgstr "Spellistor"
 msgid "Unknown"
 msgstr "Okänd"
 
-#: contents/ui/SearchPage.qml:117
+#: contents/ui/SearchPage.qml:116
 #, kde-format
 msgid "Play next"
 msgstr "Spela nästa"
 
-#: contents/ui/SearchPage.qml:129
+#: contents/ui/SearchPage.qml:128
 #, kde-format
 msgid "Radio"
 msgstr "Radio"
 
-#: contents/ui/SearchPage.qml:147
+#: contents/ui/SearchPage.qml:146
 #, kde-format
 msgid "Find music on YouTube Music"
 msgstr "Sök efter musik på YouTube musik"

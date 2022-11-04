@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-27 00:50+0000\n"
+"POT-Creation-Date: 2022-11-04 00:48+0000\n"
 "PO-Revision-Date: 2022-08-27 09:13+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -43,15 +43,15 @@ msgstr "Перемішати"
 msgid "Open in Browser"
 msgstr "Відкрити у переглядачі"
 
-#: contents/ui/AlbumPage.qml:77 contents/ui/ArtistPage.qml:109
-#: contents/ui/PlaybackHistory.qml:74 contents/ui/PlaylistPage.qml:67
+#: contents/ui/AlbumPage.qml:78 contents/ui/ArtistPage.qml:100
+#: contents/ui/PlaybackHistory.qml:74 contents/ui/PlaylistPage.qml:68
 #, kde-format
 msgid "Play Next"
 msgstr "Відтворити наступну"
 
-#: contents/ui/AlbumPage.qml:82 contents/ui/ArtistPage.qml:115
-#: contents/ui/PlaybackHistory.qml:79 contents/ui/PlaylistPage.qml:72
-#: contents/ui/SearchPage.qml:123
+#: contents/ui/AlbumPage.qml:83 contents/ui/ArtistPage.qml:106
+#: contents/ui/PlaybackHistory.qml:79 contents/ui/PlaylistPage.qml:73
+#: contents/ui/SearchPage.qml:122
 #, kde-format
 msgid "Add to Playlist"
 msgstr "Додати до списку відтворення"
@@ -125,7 +125,7 @@ msgstr "Відтворені композиції"
 msgid "Back"
 msgstr "Назад"
 
-#: contents/ui/main.qml:73 contents/ui/SearchPage.qml:150
+#: contents/ui/main.qml:73 contents/ui/SearchPage.qml:149
 #, kde-format
 msgid "Search"
 msgstr "Пошук"
@@ -181,17 +181,17 @@ msgstr "Списки відтворення"
 msgid "Unknown"
 msgstr "Невідомий"
 
-#: contents/ui/SearchPage.qml:117
+#: contents/ui/SearchPage.qml:116
 #, kde-format
 msgid "Play next"
 msgstr "Відтворити наступну"
 
-#: contents/ui/SearchPage.qml:129
+#: contents/ui/SearchPage.qml:128
 #, kde-format
 msgid "Radio"
 msgstr "Радіо"
 
-#: contents/ui/SearchPage.qml:147
+#: contents/ui/SearchPage.qml:146
 #, kde-format
 msgid "Find music on YouTube Music"
 msgstr "Шукати музику на сайті «Музика Youtube»"

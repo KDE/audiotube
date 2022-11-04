@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-27 00:50+0000\n"
+"POT-Creation-Date: 2022-11-04 00:48+0000\n"
 "PO-Revision-Date: 2022-08-29 12:39+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -39,15 +39,15 @@ msgstr "Mélanger"
 msgid "Open in Browser"
 msgstr "Ouvrir dans un navigateur"
 
-#: contents/ui/AlbumPage.qml:77 contents/ui/ArtistPage.qml:109
-#: contents/ui/PlaybackHistory.qml:74 contents/ui/PlaylistPage.qml:67
+#: contents/ui/AlbumPage.qml:78 contents/ui/ArtistPage.qml:100
+#: contents/ui/PlaybackHistory.qml:74 contents/ui/PlaylistPage.qml:68
 #, kde-format
 msgid "Play Next"
 msgstr "Lire le suivant"
 
-#: contents/ui/AlbumPage.qml:82 contents/ui/ArtistPage.qml:115
-#: contents/ui/PlaybackHistory.qml:79 contents/ui/PlaylistPage.qml:72
-#: contents/ui/SearchPage.qml:123
+#: contents/ui/AlbumPage.qml:83 contents/ui/ArtistPage.qml:106
+#: contents/ui/PlaybackHistory.qml:79 contents/ui/PlaylistPage.qml:73
+#: contents/ui/SearchPage.qml:122
 #, kde-format
 msgid "Add to Playlist"
 msgstr "Ajouter à la liste de lecture"
@@ -121,7 +121,7 @@ msgstr "Titres lus"
 msgid "Back"
 msgstr "En arrière"
 
-#: contents/ui/main.qml:73 contents/ui/SearchPage.qml:150
+#: contents/ui/main.qml:73 contents/ui/SearchPage.qml:149
 #, kde-format
 msgid "Search"
 msgstr "Rechercher"
@@ -177,17 +177,17 @@ msgstr "Listes de lecture"
 msgid "Unknown"
 msgstr "Inconnu"
 
-#: contents/ui/SearchPage.qml:117
+#: contents/ui/SearchPage.qml:116
 #, kde-format
 msgid "Play next"
 msgstr "Lire le suivant"
 
-#: contents/ui/SearchPage.qml:129
+#: contents/ui/SearchPage.qml:128
 #, kde-format
 msgid "Radio"
 msgstr "Radio"
 
-#: contents/ui/SearchPage.qml:147
+#: contents/ui/SearchPage.qml:146
 #, kde-format
 msgid "Find music on YouTube Music"
 msgstr "Rechercher de la musique sur « YouTube Music »"

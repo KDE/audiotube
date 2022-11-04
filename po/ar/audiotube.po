@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-27 00:50+0000\n"
+"POT-Creation-Date: 2022-11-04 00:48+0000\n"
 "PO-Revision-Date: 2022-08-28 22:19+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: Arabic <kde-l10n-ar@kde.org>\n"
@@ -43,15 +43,15 @@ msgstr "اخلط"
 msgid "Open in Browser"
 msgstr "افتح في المتصفّح"
 
-#: contents/ui/AlbumPage.qml:77 contents/ui/ArtistPage.qml:109
-#: contents/ui/PlaybackHistory.qml:74 contents/ui/PlaylistPage.qml:67
+#: contents/ui/AlbumPage.qml:78 contents/ui/ArtistPage.qml:100
+#: contents/ui/PlaybackHistory.qml:74 contents/ui/PlaylistPage.qml:68
 #, kde-format
 msgid "Play Next"
 msgstr "شغل التالي"
 
-#: contents/ui/AlbumPage.qml:82 contents/ui/ArtistPage.qml:115
-#: contents/ui/PlaybackHistory.qml:79 contents/ui/PlaylistPage.qml:72
-#: contents/ui/SearchPage.qml:123
+#: contents/ui/AlbumPage.qml:83 contents/ui/ArtistPage.qml:106
+#: contents/ui/PlaybackHistory.qml:79 contents/ui/PlaylistPage.qml:73
+#: contents/ui/SearchPage.qml:122
 #, kde-format
 msgid "Add to Playlist"
 msgstr "أضف إلى قائمة التّشغيل"
@@ -123,7 +123,7 @@ msgstr "الأغاني المشغلة"
 msgid "Back"
 msgstr "عُد"
 
-#: contents/ui/main.qml:73 contents/ui/SearchPage.qml:150
+#: contents/ui/main.qml:73 contents/ui/SearchPage.qml:149
 #, kde-format
 msgid "Search"
 msgstr "ابحث"
@@ -179,17 +179,17 @@ msgstr "قوائم التّشغيل"
 msgid "Unknown"
 msgstr "مجهول"
 
-#: contents/ui/SearchPage.qml:117
+#: contents/ui/SearchPage.qml:116
 #, kde-format
 msgid "Play next"
 msgstr "شغل التالي"
 
-#: contents/ui/SearchPage.qml:129
+#: contents/ui/SearchPage.qml:128
 #, kde-format
 msgid "Radio"
 msgstr "راديو"
 
-#: contents/ui/SearchPage.qml:147
+#: contents/ui/SearchPage.qml:146
 #, kde-format
 msgid "Find music on YouTube Music"
 msgstr "اعثر على موسيقى على موسيقى يوتيوب"
