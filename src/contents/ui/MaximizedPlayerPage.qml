@@ -131,6 +131,31 @@ Item {
                     visible: swipeView.currentIndex == 1
                 }
             }
+            ToolButton {
+                id: lyricsTab
+                padding: Kirigami.Units.largeSpacing
+                onClicked: swipeView.setCurrentIndex(2)
+                Layout.preferredHeight: Kirigami.Units.gridUnit * 2
+                Layout.preferredWidth: Kirigami.Units.gridUnit * 9
+
+                contentItem: Label {
+                    text: i18n("Lyrics")
+                    horizontalAlignment: Text.AlignHCenter
+                    verticalAlignment: Text.AlignVCenter
+                    elide: Text.ElideRight
+                    color: "white"
+                }
+
+                // selection indicator
+                Rectangle {
+                    anchors.top: parent.top
+                    anchors.left: parent.left
+                    anchors.right: parent.right
+                    color: Kirigami.Theme.highlightColor
+                    height: 1
+                    visible: swipeView.currentIndex == 2
+                }
+            }
         }
         
         // tabs
@@ -175,11 +200,10 @@ Item {
             
             // playlist
             ListView {
-                id: playlistView
                 width: swipeView.width
                 height: swipeView.height
                 clip: true
-                
+
                 Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
                 Kirigami.Theme.inherit: false
 
@@ -225,6 +249,20 @@ Item {
                             onTriggered: UserPlaylistModel.remove(delegateItem.videoId)
                         }
                     ]
+                }
+            }
+
+            ScrollView {
+                width: swipeView.width
+                height: swipeView.height
+                clip: true
+
+                //contentY: audio.position / audio.duration
+
+                Label {
+                    padding: 20
+                    text: UserPlaylistModel.lyrics
+                    color: "white"
                 }
             }
         }

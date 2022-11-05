@@ -272,6 +272,11 @@ struct Playlist {
 };
 }
 
+struct Lyrics {
+    std::string source;
+    std::string lyrics;
+};
+
 class YTMusic
 {
 public:
@@ -311,6 +316,8 @@ public:
     watch::Playlist get_watch_playlist(const std::optional<std::string> &videoId = std::nullopt,
                                       const std::optional<std::string> &playlistId = std::nullopt,
                                       int limit = 25) const;
+
+    Lyrics get_lyrics(const std::string &browse_id) const;
 
     // TODO wrap more methods
 

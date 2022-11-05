@@ -4,6 +4,7 @@
 #pragma once
 
 #include <QAbstractListModel>
+#include <QFuture>
 
 #include <ytmusic.h>
 
@@ -21,13 +22,14 @@ class UserPlaylistModel : public AbstractYTMusicModel
     // output
     Q_PROPERTY(QString currentVideoId READ currentVideoId NOTIFY currentVideoIdChanged)
     Q_PROPERTY(bool canSkip READ canSkip NOTIFY canSkipChanged)
+    Q_PROPERTY(QString lyrics READ lyrics NOTIFY lyricsChanged)
 
 public:
     enum Role {
         Title = Qt::UserRole + 1,
         VideoId,
         Artists,
-        IsCurrent
+        IsCurrent,
     };
 
     explicit UserPlaylistModel(QObject *parent = nullptr);
@@ -57,6 +59,9 @@ public:
     bool shuffle() const;
     Q_SIGNAL void shuffleChanged();
 
+    QString lyrics() const;
+    Q_SIGNAL void lyricsChanged();
+
     Q_INVOKABLE void next();
     Q_INVOKABLE void skipTo(const QString &videoId);
     Q_INVOKABLE void playNext(const QString &videoId, const QString &title, const std::vector<meta::Artist> &artists);
@@ -68,10 +73,13 @@ public:
 private:
     void emitCurrentVideoChanged(const QString &oldVideoId);
 
+    void fetchLyrics(const QString &videoId);
+
     QString m_initialVideoId;
     QString m_playlistId;
     QString m_currentVideoId;
     bool m_shuffle = false;
 
     watch::Playlist m_playlist;
+    ::Lyrics m_lyrics;
 };

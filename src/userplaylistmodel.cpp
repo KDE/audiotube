@@ -11,6 +11,8 @@
 #include <QRandomGenerator>
 #include <QFutureWatcher>
 
+#include <iostream>
+
 #include "playlistutils.h"
 
 UserPlaylistModel::UserPlaylistModel(QObject *parent)
@@ -55,6 +57,9 @@ UserPlaylistModel::UserPlaylistModel(QObject *parent)
     connect(&YTMusicThread::instance().get(), &AsyncYTMusic::errorOccurred, this, [this] {
         setLoading(false);
     });
+    connect(this, &UserPlaylistModel::currentVideoIdChanged, this, [this]() {
+        fetchLyrics(m_currentVideoId);
+    });
 }
 
 int UserPlaylistModel::rowCount(const QModelIndex &parent) const
@@ -86,7 +91,7 @@ QHash<int, QByteArray> UserPlaylistModel::roleNames() const
         {Title, "title"},
         {VideoId, "videoId"},
         {Artists, "artists"},
-        {IsCurrent, "isCurrent"}
+        {IsCurrent, "isCurrent"},
     };
 }
 
@@ -271,9 +276,26 @@ void UserPlaylistModel::emitCurrentVideoChanged(const QString &oldVideoId)
     Q_EMIT dataChanged(index(newIndex), index(newIndex), {IsCurrent});
 }
 
+void UserPlaylistModel::fetchLyrics(const QString &videoId)
+{
+    auto future = YTMusicThread::instance()->fetchWatchPlaylist(videoId);
+    connectFuture(future, this, [=, this](const auto &playlist) {
+        if (playlist.lyrics) {
+            connectFuture(YTMusicThread::instance()->fetchLyrics(QString::fromStdString(*playlist.lyrics)), this, [=, this](const auto &lyrics) {
+                m_lyrics = lyrics;
+                Q_EMIT lyricsChanged();
+            });
+        }
+    });
+}
+
 bool UserPlaylistModel::shuffle() const
 {
     return m_shuffle;
+}
+
+QString UserPlaylistModel::lyrics() const {
+    return QString::fromStdString(m_lyrics.lyrics);
 }
 
 void UserPlaylistModel::setShuffle(bool shuffle)

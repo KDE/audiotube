@@ -139,6 +139,15 @@ QFuture<watch::Playlist> AsyncYTMusic::fetchWatchPlaylist(const std::optional<QS
     });
 }
 
+QFuture<Lyrics> AsyncYTMusic::fetchLyrics(const QString &browseId)
+{
+    return invokeAndCatchOnThread([=, this]() {
+        return m_ytm->get_lyrics(
+            browseId.toStdString()
+        );
+    });
+}
+
 YTMusicThread &YTMusicThread::instance()
 {
     static YTMusicThread thread;

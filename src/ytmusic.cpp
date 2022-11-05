@@ -496,3 +496,14 @@ watch::Playlist YTMusic::get_watch_playlist(const std::optional<std::string> &vi
         playlist["lyrics"].cast<std::optional<std::string>>()
     };
 }
+
+
+Lyrics YTMusic::get_lyrics(const std::string &browse_id) const
+{
+    auto lyrics = d->get_ytmusic().attr("get_lyrics")(browse_id);
+
+    return {
+        lyrics["source"].cast<std::string>(),
+        lyrics["lyrics"].cast<std::string>()
+    };
+}

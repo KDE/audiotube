@@ -134,7 +134,7 @@ QVariant SearchModel::data(const QModelIndex &index, int role) const
     case ArtistsDisplayString:
         return QVariant::fromValue(std::visit([&](auto&& arg) {
             using T = std::decay_t<decltype(arg)>;
-            if constexpr (std::is_same_v<T, search::Song> || std::is_same_v<T, search::Video>) {
+            if constexpr (std::is_same_v<T, search::Song> || std::is_same_v<T, search::Video> || std::is_same_v<T, search::Album>) {
                 return PlaylistUtils::artistsToString(arg.artists);
             }
             return QString();
