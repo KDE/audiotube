@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-04 00:48+0000\n"
+"POT-Creation-Date: 2022-11-06 00:49+0000\n"
 "PO-Revision-Date: 2022-10-18 18:06+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -101,7 +101,7 @@ msgstr "Anuluj"
 msgid "Favourites"
 msgstr "Ulubione"
 
-#: contents/ui/LibraryPage.qml:37 contents/ui/LibraryPage.qml:108
+#: contents/ui/LibraryPage.qml:37 contents/ui/LibraryPage.qml:119
 #, kde-format
 msgid "Show All"
 msgstr "Pokaż wszystkie"
@@ -111,12 +111,12 @@ msgstr "Pokaż wszystkie"
 msgid "Favourite Songs"
 msgstr "Ulubione utwory"
 
-#: contents/ui/LibraryPage.qml:98
+#: contents/ui/LibraryPage.qml:109
 #, kde-format
 msgid "Most played"
 msgstr "Najczęściej odtwarzane"
 
-#: contents/ui/LibraryPage.qml:113
+#: contents/ui/LibraryPage.qml:124
 #, kde-format
 msgid "Played Songs"
 msgstr "Odtwarzane utwory"
@@ -146,12 +146,17 @@ msgstr "Teraz odtwarzany"
 msgid "Queue"
 msgstr "Kolejka"
 
-#: contents/ui/MaximizedPlayerPage.qml:222
+#: contents/ui/MaximizedPlayerPage.qml:142
+#, kde-format
+msgid "Lyrics"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:246
 #, kde-format
 msgid "Remove Track"
 msgstr "Usuń utwór"
 
-#: contents/ui/MaximizedPlayerPage.qml:242
+#: contents/ui/MaximizedPlayerPage.qml:280
 #: contents/ui/MinimizedPlayerControls.qml:96
 #, kde-format
 msgid "No media playing"

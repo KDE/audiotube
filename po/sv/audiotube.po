@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-04 00:48+0000\n"
+"POT-Creation-Date: 2022-11-06 00:49+0000\n"
 "PO-Revision-Date: 2022-09-24 14:57+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -97,7 +97,7 @@ msgstr "Avbryt"
 msgid "Favourites"
 msgstr "Favoriter"
 
-#: contents/ui/LibraryPage.qml:37 contents/ui/LibraryPage.qml:108
+#: contents/ui/LibraryPage.qml:37 contents/ui/LibraryPage.qml:119
 #, kde-format
 msgid "Show All"
 msgstr "Visa alla"
@@ -107,12 +107,12 @@ msgstr "Visa alla"
 msgid "Favourite Songs"
 msgstr "Favoritlåtar"
 
-#: contents/ui/LibraryPage.qml:98
+#: contents/ui/LibraryPage.qml:109
 #, kde-format
 msgid "Most played"
 msgstr "Mest spelade"
 
-#: contents/ui/LibraryPage.qml:113
+#: contents/ui/LibraryPage.qml:124
 #, kde-format
 msgid "Played Songs"
 msgstr "Spelade låtar"
@@ -142,12 +142,17 @@ msgstr "Spelar nu"
 msgid "Queue"
 msgstr "Köa"
 
-#: contents/ui/MaximizedPlayerPage.qml:222
+#: contents/ui/MaximizedPlayerPage.qml:142
+#, kde-format
+msgid "Lyrics"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:246
 #, kde-format
 msgid "Remove Track"
 msgstr "Ta bort spår"
 
-#: contents/ui/MaximizedPlayerPage.qml:242
+#: contents/ui/MaximizedPlayerPage.qml:280
 #: contents/ui/MinimizedPlayerControls.qml:96
 #, kde-format
 msgid "No media playing"

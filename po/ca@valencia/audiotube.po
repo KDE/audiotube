@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-04 00:48+0000\n"
+"POT-Creation-Date: 2022-11-06 00:49+0000\n"
 "PO-Revision-Date: 2022-08-27 10:31+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -102,7 +102,7 @@ msgstr "Cancel·la"
 msgid "Favourites"
 msgstr "Preferides"
 
-#: contents/ui/LibraryPage.qml:37 contents/ui/LibraryPage.qml:108
+#: contents/ui/LibraryPage.qml:37 contents/ui/LibraryPage.qml:119
 #, kde-format
 msgid "Show All"
 msgstr "Mostra-ho tot"
@@ -112,12 +112,12 @@ msgstr "Mostra-ho tot"
 msgid "Favourite Songs"
 msgstr "Cançons preferides"
 
-#: contents/ui/LibraryPage.qml:98
+#: contents/ui/LibraryPage.qml:109
 #, kde-format
 msgid "Most played"
 msgstr "Les més reproduïdes"
 
-#: contents/ui/LibraryPage.qml:113
+#: contents/ui/LibraryPage.qml:124
 #, kde-format
 msgid "Played Songs"
 msgstr "Cançons reproduïdes"
@@ -147,12 +147,17 @@ msgstr "Ara s'està reproduint"
 msgid "Queue"
 msgstr "Cua"
 
-#: contents/ui/MaximizedPlayerPage.qml:222
+#: contents/ui/MaximizedPlayerPage.qml:142
+#, kde-format
+msgid "Lyrics"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:246
 #, kde-format
 msgid "Remove Track"
 msgstr "Elimina la pista"
 
-#: contents/ui/MaximizedPlayerPage.qml:242
+#: contents/ui/MaximizedPlayerPage.qml:280
 #: contents/ui/MinimizedPlayerControls.qml:96
 #, kde-format
 msgid "No media playing"
