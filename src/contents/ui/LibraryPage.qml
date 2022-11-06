@@ -46,6 +46,7 @@ Kirigami.ScrollablePage {
         Controls.ScrollView {
             Layout.fillWidth: true
             RowLayout {
+                spacing: 20
                 Repeater {
                     Layout.fillWidth: true
                     model: Library.favourites
@@ -83,15 +84,25 @@ Kirigami.ScrollablePage {
 
                             ]
                         }
+                        Item {
+                            height: 5
+                        }
                         Controls.Label {
                             Layout.maximumWidth: 200
                             text: delegateItem.title
                             elide: Qt.ElideRight
                         }
+                        Item {
+                            height: 5
+                        }
                     }
                 }
             }
         }
+        Item {
+            height: 20
+        }
+
         RowLayout {
             Layout.fillWidth: true
             Kirigami.Heading {
@@ -117,6 +128,8 @@ Kirigami.ScrollablePage {
         Controls.ScrollView {
             Layout.fillWidth: true
             RowLayout {
+                spacing: 20
+
                 Repeater {
                     Layout.fillWidth: true
                     model: Library.mostPlayed
@@ -146,10 +159,16 @@ Kirigami.ScrollablePage {
                                 asynchronous: true
                             }
                         }
+                        Item {
+                            height: 5
+                        }
                         Controls.Label {
                             Layout.maximumWidth: 200
                             text: mpdelegateItem.title
                             elide: Qt.ElideRight
+                        }
+                        Item {
+                            height: 5
                         }
                     }
                 }
