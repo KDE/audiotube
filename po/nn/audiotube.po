@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-08-27 00:50+0000\n"
+"POT-Creation-Date: 2022-11-06 00:49+0000\n"
 "PO-Revision-Date: 2022-09-11 19:45+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -45,15 +45,15 @@ msgstr "Stokk om"
 msgid "Open in Browser"
 msgstr "Opna i nettlesar"
 
-#: contents/ui/AlbumPage.qml:77 contents/ui/ArtistPage.qml:109
-#: contents/ui/PlaybackHistory.qml:74 contents/ui/PlaylistPage.qml:67
+#: contents/ui/AlbumPage.qml:78 contents/ui/ArtistPage.qml:100
+#: contents/ui/PlaybackHistory.qml:74 contents/ui/PlaylistPage.qml:68
 #, kde-format
 msgid "Play Next"
 msgstr "Spel som neste"
 
-#: contents/ui/AlbumPage.qml:82 contents/ui/ArtistPage.qml:115
-#: contents/ui/PlaybackHistory.qml:79 contents/ui/PlaylistPage.qml:72
-#: contents/ui/SearchPage.qml:123
+#: contents/ui/AlbumPage.qml:83 contents/ui/ArtistPage.qml:106
+#: contents/ui/PlaybackHistory.qml:79 contents/ui/PlaylistPage.qml:73
+#: contents/ui/SearchPage.qml:122
 #, kde-format
 msgid "Add to Playlist"
 msgstr "Legg til speleliste"
@@ -100,7 +100,7 @@ msgstr "Avbryt"
 msgid "Favourites"
 msgstr "Favorittar"
 
-#: contents/ui/LibraryPage.qml:37 contents/ui/LibraryPage.qml:108
+#: contents/ui/LibraryPage.qml:37 contents/ui/LibraryPage.qml:119
 #, kde-format
 msgid "Show All"
 msgstr "Vis alle"
@@ -110,12 +110,12 @@ msgstr "Vis alle"
 msgid "Favourite Songs"
 msgstr "Favorittsongar"
 
-#: contents/ui/LibraryPage.qml:98
+#: contents/ui/LibraryPage.qml:109
 #, kde-format
 msgid "Most played"
 msgstr "Oftast avspela"
 
-#: contents/ui/LibraryPage.qml:113
+#: contents/ui/LibraryPage.qml:124
 #, kde-format
 msgid "Played Songs"
 msgstr "Avspela songar"
@@ -125,7 +125,7 @@ msgstr "Avspela songar"
 msgid "Back"
 msgstr "Tilbake"
 
-#: contents/ui/main.qml:73 contents/ui/SearchPage.qml:150
+#: contents/ui/main.qml:73 contents/ui/SearchPage.qml:149
 #, kde-format
 msgid "Search"
 msgstr "Søk"
@@ -145,12 +145,17 @@ msgstr "Spelar no"
 msgid "Queue"
 msgstr "Kø"
 
-#: contents/ui/MaximizedPlayerPage.qml:222
+#: contents/ui/MaximizedPlayerPage.qml:142
+#, kde-format
+msgid "Lyrics"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:246
 #, kde-format
 msgid "Remove Track"
 msgstr "Fjern spor"
 
-#: contents/ui/MaximizedPlayerPage.qml:242
+#: contents/ui/MaximizedPlayerPage.qml:280
 #: contents/ui/MinimizedPlayerControls.qml:96
 #, kde-format
 msgid "No media playing"
@@ -181,17 +186,17 @@ msgstr "Spelelister"
 msgid "Unknown"
 msgstr "Ukjend"
 
-#: contents/ui/SearchPage.qml:117
+#: contents/ui/SearchPage.qml:116
 #, kde-format
 msgid "Play next"
 msgstr "Spel som neste"
 
-#: contents/ui/SearchPage.qml:129
+#: contents/ui/SearchPage.qml:128
 #, kde-format
 msgid "Radio"
 msgstr "Radio"
 
-#: contents/ui/SearchPage.qml:147
+#: contents/ui/SearchPage.qml:146
 #, kde-format
 msgid "Find music on YouTube Music"
 msgstr "Søk etter musikk på YouTube Music"
