@@ -58,6 +58,10 @@ UserPlaylistModel::UserPlaylistModel(QObject *parent)
         setLoading(false);
     });
     connect(this, &UserPlaylistModel::currentVideoIdChanged, this, [this]() {
+        // Clear lyrics, so we won't display old ones if the next song doesn't have any.
+        m_lyrics = {};
+        Q_EMIT lyricsChanged();
+
         fetchLyrics(m_currentVideoId);
     });
 }
