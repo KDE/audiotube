@@ -149,7 +149,7 @@ msgstr "Fila"
 #: contents/ui/MaximizedPlayerPage.qml:142
 #, kde-format
 msgid "Lyrics"
-msgstr ""
+msgstr "Letras Musicais"
 
 #: contents/ui/MaximizedPlayerPage.qml:246
 #, kde-format
