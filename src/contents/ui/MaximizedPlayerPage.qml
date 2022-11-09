@@ -159,6 +159,9 @@ Item {
         }
         
         // tabs
+        Item {
+            height: 30
+        }
         SwipeView {
             id: swipeView
             property double specWidth: {
@@ -176,28 +179,70 @@ Item {
         
             // music art
             Item {
+
                 height: swipeView.width
                 width: swipeView.height
-
-                Image {
+                Kirigami.ShadowedRectangle {
                     anchors.centerIn: parent
-                    width: swipeView.specWidth
-                    height: swipeView.specWidth
+                   width: swipeView.specWidth
+                   height: swipeView.specWidth
 
-                    asynchronous: true
-                    mipmap: true
 
-                    source: info.thumbnail
+                    color: "transparent"
+                    radius: 10
+                    shadow.size: 15
+                    shadow.xOffset: 5
+                    shadow.yOffset: 5
+                    shadow.color: Qt.rgba(0, 0, 0, 0.2)
+                    Rectangle {
+                        width: parent.width
+                        height: parent.height
 
-                    sourceSize {
-                        width: 512
-                        height: 512
+                        color: "transparent"
+
+                        //this Rectangle is needed to keep the source image's fillMode
+                        ThumbnailSource {
+                            id: thumbnailSource
+                            videoId: delegateItem.videoId
+                        }
+                        Rectangle {
+
+                            id: imageSource
+
+                            anchors.fill: parent
+                            Image {
+                                anchors.fill: parent
+                                source: info.thumbnail
+                                fillMode: Image.PreserveAspectCrop
+                                asynchronous: true
+                            }
+                            visible: false
+
+                            layer.enabled: true
+                        }
+
+                        Rectangle {
+                            anchors.fill: parent
+                            radius: 10
+                            layer.enabled: true
+                            layer.samplerName: "maskSource"
+                            layer.effect: ShaderEffect {
+
+                                property var colorSource: imageSource
+                                fragmentShader: "
+                                    uniform lowp sampler2D colorSource;
+                                    uniform lowp sampler2D maskSource;
+                                    uniform lowp float qt_Opacity;
+                                    varying highp vec2 qt_TexCoord0;
+                                    void main() {
+                                        gl_FragColor = texture2D(colorSource, qt_TexCoord0) * texture2D(maskSource, qt_TexCoord0).a * qt_Opacity;
+                                    }
+                                    "
+                            }
+                        }
                     }
-
-                    fillMode: Image.PreserveAspectCrop
                 }
             }
-            
             // playlist
             ListView {
                 width: swipeView.width
