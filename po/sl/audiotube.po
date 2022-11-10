@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-06 00:49+0000\n"
+"POT-Creation-Date: 2022-11-10 00:48+0000\n"
 "PO-Revision-Date: 2022-11-06 07:32+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -98,7 +98,7 @@ msgstr "Prekliči"
 msgid "Favourites"
 msgstr "Priljubljene"
 
-#: contents/ui/LibraryPage.qml:37 contents/ui/LibraryPage.qml:119
+#: contents/ui/LibraryPage.qml:37 contents/ui/LibraryPage.qml:190
 #, kde-format
 msgid "Show All"
 msgstr "Prikaži vse"
@@ -108,12 +108,12 @@ msgstr "Prikaži vse"
 msgid "Favourite Songs"
 msgstr "Priljubljene pesmi"
 
-#: contents/ui/LibraryPage.qml:109
+#: contents/ui/LibraryPage.qml:180
 #, kde-format
 msgid "Most played"
 msgstr "Največkrat predvajane"
 
-#: contents/ui/LibraryPage.qml:124
+#: contents/ui/LibraryPage.qml:195
 #, kde-format
 msgid "Played Songs"
 msgstr "Predvajane pesmi"
@@ -148,12 +148,12 @@ msgstr "Čakalna vrsta"
 msgid "Lyrics"
 msgstr "Besedilo"
 
-#: contents/ui/MaximizedPlayerPage.qml:246
+#: contents/ui/MaximizedPlayerPage.qml:291
 #, kde-format
 msgid "Remove Track"
 msgstr "Odstrani sled"
 
-#: contents/ui/MaximizedPlayerPage.qml:280
+#: contents/ui/MaximizedPlayerPage.qml:325
 #: contents/ui/MinimizedPlayerControls.qml:96
 #, kde-format
 msgid "No media playing"
