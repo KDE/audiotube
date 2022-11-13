@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-06 00:49+0000\n"
+"POT-Creation-Date: 2022-11-10 00:48+0000\n"
 "PO-Revision-Date: 2022-09-11 19:45+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -100,7 +100,7 @@ msgstr "Avbryt"
 msgid "Favourites"
 msgstr "Favorittar"
 
-#: contents/ui/LibraryPage.qml:37 contents/ui/LibraryPage.qml:119
+#: contents/ui/LibraryPage.qml:37 contents/ui/LibraryPage.qml:190
 #, kde-format
 msgid "Show All"
 msgstr "Vis alle"
@@ -110,12 +110,12 @@ msgstr "Vis alle"
 msgid "Favourite Songs"
 msgstr "Favorittsongar"
 
-#: contents/ui/LibraryPage.qml:109
+#: contents/ui/LibraryPage.qml:180
 #, kde-format
 msgid "Most played"
 msgstr "Oftast avspela"
 
-#: contents/ui/LibraryPage.qml:124
+#: contents/ui/LibraryPage.qml:195
 #, kde-format
 msgid "Played Songs"
 msgstr "Avspela songar"
@@ -150,12 +150,12 @@ msgstr "Kø"
 msgid "Lyrics"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:246
+#: contents/ui/MaximizedPlayerPage.qml:291
 #, kde-format
 msgid "Remove Track"
 msgstr "Fjern spor"
 
-#: contents/ui/MaximizedPlayerPage.qml:280
+#: contents/ui/MaximizedPlayerPage.qml:325
 #: contents/ui/MinimizedPlayerControls.qml:96
 #, kde-format
 msgid "No media playing"
