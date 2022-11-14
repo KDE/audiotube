@@ -2,21 +2,22 @@
 # This file is distributed under the same license as the audiotube package.
 # Burkhard Lück <lueck@hube-lueck.de>, 2021.
 # Frederik Schwarzer <schwarzer@kde.org>, 2021, 2022.
+# Frank Steinmetzger <dev-kde@felsenfleischer.de>, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-10 00:48+0000\n"
-"PO-Revision-Date: 2022-07-02 12:04+0200\n"
-"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"PO-Revision-Date: 2022-11-10 20:16+0100\n"
+"Last-Translator: Frank Steinmetzger <dev-kde@felsenfleischer.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.04.1\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -41,7 +42,7 @@ msgstr "Zufällig"
 #: contents/ui/AlbumPage.qml:35 contents/ui/ArtistPage.qml:19
 #, kde-format
 msgid "Open in Browser"
-msgstr ""
+msgstr "In Browser öffnen"
 
 #: contents/ui/AlbumPage.qml:78 contents/ui/ArtistPage.qml:100
 #: contents/ui/PlaybackHistory.qml:74 contents/ui/PlaylistPage.qml:68
