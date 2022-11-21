@@ -8,6 +8,7 @@
 #include <QQuickAsyncImageProvider>
 #include <QNetworkAccessManager>
 #include <QAbstractListModel>
+#include <QSortFilterProxyModel>
 
 #include <memory>
 
@@ -102,7 +103,7 @@ class Library : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QAbstractListModel *favourites READ favourites NOTIFY favouritesChanged)
-    Q_PROPERTY(QAbstractListModel *searches READ searches NOTIFY searchesChanged)
+    Q_PROPERTY(QSortFilterProxyModel *searches READ searches NOTIFY searchesChanged)
     Q_PROPERTY(QAbstractListModel *playbackHistory READ playbackHistory NOTIFY playbackHistoryChanged)
     Q_PROPERTY(QAbstractListModel *mostPlayed READ mostPlayed NOTIFY playbackHistoryChanged)
 
@@ -118,7 +119,7 @@ public:
     Q_INVOKABLE void removeFavourite(const QString &videoId);
     Q_INVOKABLE FavouriteWatcher *favouriteWatcher(const QString &videoId);
 
-    SearchHistoryModel *searches();
+    QSortFilterProxyModel *searches();
     Q_SIGNAL void searchesChanged();
     Q_INVOKABLE void addSearch(const QString &text);
 

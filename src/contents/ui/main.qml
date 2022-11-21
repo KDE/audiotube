@@ -122,7 +122,9 @@ Kirigami.ApplicationWindow {
             onPressed: {
                 popup.open()
             }
-            
+
+            onTextChanged: completionList.model.filterRegularExpression = new RegExp(`.*${searchField.text}.*`, "i")
+
             property alias popup: popup
 
             Controls.Popup {
