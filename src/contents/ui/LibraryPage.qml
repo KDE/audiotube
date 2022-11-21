@@ -149,9 +149,7 @@ Kirigami.ScrollablePage {
 
                                     visible: false
                                     anchors.fill: parent
-
                                     radius: 9
-
                                     border.color: Kirigami.Theme.hoverColor
                                     border.width: 2
                                     color: "transparent"
@@ -160,6 +158,8 @@ Kirigami.ScrollablePage {
                         }
                         Controls.Label {
                             Layout.maximumWidth: 200
+                            leftPadding: 5
+
                             text: delegateItem.title
                             elide: Qt.ElideRight
                         }
@@ -200,7 +200,6 @@ Kirigami.ScrollablePage {
             Layout.fillWidth: true
             RowLayout {
                 spacing: 20
-
                 Repeater {
                     Layout.fillWidth: true
                     model: Library.mostPlayed
@@ -212,9 +211,6 @@ Kirigami.ScrollablePage {
 
                         Layout.fillWidth: false
                         Layout.maximumWidth: 200
-
-
-
 
                         Kirigami.ShadowedRectangle {
                             id: recCover
@@ -310,6 +306,7 @@ Kirigami.ScrollablePage {
                         }
                         Controls.Label {
                             Layout.maximumWidth: 200
+                            leftPadding:5
                             text: mpdelegateItem.title
                             elide: Qt.ElideRight
                         }

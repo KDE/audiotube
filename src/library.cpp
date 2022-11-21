@@ -64,12 +64,9 @@ FavouriteWatcher *Library::favouriteWatcher(const QString &videoId)
     return new FavouriteWatcher(this, videoId);
 }
 
-QSortFilterProxyModel *Library::searches()
+SearchHistoryModel *Library::searches()
 {
-    auto sourceModel = new SearchHistoryModel(m_database->getResults<SingleValue<QString>>("select distinct (search_query) from searches order by search_id desc"), this);
-    auto filter = new QSortFilterProxyModel(this);
-    filter->setSourceModel(sourceModel);
-    return filter;
+    return new SearchHistoryModel(m_database->getResults<SingleValue<QString>>("select distinct (search_query) from searches order by search_id desc"), this);
 }
 
 void Library::addSearch(const QString &text)

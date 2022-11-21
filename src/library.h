@@ -69,14 +69,15 @@ struct PlayedSong {
 class PlaybackHistoryModel : public QAbstractListModel {
     Q_OBJECT
 
+public:
     enum Roles {
         VideoId = Qt::UserRole + 1,
         Title,
         Artist,
         Plays
     };
+    Q_ENUM(Roles);
 
-public:
     PlaybackHistoryModel(QFuture<std::vector<PlayedSong>> &&songs, QObject *parent = nullptr);
 
     QHash<int, QByteArray> roleNames() const override;
@@ -103,7 +104,7 @@ class Library : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QAbstractListModel *favourites READ favourites NOTIFY favouritesChanged)
-    Q_PROPERTY(QSortFilterProxyModel *searches READ searches NOTIFY searchesChanged)
+    Q_PROPERTY(QAbstractListModel *searches READ searches NOTIFY searchesChanged)
     Q_PROPERTY(QAbstractListModel *playbackHistory READ playbackHistory NOTIFY playbackHistoryChanged)
     Q_PROPERTY(QAbstractListModel *mostPlayed READ mostPlayed NOTIFY playbackHistoryChanged)
 
@@ -119,7 +120,7 @@ public:
     Q_INVOKABLE void removeFavourite(const QString &videoId);
     Q_INVOKABLE FavouriteWatcher *favouriteWatcher(const QString &videoId);
 
-    QSortFilterProxyModel *searches();
+    SearchHistoryModel *searches();
     Q_SIGNAL void searchesChanged();
     Q_INVOKABLE void addSearch(const QString &text);
 

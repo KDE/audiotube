@@ -117,40 +117,189 @@ Kirigami.ApplicationWindow {
         
         Kirigami.SearchField {
             id: searchField
-            delaySearch: true
+
+            autoAccept: false
             selectByMouse: true
             onPressed: {
                 popup.open()
             }
 
-            onTextChanged: completionList.model.filterRegularExpression = new RegExp(`.*${searchField.text}.*`, "i")
-
             property alias popup: popup
 
+            property var filterExpression: new RegExp(`.*${searchField.text}.*`, "i")
+
             Controls.Popup {
+                padding: 1
                 id: popup
                 x: searchField.y
                 y: searchField.y + searchField.height
                 width: searchField.width
                 height: completionList
-                        ? Math.min(completionList.count * Kirigami.Units.gridUnit * 2 + Kirigami.Units.gridUnit * 2, Kirigami.Units.gridUnit * 20)
+                        ? Math.min(completionList.count * Kirigami.Units.gridUnit * 2 + Kirigami.Units.gridUnit * 2 + recents.implicitHeight, Kirigami.Units.gridUnit * 20)
                         : Kirigami.Units.gridUnit * 20
 
                 contentItem: Controls.ScrollView {
-                    Controls.ScrollBar.horizontal.policy: Controls.ScrollBar.AlwaysOff
-                    ListView {
-                        id: completionList
-                        model: Library.searches
-                        delegate: Controls.ItemDelegate {
-                            Kirigami.Theme.colorSet: Kirigami.Theme.Window
-                            Kirigami.Theme.inherit: false
-                            id: completionDelegate
-                            width: parent.width
-                            height: Kirigami.Units.gridUnit * 2
-                            text: model.display
-                            onClicked: {
-                                searchField.text = model.display
-                                searchField.accepted()
+                    ColumnLayout {
+                        width: popup.width
+
+                        Controls.ScrollView {
+                            id: recents
+
+                            Layout.fillWidth: true
+                            Layout.maximumWidth: popup.width - 23
+
+                            visible: searchField.text && recentsRepeater.count > 0
+
+                            leftPadding: 10
+                            topPadding: 10
+                            bottomPadding: 10
+
+                            RowLayout {
+                                spacing: 15
+
+                                Repeater {
+                                    id: recentsRepeater
+                                    Layout.fillWidth: true
+                                    model: SortFilterModel {
+                                        filterRole: PlaybackHistoryModel.Title
+                                        filterRegularExpression: searchField.filterExpression
+                                        sourceModel: Library.playbackHistory
+                                    }
+                                    delegate: ColumnLayout {
+                                        id: mpdelegateItem
+                                        required property string title
+                                        required property string artists
+                                        required property string videoId
+
+                                        width: 100
+                                        Layout.maximumWidth: 70
+
+                                        Kirigami.ShadowedRectangle {
+                                            id: recCover
+                                            MouseArea {
+                                                id: recArea
+                                                anchors.fill: parent
+                                                onClicked: play(mpdelegateItem.videoId)
+                                                hoverEnabled: !Kirigami.Settings.hasTransientTouchInput
+                                                onEntered: {
+                                                    if (!Kirigami.Settings.hasTransientTouchInput)
+                                                        recSelected.visible = true
+                                                }
+                                                onExited: recSelected.visible = false
+
+                                            }
+                                            Layout.margins: 5
+
+                                            width: 70
+                                            height: 70
+                                            radius: 10
+                                            shadow.size: 15
+                                            shadow.xOffset: 5
+                                            shadow.yOffset: 5
+                                            shadow.color: Qt.rgba(0, 0, 0, 0.2)
+                                            Rectangle {
+                                                width: 70
+                                                height: 70
+
+                                                color: "transparent"
+
+                                                //this Rectangle is needed to keep the source image's fillMode
+
+                                                ThumbnailSource {
+                                                    id: mpthumbnailSource
+                                                    videoId: mpdelegateItem.videoId
+                                                }
+                                                Rectangle {
+
+                                                    id: recImageSource
+
+                                                    anchors.fill: parent
+                                                    Image {
+                                                        anchors.fill: parent
+                                                        source: mpthumbnailSource.cachedPath
+                                                        fillMode: Image.PreserveAspectCrop
+                                                        asynchronous: true
+                                                    }
+                                                    visible: false
+
+                                                    layer.enabled: true
+                                                }
+
+                                                Rectangle {
+                                                    anchors.fill: parent
+                                                    radius: 10
+                                                    layer.enabled: true
+                                                    layer.samplerName: "maskSource"
+                                                    layer.effect: ShaderEffect {
+
+                                                        property var colorSource: recImageSource
+                                                        fragmentShader: "
+                                                            uniform lowp sampler2D colorSource;
+                                                            uniform lowp sampler2D maskSource;
+                                                            uniform lowp float qt_Opacity;
+                                                            varying highp vec2 qt_TexCoord0;
+                                                            void main() {
+                                                                gl_FragColor = texture2D(colorSource, qt_TexCoord0) * texture2D(maskSource, qt_TexCoord0).a * qt_Opacity;
+                                                            }"
+                                                    }
+                                                }
+
+
+                                                Rectangle {
+                                                    id: recSelected
+
+                                                    Rectangle {
+                                                        anchors.fill: parent
+                                                        color: Kirigami.Theme.hoverColor
+                                                        radius: 10
+                                                        opacity: 0.2
+                                                    }
+
+                                                    visible: false
+                                                    anchors.fill: parent
+
+                                                    radius: 9
+
+                                                    border.color: Kirigami.Theme.hoverColor
+                                                    border.width: 2
+                                                    color: "transparent"
+                                                }
+                                            }
+                                        }
+                                        Controls.Label {
+                                            leftPadding:5
+                                            Layout.maximumWidth: 70
+                                            text: mpdelegateItem.title
+                                            elide: Qt.ElideRight
+                                        }
+                                        Item {
+                                            height: 5
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        Repeater {
+                            id: completionList
+                            model: SortFilterModel {
+                                sourceModel: Library.searches
+                                filterRegularExpression: searchField.filterExpression
+                            }
+
+                            delegate: Controls.ItemDelegate {
+                                Kirigami.Theme.colorSet: Kirigami.Theme.Window
+                                Kirigami.Theme.inherit: false
+                                Layout.fillWidth: true
+
+                                id: completionDelegate
+                                width: parent.width
+                                height: Kirigami.Units.gridUnit * 2
+                                text: model.display
+                                onClicked: {
+                                    searchField.text = model.display
+                                    searchField.accepted()
+                                }
                             }
                         }
                     }
