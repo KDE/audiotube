@@ -66,7 +66,7 @@ FavouriteWatcher *Library::favouriteWatcher(const QString &videoId)
 
 SearchHistoryModel *Library::searches()
 {
-    return new SearchHistoryModel(m_database->getResults<SingleValue<QString>>("select (search_query) from searches order by search_id desc"), this);
+    return new SearchHistoryModel(m_database->getResults<SingleValue<QString>>("select distinct (search_query) from searches order by search_id desc"), this);
 }
 
 void Library::addSearch(const QString &text)
