@@ -5,6 +5,7 @@
 #include <QApplication>
 #include <QQmlApplicationEngine>
 #include <QtQml>
+#include <QSortFilterProxyModel>
 #include <QUrl>
 #include <KLocalizedContext>
 #include <KLocalizedString>
@@ -45,6 +46,8 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlRegisterType<VideoInfoExtractor>(URI, 1, 0, "VideoInfoExtractor");
     qmlRegisterType<ArtistModel>(URI, 1, 0, "ArtistModel");
     qmlRegisterType<PlaylistModel>(URI, 1, 0, "PlaylistModel");
+    qmlRegisterUncreatableType<PlaybackHistoryModel>(URI, 1, 0, "PlaybackHistoryModel","");
+    qmlRegisterType<QSortFilterProxyModel>(URI, 1, 0, "SortFilterModel");
     qmlRegisterSingletonType<UserPlaylistModel>(URI, 1, 0, "UserPlaylistModel", [](QQmlEngine *, QJSEngine *) {
         return new UserPlaylistModel();
     });

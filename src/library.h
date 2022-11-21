@@ -69,14 +69,15 @@ struct PlayedSong {
 class PlaybackHistoryModel : public QAbstractListModel {
     Q_OBJECT
 
+public:
     enum Roles {
         VideoId = Qt::UserRole + 1,
         Title,
         Artist,
         Plays
     };
+    Q_ENUM(Roles);
 
-public:
     PlaybackHistoryModel(QFuture<std::vector<PlayedSong>> &&songs, QObject *parent = nullptr);
 
     QHash<int, QByteArray> roleNames() const override;
