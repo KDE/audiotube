@@ -116,7 +116,7 @@ public:
 
     FavouritesModel *favourites();
     Q_SIGNAL void favouritesChanged();
-    Q_INVOKABLE void addFavourite(const QString &videoId, const QString &title);
+    Q_INVOKABLE void addFavourite(const QString &videoId, const QString &title, const QString &artist, const QString &album);
     Q_INVOKABLE void removeFavourite(const QString &videoId);
     Q_INVOKABLE FavouriteWatcher *favouriteWatcher(const QString &videoId);
 
@@ -126,7 +126,7 @@ public:
 
     PlaybackHistoryModel *playbackHistory();
     Q_SIGNAL void playbackHistoryChanged();
-    Q_INVOKABLE void addPlaybackHistoryItem(const QString &videoId, const QString &title);
+    Q_INVOKABLE void addPlaybackHistoryItem(const QString &videoId, const QString &title, const QString &artist, const QString &album);
 
     PlaybackHistoryModel *mostPlayed();
 
@@ -136,7 +136,7 @@ public:
     }
 
 private:
-    QFuture<void> addSong(const QString &videoId, const QString &title);
+    QFuture<void> addSong(const QString &videoId, const QString &title, const QString &artist, const QString &album);
 
     QNetworkAccessManager m_networkImageCacher;
     std::unique_ptr<ThreadedDatabase> m_database;

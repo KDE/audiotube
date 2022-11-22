@@ -96,7 +96,14 @@ Flickable {
 
         onSongChanged: audio.play()
         videoId: UserPlaylistModel.currentVideoId
-        onTitleChanged: Library.addPlaybackHistoryItem(info.videoId, info.title)
+        onTitleChanged: {
+            let index = UserPlaylistModel.index(UserPlaylistModel.currentIndex, 0)
+            let videoId = UserPlaylistModel.data(index, UserPlaylistModel.VideoId)
+            let title = UserPlaylistModel.data(index, UserPlaylistModel.Title)
+            let artist = UserPlaylistModel.data(index, UserPlaylistModel.Artists)
+            let album = UserPlaylistModel.data(index, UserPlaylistModel.Album)
+            Library.addPlaybackHistoryItem(videoId, title, artist, album)
+        }
     }
     
     property var audioPlayer: Audio {

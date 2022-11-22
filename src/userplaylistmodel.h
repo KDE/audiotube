@@ -21,6 +21,7 @@ class UserPlaylistModel : public AbstractYTMusicModel
 
     // output
     Q_PROPERTY(QString currentVideoId READ currentVideoId NOTIFY currentVideoIdChanged)
+    Q_PROPERTY(int currentIndex READ currentIndex NOTIFY currentVideoIdChanged)
     Q_PROPERTY(bool canSkip READ canSkip NOTIFY canSkipChanged)
     Q_PROPERTY(QString lyrics READ lyrics NOTIFY lyricsChanged)
 
@@ -29,8 +30,10 @@ public:
         Title = Qt::UserRole + 1,
         VideoId,
         Artists,
+        Album,
         IsCurrent,
     };
+    Q_ENUM(Role);
 
     explicit UserPlaylistModel(QObject *parent = nullptr);
 
@@ -47,6 +50,8 @@ public:
     QString currentVideoId() const;
     void setCurrentVideoId(const QString &videoId);
     Q_SIGNAL void currentVideoIdChanged();
+
+    int currentIndex() const;
 
     bool canSkip() const;
     Q_SIGNAL void canSkipChanged();

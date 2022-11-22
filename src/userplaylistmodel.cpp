@@ -80,6 +80,8 @@ QVariant UserPlaylistModel::data(const QModelIndex &index, int role) const
         return QString::fromStdString(m_playlist.tracks[index.row()].video_id);
     case Artists:
         return PlaylistUtils::artistsToString(m_playlist.tracks[index.row()].artists);
+    case Album:
+        return QString::fromStdString(m_playlist.tracks[index.row()].album.value_or(meta::Album()).name);
     case IsCurrent:
         return m_playlist.tracks[index.row()].video_id == m_currentVideoId.toStdString();
     }
@@ -95,6 +97,7 @@ QHash<int, QByteArray> UserPlaylistModel::roleNames() const
         {Title, "title"},
         {VideoId, "videoId"},
         {Artists, "artists"},
+        {Album, "album"},
         {IsCurrent, "isCurrent"},
     };
 }
@@ -136,6 +139,16 @@ void UserPlaylistModel::setCurrentVideoId(const QString &videoId)
     emitCurrentVideoChanged(old);
     Q_EMIT currentVideoIdChanged();
     Q_EMIT canSkipChanged();
+}
+
+int UserPlaylistModel::currentIndex() const
+{
+    auto currentTrack = std::find_if(m_playlist.tracks.begin(), m_playlist.tracks.end(),
+                                     [this](const watch::Playlist::Track &track) {
+        return track.video_id == m_currentVideoId.toStdString();
+    });
+
+    return std::distance(m_playlist.tracks.begin(), currentTrack);
 }
 
 bool UserPlaylistModel::canSkip() const

@@ -44,9 +44,9 @@ FavouritesModel *Library::favourites()
     return new FavouritesModel(std::move(future), this);
 }
 
-void Library::addFavourite(const QString &videoId, const QString &title)
+void Library::addFavourite(const QString &videoId, const QString &title, const QString &artist, const QString &album)
 {
-    connectFuture(addSong(videoId, title), this, [=, this] {
+    connectFuture(addSong(videoId, title, artist, album), this, [=, this] {
         connectFuture(m_database->execute("insert or ignore into favourites (video_id) values (?)", videoId), this, &Library::favouritesChanged);
     });
 }
@@ -80,9 +80,9 @@ PlaybackHistoryModel *Library::playbackHistory()
     return new PlaybackHistoryModel(std::move(future), this);
 }
 
-void Library::addPlaybackHistoryItem(const QString &videoId, const QString &title)
+void Library::addPlaybackHistoryItem(const QString &videoId, const QString &title, const QString &artist, const QString &album)
 {
-    connectFuture(addSong(videoId, title), this, [=, this] {
+    connectFuture(addSong(videoId, title, artist, album), this, [=, this] {
         connectFuture(m_database->execute("insert or ignore into played_songs (video_id, plays) values (?, ?)", videoId, 0), this, [=, this] {
             connectFuture(m_database->execute("update played_songs set plays = plays + 1 where video_id = ? ", videoId), this, &Library::playbackHistoryChanged);
         });
@@ -100,9 +100,10 @@ QNetworkAccessManager &Library::nam()
     return m_networkImageCacher;
 }
 
-QFuture<void> Library::addSong(const QString &videoId, const QString &title)
+QFuture<void> Library::addSong(const QString &videoId, const QString &title, const QString &artist, const QString &album)
 {
-    return m_database->execute("insert or ignore into songs (video_id, title, artist, album) values (?, ?, null, null)", videoId, title);
+    // replace is used here to update songs from times when we didn't store artist and album
+    return m_database->execute("insert or replace into songs (video_id, title, artist, album) values (?, ?, ?, ?)", videoId, title, artist, album);
 }
 
 void ThumbnailSource::setVideoId(const QString &id) {

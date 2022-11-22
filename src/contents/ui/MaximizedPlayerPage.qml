@@ -396,10 +396,21 @@ Item {
                     Layout.maximumWidth: height
                     Layout.preferredWidth: height
                     
-                    onClicked: if (favouriteWatcher)
-                                   favouriteWatcher.isFavourite
-                                    ? Library.removeFavourite(info.videoId)
-                                    : Library.addFavourite(info.videoId, info.title)
+                    onClicked: {
+                        if (favouriteWatcher) {
+                            if (favouriteWatcher.isFavourite) {
+                                Library.removeFavourite(info.videoId)
+                                // This would insert slightly ugly data into the database, but let's hope the song is already saved
+                            } else {
+                                let index = UserPlaylistModel.index(UserPlaylistModel.currentIndex, 0)
+                                let videoId = UserPlaylistModel.data(index, UserPlaylistModel.VideoId)
+                                let title = UserPlaylistModel.data(index, UserPlaylistModel.Title)
+                                let artist = UserPlaylistModel.data(index, UserPlaylistModel.Artists)
+                                let album = UserPlaylistModel.data(index, UserPlaylistModel.Album)
+                                Library.addFavourite(videoId, title, artist, album)
+                            }
+                        }
+                    }
                     
                     icon.name: favouriteWatcher ? (favouriteWatcher.isFavourite ? "starred-symbolic" : "non-starred-symbolic") : ""
                     icon.width: Kirigami.Units.gridUnit * 1.5
