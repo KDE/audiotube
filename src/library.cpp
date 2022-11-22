@@ -123,11 +123,31 @@ void ThumbnailSource::setVideoId(const QString &id) {
     }
 
     auto *reply = Library::instance().nam().get(QNetworkRequest(QUrl("https://i.ytimg.com/vi_webp/" % m_videoId % "/maxresdefault.webp")));
-    connect(reply, &QNetworkReply::finished, this, [id, reply, this, cacheLocation]() {
+
+    auto storeResult = [this, cacheLocation](QNetworkReply *reply) {
         QFile file(cacheLocation);
         file.open(QFile::WriteOnly);
         file.write(reply->readAll());
         setCachedPath(QUrl::fromLocalFile(cacheLocation));
+
+        reply->deleteLater();
+    };
+
+    connect(reply, &QNetworkReply::errorOccurred, this, [this, storeResult](auto error) {
+        if (error == QNetworkReply::NetworkError::ContentNotFoundError) {
+            qDebug() << "Naive thumbnail resolution failed, falling back to yt-dlp (slower)";
+
+            connectFuture(YTMusicThread::instance()->extractVideoInfo(m_videoId), this, [this, storeResult](auto info) {
+                auto *reply = Library::instance().nam().get(QNetworkRequest(QUrl(QString::fromStdString(info.thumbnail))));
+                connect(reply, &QNetworkReply::finished, this, [reply, storeResult]() {
+                    storeResult(reply);
+                });
+            });
+        }
+    });
+
+    connect(reply, &QNetworkReply::finished, this, [reply, storeResult]() {
+        storeResult(reply);
     });
 }
 
