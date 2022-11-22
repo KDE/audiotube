@@ -10,15 +10,9 @@ import org.kde.kirigami 2.14 as Kirigami
 import org.kde.ytmusic 1.0
 
 Kirigami.ScrollablePage {
+    objectName: "libraryPage"
 
     globalToolBarStyle: Kirigami.ApplicationHeaderStyle.None
-
-    // so that there is still a separator, since the header style is none
-    Kirigami.Separator {
-        anchors.top: parent.top
-        anchors.left: parent.left
-        anchors.right: parent.right
-    }
 
     ColumnLayout {
         RowLayout {

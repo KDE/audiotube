@@ -17,6 +17,15 @@ Kirigami.ApplicationWindow {
     property bool wideScreen: width >= 600
     property bool showSearch: false // only applicable if not widescreen
 
+    // so that there is still a separator, since the header style is none
+    Kirigami.Separator {
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.right: parent.right
+
+        visible: pageStack.currentItem.objectName == "libraryPage"
+    }
+
     header: Controls.Control {
         padding: Kirigami.Units.largeSpacing
 
