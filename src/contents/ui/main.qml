@@ -256,6 +256,8 @@ Kirigami.ApplicationWindow {
                                             Layout.maximumWidth: 70
                                             text: mpdelegateItem.title
                                             elide: Qt.ElideRight
+                                            wrapMode: Text.WordWrap
+                                            Layout.maximumHeight: 40
                                         }
                                         Item {
                                             height: 5
