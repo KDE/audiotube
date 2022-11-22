@@ -131,8 +131,25 @@ Kirigami.ScrollablePage {
                                         color: Kirigami.Theme.hoverColor
                                         radius: 10
                                         opacity: 0.2
+
                                     }
 
+                                    Rectangle {
+                                        height: 45
+                                        width: 45
+                                        radius: 50
+                                        color: Kirigami.Theme.hoverColor
+                                        opacity: 0.8
+                                        anchors.centerIn: parent
+
+
+                                    }
+                                    Kirigami.Icon {
+                                        x:100-0.43*height
+                                        y:100-0.5*height
+                                        color: "white"
+                                        source: "media-playback-start"
+                                    }
                                     visible: false
                                     anchors.fill: parent
                                     radius: 9
@@ -263,7 +280,22 @@ Kirigami.ScrollablePage {
                                         radius: 10
                                         opacity: 0.2
                                     }
+                                    Rectangle {
+                                        height: 45
+                                        width: 45
+                                        radius: 50
+                                        color: Kirigami.Theme.hoverColor
+                                        opacity: 0.8
+                                        anchors.centerIn: parent
 
+
+                                    }
+                                    Kirigami.Icon {
+                                        x:100-0.43*height
+                                        y:100-0.5*height
+                                        color: "white"
+                                        source: "media-playback-start"
+                                    }
                                     visible: false
                                     anchors.fill: parent
 
