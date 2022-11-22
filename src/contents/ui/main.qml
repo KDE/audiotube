@@ -24,6 +24,7 @@ Kirigami.ApplicationWindow {
         anchors.right: parent.right
 
         visible: pageStack.currentItem.objectName == "libraryPage"
+                 && pageStack.layers.depth == 1
     }
 
     header: Controls.Control {
