@@ -201,10 +201,6 @@ Item {
                         color: "transparent"
 
                         //this Rectangle is needed to keep the source image's fillMode
-                        ThumbnailSource {
-                            id: thumbnailSource
-                            videoId: delegateItem.videoId
-                        }
                         Rectangle {
 
                             id: imageSource
