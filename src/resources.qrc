@@ -1,9 +1,3 @@
-<!--
-SPDX-FileCopyrightText: 2021 Jonah Brüchert <jbb@kaidan.im>
-
-SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
--->
-
 <RCC>
     <qresource prefix="/">
         <file alias="main.qml">contents/ui/main.qml</file>
@@ -19,5 +13,6 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
         <file>migrations/2022-05-20-194850_init/down.sql</file>
         <file>migrations/2022-05-20-194850_init/up.sql</file>
         <file alias="PlaybackHistory.qml">contents/ui/PlaybackHistory.qml</file>
+        <file alias="RoundedMask.qml">contents/ui/RoundedMask.qml</file>
     </qresource>
 </RCC>
