@@ -241,61 +241,61 @@ Item {
             ColumnLayout{
                 width: swipeView.width
                 height: swipeView.height
-                ListView {
+                ScrollView {
                     Layout.maximumWidth: 900
-
                     Layout.fillWidth: true
                     Layout.fillHeight: true
                     Layout.alignment: Qt.AlignHCenter
 
-                    //
-                    clip: true
+                    ListView {
+                        clip: true
 
-                    Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
-                    Kirigami.Theme.inherit: false
+                        Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
+                        Kirigami.Theme.inherit: false
 
-                    BusyIndicator {
-                        anchors.centerIn: parent
-                        visible: UserPlaylistModel.loading || UserPlaylistModel.loading
-                    }
-
-                    model: UserPlaylistModel
-
-                    delegate: Kirigami.SwipeListItem {
-                        id: delegateItem
-                        required property string title
-                        required property string videoId
-                        required property string artists
-                        required property bool isCurrent
-
-                        backgroundColor: 'transparent'
-                        highlighted: isCurrent
-                        onClicked: UserPlaylistModel.skipTo(videoId)
-
-                        ColumnLayout {
-                            Layout.fillWidth: true
-                            Kirigami.Heading {
-                                elide: Text.ElideRight
-                                Layout.fillWidth: true
-                                level: 2
-                                text: title
-                            }
-
-                            Label {
-                                elide: Text.ElideRight
-                                Layout.fillWidth: true
-                                text: artists
-                            }
+                        BusyIndicator {
+                            anchors.centerIn: parent
+                            visible: UserPlaylistModel.loading || UserPlaylistModel.loading
                         }
 
-                        actions: [
-                            Kirigami.Action {
-                                text: i18n("Remove Track")
-                                icon.name: "list-remove"
-                                icon.color: "white"
-                                onTriggered: UserPlaylistModel.remove(delegateItem.videoId)
+                        model: UserPlaylistModel
+
+                        delegate: Kirigami.SwipeListItem {
+                            id: delegateItem
+                            required property string title
+                            required property string videoId
+                            required property string artists
+                            required property bool isCurrent
+
+                            backgroundColor: 'transparent'
+                            highlighted: isCurrent
+                            onClicked: UserPlaylistModel.skipTo(videoId)
+
+                            ColumnLayout {
+                                Layout.fillWidth: true
+                                Kirigami.Heading {
+                                    elide: Text.ElideRight
+                                    Layout.fillWidth: true
+                                    level: 2
+                                    text: title
+                                }
+
+                                Label {
+                                    elide: Text.ElideRight
+                                    Layout.fillWidth: true
+                                    text: artists
+                                }
                             }
-                        ]
+
+                            actions: [
+                                Kirigami.Action {
+                                    text: i18n("Remove Track")
+                                    icon.name: "list-remove"
+                                    icon.color: "white"
+                                    onTriggered: UserPlaylistModel.remove(delegateItem.videoId)
+                                }
+                            ]
+                        }
                     }
                 }
             }
