@@ -117,7 +117,8 @@ Kirigami.ApplicationWindow {
         
         Kirigami.SearchField {
             id: searchField
-            delaySearch: true
+
+            autoAccept: false
             selectByMouse: true
             onPressed: {
                 popup.open()
@@ -158,7 +159,8 @@ Kirigami.ApplicationWindow {
                                     model: SortFilterModel{
                                         filterRole: PlaybackHistoryModel.Title
                                         filterRegularExpression: new RegExp(`.*${searchField.text}.*`, "i")
-                                        sourceModel: Library.mostPlayed}
+                                        sourceModel: Library.playbackHistory
+                                    }
                                     delegate: ColumnLayout {
                                         id: mpdelegateItem
                                         required property string title
