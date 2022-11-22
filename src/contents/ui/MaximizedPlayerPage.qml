@@ -21,15 +21,18 @@ Item {
     signal requestClose()
     
     // background image
+
+
     Item {
         anchors.fill: parent
-        
+
         Rectangle {
             anchors.fill: parent
             color: Qt.rgba(25, 25, 30, 1)
         }
 
         Image {
+            scale: 1.8
             anchors.fill: parent
             asynchronous: true
             
@@ -52,6 +55,16 @@ Item {
                 cached: true
                 radius: 100
             }
+
+
+        }
+
+    }
+    Rectangle {
+        anchors.fill: parent
+        gradient: Gradient{
+            GradientStop { position: 0.0; color: "transparent" }
+            GradientStop { position: 1.1; color: "black"  }
         }
     }
     
@@ -225,74 +238,89 @@ Item {
                 }
             }
             // playlist
-            ListView {
+            ColumnLayout{
                 width: swipeView.width
                 height: swipeView.height
-                clip: true
+                ListView {
+                    Layout.maximumWidth: 900
 
-                Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
-                Kirigami.Theme.inherit: false
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+                    Layout.alignment: Qt.AlignHCenter
 
-                BusyIndicator {
-                    anchors.centerIn: parent
-                    visible: UserPlaylistModel.loading || UserPlaylistModel.loading
-                }
+                    //
+                    clip: true
 
-                model: UserPlaylistModel
+                    Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
+                    Kirigami.Theme.inherit: false
 
-                delegate: Kirigami.SwipeListItem {
-                    id: delegateItem
-                    required property string title
-                    required property string videoId
-                    required property string artists
-                    required property bool isCurrent
-
-                    backgroundColor: 'transparent'
-                    highlighted: isCurrent
-                    onClicked: UserPlaylistModel.skipTo(videoId)
-
-                    ColumnLayout {
-                        Layout.fillWidth: true
-                        Kirigami.Heading {
-                            elide: Text.ElideRight
-                            Layout.fillWidth: true
-                            level: 2
-                            text: title
-                        }
-
-                        Label {
-                            elide: Text.ElideRight
-                            Layout.fillWidth: true
-                            text: artists
-                        }
+                    BusyIndicator {
+                        anchors.centerIn: parent
+                        visible: UserPlaylistModel.loading || UserPlaylistModel.loading
                     }
 
-                    actions: [
-                        Kirigami.Action {
-                            text: i18n("Remove Track")
-                            icon.name: "list-remove"
-                            icon.color: "white"
-                            onTriggered: UserPlaylistModel.remove(delegateItem.videoId)
+                    model: UserPlaylistModel
+
+                    delegate: Kirigami.SwipeListItem {
+                        id: delegateItem
+                        required property string title
+                        required property string videoId
+                        required property string artists
+                        required property bool isCurrent
+
+                        backgroundColor: 'transparent'
+                        highlighted: isCurrent
+                        onClicked: UserPlaylistModel.skipTo(videoId)
+
+                        ColumnLayout {
+                            Layout.fillWidth: true
+                            Kirigami.Heading {
+                                elide: Text.ElideRight
+                                Layout.fillWidth: true
+                                level: 2
+                                text: title
+                            }
+
+                            Label {
+                                elide: Text.ElideRight
+                                Layout.fillWidth: true
+                                text: artists
+                            }
                         }
-                    ]
+
+                        actions: [
+                            Kirigami.Action {
+                                text: i18n("Remove Track")
+                                icon.name: "list-remove"
+                                icon.color: "white"
+                                onTriggered: UserPlaylistModel.remove(delegateItem.videoId)
+                            }
+                        ]
+                    }
                 }
             }
-
-            ScrollView {
+            ColumnLayout{
                 width: swipeView.width
                 height: swipeView.height
-                clip: true
+                ScrollView {
+                    Layout.maximumWidth: 900
 
-                //contentY: audio.position / audio.duration
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+                    Layout.alignment: Qt.AlignHCenter
+                    clip: true
 
-                Label {
-                    padding: 20
-                    text: UserPlaylistModel.lyrics
-                    color: "white"
+                    //contentY: audio.position / audio.duration
+
+                    Label {
+                        padding: 20
+                        text: UserPlaylistModel.lyrics
+                        color: "white"
+                    }
                 }
             }
         }
-        
+
         ColumnLayout {
             id: bottomPlayerControls
             Layout.topMargin: Kirigami.Units.largeSpacing
