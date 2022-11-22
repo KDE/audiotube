@@ -161,10 +161,11 @@ Kirigami.ApplicationWindow {
 
                             leftPadding: 10
                             topPadding: 10
-                            bottomPadding: 10
-
+                            Controls.ScrollBar.horizontal.policy: Controls.ScrollBar.AlwaysOff
                             RowLayout {
                                 spacing: 15
+                                Layout.fillWidth: true
+                                Layout.maximumWidth: popup.width - 23
 
                                 Repeater {
                                     id: recentsRepeater
@@ -275,8 +276,12 @@ Kirigami.ApplicationWindow {
                                 }
                             }
                         }
-
+                        Kirigami.Separator{
+                            Layout.fillWidth: true
+                        }
                         Repeater {
+                            Layout.fillWidth: true
+
                             id: completionList
                             model: SortFilterModel {
                                 sourceModel: Library.searches
