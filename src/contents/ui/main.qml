@@ -177,6 +177,7 @@ Kirigami.ApplicationWindow {
                                         sourceModel: Library.playbackHistory
                                     }
                                     delegate: ColumnLayout {
+                                        Layout.alignment: Qt.AlignTop
                                         id: mpdelegateItem
                                         required property string title
                                         required property string artists
