@@ -129,23 +129,27 @@ Kirigami.ApplicationWindow {
             property alias popup: popup
 
             Controls.Popup {
-
                 padding: 1
                 id: popup
                 x: searchField.y
                 y: searchField.y + searchField.height
                 width: searchField.width
                 height: completionList
-                        ? Math.min(completionList.count * Kirigami.Units.gridUnit * 2 + Kirigami.Units.gridUnit * 2 + 110, Kirigami.Units.gridUnit * 20)
+                        ? Math.min(completionList.count * Kirigami.Units.gridUnit * 2 + Kirigami.Units.gridUnit * 2 + recents.implicitHeight, Kirigami.Units.gridUnit * 20)
                         : Kirigami.Units.gridUnit * 20
 
-                contentItem:
-                    Controls.ScrollView {
-                    Controls.ScrollBar.horizontal.policy: Controls.ScrollBar.AlwaysOff
-                    ListView {
-                        header:Controls.ScrollView {
+                contentItem: Controls.ScrollView {
+                    ColumnLayout {
+                        width: popup.width
+
+                        Controls.ScrollView {
                             id: recents
-                            width: popup.width-22
+
+                            Layout.fillWidth: true
+                            Layout.maximumWidth: popup.width - 23
+
+                            visible: searchField.text && recentsRepeater.count > 0
+
                             leftPadding: 10
                             topPadding: 10
                             bottomPadding: 10
@@ -274,26 +278,27 @@ Kirigami.ApplicationWindow {
                                     }
                                 }
                             }
-
                         }
 
+                        Repeater {
+                            id: completionList
+                            model: Library.searches
+                            delegate: Controls.ItemDelegate {
+                                Kirigami.Theme.colorSet: Kirigami.Theme.Window
+                                Kirigami.Theme.inherit: false
+                                Layout.fillWidth: true
 
-                        id: completionList
-                        model: Library.searches
-                        delegate: Controls.ItemDelegate {
-                            Kirigami.Theme.colorSet: Kirigami.Theme.Window
-                            Kirigami.Theme.inherit: false
-                            id: completionDelegate
-                            width: parent.width
-                            height: Kirigami.Units.gridUnit * 2
-                            text: model.display
-                            onClicked: {
-                                searchField.text = model.display
-                                searchField.accepted()
+                                id: completionDelegate
+                                width: parent.width
+                                height: Kirigami.Units.gridUnit * 2
+                                text: model.display
+                                onClicked: {
+                                    searchField.text = model.display
+                                    searchField.accepted()
+                                }
                             }
                         }
                     }
-
                 }
             }
 
