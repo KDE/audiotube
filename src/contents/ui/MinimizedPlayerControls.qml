@@ -14,6 +14,8 @@ import org.kde.ytmusic 1.0
 
 Item {
     id: root
+
+    z: 2000
     
     required property int progressBarHeight
     required property int minimizedPlayerContentHeight
@@ -62,19 +64,12 @@ Item {
                     Layout.maximumHeight: imageSize
                     Layout.minimumHeight: imageSize
 
-                    Image {
+                    RoundedImage {
                         id: mainIcon
                         anchors.fill: parent
-                        
                         visible: !loadingIndicator.visible
-                        asynchronous: true
-                        mipmap: true
-
                         source: info.thumbnail
-
-                        sourceSize.width: 512
-                        sourceSize.height: 512
-                        fillMode: Image.PreserveAspectCrop
+                        radius: 5
                     }
                     
                     BusyIndicator {

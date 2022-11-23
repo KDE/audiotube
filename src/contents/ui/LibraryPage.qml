@@ -37,6 +37,7 @@ Kirigami.ScrollablePage {
                                                  })
             }
         }
+
         Controls.ScrollView {
             Layout.fillWidth: true
             RowLayout {
@@ -54,6 +55,7 @@ Kirigami.ScrollablePage {
                         Layout.maximumWidth: 200
 
                         Kirigami.ShadowedRectangle {
+                            color: Kirigami.Theme.backgroundColor
                             id: favCover
                             MouseArea {
                                 id: favArea
@@ -77,88 +79,80 @@ Kirigami.ScrollablePage {
                             shadow.xOffset: 5
                             shadow.yOffset: 5
                             shadow.color: Qt.rgba(0, 0, 0, 0.2)
-                            Rectangle {
-                                width: 200
+                            ThumbnailSource {
+                                id: thumbnailSource
+                                videoId: delegateItem.videoId
+                            }
+                            RoundedImage {
+                                source: thumbnailSource.cachedPath
                                 height: 200
+                                width: height
+                                radius: 10
+                            }
+                            Rectangle {
+                                id: favSelected
 
+                                Rectangle {
+                                    anchors.fill: parent
+                                    color: Kirigami.Theme.hoverColor
+                                    radius: 10
+                                    opacity: 0.2
+                                }
+                                Rectangle {
+                                    height: 45
+                                    width: 45
+                                    radius: 50
+                                    color: Kirigami.Theme.hoverColor
+                                    opacity: 0.8
+                                    anchors.centerIn: parent
+
+
+                                }
+                                Kirigami.Icon {
+                                    x: 100 - 0.43 * height
+                                    y: 100 - 0.5  * height
+                                    color: "white"
+                                    source: "media-playback-start"
+                                }
+                                visible: false
+                                anchors.fill: parent
+
+                                radius: 9
+
+                                border.color: Kirigami.Theme.hoverColor
+                                border.width: 2
                                 color: "transparent"
-
-                                //this Rectangle is needed to keep the source image's fillMode
-                                ThumbnailSource {
-                                    id: thumbnailSource
-                                    videoId: delegateItem.videoId
-                                }
-                                Rectangle {
-
-                                    id: imageSource
-
-                                    anchors.fill: parent
-                                    Image {
-                                        anchors.fill: parent
-                                        source: thumbnailSource.cachedPath
-                                        fillMode: Image.PreserveAspectCrop
-                                        asynchronous: true
-                                    }
-                                    visible: false
-
-                                    layer.enabled: true
-                                }
-
-                                RoundedMask {
-                                    anchors.fill: parent
-                                    colorSource: imageSource
-                                }
-
-                                Controls.ToolButton {
-                                    anchors.right: parent.right
-                                    anchors.bottom: parent.bottom
-                                    icon.name: "delete"
-                                    onClicked: Library.removeFavourite(
-                                                   delegateItem.videoId)
-                                    z: 2000
-                                }
-                                Rectangle {
-                                    id: favSelected
-
-                                    Rectangle {
-                                        anchors.fill: parent
-                                        color: Kirigami.Theme.hoverColor
-                                        radius: 10
-                                        opacity: 0.2
-
-                                    }
-
-                                    Rectangle {
-                                        height: 45
-                                        width: 45
-                                        radius: 50
-                                        color: Kirigami.Theme.hoverColor
-                                        opacity: 0.8
-                                        anchors.centerIn: parent
-
-
-                                    }
-                                    Kirigami.Icon {
-                                        x:100-0.43*height
-                                        y:100-0.5*height
-                                        color: "white"
-                                        source: "media-playback-start"
-                                    }
-                                    visible: false
-                                    anchors.fill: parent
-                                    radius: 9
-                                    border.color: Kirigami.Theme.hoverColor
-                                    border.width: 2
-                                    color: "transparent"
-                                }
                             }
                         }
-                        Controls.Label {
-                            Layout.maximumWidth: 200
-                            leftPadding: 5
 
-                            text: delegateItem.title
-                            elide: Qt.ElideRight
+                        RowLayout {
+                            ColumnLayout {
+                                Controls.Label {
+                                    text: delegateItem.title
+                                    Layout.maximumWidth: 200
+                                    Layout.fillWidth: true
+                                    leftPadding: 5
+                                    elide: Text.ElideRight
+
+                                }
+                                Controls.Label {
+                                    Layout.fillWidth: true
+                                    Layout.maximumWidth: 200
+                                    leftPadding: 5
+                                    color: Kirigami.Theme.disabledTextColor
+                                    text: delegateItem.artists
+                                    elide: Text.ElideRight
+                                }
+                            }
+                            Controls.ToolButton {
+                                Layout.fillHeight: true
+                                icon.name: "view-more-horizontal-symbolic"
+                                onPressed: favMenu.openForSong(delegateItem.videoId, delegateItem.title, delegateItem.artists, delegateItem.artists)
+                                SongMenu {
+                                    id:favMenu
+                                }
+                            }
+
                         }
                         Item {
                             height: 5
@@ -210,6 +204,7 @@ Kirigami.ScrollablePage {
                         Layout.maximumWidth: 200
 
                         Kirigami.ShadowedRectangle {
+                            color: Kirigami.Theme.backgroundColor
                             id: recCover
                             MouseArea {
                                 id: recArea
@@ -232,80 +227,79 @@ Kirigami.ScrollablePage {
                             shadow.xOffset: 5
                             shadow.yOffset: 5
                             shadow.color: Qt.rgba(0, 0, 0, 0.2)
-                            Rectangle {
-                                width: 200
+                            ThumbnailSource {
+                                id: mpthumbnailSource
+                                videoId: mpdelegateItem.videoId
+                            }
+                            RoundedImage {
+                                source: mpthumbnailSource.cachedPath
                                 height: 200
+                                width: height
+                                radius: 10
+                            }
+                            Rectangle {
+                                id: recSelected
 
+                                Rectangle {
+                                    anchors.fill: parent
+                                    color: Kirigami.Theme.hoverColor
+                                    radius: 10
+                                    opacity: 0.2
+                                }
+                                Rectangle {
+                                    height: 45
+                                    width: 45
+                                    radius: 50
+                                    color: Kirigami.Theme.hoverColor
+                                    opacity: 0.8
+                                    anchors.centerIn: parent
+
+
+                                }
+                                Kirigami.Icon {
+                                    x: 100 - 0.43 * height
+                                    y: 100 - 0.5  * height
+                                    color: "white"
+                                    source: "media-playback-start"
+                                }
+                                visible: false
+                                anchors.fill: parent
+
+                                radius: 9
+
+                                border.color: Kirigami.Theme.hoverColor
+                                border.width: 2
                                 color: "transparent"
-
-                                //this Rectangle is needed to keep the source image's fillMode
-
-                                ThumbnailSource {
-                                    id: mpthumbnailSource
-                                    videoId: mpdelegateItem.videoId
-                                }
-                                Rectangle {
-
-                                    id: recImageSource
-
-                                    anchors.fill: parent
-                                    Image {
-                                        anchors.fill: parent
-                                        source: mpthumbnailSource.cachedPath
-                                        fillMode: Image.PreserveAspectCrop
-                                        asynchronous: true
-                                    }
-                                    visible: false
-
-                                    layer.enabled: true
-                                }
-
-                                RoundedMask {
-                                    anchors.fill: parent
-                                    colorSource: recImageSource
-                                }
-
-                                Rectangle {
-                                    id: recSelected
-
-                                    Rectangle {
-                                        anchors.fill: parent
-                                        color: Kirigami.Theme.hoverColor
-                                        radius: 10
-                                        opacity: 0.2
-                                    }
-                                    Rectangle {
-                                        height: 45
-                                        width: 45
-                                        radius: 50
-                                        color: Kirigami.Theme.hoverColor
-                                        opacity: 0.8
-                                        anchors.centerIn: parent
-
-
-                                    }
-                                    Kirigami.Icon {
-                                        x:100-0.43*height
-                                        y:100-0.5*height
-                                        color: "white"
-                                        source: "media-playback-start"
-                                    }
-                                    visible: false
-                                    anchors.fill: parent
-
-                                    radius: 9
-
-                                    border.color: Kirigami.Theme.hoverColor
-                                    border.width: 2
-                                    color: "transparent"
-                                }
                             }
                         }
-                        Controls.Label {
-                            Layout.maximumWidth: 200
-                            leftPadding:5
-                            text: mpdelegateItem.title
-                            elide: Qt.ElideRight
+                        RowLayout {
+                            ColumnLayout {
+                                Controls.Label {
+                                    text: mpdelegateItem.title
+                                    Layout.maximumWidth: 200
+                                    Layout.fillWidth: true
+                                    leftPadding: 5
+                                    elide: Text.ElideRight
+
+                                }
+                                Controls.Label {
+                                    Layout.fillWidth: true
+                                    Layout.maximumWidth: 200
+                                    leftPadding: 5
+                                    color: Kirigami.Theme.disabledTextColor
+                                    text: mpdelegateItem.artists
+                                    elide: Text.ElideRight
+                                }
+                            }
+                            Controls.ToolButton {
+                                Layout.fillHeight: true
+                                icon.name: "view-more-horizontal-symbolic"
+                                onPressed: mpMenu.openForSong(mpdelegateItem.videoId, mpdelegateItem.title, mpdelegateItem.artists, mpdelegateItem.artists)
+                                SongMenu{
+                                    id:mpMenu
+                                }
+                            }
+
                         }
                         Item {
                             height: 5

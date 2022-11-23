@@ -49,7 +49,7 @@ public:
     Q_INVOKABLE void triggerItem(int row);
 
     Q_SIGNAL void openAlbum(const QString &browseId);
-    Q_SIGNAL void openArtist(const QString &browseId);
+    Q_SIGNAL void openArtist(const QString &browseId,const QString &radioId, const QString &shuffleId);
     Q_SIGNAL void openPlaylist(const QString &browseId);
     Q_SIGNAL void openSong(const QString &videoId);
     Q_SIGNAL void openVideo(const QString &videoId, const QString &title);

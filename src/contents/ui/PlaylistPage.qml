@@ -13,27 +13,34 @@ Kirigami.ScrollablePage {
     property alias playlistId: playlistModel.playlistId
     title: playlistModel.title
 
-    actions {
-        main: Kirigami.Action {
-            icon.name: "media-playback-start"
-            text: i18n("Play")
-            onTriggered: {
-                applicationWindow().playPlaylist(playlistModel.playlistId)
-            }
-        }
-        right: Kirigami.Action {
-            icon.name: "media-playlist-shuffle"
-            text: i18n("Shuffle")
-            onTriggered: {
-                applicationWindow().playShufflePlaylist(playlistModel.playlistId)
-            }
-        }
+    SongMenu {
+        id: menu
     }
-
     ListView {
-        header: Kirigami.ItemViewHeader {
-            backgroundImage.source: playlistModel.thumbnailUrl
+        id: songList
+
+        header: ListHeader {
+            visibleActions: [
+                Kirigami.Action {
+                    icon.name: "media-playback-start"
+                    text: i18n("Play")
+                    onTriggered: {
+                        applicationWindow().playPlaylist(playlistModel.playlistId)
+                    }
+                },
+                Kirigami.Action {
+                    icon.name: "media-playlist-shuffle"
+                    text: i18n("Shuffle")
+                    onTriggered: {
+                        applicationWindow().playShufflePlaylist(playlistModel.playlistId)
+                    }
+                }
+            ]
             title: playlistModel.title
+            imageSourceURL: playlistModel.thumbnailUrl
+            width: songList.width
+            subtitle: i18n("Playlist")
+
         }
         model: PlaylistModel {
             id: playlistModel
@@ -47,31 +54,40 @@ Kirigami.ScrollablePage {
             required property string videoId
             required property var artists
             required property string thumbnailUrl
+            required property string artistsDisplayString
+
 
             RowLayout {
                 Layout.fillHeight: true
-                Kirigami.Icon {
-                    Layout.fillHeight: true
+                RoundedImage {
                     source: delegateItem.thumbnailUrl
+                    height: 35
+                    width: height
+                    radius: 5
                 }
 
-                Controls.Label {
-                    Layout.fillWidth: true
-                    text: title
-                    elide: Qt.ElideRight
+                ColumnLayout {
+                    Controls.Label {
+                        Layout.fillWidth: true
+                        text: title
+                        elide: Qt.ElideRight
+                    }
+
+                    Controls.Label {
+                        Layout.fillWidth: true
+                        visible: delegateItem.artistsDisplayString
+                        color: Kirigami.Theme.disabledTextColor
+                        text: delegateItem.artistsDisplayString
+                        elide: Qt.ElideRight
+                    }
                 }
             }
 
             actions: [
                 Kirigami.Action {
-                    icon.name: "go-next"
-                    text: i18n("Play Next")
-                    onTriggered: UserPlaylistModel.playNext(delegateItem.videoId, delegateItem.title, delegateItem.artists)
-                },
-                Kirigami.Action {
-                    icon.name: "media-playlist-append"
-                    text: i18n("Add to Playlist")
-                    onTriggered: UserPlaylistModel.append(delegateItem.videoId, delegateItem.title, delegateItem.artists)
+                    icon.name: "view-more-horizontal-symbolic"
+                    text: i18n("More")
+                    onTriggered: menu.openForSong(delegateItem.videoId, delegateItem.title, delegateItem.artists, delegateItem.artistsDisplayString)
                 }
             ]
 

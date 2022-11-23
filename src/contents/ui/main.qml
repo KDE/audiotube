@@ -161,33 +161,16 @@ Kirigami.ApplicationWindow {
 
                     color: "transparent"
 
-                    //this Rectangle is needed to keep the source image's fillMode
-
                     ThumbnailSource {
-                        id: mpthumbnailSource
+                        id: thumbnailSource
                         videoId: model ? model.videoId : ""
                     }
-                    Rectangle {
-
-                        id: recImageSource
-
-                        anchors.fill: parent
-                        Image {
-                            anchors.fill: parent
-                            source: mpthumbnailSource.cachedPath
-                            fillMode: Image.PreserveAspectCrop
-                            asynchronous: true
-                        }
-                        visible: false
-
-                        layer.enabled: true
+                    RoundedImage {
+                        source: thumbnailSource.cachedPath
+                        height: parent.height
+                        width: height
+                        radius: 10
                     }
-
-                    RoundedMask {
-                        anchors.fill: parent
-                        colorSource: recImageSource
-                    }
-
                     Rectangle {
                         id: recSelected
 
@@ -265,7 +248,7 @@ Kirigami.ApplicationWindow {
                             topPadding: 10
                             Controls.ScrollBar.horizontal.policy: Controls.ScrollBar.AlwaysOff
                             RowLayout {
-                                spacing: 15
+                                spacing: 10
                                 Layout.fillWidth: true
                                 Layout.maximumWidth: popup.width - 23
 
@@ -315,7 +298,10 @@ Kirigami.ApplicationWindow {
             }
 
             onAccepted: {
-                pageStack.clear()
+                while (pageStack.depth > 0) {
+                    pageStack.pop()
+                }
+
                 pageStack.layers.clear()
 
                 if (text) {
@@ -323,7 +309,7 @@ Kirigami.ApplicationWindow {
                     pageStack.push("qrc:/SearchPage.qml", {
                                 "searchQuery": text})
                 } else {
-                    pageStack.replace("qrc:/LibraryPage.qml")
+                    pageStack.push("qrc:/LibraryPage.qml")
                 }
 
                 popup.close()

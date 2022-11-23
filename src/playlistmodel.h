@@ -28,6 +28,7 @@ public:
         Artists,
         VideoId,
         ThumbnailUrl,
+        ArtistsDisplayString
     };
 
     int rowCount(const QModelIndex &parent) const override;

@@ -47,9 +47,11 @@ Kirigami.ScrollablePage {
                 })
             }
 
-            onOpenArtist: (channelId) => {
+            onOpenArtist: (channelId, radioId, shuffleId) => {
                 pageStack.push("qrc:/ArtistPage.qml", {
-                    "channelId": channelId
+                    "channelId": channelId,
+                    "radioId": radioId,
+                    "shuffleId": shuffleId
                 })
             }
 
@@ -75,8 +77,15 @@ Kirigami.ScrollablePage {
                 }
             }
         }
+
+        SongMenu {
+            id: menu
+        }
+
         delegate: Kirigami.SwipeListItem {
+
             id: delegateItem
+
             required property int index
             required property string title
             required property int type
@@ -88,10 +97,11 @@ Kirigami.ScrollablePage {
 
             RowLayout {
                 Layout.fillHeight: true
-                Kirigami.Icon {
-                    Layout.fillHeight: true
+                RoundedImage {
                     source: delegateItem.thumbnailUrl
-
+                    height: 35
+                    width: height
+                    radius: delegateItem.type === SearchModel.Artist?height/2:5
                 }
 
                 ColumnLayout {
@@ -106,28 +116,18 @@ Kirigami.ScrollablePage {
                         visible: delegateItem.artistsDisplayString
                         color: Kirigami.Theme.disabledTextColor
                         text: delegateItem.artistsDisplayString
+                        elide: Qt.ElideRight
+
                     }
                 }
             }
 
             actions: [
                 Kirigami.Action {
-                    icon.name: "go-next"
-                    text: i18n("Play next")
+                    icon.name: "view-more-horizontal-symbolic"
+                    text: i18n("More")
                     visible: delegateItem.type === SearchModel.Song || delegateItem.type === SearchModel.Video
-                    onTriggered: UserPlaylistModel.playNext(delegateItem.videoId, delegateItem.title, delegateItem.artists)
-                },
-                Kirigami.Action {
-                    icon.name: "media-playlist-append"
-                    text: i18n("Add to Playlist")
-                    visible: delegateItem.type === SearchModel.Song || delegateItem.type === SearchModel.Video
-                    onTriggered: UserPlaylistModel.append(delegateItem.videoId, delegateItem.title, delegateItem.artists)
-                },
-                Kirigami.Action {
-                    icon.name: "radio"
-                    text: i18n("Radio")
-                    visible: delegateItem.type === SearchModel.Artist && delegateItem.radioPlaylistId
-                    onTriggered: playPlaylist(delegateItem.radioPlaylistId)
+                    onTriggered: menu.openForSong(delegateItem.videoId, delegateItem.title, delegateItem.artists, delegateItem.artistsDisplayString)
                 }
             ]
 

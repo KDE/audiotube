@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
 #include "albummodel.h"
+#include "playlistutils.h"
 
 #include <QStringBuilder>
 
@@ -21,6 +22,7 @@ AlbumModel::AlbumModel(QObject *parent)
             std::sort(m_album.thumbnails.begin(), m_album.thumbnails.end());
 
             Q_EMIT titleChanged();
+            Q_EMIT artistsChanged();
             Q_EMIT thumbnailUrlChanged();
             Q_EMIT playlistIdChanged();
         });
@@ -48,7 +50,11 @@ QVariant AlbumModel::data(const QModelIndex &index, int role) const
     case ThumbnailUrl:
         if (!m_album.thumbnails.empty()) {
             return QString::fromStdString(m_album.thumbnails.front().url);
+        } else {
+            return {};
         }
+    case ArtistsDisplayString:
+        return PlaylistUtils::artistsToString(m_album.tracks[index.row()].artists);
     }
 
     Q_UNREACHABLE();
@@ -62,7 +68,8 @@ QHash<int, QByteArray> AlbumModel::roleNames() const
         {Title, "title"},
         {VideoId, "videoId"},
         {Artists, "artists"},
-        {ThumbnailUrl, "thumbnailUrl"}
+        {ThumbnailUrl, "thumbnailUrl"},
+        {ArtistsDisplayString, "artistsDisplayString"}
     };
 }
 
@@ -81,6 +88,12 @@ QString AlbumModel::title() const
 {
     return QString::fromStdString(m_album.title);
 }
+
+QString AlbumModel::artists() const
+{
+    return PlaylistUtils::artistsToString(m_album.artists);
+}
+
 
 QUrl AlbumModel::thumbnailUrl() const
 {

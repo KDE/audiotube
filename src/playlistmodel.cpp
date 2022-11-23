@@ -40,7 +40,8 @@ QHash<int, QByteArray> PlaylistModel::roleNames() const
         {Title, "title"},
         {Artists, "artists"},
         {VideoId, "videoId"},
-        {ThumbnailUrl, "thumbnailUrl"}
+        {ThumbnailUrl, "thumbnailUrl"},
+        {ArtistsDisplayString, "artistsDisplayString"}
     };
 }
 
@@ -59,7 +60,11 @@ QVariant PlaylistModel::data(const QModelIndex &index, int role) const
     case ThumbnailUrl:
         if (!m_playlist.tracks[index.row()].thumbnails.empty()) {
             return QString::fromStdString(m_playlist.tracks[index.row()].thumbnails.front().url);
+        } else {
+            return {};
         }
+    case ArtistsDisplayString:
+        return PlaylistUtils::artistsToString(m_playlist.tracks[index.row()].artists);
     }
 
     Q_UNREACHABLE();

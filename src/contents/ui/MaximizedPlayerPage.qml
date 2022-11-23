@@ -196,7 +196,7 @@ Item {
                 height: swipeView.width
                 width: swipeView.height
                 Kirigami.ShadowedRectangle {
-                    anchors.centerIn: parent
+                   anchors.centerIn: parent
                    width: swipeView.specWidth
                    height: swipeView.specWidth
 
@@ -207,33 +207,11 @@ Item {
                     shadow.xOffset: 5
                     shadow.yOffset: 5
                     shadow.color: Qt.rgba(0, 0, 0, 0.2)
-                    Rectangle {
-                        width: parent.width
+                    RoundedImage {
+                        source: info.thumbnail
                         height: parent.height
-
-                        color: "transparent"
-
-                        //this Rectangle is needed to keep the source image's fillMode
-                        Rectangle {
-
-                            id: imageSource
-
-                            anchors.fill: parent
-                            Image {
-                                anchors.fill: parent
-                                source: info.thumbnail
-                                fillMode: Image.PreserveAspectCrop
-                                asynchronous: true
-                            }
-                            visible: false
-
-                            layer.enabled: true
-                        }
-
-                        RoundedMask {
-                            anchors.fill: parent
-                            colorSource: imageSource
-                        }
+                        width: height
+                        radius: 10
                     }
                 }
             }

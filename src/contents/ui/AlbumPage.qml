@@ -13,42 +13,46 @@ Kirigami.ScrollablePage {
     property alias browseId: albumModel.browseId
     title: albumModel.title
 
-    actions {
-        main: Kirigami.Action {
-            icon.name: "media-playback-start"
-            text: i18n("Play")
-            onTriggered: {
-                applicationWindow().playPlaylist(albumModel.playlistId)
-            }
-        }
-        right: Kirigami.Action {
-            icon.name: "media-playlist-shuffle"
-            text: i18n("Shuffle")
-            onTriggered: {
-                applicationWindow().playShufflePlaylist(albumModel.playlistId)
-            }
-        }
-    }
-
-    contextualActions: [
-        Kirigami.Action {
-            text: i18n("Open in Browser")
-            icon.name: "internet-services"
-            onTriggered: Qt.openUrlExternally(albumModel.webUrl)
-        }
-
-    ]
-
     ListView {
-        header: Kirigami.ItemViewHeader {
-            backgroundImage.source: albumModel.thumbnailUrl
+        id: songList
+        header: ListHeader {
+            visibleActions: [
+                Kirigami.Action {
+                    icon.name: "media-playback-start"
+                    text: i18n("Play")
+                    onTriggered: {
+                        applicationWindow().playPlaylist(albumModel.playlistId)
+                    }
+                },
+                Kirigami.Action {
+                    icon.name: "media-playlist-shuffle"
+                    text: i18n("Shuffle")
+                    onTriggered: {
+                        applicationWindow().playShufflePlaylist(albumModel.playlistId)
+                    }
+                }
+            ]
+            overflowActions: [
+                Kirigami.Action {
+                    text: i18n("Open in Browser")
+                    icon.name: "internet-services"
+                    onTriggered: Qt.openUrlExternally(albumModel.webUrl)
+                }
+            ]
             title: albumModel.title
+            imageSourceURL: albumModel.thumbnailUrl
+            subtitle: i18n("Album • %1" , albumModel.artists)
+            width: songList.width
         }
+
 
         reuseItems: true
 
         model: AlbumModel {
             id: albumModel
+        }
+        SongMenu {
+            id: menu
         }
         delegate: Kirigami.SwipeListItem {
             id: delegateItem
@@ -57,12 +61,17 @@ Kirigami.ScrollablePage {
             required property string videoId
             required property var artists
             required property string thumbnailUrl
+            required property string artistsDisplayString
+            required property int index
 
             RowLayout {
                 Layout.fillHeight: true
-                Kirigami.Icon {
-                    Layout.fillHeight: true
-                    source: delegateItem.thumbnailUrl
+                Controls.Label {
+                    text: (index + 1)
+                    font.bold: true
+                    leftPadding: 5
+                    color: Kirigami.Theme.disabledTextColor
+                    Layout.preferredWidth: 30
                 }
 
                 Controls.Label {
@@ -74,18 +83,13 @@ Kirigami.ScrollablePage {
 
             actions: [
                 Kirigami.Action {
-                    icon.name: "go-next"
-                    text: i18n("Play Next")
-                    onTriggered: UserPlaylistModel.playNext(delegateItem.videoId, delegateItem.title, delegateItem.artists)
-                },
-                Kirigami.Action {
-                    icon.name: "media-playlist-append"
-                    text: i18n("Add to Playlist")
-                    onTriggered: UserPlaylistModel.append(delegateItem.videoId, delegateItem.title, delegateItem.artists)
+                    icon.name: "view-more-horizontal-symbolic"
+                    text: i18n("More")
+                    onTriggered: menu.openForSong(delegateItem.videoId, delegateItem.title, delegateItem.artists, delegateItem.artistsDisplayString)
                 }
             ]
 
-            onClicked: play(videoId)
+            onClicked: play(delegateItem.videoId)
         }
 
         Controls.BusyIndicator {

@@ -16,6 +16,7 @@ class AlbumModel : public AbstractYTMusicModel
     Q_PROPERTY(QString browseId READ browseId WRITE setBrowseId NOTIFY browseIdChanged REQUIRED)
 
     Q_PROPERTY(QString title READ title NOTIFY titleChanged)
+    Q_PROPERTY(QString artists READ artists NOTIFY artistsChanged)
     Q_PROPERTY(QUrl thumbnailUrl READ thumbnailUrl NOTIFY thumbnailUrlChanged)
     Q_PROPERTY(QString playlistId READ playlistId NOTIFY playlistIdChanged)
     Q_PROPERTY(QUrl webUrl READ webUrl NOTIFY webUrlChanged)
@@ -26,6 +27,7 @@ public:
         VideoId,
         Artists,
         ThumbnailUrl,
+        ArtistsDisplayString
     };
 
     explicit AlbumModel(QObject *parent = nullptr);
@@ -41,6 +43,8 @@ public:
     QString title() const;
     Q_SIGNAL void titleChanged();
 
+    QString artists() const;
+    Q_SIGNAL void artistsChanged();
     QUrl thumbnailUrl() const;
     Q_SIGNAL void thumbnailUrlChanged();
 

@@ -15,7 +15,9 @@ Kirigami.ScrollablePage {
     title: i18n("Unknown list of songs")
 
     property QtObject dataModel
-
+    SongMenu {
+        id:menu
+    }
     ListView {
         id: listView
         reuseItems: true
@@ -45,39 +47,30 @@ Kirigami.ScrollablePage {
                     videoId: delegateItem.videoId
                 }
 
-                Item {
-                    width: Kirigami.Units.gridUnit * 3
-                    height: Kirigami.Units.gridUnit * 3
-
-                    Image {
-                        sourceSize: "200x200"
-                        source: thumbnailSource.cachedPath
-                        fillMode: Image.PreserveAspectCrop
-                        asynchronous: true
-
-                        width: Kirigami.Units.gridUnit * 3
-                        height: Kirigami.Units.gridUnit * 3
-
-                        Layout.alignment: Qt.AlignLeft
-                    }
+                RoundedImage {
+                    source: thumbnailSource.cachedPath
+                    height: 35
+                    width: height
+                    radius: 5
                 }
-
-                Controls.Label {
-                    text: delegateItem.title
-                    Layout.fillWidth: true
+                ColumnLayout {
+                    Controls.Label {
+                        text: delegateItem.title
+                        Layout.fillWidth: true
+                    }
+                    Controls.Label {
+                        Layout.fillWidth: true
+                        color: Kirigami.Theme.disabledTextColor
+                        text: delegateItem.artists
+                    }
                 }
             }
 
             actions: [
                 Kirigami.Action {
-                    icon.name: "go-next"
-                    text: i18n("Play Next")
-                    onTriggered: UserPlaylistModel.playNext(delegateItem.videoId, delegateItem.title, [])
-                },
-                Kirigami.Action {
-                    icon.name: "media-playlist-append"
-                    text: i18n("Add to Playlist")
-                    onTriggered: UserPlaylistModel.append(delegateItem.videoId, delegateItem.title, [])
+                    icon.name: "view-more-horizontal-symbolic"
+                    text: i18n("More")
+                    onTriggered: menu.openForSong(delegateItem.videoId, delegateItem.title, delegateItem.artists, delegateItem.artists)
                 }
             ]
         }

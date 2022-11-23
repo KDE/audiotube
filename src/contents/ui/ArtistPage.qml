@@ -11,21 +11,42 @@ import org.kde.ytmusic 1.0
 
 Kirigami.ScrollablePage {
     property alias channelId: artistModel.channelId
-
+    property string radioId
+    property string shuffleId
     title: artistModel.title
 
-    contextualActions: [
-        Kirigami.Action {
-            text: i18n("Open in Browser")
-            icon.name: "internet-services"
-            onTriggered: Qt.openUrlExternally(artistModel.webUrl)
-        }
-    ]
-
+    SongMenu {
+        id: menu
+    }
     ListView {
-        header: Kirigami.ItemViewHeader {
-            backgroundImage.source: artistModel.thumbnailUrl
+        id: songList
+
+        header: ListHeader {
+            visibleActions: [
+                Kirigami.Action {
+                    text: i18n("Radio")
+                    icon.name: "radio"
+                    onTriggered: playPlaylist(radioId)
+                },
+                Kirigami.Action {
+                    text: i18n("Shuffle")
+                    icon.name: "media-playlist-shuffle"
+                    onTriggered: playPlaylist(shuffleId)
+                }
+            ]
+            overflowActions: [
+                Kirigami.Action {
+                    text: i18n("Open in Browser")
+                    icon.name: "internet-services"
+                    onTriggered: Qt.openUrlExternally(artistModel.webUrl)
+                }
+            ]
             title: artistModel.title
+            imageSourceURL: artistModel.thumbnailUrl
+            subtitle: i18n("Artist")
+            rounded: true
+            width: songList.width
+
         }
 
         reuseItems: true
@@ -55,6 +76,7 @@ Kirigami.ScrollablePage {
                 }
             }
         }
+
         section.property: "type"
         section.delegate: Kirigami.ListSectionHeader {
             text: {
@@ -70,6 +92,7 @@ Kirigami.ScrollablePage {
                 }
             }
         }
+
         delegate: Kirigami.SwipeListItem {
             id: delegateItem
 
@@ -82,9 +105,11 @@ Kirigami.ScrollablePage {
 
             RowLayout {
                 Layout.fillHeight: true
-                Kirigami.Icon {
-                    Layout.fillHeight: true
+                RoundedImage {
                     source: delegateItem.thumbnailUrl
+                    height: 35
+                    width: height
+                    radius:5
                 }
 
                 Controls.Label {
@@ -96,16 +121,10 @@ Kirigami.ScrollablePage {
 
             actions: [
                 Kirigami.Action {
-                    icon.name: "go-next"
-                    text: i18n("Play Next")
+                    icon.name: "view-more-horizontal-symbolic"
+                    text: i18n("More")
                     visible: type === ArtistModel.Song
-                    onTriggered: UserPlaylistModel.playNext(delegateItem.videoId, delegateItem.title, delegateItem.artists)
-                },
-                Kirigami.Action {
-                    icon.name: "media-playlist-append"
-                    text: i18n("Add to Playlist")
-                    visible: type === ArtistModel.Song
-                    onTriggered: UserPlaylistModel.append(delegateItem.videoId, delegateItem.title, delegateItem.artists)
+                    onTriggered: menu.openForSong(delegateItem.videoId, delegateItem.title, delegateItem.artists, artistModel.title)
                 }
             ]
 
