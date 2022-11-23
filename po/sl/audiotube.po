@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-10 00:48+0000\n"
+"POT-Creation-Date: 2022-11-23 00:50+0000\n"
 "PO-Revision-Date: 2022-11-06 07:32+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -93,67 +93,67 @@ msgstr "V redu"
 msgid "Cancel"
 msgstr "Prekliči"
 
-#: contents/ui/LibraryPage.qml:27
+#: contents/ui/LibraryPage.qml:21
 #, kde-format
 msgid "Favourites"
 msgstr "Priljubljene"
 
-#: contents/ui/LibraryPage.qml:37 contents/ui/LibraryPage.qml:190
+#: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:187
 #, kde-format
 msgid "Show All"
 msgstr "Prikaži vse"
 
-#: contents/ui/LibraryPage.qml:42
+#: contents/ui/LibraryPage.qml:36
 #, kde-format
 msgid "Favourite Songs"
 msgstr "Priljubljene pesmi"
 
-#: contents/ui/LibraryPage.qml:180
+#: contents/ui/LibraryPage.qml:177
 #, kde-format
 msgid "Most played"
 msgstr "Največkrat predvajane"
 
-#: contents/ui/LibraryPage.qml:195
+#: contents/ui/LibraryPage.qml:192
 #, kde-format
 msgid "Played Songs"
 msgstr "Predvajane pesmi"
 
-#: contents/ui/main.qml:39
+#: contents/ui/main.qml:49
 #, kde-format
 msgid "Back"
 msgstr "Nazaj"
 
-#: contents/ui/main.qml:73 contents/ui/SearchPage.qml:149
+#: contents/ui/main.qml:83 contents/ui/SearchPage.qml:149
 #, kde-format
 msgid "Search"
 msgstr "Išči"
 
-#: contents/ui/main.qml:85
+#: contents/ui/main.qml:95
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
 
-#: contents/ui/MaximizedPlayerPage.qml:92
+#: contents/ui/MaximizedPlayerPage.qml:105
 #, kde-format
 msgid "Now Playing"
 msgstr "Pravkar predvajano"
 
-#: contents/ui/MaximizedPlayerPage.qml:117
+#: contents/ui/MaximizedPlayerPage.qml:130
 #, kde-format
 msgid "Queue"
 msgstr "Čakalna vrsta"
 
-#: contents/ui/MaximizedPlayerPage.qml:142
+#: contents/ui/MaximizedPlayerPage.qml:155
 #, kde-format
 msgid "Lyrics"
 msgstr "Besedilo"
 
-#: contents/ui/MaximizedPlayerPage.qml:291
+#: contents/ui/MaximizedPlayerPage.qml:292
 #, kde-format
 msgid "Remove Track"
 msgstr "Odstrani sled"
 
-#: contents/ui/MaximizedPlayerPage.qml:325
+#: contents/ui/MaximizedPlayerPage.qml:334
 #: contents/ui/MinimizedPlayerControls.qml:96
 #, kde-format
 msgid "No media playing"

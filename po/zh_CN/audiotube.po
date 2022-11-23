@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-10 00:48+0000\n"
+"POT-Creation-Date: 2022-11-23 00:50+0000\n"
 "PO-Revision-Date: 2022-11-19 14:49\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -92,67 +92,67 @@ msgstr "确定"
 msgid "Cancel"
 msgstr "取消"
 
-#: contents/ui/LibraryPage.qml:27
+#: contents/ui/LibraryPage.qml:21
 #, kde-format
 msgid "Favourites"
 msgstr "收藏夹"
 
-#: contents/ui/LibraryPage.qml:37 contents/ui/LibraryPage.qml:190
+#: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:187
 #, kde-format
 msgid "Show All"
 msgstr "显示全部"
 
-#: contents/ui/LibraryPage.qml:42
+#: contents/ui/LibraryPage.qml:36
 #, kde-format
 msgid "Favourite Songs"
 msgstr "收藏的歌曲"
 
-#: contents/ui/LibraryPage.qml:180
+#: contents/ui/LibraryPage.qml:177
 #, kde-format
 msgid "Most played"
 msgstr "最常播放"
 
-#: contents/ui/LibraryPage.qml:195
+#: contents/ui/LibraryPage.qml:192
 #, kde-format
 msgid "Played Songs"
 msgstr "已播放歌曲"
 
-#: contents/ui/main.qml:39
+#: contents/ui/main.qml:49
 #, kde-format
 msgid "Back"
 msgstr "返回"
 
-#: contents/ui/main.qml:73 contents/ui/SearchPage.qml:149
+#: contents/ui/main.qml:83 contents/ui/SearchPage.qml:149
 #, kde-format
 msgid "Search"
 msgstr "搜索"
 
-#: contents/ui/main.qml:85
+#: contents/ui/main.qml:95
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
 
-#: contents/ui/MaximizedPlayerPage.qml:92
+#: contents/ui/MaximizedPlayerPage.qml:105
 #, kde-format
 msgid "Now Playing"
 msgstr "正在播放"
 
-#: contents/ui/MaximizedPlayerPage.qml:117
+#: contents/ui/MaximizedPlayerPage.qml:130
 #, kde-format
 msgid "Queue"
 msgstr "播放队列"
 
-#: contents/ui/MaximizedPlayerPage.qml:142
+#: contents/ui/MaximizedPlayerPage.qml:155
 #, kde-format
 msgid "Lyrics"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:291
+#: contents/ui/MaximizedPlayerPage.qml:292
 #, kde-format
 msgid "Remove Track"
 msgstr "移除曲目"
 
-#: contents/ui/MaximizedPlayerPage.qml:325
+#: contents/ui/MaximizedPlayerPage.qml:334
 #: contents/ui/MinimizedPlayerControls.qml:96
 #, kde-format
 msgid "No media playing"

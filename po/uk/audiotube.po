@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-10 00:48+0000\n"
+"POT-Creation-Date: 2022-11-23 00:50+0000\n"
 "PO-Revision-Date: 2022-11-06 10:00+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -95,67 +95,67 @@ msgstr "Гаразд"
 msgid "Cancel"
 msgstr "Скасувати"
 
-#: contents/ui/LibraryPage.qml:27
+#: contents/ui/LibraryPage.qml:21
 #, kde-format
 msgid "Favourites"
 msgstr "Улюблені"
 
-#: contents/ui/LibraryPage.qml:37 contents/ui/LibraryPage.qml:190
+#: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:187
 #, kde-format
 msgid "Show All"
 msgstr "Показати всі"
 
-#: contents/ui/LibraryPage.qml:42
+#: contents/ui/LibraryPage.qml:36
 #, kde-format
 msgid "Favourite Songs"
 msgstr "Улюблені композиції"
 
-#: contents/ui/LibraryPage.qml:180
+#: contents/ui/LibraryPage.qml:177
 #, kde-format
 msgid "Most played"
 msgstr "Часто слухали"
 
-#: contents/ui/LibraryPage.qml:195
+#: contents/ui/LibraryPage.qml:192
 #, kde-format
 msgid "Played Songs"
 msgstr "Відтворені композиції"
 
-#: contents/ui/main.qml:39
+#: contents/ui/main.qml:49
 #, kde-format
 msgid "Back"
 msgstr "Назад"
 
-#: contents/ui/main.qml:73 contents/ui/SearchPage.qml:149
+#: contents/ui/main.qml:83 contents/ui/SearchPage.qml:149
 #, kde-format
 msgid "Search"
 msgstr "Пошук"
 
-#: contents/ui/main.qml:85
+#: contents/ui/main.qml:95
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
 
-#: contents/ui/MaximizedPlayerPage.qml:92
+#: contents/ui/MaximizedPlayerPage.qml:105
 #, kde-format
 msgid "Now Playing"
 msgstr "Зараз відтворюємо"
 
-#: contents/ui/MaximizedPlayerPage.qml:117
+#: contents/ui/MaximizedPlayerPage.qml:130
 #, kde-format
 msgid "Queue"
 msgstr "Додати до черги"
 
-#: contents/ui/MaximizedPlayerPage.qml:142
+#: contents/ui/MaximizedPlayerPage.qml:155
 #, kde-format
 msgid "Lyrics"
 msgstr "Текст"
 
-#: contents/ui/MaximizedPlayerPage.qml:291
+#: contents/ui/MaximizedPlayerPage.qml:292
 #, kde-format
 msgid "Remove Track"
 msgstr "Вилучити композицію"
 
-#: contents/ui/MaximizedPlayerPage.qml:325
+#: contents/ui/MaximizedPlayerPage.qml:334
 #: contents/ui/MinimizedPlayerControls.qml:96
 #, kde-format
 msgid "No media playing"

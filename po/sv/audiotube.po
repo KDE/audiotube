@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-10 00:48+0000\n"
+"POT-Creation-Date: 2022-11-23 00:50+0000\n"
 "PO-Revision-Date: 2022-09-24 14:57+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -92,67 +92,67 @@ msgstr "Ok"
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: contents/ui/LibraryPage.qml:27
+#: contents/ui/LibraryPage.qml:21
 #, kde-format
 msgid "Favourites"
 msgstr "Favoriter"
 
-#: contents/ui/LibraryPage.qml:37 contents/ui/LibraryPage.qml:190
+#: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:187
 #, kde-format
 msgid "Show All"
 msgstr "Visa alla"
 
-#: contents/ui/LibraryPage.qml:42
+#: contents/ui/LibraryPage.qml:36
 #, kde-format
 msgid "Favourite Songs"
 msgstr "Favoritlåtar"
 
-#: contents/ui/LibraryPage.qml:180
+#: contents/ui/LibraryPage.qml:177
 #, kde-format
 msgid "Most played"
 msgstr "Mest spelade"
 
-#: contents/ui/LibraryPage.qml:195
+#: contents/ui/LibraryPage.qml:192
 #, kde-format
 msgid "Played Songs"
 msgstr "Spelade låtar"
 
-#: contents/ui/main.qml:39
+#: contents/ui/main.qml:49
 #, kde-format
 msgid "Back"
 msgstr "Bakåt"
 
-#: contents/ui/main.qml:73 contents/ui/SearchPage.qml:149
+#: contents/ui/main.qml:83 contents/ui/SearchPage.qml:149
 #, kde-format
 msgid "Search"
 msgstr "Sök"
 
-#: contents/ui/main.qml:85
+#: contents/ui/main.qml:95
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
 
-#: contents/ui/MaximizedPlayerPage.qml:92
+#: contents/ui/MaximizedPlayerPage.qml:105
 #, kde-format
 msgid "Now Playing"
 msgstr "Spelar nu"
 
-#: contents/ui/MaximizedPlayerPage.qml:117
+#: contents/ui/MaximizedPlayerPage.qml:130
 #, kde-format
 msgid "Queue"
 msgstr "Köa"
 
-#: contents/ui/MaximizedPlayerPage.qml:142
+#: contents/ui/MaximizedPlayerPage.qml:155
 #, kde-format
 msgid "Lyrics"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:291
+#: contents/ui/MaximizedPlayerPage.qml:292
 #, kde-format
 msgid "Remove Track"
 msgstr "Ta bort spår"
 
-#: contents/ui/MaximizedPlayerPage.qml:325
+#: contents/ui/MaximizedPlayerPage.qml:334
 #: contents/ui/MinimizedPlayerControls.qml:96
 #, kde-format
 msgid "No media playing"
