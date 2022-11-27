@@ -67,11 +67,11 @@ Kirigami.ScrollablePage {
             onOpenVideo: (videoId, title) => {
                 videoPlayMessage.text = i18n("Video playback is not supported yet. Do you want to play only the audio of \"%1\"?", title)
                 videoPlayMessage.visible = true
-                videoPlayMessage.okAction = function() {
+                videoPlayMessage.okAction = () => {
                     play(videoId)
                     videoPlayMessage.visible = false
                 }
-                videoPlayMessage.cancelAction = function() {
+                videoPlayMessage.cancelAction = () => {
                     videoPlayMessage.visible = false
                 }
             }
