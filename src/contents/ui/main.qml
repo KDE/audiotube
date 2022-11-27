@@ -121,6 +121,107 @@ Kirigami.ApplicationWindow {
             showPassiveNotification(error)
         }
     }
+
+    Component {
+        id: searchAlbum
+
+        ColumnLayout {
+            Layout.alignment: Qt.AlignTop
+            id: mpdelegateItem
+
+            width: 100
+            Layout.maximumWidth: 70
+
+            Kirigami.ShadowedRectangle {
+                id: recCover
+                MouseArea {
+                    id: recArea
+                    anchors.fill: parent
+                    onClicked: play(model.videoId)
+                    hoverEnabled: !Kirigami.Settings.hasTransientTouchInput
+                    onEntered: {
+                        if (!Kirigami.Settings.hasTransientTouchInput)
+                            recSelected.visible = true
+                    }
+                    onExited: recSelected.visible = false
+
+                }
+                Layout.margins: 5
+
+                width: 70
+                height: 70
+                radius: 10
+                shadow.size: 15
+                shadow.xOffset: 5
+                shadow.yOffset: 5
+                shadow.color: Qt.rgba(0, 0, 0, 0.2)
+                Rectangle {
+                    width: 70
+                    height: 70
+
+                    color: "transparent"
+
+                    //this Rectangle is needed to keep the source image's fillMode
+
+                    ThumbnailSource {
+                        id: mpthumbnailSource
+                        videoId: model ? model.videoId : ""
+                    }
+                    Rectangle {
+
+                        id: recImageSource
+
+                        anchors.fill: parent
+                        Image {
+                            anchors.fill: parent
+                            source: mpthumbnailSource.cachedPath
+                            fillMode: Image.PreserveAspectCrop
+                            asynchronous: true
+                        }
+                        visible: false
+
+                        layer.enabled: true
+                    }
+
+                    RoundedMask {
+                        anchors.fill: parent
+                        colorSource: recImageSource
+                    }
+
+                    Rectangle {
+                        id: recSelected
+
+                        Rectangle {
+                            anchors.fill: parent
+                            color: Kirigami.Theme.hoverColor
+                            radius: 10
+                            opacity: 0.2
+                        }
+
+                        visible: false
+                        anchors.fill: parent
+
+                        radius: 9
+
+                        border.color: Kirigami.Theme.hoverColor
+                        border.width: 2
+                        color: "transparent"
+                    }
+                }
+            }
+            Controls.Label {
+                leftPadding:5
+                Layout.maximumWidth: 70
+                text: model ? model.title : ""
+                elide: Qt.ElideRight
+                wrapMode: Text.WordWrap
+                Layout.maximumHeight: 40
+            }
+            Item {
+                height: 5
+            }
+        }
+    }
     
     Component {
         id: searchFieldComponent
@@ -176,104 +277,8 @@ Kirigami.ApplicationWindow {
                                         filterRegularExpression: searchField.filterExpression
                                         sourceModel: Library.playbackHistory
                                     }
-                                    delegate: ColumnLayout {
-                                        Layout.alignment: Qt.AlignTop
-                                        id: mpdelegateItem
-                                        required property string title
-                                        required property string artists
-                                        required property string videoId
-
-                                        width: 100
-                                        Layout.maximumWidth: 70
-
-                                        Kirigami.ShadowedRectangle {
-                                            id: recCover
-                                            MouseArea {
-                                                id: recArea
-                                                anchors.fill: parent
-                                                onClicked: play(mpdelegateItem.videoId)
-                                                hoverEnabled: !Kirigami.Settings.hasTransientTouchInput
-                                                onEntered: {
-                                                    if (!Kirigami.Settings.hasTransientTouchInput)
-                                                        recSelected.visible = true
-                                                }
-                                                onExited: recSelected.visible = false
-
-                                            }
-                                            Layout.margins: 5
-
-                                            width: 70
-                                            height: 70
-                                            radius: 10
-                                            shadow.size: 15
-                                            shadow.xOffset: 5
-                                            shadow.yOffset: 5
-                                            shadow.color: Qt.rgba(0, 0, 0, 0.2)
-                                            Rectangle {
-                                                width: 70
-                                                height: 70
-
-                                                color: "transparent"
-
-                                                //this Rectangle is needed to keep the source image's fillMode
-
-                                                ThumbnailSource {
-                                                    id: mpthumbnailSource
-                                                    videoId: mpdelegateItem.videoId
-                                                }
-                                                Rectangle {
-
-                                                    id: recImageSource
-
-                                                    anchors.fill: parent
-                                                    Image {
-                                                        anchors.fill: parent
-                                                        source: mpthumbnailSource.cachedPath
-                                                        fillMode: Image.PreserveAspectCrop
-                                                        asynchronous: true
-                                                    }
-                                                    visible: false
-
-                                                    layer.enabled: true
-                                                }
-
-                                                RoundedMask {
-                                                    anchors.fill: parent
-                                                    colorSource: recImageSource
-                                                }
-
-                                                Rectangle {
-                                                    id: recSelected
-
-                                                    Rectangle {
-                                                        anchors.fill: parent
-                                                        color: Kirigami.Theme.hoverColor
-                                                        radius: 10
-                                                        opacity: 0.2
-                                                    }
-
-                                                    visible: false
-                                                    anchors.fill: parent
-
-                                                    radius: 9
-
-                                                    border.color: Kirigami.Theme.hoverColor
-                                                    border.width: 2
-                                                    color: "transparent"
-                                                }
-                                            }
-                                        }
-                                        Controls.Label {
-                                            leftPadding:5
-                                            Layout.maximumWidth: 70
-                                            text: mpdelegateItem.title
-                                            elide: Qt.ElideRight
-                                            wrapMode: Text.WordWrap
-                                            Layout.maximumHeight: 40
-                                        }
-                                        Item {
-                                            height: 5
-                                        }
+                                    delegate: Kirigami.DelegateRecycler {
+                                        sourceComponent: searchAlbum
                                     }
                                 }
                             }
