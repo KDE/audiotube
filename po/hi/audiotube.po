@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-23 00:50+0000\n"
+"POT-Creation-Date: 2022-11-28 00:51+0000\n"
 "PO-Revision-Date: 2021-09-17 20:09+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -27,35 +27,46 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "raghu@raghukamath.com"
 
-#: contents/ui/AlbumPage.qml:19 contents/ui/PlaylistPage.qml:19
+#: contents/ui/AlbumPage.qml:22 contents/ui/PlaylistPage.qml:26
 #, kde-format
 msgid "Play"
 msgstr "बजाएँ"
 
-#: contents/ui/AlbumPage.qml:26 contents/ui/PlaylistPage.qml:26
+#: contents/ui/AlbumPage.qml:29 contents/ui/ArtistPage.qml:32
+#: contents/ui/PlaylistPage.qml:33
 #, kde-format
 msgid "Shuffle"
 msgstr "फेंटें"
 
-#: contents/ui/AlbumPage.qml:35 contents/ui/ArtistPage.qml:19
+#: contents/ui/AlbumPage.qml:37 contents/ui/ArtistPage.qml:39
 #, kde-format
 msgid "Open in Browser"
 msgstr ""
 
-#: contents/ui/AlbumPage.qml:78 contents/ui/ArtistPage.qml:100
-#: contents/ui/PlaybackHistory.qml:74 contents/ui/PlaylistPage.qml:68
+#: contents/ui/AlbumPage.qml:44
 #, kde-format
-msgid "Play Next"
-msgstr "अगला बजाएँ"
+msgid "Album • %1"
+msgstr ""
 
-#: contents/ui/AlbumPage.qml:83 contents/ui/ArtistPage.qml:106
-#: contents/ui/PlaybackHistory.qml:79 contents/ui/PlaylistPage.qml:73
-#: contents/ui/SearchPage.qml:122
+#: contents/ui/AlbumPage.qml:87 contents/ui/ArtistPage.qml:125
+#: contents/ui/PlaybackHistory.qml:72 contents/ui/PlaylistPage.qml:89
+#: contents/ui/SearchPage.qml:128
 #, kde-format
-msgid "Add to Playlist"
-msgstr "गीत-सूची में जोड़ें"
+msgid "More"
+msgstr ""
 
-#: contents/ui/ArtistPage.qml:47 contents/ui/SearchPage.qml:67
+#: contents/ui/ArtistPage.qml:27
+#, kde-format
+msgid "Radio"
+msgstr "रेडियो"
+
+#: contents/ui/ArtistPage.qml:46
+#, fuzzy, kde-format
+#| msgid "Artists"
+msgid "Artist"
+msgstr "कलाकार"
+
+#: contents/ui/ArtistPage.qml:68 contents/ui/SearchPage.qml:69
 #, kde-format
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
@@ -63,22 +74,22 @@ msgid ""
 msgstr ""
 "वीडियो चलाना अभी तक समर्थित नहीं है। क्या आप केवल \"%1\" का ध्वनी चलाना चाहते हैं?"
 
-#: contents/ui/ArtistPage.qml:63 contents/ui/SearchPage.qml:25
+#: contents/ui/ArtistPage.qml:85 contents/ui/SearchPage.qml:25
 #, kde-format
 msgid "Albums"
 msgstr "एल्बम्स"
 
-#: contents/ui/ArtistPage.qml:65
+#: contents/ui/ArtistPage.qml:87
 #, kde-format
 msgid "Singles"
 msgstr "एक गीत"
 
-#: contents/ui/ArtistPage.qml:67 contents/ui/SearchPage.qml:31
+#: contents/ui/ArtistPage.qml:89 contents/ui/SearchPage.qml:31
 #, kde-format
 msgid "Songs"
 msgstr "गीत"
 
-#: contents/ui/ArtistPage.qml:69 contents/ui/SearchPage.qml:33
+#: contents/ui/ArtistPage.qml:91 contents/ui/SearchPage.qml:33
 #, kde-format
 msgid "Videos"
 msgstr "वीडियो"
@@ -98,7 +109,7 @@ msgstr ""
 msgid "Favourites"
 msgstr ""
 
-#: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:187
+#: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:181
 #, kde-format
 msgid "Show All"
 msgstr ""
@@ -108,12 +119,12 @@ msgstr ""
 msgid "Favourite Songs"
 msgstr ""
 
-#: contents/ui/LibraryPage.qml:177
+#: contents/ui/LibraryPage.qml:171
 #, kde-format
 msgid "Most played"
 msgstr ""
 
-#: contents/ui/LibraryPage.qml:192
+#: contents/ui/LibraryPage.qml:186
 #, kde-format
 msgid "Played Songs"
 msgstr ""
@@ -149,13 +160,13 @@ msgstr ""
 msgid "Lyrics"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:292
+#: contents/ui/MaximizedPlayerPage.qml:270
 #, kde-format
 msgid "Remove Track"
 msgstr "गाना हटाएँ"
 
-#: contents/ui/MaximizedPlayerPage.qml:334
-#: contents/ui/MinimizedPlayerControls.qml:96
+#: contents/ui/MaximizedPlayerPage.qml:312
+#: contents/ui/MinimizedPlayerControls.qml:91
 #, kde-format
 msgid "No media playing"
 msgstr "कोई मीडिया नहीं बजा रहा है"
@@ -165,10 +176,16 @@ msgstr "कोई मीडिया नहीं बजा रहा है"
 msgid "Unknown list of songs"
 msgstr ""
 
-#: contents/ui/PlaybackHistory.qml:25
+#: contents/ui/PlaybackHistory.qml:27
 #, kde-format
 msgid "No songs here yet"
 msgstr ""
+
+#: contents/ui/PlaylistPage.qml:42
+#, fuzzy, kde-format
+#| msgid "Playlists"
+msgid "Playlist"
+msgstr "गीत-सूचीयाँ"
 
 #: contents/ui/SearchPage.qml:27
 #, kde-format
@@ -185,20 +202,36 @@ msgstr "गीत-सूचीयाँ"
 msgid "Unknown"
 msgstr "अज्ञात"
 
-#: contents/ui/SearchPage.qml:116
-#, kde-format
-msgid "Play next"
-msgstr "अगला बजाएँ"
-
-#: contents/ui/SearchPage.qml:128
-#, kde-format
-msgid "Radio"
-msgstr "रेडियो"
-
 #: contents/ui/SearchPage.qml:146
 #, kde-format
 msgid "Find music on YouTube Music"
 msgstr "यूट्यूब संगीत पर संगीत ढूंढें"
+
+#: contents/ui/SongMenu.qml:26
+#, kde-format
+msgid "Play Next"
+msgstr "अगला बजाएँ"
+
+#: contents/ui/SongMenu.qml:32
+#, kde-format
+msgid "Add to queue"
+msgstr ""
+
+#: contents/ui/SongMenu.qml:39
+#, kde-format
+msgid "Remove Favourite"
+msgstr ""
+
+#: contents/ui/SongMenu.qml:39
+#, kde-format
+msgid "Add Favourite"
+msgstr ""
+
+#~ msgid "Add to Playlist"
+#~ msgstr "गीत-सूची में जोड़ें"
+
+#~ msgid "Play next"
+#~ msgstr "अगला बजाएँ"
 
 #~ msgid "Clear"
 #~ msgstr "साफ करें"

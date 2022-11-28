@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-23 00:50+0000\n"
+"POT-Creation-Date: 2022-11-28 00:51+0000\n"
 "PO-Revision-Date: 2022-10-03 14:20+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-i18n-doc@kde.org>\n"
@@ -27,57 +27,68 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde@peremen.name"
 
-#: contents/ui/AlbumPage.qml:19 contents/ui/PlaylistPage.qml:19
+#: contents/ui/AlbumPage.qml:22 contents/ui/PlaylistPage.qml:26
 #, kde-format
 msgid "Play"
 msgstr "재생"
 
-#: contents/ui/AlbumPage.qml:26 contents/ui/PlaylistPage.qml:26
+#: contents/ui/AlbumPage.qml:29 contents/ui/ArtistPage.qml:32
+#: contents/ui/PlaylistPage.qml:33
 #, kde-format
 msgid "Shuffle"
 msgstr "무순서 재생"
 
-#: contents/ui/AlbumPage.qml:35 contents/ui/ArtistPage.qml:19
+#: contents/ui/AlbumPage.qml:37 contents/ui/ArtistPage.qml:39
 #, kde-format
 msgid "Open in Browser"
 msgstr "브라우저로 열기"
 
-#: contents/ui/AlbumPage.qml:78 contents/ui/ArtistPage.qml:100
-#: contents/ui/PlaybackHistory.qml:74 contents/ui/PlaylistPage.qml:68
+#: contents/ui/AlbumPage.qml:44
 #, kde-format
-msgid "Play Next"
-msgstr "다음 재생"
+msgid "Album • %1"
+msgstr ""
 
-#: contents/ui/AlbumPage.qml:83 contents/ui/ArtistPage.qml:106
-#: contents/ui/PlaybackHistory.qml:79 contents/ui/PlaylistPage.qml:73
-#: contents/ui/SearchPage.qml:122
+#: contents/ui/AlbumPage.qml:87 contents/ui/ArtistPage.qml:125
+#: contents/ui/PlaybackHistory.qml:72 contents/ui/PlaylistPage.qml:89
+#: contents/ui/SearchPage.qml:128
 #, kde-format
-msgid "Add to Playlist"
-msgstr "재생 목록에 추가"
+msgid "More"
+msgstr ""
 
-#: contents/ui/ArtistPage.qml:47 contents/ui/SearchPage.qml:67
+#: contents/ui/ArtistPage.qml:27
+#, kde-format
+msgid "Radio"
+msgstr "라디오"
+
+#: contents/ui/ArtistPage.qml:46
+#, fuzzy, kde-format
+#| msgid "Artists"
+msgid "Artist"
+msgstr "아티스트"
+
+#: contents/ui/ArtistPage.qml:68 contents/ui/SearchPage.qml:69
 #, kde-format
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
 "\"%1\"?"
 msgstr "비디오 재생은 지원하지 않습니다. \"%1\"의 오디오만 재생하시겠습니까?"
 
-#: contents/ui/ArtistPage.qml:63 contents/ui/SearchPage.qml:25
+#: contents/ui/ArtistPage.qml:85 contents/ui/SearchPage.qml:25
 #, kde-format
 msgid "Albums"
 msgstr "앨범"
 
-#: contents/ui/ArtistPage.qml:65
+#: contents/ui/ArtistPage.qml:87
 #, kde-format
 msgid "Singles"
 msgstr "싱글"
 
-#: contents/ui/ArtistPage.qml:67 contents/ui/SearchPage.qml:31
+#: contents/ui/ArtistPage.qml:89 contents/ui/SearchPage.qml:31
 #, kde-format
 msgid "Songs"
 msgstr "곡"
 
-#: contents/ui/ArtistPage.qml:69 contents/ui/SearchPage.qml:33
+#: contents/ui/ArtistPage.qml:91 contents/ui/SearchPage.qml:33
 #, kde-format
 msgid "Videos"
 msgstr "비디오"
@@ -97,7 +108,7 @@ msgstr "취소"
 msgid "Favourites"
 msgstr "책갈피"
 
-#: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:187
+#: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:181
 #, kde-format
 msgid "Show All"
 msgstr "모두 표시"
@@ -107,12 +118,12 @@ msgstr "모두 표시"
 msgid "Favourite Songs"
 msgstr "책갈피에 등록된 노래"
 
-#: contents/ui/LibraryPage.qml:177
+#: contents/ui/LibraryPage.qml:171
 #, kde-format
 msgid "Most played"
 msgstr "가장 많이 재생됨"
 
-#: contents/ui/LibraryPage.qml:192
+#: contents/ui/LibraryPage.qml:186
 #, kde-format
 msgid "Played Songs"
 msgstr "재생한 노래"
@@ -147,13 +158,13 @@ msgstr "대기열에 추가"
 msgid "Lyrics"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:292
+#: contents/ui/MaximizedPlayerPage.qml:270
 #, kde-format
 msgid "Remove Track"
 msgstr "트랙 삭제"
 
-#: contents/ui/MaximizedPlayerPage.qml:334
-#: contents/ui/MinimizedPlayerControls.qml:96
+#: contents/ui/MaximizedPlayerPage.qml:312
+#: contents/ui/MinimizedPlayerControls.qml:91
 #, kde-format
 msgid "No media playing"
 msgstr "재생 중인 미디어 없음"
@@ -163,10 +174,16 @@ msgstr "재생 중인 미디어 없음"
 msgid "Unknown list of songs"
 msgstr "알 수 없는 노래 목록"
 
-#: contents/ui/PlaybackHistory.qml:25
+#: contents/ui/PlaybackHistory.qml:27
 #, kde-format
 msgid "No songs here yet"
 msgstr "목록에 등록된 곡 없음"
+
+#: contents/ui/PlaylistPage.qml:42
+#, fuzzy, kde-format
+#| msgid "Playlists"
+msgid "Playlist"
+msgstr "재생 목록"
 
 #: contents/ui/SearchPage.qml:27
 #, kde-format
@@ -183,20 +200,38 @@ msgstr "재생 목록"
 msgid "Unknown"
 msgstr "알 수 없음"
 
-#: contents/ui/SearchPage.qml:116
-#, kde-format
-msgid "Play next"
-msgstr "다음 재생"
-
-#: contents/ui/SearchPage.qml:128
-#, kde-format
-msgid "Radio"
-msgstr "라디오"
-
 #: contents/ui/SearchPage.qml:146
 #, kde-format
 msgid "Find music on YouTube Music"
 msgstr "YouTube Music에서 음악 찾기"
+
+#: contents/ui/SongMenu.qml:26
+#, kde-format
+msgid "Play Next"
+msgstr "다음 재생"
+
+#: contents/ui/SongMenu.qml:32
+#, kde-format
+msgid "Add to queue"
+msgstr ""
+
+#: contents/ui/SongMenu.qml:39
+#, fuzzy, kde-format
+#| msgid "Favourites"
+msgid "Remove Favourite"
+msgstr "책갈피"
+
+#: contents/ui/SongMenu.qml:39
+#, fuzzy, kde-format
+#| msgid "Favourites"
+msgid "Add Favourite"
+msgstr "책갈피"
+
+#~ msgid "Add to Playlist"
+#~ msgstr "재생 목록에 추가"
+
+#~ msgid "Play next"
+#~ msgstr "다음 재생"
 
 #~ msgid "Clear"
 #~ msgstr "지우기"
