@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-28 00:51+0000\n"
-"PO-Revision-Date: 2022-06-03 17:36+0100\n"
+"PO-Revision-Date: 2022-11-28 18:35+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -48,14 +48,14 @@ msgstr "Abrir no Navegador"
 #: contents/ui/AlbumPage.qml:44
 #, kde-format
 msgid "Album • %1"
-msgstr ""
+msgstr "Álbum • %1"
 
 #: contents/ui/AlbumPage.qml:87 contents/ui/ArtistPage.qml:125
 #: contents/ui/PlaybackHistory.qml:72 contents/ui/PlaylistPage.qml:89
 #: contents/ui/SearchPage.qml:128
 #, kde-format
 msgid "More"
-msgstr ""
+msgstr "Mais"
 
 #: contents/ui/ArtistPage.qml:27
 #, kde-format
@@ -63,10 +63,9 @@ msgid "Radio"
 msgstr "Rádio"
 
 #: contents/ui/ArtistPage.qml:46
-#, fuzzy, kde-format
-#| msgid "Artists"
+#, kde-format
 msgid "Artist"
-msgstr "Artistas"
+msgstr "Artista"
 
 #: contents/ui/ArtistPage.qml:68 contents/ui/SearchPage.qml:69
 #, kde-format
@@ -184,10 +183,9 @@ msgid "No songs here yet"
 msgstr "Ainda sem músicas aqui"
 
 #: contents/ui/PlaylistPage.qml:42
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "Playlist"
-msgstr "Listas de Reprodução"
+msgstr "Lista de Reprodução"
 
 #: contents/ui/SearchPage.qml:27
 #, kde-format
@@ -217,22 +215,14 @@ msgstr "Reproduzir o Seguinte"
 #: contents/ui/SongMenu.qml:32
 #, kde-format
 msgid "Add to queue"
-msgstr ""
+msgstr "Adicionar à fila"
 
 #: contents/ui/SongMenu.qml:39
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "Remove Favourite"
-msgstr "Favoritos"
+msgstr "Remover o Favorito"
 
 #: contents/ui/SongMenu.qml:39
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "Add Favourite"
-msgstr "Favoritos"
-
-#~ msgid "Add to Playlist"
-#~ msgstr "Adicionar à Lista de Reprodução"
-
-#~ msgid "Play next"
-#~ msgstr "Reproduzir o seguinte"
+msgstr "Adicionar aos Favoritos"

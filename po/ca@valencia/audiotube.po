@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-28 00:51+0000\n"
-"PO-Revision-Date: 2022-11-06 10:41+0100\n"
+"PO-Revision-Date: 2022-11-28 08:58+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -49,14 +49,14 @@ msgstr "Obri en el navegador"
 #: contents/ui/AlbumPage.qml:44
 #, kde-format
 msgid "Album • %1"
-msgstr ""
+msgstr "Àlbum • %1"
 
 #: contents/ui/AlbumPage.qml:87 contents/ui/ArtistPage.qml:125
 #: contents/ui/PlaybackHistory.qml:72 contents/ui/PlaylistPage.qml:89
 #: contents/ui/SearchPage.qml:128
 #, kde-format
 msgid "More"
-msgstr ""
+msgstr "Més"
 
 #: contents/ui/ArtistPage.qml:27
 #, kde-format
@@ -64,10 +64,9 @@ msgid "Radio"
 msgstr "Ràdio"
 
 #: contents/ui/ArtistPage.qml:46
-#, fuzzy, kde-format
-#| msgid "Artists"
+#, kde-format
 msgid "Artist"
-msgstr "Artistes"
+msgstr "Artista"
 
 #: contents/ui/ArtistPage.qml:68 contents/ui/SearchPage.qml:69
 #, kde-format
@@ -185,10 +184,9 @@ msgid "No songs here yet"
 msgstr "Encara no hi ha cap cançó"
 
 #: contents/ui/PlaylistPage.qml:42
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "Playlist"
-msgstr "Llistes de reproducció"
+msgstr "Llista de reproducció"
 
 #: contents/ui/SearchPage.qml:27
 #, kde-format
@@ -218,22 +216,14 @@ msgstr "Reproduïx el següent"
 #: contents/ui/SongMenu.qml:32
 #, kde-format
 msgid "Add to queue"
-msgstr ""
+msgstr "Afig a la cua"
 
 #: contents/ui/SongMenu.qml:39
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "Remove Favourite"
-msgstr "Preferides"
+msgstr "Elimina de les preferides"
 
 #: contents/ui/SongMenu.qml:39
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "Add Favourite"
-msgstr "Preferides"
-
-#~ msgid "Add to Playlist"
-#~ msgstr "Afig a la llista de reproducció"
-
-#~ msgid "Play next"
-#~ msgstr "Reproduïx el següent"
+msgstr "Afig a les preferides"
