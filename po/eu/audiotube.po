@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-28 00:51+0000\n"
-"PO-Revision-Date: 2022-11-06 06:34+0100\n"
+"PO-Revision-Date: 2022-11-29 05:34+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -49,14 +49,14 @@ msgstr "Ireki arakatzailean"
 #: contents/ui/AlbumPage.qml:44
 #, kde-format
 msgid "Album • %1"
-msgstr ""
+msgstr "Albuma • %1"
 
 #: contents/ui/AlbumPage.qml:87 contents/ui/ArtistPage.qml:125
 #: contents/ui/PlaybackHistory.qml:72 contents/ui/PlaylistPage.qml:89
 #: contents/ui/SearchPage.qml:128
 #, kde-format
 msgid "More"
-msgstr ""
+msgstr "Gehiago"
 
 #: contents/ui/ArtistPage.qml:27
 #, kde-format
@@ -64,10 +64,9 @@ msgid "Radio"
 msgstr "Irratia"
 
 #: contents/ui/ArtistPage.qml:46
-#, fuzzy, kde-format
-#| msgid "Artists"
+#, kde-format
 msgid "Artist"
-msgstr "Artistak"
+msgstr "Artista"
 
 #: contents/ui/ArtistPage.qml:68 contents/ui/SearchPage.qml:69
 #, kde-format
@@ -185,10 +184,9 @@ msgid "No songs here yet"
 msgstr "Hemen oraindik ez dago abestirik"
 
 #: contents/ui/PlaylistPage.qml:42
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "Playlist"
-msgstr "Jotze-zerrendak"
+msgstr "Jotze-zerrenda"
 
 #: contents/ui/SearchPage.qml:27
 #, kde-format
@@ -218,19 +216,17 @@ msgstr "Jo hurrengoa"
 #: contents/ui/SongMenu.qml:32
 #, kde-format
 msgid "Add to queue"
-msgstr ""
+msgstr "Gehitu ilaran"
 
 #: contents/ui/SongMenu.qml:39
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "Remove Favourite"
-msgstr "Gogokoak"
+msgstr "Kendu gogokoa"
 
 #: contents/ui/SongMenu.qml:39
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "Add Favourite"
-msgstr "Gogokoak"
+msgstr "Gehitu gogokoa"
 
 #~ msgid "Add to Playlist"
 #~ msgstr "Gehitu jotze-zerrendara"

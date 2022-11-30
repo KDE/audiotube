@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-28 00:51+0000\n"
-"PO-Revision-Date: 2022-11-20 07:22+0100\n"
+"PO-Revision-Date: 2022-11-29 06:58+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -47,14 +47,14 @@ msgstr "ბრაუზერში გახსნა"
 #: contents/ui/AlbumPage.qml:44
 #, kde-format
 msgid "Album • %1"
-msgstr ""
+msgstr "ალბომი • %1"
 
 #: contents/ui/AlbumPage.qml:87 contents/ui/ArtistPage.qml:125
 #: contents/ui/PlaybackHistory.qml:72 contents/ui/PlaylistPage.qml:89
 #: contents/ui/SearchPage.qml:128
 #, kde-format
 msgid "More"
-msgstr ""
+msgstr "მეტი"
 
 #: contents/ui/ArtistPage.qml:27
 #, kde-format
@@ -62,10 +62,9 @@ msgid "Radio"
 msgstr "რადიო"
 
 #: contents/ui/ArtistPage.qml:46
-#, fuzzy, kde-format
-#| msgid "Artists"
+#, kde-format
 msgid "Artist"
-msgstr "შემსრულებლები"
+msgstr "შემსრულებელი"
 
 #: contents/ui/ArtistPage.qml:68 contents/ui/SearchPage.qml:69
 #, kde-format
@@ -182,10 +181,9 @@ msgid "No songs here yet"
 msgstr "აქ ჯერ სიმღერები არაა"
 
 #: contents/ui/PlaylistPage.qml:42
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "Playlist"
-msgstr "დასაკრავი სიები"
+msgstr "დასაკრავი სია"
 
 #: contents/ui/SearchPage.qml:27
 #, kde-format
@@ -215,19 +213,17 @@ msgstr "შემდეგის დაკვრა"
 #: contents/ui/SongMenu.qml:32
 #, kde-format
 msgid "Add to queue"
-msgstr ""
+msgstr "რიგში ჩამატება"
 
 #: contents/ui/SongMenu.qml:39
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "Remove Favourite"
-msgstr "რჩეულები"
+msgstr "რჩეულის წაშლა"
 
 #: contents/ui/SongMenu.qml:39
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "Add Favourite"
-msgstr "რჩეულები"
+msgstr "რჩეულის დამატება"
 
 #~ msgid "Add to Playlist"
 #~ msgstr "დასაკრავი სიაში დამატება"
