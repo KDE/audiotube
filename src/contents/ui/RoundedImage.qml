@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
 import QtQuick 2.15
+import QtQuick.Window 2.15
 
 Rectangle {
     property alias radius: mask.radius
@@ -18,6 +19,7 @@ Rectangle {
             anchors.fill: parent
             fillMode: Image.PreserveAspectCrop
             asynchronous: true
+            sourceSize.width: parent.width * Screen.devicePixelRatio
         }
         visible: false
 
