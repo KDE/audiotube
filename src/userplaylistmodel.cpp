@@ -62,7 +62,9 @@ UserPlaylistModel::UserPlaylistModel(QObject *parent)
         m_lyrics = {};
         Q_EMIT lyricsChanged();
 
-        fetchLyrics(m_currentVideoId);
+        if (!m_currentVideoId.isEmpty()) {
+            fetchLyrics(m_currentVideoId);
+        }
     });
 }
 
