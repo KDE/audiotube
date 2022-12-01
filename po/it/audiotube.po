@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-28 00:51+0000\n"
-"PO-Revision-Date: 2022-11-09 18:16+0100\n"
+"PO-Revision-Date: 2022-11-28 14:06+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -46,14 +46,14 @@ msgstr "Apri nel browser"
 #: contents/ui/AlbumPage.qml:44
 #, kde-format
 msgid "Album • %1"
-msgstr ""
+msgstr "Album • %1"
 
 #: contents/ui/AlbumPage.qml:87 contents/ui/ArtistPage.qml:125
 #: contents/ui/PlaybackHistory.qml:72 contents/ui/PlaylistPage.qml:89
 #: contents/ui/SearchPage.qml:128
 #, kde-format
 msgid "More"
-msgstr ""
+msgstr "Altro"
 
 #: contents/ui/ArtistPage.qml:27
 #, kde-format
@@ -61,10 +61,9 @@ msgid "Radio"
 msgstr "Radio"
 
 #: contents/ui/ArtistPage.qml:46
-#, fuzzy, kde-format
-#| msgid "Artists"
+#, kde-format
 msgid "Artist"
-msgstr "Artisti"
+msgstr "Artista"
 
 #: contents/ui/ArtistPage.qml:68 contents/ui/SearchPage.qml:69
 #, kde-format
@@ -182,10 +181,9 @@ msgid "No songs here yet"
 msgstr "Non c'è ancora alcun brano"
 
 #: contents/ui/PlaylistPage.qml:42
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "Playlist"
-msgstr "Scalette"
+msgstr "Scaletta"
 
 #: contents/ui/SearchPage.qml:27
 #, kde-format
@@ -215,19 +213,17 @@ msgstr "Riproduci successivo"
 #: contents/ui/SongMenu.qml:32
 #, kde-format
 msgid "Add to queue"
-msgstr ""
+msgstr "Aggiungi alla coda"
 
 #: contents/ui/SongMenu.qml:39
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "Remove Favourite"
-msgstr "Preferiti"
+msgstr "Rimuovi preferito"
 
 #: contents/ui/SongMenu.qml:39
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "Add Favourite"
-msgstr "Preferiti"
+msgstr "Aggiungi preferito"
 
 #~ msgid "Add to Playlist"
 #~ msgstr "Aggiungi alla scaletta"
