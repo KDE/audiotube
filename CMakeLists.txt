@@ -37,7 +37,7 @@ find_package(Qt${QT_MAJOR_VERSION} ${QT5_MIN_VERSION} REQUIRED COMPONENTS Core G
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS Kirigami2 I18n CoreAddons Crash)
 find_package(pybind11 REQUIRED)
 find_package(Ytdlp REQUIRED RUNTIME)
-find_package(YTMusicAPI REQUIRED RUNTIME)
+find_package(YTMusicAPI 0.24.0 REQUIRED RUNTIME)
 
 ki18n_install(po)
 
