@@ -99,6 +99,7 @@ Kirigami.ApplicationWindow {
     }
 
     pageStack.initialPage: "qrc:/LibraryPage.qml"
+    pageStack.clip: true
 
     function play(videoId) {
         UserPlaylistModel.initialVideoId = videoId
