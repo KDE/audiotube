@@ -90,83 +90,86 @@ Item {
         }
         
         // top tab bar
-        RowLayout {
-            id: tabBar
+        ScrollView {
             Layout.alignment: Qt.AlignHCenter
-            
-            ToolButton {
-                id: nowPlayingTab
-                padding: Kirigami.Units.largeSpacing
-                onClicked: swipeView.setCurrentIndex(0)
-                Layout.preferredHeight: Kirigami.Units.gridUnit * 2
-                Layout.preferredWidth: Kirigami.Units.gridUnit * 9
+            Layout.maximumWidth: parent.width
+            RowLayout {
+                id: tabBar
 
-                contentItem: Label {
-                    text: i18n("Now Playing")
-                    horizontalAlignment: Text.AlignHCenter
-                    verticalAlignment: Text.AlignVCenter
-                    elide: Text.ElideRight
-                    color: "white" // we need to ensure the label is white
-                }
-                
-                // selection indicator
-                Rectangle {
-                    anchors.top: parent.top
-                    anchors.left: parent.left
-                    anchors.right: parent.right
-                    color: Kirigami.Theme.highlightColor
-                    height: 1
-                    visible: swipeView.currentIndex == 0
-                }
-            }
-            ToolButton {
-                id: queueTab
-                padding: Kirigami.Units.largeSpacing
-                onClicked: swipeView.setCurrentIndex(1)
-                Layout.preferredHeight: Kirigami.Units.gridUnit * 2
-                Layout.preferredWidth: Kirigami.Units.gridUnit * 9
-                
-                contentItem: Label {
-                    text: i18n("Queue")
-                    horizontalAlignment: Text.AlignHCenter
-                    verticalAlignment: Text.AlignVCenter
-                    elide: Text.ElideRight
-                    color: "white"
-                }
-                
-                // selection indicator
-                Rectangle {
-                    anchors.top: parent.top
-                    anchors.left: parent.left
-                    anchors.right: parent.right
-                    color: Kirigami.Theme.highlightColor
-                    height: 1
-                    visible: swipeView.currentIndex == 1
-                }
-            }
-            ToolButton {
-                id: lyricsTab
-                padding: Kirigami.Units.largeSpacing
-                onClicked: swipeView.setCurrentIndex(2)
-                Layout.preferredHeight: Kirigami.Units.gridUnit * 2
-                Layout.preferredWidth: Kirigami.Units.gridUnit * 9
+                ToolButton {
+                    id: nowPlayingTab
+                    padding: Kirigami.Units.largeSpacing
+                    onClicked: swipeView.setCurrentIndex(0)
+                    Layout.preferredHeight: Kirigami.Units.gridUnit * 2
+                    Layout.preferredWidth: Kirigami.Units.gridUnit * 9
 
-                contentItem: Label {
-                    text: i18n("Lyrics")
-                    horizontalAlignment: Text.AlignHCenter
-                    verticalAlignment: Text.AlignVCenter
-                    elide: Text.ElideRight
-                    color: "white"
-                }
+                    contentItem: Label {
+                        text: i18n("Now Playing")
+                        horizontalAlignment: Text.AlignHCenter
+                        verticalAlignment: Text.AlignVCenter
+                        elide: Text.ElideRight
+                        color: "white" // we need to ensure the label is white
+                    }
 
-                // selection indicator
-                Rectangle {
-                    anchors.top: parent.top
-                    anchors.left: parent.left
-                    anchors.right: parent.right
-                    color: Kirigami.Theme.highlightColor
-                    height: 1
-                    visible: swipeView.currentIndex == 2
+                    // selection indicator
+                    Rectangle {
+                        anchors.top: parent.top
+                        anchors.left: parent.left
+                        anchors.right: parent.right
+                        color: Kirigami.Theme.highlightColor
+                        height: 1
+                        visible: swipeView.currentIndex == 0
+                    }
+                }
+                ToolButton {
+                    id: queueTab
+                    padding: Kirigami.Units.largeSpacing
+                    onClicked: swipeView.setCurrentIndex(1)
+                    Layout.preferredHeight: Kirigami.Units.gridUnit * 2
+                    Layout.preferredWidth: Kirigami.Units.gridUnit * 9
+
+                    contentItem: Label {
+                        text: i18n("Queue")
+                        horizontalAlignment: Text.AlignHCenter
+                        verticalAlignment: Text.AlignVCenter
+                        elide: Text.ElideRight
+                        color: "white"
+                    }
+
+                    // selection indicator
+                    Rectangle {
+                        anchors.top: parent.top
+                        anchors.left: parent.left
+                        anchors.right: parent.right
+                        color: Kirigami.Theme.highlightColor
+                        height: 1
+                        visible: swipeView.currentIndex == 1
+                    }
+                }
+                ToolButton {
+                    id: lyricsTab
+                    padding: Kirigami.Units.largeSpacing
+                    onClicked: swipeView.setCurrentIndex(2)
+                    Layout.preferredHeight: Kirigami.Units.gridUnit * 2
+                    Layout.preferredWidth: Kirigami.Units.gridUnit * 9
+
+                    contentItem: Label {
+                        text: i18n("Lyrics")
+                        horizontalAlignment: Text.AlignHCenter
+                        verticalAlignment: Text.AlignVCenter
+                        elide: Text.ElideRight
+                        color: "white"
+                    }
+
+                    // selection indicator
+                    Rectangle {
+                        anchors.top: parent.top
+                        anchors.left: parent.left
+                        anchors.right: parent.right
+                        color: Kirigami.Theme.highlightColor
+                        height: 1
+                        visible: swipeView.currentIndex == 2
+                    }
                 }
             }
         }
