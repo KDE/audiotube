@@ -63,8 +63,12 @@ Kirigami.ScrollablePage {
                                 onClicked: play(delegateItem.videoId)
                                 hoverEnabled: !Kirigami.Settings.hasTransientTouchInput
                                 onEntered: {
-                                    if (!Kirigami.Settings.hasTransientTouchInput)
+                                    if (!Kirigami.Settings.hasTransientTouchInput){
                                         favSelected.visible = true
+                                        playAnimationPosition.running = true
+                                        playAnimationOpacity.running = true
+                                    }
+
                                 }
 
                                 onExited: favSelected.visible = false
@@ -98,21 +102,38 @@ Kirigami.ScrollablePage {
                                     radius: 10
                                     opacity: 0.2
                                 }
-                                Rectangle {
-                                    height: 45
-                                    width: 45
-                                    radius: 50
-                                    color: Kirigami.Theme.hoverColor
-                                    opacity: 0.8
-                                    anchors.centerIn: parent
+                                Item{
+                                    height: parent.height
+                                    width: parent.width
+                                    NumberAnimation on opacity{
+                                        id: playAnimationOpacity
+                                        easing.type: Easing.OutCubic
+                                        running: false
+                                        from: 0; to: 1
+                                    }
+                                    NumberAnimation on y {
+                                        id: playAnimationPosition
+                                        easing.type: Easing.OutCubic
+                                        running: false
+                                        from: 20; to: 0
+                                        duration: 100
+                                    }
+                                    Rectangle {
+                                        height: 45
+                                        width: 45
+                                        radius: 50
+                                        color: Kirigami.Theme.hoverColor
+                                        opacity: 0.8
+                                        anchors.centerIn: parent
 
 
-                                }
-                                Kirigami.Icon {
-                                    x: 100 - 0.43 * height
-                                    y: 100 - 0.5  * height
-                                    color: "white"
-                                    source: "media-playback-start"
+                                    }
+                                    Kirigami.Icon {
+                                        x: 100 - 0.43 * height
+                                        y: 100 - 0.5  * height
+                                        color: "white"
+                                        source: "media-playback-start"
+                                    }
                                 }
                                 visible: false
                                 anchors.fill: parent
@@ -214,6 +235,8 @@ Kirigami.ScrollablePage {
                                 onEntered: {
                                     if (!Kirigami.Settings.hasTransientTouchInput)
                                         recSelected.visible = true
+                                        playAnimationPositionRec.running = true
+                                        playAnimationOpacityRec.running = true
                                 }
                                 onExited: recSelected.visible = false
 
@@ -246,22 +269,40 @@ Kirigami.ScrollablePage {
                                     radius: 10
                                     opacity: 0.2
                                 }
-                                Rectangle {
-                                    height: 45
-                                    width: 45
-                                    radius: 50
-                                    color: Kirigami.Theme.hoverColor
-                                    opacity: 0.8
-                                    anchors.centerIn: parent
+                                Item{
+                                    height: parent.height
+                                    width: parent.width
+                                    NumberAnimation on opacity{
+                                        id: playAnimationOpacityRec
+                                        easing.type: Easing.OutCubic
+                                        running: false
+                                        from: 0; to: 1
+                                    }
+                                    NumberAnimation on y {
+                                        id: playAnimationPositionRec
+                                        easing.type: Easing.OutCubic
+                                        running: false
+                                        from: 20; to: 0
+                                        duration: 100
+                                    }
+                                    Rectangle {
+                                        height: 45
+                                        width: 45
+                                        radius: 50
+                                        color: Kirigami.Theme.hoverColor
+                                        opacity: 0.8
+                                        anchors.centerIn: parent
 
 
+                                    }
+                                    Kirigami.Icon {
+                                        x: 100 - 0.43 * height
+                                        y: 100 - 0.5  * height
+                                        color: "white"
+                                        source: "media-playback-start"
+                                    }
                                 }
-                                Kirigami.Icon {
-                                    x: 100 - 0.43 * height
-                                    y: 100 - 0.5  * height
-                                    color: "white"
-                                    source: "media-playback-start"
-                                }
+
                                 visible: false
                                 anchors.fill: parent
 
