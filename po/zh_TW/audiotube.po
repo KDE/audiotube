@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-28 00:51+0000\n"
+"POT-Creation-Date: 2022-12-12 00:49+0000\n"
 "PO-Revision-Date: 2022-05-30 00:47+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -143,27 +143,27 @@ msgstr ""
 msgid "AudioTube"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:105
+#: contents/ui/MaximizedPlayerPage.qml:107
 #, kde-format
 msgid "Now Playing"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:130
+#: contents/ui/MaximizedPlayerPage.qml:132
 #, kde-format
 msgid "Queue"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:155
+#: contents/ui/MaximizedPlayerPage.qml:157
 #, kde-format
 msgid "Lyrics"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:270
+#: contents/ui/MaximizedPlayerPage.qml:273
 #, kde-format
 msgid "Remove Track"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:312
+#: contents/ui/MaximizedPlayerPage.qml:315
 #: contents/ui/MinimizedPlayerControls.qml:91
 #, kde-format
 msgid "No media playing"

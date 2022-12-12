@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-28 00:51+0000\n"
+"POT-Creation-Date: 2022-12-12 00:49+0000\n"
 "PO-Revision-Date: 2022-11-29 05:34+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -147,27 +147,27 @@ msgstr "Bilatu"
 msgid "AudioTube"
 msgstr "AudioTube"
 
-#: contents/ui/MaximizedPlayerPage.qml:105
+#: contents/ui/MaximizedPlayerPage.qml:107
 #, kde-format
 msgid "Now Playing"
 msgstr "Orain jotzen"
 
-#: contents/ui/MaximizedPlayerPage.qml:130
+#: contents/ui/MaximizedPlayerPage.qml:132
 #, kde-format
 msgid "Queue"
 msgstr "Ilara"
 
-#: contents/ui/MaximizedPlayerPage.qml:155
+#: contents/ui/MaximizedPlayerPage.qml:157
 #, kde-format
 msgid "Lyrics"
 msgstr "Hitzak"
 
-#: contents/ui/MaximizedPlayerPage.qml:270
+#: contents/ui/MaximizedPlayerPage.qml:273
 #, kde-format
 msgid "Remove Track"
 msgstr "Kendu pista"
 
-#: contents/ui/MaximizedPlayerPage.qml:312
+#: contents/ui/MaximizedPlayerPage.qml:315
 #: contents/ui/MinimizedPlayerControls.qml:91
 #, kde-format
 msgid "No media playing"
