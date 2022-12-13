@@ -285,7 +285,7 @@ Item {
                 height: swipeView.height
                 ScrollView {
                     Layout.maximumWidth: 900
-
+                    contentWidth: -1
                     Layout.fillWidth: true
                     Layout.fillHeight: true
                     Layout.alignment: Qt.AlignHCenter

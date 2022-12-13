@@ -234,12 +234,12 @@ Kirigami.ApplicationWindow {
                         : Kirigami.Units.gridUnit * 20
 
                 contentItem: Controls.ScrollView {
+                    contentWidth: -1
                     ColumnLayout {
                         width: popup.width
 
                         Controls.ScrollView {
                             id: recents
-
                             Layout.fillWidth: true
                             Layout.maximumWidth: popup.width - 23
 
