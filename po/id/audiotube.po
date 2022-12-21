@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-12 00:49+0000\n"
+"POT-Creation-Date: 2022-12-21 00:49+0000\n"
 "PO-Revision-Date: 2022-09-20 19:34+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -110,7 +110,7 @@ msgstr "Batalkan"
 msgid "Favourites"
 msgstr "Favorit"
 
-#: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:181
+#: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:202
 #, kde-format
 msgid "Show All"
 msgstr "Tampilkan Semua"
@@ -120,12 +120,12 @@ msgstr "Tampilkan Semua"
 msgid "Favourite Songs"
 msgstr "Lagu Favorit"
 
-#: contents/ui/LibraryPage.qml:171
+#: contents/ui/LibraryPage.qml:192
 #, kde-format
 msgid "Most played"
 msgstr "Paling banyak diputar"
 
-#: contents/ui/LibraryPage.qml:186
+#: contents/ui/LibraryPage.qml:207
 #, kde-format
 msgid "Played Songs"
 msgstr "Lagu yang telah diputar"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-12 00:49+0000\n"
+"POT-Creation-Date: 2022-12-21 00:49+0000\n"
 "PO-Revision-Date: 2022-11-07 19:04+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -109,7 +109,7 @@ msgstr "ألغِ"
 msgid "Favourites"
 msgstr "المفضلة"
 
-#: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:181
+#: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:202
 #, kde-format
 msgid "Show All"
 msgstr "أظهر الكلّ"
@@ -119,12 +119,12 @@ msgstr "أظهر الكلّ"
 msgid "Favourite Songs"
 msgstr "الأغاني المفضّلة"
 
-#: contents/ui/LibraryPage.qml:171
+#: contents/ui/LibraryPage.qml:192
 #, kde-format
 msgid "Most played"
 msgstr "الأكثر تشغيلا"
 
-#: contents/ui/LibraryPage.qml:186
+#: contents/ui/LibraryPage.qml:207
 #, kde-format
 msgid "Played Songs"
 msgstr "الأغاني المشغلة"

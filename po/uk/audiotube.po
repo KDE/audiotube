@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-12 00:49+0000\n"
+"POT-Creation-Date: 2022-12-21 00:49+0000\n"
 "PO-Revision-Date: 2022-11-28 20:43+0200\n"
 "Last-Translator: Fracture dept <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -110,7 +110,7 @@ msgstr "Скасувати"
 msgid "Favourites"
 msgstr "Улюблені"
 
-#: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:181
+#: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:202
 #, kde-format
 msgid "Show All"
 msgstr "Показати всі"
@@ -120,12 +120,12 @@ msgstr "Показати всі"
 msgid "Favourite Songs"
 msgstr "Улюблені композиції"
 
-#: contents/ui/LibraryPage.qml:171
+#: contents/ui/LibraryPage.qml:192
 #, kde-format
 msgid "Most played"
 msgstr "Часто слухали"
 
-#: contents/ui/LibraryPage.qml:186
+#: contents/ui/LibraryPage.qml:207
 #, kde-format
 msgid "Played Songs"
 msgstr "Відтворені композиції"

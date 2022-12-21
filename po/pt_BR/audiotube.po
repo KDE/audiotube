@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-12 00:49+0000\n"
-"PO-Revision-Date: 2022-10-19 15:40-0300\n"
+"POT-Creation-Date: 2022-12-21 00:49+0000\n"
+"PO-Revision-Date: 2022-12-20 10:48-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -47,14 +47,14 @@ msgstr "Abrir no navegador"
 #: contents/ui/AlbumPage.qml:44
 #, kde-format
 msgid "Album • %1"
-msgstr ""
+msgstr "Álbum • %1"
 
 #: contents/ui/AlbumPage.qml:87 contents/ui/ArtistPage.qml:125
 #: contents/ui/PlaybackHistory.qml:72 contents/ui/PlaylistPage.qml:89
 #: contents/ui/SearchPage.qml:128
 #, kde-format
 msgid "More"
-msgstr ""
+msgstr "Mais"
 
 #: contents/ui/ArtistPage.qml:27
 #, kde-format
@@ -62,10 +62,9 @@ msgid "Radio"
 msgstr "Rádio"
 
 #: contents/ui/ArtistPage.qml:46
-#, fuzzy, kde-format
-#| msgid "Artists"
+#, kde-format
 msgid "Artist"
-msgstr "Artistas"
+msgstr "Artista"
 
 #: contents/ui/ArtistPage.qml:68 contents/ui/SearchPage.qml:69
 #, kde-format
@@ -109,9 +108,9 @@ msgstr "Cancelar"
 #: contents/ui/LibraryPage.qml:21
 #, kde-format
 msgid "Favourites"
-msgstr "Favoritos"
+msgstr "Favoritas"
 
-#: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:181
+#: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:202
 #, kde-format
 msgid "Show All"
 msgstr "Mostrar tudo"
@@ -121,12 +120,12 @@ msgstr "Mostrar tudo"
 msgid "Favourite Songs"
 msgstr "Músicas favoritas"
 
-#: contents/ui/LibraryPage.qml:171
+#: contents/ui/LibraryPage.qml:192
 #, kde-format
 msgid "Most played"
 msgstr "Mais reproduzidas"
 
-#: contents/ui/LibraryPage.qml:186
+#: contents/ui/LibraryPage.qml:207
 #, kde-format
 msgid "Played Songs"
 msgstr "Músicas reproduzidas"
@@ -159,7 +158,7 @@ msgstr "Fila"
 #: contents/ui/MaximizedPlayerPage.qml:157
 #, kde-format
 msgid "Lyrics"
-msgstr ""
+msgstr "Letras"
 
 #: contents/ui/MaximizedPlayerPage.qml:273
 #, kde-format
@@ -183,10 +182,9 @@ msgid "No songs here yet"
 msgstr "Nenhuma música ainda"
 
 #: contents/ui/PlaylistPage.qml:42
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "Playlist"
-msgstr "Listas de músicas"
+msgstr "Lista de músicas"
 
 #: contents/ui/SearchPage.qml:27
 #, kde-format
@@ -216,19 +214,17 @@ msgstr "Reproduzir próxima"
 #: contents/ui/SongMenu.qml:32
 #, kde-format
 msgid "Add to queue"
-msgstr ""
+msgstr "Adicionar à fila"
 
 #: contents/ui/SongMenu.qml:39
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "Remove Favourite"
-msgstr "Favoritos"
+msgstr "Remover das favoritas"
 
 #: contents/ui/SongMenu.qml:39
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "Add Favourite"
-msgstr "Favoritos"
+msgstr "Adicionar favorita"
 
 #~ msgid "Add to Playlist"
 #~ msgstr "Adicionar à lista de reprodução"
