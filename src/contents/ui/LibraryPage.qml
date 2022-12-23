@@ -48,7 +48,8 @@ Kirigami.ScrollablePage {
                     delegate: ColumnLayout {
                         id: delegateItem
                         required property string title
-                        required property string artists
+                        required property var artists
+                        required property string artistsDisplayString
                         required property string videoId
 
                         Layout.fillWidth: false
@@ -161,14 +162,17 @@ Kirigami.ScrollablePage {
                                     Layout.maximumWidth: 200
                                     leftPadding: 5
                                     color: Kirigami.Theme.disabledTextColor
-                                    text: delegateItem.artists
+                                    text: delegateItem.artistsDisplayString
                                     elide: Text.ElideRight
                                 }
                             }
                             Controls.ToolButton {
                                 Layout.fillHeight: true
                                 icon.name: "view-more-horizontal-symbolic"
-                                onPressed: favMenu.openForSong(delegateItem.videoId, delegateItem.title, delegateItem.artists, delegateItem.artists)
+                                onPressed: favMenu.openForSong(delegateItem.videoId,
+                                                               delegateItem.title,
+                                                               delegateItem.artists,
+                                                               delegateItem.artistsDisplayString)
                                 SongMenu {
                                     id:favMenu
                                 }
@@ -218,7 +222,8 @@ Kirigami.ScrollablePage {
                     delegate: ColumnLayout {
                         id: mpdelegateItem
                         required property string title
-                        required property string artists
+                        required property var artists
+                        required property string artistsDisplayString
                         required property string videoId
 
                         Layout.fillWidth: false
@@ -328,14 +333,17 @@ Kirigami.ScrollablePage {
                                     Layout.maximumWidth: 200
                                     leftPadding: 5
                                     color: Kirigami.Theme.disabledTextColor
-                                    text: mpdelegateItem.artists
+                                    text: mpdelegateItem.artistsDisplayString
                                     elide: Text.ElideRight
                                 }
                             }
                             Controls.ToolButton {
                                 Layout.fillHeight: true
                                 icon.name: "view-more-horizontal-symbolic"
-                                onPressed: mpMenu.openForSong(mpdelegateItem.videoId, mpdelegateItem.title, mpdelegateItem.artists, mpdelegateItem.artists)
+                                onPressed: mpMenu.openForSong(mpdelegateItem.videoId,
+                                                              mpdelegateItem.title,
+                                                              mpdelegateItem.artists,
+                                                              mpdelegateItem.artistsDisplayString)
                                 SongMenu{
                                     id:mpMenu
                                 }

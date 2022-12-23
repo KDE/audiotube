@@ -166,7 +166,8 @@ QHash<int, QByteArray> PlaybackHistoryModel::roleNames() const {
     return {
         {Roles::VideoId, "videoId"},
         {Roles::Title, "title"},
-        {Roles::Artist, "artists"},
+        {Roles::Artists, "artists"},
+        {Roles::ArtistsDisplayString, "artistsDisplayString"},
         {Roles::Plays, "plays"}
     };
 }
@@ -181,7 +182,14 @@ QVariant PlaybackHistoryModel::data(const QModelIndex &index, int role) const {
         return m_playedSongs.at(index.row()).videoId;
     case Roles::Title:
         return m_playedSongs.at(index.row()).title;
-    case Roles::Artist:
+    case Roles::Artists:
+        return QVariant::fromValue(std::vector<meta::Artist> {
+            {
+                m_playedSongs.at(index.row()).artist.toStdString(),
+                {}
+            }
+        });
+    case Roles::ArtistsDisplayString:
         return m_playedSongs.at(index.row()).artist;
     case Roles::Plays:
         return m_playedSongs.at(index.row()).plays;
@@ -204,7 +212,8 @@ QHash<int, QByteArray> FavouritesModel::roleNames() const {
     return {
         {Roles::VideoId, "videoId"},
         {Roles::Title, "title"},
-        {Roles::Artist, "artists"}
+        {Roles::Artists, "artists"},
+        {Roles::ArtistsDisplayString, "artistsDisplayString"}
     };
 }
 
@@ -218,8 +227,15 @@ QVariant FavouritesModel::data(const QModelIndex &index, int role) const {
         return m_favouriteSongs.at(index.row()).videoId;
     case Roles::Title:
         return m_favouriteSongs.at(index.row()).title;
-    case Roles::Artist:
+    case Roles::ArtistsDisplayString:
         return m_favouriteSongs.at(index.row()).artist;
+    case Roles::Artists:
+        return QVariant::fromValue(std::vector<meta::Artist> {
+            {
+                m_favouriteSongs.at(index.row()).artist.toStdString(),
+                {}
+            }
+        });
     }
 
     Q_UNREACHABLE();

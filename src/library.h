@@ -37,7 +37,8 @@ class FavouritesModel : public QAbstractListModel {
     enum Roles {
         VideoId = Qt::UserRole + 1,
         Title,
-        Artist,
+        Artists,
+        ArtistsDisplayString
     };
 
 public:
@@ -73,7 +74,8 @@ public:
     enum Roles {
         VideoId = Qt::UserRole + 1,
         Title,
-        Artist,
+        Artists,
+        ArtistsDisplayString,
         Plays
     };
     Q_ENUM(Roles);

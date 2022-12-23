@@ -59,7 +59,7 @@ Item{
                 label: i18n("Add to queue")
                 icon: "media-playlist-append"
                 onClicked: {
-                    UserPlaylistModel.append(drawer.videoId, drawer.SongTitle, drawer.artists)
+                    UserPlaylistModel.append(drawer.videoId, drawer.songTitle, drawer.artists)
                     drawer.close()
                 }
             }
@@ -93,7 +93,6 @@ Item{
         property string artistsDisplayString
         id: menu
 
-
         Controls.MenuItem {
             text: i18n("Play Next")
             icon.name: "go-next"
@@ -103,7 +102,7 @@ Item{
         Controls.MenuItem {
             text: i18n("Add to queue")
             icon.name: "media-playlist-append"
-            onTriggered: UserPlaylistModel.append(menu.videoId, menu.SongTitle, menu.artists)
+            onTriggered: UserPlaylistModel.append(menu.videoId, menu.songTitle, menu.artists)
         }
 
         Controls.MenuItem {
