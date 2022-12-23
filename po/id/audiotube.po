@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-21 00:49+0000\n"
-"PO-Revision-Date: 2022-09-20 19:34+0700\n"
+"PO-Revision-Date: 2022-12-21 11:44+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
 "Language: id\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 22.08.3\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -46,14 +46,14 @@ msgstr "Buka di Peramban"
 #: contents/ui/AlbumPage.qml:44
 #, kde-format
 msgid "Album • %1"
-msgstr ""
+msgstr "Album • %1"
 
 #: contents/ui/AlbumPage.qml:87 contents/ui/ArtistPage.qml:125
 #: contents/ui/PlaybackHistory.qml:72 contents/ui/PlaylistPage.qml:89
 #: contents/ui/SearchPage.qml:128
 #, kde-format
 msgid "More"
-msgstr ""
+msgstr "Lainnya"
 
 #: contents/ui/ArtistPage.qml:27
 #, kde-format
@@ -61,8 +61,7 @@ msgid "Radio"
 msgstr "Radio"
 
 #: contents/ui/ArtistPage.qml:46
-#, fuzzy, kde-format
-#| msgid "Artists"
+#, kde-format
 msgid "Artist"
 msgstr "Artis"
 
@@ -158,7 +157,7 @@ msgstr "Antrean"
 #: contents/ui/MaximizedPlayerPage.qml:157
 #, kde-format
 msgid "Lyrics"
-msgstr ""
+msgstr "Lirik"
 
 #: contents/ui/MaximizedPlayerPage.qml:273
 #, kde-format
@@ -182,8 +181,7 @@ msgid "No songs here yet"
 msgstr "Belum ada lagu di sini"
 
 #: contents/ui/PlaylistPage.qml:42
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "Playlist"
 msgstr "Daftar Putar"
 
@@ -215,19 +213,17 @@ msgstr "Putar Berikutnya"
 #: contents/ui/SongMenu.qml:32
 #, kde-format
 msgid "Add to queue"
-msgstr ""
+msgstr "Tambahkan ke antrean"
 
 #: contents/ui/SongMenu.qml:39
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "Remove Favourite"
-msgstr "Favorit"
+msgstr "Hapus Favorit"
 
 #: contents/ui/SongMenu.qml:39
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "Add Favourite"
-msgstr "Favorit"
+msgstr "Tambahkan Favorit"
 
 #~ msgid "Add to Playlist"
 #~ msgstr "Tambahkan ke Daftar Putar"
