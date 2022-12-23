@@ -19,7 +19,7 @@ Rectangle {
             anchors.fill: parent
             fillMode: Image.PreserveAspectCrop
             asynchronous: true
-            sourceSize.width: parent.width * Screen.devicePixelRatio
+            sourceSize.width: parent.implicitWidth * Screen.devicePixelRatio
         }
         visible: false
 
