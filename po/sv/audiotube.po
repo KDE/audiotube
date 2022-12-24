@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-21 00:49+0000\n"
+"POT-Creation-Date: 2022-12-24 00:52+0000\n"
 "PO-Revision-Date: 2022-09-24 14:57+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -108,7 +108,7 @@ msgstr "Avbryt"
 msgid "Favourites"
 msgstr "Favoriter"
 
-#: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:202
+#: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:206
 #, kde-format
 msgid "Show All"
 msgstr "Visa alla"
@@ -118,12 +118,12 @@ msgstr "Visa alla"
 msgid "Favourite Songs"
 msgstr "Favoritlåtar"
 
-#: contents/ui/LibraryPage.qml:192
+#: contents/ui/LibraryPage.qml:196
 #, kde-format
 msgid "Most played"
 msgstr "Mest spelade"
 
-#: contents/ui/LibraryPage.qml:207
+#: contents/ui/LibraryPage.qml:211
 #, kde-format
 msgid "Played Songs"
 msgstr "Spelade låtar"
@@ -205,23 +205,23 @@ msgstr "Okänd"
 msgid "Find music on YouTube Music"
 msgstr "Sök efter musik på YouTube musik"
 
-#: contents/ui/SongMenu.qml:26
+#: contents/ui/SongMenu.qml:50 contents/ui/SongMenu.qml:97
 #, kde-format
 msgid "Play Next"
 msgstr "Spela nästa"
 
-#: contents/ui/SongMenu.qml:32
+#: contents/ui/SongMenu.qml:59 contents/ui/SongMenu.qml:103
 #, kde-format
 msgid "Add to queue"
 msgstr ""
 
-#: contents/ui/SongMenu.qml:39
+#: contents/ui/SongMenu.qml:69 contents/ui/SongMenu.qml:110
 #, fuzzy, kde-format
 #| msgid "Favourites"
 msgid "Remove Favourite"
 msgstr "Favoriter"
 
-#: contents/ui/SongMenu.qml:39
+#: contents/ui/SongMenu.qml:69 contents/ui/SongMenu.qml:110
 #, fuzzy, kde-format
 #| msgid "Favourites"
 msgid "Add Favourite"

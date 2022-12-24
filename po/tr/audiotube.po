@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-21 00:49+0000\n"
+"POT-Creation-Date: 2022-12-24 00:52+0000\n"
 "PO-Revision-Date: 2022-11-28 18:46+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -109,7 +109,7 @@ msgstr "İptal"
 msgid "Favourites"
 msgstr "Beğeniler"
 
-#: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:202
+#: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:206
 #, kde-format
 msgid "Show All"
 msgstr "Tümünü Göster"
@@ -119,12 +119,12 @@ msgstr "Tümünü Göster"
 msgid "Favourite Songs"
 msgstr "Beğenilen Şarkılar"
 
-#: contents/ui/LibraryPage.qml:192
+#: contents/ui/LibraryPage.qml:196
 #, kde-format
 msgid "Most played"
 msgstr "En Çok Çalınanlar"
 
-#: contents/ui/LibraryPage.qml:207
+#: contents/ui/LibraryPage.qml:211
 #, kde-format
 msgid "Played Songs"
 msgstr "Çalınan Şarkılar"
@@ -205,22 +205,22 @@ msgstr "Bilinmiyor"
 msgid "Find music on YouTube Music"
 msgstr "YouTube Müzik'te müzik bul"
 
-#: contents/ui/SongMenu.qml:26
+#: contents/ui/SongMenu.qml:50 contents/ui/SongMenu.qml:97
 #, kde-format
 msgid "Play Next"
 msgstr "Sonrakini Çal"
 
-#: contents/ui/SongMenu.qml:32
+#: contents/ui/SongMenu.qml:59 contents/ui/SongMenu.qml:103
 #, kde-format
 msgid "Add to queue"
 msgstr "Kuyruğa ekle"
 
-#: contents/ui/SongMenu.qml:39
+#: contents/ui/SongMenu.qml:69 contents/ui/SongMenu.qml:110
 #, kde-format
 msgid "Remove Favourite"
 msgstr "Beğenilerden Kaldır"
 
-#: contents/ui/SongMenu.qml:39
+#: contents/ui/SongMenu.qml:69 contents/ui/SongMenu.qml:110
 #, kde-format
 msgid "Add Favourite"
 msgstr "Beğenilere Ekle"

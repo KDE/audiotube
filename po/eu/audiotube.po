@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-21 00:49+0000\n"
+"POT-Creation-Date: 2022-12-24 00:52+0000\n"
 "PO-Revision-Date: 2022-11-29 05:34+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -112,7 +112,7 @@ msgstr "Utzi"
 msgid "Favourites"
 msgstr "Gogokoak"
 
-#: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:202
+#: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:206
 #, kde-format
 msgid "Show All"
 msgstr "Erakutsi denak"
@@ -122,12 +122,12 @@ msgstr "Erakutsi denak"
 msgid "Favourite Songs"
 msgstr "Gogoko abestiak"
 
-#: contents/ui/LibraryPage.qml:192
+#: contents/ui/LibraryPage.qml:196
 #, kde-format
 msgid "Most played"
 msgstr "Gehien jotakoa"
 
-#: contents/ui/LibraryPage.qml:207
+#: contents/ui/LibraryPage.qml:211
 #, kde-format
 msgid "Played Songs"
 msgstr "Jotako abestiak"
@@ -208,22 +208,22 @@ msgstr "Ezezaguna"
 msgid "Find music on YouTube Music"
 msgstr "Aurkitu musika «Youtube Music»en"
 
-#: contents/ui/SongMenu.qml:26
+#: contents/ui/SongMenu.qml:50 contents/ui/SongMenu.qml:97
 #, kde-format
 msgid "Play Next"
 msgstr "Jo hurrengoa"
 
-#: contents/ui/SongMenu.qml:32
+#: contents/ui/SongMenu.qml:59 contents/ui/SongMenu.qml:103
 #, kde-format
 msgid "Add to queue"
 msgstr "Gehitu ilaran"
 
-#: contents/ui/SongMenu.qml:39
+#: contents/ui/SongMenu.qml:69 contents/ui/SongMenu.qml:110
 #, kde-format
 msgid "Remove Favourite"
 msgstr "Kendu gogokoa"
 
-#: contents/ui/SongMenu.qml:39
+#: contents/ui/SongMenu.qml:69 contents/ui/SongMenu.qml:110
 #, kde-format
 msgid "Add Favourite"
 msgstr "Gehitu gogokoa"

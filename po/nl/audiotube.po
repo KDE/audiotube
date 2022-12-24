@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-21 00:49+0000\n"
+"POT-Creation-Date: 2022-12-24 00:52+0000\n"
 "PO-Revision-Date: 2022-11-28 11:10+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -109,7 +109,7 @@ msgstr "Annuleren"
 msgid "Favourites"
 msgstr "Favorieten"
 
-#: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:202
+#: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:206
 #, kde-format
 msgid "Show All"
 msgstr "Alles tonen"
@@ -119,12 +119,12 @@ msgstr "Alles tonen"
 msgid "Favourite Songs"
 msgstr "Favoriete songs"
 
-#: contents/ui/LibraryPage.qml:192
+#: contents/ui/LibraryPage.qml:196
 #, kde-format
 msgid "Most played"
 msgstr "Meest afgespeeld"
 
-#: contents/ui/LibraryPage.qml:207
+#: contents/ui/LibraryPage.qml:211
 #, kde-format
 msgid "Played Songs"
 msgstr "Afgespeelde songs"
@@ -205,22 +205,22 @@ msgstr "Onbekend"
 msgid "Find music on YouTube Music"
 msgstr "Muziek zoeken op YouTube Music"
 
-#: contents/ui/SongMenu.qml:26
+#: contents/ui/SongMenu.qml:50 contents/ui/SongMenu.qml:97
 #, kde-format
 msgid "Play Next"
 msgstr "Volgende afspelen"
 
-#: contents/ui/SongMenu.qml:32
+#: contents/ui/SongMenu.qml:59 contents/ui/SongMenu.qml:103
 #, kde-format
 msgid "Add to queue"
 msgstr "Aan wachtrij toevoegen"
 
-#: contents/ui/SongMenu.qml:39
+#: contents/ui/SongMenu.qml:69 contents/ui/SongMenu.qml:110
 #, kde-format
 msgid "Remove Favourite"
 msgstr "Favoriet verwijderen"
 
-#: contents/ui/SongMenu.qml:39
+#: contents/ui/SongMenu.qml:69 contents/ui/SongMenu.qml:110
 #, kde-format
 msgid "Add Favourite"
 msgstr "Favoriet toevoegen"
