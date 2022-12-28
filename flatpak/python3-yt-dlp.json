@@ -12,8 +12,8 @@
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/1d/38/fa96a426e0c0e68aabc68e896584b83ad1eec779265a028e156ce509630e/certifi-2022.9.24-py3-none-any.whl",
-            "sha256": "90c1a32f1d68f940488354e36370f6cca89f0f106db09518524c88d6ed83f382"
+            "url": "https://files.pythonhosted.org/packages/71/4c/3db2b8021bd6f2f0ceb0e088d6b2d49147671f25832fb17970e9b583d742/certifi-2022.12.7-py3-none-any.whl",
+            "sha256": "4ad3232f5e926d6718ec31cfc1fcadfde020920e278684144551c91769c7bc18"
         },
         {
             "type": "file",
@@ -22,8 +22,8 @@
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/52/0d/6cc95a83f6961a1ca041798d222240890af79b381e97eda3b9b538dba16f/pycryptodomex-3.15.0.tar.gz",
-            "sha256": "7341f1bb2dadb0d1a0047f34c3a58208a92423cdbd3244d998e4b28df5eac0ed"
+            "url": "https://files.pythonhosted.org/packages/5d/22/575c7dd7c86843e07a791cfa2143e7292d6b380f5a7cce966a49b9d6c9f4/pycryptodomex-3.16.0.tar.gz",
+            "sha256": "e9ba9d8ed638733c9e95664470b71d624a6def149e2db6cc52c1aca5a6a2df1d"
         },
         {
             "type": "file",
@@ -32,8 +32,8 @@
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/2b/8c/6382d335662361fe06bea1ca96a189982cc050c2f9946dcd320b8c26a833/yt_dlp-2022.10.4-py2.py3-none-any.whl",
-            "sha256": "cc21d91048b275bda7018bdc3103374882261ccf29720206d61b10e168c8b719"
+            "url": "https://files.pythonhosted.org/packages/b6/7a/4f1067904adad79b5f3ba8c81f879975b56515764cb42e241cf3528cb017/yt_dlp-2022.11.11-py2.py3-none-any.whl",
+            "sha256": "8bb7bd9ab2e6ecf4db7627e9151ce00572ae7ee24dedc78f611e7467b0ccd7d9"
         }
     ]
 }
