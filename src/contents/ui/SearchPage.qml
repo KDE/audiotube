@@ -10,9 +10,10 @@ import org.kde.kirigami 2.14 as Kirigami
 import org.kde.ytmusic 1.0
 
 Kirigami.ScrollablePage {
+    id: searchPage
     property alias searchQuery: searchModel.searchQuery
-
-    title: searchQuery
+    objectName: "searchPage"
+    title: listView.count === 0 && !searchModel.loading? i18n("Previous Searches:") : searchQuery
 
     ListView {
         reuseItems: true
@@ -37,7 +38,7 @@ Kirigami.ScrollablePage {
             }
         }
         section.property: "type"
-
+        id: listView
         model: SearchModel {
             id: searchModel
 
@@ -136,19 +137,6 @@ Kirigami.ScrollablePage {
         Controls.BusyIndicator {
             anchors.centerIn: parent
             visible: searchModel.loading
-        }
-        Kirigami.PlaceholderMessage {
-            anchors.centerIn: parent
-            width: parent.width - (Kirigami.Units.largeSpacing * 4)
-
-            visible: parent.count === 0 && !searchModel.loading
-
-            text: i18n("Find music on YouTube Music")
-            helpfulAction: Kirigami.Action {
-                onTriggered: searchField.forceActiveFocus()
-                text: i18n("Search")
-                icon.name: "search"
-            }
         }
     }
 

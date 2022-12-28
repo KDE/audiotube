@@ -1,5 +1,5 @@
 <!--
-SPDX-FileCopyrightText: 2021 Jonah Brüchert <jbb@kaidan.im>
+SPDX-FileCopyrightText: 2022 Jonah Brüchert <jbb@kaidan.im>
 
 SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 -->
@@ -23,5 +23,8 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
         <file alias="SongMenu.qml">contents/ui/SongMenu.qml</file>
         <file alias="ListHeader.qml">contents/ui/ListHeader.qml</file>
         <file alias="RoundedImage.qml">contents/ui/RoundedImage.qml</file>
+        <file alias="Sidebar.qml">contents/ui/Sidebar.qml</file>
+        <file alias="NavigationBar.qml">contents/ui/NavigationBar.qml</file>
+        <file alias="SearchHistoryPage.qml">contents/ui/SearchHistoryPage.qml</file>
     </qresource>
 </RCC>

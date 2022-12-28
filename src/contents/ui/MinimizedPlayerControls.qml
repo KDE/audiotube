@@ -14,7 +14,6 @@ import org.kde.ytmusic 1.0
 
 Item {
     id: root
-
     z: 2000
     
     required property int progressBarHeight

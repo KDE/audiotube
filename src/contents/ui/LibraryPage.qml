@@ -11,8 +11,12 @@ import org.kde.ytmusic 1.0
 
 Kirigami.ScrollablePage {
     objectName: "libraryPage"
+    Kirigami.Theme.colorSet: Kirigami.Theme.View
 
     globalToolBarStyle: Kirigami.ApplicationHeaderStyle.None
+    rightPadding: 0
+    leftPadding: 0
+
 
     ColumnLayout {
         RowLayout {
@@ -20,6 +24,7 @@ Kirigami.ScrollablePage {
             Kirigami.Heading {
                 text: i18n("Favourites")
                 Layout.alignment: Qt.AlignLeft
+                leftPadding: 15
             }
 
             // Spacer
@@ -31,14 +36,16 @@ Kirigami.ScrollablePage {
                 text: i18n("Show All")
                 Layout.alignment: Qt.AlignRight
                 icon.name: "arrow-right"
-                onClicked: pageStack.layers.push("qrc:/PlaybackHistory.qml", {
-                                                     "dataModel": Library.favourites,
-                                                     "title": i18n("Favourite Songs")
-                                                 })
+                onClicked: {pageStack.push("qrc:/PlaybackHistory.qml", {
+                      "dataModel": Library.favourites,
+                      "title": i18n("Favourites"),
+                      "objectName": "favourites"
+                  })}
             }
         }
 
         Controls.ScrollView {
+            leftPadding: 15
             Layout.fillWidth: true
             RowLayout {
                 spacing: 20
@@ -195,6 +202,7 @@ Kirigami.ScrollablePage {
             Kirigami.Heading {
                 text: i18n("Most played")
                 Layout.alignment: Qt.AlignLeft
+                leftPadding: 15
             }
 
             // Spacer
@@ -206,13 +214,15 @@ Kirigami.ScrollablePage {
                 text: i18n("Show All")
                 Layout.alignment: Qt.AlignRight
                 icon.name: "arrow-right"
-                onClicked: pageStack.layers.push("qrc:/PlaybackHistory.qml", {
-                                                     "dataModel": Library.playbackHistory,
-                                                     "title": i18n("Played Songs")
-                                                 })
+                onClicked: {pageStack.push("qrc:/PlaybackHistory.qml", {
+                      "dataModel": Library.playbackHistory,
+                      "title": i18n("played Songs"),
+                      "objectName": "history"
+                  })}
             }
         }
         Controls.ScrollView {
+            leftPadding: 15
             Layout.fillWidth: true
             RowLayout {
                 spacing: 20
