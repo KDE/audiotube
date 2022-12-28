@@ -123,8 +123,6 @@ QVariant SearchModel::data(const QModelIndex &index, int role) const
         }, m_searchResults.at(index.row()));
     case ThumbnailUrl:
         return std::visit([&](auto &&arg) {
-            using T = std::decay_t<decltype(arg)>;
-
             if (!arg.thumbnails.empty()) {
                 return QString::fromStdString(arg.thumbnails.front().url);
             }
