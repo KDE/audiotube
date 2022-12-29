@@ -73,14 +73,21 @@ Kirigami.ScrollablePage {
                                 onEntered: {
                                     if (!Kirigami.Settings.hasTransientTouchInput){
                                         favSelected.visible = true
+                                        favTitle.color = Kirigami.Theme.hoverColor
+                                        favSubtitle.color = Kirigami.Theme.hoverColor
+                                        favTitle.font.bold = true
                                         playAnimationPosition.running = true
                                         playAnimationOpacity.running = true
                                     }
 
                                 }
 
-                                onExited: favSelected.visible = false
-
+                                onExited:{
+                                    favSelected.visible = false
+                                    favTitle.color = Kirigami.Theme.textColor
+                                    favSubtitle.color = Kirigami.Theme.disabledTextColor
+                                    favTitle.font.bold = false
+                                }
                             }
                             Layout.margins: 5
 
@@ -157,6 +164,7 @@ Kirigami.ScrollablePage {
                         RowLayout {
                             ColumnLayout {
                                 Controls.Label {
+                                    id:favTitle
                                     text: delegateItem.title
                                     Layout.maximumWidth: 200
                                     Layout.fillWidth: true
@@ -165,6 +173,7 @@ Kirigami.ScrollablePage {
 
                                 }
                                 Controls.Label {
+                                    id: favSubtitle
                                     Layout.fillWidth: true
                                     Layout.maximumWidth: 200
                                     leftPadding: 5
@@ -252,8 +261,16 @@ Kirigami.ScrollablePage {
                                         recSelected.visible = true
                                         playAnimationPositionRec.running = true
                                         playAnimationOpacityRec.running = true
+                                        recTitle.color = Kirigami.Theme.hoverColor
+                                        recSubtitle.color = Kirigami.Theme.hoverColor
+                                        recTitle.font.bold = true
                                 }
-                                onExited: recSelected.visible = false
+                                onExited:{
+                                    recSelected.visible = false
+                                    recTitle.color = Kirigami.Theme.textColor
+                                    recSubtitle.color = Kirigami.Theme.disabledTextColor
+                                    recTitle.font.bold = false
+                                }
 
                             }
                             Layout.margins: 5
@@ -331,6 +348,7 @@ Kirigami.ScrollablePage {
                         RowLayout {
                             ColumnLayout {
                                 Controls.Label {
+                                    id: recTitle
                                     text: mpdelegateItem.title
                                     Layout.maximumWidth: 200
                                     Layout.fillWidth: true
@@ -339,6 +357,7 @@ Kirigami.ScrollablePage {
 
                                 }
                                 Controls.Label {
+                                    id: recSubtitle
                                     Layout.fillWidth: true
                                     Layout.maximumWidth: 200
                                     leftPadding: 5
