@@ -46,6 +46,7 @@ Kirigami.ScrollablePage {
 
         Controls.ScrollView {
             leftPadding: 15
+            rightPadding: 25
             Layout.fillWidth: true
             RowLayout {
                 spacing: 20
@@ -232,6 +233,7 @@ Kirigami.ScrollablePage {
         }
         Controls.ScrollView {
             leftPadding: 15
+            rightPadding: 25
             Layout.fillWidth: true
             RowLayout {
                 spacing: 20
@@ -259,11 +261,11 @@ Kirigami.ScrollablePage {
                                 onEntered: {
                                     if (!Kirigami.Settings.hasTransientTouchInput)
                                         recSelected.visible = true
-                                        playAnimationPositionRec.running = true
-                                        playAnimationOpacityRec.running = true
                                         recTitle.color = Kirigami.Theme.hoverColor
                                         recSubtitle.color = Kirigami.Theme.hoverColor
                                         recTitle.font.bold = true
+                                        playAnimationPositionRec.running = true
+                                        playAnimationOpacityRec.running = true
                                 }
                                 onExited:{
                                     recSelected.visible = false
