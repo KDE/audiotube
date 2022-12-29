@@ -34,7 +34,8 @@ Kirigami.ScrollablePage {
             id: delegateItem
             required property string title
             required property string videoId
-            required property string artists
+            required property var artists
+            required property string artistsDisplayString
 
             onClicked: {
                 play(videoId)
@@ -61,7 +62,7 @@ Kirigami.ScrollablePage {
                     Controls.Label {
                         Layout.fillWidth: true
                         color: Kirigami.Theme.disabledTextColor
-                        text: delegateItem.artists
+                        text: delegateItem.artistsDisplayString
                     }
                 }
             }
