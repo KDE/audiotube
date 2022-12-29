@@ -9,7 +9,7 @@ import org.kde.kirigami 2.19 as Kirigami
 import QtQuick.Layouts 1.15
 
 
-Item{
+Item {
     function openForSong(videoId, songTitle, artists, artistsDisplayString) {
         menu.videoId = videoId
         drawer.videoId = videoId
@@ -23,12 +23,21 @@ Item{
         menu.artistsDisplayString = artistsDisplayString
         drawer.artistsDisplayString = artistsDisplayString
 
-        Kirigami.Settings.isMobile? drawer.open():menu.popup()
+        if (Kirigami.Settings.isMobile) {
+            drawer.interactive = true
+            drawer.open()
+         } else {
+            menu.popup()
+        }
     }
     Controls.Drawer {
         edge: Qt.BottomEdge
         height:contents.implicitHeight+20
         width: applicationWindow().width
+        interactive: false
+
+        onClosed: drawer.interactive = false
+
         id: drawer
         property string videoId
         property string songTitle
@@ -86,7 +95,7 @@ Item{
         }
     }
 
-    Controls.Menu{
+    Controls.Menu {
         property string videoId
         property string songTitle
         property var artists
