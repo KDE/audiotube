@@ -186,8 +186,6 @@ Rectangle {
                     show.running = true
 
                 sidebar.collapsed = !sidebar.collapsed
-
-                console.log("Collapsed", collapsed)
             }
 
         }
