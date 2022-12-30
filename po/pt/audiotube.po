@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-24 00:52+0000\n"
+"POT-Creation-Date: 2022-12-30 00:55+0000\n"
 "PO-Revision-Date: 2022-11-28 18:35+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -51,8 +51,8 @@ msgid "Album • %1"
 msgstr "Álbum • %1"
 
 #: contents/ui/AlbumPage.qml:87 contents/ui/ArtistPage.qml:125
-#: contents/ui/PlaybackHistory.qml:72 contents/ui/PlaylistPage.qml:89
-#: contents/ui/SearchPage.qml:128
+#: contents/ui/PlaybackHistory.qml:73 contents/ui/PlaylistPage.qml:89
+#: contents/ui/SearchPage.qml:129
 #, kde-format
 msgid "More"
 msgstr "Mais"
@@ -67,7 +67,7 @@ msgstr "Rádio"
 msgid "Artist"
 msgstr "Artista"
 
-#: contents/ui/ArtistPage.qml:68 contents/ui/SearchPage.qml:69
+#: contents/ui/ArtistPage.qml:68 contents/ui/SearchPage.qml:70
 #, kde-format
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
@@ -76,7 +76,7 @@ msgstr ""
 "A reprodução de vídeos ainda não é suportada. Deseja reproduzir apenas o "
 "áudio de \"%1\"?"
 
-#: contents/ui/ArtistPage.qml:85 contents/ui/SearchPage.qml:25
+#: contents/ui/ArtistPage.qml:85 contents/ui/SearchPage.qml:26
 #, kde-format
 msgid "Albums"
 msgstr "Álbuns"
@@ -86,12 +86,12 @@ msgstr "Álbuns"
 msgid "Singles"
 msgstr "'Singles'"
 
-#: contents/ui/ArtistPage.qml:89 contents/ui/SearchPage.qml:31
+#: contents/ui/ArtistPage.qml:89 contents/ui/SearchPage.qml:32
 #, kde-format
 msgid "Songs"
 msgstr "Músicas"
 
-#: contents/ui/ArtistPage.qml:91 contents/ui/SearchPage.qml:33
+#: contents/ui/ArtistPage.qml:91 contents/ui/SearchPage.qml:34
 #, kde-format
 msgid "Videos"
 msgstr "Vídeos"
@@ -106,42 +106,30 @@ msgstr "OK"
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: contents/ui/LibraryPage.qml:21
+#: contents/ui/LibraryPage.qml:25 contents/ui/LibraryPage.qml:41
+#: contents/ui/NavigationBar.qml:46 contents/ui/NavigationBar.qml:51
+#: contents/ui/Sidebar.qml:127 contents/ui/Sidebar.qml:132
 #, kde-format
 msgid "Favourites"
 msgstr "Favoritos"
 
-#: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:206
+#: contents/ui/LibraryPage.qml:36 contents/ui/LibraryPage.qml:224
 #, kde-format
 msgid "Show All"
 msgstr "Mostrar Tudo"
 
-#: contents/ui/LibraryPage.qml:36
-#, kde-format
-msgid "Favourite Songs"
-msgstr "Músicas Favoritas"
-
-#: contents/ui/LibraryPage.qml:196
+#: contents/ui/LibraryPage.qml:213
 #, kde-format
 msgid "Most played"
 msgstr "Mais Tocadas"
 
-#: contents/ui/LibraryPage.qml:211
-#, kde-format
-msgid "Played Songs"
+#: contents/ui/LibraryPage.qml:229
+#, fuzzy, kde-format
+#| msgid "Played Songs"
+msgid "played Songs"
 msgstr "Músicas Tocadas"
 
-#: contents/ui/main.qml:49
-#, kde-format
-msgid "Back"
-msgstr "Recuar"
-
-#: contents/ui/main.qml:83 contents/ui/SearchPage.qml:149
-#, kde-format
-msgid "Search"
-msgstr "Procurar"
-
-#: contents/ui/main.qml:95
+#: contents/ui/main.qml:78
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
@@ -167,10 +155,26 @@ msgid "Remove Track"
 msgstr "Remover a Faixa"
 
 #: contents/ui/MaximizedPlayerPage.qml:315
-#: contents/ui/MinimizedPlayerControls.qml:91
+#: contents/ui/MinimizedPlayerControls.qml:90
 #, kde-format
 msgid "No media playing"
 msgstr "Nada em reprodução"
+
+#: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:97
+#, kde-format
+msgid "Library"
+msgstr ""
+
+#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:112
+#, kde-format
+msgid "Search"
+msgstr "Procurar"
+
+#: contents/ui/NavigationBar.qml:58 contents/ui/NavigationBar.qml:63
+#: contents/ui/Sidebar.qml:144 contents/ui/Sidebar.qml:149
+#, kde-format
+msgid "Played Songs"
+msgstr "Músicas Tocadas"
 
 #: contents/ui/PlaybackHistory.qml:15
 #, kde-format
@@ -187,42 +191,56 @@ msgstr "Ainda sem músicas aqui"
 msgid "Playlist"
 msgstr "Lista de Reprodução"
 
-#: contents/ui/SearchPage.qml:27
+#: contents/ui/SearchPage.qml:16
+#, kde-format
+msgid "Previous Searches:"
+msgstr ""
+
+#: contents/ui/SearchPage.qml:28
 #, kde-format
 msgid "Artists"
 msgstr "Artistas"
 
-#: contents/ui/SearchPage.qml:29
+#: contents/ui/SearchPage.qml:30
 #, kde-format
 msgid "Playlists"
 msgstr "Listas de Reprodução"
 
-#: contents/ui/SearchPage.qml:36
+#: contents/ui/SearchPage.qml:37
 #, kde-format
 msgid "Unknown"
 msgstr "Desconhecido"
 
-#: contents/ui/SearchPage.qml:146
+#: contents/ui/Sidebar.qml:178
 #, kde-format
-msgid "Find music on YouTube Music"
-msgstr "Procurar música no YouTube Music"
+msgid "Collapse Sidebar"
+msgstr ""
 
-#: contents/ui/SongMenu.qml:50 contents/ui/SongMenu.qml:97
+#: contents/ui/SongMenu.qml:59 contents/ui/SongMenu.qml:106
 #, kde-format
 msgid "Play Next"
 msgstr "Reproduzir o Seguinte"
 
-#: contents/ui/SongMenu.qml:59 contents/ui/SongMenu.qml:103
+#: contents/ui/SongMenu.qml:68 contents/ui/SongMenu.qml:112
 #, kde-format
 msgid "Add to queue"
 msgstr "Adicionar à fila"
 
-#: contents/ui/SongMenu.qml:69 contents/ui/SongMenu.qml:110
+#: contents/ui/SongMenu.qml:78 contents/ui/SongMenu.qml:119
 #, kde-format
 msgid "Remove Favourite"
 msgstr "Remover o Favorito"
 
-#: contents/ui/SongMenu.qml:69 contents/ui/SongMenu.qml:110
+#: contents/ui/SongMenu.qml:78 contents/ui/SongMenu.qml:119
 #, kde-format
 msgid "Add Favourite"
 msgstr "Adicionar aos Favoritos"
+
+#~ msgid "Favourite Songs"
+#~ msgstr "Músicas Favoritas"
+
+#~ msgid "Back"
+#~ msgstr "Recuar"
+
+#~ msgid "Find music on YouTube Music"
+#~ msgstr "Procurar música no YouTube Music"
