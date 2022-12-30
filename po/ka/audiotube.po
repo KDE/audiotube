@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-30 00:55+0000\n"
-"PO-Revision-Date: 2022-11-29 06:58+0100\n"
+"PO-Revision-Date: 2022-12-30 05:39+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.2\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -122,8 +122,7 @@ msgid "Most played"
 msgstr "ხშირად დაკრულები"
 
 #: contents/ui/LibraryPage.qml:229
-#, fuzzy, kde-format
-#| msgid "Played Songs"
+#, kde-format
 msgid "played Songs"
 msgstr "დაკრული სიმღერები"
 
@@ -161,7 +160,7 @@ msgstr "არაფერს ვუკრავ"
 #: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:97
 #, kde-format
 msgid "Library"
-msgstr ""
+msgstr "ბიბლიოთეკა"
 
 #: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:112
 #, kde-format
@@ -192,7 +191,7 @@ msgstr "დასაკრავი სია"
 #: contents/ui/SearchPage.qml:16
 #, kde-format
 msgid "Previous Searches:"
-msgstr ""
+msgstr "წინა ძებნები"
 
 #: contents/ui/SearchPage.qml:28
 #, kde-format
@@ -212,7 +211,7 @@ msgstr "უცნობი"
 #: contents/ui/Sidebar.qml:178
 #, kde-format
 msgid "Collapse Sidebar"
-msgstr ""
+msgstr "გვერდითი ზოლის ჩაკეცვა"
 
 #: contents/ui/SongMenu.qml:59 contents/ui/SongMenu.qml:106
 #, kde-format

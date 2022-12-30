@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-30 00:55+0000\n"
-"PO-Revision-Date: 2022-11-28 20:43+0200\n"
-"Last-Translator: Fracture dept <yurchor@ukr.net>\n"
+"PO-Revision-Date: 2022-12-30 08:58+0200\n"
+"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
@@ -123,8 +123,7 @@ msgid "Most played"
 msgstr "Часто слухали"
 
 #: contents/ui/LibraryPage.qml:229
-#, fuzzy, kde-format
-#| msgid "Played Songs"
+#, kde-format
 msgid "played Songs"
 msgstr "Відтворені композиції"
 
@@ -162,7 +161,7 @@ msgstr "Відтворення не відбувається"
 #: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:97
 #, kde-format
 msgid "Library"
-msgstr ""
+msgstr "Бібліотека"
 
 #: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:112
 #, kde-format
@@ -193,7 +192,7 @@ msgstr "Список відтворення"
 #: contents/ui/SearchPage.qml:16
 #, kde-format
 msgid "Previous Searches:"
-msgstr ""
+msgstr "Попередні пошуки:"
 
 #: contents/ui/SearchPage.qml:28
 #, kde-format
@@ -213,7 +212,7 @@ msgstr "Невідомий"
 #: contents/ui/Sidebar.qml:178
 #, kde-format
 msgid "Collapse Sidebar"
-msgstr ""
+msgstr "Згорнути бічну панель"
 
 #: contents/ui/SongMenu.qml:59 contents/ui/SongMenu.qml:106
 #, kde-format
