@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-30 00:55+0000\n"
-"PO-Revision-Date: 2022-11-28 18:46+0300\n"
+"PO-Revision-Date: 2022-12-31 00:03+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -122,8 +122,7 @@ msgid "Most played"
 msgstr "En Çok Çalınanlar"
 
 #: contents/ui/LibraryPage.qml:229
-#, fuzzy, kde-format
-#| msgid "Played Songs"
+#, kde-format
 msgid "played Songs"
 msgstr "Çalınan Şarkılar"
 
@@ -161,7 +160,7 @@ msgstr "Ortam çalmıyor"
 #: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:97
 #, kde-format
 msgid "Library"
-msgstr ""
+msgstr "Kitaplık"
 
 #: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:112
 #, kde-format
@@ -192,7 +191,7 @@ msgstr "Çalma Listesi"
 #: contents/ui/SearchPage.qml:16
 #, kde-format
 msgid "Previous Searches:"
-msgstr ""
+msgstr "Önceki Aramalar:"
 
 #: contents/ui/SearchPage.qml:28
 #, kde-format
@@ -212,7 +211,7 @@ msgstr "Bilinmiyor"
 #: contents/ui/Sidebar.qml:178
 #, kde-format
 msgid "Collapse Sidebar"
-msgstr ""
+msgstr "Kenar Çubuğunu Daralt"
 
 #: contents/ui/SongMenu.qml:59 contents/ui/SongMenu.qml:106
 #, kde-format
