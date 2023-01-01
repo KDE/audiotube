@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-30 00:55+0000\n"
-"PO-Revision-Date: 2022-11-28 08:58+0100\n"
+"PO-Revision-Date: 2022-12-30 04:48+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -125,8 +125,7 @@ msgid "Most played"
 msgstr "Les més reproduïdes"
 
 #: contents/ui/LibraryPage.qml:229
-#, fuzzy, kde-format
-#| msgid "Played Songs"
+#, kde-format
 msgid "played Songs"
 msgstr "Cançons reproduïdes"
 
@@ -164,7 +163,7 @@ msgstr "No s'està reproduint cap suport"
 #: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:97
 #, kde-format
 msgid "Library"
-msgstr ""
+msgstr "Biblioteca"
 
 #: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:112
 #, kde-format
@@ -195,7 +194,7 @@ msgstr "Llista de reproducció"
 #: contents/ui/SearchPage.qml:16
 #, kde-format
 msgid "Previous Searches:"
-msgstr ""
+msgstr "Busques anteriors"
 
 #: contents/ui/SearchPage.qml:28
 #, kde-format
@@ -215,7 +214,7 @@ msgstr "Desconeguda"
 #: contents/ui/Sidebar.qml:178
 #, kde-format
 msgid "Collapse Sidebar"
-msgstr ""
+msgstr "Reduïx la barra lateral"
 
 #: contents/ui/SongMenu.qml:59 contents/ui/SongMenu.qml:106
 #, kde-format
@@ -236,12 +235,3 @@ msgstr "Elimina de les preferides"
 #, kde-format
 msgid "Add Favourite"
 msgstr "Afig a les preferides"
-
-#~ msgid "Favourite Songs"
-#~ msgstr "Cançons preferides"
-
-#~ msgid "Back"
-#~ msgstr "Arrere"
-
-#~ msgid "Find music on YouTube Music"
-#~ msgstr "Busca en la Música de Youtube"
