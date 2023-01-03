@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-30 00:55+0000\n"
-"PO-Revision-Date: 2022-12-24 11:42\n"
+"PO-Revision-Date: 2023-01-02 07:12\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -120,10 +120,9 @@ msgid "Most played"
 msgstr "最常播放"
 
 #: contents/ui/LibraryPage.qml:229
-#, fuzzy, kde-format
-#| msgid "Played Songs"
+#, kde-format
 msgid "played Songs"
-msgstr "已播放歌曲"
+msgstr ""
 
 #: contents/ui/main.qml:78
 #, kde-format
@@ -231,12 +230,3 @@ msgstr ""
 #, kde-format
 msgid "Add Favourite"
 msgstr ""
-
-#~ msgid "Favourite Songs"
-#~ msgstr "收藏的歌曲"
-
-#~ msgid "Back"
-#~ msgstr "返回"
-
-#~ msgid "Find music on YouTube Music"
-#~ msgstr "查找 YouTube Music 中的音乐"
