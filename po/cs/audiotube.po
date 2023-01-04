@@ -1,6 +1,6 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the audiotube package.
-# Vit Pelcak <vpelcak@suse.cz>, 2021, 2022.
+# Vit Pelcak <vit@pelcak.org>, 2021, 2022.
 #
 msgid ""
 msgstr ""
@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-12-30 00:55+0000\n"
 "PO-Revision-Date: 2022-06-28 13:58+0200\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -53,7 +53,7 @@ msgstr ""
 #: contents/ui/SearchPage.qml:129
 #, kde-format
 msgid "More"
-msgstr ""
+msgstr "Více"
 
 #: contents/ui/ArtistPage.qml:27
 #, kde-format
@@ -61,10 +61,9 @@ msgid "Radio"
 msgstr "Rádio"
 
 #: contents/ui/ArtistPage.qml:46
-#, fuzzy, kde-format
-#| msgid "Artists"
+#, kde-format
 msgid "Artist"
-msgstr "Umělci"
+msgstr "Umělec"
 
 #: contents/ui/ArtistPage.qml:68 contents/ui/SearchPage.qml:70
 #, kde-format
@@ -123,10 +122,9 @@ msgid "Most played"
 msgstr "Nejčastěji hrané"
 
 #: contents/ui/LibraryPage.qml:229
-#, fuzzy, kde-format
-#| msgid "Played Songs"
+#, kde-format
 msgid "played Songs"
-msgstr "Přehrané skladby"
+msgstr ""
 
 #: contents/ui/main.qml:78
 #, kde-format
@@ -146,7 +144,7 @@ msgstr "Fronta"
 #: contents/ui/MaximizedPlayerPage.qml:157
 #, kde-format
 msgid "Lyrics"
-msgstr ""
+msgstr "Text písně"
 
 #: contents/ui/MaximizedPlayerPage.qml:273
 #, kde-format
@@ -162,7 +160,7 @@ msgstr "Nepřehrává se žádné médium"
 #: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:97
 #, kde-format
 msgid "Library"
-msgstr ""
+msgstr "Knihovna"
 
 #: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:112
 #, kde-format
@@ -186,10 +184,9 @@ msgid "No songs here yet"
 msgstr "Zatím zde nejsou žádné skladby"
 
 #: contents/ui/PlaylistPage.qml:42
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "Playlist"
-msgstr "Seznamy skladeb"
+msgstr "Seznam skladeb"
 
 #: contents/ui/SearchPage.qml:16
 #, kde-format
@@ -227,28 +224,11 @@ msgid "Add to queue"
 msgstr ""
 
 #: contents/ui/SongMenu.qml:78 contents/ui/SongMenu.qml:119
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "Remove Favourite"
-msgstr "Oblíbené"
+msgstr ""
 
 #: contents/ui/SongMenu.qml:78 contents/ui/SongMenu.qml:119
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "Add Favourite"
-msgstr "Oblíbené"
-
-#~ msgid "Favourite Songs"
-#~ msgstr "Oblíbené skladby"
-
-#~ msgid "Back"
-#~ msgstr "Zpět"
-
-#~ msgid "Find music on YouTube Music"
-#~ msgstr "Najít hudbu na Hudba YouTube"
-
-#~ msgid "Add to Playlist"
-#~ msgstr "Přidat do seznamu skladeb"
-
-#~ msgid "Play next"
-#~ msgstr "Přehrát následující"
+msgstr ""
