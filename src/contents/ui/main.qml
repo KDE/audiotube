@@ -6,6 +6,7 @@ import QtQuick 2.1
 import QtQuick.Controls 2.12 as Controls
 import QtQuick.Layouts 1.3
 import org.kde.kirigami 2.14 as Kirigami
+import QtGraphicalEffects 1.0
 
 import org.kde.ytmusic 1.0
 
@@ -13,6 +14,12 @@ Kirigami.ApplicationWindow {
     id: root
 
     pageStack.globalToolBar.style: wideScreen? Kirigami.ApplicationHeaderStyle.None: Kirigami.ApplicationHeaderStyle.Breadcrumb
+
+    color: "transparent"
+    Blur{id:blur}
+    Component.onCompleted: {
+        blur.setBlur(sidebar, true);
+    }
 
     pageStack.columnView.columnResizeMode: Kirigami.ColumnView.SingleColumn
 
@@ -27,6 +34,8 @@ Kirigami.ApplicationWindow {
         anchors.right: parent.right
         visible: wideScreen
     }
+
+
     Sidebar {
         id:sidebar
         visible: wideScreen

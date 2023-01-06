@@ -11,6 +11,7 @@
 #include <KLocalizedString>
 #include <KCrash>
 #include <KAboutData>
+#include <QQuickWindow>
 
 #include "searchmodel.h"
 #include "albummodel.h"
@@ -21,6 +22,7 @@
 #include "playlistmodel.h"
 #include "playerutils.h"
 #include "library.h"
+#include "blur.h"
 
 #include "asyncdatabase.h"
 
@@ -48,15 +50,19 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlRegisterType<PlaylistModel>(URI, 1, 0, "PlaylistModel");
     qmlRegisterUncreatableType<PlaybackHistoryModel>(URI, 1, 0, "PlaybackHistoryModel","");
     qmlRegisterType<QSortFilterProxyModel>(URI, 1, 0, "SortFilterModel");
+    qmlRegisterType<Blur>(URI, 1, 0, "Blur");
+
     qmlRegisterSingletonType<UserPlaylistModel>(URI, 1, 0, "UserPlaylistModel", [](QQmlEngine *, QJSEngine *) {
         return new UserPlaylistModel();
     });
     qmlRegisterSingletonType<ErrorHandler>(URI, 1, 0, "ErrorHandler", [](QQmlEngine *, QJSEngine *) {
         return new ErrorHandler();
     });
+
     qmlRegisterSingletonType<PlayerUtils>(URI, 1, 0, "PlayerUtils", [](QQmlEngine *, QJSEngine *) {
         return new PlayerUtils();
     });
+
     qmlRegisterSingletonInstance<Library>(URI, 1, 0, "Library", &Library::instance());
     qmlRegisterType<ThumbnailSource>(URI, 1, 0, "ThumbnailSource");
     qmlRegisterAnonymousType<FavouriteWatcher>(URI, 1);

@@ -36,6 +36,7 @@ add_executable(audiotube
     multiiterableview.h
     library.cpp
     resources.qrc
+    blur.cpp
 )
 
 target_link_libraries(audiotube
@@ -49,6 +50,7 @@ target_link_libraries(audiotube
     KF5::I18n
     KF5::CoreAddons
     KF5::Crash
+    KF5::WindowSystem
     ytm
     asyncdatabase
 )

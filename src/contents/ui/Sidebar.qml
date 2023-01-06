@@ -9,6 +9,7 @@ import org.kde.kirigami 2.20 as Kirigami
 import org.kde.ytmusic 1.0
 
 
+
 Rectangle {
     property bool collapsed: false
     id: sidebar
@@ -16,7 +17,13 @@ Rectangle {
     clip:true
     Kirigami.Theme.colorSet: Kirigami.Theme.Window
     Kirigami.Theme.inherit: false
-    color: Kirigami.Theme.backgroundColor
+    color: "transparent"
+
+    Rectangle {
+        anchors.fill: parent
+        color: Kirigami.Theme.backgroundColor
+        opacity: 0.7
+    }
 
     NumberAnimation on width{
         id: collapse
