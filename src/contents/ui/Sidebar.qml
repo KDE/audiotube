@@ -18,7 +18,6 @@ Rectangle {
     Kirigami.Theme.inherit: false
     color: Kirigami.Theme.backgroundColor
 
-
     NumberAnimation on width{
         id: collapse
         easing.type: Easing.OutCubic
@@ -90,8 +89,9 @@ Rectangle {
                     icon.name: "file-library-symbolic"
                     checked: pageStack.currentItem && pageStack.currentItem.objectName == "libraryPage"
                     onClicked: {
+                        pageStack.clear()
+                        pageStack.push("qrc:/LibraryPage.qml")
 
-                        pageStack.replace("qrc:/LibraryPage.qml")
 
                     }
                 }
@@ -119,7 +119,9 @@ Rectangle {
                     text: collapsed ? "" : i18n("Favourites")
                     icon.name: "non-starred-symbolic"
                     checked: pageStack.currentItem && pageStack.currentItem.objectName == "favourites"
-                    onClicked: {pageStack.replace("qrc:/PlaybackHistory.qml", {
+                    onClicked: {
+                        pageStack.clear()
+                        pageStack.push("qrc:/PlaybackHistory.qml", {
                           "dataModel": Library.favourites,
                           "title": i18n("Favourites"),
                           "objectName": "favourites"
@@ -136,7 +138,9 @@ Rectangle {
                     text: collapsed? "" : i18n("Played Songs")
                     icon.name: "edit-undo-history"
                     checked: pageStack.currentItem && pageStack.currentItem.objectName == "history"
-                    onClicked: {pageStack.replace("qrc:/PlaybackHistory.qml", {
+                    onClicked: {
+                        pageStack.clear()
+                        pageStack.push("qrc:/PlaybackHistory.qml", {
                           "dataModel": Library.playbackHistory,
                           "title": i18n("Played Songs"),
                           "objectName": "history"
