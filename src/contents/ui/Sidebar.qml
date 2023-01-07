@@ -13,11 +13,11 @@ Rectangle {
     property bool collapsed: false
     id: sidebar
     width: 200
-    height: applicationWindow().height-110
     clip:true
     Kirigami.Theme.colorSet: Kirigami.Theme.Window
     Kirigami.Theme.inherit: false
     color: Kirigami.Theme.backgroundColor
+
 
     NumberAnimation on width{
         id: collapse
@@ -61,15 +61,7 @@ Rectangle {
 
         Kirigami.Separator {
             Layout.fillWidth: true
-            visible: pageStack.currentItem && pageStack.currentItem.objectName == "libraryPage"
-                      && pageStack.layers.depth == 1
 
-
-        }
-        Kirigami.AbstractApplicationHeader {
-            Layout.fillWidth: true
-            visible: pageStack.currentItem && pageStack.currentItem.objectName !== "libraryPage"
-                      || pageStack.layers.depth !== 1
 
         }
 

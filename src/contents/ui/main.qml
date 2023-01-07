@@ -11,6 +11,9 @@ import org.kde.ytmusic 1.0
 
 Kirigami.ApplicationWindow {
     id: root
+
+    pageStack.globalToolBar.style: wideScreen? Kirigami.ApplicationHeaderStyle.None: Kirigami.ApplicationHeaderStyle.Breadcrumb
+
     pageStack.columnView.columnResizeMode: Kirigami.ColumnView.SingleColumn
 
     property alias searchField: searchLoader.item // TODO
@@ -22,12 +25,12 @@ Kirigami.ApplicationWindow {
         anchors.top: parent.top
         anchors.left: parent.left
         anchors.right: parent.right
-        visible: pageStack.currentItem && pageStack.currentItem.objectName == "libraryPage"
-                 && pageStack.layers.depth == 1
+        visible: wideScreen
     }
     Sidebar {
         id:sidebar
         visible: wideScreen
+        height: pageStack.height - playerFooter.implicitHeight
 
     }
     NavigationBar{
@@ -37,6 +40,7 @@ Kirigami.ApplicationWindow {
     }
 
     header: Controls.Control {
+        visible: wideScreen || root.showSearch
         padding: Kirigami.Units.largeSpacing
 
         background: Rectangle {
@@ -51,12 +55,22 @@ Kirigami.ApplicationWindow {
         contentItem: RowLayout {
 
 
-            Kirigami.Heading {
-                Layout.alignment: Qt.AlignLeft
-                Layout.leftMargin: Kirigami.Units.largeSpacing
-                level: 1
-                text: "AudioTube"
-                visible: !root.wideScreen && !root.showSearch
+
+            Controls.ToolButton {
+                id: back
+                enabled: applicationWindow().pageStack.layers.depth > 1 || (applicationWindow().pageStack.depth > 1 && (applicationWindow().pageStack.currentIndex > 0 || applicationWindow().pageStack.contentItem.contentX > 0)) // Copied from https://invent.kde.org/frameworks/kirigami/-/blob/master/src/controls/templates/private/BackButton.qml#L16
+                icon.name: "draw-arrow-back"
+                onClicked: pageStack.goBack()
+                visible: wideScreen
+            }
+            Controls.ToolButton {
+                icon.name: "draw-arrow-forward"
+                enabled: applicationWindow().pageStack.currentIndex < applicationWindow().pageStack.depth-1
+                onClicked: pageStack.goForward()
+                anchors.left: back.right
+                visible: wideScreen
+
+
             }
 
             // spacer
@@ -71,6 +85,11 @@ Kirigami.ApplicationWindow {
                 Layout.fillWidth: true
                 Layout.maximumWidth: wideScreen ? 400 : root.width
                 sourceComponent: searchFieldComponent
+            }
+            Item {
+                width: 2*back.width
+                visible: wideScreen
+
             }
         }
     }

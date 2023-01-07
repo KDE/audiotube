@@ -12,8 +12,8 @@ import org.kde.ytmusic 1.0
 Kirigami.ScrollablePage {
     objectName: "libraryPage"
     Kirigami.Theme.colorSet: Kirigami.Theme.View
+    title: "AudioTube"
 
-    globalToolBarStyle: Kirigami.ApplicationHeaderStyle.None
     rightPadding: 0
     leftPadding: 0
 

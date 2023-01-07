@@ -71,7 +71,7 @@ Kirigami.ScrollablePage {
                 Kirigami.Action {
                     icon.name: "view-more-horizontal-symbolic"
                     text: i18n("More")
-                    onTriggered: menu.openForSong(delegateItem.videoId, delegateItem.title, delegateItem.artists, delegateItem.artists)
+                    onTriggered: menu.openForSong(delegateItem.videoId, delegateItem.title, delegateItem.artists, delegateItem.artistsDisplayString)
                 }
             ]
         }
