@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-30 00:55+0000\n"
+"POT-Creation-Date: 2023-01-08 01:01+0000\n"
 "PO-Revision-Date: 2023-01-02 14:47+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -109,7 +109,7 @@ msgstr "Cancel·la"
 
 #: contents/ui/LibraryPage.qml:25 contents/ui/LibraryPage.qml:41
 #: contents/ui/NavigationBar.qml:46 contents/ui/NavigationBar.qml:51
-#: contents/ui/Sidebar.qml:127 contents/ui/Sidebar.qml:132
+#: contents/ui/Sidebar.qml:119 contents/ui/Sidebar.qml:124
 #, kde-format
 msgid "Favourites"
 msgstr "Preferides"
@@ -129,7 +129,7 @@ msgstr "Les més reproduïdes"
 msgid "played Songs"
 msgstr "Cançons reproduïdes"
 
-#: contents/ui/main.qml:78
+#: contents/ui/main.qml:97
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
@@ -160,18 +160,18 @@ msgstr "Elimina la pista"
 msgid "No media playing"
 msgstr "No s'està reproduint cap suport"
 
-#: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:97
+#: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:89
 #, kde-format
 msgid "Library"
 msgstr "Biblioteca"
 
-#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:112
+#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:104
 #, kde-format
 msgid "Search"
 msgstr "Cerca"
 
 #: contents/ui/NavigationBar.qml:58 contents/ui/NavigationBar.qml:63
-#: contents/ui/Sidebar.qml:144 contents/ui/Sidebar.qml:149
+#: contents/ui/Sidebar.qml:136 contents/ui/Sidebar.qml:141
 #, kde-format
 msgid "Played Songs"
 msgstr "Cançons reproduïdes"
@@ -211,7 +211,7 @@ msgstr "Llistes de reproducció"
 msgid "Unknown"
 msgstr "Desconeguda"
 
-#: contents/ui/Sidebar.qml:178
+#: contents/ui/Sidebar.qml:170
 #, kde-format
 msgid "Collapse Sidebar"
 msgstr "Redueix la barra lateral"

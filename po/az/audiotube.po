@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-12-30 00:55+0000\n"
+"POT-Creation-Date: 2023-01-08 01:01+0000\n"
 "PO-Revision-Date: 2022-06-19 12:16+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -107,7 +107,7 @@ msgstr "İmtina"
 
 #: contents/ui/LibraryPage.qml:25 contents/ui/LibraryPage.qml:41
 #: contents/ui/NavigationBar.qml:46 contents/ui/NavigationBar.qml:51
-#: contents/ui/Sidebar.qml:127 contents/ui/Sidebar.qml:132
+#: contents/ui/Sidebar.qml:119 contents/ui/Sidebar.qml:124
 #, kde-format
 msgid "Favourites"
 msgstr "Süçilmişlər"
@@ -128,7 +128,7 @@ msgstr "Daha çox dinlənilən"
 msgid "played Songs"
 msgstr "Oxudulan mahnılar"
 
-#: contents/ui/main.qml:78
+#: contents/ui/main.qml:97
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
@@ -159,18 +159,18 @@ msgstr "Mahnını silin"
 msgid "No media playing"
 msgstr "Media faylı oynadılmır"
 
-#: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:97
+#: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:89
 #, kde-format
 msgid "Library"
 msgstr ""
 
-#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:112
+#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:104
 #, kde-format
 msgid "Search"
 msgstr "Axtarın"
 
 #: contents/ui/NavigationBar.qml:58 contents/ui/NavigationBar.qml:63
-#: contents/ui/Sidebar.qml:144 contents/ui/Sidebar.qml:149
+#: contents/ui/Sidebar.qml:136 contents/ui/Sidebar.qml:141
 #, kde-format
 msgid "Played Songs"
 msgstr "Oxudulan mahnılar"
@@ -211,7 +211,7 @@ msgstr "Mahnı siyahıları"
 msgid "Unknown"
 msgstr "Bilinməyən"
 
-#: contents/ui/Sidebar.qml:178
+#: contents/ui/Sidebar.qml:170
 #, kde-format
 msgid "Collapse Sidebar"
 msgstr ""
