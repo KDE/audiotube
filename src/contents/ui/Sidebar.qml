@@ -1,4 +1,4 @@
-// SPDX-FileCopyrightText: 2022 Mathis Brüchert <jbb@kaidan.im>
+// SPDX-FileCopyrightText: 2022 Mathis Brüchert <mbb@kaidan.im>
 //
 // SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
@@ -7,8 +7,6 @@ import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.15 as Controls
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.ytmusic 1.0
-
-
 
 Rectangle {
     property bool collapsed: false
@@ -22,7 +20,7 @@ Rectangle {
     Rectangle {
         anchors.fill: parent
         color: Kirigami.Theme.backgroundColor
-        opacity: 0.7
+        opacity: 0.8
     }
 
     NumberAnimation on width{
@@ -113,7 +111,7 @@ Rectangle {
                     checked: pageStack.currentItem && pageStack.currentItem.objectName == "searchPage"
                     onClicked: {
                         searchField.forceActiveFocus()
-                        popup.open()
+                        focusSearch()
                     }
                 }
 

@@ -25,7 +25,7 @@ Kirigami.ScrollablePage {
             Layout.fillWidth: true
 
             id: recents
-            visible: searchField.text && recentsRepeater.count > 0
+            visible: searchLoader.text && recentsRepeater.count > 0
             leftPadding: 10
             topPadding: 10
             Controls.ScrollBar.horizontal.policy: Controls.ScrollBar.AlwaysOff
@@ -40,7 +40,7 @@ Kirigami.ScrollablePage {
                     Layout.fillWidth: true
                     model: SortFilterModel {
                         filterRole: PlaybackHistoryModel.Title
-                        filterRegularExpression: searchField.filterExpression
+                        filterRegularExpression: searchLoader.filterExpression
                         sourceModel: Library.playbackHistory
                     }
                     delegate: Kirigami.DelegateRecycler {
@@ -63,7 +63,7 @@ Kirigami.ScrollablePage {
             Layout.fillWidth: true
             model: SortFilterModel {
                 sourceModel: Library.searches
-                filterRegularExpression: searchField.filterExpression
+                filterRegularExpression: searchLoader.filterExpression
             }
 
             delegate: Kirigami.AbstractListItem {
@@ -83,8 +83,8 @@ Kirigami.ScrollablePage {
 
                 }
                 onClicked: {
-                    searchField.text = model.display
-                    searchField.accepted()
+                    searchLoader.text = model.display
+                    searchLoader.accepted()
                 }
             }
         }

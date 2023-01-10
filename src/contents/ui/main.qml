@@ -23,7 +23,7 @@ Kirigami.ApplicationWindow {
 
     pageStack.columnView.columnResizeMode: Kirigami.ColumnView.SingleColumn
 
-    property alias searchField: searchLoader.item // TODO
+    property alias searchField: searchLoader // TODO
     property bool wideScreen: width >= 600
     property bool showSearch: false // only applicable if not widescreen
 
@@ -84,17 +84,20 @@ Kirigami.ApplicationWindow {
 
             // spacer
             Item {
+                visible: wideScreen
                 Layout.fillWidth: !root.wideScreen
             }
-
-            Loader {
+            SearchWithDropdown {
                 id: searchLoader
                 visible: root.wideScreen || root.showSearch
                 Layout.alignment: Qt.AlignHCenter
                 Layout.fillWidth: true
+                Layout.fillHeight: true
+                height: back.height
+                width: wideScreen?null:root.width
                 Layout.maximumWidth: wideScreen ? 400 : root.width
-                sourceComponent: searchFieldComponent
             }
+
             Item {
                 width: 2*back.width
                 visible: wideScreen
@@ -124,7 +127,7 @@ Kirigami.ApplicationWindow {
         UserPlaylistModel.shuffle = true
         UserPlaylistModel.playlistId = playlistId
     }
-
+    function focusSearch(){searchLoader.forceFocus()}
 
     Connections {
         target: ErrorHandler
@@ -153,8 +156,16 @@ Kirigami.ApplicationWindow {
                     onEntered: {
                         if (!Kirigami.Settings.hasTransientTouchInput)
                             recSelected.visible = true
+                            searchTitle.color = Kirigami.Theme.hoverColor
+                            searchTitle.font.bold = true
+
+
                     }
-                    onExited: recSelected.visible = false
+                    onExited:{
+                        recSelected.visible = false
+                        searchTitle.color = Kirigami.Theme.textColor
+                        searchTitle.font.bold = false
+                    }
 
                 }
                 Layout.margins: 5
@@ -204,6 +215,7 @@ Kirigami.ApplicationWindow {
                 }
             }
             Controls.Label {
+                id: searchTitle
                 leftPadding:5
                 Layout.maximumWidth: 70
                 text: model ? model.title : ""
@@ -216,138 +228,7 @@ Kirigami.ApplicationWindow {
             }
         }
     }
-    
-    Component {
-        id: searchFieldComponent
 
-        Kirigami.SearchField {
-            id: searchField
-
-            Layout.fillWidth: !wideScreen
-            autoAccept: false
-            selectByMouse: true
-            onPressed: {
-                if (wideScreen)
-                    popup.open()
-            }
-
-
-            property var filterExpression: new RegExp(`.*${searchField.text}.*`, "i")
-            property alias popup: popup
-
-            Controls.Popup {
-                id: popup
-                visible: wideScreen && searchField.activeFocus
-                padding: 1
-                x: searchField.y
-                y: searchField.y + searchField.height
-                width: searchField.width
-                height: completionList
-                        ? Math.min(completionList.count * Kirigami.Units.gridUnit * 2 + Kirigami.Units.gridUnit * 2 + recents.implicitHeight, Kirigami.Units.gridUnit * 20)
-                        : Kirigami.Units.gridUnit * 20
-
-                contentItem: Controls.ScrollView {
-                    contentWidth: -1
-                    ColumnLayout {
-                        width: popup.width
-
-                        Controls.ScrollView {
-                            id: recents
-                            Layout.fillWidth: true
-                            Layout.maximumWidth: popup.width
-
-                            visible: searchField.text && recentsRepeater.count > 0
-
-                            leftPadding: 10
-                            topPadding: 10
-                            Controls.ScrollBar.horizontal.policy: Controls.ScrollBar.AlwaysOff
-                            RowLayout {
-                                spacing: 10
-                                Layout.fillWidth: true
-                                Layout.maximumWidth: popup.width - 23
-
-                                Repeater {
-                                    id: recentsRepeater
-                                    Layout.fillWidth: true
-                                    model: SortFilterModel {
-                                        filterRole: PlaybackHistoryModel.Title
-                                        filterRegularExpression: searchField.filterExpression
-                                        sourceModel: Library.playbackHistory
-                                    }
-                                    delegate: Kirigami.DelegateRecycler {
-                                        Layout.alignment: Qt.AlignTop
-
-                                        sourceComponent: searchAlbum
-                                    }
-                                }
-                            }
-                        }
-                        Kirigami.Separator{
-                            Layout.fillWidth: true
-                        }
-                        Repeater {
-                            Layout.fillWidth: true
-
-                            id: completionList
-                            model: SortFilterModel {
-                                sourceModel: Library.searches
-                                filterRegularExpression: searchField.filterExpression
-                            }
-
-                            delegate: Kirigami.AbstractListItem {
-                                Kirigami.Theme.colorSet: Kirigami.Theme.Window
-                                Kirigami.Theme.inherit: false
-                                Layout.fillWidth: true
-
-                                id: completionDelegate
-                                width: parent.width
-                                height: Kirigami.Units.gridUnit * 2
-                                RowLayout {
-                                    Kirigami.Icon {
-                                        source: "search"
-                                        implicitHeight: Kirigami.Units.gridUnit
-                                        implicitWidth: Kirigami.Units.gridUnit
-                                        color: Kirigami.Theme.disabledTextColor
-                                    }
-                                    Controls.Label{
-                                        text: model.display
-                                        Layout.fillWidth: true
-                                    }
-
-                                }
-                                onClicked: {
-                                    searchField.text = model.display
-                                    searchField.accepted()
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-
-            onAccepted: {
-                while (pageStack.depth > 0) {
-                    pageStack.pop()
-                }
-
-                pageStack.layers.clear()
-
-                if (text) {
-                    Library.addSearch(text)
-                    pageStack.push("qrc:/SearchPage.qml", {
-                                "searchQuery": text,
-                                objectName: "searchPage"
-                                   })
-                } else {
-                    wideScreen
-                            ? pageStack.push("qrc:/LibraryPage.qml")
-                            : pageStack.push("qrc:/SearchHistoryPage.qml")
-                }
-
-                popup.close()
-            }
-        }
-    }
     
     pageStack.anchors.bottomMargin: wideScreen ? playerFooter.minimizedPlayerHeight: playerFooter.minimizedPlayerHeight+bottombar.height
     pageStack.anchors.leftMargin: wideScreen ? sidebar.width:0

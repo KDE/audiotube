@@ -26,5 +26,6 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
         <file alias="Sidebar.qml">contents/ui/Sidebar.qml</file>
         <file alias="NavigationBar.qml">contents/ui/NavigationBar.qml</file>
         <file alias="SearchHistoryPage.qml">contents/ui/SearchHistoryPage.qml</file>
+        <file alias="SearchWithDropdown.qml">contents/ui/SearchWithDropdown.qml</file>
     </qresource>
 </RCC>
