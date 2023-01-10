@@ -59,7 +59,7 @@ Item {
                 label: i18n("Play Next")
                 icon: "go-next"
                 onClicked: {
-                    UserPlaylistModel.playNext(drawer.videoId, drawer.SongTitle, drawer.artists)
+                    UserPlaylistModel.playNext(drawer.videoId, drawer.songTitle, drawer.artists)
                     drawer.close()
                 }
             }
@@ -105,7 +105,7 @@ Item {
         Controls.MenuItem {
             text: i18n("Play Next")
             icon.name: "go-next"
-            onTriggered: UserPlaylistModel.playNext(menu.videoId, menu.SongTitle, menu.artists)
+            onTriggered: UserPlaylistModel.playNext(menu.videoId, menu.songTitle, menu.artists)
         }
 
         Controls.MenuItem {
