@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-08 01:01+0000\n"
+"POT-Creation-Date: 2023-01-10 00:58+0000\n"
 "PO-Revision-Date: 2023-01-02 07:12\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -104,7 +104,7 @@ msgstr "取消"
 
 #: contents/ui/LibraryPage.qml:25 contents/ui/LibraryPage.qml:41
 #: contents/ui/NavigationBar.qml:46 contents/ui/NavigationBar.qml:51
-#: contents/ui/Sidebar.qml:119 contents/ui/Sidebar.qml:124
+#: contents/ui/Sidebar.qml:119 contents/ui/Sidebar.qml:126
 #, kde-format
 msgid "Favourites"
 msgstr "收藏夹"
@@ -155,7 +155,7 @@ msgstr "移除曲目"
 msgid "No media playing"
 msgstr "没有正在播放的媒体"
 
-#: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:89
+#: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:88
 #, kde-format
 msgid "Library"
 msgstr ""
@@ -166,7 +166,7 @@ msgid "Search"
 msgstr "搜索"
 
 #: contents/ui/NavigationBar.qml:58 contents/ui/NavigationBar.qml:63
-#: contents/ui/Sidebar.qml:136 contents/ui/Sidebar.qml:141
+#: contents/ui/Sidebar.qml:138 contents/ui/Sidebar.qml:145
 #, kde-format
 msgid "Played Songs"
 msgstr "已播放歌曲"
@@ -206,7 +206,7 @@ msgstr "播放列表"
 msgid "Unknown"
 msgstr "未知"
 
-#: contents/ui/Sidebar.qml:170
+#: contents/ui/Sidebar.qml:174
 #, kde-format
 msgid "Collapse Sidebar"
 msgstr ""

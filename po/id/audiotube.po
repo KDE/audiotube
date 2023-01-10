@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-08 01:01+0000\n"
+"POT-Creation-Date: 2023-01-10 00:58+0000\n"
 "PO-Revision-Date: 2022-12-21 11:44+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -106,7 +106,7 @@ msgstr "Batalkan"
 
 #: contents/ui/LibraryPage.qml:25 contents/ui/LibraryPage.qml:41
 #: contents/ui/NavigationBar.qml:46 contents/ui/NavigationBar.qml:51
-#: contents/ui/Sidebar.qml:119 contents/ui/Sidebar.qml:124
+#: contents/ui/Sidebar.qml:119 contents/ui/Sidebar.qml:126
 #, kde-format
 msgid "Favourites"
 msgstr "Favorit"
@@ -158,7 +158,7 @@ msgstr "Hapus Trek"
 msgid "No media playing"
 msgstr "Tidak ada media yang diputarkan"
 
-#: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:89
+#: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:88
 #, kde-format
 msgid "Library"
 msgstr ""
@@ -169,7 +169,7 @@ msgid "Search"
 msgstr "Cari"
 
 #: contents/ui/NavigationBar.qml:58 contents/ui/NavigationBar.qml:63
-#: contents/ui/Sidebar.qml:136 contents/ui/Sidebar.qml:141
+#: contents/ui/Sidebar.qml:138 contents/ui/Sidebar.qml:145
 #, kde-format
 msgid "Played Songs"
 msgstr "Lagu yang telah diputar"
@@ -209,7 +209,7 @@ msgstr "Daftar Putar"
 msgid "Unknown"
 msgstr "Tidak diketahui"
 
-#: contents/ui/Sidebar.qml:170
+#: contents/ui/Sidebar.qml:174
 #, kde-format
 msgid "Collapse Sidebar"
 msgstr ""

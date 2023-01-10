@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-08 01:01+0000\n"
-"PO-Revision-Date: 2022-11-28 18:35+0000\n"
+"POT-Creation-Date: 2023-01-10 00:58+0000\n"
+"PO-Revision-Date: 2023-01-09 18:55+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -108,7 +108,7 @@ msgstr "Cancelar"
 
 #: contents/ui/LibraryPage.qml:25 contents/ui/LibraryPage.qml:41
 #: contents/ui/NavigationBar.qml:46 contents/ui/NavigationBar.qml:51
-#: contents/ui/Sidebar.qml:119 contents/ui/Sidebar.qml:124
+#: contents/ui/Sidebar.qml:119 contents/ui/Sidebar.qml:126
 #, kde-format
 msgid "Favourites"
 msgstr "Favoritos"
@@ -124,10 +124,9 @@ msgid "Most played"
 msgstr "Mais Tocadas"
 
 #: contents/ui/LibraryPage.qml:229
-#, fuzzy, kde-format
-#| msgid "Played Songs"
+#, kde-format
 msgid "played Songs"
-msgstr "Músicas Tocadas"
+msgstr "Músicas tocadas"
 
 #: contents/ui/main.qml:97
 #, kde-format
@@ -160,7 +159,7 @@ msgstr "Remover a Faixa"
 msgid "No media playing"
 msgstr "Nada em reprodução"
 
-#: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:89
+#: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:88
 #, kde-format
 msgid "Library"
 msgstr "Biblioteca"
@@ -171,7 +170,7 @@ msgid "Search"
 msgstr "Procurar"
 
 #: contents/ui/NavigationBar.qml:58 contents/ui/NavigationBar.qml:63
-#: contents/ui/Sidebar.qml:136 contents/ui/Sidebar.qml:141
+#: contents/ui/Sidebar.qml:138 contents/ui/Sidebar.qml:145
 #, kde-format
 msgid "Played Songs"
 msgstr "Músicas Tocadas"
@@ -194,7 +193,7 @@ msgstr "Lista de Reprodução"
 #: contents/ui/SearchPage.qml:16
 #, kde-format
 msgid "Previous Searches:"
-msgstr ""
+msgstr "Pesquisas Anteriores:"
 
 #: contents/ui/SearchPage.qml:28
 #, kde-format
@@ -211,10 +210,10 @@ msgstr "Listas de Reprodução"
 msgid "Unknown"
 msgstr "Desconhecido"
 
-#: contents/ui/Sidebar.qml:170
+#: contents/ui/Sidebar.qml:174
 #, kde-format
 msgid "Collapse Sidebar"
-msgstr ""
+msgstr "Fechar a Barra Lateral"
 
 #: contents/ui/SongMenu.qml:59 contents/ui/SongMenu.qml:106
 #, kde-format
@@ -235,12 +234,3 @@ msgstr "Remover o Favorito"
 #, kde-format
 msgid "Add Favourite"
 msgstr "Adicionar aos Favoritos"
-
-#~ msgid "Favourite Songs"
-#~ msgstr "Músicas Favoritas"
-
-#~ msgid "Back"
-#~ msgstr "Recuar"
-
-#~ msgid "Find music on YouTube Music"
-#~ msgstr "Procurar música no YouTube Music"
