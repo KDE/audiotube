@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-10 00:58+0000\n"
+"POT-Creation-Date: 2023-01-11 01:00+0000\n"
 "PO-Revision-Date: 2023-01-02 19:53+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -105,7 +105,7 @@ msgstr "Prekliči"
 
 #: contents/ui/LibraryPage.qml:25 contents/ui/LibraryPage.qml:41
 #: contents/ui/NavigationBar.qml:46 contents/ui/NavigationBar.qml:51
-#: contents/ui/Sidebar.qml:119 contents/ui/Sidebar.qml:126
+#: contents/ui/Sidebar.qml:126 contents/ui/Sidebar.qml:133
 #, kde-format
 msgid "Favourites"
 msgstr "Priljubljene"
@@ -125,7 +125,7 @@ msgstr "Največkrat predvajane"
 msgid "played Songs"
 msgstr "predvajane pesmi"
 
-#: contents/ui/main.qml:97
+#: contents/ui/main.qml:106
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
@@ -156,18 +156,18 @@ msgstr "Odstrani sled"
 msgid "No media playing"
 msgstr "Niče se ne predvaja"
 
-#: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:88
+#: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:95
 #, kde-format
 msgid "Library"
 msgstr "Knjižnica"
 
-#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:104
+#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:111
 #, kde-format
 msgid "Search"
 msgstr "Išči"
 
 #: contents/ui/NavigationBar.qml:58 contents/ui/NavigationBar.qml:63
-#: contents/ui/Sidebar.qml:138 contents/ui/Sidebar.qml:145
+#: contents/ui/Sidebar.qml:145 contents/ui/Sidebar.qml:152
 #, kde-format
 msgid "Played Songs"
 msgstr "Predvajane pesmi"
@@ -207,7 +207,7 @@ msgstr "Seznami predvajanja"
 msgid "Unknown"
 msgstr "Neznano"
 
-#: contents/ui/Sidebar.qml:174
+#: contents/ui/Sidebar.qml:181
 #, kde-format
 msgid "Collapse Sidebar"
 msgstr "Strni stransko vrstico"

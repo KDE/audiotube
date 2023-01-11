@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-10 00:58+0000\n"
+"POT-Creation-Date: 2023-01-11 01:00+0000\n"
 "PO-Revision-Date: 2022-12-31 15:10+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
@@ -104,7 +104,7 @@ msgstr "Annuler"
 
 #: contents/ui/LibraryPage.qml:25 contents/ui/LibraryPage.qml:41
 #: contents/ui/NavigationBar.qml:46 contents/ui/NavigationBar.qml:51
-#: contents/ui/Sidebar.qml:119 contents/ui/Sidebar.qml:126
+#: contents/ui/Sidebar.qml:126 contents/ui/Sidebar.qml:133
 #, kde-format
 msgid "Favourites"
 msgstr "Favoris"
@@ -124,7 +124,7 @@ msgstr "Les plus lus"
 msgid "played Songs"
 msgstr "Titres lus"
 
-#: contents/ui/main.qml:97
+#: contents/ui/main.qml:106
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
@@ -155,18 +155,18 @@ msgstr "Supprimer une piste"
 msgid "No media playing"
 msgstr "Aucun média en lecture"
 
-#: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:88
+#: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:95
 #, kde-format
 msgid "Library"
 msgstr "Bibliothèque"
 
-#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:104
+#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:111
 #, kde-format
 msgid "Search"
 msgstr "Rechercher"
 
 #: contents/ui/NavigationBar.qml:58 contents/ui/NavigationBar.qml:63
-#: contents/ui/Sidebar.qml:138 contents/ui/Sidebar.qml:145
+#: contents/ui/Sidebar.qml:145 contents/ui/Sidebar.qml:152
 #, kde-format
 msgid "Played Songs"
 msgstr "Titres lus"
@@ -206,7 +206,7 @@ msgstr "Listes de lecture"
 msgid "Unknown"
 msgstr "Inconnu"
 
-#: contents/ui/Sidebar.qml:174
+#: contents/ui/Sidebar.qml:181
 #, kde-format
 msgid "Collapse Sidebar"
 msgstr "Réduire la barre latérale"
