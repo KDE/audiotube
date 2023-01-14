@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the audiotube package.
 #
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2022.
+# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-11 01:00+0000\n"
-"PO-Revision-Date: 2022-12-22 16:43+0400\n"
+"PO-Revision-Date: 2023-01-14 17:00+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -121,8 +121,7 @@ msgid "Most played"
 msgstr "الأكثر تشغيلا"
 
 #: contents/ui/LibraryPage.qml:229
-#, fuzzy, kde-format
-#| msgid "Played Songs"
+#, kde-format
 msgid "played Songs"
 msgstr "الأغاني المشغلة"
 
@@ -160,7 +159,7 @@ msgstr "لا يوجد وسائط تعمل"
 #: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:95
 #, kde-format
 msgid "Library"
-msgstr ""
+msgstr "المكتبة"
 
 #: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:111
 #, kde-format
@@ -191,7 +190,7 @@ msgstr "قائمة التشغيل"
 #: contents/ui/SearchPage.qml:16
 #, kde-format
 msgid "Previous Searches:"
-msgstr ""
+msgstr "البحوث الأخيرة:"
 
 #: contents/ui/SearchPage.qml:28
 #, kde-format
@@ -211,7 +210,7 @@ msgstr "مجهول"
 #: contents/ui/Sidebar.qml:181
 #, kde-format
 msgid "Collapse Sidebar"
-msgstr ""
+msgstr " اطوِ الشريط الجانبي"
 
 #: contents/ui/SongMenu.qml:59 contents/ui/SongMenu.qml:106
 #, kde-format
