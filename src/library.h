@@ -16,6 +16,7 @@
 #include "asyncdatabase.h"
 
 class FavouriteWatcher;
+class WasPlayedWatcher;
 
 struct Song {
     using ColumnTypes = std::tuple<QString, QString, QString, QString>;
@@ -129,6 +130,8 @@ public:
     PlaybackHistoryModel *playbackHistory();
     Q_SIGNAL void playbackHistoryChanged();
     Q_INVOKABLE void addPlaybackHistoryItem(const QString &videoId, const QString &title, const QString &artist, const QString &album);
+    Q_INVOKABLE void removePlaybackHistoryItem(const QString &videoId);
+    Q_INVOKABLE WasPlayedWatcher *wasPlayedWatcher(const QString &videoId);
 
     PlaybackHistoryModel *mostPlayed();
 
@@ -188,4 +191,24 @@ private:
     QString m_videoId;
     Library *m_library;
     bool m_isFavourite = false;
+};
+
+class WasPlayedWatcher : public QObject {
+    Q_OBJECT
+    
+    Q_PROPERTY(bool wasPlayed READ wasPlayed NOTIFY wasPlayedChanged)
+    
+public:
+    WasPlayedWatcher(Library *Library, const QString &VideoId);
+    
+    bool wasPlayed() const;
+    
+    Q_SIGNAL void wasPlayedChanged();
+
+private:
+    bool m_wasPlayed = false;
+    QString m_videoId;
+    Library *m_library;
+    Q_SLOT void update(std::optional<SingleValue<bool>> result);
+    Q_SLOT void query();
 };

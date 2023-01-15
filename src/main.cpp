@@ -66,6 +66,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlRegisterSingletonInstance<Library>(URI, 1, 0, "Library", &Library::instance());
     qmlRegisterType<ThumbnailSource>(URI, 1, 0, "ThumbnailSource");
     qmlRegisterAnonymousType<FavouriteWatcher>(URI, 1);
+    qmlRegisterAnonymousType<WasPlayedWatcher>(URI, 1);
 
     engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
     engine.load(QUrl(QStringLiteral("qrc:///main.qml")));

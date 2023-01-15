@@ -88,6 +88,18 @@ Item {
                     drawer.close()
                 }
             }
+            Kirigami.BasicListItem{
+                readonly property QtObject wasPlayedWatcher: Library.wasPlayedWatcher(drawer.videoId)
+                
+                label: i18n("Remove from History")
+                icon: "list-remove"
+                onClicked: {
+                    Library.removePlaybackHistoryItem(drawer.videoId)
+                    drawer.close()
+                }
+                visible: wasPlayedWatcher ? wasPlayedWatcher.wasPlayed : false
+                enabled: wasPlayedWatcher ? wasPlayedWatcher.wasPlayed : false
+            }
             Item{
                 Layout.fillHeight: true
             }
@@ -127,6 +139,17 @@ Item {
                     }
                 }
             }
+        }
+
+        Controls.MenuItem{
+            readonly property QtObject wasPlayedWatcher: Library.wasPlayedWatcher(menu.videoId)
+            text: i18n("Remove from History")
+            icon.name: "list-remove"
+            onTriggered: {
+                Library.removePlaybackHistoryItem(menu.videoId)
+            }
+            enabled: wasPlayedWatcher ? wasPlayedWatcher.wasPlayed : false
+            visible: wasPlayedWatcher ? wasPlayedWatcher.wasPlayed : false
         }
     }
 }

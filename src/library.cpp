@@ -89,6 +89,20 @@ void Library::addPlaybackHistoryItem(const QString &videoId, const QString &titl
     });
 }
 
+void Library::removePlaybackHistoryItem(const QString &videoId)
+{
+    connectFuture(m_database->execute("delete from played_songs where video_id = ?", videoId), this, &Library::playbackHistoryChanged);
+}
+
+WasPlayedWatcher *Library::wasPlayedWatcher(const QString& videoId)
+{
+    if(videoId.isEmpty()){
+        return nullptr;
+    }
+    return new WasPlayedWatcher(this, videoId);
+}
+
+
 PlaybackHistoryModel *Library::mostPlayed()
 {
     auto future = m_database->getResults<PlayedSong>("select * from played_songs natural join songs order by plays desc limit 10");
@@ -281,4 +295,32 @@ QVariant SearchHistoryModel::data(const QModelIndex &index, int role) const {
     }
 
     Q_UNREACHABLE();
+}
+
+WasPlayedWatcher::WasPlayedWatcher(Library* library, const QString& videoId)
+    : QObject(library), m_videoId(videoId), m_library(library)
+{
+    connect(m_library, &Library::playbackHistoryChanged, this, &WasPlayedWatcher::query);
+    query();
+}
+
+void WasPlayedWatcher::query()
+{
+    connectFuture(m_library->database().getResult<SingleValue<bool>>("select count(*) > 0 from played_songs where video_id = ?", m_videoId), this, &WasPlayedWatcher::update);
+}
+
+
+bool WasPlayedWatcher::wasPlayed() const
+{
+    return m_wasPlayed;
+}
+
+
+void WasPlayedWatcher::update(std::optional<SingleValue<bool>> result)
+{
+    if(result.has_value())
+    {
+        m_wasPlayed = result->value;
+        Q_EMIT wasPlayedChanged();
+    }
 }
