@@ -1,13 +1,13 @@
 # Translation of audiotube to Norwegian Nynorsk
 #
 # Øystein Steffensen-Alværvik <oysteins.omsetting@protonmail.com>, 2022.
-# Karl Ove Hufthammer <karl@huftis.org>, 2022.
+# Karl Ove Hufthammer <karl@huftis.org>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-11 01:00+0000\n"
-"PO-Revision-Date: 2022-09-11 19:45+0200\n"
+"PO-Revision-Date: 2023-01-15 12:33+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 22.12.1\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -49,14 +49,14 @@ msgstr "Opna i nettlesar"
 #: contents/ui/AlbumPage.qml:44
 #, kde-format
 msgid "Album • %1"
-msgstr ""
+msgstr "Album • %1"
 
 #: contents/ui/AlbumPage.qml:87 contents/ui/ArtistPage.qml:125
 #: contents/ui/PlaybackHistory.qml:73 contents/ui/PlaylistPage.qml:89
 #: contents/ui/SearchPage.qml:129
 #, kde-format
 msgid "More"
-msgstr ""
+msgstr "Meir"
 
 #: contents/ui/ArtistPage.qml:27
 #, kde-format
@@ -66,7 +66,7 @@ msgstr "Radio"
 #: contents/ui/ArtistPage.qml:46
 #, kde-format
 msgid "Artist"
-msgstr ""
+msgstr "Artist"
 
 #: contents/ui/ArtistPage.qml:68 contents/ui/SearchPage.qml:70
 #, kde-format
@@ -125,7 +125,7 @@ msgstr "Oftast avspela"
 #: contents/ui/LibraryPage.qml:229
 #, kde-format
 msgid "played Songs"
-msgstr ""
+msgstr "Avspela songar"
 
 #: contents/ui/main.qml:106
 #, kde-format
@@ -145,7 +145,7 @@ msgstr "Kø"
 #: contents/ui/MaximizedPlayerPage.qml:157
 #, kde-format
 msgid "Lyrics"
-msgstr ""
+msgstr "Songtekst"
 
 #: contents/ui/MaximizedPlayerPage.qml:273
 #, kde-format
@@ -161,7 +161,7 @@ msgstr "Inkje medium vert spela"
 #: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:95
 #, kde-format
 msgid "Library"
-msgstr ""
+msgstr "Bibliotek"
 
 #: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:111
 #, kde-format
@@ -187,12 +187,12 @@ msgstr "Ingen songar enno"
 #: contents/ui/PlaylistPage.qml:42
 #, kde-format
 msgid "Playlist"
-msgstr ""
+msgstr "Speleliste"
 
 #: contents/ui/SearchPage.qml:16
 #, kde-format
 msgid "Previous Searches:"
-msgstr ""
+msgstr "Tidlegare søk:"
 
 #: contents/ui/SearchPage.qml:28
 #, kde-format
@@ -212,7 +212,7 @@ msgstr "Ukjend"
 #: contents/ui/Sidebar.qml:181
 #, kde-format
 msgid "Collapse Sidebar"
-msgstr ""
+msgstr "Fald saman sidestolpe"
 
 #: contents/ui/SongMenu.qml:59 contents/ui/SongMenu.qml:106
 #, kde-format
@@ -222,14 +222,14 @@ msgstr "Spel som neste"
 #: contents/ui/SongMenu.qml:68 contents/ui/SongMenu.qml:112
 #, kde-format
 msgid "Add to queue"
-msgstr ""
+msgstr "Legg i avspelingskøen"
 
 #: contents/ui/SongMenu.qml:78 contents/ui/SongMenu.qml:119
 #, kde-format
 msgid "Remove Favourite"
-msgstr ""
+msgstr "Fjern frå favorittar"
 
 #: contents/ui/SongMenu.qml:78 contents/ui/SongMenu.qml:119
 #, kde-format
 msgid "Add Favourite"
-msgstr ""
+msgstr "Legg til favorittar"

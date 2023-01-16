@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-11 01:00+0000\n"
-"PO-Revision-Date: 2022-11-28 14:06+0100\n"
+"PO-Revision-Date: 2022-12-31 09:28+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.08.3\n"
+"X-Generator: Lokalize 22.12.0\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -122,8 +122,7 @@ msgid "Most played"
 msgstr "Più riprodotti"
 
 #: contents/ui/LibraryPage.qml:229
-#, fuzzy, kde-format
-#| msgid "Played Songs"
+#, kde-format
 msgid "played Songs"
 msgstr "Brani riprodotti"
 
@@ -161,7 +160,7 @@ msgstr "Nessun supporto in riproduzione"
 #: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:95
 #, kde-format
 msgid "Library"
-msgstr ""
+msgstr "Raccolta"
 
 #: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:111
 #, kde-format
@@ -192,7 +191,7 @@ msgstr "Scaletta"
 #: contents/ui/SearchPage.qml:16
 #, kde-format
 msgid "Previous Searches:"
-msgstr ""
+msgstr "Ricerche precedenti:"
 
 #: contents/ui/SearchPage.qml:28
 #, kde-format
@@ -212,7 +211,7 @@ msgstr "Sconosciuto"
 #: contents/ui/Sidebar.qml:181
 #, kde-format
 msgid "Collapse Sidebar"
-msgstr ""
+msgstr "Contrai la barra laterale"
 
 #: contents/ui/SongMenu.qml:59 contents/ui/SongMenu.qml:106
 #, kde-format
