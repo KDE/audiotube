@@ -22,7 +22,7 @@ void pyPrintPretty(py::handle obj) {
 
 #define UNEXPORT __attribute__ ((visibility("hidden")))
 
-constexpr auto TESTED_YTMUSICAPI_VERSION = "0.24.1";
+constexpr auto TESTED_YTMUSICAPI_VERSION = "0.25.0";
 
 struct UNEXPORT YTMusicPrivate {
     py::scoped_interpreter guard {};
@@ -46,9 +46,9 @@ struct UNEXPORT YTMusicPrivate {
                 std::cerr << "Running with outdated and untested version of ytmusicapi." << std::endl;
                 std::cerr << "The currently tested and supported version is " << TESTED_YTMUSICAPI_VERSION << std::endl;
             } else {
-                const auto version = module.attr("version")("ytmusicapi").cast<std::string>();
+                const auto version = module.attr("__version__").cast<std::string>();
                 if (version != TESTED_YTMUSICAPI_VERSION) {
-                    std::cerr << "Running with untested version of ytmusicapi." << std::endl;
+                    std::cerr << "Running with untested version of ytmusicapi " << version << "." << std::endl;
                     std::cerr << "The currently tested and supported version is " << TESTED_YTMUSICAPI_VERSION << std::endl;
                 }
             }
