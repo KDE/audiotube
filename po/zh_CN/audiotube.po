@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-11 01:00+0000\n"
+"POT-Creation-Date: 2023-01-21 01:00+0000\n"
 "PO-Revision-Date: 2023-01-12 10:32\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -211,22 +211,27 @@ msgstr "未知"
 msgid "Collapse Sidebar"
 msgstr ""
 
-#: contents/ui/SongMenu.qml:59 contents/ui/SongMenu.qml:106
+#: contents/ui/SongMenu.qml:59 contents/ui/SongMenu.qml:118
 #, kde-format
 msgid "Play Next"
 msgstr "播放下一首"
 
-#: contents/ui/SongMenu.qml:68 contents/ui/SongMenu.qml:112
+#: contents/ui/SongMenu.qml:68 contents/ui/SongMenu.qml:124
 #, kde-format
 msgid "Add to queue"
 msgstr ""
 
-#: contents/ui/SongMenu.qml:78 contents/ui/SongMenu.qml:119
+#: contents/ui/SongMenu.qml:78 contents/ui/SongMenu.qml:131
 #, kde-format
 msgid "Remove Favourite"
 msgstr ""
 
-#: contents/ui/SongMenu.qml:78 contents/ui/SongMenu.qml:119
+#: contents/ui/SongMenu.qml:78 contents/ui/SongMenu.qml:131
 #, kde-format
 msgid "Add Favourite"
+msgstr ""
+
+#: contents/ui/SongMenu.qml:94 contents/ui/SongMenu.qml:146
+#, kde-format
+msgid "Remove from History"
 msgstr ""

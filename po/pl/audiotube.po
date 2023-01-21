@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-11 01:00+0000\n"
+"POT-Creation-Date: 2023-01-21 01:00+0000\n"
 "PO-Revision-Date: 2022-10-18 18:06+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -218,27 +218,32 @@ msgstr "Nieznany"
 msgid "Collapse Sidebar"
 msgstr ""
 
-#: contents/ui/SongMenu.qml:59 contents/ui/SongMenu.qml:106
+#: contents/ui/SongMenu.qml:59 contents/ui/SongMenu.qml:118
 #, kde-format
 msgid "Play Next"
 msgstr "Odtwórz następny"
 
-#: contents/ui/SongMenu.qml:68 contents/ui/SongMenu.qml:112
+#: contents/ui/SongMenu.qml:68 contents/ui/SongMenu.qml:124
 #, kde-format
 msgid "Add to queue"
 msgstr ""
 
-#: contents/ui/SongMenu.qml:78 contents/ui/SongMenu.qml:119
+#: contents/ui/SongMenu.qml:78 contents/ui/SongMenu.qml:131
 #, fuzzy, kde-format
 #| msgid "Favourites"
 msgid "Remove Favourite"
 msgstr "Ulubione"
 
-#: contents/ui/SongMenu.qml:78 contents/ui/SongMenu.qml:119
+#: contents/ui/SongMenu.qml:78 contents/ui/SongMenu.qml:131
 #, fuzzy, kde-format
 #| msgid "Favourites"
 msgid "Add Favourite"
 msgstr "Ulubione"
+
+#: contents/ui/SongMenu.qml:94 contents/ui/SongMenu.qml:146
+#, kde-format
+msgid "Remove from History"
+msgstr ""
 
 #~ msgid "Favourite Songs"
 #~ msgstr "Ulubione utwory"

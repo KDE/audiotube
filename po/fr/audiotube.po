@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-11 01:00+0000\n"
+"POT-Creation-Date: 2023-01-21 01:00+0000\n"
 "PO-Revision-Date: 2022-12-31 15:10+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
@@ -211,25 +211,30 @@ msgstr "Inconnu"
 msgid "Collapse Sidebar"
 msgstr "Réduire la barre latérale"
 
-#: contents/ui/SongMenu.qml:59 contents/ui/SongMenu.qml:106
+#: contents/ui/SongMenu.qml:59 contents/ui/SongMenu.qml:118
 #, kde-format
 msgid "Play Next"
 msgstr "Lire le suivant"
 
-#: contents/ui/SongMenu.qml:68 contents/ui/SongMenu.qml:112
+#: contents/ui/SongMenu.qml:68 contents/ui/SongMenu.qml:124
 #, kde-format
 msgid "Add to queue"
 msgstr "Ajouter à la file de lecture"
 
-#: contents/ui/SongMenu.qml:78 contents/ui/SongMenu.qml:119
+#: contents/ui/SongMenu.qml:78 contents/ui/SongMenu.qml:131
 #, kde-format
 msgid "Remove Favourite"
 msgstr "Supprimer un favori"
 
-#: contents/ui/SongMenu.qml:78 contents/ui/SongMenu.qml:119
+#: contents/ui/SongMenu.qml:78 contents/ui/SongMenu.qml:131
 #, kde-format
 msgid "Add Favourite"
 msgstr "Ajouter un favori"
+
+#: contents/ui/SongMenu.qml:94 contents/ui/SongMenu.qml:146
+#, kde-format
+msgid "Remove from History"
+msgstr ""
 
 #~ msgid "Favourite Songs"
 #~ msgstr "Titres favoris"
