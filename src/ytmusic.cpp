@@ -144,7 +144,7 @@ album::Track extract_album_track(py::handle track) {
 
 video_info::Format extract_format(py::handle format) {
     return {
-        optional_key<int>(format, "quality"),
+        optional_key<float>(format, "quality"),
         format["url"].cast<std::string>(),
         format["vcodec"].cast<std::string>(),
         format["acodec"].cast<std::string>()

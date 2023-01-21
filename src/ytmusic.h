@@ -234,7 +234,7 @@ struct Playlist {
 
 namespace video_info {
 struct Format {
-    std::optional<int> quality;
+    std::optional<float> quality;
     std::string url;
     std::string vcodec;
     std::string acodec;
