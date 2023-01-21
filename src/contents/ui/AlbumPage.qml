@@ -56,6 +56,7 @@ Kirigami.ScrollablePage {
         }
         delegate: Kirigami.SwipeListItem {
             id: delegateItem
+            alwaysVisibleActions:true
 
             required property string title
             required property string videoId

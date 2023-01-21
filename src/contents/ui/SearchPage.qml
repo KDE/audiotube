@@ -86,6 +86,7 @@ Kirigami.ScrollablePage {
         delegate: Kirigami.SwipeListItem {
 
             id: delegateItem
+            alwaysVisibleActions:true
 
             required property int index
             required property string title

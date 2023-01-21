@@ -32,6 +32,8 @@ Kirigami.ScrollablePage {
 
         delegate: Kirigami.SwipeListItem {
             id: delegateItem
+            alwaysVisibleActions:true
+
             required property string title
             required property string videoId
             required property var artists
@@ -58,11 +60,15 @@ Kirigami.ScrollablePage {
                     Controls.Label {
                         text: delegateItem.title
                         Layout.fillWidth: true
+                        elide: Qt.ElideRight
+
                     }
                     Controls.Label {
                         Layout.fillWidth: true
                         color: Kirigami.Theme.disabledTextColor
                         text: delegateItem.artistsDisplayString
+                        elide: Qt.ElideRight
+
                     }
                 }
             }
