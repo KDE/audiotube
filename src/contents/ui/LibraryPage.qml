@@ -17,6 +17,9 @@ Kirigami.ScrollablePage {
     rightPadding: 0
     leftPadding: 0
 
+    SongMenu {
+        id: menu
+    }
 
     ColumnLayout {
         RowLayout {
@@ -186,13 +189,10 @@ Kirigami.ScrollablePage {
                             Controls.ToolButton {
                                 Layout.fillHeight: true
                                 icon.name: "view-more-horizontal-symbolic"
-                                onPressed: favMenu.openForSong(delegateItem.videoId,
+                                onPressed: menu.openForSong(delegateItem.videoId,
                                                                delegateItem.title,
                                                                delegateItem.artists,
                                                                delegateItem.artistsDisplayString)
-                                SongMenu {
-                                    id:favMenu
-                                }
                             }
 
                         }
@@ -371,13 +371,10 @@ Kirigami.ScrollablePage {
                             Controls.ToolButton {
                                 Layout.fillHeight: true
                                 icon.name: "view-more-horizontal-symbolic"
-                                onPressed: mpMenu.openForSong(mpdelegateItem.videoId,
+                                onPressed: menu.openForSong(mpdelegateItem.videoId,
                                                               mpdelegateItem.title,
                                                               mpdelegateItem.artists,
                                                               mpdelegateItem.artistsDisplayString)
-                                SongMenu{
-                                    id:mpMenu
-                                }
                             }
 
                         }
