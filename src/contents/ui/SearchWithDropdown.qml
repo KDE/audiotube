@@ -61,6 +61,8 @@ Item {
     }
     Controls.Popup {
         id: popup
+        property int expansion: 5
+        property int shadowSize: 15
         onAboutToShow:{
             searchField.parent = fieldContainer
             onOpened: searchField.background.visible = false
@@ -68,6 +70,7 @@ Item {
             playOpenWidth.running = true
             playOpenX.running = true
             playOpenY.running = true
+            playOpenRadius.running = true
 
         }
         onAboutToHide:{
@@ -78,49 +81,65 @@ Item {
             playCloseWidth.running = true
             playCloseX.running = true
             playCloseY.running = true
+            playCloseRadius.running = true
 
         }
 
-        x: -20
-        y: -20
-        rightPadding:16
+        x: -(popup.shadowSize+popup.expansion)
+        y: -(popup.shadowSize+popup.expansion)
 
-        leftPadding:16
-        bottomPadding:15
-
-        rightInset: 15
-        leftInset: 15
-        bottomInset: 15
-        leftMargin:-15
+        rightPadding:popup.shadowSize+1
+        leftPadding:popup.shadowSize+1
+        bottomPadding:popup.shadowSize
+        rightInset: popup.shadowSize
+        leftInset: popup.shadowSize
+        bottomInset: popup.shadowSize
+        leftMargin:-popup.shadowSize
 
         background: Kirigami.ShadowedRectangle{
+            id: bg
             Kirigami.Theme.inherit: false
             Kirigami.Theme.colorSet: Kirigami.Theme.View
             color: Kirigami.Theme.backgroundColor
-            radius: 7
-            shadow.size: 20
-            shadow.yOffset: 5
+            radius: popup.expansion+2
+            shadow.size: popup.shadowSize
+            shadow.yOffset: popup.expansion
             shadow.color: Qt.rgba(0, 0, 0, 0.2)
 
             border.width: 1
             border.color: Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.backgroundColor, Kirigami.Theme.textColor, 0.3);
-
+            NumberAnimation on radius{
+                id: playOpenRadius
+                easing.type: Easing.OutCubic
+                running: false
+                from: 2
+                duration: 100
+                to: popup.expansion+2
+            }
+            NumberAnimation on radius{
+                id: playCloseRadius
+                easing.type: Easing.OutCubic
+                running: false
+                from: popup.expansion+2
+                duration: 100
+                to: 2
+            }
 
         }
-        width: searchField.width + 40
+        width: searchField.width + 2*(popup.shadowSize+popup.expansion)
         height: completionList
-                ? (Math.min(content.implicitHeight, Kirigami.Units.gridUnit * 20))+40
-                : (Kirigami.Units.gridUnit * 20)+40
+                ? (Math.min(content.implicitHeight, Kirigami.Units.gridUnit * 20))+2*(popup.shadowSize+popup.expansion)
+                : (Kirigami.Units.gridUnit * 20)+2*(popup.shadowSize+popup.expansion)
 
         NumberAnimation on height{
             id: playOpenHeight
             easing.type: Easing.OutCubic
             running: false
-            from: 40
+            from: searchField.height
             duration: 200
             to: completionList
-                ? (Math.min(fieldContainer.height+ completionList.count * Kirigami.Units.gridUnit * 2 + recents.implicitHeight, Kirigami.Units.gridUnit * 20))+40
-                : (Kirigami.Units.gridUnit * 20)+40
+                ? (Math.min(fieldContainer.height+ completionList.count * Kirigami.Units.gridUnit * 2 + recents.implicitHeight, Kirigami.Units.gridUnit * 20))+2*(popup.shadowSize+popup.expansion)
+                : (Kirigami.Units.gridUnit * 20)+2*(popup.shadowSize+popup.expansion)
         }
         NumberAnimation on width{
             id: playOpenWidth
@@ -128,7 +147,7 @@ Item {
             running: false
             from: searchField.width
             duration: 100
-            to: searchField.width +40
+            to: searchField.width +2*(popup.shadowSize+popup.expansion)
         }
         NumberAnimation on x{
             id: playOpenX
@@ -136,7 +155,7 @@ Item {
             running: false
             from: 0
             duration: 100
-            to: -20
+            to: -(popup.shadowSize+popup.expansion)
         }
         NumberAnimation on y{
             id: playOpenY
@@ -144,7 +163,7 @@ Item {
             running: false
             from: 0
             duration: 100
-            to: -5
+            to: -popup.expansion
         }
 
 
@@ -154,32 +173,32 @@ Item {
             easing.type: Easing.OutCubic
             running: false
             from: completionList
-                  ? (Math.min(content.implicitHeight, Kirigami.Units.gridUnit * 20))+40
-                  : (Kirigami.Units.gridUnit * 20)+40
-            duration: 200
-            to: searchField.heigth + 40
+                  ? (Math.min(content.implicitHeight, Kirigami.Units.gridUnit * 20))+2*(popup.shadowSize+popup.expansion)
+                  : (Kirigami.Units.gridUnit * 20)+2*(popup.shadowSize+popup.expansion)
+            duration: 100
+            to: searchField.heigth
         }
         NumberAnimation on width{
             id: playCloseWidth
             easing.type: Easing.OutCubic
             running: false
-            from: searchField.width + 40
+            from: searchField.width + 2*(popup.shadowSize+popup.expansion)
             duration: 100
-            to: searchField.width + 30
+            to: searchField.width + 2*(popup.shadowSize)
         }
         NumberAnimation on x{
             id: playCloseX
             easing.type: Easing.OutCubic
             running: false
-            from: -20
+            from: -(popup.shadowSize+popup.expansion)
             duration: 100
-            to: -15
+            to: -popup.shadowSize
         }
         NumberAnimation on y{
             id: playCloseY
             easing.type: Easing.OutCubic
             running: false
-            from: -5
+            from: - popup.expansion
             duration: 100
             to: -0
         }
@@ -194,13 +213,13 @@ Item {
                 Layout.fillHeight: true
                 Layout.fillWidth: true
                 Controls.Control{
-                    x:5
-                    y:-6
+                    x: popup.expansion
+                    y:-popup.expansion
                     id: fieldContainer
-                    height:40
+                    height:searchField.height
 
                 }
-                implicitHeight: fieldContainer.height -10
+                implicitHeight: fieldContainer.height
             }
 
             Controls.ScrollView {
