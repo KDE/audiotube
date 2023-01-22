@@ -4,31 +4,30 @@
 
 import QtQuick 2.15
 import QtQuick.Window 2.15
+import QtGraphicalEffects 1.0
 
-Rectangle {
+Item {
     property alias radius: mask.radius
     property alias source: image.source
     id: icon
-    color: "transparent"
+
+    Image {
+        id:image
+        source: source
+        anchors.fill: parent
+        fillMode: Image.PreserveAspectCrop
+        asynchronous: true
+        sourceSize.width: parent.implicitWidth * Screen.devicePixelRatio
+        layer.enabled: true
+        layer.effect: OpacityMask {
+            maskSource: mask
+        }
+    }
 
     Rectangle {
-        id: imageSource
-        anchors.fill: parent
-        Image {
-            id:image
-            anchors.fill: parent
-            fillMode: Image.PreserveAspectCrop
-            asynchronous: true
-            sourceSize.width: parent.implicitWidth * Screen.devicePixelRatio
-        }
-        visible: false
-
-        layer.enabled: true
-    }
-
-    RoundedMask {
         id: mask
         anchors.fill: parent
-        colorSource: imageSource
+        visible: false
     }
 }
+

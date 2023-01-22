@@ -19,7 +19,6 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
         <file>migrations/2022-05-20-194850_init/down.sql</file>
         <file>migrations/2022-05-20-194850_init/up.sql</file>
         <file alias="PlaybackHistory.qml">contents/ui/PlaybackHistory.qml</file>
-        <file alias="RoundedMask.qml">contents/ui/RoundedMask.qml</file>
         <file alias="SongMenu.qml">contents/ui/SongMenu.qml</file>
         <file alias="ListHeader.qml">contents/ui/ListHeader.qml</file>
         <file alias="RoundedImage.qml">contents/ui/RoundedImage.qml</file>
