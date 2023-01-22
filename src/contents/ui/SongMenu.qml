@@ -35,7 +35,14 @@ Item {
         height:contents.implicitHeight+20
         width: applicationWindow().width
         interactive: false
+        background: Kirigami.ShadowedRectangle{
+            corners.topRightRadius: 10
+            corners.topLeftRadius: 10
+            shadow.size: 20
+            shadow.color: Qt.rgba(0, 0, 0, 0.5)
+            color: Kirigami.Theme.backgroundColor
 
+        }
         onClosed: drawer.interactive = false
 
         id: drawer
@@ -46,13 +53,60 @@ Item {
         ColumnLayout {
             id: contents
             anchors.fill: parent
+            ThumbnailSource {
+                id: thumbnailSource
+                videoId: drawer.videoId
+            }
 
-            Kirigami.Icon {
-                Layout.margins: Kirigami.Units.smallSpacing
-                source: "arrow-down"
-                implicitWidth: Kirigami.Units.gridUnit
-                implicitHeight: Kirigami.Units.gridUnit
-                Layout.alignment: Qt.AlignHCenter
+//            Kirigami.Icon {
+//                Layout.margins: Kirigami.Units.smallSpacing
+//                source: "arrow-down"
+//                implicitWidth: Kirigami.Units.gridUnit
+//                implicitHeight: Kirigami.Units.gridUnit
+//                Layout.alignment: Qt.AlignHCenter
+//            }
+            RowLayout {
+                spacing: 10
+                Kirigami.ShadowedRectangle {
+                    Layout.margins: 10
+                    color: Kirigami.Theme.backgroundColor
+                    width: 60
+                    height: width
+                    radius: 5
+                    shadow.size: 15
+                    shadow.xOffset: 5
+                    shadow.yOffset: 5
+                    shadow.color: Qt.rgba(0, 0, 0, 0.2)
+                    RoundedImage {
+                        source: thumbnailSource.cachedPath
+                        height: width
+                        width: parent.width
+                        radius: parent.radius
+                    }
+                }
+                ColumnLayout {
+                    Controls.Label{
+                        text: drawer.songTitle
+                        elide: Text.ElideRight
+                        Layout.fillWidth: true
+
+
+                    }
+                    Controls.Label{
+                        text: drawer.artistsDisplayString
+                        color: Kirigami.Theme.disabledTextColor
+                        elide: Text.ElideRight
+                        Layout.fillWidth: true
+
+                    }
+                }
+            }
+            Kirigami.Separator {
+                Layout.fillWidth: true
+                Layout.leftMargin: 10
+                Layout.rightMargin: 10
+
+
             }
             Kirigami.BasicListItem{
 
