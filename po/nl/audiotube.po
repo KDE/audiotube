@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the audiotube package.
 #
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2021, 2022.
+# Freek de Kruijf <freekdekruijf@kde.nl>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-21 01:00+0000\n"
-"PO-Revision-Date: 2022-12-30 09:49+0100\n"
+"POT-Creation-Date: 2023-01-22 01:00+0000\n"
+"PO-Revision-Date: 2023-01-21 10:52+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,12 +15,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Freek de Kruijf - 2021 t/m 2022"
+msgstr "Freek de Kruijf - 2021 t/m 2023"
 
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
@@ -48,9 +48,9 @@ msgstr "In browser openen"
 msgid "Album • %1"
 msgstr "Album • %1"
 
-#: contents/ui/AlbumPage.qml:87 contents/ui/ArtistPage.qml:125
-#: contents/ui/PlaybackHistory.qml:73 contents/ui/PlaylistPage.qml:89
-#: contents/ui/SearchPage.qml:129
+#: contents/ui/AlbumPage.qml:88 contents/ui/ArtistPage.qml:126
+#: contents/ui/PlaybackHistory.qml:79 contents/ui/PlaylistPage.qml:91
+#: contents/ui/SearchPage.qml:130
 #, kde-format
 msgid "More"
 msgstr "Meer"
@@ -104,14 +104,14 @@ msgstr "OK"
 msgid "Cancel"
 msgstr "Annuleren"
 
-#: contents/ui/LibraryPage.qml:25 contents/ui/LibraryPage.qml:41
+#: contents/ui/LibraryPage.qml:28 contents/ui/LibraryPage.qml:44
 #: contents/ui/NavigationBar.qml:46 contents/ui/NavigationBar.qml:51
-#: contents/ui/Sidebar.qml:126 contents/ui/Sidebar.qml:133
+#: contents/ui/Sidebar.qml:124 contents/ui/Sidebar.qml:131
 #, kde-format
 msgid "Favourites"
 msgstr "Favorieten"
 
-#: contents/ui/LibraryPage.qml:36 contents/ui/LibraryPage.qml:224
+#: contents/ui/LibraryPage.qml:39 contents/ui/LibraryPage.qml:224
 #, kde-format
 msgid "Show All"
 msgstr "Alles tonen"
@@ -126,7 +126,7 @@ msgstr "Meest afgespeeld"
 msgid "played Songs"
 msgstr "afgespeelde songs"
 
-#: contents/ui/main.qml:106
+#: contents/ui/main.qml:109
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
@@ -157,18 +157,18 @@ msgstr "Track verwijderen"
 msgid "No media playing"
 msgstr "Er speelt geen medium"
 
-#: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:95
+#: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:93
 #, kde-format
 msgid "Library"
 msgstr "Bibliotheek"
 
-#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:111
+#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:109
 #, kde-format
 msgid "Search"
 msgstr "Zoeken"
 
 #: contents/ui/NavigationBar.qml:58 contents/ui/NavigationBar.qml:63
-#: contents/ui/Sidebar.qml:145 contents/ui/Sidebar.qml:152
+#: contents/ui/Sidebar.qml:143 contents/ui/Sidebar.qml:150
 #, kde-format
 msgid "Played Songs"
 msgstr "Afgespeelde songs"
@@ -208,7 +208,13 @@ msgstr "Afspeellijsten"
 msgid "Unknown"
 msgstr "Onbekend"
 
-#: contents/ui/Sidebar.qml:181
+#: contents/ui/SearchWithDropdown.qml:285
+#, fuzzy, kde-format
+#| msgid "Previous Searches:"
+msgid "No matching previous searches"
+msgstr "Vorige zoekopdrachten:"
+
+#: contents/ui/Sidebar.qml:179
 #, kde-format
 msgid "Collapse Sidebar"
 msgstr "Zijbalk invouwen"
@@ -236,7 +242,7 @@ msgstr "Favoriet toevoegen"
 #: contents/ui/SongMenu.qml:94 contents/ui/SongMenu.qml:146
 #, kde-format
 msgid "Remove from History"
-msgstr ""
+msgstr "Uit geschiedenis verwijderen"
 
 #~ msgid "Favourite Songs"
 #~ msgstr "Favoriete songs"

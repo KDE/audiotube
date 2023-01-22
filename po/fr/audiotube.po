@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-21 01:00+0000\n"
+"POT-Creation-Date: 2023-01-22 01:00+0000\n"
 "PO-Revision-Date: 2022-12-31 15:10+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
@@ -46,9 +46,9 @@ msgstr "Ouvrir dans un navigateur"
 msgid "Album • %1"
 msgstr "Album • %1"
 
-#: contents/ui/AlbumPage.qml:87 contents/ui/ArtistPage.qml:125
-#: contents/ui/PlaybackHistory.qml:73 contents/ui/PlaylistPage.qml:89
-#: contents/ui/SearchPage.qml:129
+#: contents/ui/AlbumPage.qml:88 contents/ui/ArtistPage.qml:126
+#: contents/ui/PlaybackHistory.qml:79 contents/ui/PlaylistPage.qml:91
+#: contents/ui/SearchPage.qml:130
 #, kde-format
 msgid "More"
 msgstr "Et plus encore"
@@ -102,14 +102,14 @@ msgstr "Ok"
 msgid "Cancel"
 msgstr "Annuler"
 
-#: contents/ui/LibraryPage.qml:25 contents/ui/LibraryPage.qml:41
+#: contents/ui/LibraryPage.qml:28 contents/ui/LibraryPage.qml:44
 #: contents/ui/NavigationBar.qml:46 contents/ui/NavigationBar.qml:51
-#: contents/ui/Sidebar.qml:126 contents/ui/Sidebar.qml:133
+#: contents/ui/Sidebar.qml:124 contents/ui/Sidebar.qml:131
 #, kde-format
 msgid "Favourites"
 msgstr "Favoris"
 
-#: contents/ui/LibraryPage.qml:36 contents/ui/LibraryPage.qml:224
+#: contents/ui/LibraryPage.qml:39 contents/ui/LibraryPage.qml:224
 #, kde-format
 msgid "Show All"
 msgstr "Tout afficher"
@@ -124,7 +124,7 @@ msgstr "Les plus lus"
 msgid "played Songs"
 msgstr "Titres lus"
 
-#: contents/ui/main.qml:106
+#: contents/ui/main.qml:109
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
@@ -155,18 +155,18 @@ msgstr "Supprimer une piste"
 msgid "No media playing"
 msgstr "Aucun média en lecture"
 
-#: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:95
+#: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:93
 #, kde-format
 msgid "Library"
 msgstr "Bibliothèque"
 
-#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:111
+#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:109
 #, kde-format
 msgid "Search"
 msgstr "Rechercher"
 
 #: contents/ui/NavigationBar.qml:58 contents/ui/NavigationBar.qml:63
-#: contents/ui/Sidebar.qml:145 contents/ui/Sidebar.qml:152
+#: contents/ui/Sidebar.qml:143 contents/ui/Sidebar.qml:150
 #, kde-format
 msgid "Played Songs"
 msgstr "Titres lus"
@@ -206,7 +206,13 @@ msgstr "Listes de lecture"
 msgid "Unknown"
 msgstr "Inconnu"
 
-#: contents/ui/Sidebar.qml:181
+#: contents/ui/SearchWithDropdown.qml:285
+#, fuzzy, kde-format
+#| msgid "Previous Searches:"
+msgid "No matching previous searches"
+msgstr "Recherches précédentes :"
+
+#: contents/ui/Sidebar.qml:179
 #, kde-format
 msgid "Collapse Sidebar"
 msgstr "Réduire la barre latérale"
