@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-22 01:00+0000\n"
-"PO-Revision-Date: 2023-01-21 10:52+0100\n"
+"POT-Creation-Date: 2023-01-23 00:59+0000\n"
+"PO-Revision-Date: 2023-01-22 14:08+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -209,37 +209,36 @@ msgid "Unknown"
 msgstr "Onbekend"
 
 #: contents/ui/SearchWithDropdown.qml:285
-#, fuzzy, kde-format
-#| msgid "Previous Searches:"
+#, kde-format
 msgid "No matching previous searches"
-msgstr "Vorige zoekopdrachten:"
+msgstr "Geen overeenkomende vorige zoekopdrachten"
 
 #: contents/ui/Sidebar.qml:179
 #, kde-format
 msgid "Collapse Sidebar"
 msgstr "Zijbalk invouwen"
 
-#: contents/ui/SongMenu.qml:59 contents/ui/SongMenu.qml:118
+#: contents/ui/SongMenu.qml:113 contents/ui/SongMenu.qml:172
 #, kde-format
 msgid "Play Next"
 msgstr "Volgende afspelen"
 
-#: contents/ui/SongMenu.qml:68 contents/ui/SongMenu.qml:124
+#: contents/ui/SongMenu.qml:122 contents/ui/SongMenu.qml:178
 #, kde-format
 msgid "Add to queue"
 msgstr "Aan wachtrij toevoegen"
 
-#: contents/ui/SongMenu.qml:78 contents/ui/SongMenu.qml:131
+#: contents/ui/SongMenu.qml:132 contents/ui/SongMenu.qml:185
 #, kde-format
 msgid "Remove Favourite"
 msgstr "Favoriet verwijderen"
 
-#: contents/ui/SongMenu.qml:78 contents/ui/SongMenu.qml:131
+#: contents/ui/SongMenu.qml:132 contents/ui/SongMenu.qml:185
 #, kde-format
 msgid "Add Favourite"
 msgstr "Favoriet toevoegen"
 
-#: contents/ui/SongMenu.qml:94 contents/ui/SongMenu.qml:146
+#: contents/ui/SongMenu.qml:148 contents/ui/SongMenu.qml:200
 #, kde-format
 msgid "Remove from History"
 msgstr "Uit geschiedenis verwijderen"

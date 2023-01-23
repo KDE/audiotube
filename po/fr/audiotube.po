@@ -1,11 +1,11 @@
 # Xavier Besnard <xavier.besnard@neuf.fr>, 2021, 2022.
-# Xavier BESNARD <xavier.besnard]neuf.fr>, 2022.
+# Xavier BESNARD <xavier.besnard]neuf.fr>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-22 01:00+0000\n"
-"PO-Revision-Date: 2022-12-31 15:10+0100\n"
+"POT-Creation-Date: 2023-01-23 00:59+0000\n"
+"PO-Revision-Date: 2023-01-22 12:44+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -217,30 +217,30 @@ msgstr "Recherches précédentes :"
 msgid "Collapse Sidebar"
 msgstr "Réduire la barre latérale"
 
-#: contents/ui/SongMenu.qml:59 contents/ui/SongMenu.qml:118
+#: contents/ui/SongMenu.qml:113 contents/ui/SongMenu.qml:172
 #, kde-format
 msgid "Play Next"
 msgstr "Lire le suivant"
 
-#: contents/ui/SongMenu.qml:68 contents/ui/SongMenu.qml:124
+#: contents/ui/SongMenu.qml:122 contents/ui/SongMenu.qml:178
 #, kde-format
 msgid "Add to queue"
 msgstr "Ajouter à la file de lecture"
 
-#: contents/ui/SongMenu.qml:78 contents/ui/SongMenu.qml:131
+#: contents/ui/SongMenu.qml:132 contents/ui/SongMenu.qml:185
 #, kde-format
 msgid "Remove Favourite"
 msgstr "Supprimer un favori"
 
-#: contents/ui/SongMenu.qml:78 contents/ui/SongMenu.qml:131
+#: contents/ui/SongMenu.qml:132 contents/ui/SongMenu.qml:185
 #, kde-format
 msgid "Add Favourite"
 msgstr "Ajouter un favori"
 
-#: contents/ui/SongMenu.qml:94 contents/ui/SongMenu.qml:146
+#: contents/ui/SongMenu.qml:148 contents/ui/SongMenu.qml:200
 #, kde-format
 msgid "Remove from History"
-msgstr ""
+msgstr "Supprimer de l'historique"
 
 #~ msgid "Favourite Songs"
 #~ msgstr "Titres favoris"

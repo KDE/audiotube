@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-22 01:00+0000\n"
-"PO-Revision-Date: 2023-01-09 18:55+0000\n"
+"POT-Creation-Date: 2023-01-23 00:59+0000\n"
+"PO-Revision-Date: 2023-01-22 23:00+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -211,37 +211,36 @@ msgid "Unknown"
 msgstr "Desconhecido"
 
 #: contents/ui/SearchWithDropdown.qml:285
-#, fuzzy, kde-format
-#| msgid "Previous Searches:"
+#, kde-format
 msgid "No matching previous searches"
-msgstr "Pesquisas Anteriores:"
+msgstr "Sem pesquisas anteriores correspondentes"
 
 #: contents/ui/Sidebar.qml:179
 #, kde-format
 msgid "Collapse Sidebar"
 msgstr "Fechar a Barra Lateral"
 
-#: contents/ui/SongMenu.qml:59 contents/ui/SongMenu.qml:118
+#: contents/ui/SongMenu.qml:113 contents/ui/SongMenu.qml:172
 #, kde-format
 msgid "Play Next"
 msgstr "Reproduzir o Seguinte"
 
-#: contents/ui/SongMenu.qml:68 contents/ui/SongMenu.qml:124
+#: contents/ui/SongMenu.qml:122 contents/ui/SongMenu.qml:178
 #, kde-format
 msgid "Add to queue"
 msgstr "Adicionar à fila"
 
-#: contents/ui/SongMenu.qml:78 contents/ui/SongMenu.qml:131
+#: contents/ui/SongMenu.qml:132 contents/ui/SongMenu.qml:185
 #, kde-format
 msgid "Remove Favourite"
 msgstr "Remover o Favorito"
 
-#: contents/ui/SongMenu.qml:78 contents/ui/SongMenu.qml:131
+#: contents/ui/SongMenu.qml:132 contents/ui/SongMenu.qml:185
 #, kde-format
 msgid "Add Favourite"
 msgstr "Adicionar aos Favoritos"
 
-#: contents/ui/SongMenu.qml:94 contents/ui/SongMenu.qml:146
+#: contents/ui/SongMenu.qml:148 contents/ui/SongMenu.qml:200
 #, kde-format
 msgid "Remove from History"
-msgstr ""
+msgstr "Remover do Histórico"

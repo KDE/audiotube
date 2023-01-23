@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-21 01:00+0000\n"
+"POT-Creation-Date: 2023-01-22 01:00+0000\n"
 "PO-Revision-Date: 2023-01-15 12:33+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -51,9 +51,9 @@ msgstr "Opna i nettlesar"
 msgid "Album • %1"
 msgstr "Album • %1"
 
-#: contents/ui/AlbumPage.qml:87 contents/ui/ArtistPage.qml:125
-#: contents/ui/PlaybackHistory.qml:73 contents/ui/PlaylistPage.qml:89
-#: contents/ui/SearchPage.qml:129
+#: contents/ui/AlbumPage.qml:88 contents/ui/ArtistPage.qml:126
+#: contents/ui/PlaybackHistory.qml:79 contents/ui/PlaylistPage.qml:91
+#: contents/ui/SearchPage.qml:130
 #, kde-format
 msgid "More"
 msgstr "Meir"
@@ -105,14 +105,14 @@ msgstr "OK"
 msgid "Cancel"
 msgstr "Avbryt"
 
-#: contents/ui/LibraryPage.qml:25 contents/ui/LibraryPage.qml:41
+#: contents/ui/LibraryPage.qml:28 contents/ui/LibraryPage.qml:44
 #: contents/ui/NavigationBar.qml:46 contents/ui/NavigationBar.qml:51
-#: contents/ui/Sidebar.qml:126 contents/ui/Sidebar.qml:133
+#: contents/ui/Sidebar.qml:124 contents/ui/Sidebar.qml:131
 #, kde-format
 msgid "Favourites"
 msgstr "Favorittar"
 
-#: contents/ui/LibraryPage.qml:36 contents/ui/LibraryPage.qml:224
+#: contents/ui/LibraryPage.qml:39 contents/ui/LibraryPage.qml:224
 #, kde-format
 msgid "Show All"
 msgstr "Vis alle"
@@ -127,7 +127,7 @@ msgstr "Oftast avspela"
 msgid "played Songs"
 msgstr "Avspela songar"
 
-#: contents/ui/main.qml:106
+#: contents/ui/main.qml:109
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
@@ -158,18 +158,18 @@ msgstr "Fjern spor"
 msgid "No media playing"
 msgstr "Inkje medium vert spela"
 
-#: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:95
+#: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:93
 #, kde-format
 msgid "Library"
 msgstr "Bibliotek"
 
-#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:111
+#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:109
 #, kde-format
 msgid "Search"
 msgstr "Søk"
 
 #: contents/ui/NavigationBar.qml:58 contents/ui/NavigationBar.qml:63
-#: contents/ui/Sidebar.qml:145 contents/ui/Sidebar.qml:152
+#: contents/ui/Sidebar.qml:143 contents/ui/Sidebar.qml:150
 #, kde-format
 msgid "Played Songs"
 msgstr "Avspela songar"
@@ -209,7 +209,12 @@ msgstr "Spelelister"
 msgid "Unknown"
 msgstr "Ukjend"
 
-#: contents/ui/Sidebar.qml:181
+#: contents/ui/SearchWithDropdown.qml:285
+#, kde-format
+msgid "No matching previous searches"
+msgstr ""
+
+#: contents/ui/Sidebar.qml:179
 #, kde-format
 msgid "Collapse Sidebar"
 msgstr "Fald saman sidestolpe"
