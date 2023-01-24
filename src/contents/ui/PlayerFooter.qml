@@ -8,8 +8,8 @@ import QtQuick 2.7
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.12 as Controls
 
-import QtMultimedia 5.12
-import QtGraphicalEffects 1.0
+import QtMultimedia
+import Qt5Compat.GraphicalEffects
 
 import org.kde.kirigami 2.12 as Kirigami
 import org.kde.ytmusic 1.0
@@ -114,12 +114,12 @@ Flickable {
         videoId: UserPlaylistModel.currentVideoId
     }
     
-    property var audioPlayer: Audio {
+    property var audioPlayer: MediaPlayer {
         id: audio
 
         source: info.audioUrl
-        onStatusChanged: {
-            if (status === Audio.EndOfMedia) {
+        onMediaStatusChanged: {
+            if (mediaStatus === MediaPlayer.EndOfMedia) {
                 console.log("Song ended");
                 UserPlaylistModel.next();
             }

@@ -45,10 +45,10 @@ target_link_libraries(audiotube
     Qt::Svg
     Qt::Widgets
     Qt::Concurrent
-    KF5::I18n
-    KF5::CoreAddons
-    KF5::Crash
-    KF5::WindowSystem
+    KF6::I18n
+    KF6::CoreAddons
+    KF6::Crash
+    KF6::WindowSystem
     FutureSQL${QT_MAJOR_VERSION}::FutureSQL
     declarative
     ytm

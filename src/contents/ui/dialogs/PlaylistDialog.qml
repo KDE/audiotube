@@ -27,7 +27,7 @@ Kirigami.PromptDialog {
     customFooterActions: [
         Kirigami.Action {
             text: i18n("New Playlist")
-            iconName: "list-add"
+            icon.name: "list-add"
             onTriggered: {
                 addPlaylistDialog.open()
             }

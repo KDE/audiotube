@@ -282,6 +282,13 @@ SearchHistoryModel::SearchHistoryModel(QFuture<std::vector<SingleValue<QString>>
     });
 }
 
+QHash<int, QByteArray> SearchHistoryModel::roleNames() const
+{
+    return {
+        { Qt::DisplayRole, "searchQuery" }
+    };
+}
+
 int SearchHistoryModel::rowCount(const QModelIndex &parent) const {
     if(parent.isValid()) {
         return 0;

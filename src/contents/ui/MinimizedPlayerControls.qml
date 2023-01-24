@@ -6,8 +6,8 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 
-import QtGraphicalEffects 1.0
-import QtMultimedia 5.12
+import Qt5Compat.GraphicalEffects
+import QtMultimedia
 
 import org.kde.kirigami 2.19 as Kirigami
 import org.kde.ytmusic 1.0
@@ -203,11 +203,11 @@ Item {
             implicitWidth: 60
             Layout.fillHeight: !isWidescreen
             
-            onClicked: audio.playbackState === Audio.PlayingState ? audio.pause() : audio.play()
+            onClicked: audio.playbackState === MediaPlayer.PlayingState ? audio.pause() : audio.play()
             contentItem: Item {
                 Kirigami.Icon {
                     anchors.centerIn:parent
-                    source: audio.playbackState === Audio.PlayingState ? "media-playback-pause" : "media-playback-start"
+                    source: audio.playbackState === MediaPlayer.PlayingState ? "media-playback-pause" : "media-playback-start"
                     color: "white"
                     width: Kirigami.Units.gridUnit
                     height: Kirigami.Units.gridUnit

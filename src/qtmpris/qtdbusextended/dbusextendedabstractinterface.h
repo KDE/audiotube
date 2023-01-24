@@ -7,7 +7,10 @@
 #ifndef DBUSEXTENDEDABSTRACTINTERFACE_H
 #define DBUSEXTENDEDABSTRACTINTERFACE_H
 
+#include "qmetaobject.h"
 #include <dbusextended.h>
+
+#include <QtDBus/QDBusMetaType>
 
 #include <QDBusAbstractInterface>
 #include <QDBusError>
@@ -43,6 +46,7 @@ protected:
     void connectNotify(const QMetaMethod &signal) override;
     void disconnectNotify(const QMetaMethod &signal) override;
     QVariant internalPropGet(const char *propname, void *propertyPtr);
+
     void internalPropSet(const char *propname, const QVariant &value, void *propertyPtr);
 
 Q_SIGNALS:
@@ -63,6 +67,7 @@ private Q_SLOTS:
 private:
     QVariant asyncProperty(const QString &propertyName);
     void asyncSetProperty(const QString &propertyName, const QVariant &value);
+
     static QVariant demarshall(const QString &interface, const QMetaProperty &metaProperty, const QVariant &value, QDBusError *error);
 
     bool m_sync;

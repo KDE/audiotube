@@ -6,8 +6,8 @@ import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 
-import QtGraphicalEffects 1.0
-import QtMultimedia 5.12
+import Qt5Compat.GraphicalEffects
+import QtMultimedia
 
 import org.kde.kirigami 2.19 as Kirigami
 import org.kde.ytmusic 1.0
@@ -288,12 +288,12 @@ Item {
                         focusPolicy: Qt.TabFocus
                         implicitHeight: 40
                         implicitWidth: 60
-                        onClicked: audio.playbackState === Audio.PlayingState ? audio.pause() : audio.play()
                         enabled: info.title
+                        onClicked: audio.playbackState === MediaPlayer.PlayingState ? audio.pause() : audio.play()
                         contentItem: Item{
                             Kirigami.Icon {
                                 anchors.centerIn:parent
-                                source: audio.playbackState === Audio.PlayingState ? "media-playback-pause" : "media-playback-start"
+                                source: audio.playbackState === MediaPlayer.PlayingState ? "media-playback-pause" : "media-playback-start"
                                 color: "white"
                                 width: Kirigami.Units.gridUnit
                                 height: Kirigami.Units.gridUnit
@@ -569,7 +569,7 @@ Item {
                         enabled: isWidescreen
                         visible: isWidescreen
 
-                        property real volume: QtMultimedia.convertVolume(value, QtMultimedia.LogarithmicVolumeScale, QtMultimedia.LinearVolumeScale)
+                        //property real volume: QtMultimedia.convertVolume(value, QtMultimedia.LogarithmicVolumeScale, QtMultimedia.LinearVolumeScale)
 
                         Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
                         Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5

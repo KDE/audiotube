@@ -40,7 +40,6 @@ constexpr auto URI = "org.kde.ytmusic";
 
 Q_DECL_EXPORT int main(int argc, char *argv[])
 {
-    QGuiApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QApplication app(argc, argv);
 
     // set default style and icon theme
