@@ -1,7 +1,7 @@
 {
     "id": "org.kde.audiotube",
     "runtime": "org.kde.Platform",
-    "runtime-version": "5.15-23.08",
+    "runtime-version": "6.6",
     "sdk": "org.kde.Sdk",
     "command": "audiotube",
     "tags": ["nightly"],
@@ -20,10 +20,21 @@
         "/include/",
         "/share/cmake/"
     ],
+    "add-extensions": {
+        "org.freedesktop.Platform.ffmpeg-full": {
+            "directory": "lib/ffmpeg",
+            "add-ld-path": ".",
+            "version": "23.08"
+        }
+    },
+    "cleanup-commands": [
+        "mkdir -p ${FLATPAK_DEST}/lib/ffmpeg"
+    ],
 
     "modules": [
         "flatpak/python3-yt-dlp.json",
         "flatpak/python3-ytmusicapi.json",
+        "flatpak/kf6.json",
         "flatpak/kirigami-addons.json",
         {
             "name": "qcoro",
@@ -34,9 +45,9 @@
             ],
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://github.com/danvratil/qcoro/archive/refs/tags/v0.9.0.tar.gz",
-                    "sha256": "cfaf6b778450f06adac4ce5e353eb6eae213a3b62b8c8740520d58cf9fe3ec1a",
+                    "type": "git",
+                    "url": "https://github.com/danvratil/qcoro",
+                    "branch": "main",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 236236,
@@ -51,7 +62,8 @@
             "buildsystem": "cmake-ninja",
             "config-opts": [
                 "-DBUILD_TESTING=OFF",
-                "-DCMAKE_BUILD_TYPE=Release"
+                "-DCMAKE_BUILD_TYPE=Release",
+                "-DQT_MAJOR_VERSION=6"
             ],
             "sources": [
                 {
@@ -90,7 +102,7 @@
         },
         {
             "name": "org.kde.audiotube",
-            "config-opts": ["-DPYBIND11_FINDPYTHON=ON"],
+            "config-opts": ["-DPYBIND11_FINDPYTHON=ON", "-DQT_MAJOR_VERSION=6"],
             "buildsystem": "cmake-ninja",
             "builddir": true,
             "sources": [ { "type": "dir", "path": ".", "skip": [".git"] } ]
