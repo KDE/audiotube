@@ -20,7 +20,7 @@ Kirigami.NavigationTabBar {
 
     actions: [
         Kirigami.Action {
-            iconName: "file-library-symbolic"
+            icon.name: "file-library-symbolic"
             text: i18n("Library")
             checked: pageStack.currentItem && pageStack.currentItem.objectName == "libraryPage"
             onTriggered: {
@@ -32,7 +32,7 @@ Kirigami.NavigationTabBar {
             }
         },
         Kirigami.Action {
-            iconName: "search"
+            icon.name: "search"
             text: i18n("Search")
             checked: pageStack.currentItem && pageStack.currentItem.objectName == "searchPage"
             onTriggered: {
@@ -44,7 +44,7 @@ Kirigami.NavigationTabBar {
 
         },
         Kirigami.Action {
-            iconName: "non-starred-symbolic"
+            icon.name: "non-starred-symbolic"
             text: i18n("Favourites")
             checked: pageStack.currentItem && pageStack.currentItem.objectName == "favourites"
             onTriggered: {
@@ -57,7 +57,7 @@ Kirigami.NavigationTabBar {
             }
         },
         Kirigami.Action {
-            iconName: "edit-undo-history"
+            icon.name: "edit-undo-history"
             text: i18n("Played Songs")
             checked: pageStack.currentItem && pageStack.currentItem.objectName == "history"
             onTriggered: {
@@ -71,7 +71,7 @@ Kirigami.NavigationTabBar {
             }
         },
         Kirigami.Action {
-            iconName: "amarok_playlist"
+            icon.name: "amarok_playlist"
             text: i18n("Playlists")
             checked: pageStack.currentItem && pageStack.currentItem.objectName == "playlists"
             onTriggered: {

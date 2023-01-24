@@ -30,7 +30,7 @@ public:
 
     enum Role {
         Title = Qt::UserRole + 1,
-        Type,
+        TypeRole,
         VideoId,
         Artists,
         RadioPlaylistId,

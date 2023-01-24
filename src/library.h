@@ -120,6 +120,7 @@ class SearchHistoryModel : public QAbstractListModel {
 
 public:
     SearchHistoryModel(Library *library);
+    QHash<int, QByteArray> roleNames() const override;
     int rowCount(const QModelIndex &parent) const override;
     void removeSearch(const QString &search);
     QVariant data(const QModelIndex &index, int role) const override;

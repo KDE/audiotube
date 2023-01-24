@@ -4,6 +4,8 @@
 
 #include "playerutils.h"
 
+ #include <QAudio>
+
 PlayerUtils::PlayerUtils(QObject *parent) : QObject(parent)
 {
 
@@ -12,4 +14,9 @@ PlayerUtils::PlayerUtils(QObject *parent) : QObject(parent)
 QString PlayerUtils::formatTimestamp(quint64 stamp)
 {
     return m_format.formatDuration(stamp, KFormat::FoldHours);
+}
+
+float PlayerUtils::convertVolume(float volume)
+{
+    return QAudio::convertVolume(volume, QAudio::LogarithmicVolumeScale, QAudio::LinearVolumeScale);
 }

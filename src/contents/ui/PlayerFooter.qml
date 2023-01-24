@@ -8,8 +8,8 @@ import QtQuick 2.7
 import QtQuick.Layouts 1.3
 import QtQuick.Controls 2.12 as Controls
 
-import QtMultimedia 5.12
-import QtGraphicalEffects 1.0
+import QtMultimedia
+import Qt5Compat.GraphicalEffects
 
 import org.kde.kirigami 2.12 as Kirigami
 import org.kde.ytmusic 1.0
@@ -97,7 +97,6 @@ Flickable {
     property var videoInfoExtractor: VideoInfoExtractor {
         id: info
 
-        onSongChanged: audio.play()
         videoId: UserPlaylistModel.currentVideoId
         onTitleChanged: {
             let index = UserPlaylistModel.index(UserPlaylistModel.currentIndex, 0)
@@ -115,21 +114,26 @@ Flickable {
     }
     
     property var audioPlayer: audioLoader.item
+    property var audioOutput: audioLoader.item.audioOutput
 
     Loader {
         id: audioLoader
         active: true
         asynchronous: true
-        sourceComponent: Audio {
+        sourceComponent: MediaPlayer {
             id: audio
 
-            autoPlay: true
             source: info.audioUrl
-            onStatusChanged: {
-                if (status === Audio.EndOfMedia) {
+            onSourceChanged: play()
+            onMediaStatusChanged: {
+                if (mediaStatus === MediaPlayer.EndOfMedia) {
                     console.log("Song ended");
                     UserPlaylistModel.next();
                 }
+            }
+
+            audioOutput: AudioOutput {
+                id: audioOutput
             }
         }
     }

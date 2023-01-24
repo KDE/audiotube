@@ -9,6 +9,8 @@
 
 #include <dbusextended.h>
 
+#include <QDBusMetaType>
+
 #include <QDBusAbstractInterface>
 #include <QDBusError>
 

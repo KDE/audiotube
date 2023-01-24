@@ -80,7 +80,7 @@ QVariant ArtistModel::data(const QModelIndex &index, int role) const
 
             Q_UNREACHABLE();
         }, m_view[index.row()]));
-    case Type:
+    case TypeRole:
         return std::visit([&](auto&& item) {
             using T = std::decay_t<decltype(item)>;
             if constexpr(std::is_same_v<T, artist::Artist::Album>) {
@@ -135,7 +135,7 @@ QHash<int, QByteArray> ArtistModel::roleNames() const
 {
     return {
         {Title, "title"},
-        {Type, "type"},
+        {TypeRole, "type"},
         {Artists, "artists"},
         {VideoId, "videoId"},
         {ThumbnailUrl, "thumbnailUrl"}

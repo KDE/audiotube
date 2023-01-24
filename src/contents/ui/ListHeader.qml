@@ -6,7 +6,7 @@ import QtQuick 2.15
 import org.kde.kirigami 2.14 as Kirigami
 import QtQuick.Controls 2.14 as Controls
 import QtQuick.Layouts 1.3
-import QtGraphicalEffects 1.0
+import Qt5Compat.GraphicalEffects
 
 import org.kde.ytmusic 1.0
 
@@ -125,8 +125,8 @@ Item {
                     id: overflowMenu
                     Instantiator {
                         model: root.overflowActions
-                        onObjectAdded: overflowMenu.insertItem(index, object)
-                        onObjectRemoved: overflowMenu.removeItem(object)
+                        onObjectAdded: (index) => overflowMenu.insertItem(index, object)
+                        onObjectRemoved: (index) => overflowMenu.removeItem(object)
                         delegate: Controls.MenuItem {
                             required property var modelData
                             icon.name: modelData.icon.name

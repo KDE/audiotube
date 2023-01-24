@@ -31,7 +31,7 @@ Kirigami.ScrollablePage {
         drawerContentItem: ColumnLayout {
             Kirigami.BasicListItem{
                 label: i18n("Rename")
-                icon: "edit-entry"
+                icon.name: "edit-entry"
                 onClicked: {
                     renamePlaylistDialog.modelData = drawer.modelData
                     renamePlaylistDialog.open()
@@ -40,7 +40,7 @@ Kirigami.ScrollablePage {
             }
             Kirigami.BasicListItem{
                 label: i18n("Delete")
-                icon: "delete"
+                icon.name: "delete"
                 onClicked: {
                     localPlaylistsModel.deletePlaylist(drawer.modelData.playlistId)
                     drawer.close()
@@ -141,12 +141,12 @@ Kirigami.ScrollablePage {
                     drawerContentItem: ColumnLayout {
                         Kirigami.BasicListItem{
                             label: i18n("New Playlist")
-                            icon: "list-add"
+                            icon.name: "list-add"
                             onClicked: addPlaylistDialog.open()
                         }
                         Kirigami.BasicListItem{
                             label: i18n("Import Playlist")
-                            icon: "download"
+                            icon.name: "download"
                             onClicked: importPlaylistDialog.open()
                         }
                         Item{

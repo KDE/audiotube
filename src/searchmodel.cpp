@@ -68,7 +68,7 @@ QVariant SearchModel::data(const QModelIndex &index, int role) const
                 Q_UNREACHABLE();
             }
         }, m_searchResults.at(index.row())));
-    case Type:
+    case TypeRole:
         return std::visit([&](auto&& arg) {
             using T = std::decay_t<decltype(arg)>;
             if constexpr (std::is_same_v<T, search::Album>) {
@@ -172,7 +172,7 @@ QHash<int, QByteArray> SearchModel::roleNames() const
 {
     return {
         {Title, "title"},
-        {Type, "type"},
+        {TypeRole, "type"},
         {VideoId, "videoId"},
         {Artists, "artists"},
         {ArtistsDisplayString, "artistsDisplayString"},

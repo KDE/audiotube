@@ -65,7 +65,6 @@ Item{
                     id: shareDelegate
 
                     required property string iconName
-                    required property string display
                     required property int index
 
                     label: shareDelegate.display
@@ -114,7 +113,6 @@ Item{
                     id: shareDrawerDelegate
 
                     required property string iconName
-                    required property string display
                     required property int index
 
                     label: shareDrawerDelegate.display

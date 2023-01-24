@@ -36,7 +36,7 @@ public:
 
     enum Role {
         Title,
-        Type,
+        TypeRole,
         Artists,
         VideoId,
         ThumbnailUrl

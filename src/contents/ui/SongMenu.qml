@@ -3,7 +3,7 @@
 // SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
 import QtQuick 2.15
-import QtQuick.Controls 2.15 as Controls
+import QtQuick.Controls as Controls
 import org.kde.ytmusic 1.0
 import org.kde.kirigami 2.19 as Kirigami
 import QtQuick.Layouts 1.15
@@ -105,7 +105,7 @@ Item {
             Kirigami.BasicListItem{
                 Layout.topMargin: 10
                 label: i18n("Play Next")
-                icon: "go-next"
+                icon.name: "go-next"
                 onClicked: {
                     UserPlaylistModel.playNext(drawer.videoId, drawer.songTitle, drawer.artists)
                     drawer.close()
@@ -114,7 +114,7 @@ Item {
             Kirigami.BasicListItem{
 
                 label: i18n("Add to queue")
-                icon: "media-playlist-append"
+                icon.name: "media-playlist-append"
                 onClicked: {
                     UserPlaylistModel.append(drawer.videoId, drawer.songTitle, drawer.artists)
                     drawer.close()
@@ -124,7 +124,7 @@ Item {
                 readonly property QtObject favouriteWatcher: Library.favouriteWatcher(drawer.videoId)
 
                 label: favouriteWatcher ? (favouriteWatcher.isFavourite ? i18n("Remove Favourite"): i18n("Add Favourite")): ""
-                icon: favouriteWatcher ? (favouriteWatcher.isFavourite ? "starred-symbolic" : "non-starred-symbolic") : ""
+                icon.name: favouriteWatcher ? (favouriteWatcher.isFavourite ? "starred-symbolic" : "non-starred-symbolic") : ""
                 onClicked: {
                     if (favouriteWatcher) {
                         if (favouriteWatcher.isFavourite) {
@@ -141,7 +141,7 @@ Item {
                 readonly property QtObject wasPlayedWatcher: Library.wasPlayedWatcher(drawer.videoId)
                 
                 label: i18n("Remove from History")
-                icon: "list-remove"
+                icon.name: "list-remove"
                 onClicked: {
                     Library.removePlaybackHistoryItem(drawer.videoId)
                     drawer.close()
@@ -154,7 +154,7 @@ Item {
                 readonly property QtObject wasPlayedWatcher: Library.wasPlayedWatcher(drawer.videoId)
 
                 label: i18n("Add to playlist")
-                icon: "media-playlist-append"
+                icon.name: "media-playlist-append"
                 onClicked: {
                     playlistDialog.open()
                     drawer.close()
@@ -181,7 +181,7 @@ Item {
                 readonly property QtObject wasPlayedWatcher: Library.wasPlayedWatcher(drawer.videoId)
 
                 label: i18n("Share Song")
-                icon: "emblem-shared-symbolic"
+                icon.name: "emblem-shared-symbolic"
                 onClicked: {
                     shareMenu.open()
                     drawer.close()

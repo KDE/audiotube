@@ -82,7 +82,7 @@ Kirigami.ScrollablePage {
                     drawerContentItem: ColumnLayout {
                         Kirigami.BasicListItem{
                             label: i18n("Play")
-                            icon: "media-playback-start"
+                            icon.name: "media-playback-start"
                             onClicked: {
                                 UserPlaylistModel.playFavourites(Library.favourites, false)
                                 favDrawer.close()
@@ -90,7 +90,7 @@ Kirigami.ScrollablePage {
                         }
                         Kirigami.BasicListItem{
                             label: i18n("Shuffle")
-                            icon: "shuffle"
+                            icon.name: "shuffle"
                             onClicked: {
                                 UserPlaylistModel.playFavourites(Library.favourites, true)
                                 favDrawer.close()
@@ -98,7 +98,7 @@ Kirigami.ScrollablePage {
                         }
                         Kirigami.BasicListItem{
                             label: i18n("Append to queue")
-                            icon: "media-playlist-append"
+                            icon.name: "media-playlist-append"
                             onClicked: {
                                 UserPlaylistModel.appendFavourites(Library.favourites,false)
                                 favDrawer.close()
@@ -267,7 +267,7 @@ Kirigami.ScrollablePage {
                     drawerContentItem: ColumnLayout {
                         Kirigami.BasicListItem{
                             label: i18n("Play")
-                            icon: "media-playback-start"
+                            icon.name: "media-playback-start"
                             onClicked: {
                                 UserPlaylistModel.playPlaybackHistory(Library.mostPlayed, false)
                                 recDrawer.close()
@@ -276,7 +276,7 @@ Kirigami.ScrollablePage {
                         }
                         Kirigami.BasicListItem{
                             label: i18n("Shuffle")
-                            icon: "shuffle"
+                            icon.name: "shuffle"
                             onClicked: {
                                 UserPlaylistModel.playPlaybackHistory(Library.mostPlayed, true)
                                 recDrawer.close()
@@ -284,7 +284,7 @@ Kirigami.ScrollablePage {
                         }
                         Kirigami.BasicListItem{
                             label: i18n("Append to queue")
-                            icon: "media-playlist-append"
+                            icon.name: "media-playlist-append"
                             onClicked: {
                                 UserPlaylistModel.appendPlaybackHistory(Library.mostPlayed, false)
                                 recDrawer.close()
@@ -448,7 +448,7 @@ Kirigami.ScrollablePage {
             drawerContentItem: ColumnLayout {
                 Kirigami.BasicListItem{
                     label: i18n("Rename")
-                    icon: "edit-entry"
+                    icon.name: "edit-entry"
                     onClicked: {
                         renamePlaylistDialog.modelData = playlistDrawer.modelData
                         renamePlaylistDialog.open()
@@ -457,7 +457,7 @@ Kirigami.ScrollablePage {
                 }
                 Kirigami.BasicListItem{
                     label: i18n("Delete")
-                    icon: "delete"
+                    icon.name: "delete"
                     onClicked: {
                         localPlaylistsModel.deletePlaylist(playlistDrawer.modelData.playlistId)
                         playlistDrawer.close()

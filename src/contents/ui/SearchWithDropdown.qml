@@ -7,7 +7,7 @@ import QtQuick 2.1
 import QtQuick.Controls 2.12 as Controls
 import QtQuick.Layouts 1.3
 import org.kde.kirigami 2.14 as Kirigami
-import QtGraphicalEffects 1.0
+import Qt5Compat.GraphicalEffects
 import org.kde.ytmusic 1.0
 
 Item {
@@ -362,13 +362,16 @@ Item {
                         }
 
                         delegate: Kirigami.AbstractListItem {
+                            required property string searchQuery
+                            required property int index
+
                             id: completionDelegate
                             highlighted: focus || (completionList.selectedDelegate == index)
                             Kirigami.Theme.colorSet: Kirigami.Theme.Window
                             Kirigami.Theme.inherit: false
                             Layout.fillWidth: true
                             height: completionList.delegateHeight
-                            text: model.display
+                            text: searchQuery
                             padding: completionList.delegatePadding
                             spacing: 0
 
@@ -379,8 +382,8 @@ Item {
                                     implicitWidth: completionList.delegateHeight
                                     color: Kirigami.Theme.disabledTextColor
                                 }
-                                Controls.Label {
-                                    text: model.display
+                                Controls.Label{
+                                    text: searchQuery
                                     Layout.fillWidth: true
                                     elide: Text.ElideRight
                                 }
@@ -397,7 +400,7 @@ Item {
 
                             }
                             onClicked: {
-                                searchField.text = model.display
+                                searchField.text = searchQuery
                                 searchField.accepted()
                             }
                         }

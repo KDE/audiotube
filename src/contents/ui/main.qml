@@ -5,9 +5,9 @@
 import QtQuick 2.1
 import QtQuick.Controls 2.12 as Controls
 import QtQuick.Layouts 1.3
-import org.kde.kirigami 2.14 as Kirigami
-import QtGraphicalEffects 1.0
-import QtMultimedia 5.12
+import org.kde.kirigami as Kirigami
+import QtMultimedia
+import Qt5Compat.GraphicalEffects
 
 import org.kde.ytmusic 1.0
 
@@ -284,7 +284,7 @@ Kirigami.ApplicationWindow {
         canPlay: playerFooter.audioPlayer.status !== Audio.NoMedia
         canSeek: false
 
-        playbackStatus: playerFooter.audioPlayer.playbackState === Audio.PlayingState ? Mpris.Playing : (playerFooter.audioPlayer.playbackState == Audio.PausedState ? Mpris.Paused : Mpris.Stopped)
+        playbackStatus: playerFooter.audioPlayer.playbackState === MediaPlayer.PlayingState ? Mpris.Playing : (playerFooter.audioPlayer.playbackState == MediaPlayer.PausedState ? Mpris.Paused : Mpris.Stopped)
         shuffle: false
         volume: playerFooter.audioPlayer.muted ? 0.0 : playerFooter.audioPlayer.volume
         position: playerFooter.audioPlayer.position * 1000

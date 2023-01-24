@@ -7,6 +7,7 @@
 #include "mprismanager.h"
 
 #include "mpriscontroller.h"
+#include "qregularexpression.h"
 
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
@@ -49,9 +50,8 @@ MprisManager::MprisManager(QObject *parent)
     QStringList serviceNames = connection.interface()->registeredServiceNames();
     QStringList::const_iterator i = serviceNames.constBegin();
     while (i != serviceNames.constEnd()) {
-        QRegExp rx(mprisNameSpace);
-        rx.setPatternSyntax(QRegExp::Wildcard);
-        if (rx.exactMatch(*i)) {
+        auto rx = QRegularExpression::fromWildcard(mprisNameSpace);
+        if (rx.match(*i).hasMatch()) {
             onServiceAppeared(*i);
         }
 
@@ -154,9 +154,8 @@ void MprisManager::setCurrentService(const QString &service)
         return;
     }
 
-    QRegExp rx(mprisNameSpace);
-    rx.setPatternSyntax(QRegExp::Wildcard);
-    if (!rx.exactMatch(service)) {
+    auto rx = QRegularExpression::fromWildcard(mprisNameSpace);
+    if (!rx.match(service).hasMatch()) {
         qWarning() << "Mpris:" << service << "is not a proper Mpris2 service";
         return;
     }
@@ -361,9 +360,8 @@ void MprisManager::onNameOwnerChanged(const QString &service, const QString &old
     // bus, not just the ones for our name space of interest, and we
     // will have to filter on our own :(
 
-    QRegExp rx(mprisNameSpace);
-    rx.setPatternSyntax(QRegExp::Wildcard);
-    if (!rx.exactMatch(service)) {
+    auto rx = QRegularExpression::fromWildcard(mprisNameSpace);
+    if (!rx.match(service).hasMatch()) {
         return;
     }
 
