@@ -247,6 +247,7 @@ Item {
                             required property string videoId
                             required property string artists
                             required property bool isCurrent
+                            required property int index
 
                             backgroundColor: 'transparent'
                             highlighted: isCurrent

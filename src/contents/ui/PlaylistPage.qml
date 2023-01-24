@@ -57,7 +57,7 @@ Kirigami.ScrollablePage {
             required property var artists
             required property string thumbnailUrl
             required property string artistsDisplayString
-
+            required property int index
 
             RowLayout {
                 Layout.fillHeight: true

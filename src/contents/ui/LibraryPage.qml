@@ -62,6 +62,7 @@ Kirigami.ScrollablePage {
                         required property var artists
                         required property string artistsDisplayString
                         required property string videoId
+                        required property int index
 
                         Layout.fillWidth: false
                         Layout.maximumWidth: 200

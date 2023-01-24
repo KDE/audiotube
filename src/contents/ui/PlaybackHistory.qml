@@ -38,6 +38,7 @@ Kirigami.ScrollablePage {
             required property string videoId
             required property var artists
             required property string artistsDisplayString
+            required property int index
 
             onClicked: {
                 play(videoId)
