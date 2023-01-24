@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-23 00:59+0000\n"
-"PO-Revision-Date: 2023-01-22 12:44+0100\n"
+"PO-Revision-Date: 2023-01-23 16:33+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -207,10 +207,9 @@ msgid "Unknown"
 msgstr "Inconnu"
 
 #: contents/ui/SearchWithDropdown.qml:285
-#, fuzzy, kde-format
-#| msgid "Previous Searches:"
+#, kde-format
 msgid "No matching previous searches"
-msgstr "Recherches précédentes :"
+msgstr "Aucune correspondance avec les recherches précédentes"
 
 #: contents/ui/Sidebar.qml:179
 #, kde-format

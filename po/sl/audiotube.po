@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-23 00:59+0000\n"
-"PO-Revision-Date: 2023-01-02 19:53+0100\n"
+"PO-Revision-Date: 2023-01-23 06:43+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.1\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 
@@ -208,10 +208,9 @@ msgid "Unknown"
 msgstr "Neznano"
 
 #: contents/ui/SearchWithDropdown.qml:285
-#, fuzzy, kde-format
-#| msgid "Previous Searches:"
+#, kde-format
 msgid "No matching previous searches"
-msgstr "Prejšnja iskanja:"
+msgstr "Ni zadetkov iz prejšnjih iskanj"
 
 #: contents/ui/Sidebar.qml:179
 #, kde-format
@@ -241,7 +240,7 @@ msgstr "Dodaj priljubljenega"
 #: contents/ui/SongMenu.qml:148 contents/ui/SongMenu.qml:200
 #, kde-format
 msgid "Remove from History"
-msgstr ""
+msgstr "Odstrani iz zgodovine"
 
 #~ msgid "Favourite Songs"
 #~ msgstr "Priljubljene pesmi"
