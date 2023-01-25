@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-23 00:59+0000\n"
+"POT-Creation-Date: 2023-01-25 01:00+0000\n"
 "PO-Revision-Date: 2023-01-22 23:00+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -51,7 +51,7 @@ msgid "Album • %1"
 msgstr "Álbum • %1"
 
 #: contents/ui/AlbumPage.qml:88 contents/ui/ArtistPage.qml:126
-#: contents/ui/PlaybackHistory.qml:79 contents/ui/PlaylistPage.qml:91
+#: contents/ui/PlaybackHistory.qml:80 contents/ui/PlaylistPage.qml:91
 #: contents/ui/SearchPage.qml:130
 #, kde-format
 msgid "More"
@@ -113,17 +113,17 @@ msgstr "Cancelar"
 msgid "Favourites"
 msgstr "Favoritos"
 
-#: contents/ui/LibraryPage.qml:39 contents/ui/LibraryPage.qml:224
+#: contents/ui/LibraryPage.qml:39 contents/ui/LibraryPage.qml:225
 #, kde-format
 msgid "Show All"
 msgstr "Mostrar Tudo"
 
-#: contents/ui/LibraryPage.qml:213
+#: contents/ui/LibraryPage.qml:214
 #, kde-format
 msgid "Most played"
 msgstr "Mais Tocadas"
 
-#: contents/ui/LibraryPage.qml:229
+#: contents/ui/LibraryPage.qml:230
 #, kde-format
 msgid "played Songs"
 msgstr "Músicas tocadas"
@@ -148,12 +148,12 @@ msgstr "Fila"
 msgid "Lyrics"
 msgstr "Letras Musicais"
 
-#: contents/ui/MaximizedPlayerPage.qml:273
+#: contents/ui/MaximizedPlayerPage.qml:274
 #, kde-format
 msgid "Remove Track"
 msgstr "Remover a Faixa"
 
-#: contents/ui/MaximizedPlayerPage.qml:315
+#: contents/ui/MaximizedPlayerPage.qml:316
 #: contents/ui/MinimizedPlayerControls.qml:90
 #, kde-format
 msgid "No media playing"

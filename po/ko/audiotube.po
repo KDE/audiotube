@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-23 00:59+0000\n"
+"POT-Creation-Date: 2023-01-25 01:00+0000\n"
 "PO-Revision-Date: 2022-10-03 14:20+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-i18n-doc@kde.org>\n"
@@ -49,7 +49,7 @@ msgid "Album • %1"
 msgstr ""
 
 #: contents/ui/AlbumPage.qml:88 contents/ui/ArtistPage.qml:126
-#: contents/ui/PlaybackHistory.qml:79 contents/ui/PlaylistPage.qml:91
+#: contents/ui/PlaybackHistory.qml:80 contents/ui/PlaylistPage.qml:91
 #: contents/ui/SearchPage.qml:130
 #, kde-format
 msgid "More"
@@ -110,17 +110,17 @@ msgstr "취소"
 msgid "Favourites"
 msgstr "책갈피"
 
-#: contents/ui/LibraryPage.qml:39 contents/ui/LibraryPage.qml:224
+#: contents/ui/LibraryPage.qml:39 contents/ui/LibraryPage.qml:225
 #, kde-format
 msgid "Show All"
 msgstr "모두 표시"
 
-#: contents/ui/LibraryPage.qml:213
+#: contents/ui/LibraryPage.qml:214
 #, kde-format
 msgid "Most played"
 msgstr "가장 많이 재생됨"
 
-#: contents/ui/LibraryPage.qml:229
+#: contents/ui/LibraryPage.qml:230
 #, fuzzy, kde-format
 #| msgid "Played Songs"
 msgid "played Songs"
@@ -146,12 +146,12 @@ msgstr "대기열에 추가"
 msgid "Lyrics"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:273
+#: contents/ui/MaximizedPlayerPage.qml:274
 #, kde-format
 msgid "Remove Track"
 msgstr "트랙 삭제"
 
-#: contents/ui/MaximizedPlayerPage.qml:315
+#: contents/ui/MaximizedPlayerPage.qml:316
 #: contents/ui/MinimizedPlayerControls.qml:90
 #, kde-format
 msgid "No media playing"
