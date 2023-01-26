@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-23 00:59+0000\n"
+"POT-Creation-Date: 2023-01-25 01:00+0000\n"
 "PO-Revision-Date: 2023-01-15 12:33+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -52,7 +52,7 @@ msgid "Album • %1"
 msgstr "Album • %1"
 
 #: contents/ui/AlbumPage.qml:88 contents/ui/ArtistPage.qml:126
-#: contents/ui/PlaybackHistory.qml:79 contents/ui/PlaylistPage.qml:91
+#: contents/ui/PlaybackHistory.qml:80 contents/ui/PlaylistPage.qml:91
 #: contents/ui/SearchPage.qml:130
 #, kde-format
 msgid "More"
@@ -112,17 +112,17 @@ msgstr "Avbryt"
 msgid "Favourites"
 msgstr "Favorittar"
 
-#: contents/ui/LibraryPage.qml:39 contents/ui/LibraryPage.qml:224
+#: contents/ui/LibraryPage.qml:39 contents/ui/LibraryPage.qml:225
 #, kde-format
 msgid "Show All"
 msgstr "Vis alle"
 
-#: contents/ui/LibraryPage.qml:213
+#: contents/ui/LibraryPage.qml:214
 #, kde-format
 msgid "Most played"
 msgstr "Oftast avspela"
 
-#: contents/ui/LibraryPage.qml:229
+#: contents/ui/LibraryPage.qml:230
 #, kde-format
 msgid "played Songs"
 msgstr "Avspela songar"
@@ -147,12 +147,12 @@ msgstr "Kø"
 msgid "Lyrics"
 msgstr "Songtekst"
 
-#: contents/ui/MaximizedPlayerPage.qml:273
+#: contents/ui/MaximizedPlayerPage.qml:274
 #, kde-format
 msgid "Remove Track"
 msgstr "Fjern spor"
 
-#: contents/ui/MaximizedPlayerPage.qml:315
+#: contents/ui/MaximizedPlayerPage.qml:316
 #: contents/ui/MinimizedPlayerControls.qml:90
 #, kde-format
 msgid "No media playing"
