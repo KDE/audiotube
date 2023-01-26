@@ -126,6 +126,7 @@ public:
     SearchHistoryModel *searches();
     Q_SIGNAL void searchesChanged();
     Q_INVOKABLE void addSearch(const QString &text);
+    Q_INVOKABLE void removeSearch(const QString &text);
 
     PlaybackHistoryModel *playbackHistory();
     Q_SIGNAL void playbackHistoryChanged();

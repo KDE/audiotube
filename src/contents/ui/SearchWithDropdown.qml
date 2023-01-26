@@ -229,7 +229,7 @@ Item {
                 contentWidth: -1
                 Keys.enabled: false
 
-                ColumnLayout {
+                contentItem: ColumnLayout {
                     Layout.fillHeight: true
                     Layout.fillWidth: true
                     Controls.ScrollView {
@@ -301,9 +301,9 @@ Item {
                             highlighted: focus
                             Kirigami.Theme.colorSet: Kirigami.Theme.Window
                             Kirigami.Theme.inherit: false
-                            implicitWidth: popup.width
+                            Layout.fillWidth: true
                             height: Kirigami.Units.gridUnit * 2
-                            RowLayout {
+                            contentItem: RowLayout {
 
                                 Kirigami.Icon {
                                     source: "search"
@@ -314,6 +314,14 @@ Item {
                                 Controls.Label{
                                     text: model.display
                                     Layout.fillWidth: true
+                                }
+                                Controls.ToolButton {
+                                    icon.name: "list-remove"
+                                    text: i18n("remove from search history")
+                                    display: Controls.AbstractButton.IconOnly
+                                    onClicked: {
+                                        Library.removeSearch(model.display)
+                                    }
                                 }
 
                             }

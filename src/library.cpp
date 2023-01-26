@@ -74,6 +74,11 @@ void Library::addSearch(const QString &text)
     connectFuture(m_database->execute("insert into searches (search_query) values (?)", text), this, &Library::searchesChanged);
 }
 
+void Library::removeSearch(const QString &text)
+{
+    connectFuture(m_database->execute("delete from searches where search_query = ?", text), this, &Library::searchesChanged);
+}
+
 PlaybackHistoryModel *Library::playbackHistory()
 {
     auto future = m_database->getResults<PlayedSong>("select * from played_songs natural join songs");
