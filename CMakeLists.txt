@@ -4,11 +4,11 @@
 
 cmake_minimum_required(VERSION 3.16.0)
 
-project(audiotube)
+set(PROJECT_VERSION "23.01")
+project(audiotube VERSION ${PROJECT_VERSION})
 
 include(FeatureSummary)
 
-set(PROJECT_VERSION "22.11")
 set(QT5_MIN_VERSION 5.15)
 set(KF5_MIN_VERSION 5.81)
 
