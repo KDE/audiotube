@@ -14,12 +14,7 @@ VideoInfoExtractor::VideoInfoExtractor(QObject *parent)
     connect(this, &VideoInfoExtractor::videoIdChanged, this, [this] {
         if (m_videoId.isEmpty()) {
             m_videoInfo = {};
-            Q_EMIT audioUrlChanged();
-            Q_EMIT titleChanged();
-            Q_EMIT artistChanged();
-            Q_EMIT channelChanged();
             Q_EMIT songChanged();
-            Q_EMIT thumbnailChanged();
             return;
         }
 
@@ -29,12 +24,7 @@ VideoInfoExtractor::VideoInfoExtractor(QObject *parent)
         connectFuture(future, this, [this](const video_info::VideoInfo &videoInfo) {
             m_videoInfo = videoInfo;
             setLoading(false);
-            Q_EMIT audioUrlChanged();
-            Q_EMIT titleChanged();
-            Q_EMIT artistChanged();
-            Q_EMIT channelChanged();
             Q_EMIT songChanged();
-            Q_EMIT thumbnailChanged();
         });
     });
 }
