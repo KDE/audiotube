@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-27 01:01+0000\n"
-"PO-Revision-Date: 2023-01-22 06:38+0100\n"
+"PO-Revision-Date: 2023-01-27 08:44+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -214,10 +214,9 @@ msgid "No matching previous searches"
 msgstr "წინა ძებნებს არ ემთხვევა"
 
 #: contents/ui/SearchWithDropdown.qml:320
-#, fuzzy, kde-format
-#| msgid "Remove from History"
+#, kde-format
 msgid "remove from search history"
-msgstr "ისტორიიდან წაშლა"
+msgstr "ძებნის ისტორიიდან წაშლა"
 
 #: contents/ui/Sidebar.qml:179
 #, kde-format

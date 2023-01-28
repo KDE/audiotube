@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-27 01:01+0000\n"
-"PO-Revision-Date: 2023-01-22 19:10+0300\n"
+"PO-Revision-Date: 2023-01-27 18:30+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -214,10 +214,9 @@ msgid "No matching previous searches"
 msgstr "Eşleşen daha önceden yapılmış arama yok"
 
 #: contents/ui/SearchWithDropdown.qml:320
-#, fuzzy, kde-format
-#| msgid "Remove from History"
+#, kde-format
 msgid "remove from search history"
-msgstr "Geçmişten Kaldır"
+msgstr "arama geçmişinden kaldır"
 
 #: contents/ui/Sidebar.qml:179
 #, kde-format

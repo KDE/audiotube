@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the audiotube package.
-# Vincenzo Reale <smart2128vr@gmail.com>, 2021, 2022.
+# Vincenzo Reale <smart2128vr@gmail.com>, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-27 01:01+0000\n"
-"PO-Revision-Date: 2022-12-31 09:28+0100\n"
+"PO-Revision-Date: 2023-01-22 19:36+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -209,10 +209,9 @@ msgid "Unknown"
 msgstr "Sconosciuto"
 
 #: contents/ui/SearchWithDropdown.qml:285
-#, fuzzy, kde-format
-#| msgid "Previous Searches:"
+#, kde-format
 msgid "No matching previous searches"
-msgstr "Ricerche precedenti:"
+msgstr "Nessuna ricerca precedente corrispondente"
 
 #: contents/ui/SearchWithDropdown.qml:320
 #, kde-format
@@ -247,7 +246,7 @@ msgstr "Aggiungi preferito"
 #: contents/ui/SongMenu.qml:148 contents/ui/SongMenu.qml:200
 #, kde-format
 msgid "Remove from History"
-msgstr ""
+msgstr "Rimuovi dalla cronologia"
 
 #~ msgid "Favourite Songs"
 #~ msgstr "Brani preferiti"

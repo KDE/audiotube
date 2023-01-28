@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-27 01:01+0000\n"
-"PO-Revision-Date: 2023-01-22 08:28+0200\n"
-"Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
+"PO-Revision-Date: 2023-01-27 10:54+0200\n"
+"Last-Translator: Fracture dept <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
@@ -215,10 +215,9 @@ msgid "No matching previous searches"
 msgstr "Немає відповідних попередніх пошуків"
 
 #: contents/ui/SearchWithDropdown.qml:320
-#, fuzzy, kde-format
-#| msgid "Remove from History"
+#, kde-format
 msgid "remove from search history"
-msgstr "Вилучити із журналу"
+msgstr "вилучити з журналу пошуку"
 
 #: contents/ui/Sidebar.qml:179
 #, kde-format
