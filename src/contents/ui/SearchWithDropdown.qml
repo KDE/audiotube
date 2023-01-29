@@ -223,15 +223,17 @@ Item {
             }
 
             Controls.ScrollView {
+                id: mainScrollView
+                
                 Layout.fillHeight: true
                 Layout.fillWidth: true
 
-                contentWidth: -1
                 Keys.enabled: false
+                contentWidth: availableWidth
 
-                contentItem: ColumnLayout {
-                    Layout.fillHeight: true
-                    Layout.fillWidth: true
+                ColumnLayout {
+                    width: mainScrollView.contentWidth
+                    
                     Controls.ScrollView {
                         id: recents
 
