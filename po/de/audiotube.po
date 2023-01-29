@@ -1,7 +1,7 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the audiotube package.
 # Burkhard Lück <lueck@hube-lueck.de>, 2021.
-# Frederik Schwarzer <schwarzer@kde.org>, 2021, 2022.
+# Frederik Schwarzer <schwarzer@kde.org>, 2021, 2022, 2023.
 # Frank Steinmetzger <dev-kde@felsenfleischer.de>, 2022.
 #
 msgid ""
@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-27 01:01+0000\n"
-"PO-Revision-Date: 2022-12-19 10:01+0100\n"
+"PO-Revision-Date: 2023-01-14 23:47+0100\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -124,8 +124,7 @@ msgid "Most played"
 msgstr "Am meisten abgespielt"
 
 #: contents/ui/LibraryPage.qml:230
-#, fuzzy, kde-format
-#| msgid "Played Songs"
+#, kde-format
 msgid "played Songs"
 msgstr "Abgespielte Stücke"
 
@@ -163,7 +162,7 @@ msgstr "Es werden keine Medien wiedergegeben"
 #: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:93
 #, kde-format
 msgid "Library"
-msgstr ""
+msgstr "Bibliothek"
 
 #: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:109
 #, kde-format
@@ -194,7 +193,7 @@ msgstr "Wiedergabeliste"
 #: contents/ui/SearchPage.qml:16
 #, kde-format
 msgid "Previous Searches:"
-msgstr ""
+msgstr "Vorherige Suchvorgänge:"
 
 #: contents/ui/SearchPage.qml:28
 #, kde-format
@@ -224,7 +223,7 @@ msgstr ""
 #: contents/ui/Sidebar.qml:179
 #, kde-format
 msgid "Collapse Sidebar"
-msgstr ""
+msgstr "Seitenleiste einklappen"
 
 #: contents/ui/SongMenu.qml:113 contents/ui/SongMenu.qml:172
 #, kde-format

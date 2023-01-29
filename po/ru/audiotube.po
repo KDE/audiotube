@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the audiotube package.
 #
-# Alexander Yavorsky <kekcuha@gmail.com>, 2022.
+# Alexander Yavorsky <kekcuha@gmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-27 01:01+0000\n"
-"PO-Revision-Date: 2022-12-27 10:21+0300\n"
+"PO-Revision-Date: 2023-01-28 13:37+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -122,8 +122,7 @@ msgid "Most played"
 msgstr "Часто воспроизводимые"
 
 #: contents/ui/LibraryPage.qml:230
-#, fuzzy, kde-format
-#| msgid "Played Songs"
+#, kde-format
 msgid "played Songs"
 msgstr "Воспроизведённые треки"
 
@@ -161,7 +160,7 @@ msgstr "Ничего не воспроизводится"
 #: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:93
 #, kde-format
 msgid "Library"
-msgstr ""
+msgstr "Библиотека"
 
 #: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:109
 #, kde-format
@@ -192,7 +191,7 @@ msgstr "Список воспроизведения"
 #: contents/ui/SearchPage.qml:16
 #, kde-format
 msgid "Previous Searches:"
-msgstr ""
+msgstr "Предыдущие поисковые запросы:"
 
 #: contents/ui/SearchPage.qml:28
 #, kde-format
@@ -212,7 +211,7 @@ msgstr "Неизвестный тип"
 #: contents/ui/SearchWithDropdown.qml:285
 #, kde-format
 msgid "No matching previous searches"
-msgstr ""
+msgstr "Не найдено соответствующих предыдущих поисковых запросов"
 
 #: contents/ui/SearchWithDropdown.qml:320
 #, kde-format
@@ -222,7 +221,7 @@ msgstr ""
 #: contents/ui/Sidebar.qml:179
 #, kde-format
 msgid "Collapse Sidebar"
-msgstr ""
+msgstr "Свернуть боковую панель"
 
 #: contents/ui/SongMenu.qml:113 contents/ui/SongMenu.qml:172
 #, kde-format
@@ -247,7 +246,7 @@ msgstr "Добавить в избранное"
 #: contents/ui/SongMenu.qml:148 contents/ui/SongMenu.qml:200
 #, kde-format
 msgid "Remove from History"
-msgstr ""
+msgstr "Удалить из журнала"
 
 #~ msgid "Favourite Songs"
 #~ msgstr "Избранные треки"
