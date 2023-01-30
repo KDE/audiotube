@@ -17,6 +17,7 @@ Item {
     
     required property var info // VideoInfoExtractor object
     required property var audio // Audio object
+    readonly property bool isWidescreen: width >= Kirigami.Units.gridUnit * 40
     
     signal requestClose()
     
@@ -398,6 +399,11 @@ Item {
                 Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
                 Kirigami.Theme.inherit: false
 
+                Item {
+                    Layout.preferredWidth: isWidescreen ? Kirigami.Units.gridUnit * 2.5 * 4 : Kirigami.Units.gridUnit * 2.5
+                    // ensure that play/pause button is centered; should be adjusted if elements are added/removed
+                }
+                
                 ToolButton {
                     id: favouriteButton
                     readonly property QtObject favouriteWatcher: Library.favouriteWatcher(info.videoId)
@@ -503,6 +509,179 @@ Item {
                     
                     Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
                     Kirigami.Theme.inherit: false
+                }
+                ToolButton {
+                    id: volumeButtonSmallScreen
+                    Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
+                    Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
+                    Layout.maximumWidth: height
+                    Layout.preferredWidth: height
+                    visible: !isWidescreen
+                    enabled: !isWidescreen
+                    
+                    icon.name: muteButton.icon.name
+                    
+                    onClicked:{
+                        if(!volumeDrawer.opened){
+                            volumeDrawer.open()
+                            drawer.interactive = true
+                        }
+                        else{
+                            volumeDrawer.close()
+                        }
+                    }
+                    Drawer {
+                        id: volumeDrawer
+                        
+                        edge: Qt.BottomEdge
+                        width: applicationWindow().width
+                        height: contents.height + 40
+                        interactive: false
+                        background: Kirigami.ShadowedRectangle{
+                            corners.topRightRadius: 10
+                            corners.topLeftRadius: 10
+                            shadow.size: 20
+                            shadow.color: Qt.rgba(0, 0, 0, 0.5)
+                            color: Kirigami.Theme.backgroundColor
+                        }
+                        onClosed: {
+                            interactive = false
+                        }
+                        
+                        RowLayout {
+                            id: contents
+                            
+                            width: volumeDrawer.width
+                            
+                            ToolButton{
+                                Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
+                                Layout.maximumWidth: height
+                                Layout.preferredWidth: height
+                                
+                                icon.name: muteButton.icon.name
+                                checkable: true
+                                checked: muteButton.checked
+                                onClicked: {
+                                    if(audio.muted)
+                                    {
+                                        muteButton.unmuteAudio()
+                                    }
+                                    else
+                                    {
+                                        muteButton.muteAudio()
+                                    }
+                                }
+                            }
+                            
+                            Slider {
+                                value: volumeSlider.value
+                                opacity: volumeSlider.opacity
+                                wheelEnabled: true
+                                
+                                Layout.fillWidth: true
+                                Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
+                                
+                                onMoved: {
+                                    volumeSlider.value = value
+                                    volumeSlider.valueChanged()
+                                }
+                            }
+                            
+                            Label {
+                                Layout.preferredHeight: Slider.height
+                                Layout.preferredWidth: Kirigami.Units.gridUnit * 2.5
+                                
+                                text: volumeLabel.text
+                            }
+                            
+                            ToolButton {
+                                Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
+                                Layout.maximumWidth: height
+                                Layout.preferredWidth: height
+                                
+                                icon.name: "dialog-close"
+                                onClicked: {
+                                    volumeDrawer.close()
+                                }
+                            }
+                        }
+                    }
+                }
+                
+                ToolButton {
+                    id: muteButton
+                    
+                    function muteAudio() {
+                        audio.muted = true
+                        volumeSlider.opacity = 0.5
+                        checked = true
+                    }
+                    function unmuteAudio() {
+                        audio.muted = false
+                        volumeSlider.opacity = 1
+                        checked = false
+                    }
+                    
+                    Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
+                    Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
+                    Layout.maximumWidth: height
+                    Layout.preferredWidth: height
+                    
+                    onClicked: {
+                        if(audio.muted) {
+                            unmuteAudio()
+                        }
+                        else {
+                            muteAudio()
+                        }
+                    }
+                    
+                    icon.name: audio.muted ? "audio-volume-muted" : (volumeSlider.value < .33 ? "audio-volume-low" : (volumeSlider.value < .66 ? "audio-volume-medium" : "audio-volume-high"))
+                    checkable: true
+                    visible: isWidescreen
+                    enabled: isWidescreen
+                }
+                
+                Slider {
+                    id: volumeSlider
+                    enabled: isWidescreen
+                    visible: isWidescreen
+                    
+                    property real volume: QtMultimedia.convertVolume(value, QtMultimedia.LogarithmicVolumeScale, QtMultimedia.LinearVolumeScale)
+                    
+                    Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
+                    Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
+                    Layout.preferredWidth: 2*Layout.preferredHeight
+                    
+                    value: 1.0
+                    from: 0.0
+                    to: 1.0
+                    wheelEnabled: true
+                    
+                    onMoved: {
+                        valueChanged()
+                    }
+                    function valueChanged() {
+                        audio.volume = volume
+                        if(value==0) {
+                            muteButton.muteAudio()
+                        }
+                        else{
+                            muteButton.unmuteAudio()
+                        }
+                    }
+                }
+                
+                Label {
+                    id: volumeLabel
+                    
+                    enabled: isWidescreen
+                    visible: isWidescreen
+                    text: Math.round(volumeSlider.value*100) + i18n("%")
+                    
+                    Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
+                    Layout.preferredHeight: volumeSlider.Layout.preferredHeight
+                    Layout.preferredWidth: Kirigami.Units.gridUnit * 2.5
                 }
             }
         }
