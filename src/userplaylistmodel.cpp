@@ -129,6 +129,20 @@ QString UserPlaylistModel::nextVideoId() const
     return QString::fromStdString((currentTrack + 1)->video_id);
 }
 
+QString UserPlaylistModel::previousVideoId() const
+{
+    auto currentTrack = std::find_if(m_playlist.tracks.begin(), m_playlist.tracks.end(),
+                                     [this](const watch::Playlist::Track &track) {
+        return track.video_id == m_currentVideoId.toStdString();
+    });
+
+    if (currentTrack == m_playlist.tracks.end() || currentTrack - 1 == m_playlist.tracks.end()) {
+        return {};
+    }
+
+    return QString::fromStdString((currentTrack - 1)->video_id);
+}
+
 QString UserPlaylistModel::currentVideoId() const
 {
     return m_currentVideoId;
@@ -141,6 +155,8 @@ void UserPlaylistModel::setCurrentVideoId(const QString &videoId)
     emitCurrentVideoChanged(old);
     Q_EMIT currentVideoIdChanged();
     Q_EMIT canSkipChanged();
+    Q_EMIT canSkipBackChanged();
+
 }
 
 int UserPlaylistModel::currentIndex() const
@@ -164,12 +180,32 @@ bool UserPlaylistModel::canSkip() const
             && currentTrackIt != m_playlist.tracks.end()
             && !m_playlist.tracks.empty();
 }
+bool UserPlaylistModel::canSkipBack() const
+{
+    const auto currentTrackIt = std::ranges::find_if(m_playlist.tracks, [this](const watch::Playlist::Track &track) {
+        return track.video_id == m_currentVideoId.toStdString();
+    });
+
+    return currentTrackIt != m_playlist.tracks.begin()
+            && !m_playlist.tracks.empty();
+}
 
 void UserPlaylistModel::next()
 {
     setCurrentVideoId(nextVideoId());
     Q_EMIT currentVideoIdChanged();
     Q_EMIT canSkipChanged();
+    Q_EMIT canSkipBackChanged();
+
+}
+
+void UserPlaylistModel::previous()
+{
+    setCurrentVideoId(previousVideoId());
+    Q_EMIT currentVideoIdChanged();
+    Q_EMIT canSkipChanged();
+    Q_EMIT canSkipBackChanged();
+
 }
 
 void UserPlaylistModel::skipTo(const QString &videoId)
@@ -179,6 +215,8 @@ void UserPlaylistModel::skipTo(const QString &videoId)
     emitCurrentVideoChanged(old);
     Q_EMIT currentVideoIdChanged();
     Q_EMIT canSkipChanged();
+    Q_EMIT canSkipBackChanged();
+
 }
 
 void UserPlaylistModel::playNext(const QString &videoId, const QString &title, const std::vector<meta::Artist> &artists)
@@ -199,6 +237,8 @@ void UserPlaylistModel::playNext(const QString &videoId, const QString &title, c
         endInsertRows();
         setCurrentVideoId(videoId);
         Q_EMIT canSkipChanged();
+        Q_EMIT canSkipBackChanged();
+
         return;
     }
 
@@ -208,6 +248,8 @@ void UserPlaylistModel::playNext(const QString &videoId, const QString &title, c
         m_playlist.tracks.push_back(std::move(track));
         endInsertRows();
         Q_EMIT canSkipChanged();
+        Q_EMIT canSkipBackChanged();
+
         return;
     }
 
@@ -216,6 +258,8 @@ void UserPlaylistModel::playNext(const QString &videoId, const QString &title, c
     m_playlist.tracks.insert(currentIt + 1, std::move(track));
     endInsertRows();
     Q_EMIT canSkipChanged();
+    Q_EMIT canSkipBackChanged();
+
 }
 
 void UserPlaylistModel::append(const QString &videoId, const QString &title, const std::vector<meta::Artist> &artists)
@@ -242,6 +286,8 @@ void UserPlaylistModel::clear()
 
     setCurrentVideoId({});
     Q_EMIT canSkipChanged();
+    Q_EMIT canSkipBackChanged();
+
 }
 
 void UserPlaylistModel::remove(const QString &videoId)
@@ -259,6 +305,8 @@ void UserPlaylistModel::remove(const QString &videoId)
     endRemoveRows();
 
     Q_EMIT canSkipChanged();
+    Q_EMIT canSkipBackChanged();
+
 }
 
 void UserPlaylistModel::shufflePlaylist()

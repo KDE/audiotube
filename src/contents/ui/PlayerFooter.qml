@@ -20,7 +20,7 @@ Flickable {
     property int footerSpacing:0
     property bool maximized: false
     
-    readonly property int progressBarHeight: Kirigami.Units.gridUnit / 6
+    readonly property int progressBarHeight: Kirigami.Units.gridUnit / 4
     readonly property int minimizedPlayerContentHeight: Math.round(Kirigami.Units.gridUnit * 3.5)
     readonly property int minimizedPlayerHeight: minimizedPlayerContentHeight + progressBarHeight
 
@@ -158,8 +158,8 @@ Flickable {
                 layer.effect: HueSaturation {
                     cached: true
 
-                    lightness: -0.5
-                    saturation: 1.9
+                    lightness: -0.7
+                    saturation: 3
 
                     layer.enabled: true
                     layer.effect: FastBlur {

@@ -23,6 +23,7 @@ class UserPlaylistModel : public AbstractYTMusicModel
     Q_PROPERTY(QString currentVideoId READ currentVideoId NOTIFY currentVideoIdChanged)
     Q_PROPERTY(int currentIndex READ currentIndex NOTIFY currentVideoIdChanged)
     Q_PROPERTY(bool canSkip READ canSkip NOTIFY canSkipChanged)
+    Q_PROPERTY(bool canSkipBack READ canSkipBack NOTIFY canSkipBackChanged)
     Q_PROPERTY(QString lyrics READ lyrics NOTIFY lyricsChanged)
 
 public:
@@ -46,6 +47,7 @@ public:
     Q_SIGNAL void initialVideoIdChanged();
 
     QString nextVideoId() const;
+    QString previousVideoId() const;
 
     QString currentVideoId() const;
     void setCurrentVideoId(const QString &videoId);
@@ -54,7 +56,11 @@ public:
     int currentIndex() const;
 
     bool canSkip() const;
+    bool canSkipBack() const;
+
     Q_SIGNAL void canSkipChanged();
+    Q_SIGNAL void canSkipBackChanged();
+
 
     QString playlistId() const;
     void setPlaylistId(const QString &playlistId);
@@ -68,6 +74,8 @@ public:
     Q_SIGNAL void lyricsChanged();
 
     Q_INVOKABLE void next();
+    Q_INVOKABLE void previous();
+
     Q_INVOKABLE void skipTo(const QString &videoId);
     Q_INVOKABLE void playNext(const QString &videoId, const QString &title, const std::vector<meta::Artist> &artists);
     Q_INVOKABLE void append(const QString &videoId, const QString &title, const std::vector<meta::Artist> &artists);
