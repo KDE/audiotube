@@ -211,7 +211,7 @@ Kirigami.ScrollablePage {
         RowLayout {
             Layout.fillWidth: true
             Kirigami.Heading {
-                text: i18n("Most played")
+                text: i18n("Most Played")
                 Layout.alignment: Qt.AlignLeft
                 leftPadding: 15
             }
@@ -227,7 +227,7 @@ Kirigami.ScrollablePage {
                 icon.name: "arrow-right"
                 onClicked: {pageStack.push("qrc:/PlaybackHistory.qml", {
                       "dataModel": Library.playbackHistory,
-                      "title": i18n("played Songs"),
+                      "title": i18n("Most Played"),
                       "objectName": "history"
                   })}
             }
