@@ -40,8 +40,7 @@ Library &Library::instance()
 
 FavouritesModel *Library::favourites()
 {
-    auto future = m_database->getResults<Song>("select * from favourites natural join songs order by favourites.rowid desc");
-    return new FavouritesModel(std::move(future), this);
+    return new FavouritesModel(this);
 }
 
 void Library::addFavourite(const QString &videoId, const QString &title, const QString &artist, const QString &album)
@@ -66,7 +65,7 @@ FavouriteWatcher *Library::favouriteWatcher(const QString &videoId)
 
 SearchHistoryModel *Library::searches()
 {
-    return new SearchHistoryModel(m_database->getResults<SingleValue<QString>>("select distinct (search_query) from searches order by search_id desc"), this);
+    return new SearchHistoryModel(this);
 }
 
 void Library::addSearch(const QString &text)
@@ -81,8 +80,7 @@ void Library::removeSearch(const QString &text)
 
 PlaybackHistoryModel *Library::playbackHistory()
 {
-    auto future = m_database->getResults<PlayedSong>("select * from played_songs natural join songs");
-    return new PlaybackHistoryModel(std::move(future), this);
+    return new PlaybackHistoryModel(this, PlaybackHistoryModel::History);
 }
 
 void Library::addPlaybackHistoryItem(const QString &videoId, const QString &title, const QString &artist, const QString &album)
@@ -110,8 +108,7 @@ WasPlayedWatcher *Library::wasPlayedWatcher(const QString& videoId)
 
 PlaybackHistoryModel *Library::mostPlayed()
 {
-    auto future = m_database->getResults<PlayedSong>("select * from played_songs natural join songs order by plays desc limit 10");
-    return new PlaybackHistoryModel(std::move(future), this);
+    return new PlaybackHistoryModel(this, PlaybackHistoryModel::MostPlayed);
 }
 
 QNetworkAccessManager &Library::nam()
@@ -171,93 +168,35 @@ void ThumbnailSource::setVideoId(const QString &id) {
     });
 }
 
-PlaybackHistoryModel::PlaybackHistoryModel(QFuture<std::vector<PlayedSong> > &&songs, QObject *parent)
-    : QAbstractListModel(parent)
+PlaybackHistoryModel::PlaybackHistoryModel(Library *library, Type type)
+    : AutoListModel<PlayedSong>(library)
 {
-    connectFuture(songs, this, [this](const auto songs) {
-        beginResetModel();
-        m_playedSongs = songs;
-        endResetModel();
-    });
-}
-
-QHash<int, QByteArray> PlaybackHistoryModel::roleNames() const {
-    return {
-        {Roles::VideoId, "videoId"},
-        {Roles::Title, "title"},
-        {Roles::Artists, "artists"},
-        {Roles::ArtistsDisplayString, "artistsDisplayString"},
-        {Roles::Plays, "plays"}
-    };
-}
-
-int PlaybackHistoryModel::rowCount(const QModelIndex &parent) const {
-    return parent.isValid() ? 0 : m_playedSongs.size();
-}
-
-QVariant PlaybackHistoryModel::data(const QModelIndex &index, int role) const {
-    switch (role) {
-    case Roles::VideoId:
-        return m_playedSongs.at(index.row()).videoId;
-    case Roles::Title:
-        return m_playedSongs.at(index.row()).title;
-    case Roles::Artists:
-        return QVariant::fromValue(std::vector<meta::Artist> {
-            {
-                m_playedSongs.at(index.row()).artist.toStdString(),
-                {}
+    auto update = [=, this]() {
+        auto future = [=, this]() {
+            if (type == MostPlayed) {
+                return library->database().getResults<PlayedSong>("select * from played_songs natural join songs order by plays desc limit 10");
+            } else {
+                return library->database().getResults<PlayedSong>("select * from played_songs natural join songs");
             }
-        });
-    case Roles::ArtistsDisplayString:
-        return m_playedSongs.at(index.row()).artist;
-    case Roles::Plays:
-        return m_playedSongs.at(index.row()).plays;
-    }
+        }();
 
-    Q_UNREACHABLE();
+        connectFuture(future, this, &PlaybackHistoryModel::updateData);
+    };
+
+    update();
+    connect(library, &Library::playbackHistoryChanged, this, update);
 }
 
-FavouritesModel::FavouritesModel(QFuture<std::vector<Song>> &&songs, QObject *parent)
-    : QAbstractListModel(parent)
+FavouritesModel::FavouritesModel(Library *library)
+    : AutoListModel<Song>(library)
 {
-    connectFuture(songs, this, [this](const auto songs) {
-        beginResetModel();
-        m_favouriteSongs = songs;
-        endResetModel();
-    });
-}
-
-QHash<int, QByteArray> FavouritesModel::roleNames() const {
-    return {
-        {Roles::VideoId, "videoId"},
-        {Roles::Title, "title"},
-        {Roles::Artists, "artists"},
-        {Roles::ArtistsDisplayString, "artistsDisplayString"}
+    auto update = [=, this]() {
+        auto future = library->database().getResults<Song>("select * from favourites natural join songs order by favourites.rowid desc");
+        connectFuture(future, this, &FavouritesModel::updateData);
     };
-}
 
-int FavouritesModel::rowCount(const QModelIndex &parent) const {
-    return parent.isValid() ? 0 : m_favouriteSongs.size();
-}
-
-QVariant FavouritesModel::data(const QModelIndex &index, int role) const {
-    switch (role) {
-    case Roles::VideoId:
-        return m_favouriteSongs.at(index.row()).videoId;
-    case Roles::Title:
-        return m_favouriteSongs.at(index.row()).title;
-    case Roles::ArtistsDisplayString:
-        return m_favouriteSongs.at(index.row()).artist;
-    case Roles::Artists:
-        return QVariant::fromValue(std::vector<meta::Artist> {
-            {
-                m_favouriteSongs.at(index.row()).artist.toStdString(),
-                {}
-            }
-        });
-    }
-
-    Q_UNREACHABLE();
+    update();
+    connect(library, &Library::favouritesChanged, this, update);
 }
 
 FavouriteWatcher::FavouriteWatcher(Library *library, const QString &videoId)
@@ -279,27 +218,15 @@ bool FavouriteWatcher::isFavourite() const {
     return m_isFavourite;
 }
 
-SearchHistoryModel::SearchHistoryModel(QFuture<std::vector<SingleValue<QString>>> &&historyFuture, QObject *parent)
-    : QAbstractListModel(parent)
+SearchHistoryModel::SearchHistoryModel(Library *library)
+    : AutoListModel<SearchQuery>(library)
 {
-    connectFuture(historyFuture, this, [this](const auto history) {
-        beginResetModel();
-        m_history = history;
-        endResetModel();
-    });
-}
-
-int SearchHistoryModel::rowCount(const QModelIndex &parent) const {
-    return parent.isValid() ? 0 : m_history.size();
-}
-
-QVariant SearchHistoryModel::data(const QModelIndex &index, int role) const {
-    switch (role) {
-    case Qt::DisplayRole:
-        return m_history[index.row()].value;
-    }
-
-    Q_UNREACHABLE();
+    auto update = [=, this]() {
+        auto future = library->database().getResults<SearchQuery>("select distinct (search_query) from searches order by search_id desc");
+        connectFuture(future, this, &SearchHistoryModel::updateData);
+    };
+    update();
+    connect(library, &Library::searchesChanged, update);
 }
 
 WasPlayedWatcher::WasPlayedWatcher(Library* library, const QString& videoId)

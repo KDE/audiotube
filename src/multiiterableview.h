@@ -10,20 +10,20 @@
 #include <QtGlobal>
 
 template <typename Tuple, typename Func, std::size_t i>
-inline constexpr void iterate_impl(Tuple &tup, Func fun)
+inline constexpr void iterate_tuple_impl(Tuple &tup, Func fun)
 {
     if constexpr(i >= std::tuple_size_v<std::decay_t<decltype(tup)>>) {
         return;
     } else {
         fun(std::get<i>(tup));
-        return iterate_impl<Tuple, Func, i + 1>(tup, fun);
+        return iterate_tuple_impl<Tuple, Func, i + 1>(tup, fun);
     }
 }
 
 template <typename Tuple, typename Func>
 inline constexpr void iterate_tuple(Tuple &tup, Func fun)
 {
-    iterate_impl<Tuple, Func, 0>(tup, fun);
+    iterate_tuple_impl<Tuple, Func, 0>(tup, fun);
 }
 
 /// MultiIterableView is a view over multiple contigous memory arrays, like std::vector or std::array.

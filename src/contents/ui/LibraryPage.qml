@@ -59,8 +59,7 @@ Kirigami.ScrollablePage {
                     delegate: ColumnLayout {
                         id: delegateItem
                         required property string title
-                        required property var artists
-                        required property string artistsDisplayString
+                        required property string artists
                         required property string videoId
                         required property int index
 
@@ -183,7 +182,7 @@ Kirigami.ScrollablePage {
                                     Layout.maximumWidth: 200
                                     leftPadding: 5
                                     color: Kirigami.Theme.disabledTextColor
-                                    text: delegateItem.artistsDisplayString
+                                    text: delegateItem.artists
                                     elide: Text.ElideRight
                                 }
                             }
@@ -192,8 +191,8 @@ Kirigami.ScrollablePage {
                                 icon.name: "view-more-horizontal-symbolic"
                                 onPressed: menu.openForSong(delegateItem.videoId,
                                                                delegateItem.title,
-                                                               delegateItem.artists,
-                                                               delegateItem.artistsDisplayString)
+                                                               delegateItem.artists, // TODO
+                                                               delegateItem.artists)
                             }
 
                         }
@@ -244,8 +243,7 @@ Kirigami.ScrollablePage {
                     delegate: ColumnLayout {
                         id: mpdelegateItem
                         required property string title
-                        required property var artists
-                        required property string artistsDisplayString
+                        required property string artists
                         required property string videoId
 
                         Layout.fillWidth: false
@@ -365,7 +363,7 @@ Kirigami.ScrollablePage {
                                     Layout.maximumWidth: 200
                                     leftPadding: 5
                                     color: Kirigami.Theme.disabledTextColor
-                                    text: mpdelegateItem.artistsDisplayString
+                                    text: mpdelegateItem.artists
                                     elide: Text.ElideRight
                                 }
                             }
@@ -374,8 +372,8 @@ Kirigami.ScrollablePage {
                                 icon.name: "view-more-horizontal-symbolic"
                                 onPressed: menu.openForSong(mpdelegateItem.videoId,
                                                               mpdelegateItem.title,
-                                                              mpdelegateItem.artists,
-                                                              mpdelegateItem.artistsDisplayString)
+                                                              mpdelegateItem.artists, // TODO
+                                                              mpdelegateItem.artists)
                             }
 
                         }

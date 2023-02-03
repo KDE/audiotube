@@ -15,10 +15,22 @@
 #include "asyncytmusic.h"
 #include "asyncdatabase.h"
 
+#include "autolistmodel.h"
+
+using namespace desert;
+
 class FavouriteWatcher;
 class WasPlayedWatcher;
 
+inline std::vector<meta::Artist> metaArtist(const QString &artist) {
+    return { meta::Artist { artist.toStdString(), {} } };
+}
+
 struct Song {
+    DESERT_OBJECT
+
+    int operator<=>(const Song &other) const = default;
+
     using ColumnTypes = std::tuple<QString, QString, QString, QString>;
 
     static Song fromSql(ColumnTypes tuple) {
@@ -26,34 +38,26 @@ struct Song {
         return Song {videoId, title, artist, album};
     }
 
-    QString videoId;
-    QString title;
-    QString artist;
-    QString album;
+    Attribute<u"videoId", QString> videoId;
+    Attribute<u"title", QString> title;
+    Attribute<u"artists", QString> artists;
+    Attribute<u"album", QString> album;
 };
 
-class FavouritesModel : public QAbstractListModel {
+class Library;
+
+class FavouritesModel : public AutoListModel<Song> {
     Q_OBJECT
 
-    enum Roles {
-        VideoId = Qt::UserRole + 1,
-        Title,
-        Artists,
-        ArtistsDisplayString
-    };
-
 public:
-    FavouritesModel(QFuture<std::vector<Song>> &&songs, QObject *parent = nullptr);
-
-    QHash<int, QByteArray> roleNames() const override;
-    int rowCount(const QModelIndex &parent) const override;
-    QVariant data(const QModelIndex &index, int role) const override;
-
-private:
-    std::vector<Song> m_favouriteSongs;
+    FavouritesModel(Library *library);
 };
 
 struct PlayedSong {
+    DESERT_OBJECT
+
+    int operator<=>(const PlayedSong &other) const = default;
+
     using ColumnTypes = std::tuple<QString, int, QString, QString, QString>;
 
     static PlayedSong fromSql(ColumnTypes tuple) {
@@ -61,55 +65,56 @@ struct PlayedSong {
         return PlayedSong {videoId, title, artist, album, plays};
     }
 
-    QString videoId;
-    QString title;
-    QString artist;
-    QString album;
-    int plays;
+    Attribute<u"videoId", QString> videoId;
+    Attribute<u"title", QString> title;
+    Attribute<u"artists", QString> artists;
+    Attribute<u"album", QString> album;
+    Attribute<u"album", int> plays;
 };
 
-class PlaybackHistoryModel : public QAbstractListModel {
+class PlaybackHistoryModel : public AutoListModel<PlayedSong> {
     Q_OBJECT
 
 public:
-    enum Roles {
-        VideoId = Qt::UserRole + 1,
-        Title,
-        Artists,
-        ArtistsDisplayString,
-        Plays
+    enum Type {
+        MostPlayed,
+        History
     };
-    Q_ENUM(Roles);
-
-    PlaybackHistoryModel(QFuture<std::vector<PlayedSong>> &&songs, QObject *parent = nullptr);
-
-    QHash<int, QByteArray> roleNames() const override;
-    int rowCount(const QModelIndex &parent) const override;
-    QVariant data(const QModelIndex &index, int role) const override;
-
-private:
-    std::vector<PlayedSong> m_playedSongs;
+    PlaybackHistoryModel(Library *library, Type type);
 };
 
-class SearchHistoryModel : public QAbstractListModel {
+class SearchQuery {
+    DESERT_OBJECT
+
+    using ColumnTypes = std::tuple<QString>;
+
+    static SearchQuery fromSql(ColumnTypes tuple) {
+        auto [query] = tuple;
+        return { query };
+    }
+
+    int operator<=>(const SearchQuery &other) const = default;
+
+    Attribute<u"query", QString> query;
+};
+
+class SearchHistoryModel : public AutoListModel<SearchQuery> {
     Q_OBJECT
 
 public:
-    SearchHistoryModel(QFuture<std::vector<SingleValue<QString>>> &&historyFuture, QObject *parent = nullptr);
-    int rowCount(const QModelIndex &parent) const override;
-    QVariant data(const QModelIndex &index, int role) const override;
+    SearchHistoryModel(Library *library);
 
 private:
-    std::vector<SingleValue<QString>> m_history;
+    std::vector<SearchQuery> m_history;
 };
 
 class Library : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(QAbstractListModel *favourites READ favourites NOTIFY favouritesChanged)
-    Q_PROPERTY(QAbstractListModel *searches READ searches NOTIFY searchesChanged)
-    Q_PROPERTY(QAbstractListModel *playbackHistory READ playbackHistory NOTIFY playbackHistoryChanged)
-    Q_PROPERTY(QAbstractListModel *mostPlayed READ mostPlayed NOTIFY playbackHistoryChanged)
+    Q_PROPERTY(QAbstractListModel *favourites READ favourites CONSTANT)
+    Q_PROPERTY(QAbstractListModel *searches READ searches CONSTANT)
+    Q_PROPERTY(QAbstractListModel *playbackHistory READ playbackHistory CONSTANT)
+    Q_PROPERTY(QAbstractListModel *mostPlayed READ mostPlayed CONSTANT)
 
 public:
     explicit Library(QObject *parent = nullptr);

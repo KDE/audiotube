@@ -33,6 +33,7 @@ add_executable(audiotube
     errorhandler.cpp
     playerutils.cpp
     abstractytmusicmodel.cpp
+    autolistmodel.h
     multiiterableview.h
     library.cpp
     resources.qrc
@@ -51,6 +52,7 @@ target_link_libraries(audiotube
     KF5::CoreAddons
     KF5::Crash
     KF5::WindowSystem
+    Desert::desert
     ytm
     asyncdatabase
 )

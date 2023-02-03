@@ -49,7 +49,7 @@ Item {
                 pageStack.push("qrc:/SearchPage.qml", {
                             "searchQuery": text,
                             objectName: "searchPage"
-                               })
+                })
             } else {
                 wideScreen
                         ? pageStack.push("qrc:/LibraryPage.qml")
@@ -299,6 +299,8 @@ Item {
                             filterRegularExpression: searchField.filterExpression
                         }
                         delegate: Kirigami.AbstractListItem {
+                            required property string query
+
                             id: completionDelegate
                             highlighted: focus
                             Kirigami.Theme.colorSet: Kirigami.Theme.Window
@@ -314,7 +316,7 @@ Item {
                                     color: Kirigami.Theme.disabledTextColor
                                 }
                                 Controls.Label{
-                                    text: model.display
+                                    text: query
                                     Layout.fillWidth: true
                                 }
                                 Controls.ToolButton {
@@ -322,13 +324,13 @@ Item {
                                     text: i18n("remove from search history")
                                     display: Controls.AbstractButton.IconOnly
                                     onClicked: {
-                                        Library.removeSearch(model.display)
+                                        Library.removeSearch(query)
                                     }
                                 }
 
                             }
                             onClicked: {
-                                searchField.text = model.display
+                                searchField.text = query
                                 searchField.accepted()
                             }
                         }

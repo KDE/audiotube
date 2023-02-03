@@ -43,6 +43,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS Kirigami2 I18n CoreAddon
 find_package(pybind11 REQUIRED)
 find_package(Ytdlp REQUIRED RUNTIME)
 find_package(YTMusicAPI 0.24.0 REQUIRED RUNTIME)
+find_package(Desert REQUIRED)
 
 ki18n_install(po)
 
