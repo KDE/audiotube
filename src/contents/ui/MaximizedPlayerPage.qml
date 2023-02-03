@@ -231,7 +231,6 @@ Item {
 
                     id: controlButtonBox
                     Layout.alignment: Qt.AlignHCenter
-                    anchors.right: !isWidescreen? root.right:null
                     Layout.fillHeight: true
                     spacing: 2
 
@@ -694,115 +693,108 @@ Item {
                 anchors.fill: parent
                 color: "white"
                 opacity: 0.2
-                }
-            ColumnLayout{
-                spacing:0
+            }
+            ScrollView {
                 anchors.fill: parent
+                ListView {
+                    spacing: 5
+                    rightMargin: 10
+                    leftMargin:10
+                    topMargin:10
+                    bottomMargin: 10
+                    clip: true
 
-                ScrollView {
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
+                    Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
+                    Kirigami.Theme.inherit: false
 
-                    ListView {
-                        spacing: 5
-                        rightMargin: 10
-                        leftMargin:10
-                        topMargin:10
-                        bottomMargin: 10
-                        clip: true
+                    BusyIndicator {
+                        anchors.centerIn: parent
+                        visible: UserPlaylistModel.loading || UserPlaylistModel.loading
+                    }
 
-                        Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
-                        Kirigami.Theme.inherit: false
+                    model: UserPlaylistModel
 
-                        BusyIndicator {
-                            anchors.centerIn: parent
-                            visible: UserPlaylistModel.loading || UserPlaylistModel.loading
-                        }
+                    delegate: Kirigami.SwipeListItem {
+                        id: delegateItem
+                        required property string title
+                        required property string videoId
+                        required property string artists
+                        required property bool isCurrent
+                        required property int index
 
-                        model: UserPlaylistModel
+                        alwaysVisibleActions: true
 
-                        delegate: Kirigami.SwipeListItem {
+                        background: Rectangle{
+                            radius: 7
+                            color:
+                                if (parent.down){
+                                    Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.3)
+                                }else if(parent.hovered){
+                                    Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.7)
+                                }else if(parent.highlighted){
+                                    Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.7)
+                                }else{
+                                    Qt.rgba(0, 0, 0, 0.4)
+                                }
 
-                            id: delegateItem
-                            required property string title
-                            required property string videoId
-                            required property string artists
-                            required property bool isCurrent
-                            required property int index
-
-                            background: Rectangle{
-                                radius: 7
-                                color:
+                            border.color:
                                             if (parent.down){
-                                                Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.3)
+                                                Kirigami.Theme.hoverColor
                                             }else if(parent.hovered){
-                                                Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.7)
-                                            }else if(parent.highlighted){
-                                                Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.7)
+                                                Kirigami.Theme.hoverColor
                                             }else{
-                                                Qt.rgba(0, 0, 0, 0.4)
+                                                  Qt.rgba(1, 1, 1, 0)
                                             }
 
-                                border.color:
-                                                if (parent.down){
-                                                    Kirigami.Theme.hoverColor
-                                                }else if(parent.hovered){
-                                                    Kirigami.Theme.hoverColor
-                                                }else{
-                                                      Qt.rgba(1, 1, 1, 0)
-                                                }
-
-                                border.width: 1
+                            border.width: 1
+                        }
+                        highlighted: isCurrent
+                        onClicked: UserPlaylistModel.skipTo(videoId)
+                        contentItem: RowLayout{
+                            ThumbnailSource {
+                                id: delegateThumbnailSource
+                                videoId: delegateItem.videoId
                             }
-                            highlighted: isCurrent
-                            onClicked: UserPlaylistModel.skipTo(videoId)
-                            RowLayout{
+                            RoundedImage {
+                                source: delegateThumbnailSource.cachedPath
+                                Layout.margins: 2.5
+                                height: delegateItem.height
+                                width: height
+                                radius: 5
+                            }
+
+                            ColumnLayout {
+                                Layout.margins: 5
+
                                 Layout.fillWidth: true
-                                ThumbnailSource {
-                                    id: delegateThumbnailSource
-                                    videoId: delegateItem.videoId
-                                }
-                                RoundedImage {
-                                    source: delegateThumbnailSource.cachedPath
-                                    Layout.margins: 2.5
-                                    height: delegateItem.height
-                                    width: height
-                                    radius: 5
-                                }
-
-                                ColumnLayout {
-                                    Layout.margins: 5
-
-                                    Layout.fillWidth: true
-                                    Kirigami.Heading {
+                                Kirigami.Heading {
 //                                        Layout.leftMargin: 5
 //                                        Layout.rightMargin: 5
 //                                        Layout.topMargin: 5
 
-                                        elide: Text.ElideRight
-                                        Layout.fillWidth: true
-                                        level: 2
-                                        text: title
-                                    }
+                                    elide: Text.ElideRight
+                                    Layout.fillWidth: true
+                                    level: 2
+                                    text: title
+                                }
 
-                                    Label {
+                                Label {
 
-                                        elide: Text.ElideRight
-                                        Layout.fillWidth: true
-                                        color: Kirigami.Theme.disabledTextColor
-                                        text: artists
-                                    }
+                                    elide: Text.ElideRight
+                                    Layout.fillWidth: true
+                                    color: Kirigami.Theme.disabledTextColor
+                                    text: artists
                                 }
                             }
-                            actions: [
-                                Kirigami.Action {
-                                    text: i18n("Remove Track")
-                                    icon.name: "list-remove"
-                                    icon.color: "white"
-                                    onTriggered: UserPlaylistModel.remove(delegateItem.videoId)
-                                }
-                            ]
                         }
+                        actions: [
+                            Kirigami.Action {
+                                text: i18n("Remove Track")
+                                icon.name: "list-remove"
+                                icon.color: "white"
+                                onTriggered: UserPlaylistModel.remove(delegateItem.videoId)
+                            }
+                        ]
                     }
                 }
             }
@@ -823,9 +815,8 @@ Item {
                 color: Kirigami.Theme.backgroundColor
             }
 
-            ColumnLayout{
+            contentItem: ColumnLayout{
                 spacing:0
-                anchors.fill: parent
                 Rectangle {
                     Layout.margins: 5
                     radius:50
