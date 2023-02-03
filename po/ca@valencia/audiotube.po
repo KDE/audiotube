@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-01-30 01:00+0000\n"
-"PO-Revision-Date: 2023-01-22 10:30+0100\n"
+"PO-Revision-Date: 2023-01-27 10:54+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -217,10 +217,9 @@ msgid "No matching previous searches"
 msgstr "No hi ha busques anteriors coincidents"
 
 #: contents/ui/SearchWithDropdown.qml:322
-#, fuzzy, kde-format
-#| msgid "Remove from History"
+#, kde-format
 msgid "remove from search history"
-msgstr "Elimina de l'historial"
+msgstr "elimina de l'historial de busques"
 
 #: contents/ui/Sidebar.qml:179
 #, kde-format
