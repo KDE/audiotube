@@ -224,6 +224,8 @@ Item {
 
             Controls.ScrollView {
                 id: mainScrollView
+
+                clip: true
                 
                 Layout.fillHeight: true
                 Layout.fillWidth: true
