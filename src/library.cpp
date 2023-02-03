@@ -302,6 +302,16 @@ QVariant SearchHistoryModel::data(const QModelIndex &index, int role) const {
     Q_UNREACHABLE();
 }
 
+bool SearchHistoryModel::removeRows(int row, int count, const QModelIndex &parent) {
+    if((unsigned) row+count >= m_history.size()) {
+        return false;
+    }
+    beginRemoveRows(parent, row, row+count-1);
+    m_history.erase(m_history.begin() + row, m_history.begin() + (row + count));
+    endRemoveRows();
+    return true;
+}
+
 WasPlayedWatcher::WasPlayedWatcher(Library* library, const QString& videoId)
     : QObject(library), m_videoId(videoId), m_library(library)
 {
