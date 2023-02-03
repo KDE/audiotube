@@ -506,7 +506,7 @@ Item {
                                 }
 
                                 Label {
-                                    Layout.preferredHeight: Slider.height
+                                    Layout.preferredHeight: volumeSlider.height
                                     Layout.preferredWidth: Kirigami.Units.gridUnit * 2.5
 
                                     text: volumeLabel.text

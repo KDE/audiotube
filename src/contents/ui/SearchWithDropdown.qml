@@ -176,7 +176,7 @@ Item {
                   ? (Math.min(content.implicitHeight, Kirigami.Units.gridUnit * 20))+2*(popup.shadowSize+popup.expansion)
                   : (Kirigami.Units.gridUnit * 20)+2*(popup.shadowSize+popup.expansion)
             duration: 100
-            to: searchField.heigth
+            to: searchField.height
         }
         NumberAnimation on width{
             id: playCloseWidth
@@ -202,9 +202,6 @@ Item {
             duration: 100
             to: -0
         }
-
-
-
 
         contentItem: ColumnLayout{
             id: content
@@ -339,5 +336,4 @@ Item {
             }
         }
     }
-
 }

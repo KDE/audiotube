@@ -62,24 +62,23 @@ Kirigami.ApplicationWindow {
          }
 
         contentItem: RowLayout {
+            spacing: 0
+            Row {
+                Layout.alignment: Qt.AlignLeft
 
-
-
-            Controls.ToolButton {
-                id: back
-                enabled: applicationWindow().pageStack.layers.depth > 1 || (applicationWindow().pageStack.depth > 1 && (applicationWindow().pageStack.currentIndex > 0 || applicationWindow().pageStack.contentItem.contentX > 0)) // Copied from https://invent.kde.org/frameworks/kirigami/-/blob/master/src/controls/templates/private/BackButton.qml#L16
-                icon.name: "draw-arrow-back"
-                onClicked: pageStack.goBack()
-                visible: wideScreen
-            }
-            Controls.ToolButton {
-                icon.name: "draw-arrow-forward"
-                enabled: applicationWindow().pageStack.currentIndex < applicationWindow().pageStack.depth-1
-                onClicked: pageStack.goForward()
-                anchors.left: back.right
-                visible: wideScreen
-
-
+                Controls.ToolButton {
+                    id: back
+                    enabled: applicationWindow().pageStack.layers.depth > 1 || (applicationWindow().pageStack.depth > 1 && (applicationWindow().pageStack.currentIndex > 0 || applicationWindow().pageStack.contentItem.contentX > 0)) // Copied from https://invent.kde.org/frameworks/kirigami/-/blob/master/src/controls/templates/private/BackButton.qml#L16
+                    icon.name: "draw-arrow-back"
+                    onClicked: pageStack.goBack()
+                    visible: wideScreen
+                }
+                Controls.ToolButton {
+                    icon.name: "draw-arrow-forward"
+                    enabled: applicationWindow().pageStack.currentIndex < applicationWindow().pageStack.depth-1
+                    onClicked: pageStack.goForward()
+                    visible: wideScreen
+                }
             }
 
             // spacer
