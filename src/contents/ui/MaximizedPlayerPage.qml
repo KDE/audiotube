@@ -465,51 +465,63 @@ Item {
                             onClosed: {
                                 interactive = false
                             }
-
-                            RowLayout {
-                                id: contents
-
+                            ColumnLayout {
                                 width: volumeDrawer.width
 
-                                ToolButton{
-                                    Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
-                                    Layout.maximumWidth: height
-                                    Layout.preferredWidth: height
+                                Rectangle {
+                                    Layout.margins: 5
+                                    radius:50
+                                    Layout.alignment: Qt.AlignHCenter
+                                    color: Kirigami.Theme.textColor
+                                    opacity: 0.7
+                                    width: 40
+                                    height: 4
 
-                                    icon.name: muteButton.icon.name
-                                    checkable: true
-                                    checked: muteButton.checked
-                                    onClicked: {
-                                        if(audio.muted)
-                                        {
-                                            muteButton.unmuteAudio()
-                                        }
-                                        else
-                                        {
-                                            muteButton.muteAudio()
-                                        }
-                                    }
                                 }
-
-                                Slider {
-                                    value: volumeSlider.value
-                                    opacity: volumeSlider.opacity
-                                    wheelEnabled: true
-
+                                RowLayout {
                                     Layout.fillWidth: true
-                                    Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
+                                    Layout.fillHeight: true
+                                    id: contents
+                                    ToolButton{
+                                        Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
+                                        Layout.maximumWidth: height
+                                        Layout.preferredWidth: height
 
-                                    onMoved: {
-                                        volumeSlider.value = value
-                                        volumeSlider.valueChanged()
+                                        icon.name: muteButton.icon.name
+                                        checkable: true
+                                        checked: muteButton.checked
+                                        onClicked: {
+                                            if(audio.muted)
+                                            {
+                                                muteButton.unmuteAudio()
+                                            }
+                                            else
+                                            {
+                                                muteButton.muteAudio()
+                                            }
+                                        }
                                     }
-                                }
 
-                                Label {
-                                    Layout.preferredHeight: volumeSlider.height
-                                    Layout.preferredWidth: Kirigami.Units.gridUnit * 2.5
+                                    Slider {
+                                        value: volumeSlider.value
+                                        opacity: volumeSlider.opacity
+                                        wheelEnabled: true
 
-                                    text: volumeLabel.text
+                                        Layout.fillWidth: true
+                                        Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
+
+                                        onMoved: {
+                                            volumeSlider.value = value
+                                            volumeSlider.valueChanged()
+                                        }
+                                    }
+
+                                    Label {
+                                        Layout.preferredHeight: Slider.height
+                                        Layout.preferredWidth: Kirigami.Units.gridUnit * 2.5
+
+                                        text: volumeLabel.text
+                                    }
                                 }
                             }
                         }
@@ -871,13 +883,9 @@ Item {
                                 }
 
                                 ColumnLayout {
-
+                                    Layout.margins: 5
                                     Layout.fillWidth: true
                                     Kirigami.Heading {
-                                        Layout.leftMargin: 5
-                                        Layout.rightMargin: 5
-                                        Layout.topMargin: 5
-
                                         elide: Text.ElideRight
                                         Layout.fillWidth: true
                                         level: 2
@@ -885,8 +893,6 @@ Item {
                                     }
 
                                     Label {
-                                        Layout.margins: 5
-
                                         elide: Text.ElideRight
                                         Layout.fillWidth: true
                                         color: Kirigami.Theme.disabledTextColor

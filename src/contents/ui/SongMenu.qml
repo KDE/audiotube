@@ -58,13 +58,16 @@ Item {
                 videoId: drawer.videoId
             }
 
-//            Kirigami.Icon {
-//                Layout.margins: Kirigami.Units.smallSpacing
-//                source: "arrow-down"
-//                implicitWidth: Kirigami.Units.gridUnit
-//                implicitHeight: Kirigami.Units.gridUnit
-//                Layout.alignment: Qt.AlignHCenter
-//            }
+            Rectangle {
+                Layout.margins: 5
+                radius:50
+                Layout.alignment: Qt.AlignHCenter
+                color: Kirigami.Theme.textColor
+                opacity: 0.7
+                width: 40
+                height: 4
+
+            }
             RowLayout {
                 spacing: 10
                 Kirigami.ShadowedRectangle {
