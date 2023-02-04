@@ -97,8 +97,9 @@ class SearchHistoryModel : public QAbstractListModel {
 public:
     SearchHistoryModel(QFuture<std::vector<SingleValue<QString>>> &&historyFuture, QObject *parent = nullptr);
     int rowCount(const QModelIndex &parent) const override;
-    bool removeRows(int row, int count, const QModelIndex &parent = QModelIndex());
+    bool removeRows(int row, int count, const QModelIndex &parent = QModelIndex()) override;
     QVariant data(const QModelIndex &index, int role) const override;
+    int getRow(QString const& search) const;
 
 private:
     std::vector<SingleValue<QString>> m_history;

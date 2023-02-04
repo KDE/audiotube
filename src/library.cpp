@@ -312,6 +312,16 @@ bool SearchHistoryModel::removeRows(int row, int count, const QModelIndex &paren
     return true;
 }
 
+int SearchHistoryModel::getRow(const QString& search) const {
+    for(size_t i(0); i<m_history.size(); ++i) {
+        if(m_history[i].value == search) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+
 WasPlayedWatcher::WasPlayedWatcher(Library* library, const QString& videoId)
     : QObject(library), m_videoId(videoId), m_library(library)
 {
