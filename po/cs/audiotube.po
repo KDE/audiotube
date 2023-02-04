@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the audiotube package.
-# Vit Pelcak <vit@pelcak.org>, 2021, 2022.
+# Vit Pelcak <vit@pelcak.org>, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-30 01:00+0000\n"
-"PO-Revision-Date: 2022-06-28 13:58+0200\n"
+"POT-Creation-Date: 2023-02-04 01:01+0000\n"
+"PO-Revision-Date: 2023-01-30 16:04+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.04.2\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -46,7 +46,7 @@ msgstr "Otevřít v prohlížeči"
 #: contents/ui/AlbumPage.qml:44
 #, kde-format
 msgid "Album • %1"
-msgstr ""
+msgstr "Album • %1"
 
 #: contents/ui/AlbumPage.qml:88 contents/ui/ArtistPage.qml:126
 #: contents/ui/PlaybackHistory.qml:80 contents/ui/PlaylistPage.qml:91
@@ -124,38 +124,29 @@ msgstr "Nejčastěji hrané"
 #: contents/ui/LibraryPage.qml:230
 #, kde-format
 msgid "played Songs"
-msgstr ""
+msgstr "přehrané skladby"
 
-#: contents/ui/main.qml:109
+#: contents/ui/main.qml:108
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
 
-#: contents/ui/MaximizedPlayerPage.qml:107
-#, kde-format
-msgid "Now Playing"
-msgstr "Nyní přehrávám"
-
-#: contents/ui/MaximizedPlayerPage.qml:132
-#, kde-format
-msgid "Queue"
-msgstr "Fronta"
-
-#: contents/ui/MaximizedPlayerPage.qml:157
-#, kde-format
-msgid "Lyrics"
-msgstr "Text písně"
-
-#: contents/ui/MaximizedPlayerPage.qml:274
-#, kde-format
-msgid "Remove Track"
-msgstr "Odstranit skladbu"
-
-#: contents/ui/MaximizedPlayerPage.qml:316
+#: contents/ui/MaximizedPlayerPage.qml:193
 #: contents/ui/MinimizedPlayerControls.qml:90
 #, kde-format
 msgid "No media playing"
 msgstr "Nepřehrává se žádné médium"
+
+#: contents/ui/MaximizedPlayerPage.qml:599
+#, kde-format
+msgid "%"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:804
+#: contents/ui/MaximizedPlayerPage.qml:905
+#, kde-format
+msgid "Remove Track"
+msgstr "Odstranit skladbu"
 
 #: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:93
 #, kde-format
@@ -191,7 +182,7 @@ msgstr "Seznam skladeb"
 #: contents/ui/SearchPage.qml:16
 #, kde-format
 msgid "Previous Searches:"
-msgstr ""
+msgstr "Předchozí hledání:"
 
 #: contents/ui/SearchPage.qml:28
 #, kde-format
@@ -208,42 +199,51 @@ msgstr "Seznamy skladeb"
 msgid "Unknown"
 msgstr "Neznámý"
 
-#: contents/ui/SearchWithDropdown.qml:287
+#: contents/ui/SearchWithDropdown.qml:286
 #, kde-format
 msgid "No matching previous searches"
-msgstr ""
+msgstr "Neodpovídají žádná předchozí hledání"
 
-#: contents/ui/SearchWithDropdown.qml:322
+#: contents/ui/SearchWithDropdown.qml:321
 #, kde-format
 msgid "remove from search history"
-msgstr ""
+msgstr "odstranit z historie hledání"
 
 #: contents/ui/Sidebar.qml:179
 #, kde-format
 msgid "Collapse Sidebar"
-msgstr ""
+msgstr "Svinout postranní panel"
 
-#: contents/ui/SongMenu.qml:113 contents/ui/SongMenu.qml:172
+#: contents/ui/SongMenu.qml:116 contents/ui/SongMenu.qml:175
 #, kde-format
 msgid "Play Next"
 msgstr "Přehrát následující"
 
-#: contents/ui/SongMenu.qml:122 contents/ui/SongMenu.qml:178
+#: contents/ui/SongMenu.qml:125 contents/ui/SongMenu.qml:181
 #, kde-format
 msgid "Add to queue"
-msgstr ""
+msgstr "Zařadit do fronty"
 
-#: contents/ui/SongMenu.qml:132 contents/ui/SongMenu.qml:185
+#: contents/ui/SongMenu.qml:135 contents/ui/SongMenu.qml:188
 #, kde-format
 msgid "Remove Favourite"
-msgstr ""
+msgstr "Odstranit oblíbené"
 
-#: contents/ui/SongMenu.qml:132 contents/ui/SongMenu.qml:185
+#: contents/ui/SongMenu.qml:135 contents/ui/SongMenu.qml:188
 #, kde-format
 msgid "Add Favourite"
-msgstr ""
+msgstr "Přidat oblíbené"
 
-#: contents/ui/SongMenu.qml:148 contents/ui/SongMenu.qml:200
+#: contents/ui/SongMenu.qml:151 contents/ui/SongMenu.qml:203
 #, kde-format
 msgid "Remove from History"
-msgstr ""
+msgstr "Odstranit z historie"
+
+#~ msgid "Now Playing"
+#~ msgstr "Nyní přehrávám"
+
+#~ msgid "Queue"
+#~ msgstr "Fronta"
+
+#~ msgid "Lyrics"
+#~ msgstr "Text písně"

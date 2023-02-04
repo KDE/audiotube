@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-30 01:00+0000\n"
+"POT-Creation-Date: 2023-02-04 01:01+0000\n"
 "PO-Revision-Date: 2023-01-27 12:41+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -126,36 +126,27 @@ msgstr "Meest afgespeeld"
 msgid "played Songs"
 msgstr "afgespeelde songs"
 
-#: contents/ui/main.qml:109
+#: contents/ui/main.qml:108
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
 
-#: contents/ui/MaximizedPlayerPage.qml:107
-#, kde-format
-msgid "Now Playing"
-msgstr "Speelt nu"
-
-#: contents/ui/MaximizedPlayerPage.qml:132
-#, kde-format
-msgid "Queue"
-msgstr "Wachtrij"
-
-#: contents/ui/MaximizedPlayerPage.qml:157
-#, kde-format
-msgid "Lyrics"
-msgstr "Liedteksten"
-
-#: contents/ui/MaximizedPlayerPage.qml:274
-#, kde-format
-msgid "Remove Track"
-msgstr "Track verwijderen"
-
-#: contents/ui/MaximizedPlayerPage.qml:316
+#: contents/ui/MaximizedPlayerPage.qml:193
 #: contents/ui/MinimizedPlayerControls.qml:90
 #, kde-format
 msgid "No media playing"
 msgstr "Er speelt geen medium"
+
+#: contents/ui/MaximizedPlayerPage.qml:599
+#, kde-format
+msgid "%"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:804
+#: contents/ui/MaximizedPlayerPage.qml:905
+#, kde-format
+msgid "Remove Track"
+msgstr "Track verwijderen"
 
 #: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:93
 #, kde-format
@@ -208,12 +199,12 @@ msgstr "Afspeellijsten"
 msgid "Unknown"
 msgstr "Onbekend"
 
-#: contents/ui/SearchWithDropdown.qml:287
+#: contents/ui/SearchWithDropdown.qml:286
 #, kde-format
 msgid "No matching previous searches"
 msgstr "Geen overeenkomende vorige zoekopdrachten"
 
-#: contents/ui/SearchWithDropdown.qml:322
+#: contents/ui/SearchWithDropdown.qml:321
 #, kde-format
 msgid "remove from search history"
 msgstr "uit zoekgeschiedenis verwijderen"
@@ -223,30 +214,39 @@ msgstr "uit zoekgeschiedenis verwijderen"
 msgid "Collapse Sidebar"
 msgstr "Zijbalk invouwen"
 
-#: contents/ui/SongMenu.qml:113 contents/ui/SongMenu.qml:172
+#: contents/ui/SongMenu.qml:116 contents/ui/SongMenu.qml:175
 #, kde-format
 msgid "Play Next"
 msgstr "Volgende afspelen"
 
-#: contents/ui/SongMenu.qml:122 contents/ui/SongMenu.qml:178
+#: contents/ui/SongMenu.qml:125 contents/ui/SongMenu.qml:181
 #, kde-format
 msgid "Add to queue"
 msgstr "Aan wachtrij toevoegen"
 
-#: contents/ui/SongMenu.qml:132 contents/ui/SongMenu.qml:185
+#: contents/ui/SongMenu.qml:135 contents/ui/SongMenu.qml:188
 #, kde-format
 msgid "Remove Favourite"
 msgstr "Favoriet verwijderen"
 
-#: contents/ui/SongMenu.qml:132 contents/ui/SongMenu.qml:185
+#: contents/ui/SongMenu.qml:135 contents/ui/SongMenu.qml:188
 #, kde-format
 msgid "Add Favourite"
 msgstr "Favoriet toevoegen"
 
-#: contents/ui/SongMenu.qml:148 contents/ui/SongMenu.qml:200
+#: contents/ui/SongMenu.qml:151 contents/ui/SongMenu.qml:203
 #, kde-format
 msgid "Remove from History"
 msgstr "Uit geschiedenis verwijderen"
+
+#~ msgid "Now Playing"
+#~ msgstr "Speelt nu"
+
+#~ msgid "Queue"
+#~ msgstr "Wachtrij"
+
+#~ msgid "Lyrics"
+#~ msgstr "Liedteksten"
 
 #~ msgid "Favourite Songs"
 #~ msgstr "Favoriete songs"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-30 01:00+0000\n"
+"POT-Creation-Date: 2023-02-04 01:01+0000\n"
 "PO-Revision-Date: 2023-01-12 10:32\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -124,36 +124,27 @@ msgstr "最常播放"
 msgid "played Songs"
 msgstr ""
 
-#: contents/ui/main.qml:109
+#: contents/ui/main.qml:108
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
 
-#: contents/ui/MaximizedPlayerPage.qml:107
-#, kde-format
-msgid "Now Playing"
-msgstr "正在播放"
-
-#: contents/ui/MaximizedPlayerPage.qml:132
-#, kde-format
-msgid "Queue"
-msgstr "播放队列"
-
-#: contents/ui/MaximizedPlayerPage.qml:157
-#, kde-format
-msgid "Lyrics"
-msgstr ""
-
-#: contents/ui/MaximizedPlayerPage.qml:274
-#, kde-format
-msgid "Remove Track"
-msgstr "移除曲目"
-
-#: contents/ui/MaximizedPlayerPage.qml:316
+#: contents/ui/MaximizedPlayerPage.qml:193
 #: contents/ui/MinimizedPlayerControls.qml:90
 #, kde-format
 msgid "No media playing"
 msgstr "没有正在播放的媒体"
+
+#: contents/ui/MaximizedPlayerPage.qml:599
+#, kde-format
+msgid "%"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:804
+#: contents/ui/MaximizedPlayerPage.qml:905
+#, kde-format
+msgid "Remove Track"
+msgstr "移除曲目"
 
 #: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:93
 #, kde-format
@@ -206,12 +197,12 @@ msgstr "播放列表"
 msgid "Unknown"
 msgstr "未知"
 
-#: contents/ui/SearchWithDropdown.qml:287
+#: contents/ui/SearchWithDropdown.qml:286
 #, kde-format
 msgid "No matching previous searches"
 msgstr ""
 
-#: contents/ui/SearchWithDropdown.qml:322
+#: contents/ui/SearchWithDropdown.qml:321
 #, kde-format
 msgid "remove from search history"
 msgstr ""
@@ -221,27 +212,33 @@ msgstr ""
 msgid "Collapse Sidebar"
 msgstr ""
 
-#: contents/ui/SongMenu.qml:113 contents/ui/SongMenu.qml:172
+#: contents/ui/SongMenu.qml:116 contents/ui/SongMenu.qml:175
 #, kde-format
 msgid "Play Next"
 msgstr "播放下一首"
 
-#: contents/ui/SongMenu.qml:122 contents/ui/SongMenu.qml:178
+#: contents/ui/SongMenu.qml:125 contents/ui/SongMenu.qml:181
 #, kde-format
 msgid "Add to queue"
 msgstr ""
 
-#: contents/ui/SongMenu.qml:132 contents/ui/SongMenu.qml:185
+#: contents/ui/SongMenu.qml:135 contents/ui/SongMenu.qml:188
 #, kde-format
 msgid "Remove Favourite"
 msgstr ""
 
-#: contents/ui/SongMenu.qml:132 contents/ui/SongMenu.qml:185
+#: contents/ui/SongMenu.qml:135 contents/ui/SongMenu.qml:188
 #, kde-format
 msgid "Add Favourite"
 msgstr ""
 
-#: contents/ui/SongMenu.qml:148 contents/ui/SongMenu.qml:200
+#: contents/ui/SongMenu.qml:151 contents/ui/SongMenu.qml:203
 #, kde-format
 msgid "Remove from History"
 msgstr ""
+
+#~ msgid "Now Playing"
+#~ msgstr "正在播放"
+
+#~ msgid "Queue"
+#~ msgstr "播放队列"
