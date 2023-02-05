@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-04 01:01+0000\n"
-"PO-Revision-Date: 2023-01-29 00:58+0100\n"
+"PO-Revision-Date: 2023-02-04 12:42+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -142,7 +142,7 @@ msgstr "Ningún medio en reproducción"
 #: contents/ui/MaximizedPlayerPage.qml:599
 #, kde-format
 msgid "%"
-msgstr ""
+msgstr "%"
 
 #: contents/ui/MaximizedPlayerPage.qml:804
 #: contents/ui/MaximizedPlayerPage.qml:905

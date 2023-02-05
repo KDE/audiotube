@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-04 01:01+0000\n"
-"PO-Revision-Date: 2023-01-27 21:02+0100\n"
+"PO-Revision-Date: 2023-02-04 08:30+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -143,7 +143,7 @@ msgstr "Ez da euskarririk jotzen ari"
 #: contents/ui/MaximizedPlayerPage.qml:599
 #, kde-format
 msgid "%"
-msgstr ""
+msgstr "%"
 
 #: contents/ui/MaximizedPlayerPage.qml:804
 #: contents/ui/MaximizedPlayerPage.qml:905
