@@ -47,6 +47,34 @@ Kirigami.ScrollablePage {
             }
         }
 
+        Kirigami.Icon {
+            id: favouritesPlaceholder
+
+            implicitWidth: Kirigami.Units.gridUnit * 19
+            implicitHeight: Kirigami.Units.gridUnit * 19
+
+            visible: favouriteRepeater.count === 0
+            opacity: 0.4
+            isMask: true
+            source: "qrc:/resources/favourites_placeholder.svg"
+            color: Kirigami.Theme.hoverColor
+
+            Layout.margins: Kirigami.Units.gridUnit * 2
+            Layout.alignment: Qt.AlignHCenter
+            Layout.fillWidth: true
+        }
+        Controls.Label {
+            visible: favouriteRepeater.count === 0
+            color: Kirigami.Theme.disabledTextColor
+            text: i18n("No Favourites Yet")
+
+            font {
+                bold: true
+                pointSize: 15
+            }
+
+            anchors.centerIn: favouritesPlaceholder
+        }
         Controls.ScrollView {
             leftPadding: 15
             rightPadding: 25
@@ -54,6 +82,7 @@ Kirigami.ScrollablePage {
             RowLayout {
                 spacing: 20
                 Repeater {
+                    id: favouriteRepeater
                     Layout.fillWidth: true
                     model: Library.favourites
                     delegate: ColumnLayout {
@@ -232,6 +261,27 @@ Kirigami.ScrollablePage {
                   })}
             }
         }
+        Kirigami.Icon {
+            visible: mostPlayedRepeater.count == 0
+            Layout.margins: 20
+            isMask: true
+            opacity:0.4
+            color: Kirigami.Theme.hoverColor
+            id:playedPlaceholder
+            Layout.alignment: Qt.AlignHCenter
+            Layout.fillWidth: true
+            implicitWidth: 190
+            implicitHeight: 190
+            source: "qrc:/resources/played_placeholder.svg"
+        }
+        Controls.Label {
+            visible: mostPlayedRepeater.count == 0
+            color: Kirigami.Theme.disabledTextColor
+            anchors.centerIn:playedPlaceholder
+            font.bold: true
+            font.pointSize: 15
+            text: i18n("No Songs Played Yet")
+        }
         Controls.ScrollView {
             leftPadding: 15
             rightPadding: 25
@@ -239,6 +289,7 @@ Kirigami.ScrollablePage {
             RowLayout {
                 spacing: 20
                 Repeater {
+                    id: mostPlayedRepeater
                     Layout.fillWidth: true
                     model: Library.mostPlayed
                     delegate: ColumnLayout {
