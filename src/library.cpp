@@ -12,6 +12,8 @@
 
 #include "asyncdatabase.h"
 
+#include <iostream>
+
 namespace ranges = std::ranges;
 
 Library::Library(QObject *parent)
@@ -74,9 +76,14 @@ void Library::addSearch(const QString &text)
     connectFuture(m_database->execute("insert into searches (search_query) values (?)", text), this, &Library::searchesChanged);
 }
 
-void Library::removeSearch(const QString &text)
-{
-    connectFuture(m_database->execute("delete from searches where search_query = ?", text), this, &Library::searchesChanged);
+void Library::removeSearch(const QString &text) {
+    std::cerr << text.toStdString() << "\n";
+    if(searches()->removeRows(searches()->getRow(text), 1)) {
+        m_database->execute("delete from searches where search_query = ?", text);
+    }
+    //else {
+    //    connectFuture(m_database->execute("delete from searches where search_query = ?", text), this, &Library::searchesChanged);
+    //}
 }
 
 PlaybackHistoryModel *Library::playbackHistory()
@@ -313,6 +320,7 @@ bool SearchHistoryModel::removeRows(int row, int count, const QModelIndex &paren
 }
 
 int SearchHistoryModel::getRow(const QString& search) const {
+    std::cerr<< "m_history.size(): " << m_history.size() << "\n";
     for(size_t i(0); i<m_history.size(); ++i) {
         if(m_history[i].value == search) {
             return i;
