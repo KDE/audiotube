@@ -140,7 +140,7 @@ msgstr "Nepřehrává se žádné médium"
 #: contents/ui/MaximizedPlayerPage.qml:599
 #, kde-format
 msgid "%"
-msgstr ""
+msgstr "%"
 
 #: contents/ui/MaximizedPlayerPage.qml:804
 #: contents/ui/MaximizedPlayerPage.qml:905
@@ -238,12 +238,3 @@ msgstr "Přidat oblíbené"
 #, kde-format
 msgid "Remove from History"
 msgstr "Odstranit z historie"
-
-#~ msgid "Now Playing"
-#~ msgstr "Nyní přehrávám"
-
-#~ msgid "Queue"
-#~ msgstr "Fronta"
-
-#~ msgid "Lyrics"
-#~ msgstr "Text písně"
