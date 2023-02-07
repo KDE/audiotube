@@ -596,7 +596,7 @@ Item {
 
                         enabled: isWidescreen
                         visible: isWidescreen
-                        text: Math.round(volumeSlider.value*100) + i18n("%")
+                        text: i18n("%1%", Math.round(volumeSlider.value*100))
 
                         Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
                         Layout.preferredHeight: volumeSlider.Layout.preferredHeight
