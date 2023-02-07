@@ -36,7 +36,7 @@ Item {
     }
     
     RowLayout {
-        width: !isWidescreen? root.width- controlButtonBox.width: root.width
+        width: !isWidescreen ? root.width - controlButtonBox.width: root.width
         anchors.fill: parent
         spacing: 0
         
@@ -134,9 +134,10 @@ Item {
 
     RowLayout {
         id: controlButtonBox
-        anchors.centerIn: isWidescreen? root:null
-        anchors.right: !isWidescreen? root.right:null
-        Layout.fillHeight: true
+        anchors.centerIn: isWidescreen ? parent : null
+        anchors.right: !isWidescreen ? parent.right : null
+        anchors.top: parent.top
+        anchors.bottom: parent.bottom
         spacing: 2
 
         Label {
@@ -145,59 +146,61 @@ Item {
             text: PlayerUtils.formatTimestamp(audio.position)
             Layout.rightMargin: 20
         }
+        
         Button {
             id: skipBackwardButton
-            height: 40
-            width: 40
+            implicitHeight: 40
+            implicitWidth: 40
+            Layout.fillHeight: !isWidescreen
 
             Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
             Kirigami.Theme.inherit: false
 
             enabled: UserPlaylistModel.canSkipBack
             onClicked: UserPlaylistModel.previous()
-            contentItem: Item{
+            
+            contentItem: Item {
                 Kirigami.Icon {
-                    anchors.centerIn:parent
+                    anchors.centerIn: parent
                     source:"media-skip-backward"
                     color: "white"
                     width: Kirigami.Units.gridUnit
                     height: Kirigami.Units.gridUnit
-
                 }
             }
-            background: Kirigami.ShadowedRectangle{
-                corners.topLeftRadius: 7
-                corners.bottomLeftRadius: 7
+            
+            background: Kirigami.ShadowedRectangle {
+                corners.topLeftRadius: isWidescreen ? 7 : 0
+                corners.bottomLeftRadius: isWidescreen ? 7 : 0
 
-
-                color:  if (isWidescreen){
-                            if (parent.down){
-                                Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.3)
-                            }else if(parent.hovered){
-                                Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.7)
-                            }else{
-                                Qt.rgba(1, 1, 1, 0.2)
-                            }
-                        } else {
-                            if (parent.down){
-                                Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.3)
-                            }else if(parent.hovered){
-                                Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.7)
-                            }else{
-                                "transparent"
-                            }
-                        }
-
-
+                color: if (isWidescreen) {
+                    if (parent.down) {
+                        Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.3)
+                    } else if(parent.hovered) {
+                        Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.7)
+                    } else {
+                        Qt.rgba(1, 1, 1, 0.2)
+                    }
+                } else {
+                    if (parent.down) {
+                        Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.3)
+                    } else if (parent.hovered){
+                        Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.7)
+                    } else {
+                        "transparent"
+                    }
+                }
             }
         }
 
         Button {
             id: playPauseButton
-            height: 40
-            width: 60
+            implicitHeight: 40
+            implicitWidth: 60
+            Layout.fillHeight: !isWidescreen
+            
             onClicked: audio.playbackState === Audio.PlayingState ? audio.pause() : audio.play()
-            contentItem: Item{
+            contentItem: Item {
                 Kirigami.Icon {
                     anchors.centerIn:parent
                     source: audio.playbackState === Audio.PlayingState ? "media-playback-pause" : "media-playback-start"
@@ -206,24 +209,25 @@ Item {
                     height: Kirigami.Units.gridUnit
                 }
             }
-            background: Kirigami.ShadowedRectangle{
-                color:  if (isWidescreen){
-                            if (parent.down){
-                                Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.3)
-                            }else if(parent.hovered){
-                                Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.7)
-                            }else{
-                                Qt.rgba(1, 1, 1, 0.2)
-                            }
-                        } else {
-                            if (parent.down){
-                                Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.3)
-                            }else if(parent.hovered){
-                                Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.7)
-                            }else{
-                                "transparent"
-                            }
-                        }
+            
+            background: Kirigami.ShadowedRectangle {
+                color: if (isWidescreen) {
+                    if (parent.down) {
+                        Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.3)
+                    } else if (parent.hovered) {
+                        Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.7)
+                    } else {
+                        Qt.rgba(1, 1, 1, 0.2)
+                    }
+                } else {
+                    if (parent.down) {
+                        Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.3)
+                    } else if (parent.hovered) {
+                        Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.7)
+                    } else {
+                        "transparent"
+                    }
+                }
 
             }
 
@@ -231,61 +235,54 @@ Item {
 
         Button {
             id: skipForwardButton
-            height: 40
-            width: 40
-            Layout.rightMargin:isWidescreen?0:10
+            implicitHeight: 40
+            implicitWidth: 40
+            Layout.fillHeight: !isWidescreen
+            Layout.rightMargin: isWidescreen ? 0 : 10
+            Layout.alignment: !Qt.AlignVCenter
 
             Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
             Kirigami.Theme.inherit: false
 
             enabled: UserPlaylistModel.canSkip
             onClicked: UserPlaylistModel.next()
-            contentItem: Item{
+            contentItem: Item {
                 Kirigami.Icon {
-                    anchors.centerIn:parent
+                    anchors.centerIn: parent
                     source:"media-skip-forward"
                     color: "white"
                     width: Kirigami.Units.gridUnit
                     height: Kirigami.Units.gridUnit
-
                 }
             }
-            background: Kirigami.ShadowedRectangle{
-                corners.topRightRadius: 7
-                corners.bottomRightRadius: 7
-                color:  if (isWidescreen){
-                            if (parent.down){
-                                Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.3)
-                            }else if(parent.hovered){
-                                Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.7)
-                            }else{
-                                Qt.rgba(1, 1, 1, 0.2)
-                            }
-                        } else {
-                            if (parent.down){
-                                Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.3)
-                            }else if(parent.hovered){
-                                Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.7)
-                            }else{
-                                "transparent"
-                            }
-                        }
-
-
+            background: Kirigami.ShadowedRectangle {
+                corners.topRightRadius: isWidescreen ? 7 : 0
+                corners.bottomRightRadius: isWidescreen ? 7 : 0
+                color: if (isWidescreen) {
+                    if (parent.down) {
+                        Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.3)
+                    } else if (parent.hovered) {
+                        Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.7)
+                    } else {
+                        Qt.rgba(1, 1, 1, 0.2)
+                    }
+                } else {
+                    if (parent.down) {
+                        Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.3)
+                    } else if(parent.hovered) {
+                        Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.7)
+                    } else {
+                        "transparent"
+                    }
+                }
             }
         }
-
-
-
 
         Label {
             color: "white"
             visible: info.title && root.isWidescreen
             text: PlayerUtils.formatTimestamp(audio.duration)
             Layout.leftMargin: 20
-
-
         }
     }
-
 }

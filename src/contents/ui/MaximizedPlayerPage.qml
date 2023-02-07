@@ -76,6 +76,7 @@ Item {
         // content
     RowLayout{
         anchors.fill: parent
+        
         ColumnLayout {
             Layout.fillWidth: true
             // hide arrow button
@@ -237,8 +238,8 @@ Item {
 
                     Button {
                         id: skipBackwardButton
-                        height: 40
-                        width: 40
+                        implicitHeight: 40
+                        implicitWidth: 40
 
                         Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
                         Kirigami.Theme.inherit: false
@@ -272,8 +273,8 @@ Item {
 
                     Button {
                         id: playPauseButton
-                        height: 40
-                        width: 60
+                        implicitHeight: 40
+                        implicitWidth: 60
                         onClicked: audio.playbackState === Audio.PlayingState ? audio.pause() : audio.play()
                         contentItem: Item{
                             Kirigami.Icon {
@@ -297,8 +298,8 @@ Item {
 
                     Button {
                         id: skipForwardButton
-                        height: 40
-                        width: 40
+                        implicitHeight: 40
+                        implicitWidth: 40
                         Layout.rightMargin:isWidescreen?0:10
 
                         Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
@@ -556,6 +557,11 @@ Item {
                         }
 
                         icon.name: audio.muted ? "audio-volume-muted" : (volumeSlider.value < .33 ? "audio-volume-low" : (volumeSlider.value < .66 ? "audio-volume-medium" : "audio-volume-high"))
+                        icon.color: "white"
+                        
+                        Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
+                        Kirigami.Theme.inherit: false
+                        
                         checkable: true
                         visible: isWidescreen
                         enabled: isWidescreen
