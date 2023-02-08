@@ -319,6 +319,8 @@ public:
 
     Lyrics get_lyrics(const std::string &browse_id) const;
 
+    std::string get_version() const;
+
     // TODO wrap more methods
 
 private:

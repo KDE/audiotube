@@ -148,6 +148,13 @@ QFuture<Lyrics> AsyncYTMusic::fetchLyrics(const QString &browseId)
     });
 }
 
+QFuture<QString> AsyncYTMusic::version()
+{
+    return invokeAndCatchOnThread([this]() {
+        return QString::fromStdString(m_ytm->get_version());
+    });
+}
+
 YTMusicThread &YTMusicThread::instance()
 {
     static YTMusicThread thread;

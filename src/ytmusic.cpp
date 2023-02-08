@@ -35,18 +35,18 @@ struct UNEXPORT YTMusicPrivate {
 
     py::object get_ytmusic() {
         if (ytmusic.is_none()) {
-            const auto module = py::module::import("ytmusicapi");
-            ytmusic = module.attr("YTMusic")(auth, user, requests_session, proxies, language);
+            ytmusicapi_module = py::module::import("ytmusicapi");
+            ytmusic = ytmusicapi_module.attr("YTMusic")(auth, user, requests_session, proxies, language);
 
             // Some of the called python code randomly fails if the encoding is not utf8
             setenv("LC_ALL", "en_US.utf8", true);
 
-            auto oldVersion = module.attr("__dict__").contains("_version");
+            auto oldVersion = ytmusicapi_module.attr("__dict__").contains("_version");
             if (oldVersion) {
                 std::cerr << "Running with outdated and untested version of ytmusicapi." << std::endl;
                 std::cerr << "The currently tested and supported version is " << TESTED_YTMUSICAPI_VERSION << std::endl;
             } else {
-                const auto version = module.attr("__version__").cast<std::string>();
+                const auto version = ytmusicapi_module.attr("__version__").cast<std::string>();
                 if (version != TESTED_YTMUSICAPI_VERSION) {
                     std::cerr << "Running with untested version of ytmusicapi " << version << "." << std::endl;
                     std::cerr << "The currently tested and supported version is " << TESTED_YTMUSICAPI_VERSION << std::endl;
@@ -65,6 +65,9 @@ struct UNEXPORT YTMusicPrivate {
 
         return ytdl;
     }
+
+public:
+    py::module ytmusicapi_module;
 
 private:
     py::object ytmusic = py::none();
@@ -506,4 +509,10 @@ Lyrics YTMusic::get_lyrics(const std::string &browse_id) const
         lyrics["source"].cast<std::string>(),
         lyrics["lyrics"].cast<std::string>()
     };
+}
+
+std::string YTMusic::get_version() const
+{
+    d->get_ytmusic();
+    return d->ytmusicapi_module.attr("__version__").cast<std::string>();
 }

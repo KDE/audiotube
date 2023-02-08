@@ -4,7 +4,7 @@
 
 find_package(Python3 REQUIRED COMPONENTS Interpreter)
 
-execute_process(COMMAND ${Python3_EXECUTABLE} -c "import ytmusicapi; print(ytmusicapi.version('ytmusicapi'))" RESULT_VARIABLE YTMUSICAPI_CHECK_RESULT OUTPUT_VARIABLE YTMusicAPI_VERSION)
+execute_process(COMMAND ${Python3_EXECUTABLE} -c "import ytmusicapi; print(ytmusicapi.__version__)" RESULT_VARIABLE YTMUSICAPI_CHECK_RESULT OUTPUT_VARIABLE YTMusicAPI_VERSION)
 
 string(STRIP ${YTMusicAPI_VERSION} YTMusicAPI_VERSION)
 

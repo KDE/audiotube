@@ -150,25 +150,27 @@ Rectangle {
                           "title": i18n("Played Songs"),
                           "objectName": "history"
                       })}
-
                 }
-
-//                Kirigami.NavigationTabButton {
-//                    Layout.fillWidth: true
-//                    width: column.width - column.Layout.leftMargin - column.Layout.rightMargin
-//                    implicitHeight: 50
-//                    display: Controls.AbstractButton.TextBesideIcon
-//                    text: i18n("Charts")
-//                    icon.name: "office-chart-line-forecast"
-
-//                }
             }
         }
-
         Kirigami.Separator {
             Layout.fillWidth: true
             Layout.rightMargin: Kirigami.Units.smallSpacing
             Layout.leftMargin: Kirigami.Units.smallSpacing
+        }
+        Kirigami.NavigationTabButton {
+            id: aboutButton
+            Layout.fillWidth: true
+            width: column.width - column.Layout.leftMargin - column.Layout.rightMargin
+            implicitHeight: 50
+            display: Controls.AbstractButton.TextBesideIcon
+            text: collapsed? "" : i18n("About")
+            checkable: false
+            icon.name: "help-about-symbolic"
+
+            onClicked: {
+                pageStack.pushDialogLayer("qrc:/AboutAudiotube.qml")
+            }
         }
 
         Kirigami.NavigationTabButton {

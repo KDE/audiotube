@@ -11,6 +11,7 @@
 class PlayerUtils : public QObject
 {
     Q_OBJECT
+
 public:
     explicit PlayerUtils(QObject *parent = nullptr);
 

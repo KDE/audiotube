@@ -38,7 +38,25 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 
     KLocalizedString::setApplicationDomain("audiotube");
 
-    KAboutData::setApplicationData(KAboutData(QStringLiteral("audiotube"), QStringLiteral("AudioTube")));
+    KAboutData about(QStringLiteral("audiotube"),
+                     i18n("AudioTube"),
+                     QStringLiteral(AUDIOTUBE_VERSION_STRING),
+                     i18n("YouTube Music Player"),
+                     KAboutLicense::GPL_V3,
+                     i18n("© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"));
+    about.addAuthor(i18n("Jonah Brüchert"), i18n("Maintainer"), QStringLiteral("jbb@kaidan.im"));
+    about.addAuthor(i18n("Mathis Brüchert"), i18n("Designer"), QStringLiteral("mbb@kaidan.im"));
+    about.setTranslator(i18nc("NAME OF TRANSLATORS", "Your names"), i18nc("EMAIL OF TRANSLATORS", "Your emails"));
+    about.setOrganizationDomain("kde.org");
+    about.setBugAddress("https://bugs.kde.org/describecomponents.cgi?product=audiotube");
+    auto future = YTMusicThread::instance()->version();
+    connectFuture(future, &app, [&about](const auto &version) {
+        about.addComponent(QStringLiteral("ytmusicapi"), i18n("Unofficial API for YouTube Music"), version);
+        KAboutData::setApplicationData(about);
+    });
+
+    QGuiApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("org.kde.audiotube")));
+
     KCrash::initialize();
 
     QQmlApplicationEngine engine;
@@ -51,6 +69,9 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlRegisterUncreatableType<PlaybackHistoryModel>(URI, 1, 0, "PlaybackHistoryModel","");
     qmlRegisterType<QSortFilterProxyModel>(URI, 1, 0, "SortFilterModel");
     qmlRegisterType<Blur>(URI, 1, 0, "Blur");
+    qmlRegisterSingletonType(URI, 1, 0, "About", [](QQmlEngine *engine, QJSEngine *) -> QJSValue {
+        return engine->toScriptValue(KAboutData::applicationData());
+    });
 
     qmlRegisterSingletonType<UserPlaylistModel>(URI, 1, 0, "UserPlaylistModel", [](QQmlEngine *, QJSEngine *) {
         return new UserPlaylistModel();

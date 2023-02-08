@@ -9,6 +9,7 @@
 #include <QFuture>
 #include <QFutureWatcher>
 
+#include <iostream>
 #include <vector>
 
 #include <ytmusic.h>
@@ -122,6 +123,8 @@ public:
                             const std::optional<QString> &playlistId = std::nullopt);
 
     QFuture<Lyrics> fetchLyrics(const QString &browseId);
+
+    QFuture<QString> version();
 
     Q_SIGNAL void errorOccurred(const QString &error);
 
