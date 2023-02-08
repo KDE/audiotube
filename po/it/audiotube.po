@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-04 01:01+0000\n"
-"PO-Revision-Date: 2023-01-27 19:12+0100\n"
+"POT-Creation-Date: 2023-02-08 01:02+0000\n"
+"PO-Revision-Date: 2023-02-05 12:50+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
@@ -131,19 +131,19 @@ msgstr "Brani riprodotti"
 msgid "AudioTube"
 msgstr "AudioTube"
 
-#: contents/ui/MaximizedPlayerPage.qml:193
+#: contents/ui/MaximizedPlayerPage.qml:194
 #: contents/ui/MinimizedPlayerControls.qml:90
 #, kde-format
 msgid "No media playing"
 msgstr "Nessun supporto in riproduzione"
 
-#: contents/ui/MaximizedPlayerPage.qml:599
+#: contents/ui/MaximizedPlayerPage.qml:605
 #, kde-format
-msgid "%"
+msgid "%1%"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:804
-#: contents/ui/MaximizedPlayerPage.qml:905
+#: contents/ui/MaximizedPlayerPage.qml:810
+#: contents/ui/MaximizedPlayerPage.qml:911
 #, kde-format
 msgid "Remove Track"
 msgstr "Rimuovi traccia"
@@ -238,6 +238,9 @@ msgstr "Aggiungi preferito"
 #, kde-format
 msgid "Remove from History"
 msgstr "Rimuovi dalla cronologia"
+
+#~ msgid "%"
+#~ msgstr "%"
 
 #~ msgid "Now Playing"
 #~ msgstr "In riproduzione"

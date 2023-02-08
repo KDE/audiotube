@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-04 01:01+0000\n"
+"POT-Creation-Date: 2023-02-08 01:02+0000\n"
 "PO-Revision-Date: 2023-02-04 21:50+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -131,19 +131,19 @@ msgstr "afgespeelde songs"
 msgid "AudioTube"
 msgstr "AudioTube"
 
-#: contents/ui/MaximizedPlayerPage.qml:193
+#: contents/ui/MaximizedPlayerPage.qml:194
 #: contents/ui/MinimizedPlayerControls.qml:90
 #, kde-format
 msgid "No media playing"
 msgstr "Er speelt geen medium"
 
-#: contents/ui/MaximizedPlayerPage.qml:599
+#: contents/ui/MaximizedPlayerPage.qml:605
 #, kde-format
-msgid "%"
-msgstr "%"
+msgid "%1%"
+msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:804
-#: contents/ui/MaximizedPlayerPage.qml:905
+#: contents/ui/MaximizedPlayerPage.qml:810
+#: contents/ui/MaximizedPlayerPage.qml:911
 #, kde-format
 msgid "Remove Track"
 msgstr "Track verwijderen"
@@ -238,6 +238,9 @@ msgstr "Favoriet toevoegen"
 #, kde-format
 msgid "Remove from History"
 msgstr "Uit geschiedenis verwijderen"
+
+#~ msgid "%"
+#~ msgstr "%"
 
 #~ msgid "Now Playing"
 #~ msgstr "Speelt nu"

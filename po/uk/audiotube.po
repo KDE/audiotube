@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-04 01:01+0000\n"
+"POT-Creation-Date: 2023-02-08 01:02+0000\n"
 "PO-Revision-Date: 2023-02-04 08:20+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -132,19 +132,19 @@ msgstr "Відтворені композиції"
 msgid "AudioTube"
 msgstr "AudioTube"
 
-#: contents/ui/MaximizedPlayerPage.qml:193
+#: contents/ui/MaximizedPlayerPage.qml:194
 #: contents/ui/MinimizedPlayerControls.qml:90
 #, kde-format
 msgid "No media playing"
 msgstr "Відтворення не відбувається"
 
-#: contents/ui/MaximizedPlayerPage.qml:599
+#: contents/ui/MaximizedPlayerPage.qml:605
 #, kde-format
-msgid "%"
-msgstr "%"
+msgid "%1%"
+msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:804
-#: contents/ui/MaximizedPlayerPage.qml:905
+#: contents/ui/MaximizedPlayerPage.qml:810
+#: contents/ui/MaximizedPlayerPage.qml:911
 #, kde-format
 msgid "Remove Track"
 msgstr "Вилучити композицію"
@@ -239,6 +239,9 @@ msgstr "Додати до улюблених"
 #, kde-format
 msgid "Remove from History"
 msgstr "Вилучити із журналу"
+
+#~ msgid "%"
+#~ msgstr "%"
 
 #~ msgid "Now Playing"
 #~ msgstr "Зараз відтворюємо"

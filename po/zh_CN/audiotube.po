@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-04 01:01+0000\n"
-"PO-Revision-Date: 2023-01-12 10:32\n"
+"POT-Creation-Date: 2023-02-08 01:02+0000\n"
+"PO-Revision-Date: 2023-02-07 11:03\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -129,19 +129,19 @@ msgstr ""
 msgid "AudioTube"
 msgstr "AudioTube"
 
-#: contents/ui/MaximizedPlayerPage.qml:193
+#: contents/ui/MaximizedPlayerPage.qml:194
 #: contents/ui/MinimizedPlayerControls.qml:90
 #, kde-format
 msgid "No media playing"
 msgstr "没有正在播放的媒体"
 
-#: contents/ui/MaximizedPlayerPage.qml:599
+#: contents/ui/MaximizedPlayerPage.qml:605
 #, kde-format
-msgid "%"
+msgid "%1%"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:804
-#: contents/ui/MaximizedPlayerPage.qml:905
+#: contents/ui/MaximizedPlayerPage.qml:810
+#: contents/ui/MaximizedPlayerPage.qml:911
 #, kde-format
 msgid "Remove Track"
 msgstr "移除曲目"
@@ -236,9 +236,3 @@ msgstr ""
 #, kde-format
 msgid "Remove from History"
 msgstr ""
-
-#~ msgid "Now Playing"
-#~ msgstr "正在播放"
-
-#~ msgid "Queue"
-#~ msgstr "播放队列"
