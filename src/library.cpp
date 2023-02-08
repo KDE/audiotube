@@ -77,7 +77,7 @@ void Library::addSearch(const QString &text)
 }
 
 void Library::removeSearch(const QString &text) {
-    std::cerr << text.toStdString() << "\n";
+    std::cerr << "search to be removed : " << text.toStdString() << "\n";
     if(searches()->removeRows(searches()->getRow(text), 1)) {
         m_database->execute("delete from searches where search_query = ?", text);
     }
@@ -310,9 +310,9 @@ QVariant SearchHistoryModel::data(const QModelIndex &index, int role) const {
 }
 
 bool SearchHistoryModel::removeRows(int row, int count, const QModelIndex &parent) {
-    if((unsigned) row+count >= m_history.size()) {
-        return false;
-    }
+    Q_ASSERT(checkIndex(createIndex(row, 0)) && checkIndex(createIndex(row + count -1, 0)));
+    std::cerr << "checkIndex(createIndex(row, 0)) && checkIndex(createIndex(row+count-1, 0)) : " << std::to_string(checkIndex(createIndex(row, 0)) && checkIndex(createIndex(row + count -1, 0))) << "\n";
+    std::cerr << "row : " << row << "; count : " << count << "\n";
     beginRemoveRows(parent, row, row+count-1);
     m_history.erase(m_history.begin() + row, m_history.begin() + (row + count));
     endRemoveRows();
@@ -327,6 +327,7 @@ int SearchHistoryModel::getRow(const QString& search) const {
         }
     }
     return -1;
+    // only temporary, will be changed to Q_UNREACHABLE
 }
 
 
