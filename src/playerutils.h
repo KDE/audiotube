@@ -16,6 +16,7 @@ public:
     explicit PlayerUtils(QObject *parent = nullptr);
 
     Q_INVOKABLE QString formatTimestamp(quint64 stamp);
+    Q_INVOKABLE float convertVolume(float volume);
 
 private:
     KFormat m_format;

@@ -569,7 +569,7 @@ Item {
                         enabled: isWidescreen
                         visible: isWidescreen
 
-                        //property real volume: QtMultimedia.convertVolume(value, QtMultimedia.LogarithmicVolumeScale, QtMultimedia.LinearVolumeScale)
+                        property real volume: PlayerUtils.convertVolume(value)
 
                         Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
                         Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
@@ -581,14 +581,10 @@ Item {
                         wheelEnabled: true
 
                         onMoved: {
-                            valueChanged()
-                        }
-                        function valueChanged() {
-                            audio.volume = volume
-                            if(value==0) {
+                            audioOutput.volume = volumeSlider.volume
+                            if (value==0) {
                                 muteButton.muteAudio()
-                            }
-                            else{
+                            } else {
                                 muteButton.unmuteAudio()
                             }
                         }

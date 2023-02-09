@@ -124,6 +124,10 @@ Flickable {
                 UserPlaylistModel.next();
             }
         }
+
+        audioOutput: AudioOutput {
+            id: audioOutput
+        }
     }
     
     contentHeight: height * 2

@@ -45,6 +45,7 @@ target_link_libraries(audiotube
     Qt::Svg
     Qt::Widgets
     Qt::Concurrent
+    Qt::Multimedia
     KF6::I18n
     KF6::CoreAddons
     KF6::Crash
