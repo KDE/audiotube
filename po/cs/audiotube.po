@@ -140,7 +140,7 @@ msgstr "Nepřehrává se žádné médium"
 #: contents/ui/MaximizedPlayerPage.qml:605
 #, kde-format
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: contents/ui/MaximizedPlayerPage.qml:810
 #: contents/ui/MaximizedPlayerPage.qml:911
@@ -238,6 +238,3 @@ msgstr "Přidat oblíbené"
 #, kde-format
 msgid "Remove from History"
 msgstr "Odstranit z historie"
-
-#~ msgid "%"
-#~ msgstr "%"

@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-08 01:02+0000\n"
-"PO-Revision-Date: 2023-01-14 23:47+0100\n"
+"PO-Revision-Date: 2023-02-09 00:18+0100\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -142,7 +142,7 @@ msgstr "Es werden keine Medien wiedergegeben"
 #: contents/ui/MaximizedPlayerPage.qml:605
 #, kde-format
 msgid "%1%"
-msgstr ""
+msgstr "%1 %"
 
 #: contents/ui/MaximizedPlayerPage.qml:810
 #: contents/ui/MaximizedPlayerPage.qml:911
@@ -204,12 +204,12 @@ msgstr "Unbekannt"
 #: contents/ui/SearchWithDropdown.qml:286
 #, kde-format
 msgid "No matching previous searches"
-msgstr ""
+msgstr "Keine passenden vorherigen Suchvorgänge"
 
 #: contents/ui/SearchWithDropdown.qml:321
 #, kde-format
 msgid "remove from search history"
-msgstr ""
+msgstr "Aus Suchverlauf löschen"
 
 #: contents/ui/Sidebar.qml:179
 #, kde-format
@@ -239,7 +239,7 @@ msgstr "Favoriten hinzufügen"
 #: contents/ui/SongMenu.qml:151 contents/ui/SongMenu.qml:203
 #, kde-format
 msgid "Remove from History"
-msgstr ""
+msgstr "Aus Verlauf löschen"
 
 #~ msgid "Now Playing"
 #~ msgstr "Aktueller Titel"
