@@ -118,6 +118,7 @@ Flickable {
         id: audio
 
         source: info.audioUrl
+        onSourceChanged: play()
         onMediaStatusChanged: {
             if (mediaStatus === MediaPlayer.EndOfMedia) {
                 console.log("Song ended");
