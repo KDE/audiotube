@@ -12,8 +12,6 @@
 
 #include "asyncdatabase.h"
 
-#include <iostream>
-
 namespace ranges = std::ranges;
 
 Library::Library(QObject *parent)
@@ -30,6 +28,7 @@ Library::Library(QObject *parent)
     }()))
 {
     m_database->runMigrations(":/migrations/");
+    m_searches = new SearchHistoryModel(m_database->getResults<SingleValue<QString>>("select distinct (search_query) from searches order by search_id desc"), this);
 }
 
 Library::~Library() = default;
@@ -68,22 +67,26 @@ FavouriteWatcher *Library::favouriteWatcher(const QString &videoId)
 
 SearchHistoryModel *Library::searches()
 {
-    return new SearchHistoryModel(m_database->getResults<SingleValue<QString>>("select distinct (search_query) from searches order by search_id desc"), this);
+    return m_searches;
 }
 
 void Library::addSearch(const QString &text)
 {
-    connectFuture(m_database->execute("insert into searches (search_query) values (?)", text), this, &Library::searchesChanged);
+    if(m_searches->addSearch(text)) {
+        m_database->execute("insert into searches (search_query) values (?)", text);
+    }
+    else {
+        connectFuture(m_database->execute("insert into searches (search_query) values (?)", text), this, &Library::searchesChanged);
+    }
 }
 
 void Library::removeSearch(const QString &text) {
-    std::cerr << "search to be removed : " << text.toStdString() << "\n";
-    if(searches()->removeRows(searches()->getRow(text), 1)) {
+    if(m_searches->removeRow(m_searches->getRow(text))) {
         m_database->execute("delete from searches where search_query = ?", text);
     }
-    //else {
-    //    connectFuture(m_database->execute("delete from searches where search_query = ?", text), this, &Library::searchesChanged);
-    //}
+    else {
+        connectFuture(m_database->execute("delete from searches where search_query = ?", text), this, &Library::searchesChanged);
+    }
 }
 
 PlaybackHistoryModel *Library::playbackHistory()
@@ -300,34 +303,57 @@ int SearchHistoryModel::rowCount(const QModelIndex &parent) const {
     return parent.isValid() ? 0 : m_history.size();
 }
 
-QVariant SearchHistoryModel::data(const QModelIndex &index, int role) const {
-    switch (role) {
-    case Qt::DisplayRole:
-        return m_history[index.row()].value;
-    }
-
-    Q_UNREACHABLE();
-}
-
 bool SearchHistoryModel::removeRows(int row, int count, const QModelIndex &parent) {
     Q_ASSERT(checkIndex(createIndex(row, 0)) && checkIndex(createIndex(row + count -1, 0)));
-    std::cerr << "checkIndex(createIndex(row, 0)) && checkIndex(createIndex(row+count-1, 0)) : " << std::to_string(checkIndex(createIndex(row, 0)) && checkIndex(createIndex(row + count -1, 0))) << "\n";
-    std::cerr << "row : " << row << "; count : " << count << "\n";
     beginRemoveRows(parent, row, row+count-1);
     m_history.erase(m_history.begin() + row, m_history.begin() + (row + count));
     endRemoveRows();
     return true;
 }
 
-int SearchHistoryModel::getRow(const QString& search) const {
-    std::cerr<< "m_history.size(): " << m_history.size() << "\n";
-    for(size_t i(0); i<m_history.size(); ++i) {
-        if(m_history[i].value == search) {
-            return i;
-        }
+class IsEqual {
+public:
+    IsEqual(QString const& SearchedValue)
+    : searchedValue(SearchedValue){}
+    bool operator()(SingleValue<QString> checkedValue) {
+        return checkedValue.value == searchedValue;
     }
-    return -1;
-    // only temporary, will be changed to Q_UNREACHABLE
+private:
+    QString const& searchedValue;
+};
+
+int SearchHistoryModel::getRow(const QString& search) const {
+    IsEqual isEqual(search);
+    return find_if(m_history.begin(), m_history.end(), isEqual) - m_history.begin();
+}
+
+bool SearchHistoryModel::insertRows(int row, int count, const QModelIndex& parent) {
+    beginInsertRows(parent, row, row + count - 1);
+    m_history.insert(m_history.begin() + row, count, SingleValue<QString>());
+    endInsertRows();
+    return true;
+}
+
+QVariant SearchHistoryModel::data(const QModelIndex &index, int role) const {
+    switch (role) {
+        case Qt::DisplayRole:
+            return m_history[index.row()].value;
+    }
+    
+    Q_UNREACHABLE();
+}
+
+bool SearchHistoryModel::setData(const QModelIndex& index, const QVariant& value, int role) {
+    if(role == Qt::DisplayRole) {
+        m_history[index.row()].value = value.toString();
+        dataChanged(createIndex(index.row() - 1, 0), createIndex(index.row() + 1, 0));
+        return true;
+    }
+    Q_UNREACHABLE();
+}
+
+bool SearchHistoryModel::addSearch(const QString& search) {
+    return insertRow(0) && setData(createIndex(0, 0), search);
 }
 
 

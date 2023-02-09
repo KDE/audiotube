@@ -98,8 +98,11 @@ public:
     SearchHistoryModel(QFuture<std::vector<SingleValue<QString>>> &&historyFuture, QObject *parent = nullptr);
     int rowCount(const QModelIndex &parent) const override;
     bool removeRows(int row, int count, const QModelIndex &parent = QModelIndex()) override;
-    QVariant data(const QModelIndex &index, int role) const override;
     int getRow(QString const& search) const;
+    bool insertRows(int row, int count, const QModelIndex &parent = QModelIndex()) override;
+    QVariant data(const QModelIndex &index, int role) const override;
+    bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::DisplayRole) override;
+    bool addSearch(QString const& search);
 
 private:
     std::vector<SingleValue<QString>> m_history;
@@ -148,6 +151,7 @@ private:
 
     QNetworkAccessManager m_networkImageCacher;
     std::unique_ptr<ThreadedDatabase> m_database;
+    SearchHistoryModel *m_searches;
 };
 
 
