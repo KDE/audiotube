@@ -142,7 +142,7 @@ msgstr "Nada em reprodução"
 #: contents/ui/MaximizedPlayerPage.qml:605
 #, kde-format
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: contents/ui/MaximizedPlayerPage.qml:810
 #: contents/ui/MaximizedPlayerPage.qml:911
