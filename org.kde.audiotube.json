@@ -23,6 +23,7 @@
     "modules": [
         "flatpak/python3-yt-dlp.json",
         "flatpak/python3-ytmusicapi.json",
+        "flatpak/kirigami-addons.json",
         {
             "name": "pybind11",
             "config-opts": ["-DPYBIND11_FINDPYTHON=ON", "-DPYBIND11_TEST=OFF"],
