@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the audiotube package.
 #
-# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2021, 2022.
+# Luiz Fernando Ranghetti <elchevive@opensuse.org>, 2021, 2022, 2023.
 # Thiago Masato Costa Sueto <herzenschein@gmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-08 01:02+0000\n"
-"PO-Revision-Date: 2022-12-20 10:48-0300\n"
+"PO-Revision-Date: 2023-02-14 11:03-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -123,10 +123,9 @@ msgid "Most played"
 msgstr "Mais reproduzidas"
 
 #: contents/ui/LibraryPage.qml:230
-#, fuzzy, kde-format
-#| msgid "Played Songs"
+#, kde-format
 msgid "played Songs"
-msgstr "Músicas reproduzidas"
+msgstr "músicas reproduzidas"
 
 #: contents/ui/main.qml:108
 #, kde-format
@@ -142,7 +141,7 @@ msgstr "Nenhuma mídia em reprodução"
 #: contents/ui/MaximizedPlayerPage.qml:605
 #, kde-format
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: contents/ui/MaximizedPlayerPage.qml:810
 #: contents/ui/MaximizedPlayerPage.qml:911
@@ -153,7 +152,7 @@ msgstr "Remover faixa"
 #: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:93
 #, kde-format
 msgid "Library"
-msgstr ""
+msgstr "Biblioteca"
 
 #: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:109
 #, kde-format
@@ -184,7 +183,7 @@ msgstr "Lista de músicas"
 #: contents/ui/SearchPage.qml:16
 #, kde-format
 msgid "Previous Searches:"
-msgstr ""
+msgstr "Pesquisas anteriores:"
 
 #: contents/ui/SearchPage.qml:28
 #, kde-format
@@ -204,17 +203,17 @@ msgstr "Desconhecido"
 #: contents/ui/SearchWithDropdown.qml:286
 #, kde-format
 msgid "No matching previous searches"
-msgstr ""
+msgstr "Nenhuma pesquisa anterior correspondente"
 
 #: contents/ui/SearchWithDropdown.qml:321
 #, kde-format
 msgid "remove from search history"
-msgstr ""
+msgstr "remover do histórico de pesquisa"
 
 #: contents/ui/Sidebar.qml:179
 #, kde-format
 msgid "Collapse Sidebar"
-msgstr ""
+msgstr "Recolher barra lateral"
 
 #: contents/ui/SongMenu.qml:116 contents/ui/SongMenu.qml:175
 #, kde-format
@@ -239,7 +238,7 @@ msgstr "Adicionar favorita"
 #: contents/ui/SongMenu.qml:151 contents/ui/SongMenu.qml:203
 #, kde-format
 msgid "Remove from History"
-msgstr ""
+msgstr "Remover do histórico"
 
 #~ msgid "Now Playing"
 #~ msgstr "Reproduzindo agora"
