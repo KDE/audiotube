@@ -51,6 +51,8 @@ Rectangle {
             collapseButton.checked =!collapseButton.checked
             collapseButton.checked =false
 
+            aboutButton.checked = !aboutButton.checked
+            aboutButton.checked = !aboutButton.checked
         }
     }
     Kirigami.Separator {
