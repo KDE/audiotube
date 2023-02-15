@@ -97,14 +97,12 @@ class SearchHistoryModel : public QAbstractListModel {
 public:
     SearchHistoryModel(QFuture<std::vector<SingleValue<QString>>> &&historyFuture, QObject *parent = nullptr);
     int rowCount(const QModelIndex &parent) const override;
-    bool removeRows(int row, int count, const QModelIndex &parent = QModelIndex()) override;
-    int getRow(QString const& search) const;
-    bool insertRows(int row, int count, const QModelIndex &parent = QModelIndex()) override;
+    void removeSearch(const QString &search);
     QVariant data(const QModelIndex &index, int role) const override;
-    bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::DisplayRole) override;
-    bool addSearch(QString const& search);
+    void addSearch(QString const& search);
 
 private:
+    size_t getRow(QString const &search) const;
     std::vector<SingleValue<QString>> m_history;
 };
 
@@ -112,7 +110,7 @@ class Library : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QAbstractListModel *favourites READ favourites NOTIFY favouritesChanged)
-    Q_PROPERTY(QAbstractListModel *searches READ searches NOTIFY searchesChanged)
+    Q_PROPERTY(QAbstractListModel *searches READ searches CONSTANT)
     Q_PROPERTY(QAbstractListModel *playbackHistory READ playbackHistory NOTIFY playbackHistoryChanged)
     Q_PROPERTY(QAbstractListModel *mostPlayed READ mostPlayed NOTIFY playbackHistoryChanged)
 
