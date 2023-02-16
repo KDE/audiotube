@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-08 01:02+0000\n"
+"POT-Creation-Date: 2023-02-16 00:57+0000\n"
 "PO-Revision-Date: 2023-01-13 08:23+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -16,16 +16,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.12.1\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Linerly"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "linerly@protonmail.com"
 
 #: contents/ui/AlbumPage.qml:22 contents/ui/PlaylistPage.qml:26
 #, kde-format
@@ -106,27 +96,39 @@ msgstr "Batalkan"
 
 #: contents/ui/LibraryPage.qml:28 contents/ui/LibraryPage.qml:44
 #: contents/ui/NavigationBar.qml:46 contents/ui/NavigationBar.qml:51
-#: contents/ui/Sidebar.qml:124 contents/ui/Sidebar.qml:131
+#: contents/ui/Sidebar.qml:126 contents/ui/Sidebar.qml:133
 #, kde-format
 msgid "Favourites"
 msgstr "Favorit"
 
-#: contents/ui/LibraryPage.qml:39 contents/ui/LibraryPage.qml:225
+#: contents/ui/LibraryPage.qml:39 contents/ui/LibraryPage.qml:254
 #, kde-format
 msgid "Show All"
 msgstr "Tampilkan Semua"
 
-#: contents/ui/LibraryPage.qml:214
+#: contents/ui/LibraryPage.qml:69
+#, fuzzy, kde-format
+#| msgid "Favourites"
+msgid "No Favourites Yet"
+msgstr "Favorit"
+
+#: contents/ui/LibraryPage.qml:243
 #, kde-format
 msgid "Most played"
 msgstr "Paling banyak diputar"
 
-#: contents/ui/LibraryPage.qml:230
+#: contents/ui/LibraryPage.qml:259
 #, kde-format
 msgid "played Songs"
 msgstr "Lagu yang telah diputar"
 
-#: contents/ui/main.qml:108
+#: contents/ui/LibraryPage.qml:283
+#, fuzzy, kde-format
+#| msgid "No songs here yet"
+msgid "No Songs Played Yet"
+msgstr "Belum ada lagu di sini"
+
+#: contents/ui/main.qml:108 main.cpp:42
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
@@ -148,18 +150,18 @@ msgstr ""
 msgid "Remove Track"
 msgstr "Hapus Trek"
 
-#: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:93
+#: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:95
 #, kde-format
 msgid "Library"
 msgstr ""
 
-#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:109
+#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:111
 #, kde-format
 msgid "Search"
 msgstr "Cari"
 
 #: contents/ui/NavigationBar.qml:58 contents/ui/NavigationBar.qml:63
-#: contents/ui/Sidebar.qml:143 contents/ui/Sidebar.qml:150
+#: contents/ui/Sidebar.qml:145 contents/ui/Sidebar.qml:152
 #, kde-format
 msgid "Played Songs"
 msgstr "Lagu yang telah diputar"
@@ -209,7 +211,12 @@ msgstr ""
 msgid "remove from search history"
 msgstr ""
 
-#: contents/ui/Sidebar.qml:179
+#: contents/ui/Sidebar.qml:169
+#, kde-format
+msgid "About"
+msgstr ""
+
+#: contents/ui/Sidebar.qml:183
 #, kde-format
 msgid "Collapse Sidebar"
 msgstr ""
@@ -239,6 +246,54 @@ msgstr "Tambahkan Favorit"
 msgid "Remove from History"
 msgstr ""
 
+#: main.cpp:44
+#, kde-format
+msgid "YouTube Music Player"
+msgstr ""
+
+#: main.cpp:46
+#, kde-format
+msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
+msgstr ""
+
+#: main.cpp:47
+#, kde-format
+msgid "Jonah Brüchert"
+msgstr ""
+
+#: main.cpp:47
+#, kde-format
+msgid "Maintainer"
+msgstr ""
+
+#: main.cpp:48
+#, kde-format
+msgid "Mathis Brüchert"
+msgstr ""
+
+#: main.cpp:48
+#, kde-format
+msgid "Designer"
+msgstr ""
+
+#: main.cpp:49
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Linerly"
+
+#: main.cpp:49
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "linerly@protonmail.com"
+
+#: main.cpp:54
+#, fuzzy, kde-format
+#| msgid "Find music on YouTube Music"
+msgid "Unofficial API for YouTube Music"
+msgstr "Cari musik di YouTube Music"
+
 #~ msgid "Now Playing"
 #~ msgstr "Sekarang Diputarkan"
 
@@ -253,9 +308,6 @@ msgstr ""
 
 #~ msgid "Back"
 #~ msgstr "Kembali"
-
-#~ msgid "Find music on YouTube Music"
-#~ msgstr "Cari musik di YouTube Music"
 
 #~ msgid "Add to Playlist"
 #~ msgstr "Tambahkan ke Daftar Putar"

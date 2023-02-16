@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-08 01:02+0000\n"
+"POT-Creation-Date: 2023-02-16 00:57+0000\n"
 "PO-Revision-Date: 2023-02-08 08:23+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -17,16 +17,6 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 20.12.0\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Юрій Чорноіван"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "yurchor@ukr.net"
 
 #: contents/ui/AlbumPage.qml:22 contents/ui/PlaylistPage.qml:26
 #, kde-format
@@ -107,27 +97,39 @@ msgstr "Скасувати"
 
 #: contents/ui/LibraryPage.qml:28 contents/ui/LibraryPage.qml:44
 #: contents/ui/NavigationBar.qml:46 contents/ui/NavigationBar.qml:51
-#: contents/ui/Sidebar.qml:124 contents/ui/Sidebar.qml:131
+#: contents/ui/Sidebar.qml:126 contents/ui/Sidebar.qml:133
 #, kde-format
 msgid "Favourites"
 msgstr "Улюблені"
 
-#: contents/ui/LibraryPage.qml:39 contents/ui/LibraryPage.qml:225
+#: contents/ui/LibraryPage.qml:39 contents/ui/LibraryPage.qml:254
 #, kde-format
 msgid "Show All"
 msgstr "Показати всі"
 
-#: contents/ui/LibraryPage.qml:214
+#: contents/ui/LibraryPage.qml:69
+#, fuzzy, kde-format
+#| msgid "Favourites"
+msgid "No Favourites Yet"
+msgstr "Улюблені"
+
+#: contents/ui/LibraryPage.qml:243
 #, kde-format
 msgid "Most played"
 msgstr "Часто слухали"
 
-#: contents/ui/LibraryPage.qml:230
+#: contents/ui/LibraryPage.qml:259
 #, kde-format
 msgid "played Songs"
 msgstr "Відтворені композиції"
 
-#: contents/ui/main.qml:108
+#: contents/ui/LibraryPage.qml:283
+#, fuzzy, kde-format
+#| msgid "No songs here yet"
+msgid "No Songs Played Yet"
+msgstr "Тут ще немає композицій"
+
+#: contents/ui/main.qml:108 main.cpp:42
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
@@ -149,18 +151,18 @@ msgstr "%1%"
 msgid "Remove Track"
 msgstr "Вилучити композицію"
 
-#: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:93
+#: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:95
 #, kde-format
 msgid "Library"
 msgstr "Бібліотека"
 
-#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:109
+#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:111
 #, kde-format
 msgid "Search"
 msgstr "Пошук"
 
 #: contents/ui/NavigationBar.qml:58 contents/ui/NavigationBar.qml:63
-#: contents/ui/Sidebar.qml:143 contents/ui/Sidebar.qml:150
+#: contents/ui/Sidebar.qml:145 contents/ui/Sidebar.qml:152
 #, kde-format
 msgid "Played Songs"
 msgstr "Відтворені композиції"
@@ -210,7 +212,12 @@ msgstr "Немає відповідних попередніх пошуків"
 msgid "remove from search history"
 msgstr "вилучити з журналу пошуку"
 
-#: contents/ui/Sidebar.qml:179
+#: contents/ui/Sidebar.qml:169
+#, kde-format
+msgid "About"
+msgstr ""
+
+#: contents/ui/Sidebar.qml:183
 #, kde-format
 msgid "Collapse Sidebar"
 msgstr "Згорнути бічну панель"
@@ -240,6 +247,54 @@ msgstr "Додати до улюблених"
 msgid "Remove from History"
 msgstr "Вилучити із журналу"
 
+#: main.cpp:44
+#, kde-format
+msgid "YouTube Music Player"
+msgstr ""
+
+#: main.cpp:46
+#, kde-format
+msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
+msgstr ""
+
+#: main.cpp:47
+#, kde-format
+msgid "Jonah Brüchert"
+msgstr ""
+
+#: main.cpp:47
+#, kde-format
+msgid "Maintainer"
+msgstr ""
+
+#: main.cpp:48
+#, kde-format
+msgid "Mathis Brüchert"
+msgstr ""
+
+#: main.cpp:48
+#, kde-format
+msgid "Designer"
+msgstr ""
+
+#: main.cpp:49
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Юрій Чорноіван"
+
+#: main.cpp:49
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "yurchor@ukr.net"
+
+#: main.cpp:54
+#, fuzzy, kde-format
+#| msgid "Find music on YouTube Music"
+msgid "Unofficial API for YouTube Music"
+msgstr "Шукати музику на сайті «Музика Youtube»"
+
 #~ msgid "%"
 #~ msgstr "%"
 
@@ -257,9 +312,6 @@ msgstr "Вилучити із журналу"
 
 #~ msgid "Back"
 #~ msgstr "Назад"
-
-#~ msgid "Find music on YouTube Music"
-#~ msgstr "Шукати музику на сайті «Музика Youtube»"
 
 #~ msgid "Add to Playlist"
 #~ msgstr "Додати до списку відтворення"

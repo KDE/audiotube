@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-08 01:02+0000\n"
+"POT-Creation-Date: 2023-02-16 00:57+0000\n"
 "PO-Revision-Date: 2023-02-08 10:12+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -19,16 +19,6 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 20.12.0\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Antoni Bella"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "antonibella5@yahoo.com"
 
 #: contents/ui/AlbumPage.qml:22 contents/ui/PlaylistPage.qml:26
 #, kde-format
@@ -109,27 +99,39 @@ msgstr "Cancel·la"
 
 #: contents/ui/LibraryPage.qml:28 contents/ui/LibraryPage.qml:44
 #: contents/ui/NavigationBar.qml:46 contents/ui/NavigationBar.qml:51
-#: contents/ui/Sidebar.qml:124 contents/ui/Sidebar.qml:131
+#: contents/ui/Sidebar.qml:126 contents/ui/Sidebar.qml:133
 #, kde-format
 msgid "Favourites"
 msgstr "Preferides"
 
-#: contents/ui/LibraryPage.qml:39 contents/ui/LibraryPage.qml:225
+#: contents/ui/LibraryPage.qml:39 contents/ui/LibraryPage.qml:254
 #, kde-format
 msgid "Show All"
 msgstr "Mostra-ho tot"
 
-#: contents/ui/LibraryPage.qml:214
+#: contents/ui/LibraryPage.qml:69
+#, fuzzy, kde-format
+#| msgid "Favourites"
+msgid "No Favourites Yet"
+msgstr "Preferides"
+
+#: contents/ui/LibraryPage.qml:243
 #, kde-format
 msgid "Most played"
 msgstr "Les més reproduïdes"
 
-#: contents/ui/LibraryPage.qml:230
+#: contents/ui/LibraryPage.qml:259
 #, kde-format
 msgid "played Songs"
 msgstr "Cançons reproduïdes"
 
-#: contents/ui/main.qml:108
+#: contents/ui/LibraryPage.qml:283
+#, fuzzy, kde-format
+#| msgid "No songs here yet"
+msgid "No Songs Played Yet"
+msgstr "Encara no hi ha cap cançó"
+
+#: contents/ui/main.qml:108 main.cpp:42
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
@@ -151,18 +153,18 @@ msgstr "%1%"
 msgid "Remove Track"
 msgstr "Elimina la pista"
 
-#: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:93
+#: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:95
 #, kde-format
 msgid "Library"
 msgstr "Biblioteca"
 
-#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:109
+#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:111
 #, kde-format
 msgid "Search"
 msgstr "Busca"
 
 #: contents/ui/NavigationBar.qml:58 contents/ui/NavigationBar.qml:63
-#: contents/ui/Sidebar.qml:143 contents/ui/Sidebar.qml:150
+#: contents/ui/Sidebar.qml:145 contents/ui/Sidebar.qml:152
 #, kde-format
 msgid "Played Songs"
 msgstr "Cançons reproduïdes"
@@ -212,7 +214,12 @@ msgstr "No hi ha busques anteriors coincidents"
 msgid "remove from search history"
 msgstr "elimina de l'historial de busques"
 
-#: contents/ui/Sidebar.qml:179
+#: contents/ui/Sidebar.qml:169
+#, kde-format
+msgid "About"
+msgstr ""
+
+#: contents/ui/Sidebar.qml:183
 #, kde-format
 msgid "Collapse Sidebar"
 msgstr "Reduïx la barra lateral"
@@ -241,3 +248,50 @@ msgstr "Afig a les preferides"
 #, kde-format
 msgid "Remove from History"
 msgstr "Elimina de l'historial"
+
+#: main.cpp:44
+#, kde-format
+msgid "YouTube Music Player"
+msgstr ""
+
+#: main.cpp:46
+#, kde-format
+msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
+msgstr ""
+
+#: main.cpp:47
+#, kde-format
+msgid "Jonah Brüchert"
+msgstr ""
+
+#: main.cpp:47
+#, kde-format
+msgid "Maintainer"
+msgstr ""
+
+#: main.cpp:48
+#, kde-format
+msgid "Mathis Brüchert"
+msgstr ""
+
+#: main.cpp:48
+#, kde-format
+msgid "Designer"
+msgstr ""
+
+#: main.cpp:49
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Antoni Bella"
+
+#: main.cpp:49
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "antonibella5@yahoo.com"
+
+#: main.cpp:54
+#, kde-format
+msgid "Unofficial API for YouTube Music"
+msgstr ""

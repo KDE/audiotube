@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-08 01:02+0000\n"
+"POT-Creation-Date: 2023-02-16 00:57+0000\n"
 "PO-Revision-Date: 2023-02-09 08:26+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -17,16 +17,6 @@ msgstr ""
 "X-Generator: Lokalize 22.12.2\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Matjaž Jeran"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "matjaz.jeran@amis.net"
 
 #: contents/ui/AlbumPage.qml:22 contents/ui/PlaylistPage.qml:26
 #, kde-format
@@ -105,27 +95,39 @@ msgstr "Prekliči"
 
 #: contents/ui/LibraryPage.qml:28 contents/ui/LibraryPage.qml:44
 #: contents/ui/NavigationBar.qml:46 contents/ui/NavigationBar.qml:51
-#: contents/ui/Sidebar.qml:124 contents/ui/Sidebar.qml:131
+#: contents/ui/Sidebar.qml:126 contents/ui/Sidebar.qml:133
 #, kde-format
 msgid "Favourites"
 msgstr "Priljubljene"
 
-#: contents/ui/LibraryPage.qml:39 contents/ui/LibraryPage.qml:225
+#: contents/ui/LibraryPage.qml:39 contents/ui/LibraryPage.qml:254
 #, kde-format
 msgid "Show All"
 msgstr "Prikaži vse"
 
-#: contents/ui/LibraryPage.qml:214
+#: contents/ui/LibraryPage.qml:69
+#, fuzzy, kde-format
+#| msgid "Favourites"
+msgid "No Favourites Yet"
+msgstr "Priljubljene"
+
+#: contents/ui/LibraryPage.qml:243
 #, kde-format
 msgid "Most played"
 msgstr "Največkrat predvajane"
 
-#: contents/ui/LibraryPage.qml:230
+#: contents/ui/LibraryPage.qml:259
 #, kde-format
 msgid "played Songs"
 msgstr "predvajane pesmi"
 
-#: contents/ui/main.qml:108
+#: contents/ui/LibraryPage.qml:283
+#, fuzzy, kde-format
+#| msgid "No songs here yet"
+msgid "No Songs Played Yet"
+msgstr "Tu še ni nobene pesmi"
+
+#: contents/ui/main.qml:108 main.cpp:42
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
@@ -147,18 +149,18 @@ msgstr "%1%"
 msgid "Remove Track"
 msgstr "Odstrani sled"
 
-#: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:93
+#: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:95
 #, kde-format
 msgid "Library"
 msgstr "Knjižnica"
 
-#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:109
+#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:111
 #, kde-format
 msgid "Search"
 msgstr "Išči"
 
 #: contents/ui/NavigationBar.qml:58 contents/ui/NavigationBar.qml:63
-#: contents/ui/Sidebar.qml:143 contents/ui/Sidebar.qml:150
+#: contents/ui/Sidebar.qml:145 contents/ui/Sidebar.qml:152
 #, kde-format
 msgid "Played Songs"
 msgstr "Predvajane pesmi"
@@ -208,7 +210,12 @@ msgstr "Ni zadetkov iz prejšnjih iskanj"
 msgid "remove from search history"
 msgstr "odstrani iz zgodovine iskanj"
 
-#: contents/ui/Sidebar.qml:179
+#: contents/ui/Sidebar.qml:169
+#, kde-format
+msgid "About"
+msgstr ""
+
+#: contents/ui/Sidebar.qml:183
 #, kde-format
 msgid "Collapse Sidebar"
 msgstr "Strni stransko vrstico"
@@ -238,6 +245,54 @@ msgstr "Dodaj priljubljenega"
 msgid "Remove from History"
 msgstr "Odstrani iz zgodovine"
 
+#: main.cpp:44
+#, kde-format
+msgid "YouTube Music Player"
+msgstr ""
+
+#: main.cpp:46
+#, kde-format
+msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
+msgstr ""
+
+#: main.cpp:47
+#, kde-format
+msgid "Jonah Brüchert"
+msgstr ""
+
+#: main.cpp:47
+#, kde-format
+msgid "Maintainer"
+msgstr ""
+
+#: main.cpp:48
+#, kde-format
+msgid "Mathis Brüchert"
+msgstr ""
+
+#: main.cpp:48
+#, kde-format
+msgid "Designer"
+msgstr ""
+
+#: main.cpp:49
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Matjaž Jeran"
+
+#: main.cpp:49
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "matjaz.jeran@amis.net"
+
+#: main.cpp:54
+#, fuzzy, kde-format
+#| msgid "Find music on YouTube Music"
+msgid "Unofficial API for YouTube Music"
+msgstr "Najdi glasbo na Youtube Music"
+
 #~ msgid "%"
 #~ msgstr "%"
 
@@ -255,9 +310,6 @@ msgstr "Odstrani iz zgodovine"
 
 #~ msgid "Back"
 #~ msgstr "Nazaj"
-
-#~ msgid "Find music on YouTube Music"
-#~ msgstr "Najdi glasbo na Youtube Music"
 
 #~ msgid "Add to Playlist"
 #~ msgstr "Dodaj v seznam predvajanja"
