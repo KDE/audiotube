@@ -9,9 +9,11 @@ import org.kde.kirigami 2.20 as Kirigami
 import org.kde.ytmusic 1.0
 
 Rectangle {
+    property int sidebarWidth: 230
+    property int sidebarWidthCollapsed: 60
     property bool collapsed: false
     id: sidebar
-    width: 200
+    width: sidebarWidth
     clip:true
     Kirigami.Theme.colorSet: Kirigami.Theme.Window
     Kirigami.Theme.inherit: false
@@ -27,13 +29,13 @@ Rectangle {
         id: collapse
         easing.type: Easing.OutCubic
         running: false
-        from: 200; to: 60
+        from: sidebarWidth; to: sidebarWidthCollapsed
     }
     NumberAnimation on width{
         id: show
         easing.type: Easing.OutCubic
         running: false
-        from: 60; to: 200
+        from: sidebarWidthCollapsed; to: sidebarWidth
         //this is only a workaround to stop the text from disappearing
         onFinished:{
             libraryButton.checked =!libraryButton.checked
