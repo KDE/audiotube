@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-16 00:57+0000\n"
-"PO-Revision-Date: 2023-02-08 14:22+0100\n"
+"PO-Revision-Date: 2023-02-16 10:07+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -107,10 +107,9 @@ msgid "Show All"
 msgstr "Alles tonen"
 
 #: contents/ui/LibraryPage.qml:69
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "No Favourites Yet"
-msgstr "Favorieten"
+msgstr "Nog geen favorieten"
 
 #: contents/ui/LibraryPage.qml:243
 #, kde-format
@@ -123,10 +122,9 @@ msgid "played Songs"
 msgstr "afgespeelde songs"
 
 #: contents/ui/LibraryPage.qml:283
-#, fuzzy, kde-format
-#| msgid "No songs here yet"
+#, kde-format
 msgid "No Songs Played Yet"
-msgstr "Er zijn hier nog geen songs"
+msgstr "Nog geen songs afgespeeld"
 
 #: contents/ui/main.qml:108 main.cpp:42
 #, kde-format
@@ -214,7 +212,7 @@ msgstr "uit zoekgeschiedenis verwijderen"
 #: contents/ui/Sidebar.qml:169
 #, kde-format
 msgid "About"
-msgstr ""
+msgstr "Info over"
 
 #: contents/ui/Sidebar.qml:183
 #, kde-format
@@ -249,32 +247,32 @@ msgstr "Uit geschiedenis verwijderen"
 #: main.cpp:44
 #, kde-format
 msgid "YouTube Music Player"
-msgstr ""
+msgstr "YouTube muziekspeler"
 
 #: main.cpp:46
 #, kde-format
 msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
-msgstr ""
+msgstr "© 2021-2023 Jonah Brüchert, 2021-2023 KDE-gemeenschap"
 
 #: main.cpp:47
 #, kde-format
 msgid "Jonah Brüchert"
-msgstr ""
+msgstr "Jonah Brüchert"
 
 #: main.cpp:47
 #, kde-format
 msgid "Maintainer"
-msgstr ""
+msgstr "Onderhouder"
 
 #: main.cpp:48
 #, kde-format
 msgid "Mathis Brüchert"
-msgstr ""
+msgstr "Mathis Brüchert"
 
 #: main.cpp:48
 #, kde-format
 msgid "Designer"
-msgstr ""
+msgstr "Ontwerper"
 
 #: main.cpp:49
 #, kde-format
@@ -289,10 +287,9 @@ msgid "Your emails"
 msgstr "freekdekruijf@kde.nl"
 
 #: main.cpp:54
-#, fuzzy, kde-format
-#| msgid "Find music on YouTube Music"
+#, kde-format
 msgid "Unofficial API for YouTube Music"
-msgstr "Muziek zoeken op YouTube Music"
+msgstr "Niet officiële API voor YouTube Music"
 
 #~ msgid "%"
 #~ msgstr "%"

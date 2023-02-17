@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-16 00:57+0000\n"
-"PO-Revision-Date: 2023-02-08 11:05+0300\n"
+"PO-Revision-Date: 2023-02-16 10:33+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -107,10 +107,9 @@ msgid "Show All"
 msgstr "Tümünü Göster"
 
 #: contents/ui/LibraryPage.qml:69
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "No Favourites Yet"
-msgstr "Beğeniler"
+msgstr "Henüz Beğeni Yok"
 
 #: contents/ui/LibraryPage.qml:243
 #, kde-format
@@ -123,10 +122,9 @@ msgid "played Songs"
 msgstr "Çalınan Şarkılar"
 
 #: contents/ui/LibraryPage.qml:283
-#, fuzzy, kde-format
-#| msgid "No songs here yet"
+#, kde-format
 msgid "No Songs Played Yet"
-msgstr "Burada henüz şarkı yok"
+msgstr "Henüz Şarkı Çalınmamış"
 
 #: contents/ui/main.qml:108 main.cpp:42
 #, kde-format
@@ -214,7 +212,7 @@ msgstr "arama geçmişinden kaldır"
 #: contents/ui/Sidebar.qml:169
 #, kde-format
 msgid "About"
-msgstr ""
+msgstr "Hakkında"
 
 #: contents/ui/Sidebar.qml:183
 #, kde-format
@@ -249,32 +247,32 @@ msgstr "Geçmişten Kaldır"
 #: main.cpp:44
 #, kde-format
 msgid "YouTube Music Player"
-msgstr ""
+msgstr "YouTube Müzik Çaları"
 
 #: main.cpp:46
 #, kde-format
 msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
-msgstr ""
+msgstr "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Topluluğu"
 
 #: main.cpp:47
 #, kde-format
 msgid "Jonah Brüchert"
-msgstr ""
+msgstr "Jonah Brüchert"
 
 #: main.cpp:47
 #, kde-format
 msgid "Maintainer"
-msgstr ""
+msgstr "Bakımcı"
 
 #: main.cpp:48
 #, kde-format
 msgid "Mathis Brüchert"
-msgstr ""
+msgstr "Mathis Brüchert"
 
 #: main.cpp:48
 #, kde-format
 msgid "Designer"
-msgstr ""
+msgstr "Tasarımcı"
 
 #: main.cpp:49
 #, kde-format
@@ -289,10 +287,9 @@ msgid "Your emails"
 msgstr "emir_sari@icloud.com"
 
 #: main.cpp:54
-#, fuzzy, kde-format
-#| msgid "Find music on YouTube Music"
+#, kde-format
 msgid "Unofficial API for YouTube Music"
-msgstr "YouTube Müzik'te müzik bul"
+msgstr "YouTube Müzik için resmi olmayan API"
 
 #~ msgid "%"
 #~ msgstr "%"
