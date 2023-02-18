@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-08 01:02+0000\n"
+"POT-Creation-Date: 2023-02-16 00:57+0000\n"
 "PO-Revision-Date: 2023-02-09 21:36+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -19,16 +19,6 @@ msgstr ""
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
-
-#, kde-format
-msgctxt "NAME OF TRANSLATORS"
-msgid "Your names"
-msgstr "Øystein Steffensen-Alværvik"
-
-#, kde-format
-msgctxt "EMAIL OF TRANSLATORS"
-msgid "Your emails"
-msgstr "oysteins.omsetting@protonmail.com"
 
 #: contents/ui/AlbumPage.qml:22 contents/ui/PlaylistPage.qml:26
 #, kde-format
@@ -107,27 +97,37 @@ msgstr "Avbryt"
 
 #: contents/ui/LibraryPage.qml:28 contents/ui/LibraryPage.qml:44
 #: contents/ui/NavigationBar.qml:46 contents/ui/NavigationBar.qml:51
-#: contents/ui/Sidebar.qml:124 contents/ui/Sidebar.qml:131
+#: contents/ui/Sidebar.qml:126 contents/ui/Sidebar.qml:133
 #, kde-format
 msgid "Favourites"
 msgstr "Favorittar"
 
-#: contents/ui/LibraryPage.qml:39 contents/ui/LibraryPage.qml:225
+#: contents/ui/LibraryPage.qml:39 contents/ui/LibraryPage.qml:254
 #, kde-format
 msgid "Show All"
 msgstr "Vis alle"
 
-#: contents/ui/LibraryPage.qml:214
+#: contents/ui/LibraryPage.qml:69
+#, kde-format
+msgid "No Favourites Yet"
+msgstr ""
+
+#: contents/ui/LibraryPage.qml:243
 #, kde-format
 msgid "Most played"
 msgstr "Oftast avspela"
 
-#: contents/ui/LibraryPage.qml:230
+#: contents/ui/LibraryPage.qml:259
 #, kde-format
 msgid "played Songs"
 msgstr "Avspela songar"
 
-#: contents/ui/main.qml:108
+#: contents/ui/LibraryPage.qml:283
+#, kde-format
+msgid "No Songs Played Yet"
+msgstr ""
+
+#: contents/ui/main.qml:108 main.cpp:42
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
@@ -149,18 +149,18 @@ msgstr "%1 %"
 msgid "Remove Track"
 msgstr "Fjern spor"
 
-#: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:93
+#: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:95
 #, kde-format
 msgid "Library"
 msgstr "Bibliotek"
 
-#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:109
+#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:111
 #, kde-format
 msgid "Search"
 msgstr "Søk"
 
 #: contents/ui/NavigationBar.qml:58 contents/ui/NavigationBar.qml:63
-#: contents/ui/Sidebar.qml:143 contents/ui/Sidebar.qml:150
+#: contents/ui/Sidebar.qml:145 contents/ui/Sidebar.qml:152
 #, kde-format
 msgid "Played Songs"
 msgstr "Avspela songar"
@@ -210,7 +210,12 @@ msgstr "Ingen samsvarande tidlegare søk"
 msgid "remove from search history"
 msgstr "Fjern frå søkjeloggen"
 
-#: contents/ui/Sidebar.qml:179
+#: contents/ui/Sidebar.qml:169
+#, kde-format
+msgid "About"
+msgstr ""
+
+#: contents/ui/Sidebar.qml:183
 #, kde-format
 msgid "Collapse Sidebar"
 msgstr "Fald saman sidestolpe"
@@ -239,3 +244,50 @@ msgstr "Legg til favorittar"
 #, kde-format
 msgid "Remove from History"
 msgstr "Fjern frå loggen"
+
+#: main.cpp:44
+#, kde-format
+msgid "YouTube Music Player"
+msgstr ""
+
+#: main.cpp:46
+#, kde-format
+msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
+msgstr ""
+
+#: main.cpp:47
+#, kde-format
+msgid "Jonah Brüchert"
+msgstr ""
+
+#: main.cpp:47
+#, kde-format
+msgid "Maintainer"
+msgstr ""
+
+#: main.cpp:48
+#, kde-format
+msgid "Mathis Brüchert"
+msgstr ""
+
+#: main.cpp:48
+#, kde-format
+msgid "Designer"
+msgstr ""
+
+#: main.cpp:49
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Øystein Steffensen-Alværvik"
+
+#: main.cpp:49
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "oysteins.omsetting@protonmail.com"
+
+#: main.cpp:54
+#, kde-format
+msgid "Unofficial API for YouTube Music"
+msgstr ""

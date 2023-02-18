@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-16 00:57+0000\n"
-"PO-Revision-Date: 2023-02-11 16:25+0100\n"
+"PO-Revision-Date: 2023-02-16 19:45+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: contents/ui/AlbumPage.qml:22 contents/ui/PlaylistPage.qml:26
 #, kde-format
@@ -105,10 +105,9 @@ msgid "Show All"
 msgstr "Tout afficher"
 
 #: contents/ui/LibraryPage.qml:69
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "No Favourites Yet"
-msgstr "Favoris"
+msgstr "Encore aucun favori"
 
 #: contents/ui/LibraryPage.qml:243
 #, kde-format
@@ -121,10 +120,9 @@ msgid "played Songs"
 msgstr "Titres lus"
 
 #: contents/ui/LibraryPage.qml:283
-#, fuzzy, kde-format
-#| msgid "No songs here yet"
+#, kde-format
 msgid "No Songs Played Yet"
-msgstr "Aucun titre ici encore"
+msgstr "Encore aucune chanson jouée"
 
 #: contents/ui/main.qml:108 main.cpp:42
 #, kde-format
@@ -212,7 +210,7 @@ msgstr "supprimer de l'historique de recherche"
 #: contents/ui/Sidebar.qml:169
 #, kde-format
 msgid "About"
-msgstr ""
+msgstr "À propos"
 
 #: contents/ui/Sidebar.qml:183
 #, kde-format
@@ -247,32 +245,32 @@ msgstr "Supprimer de l'historique"
 #: main.cpp:44
 #, kde-format
 msgid "YouTube Music Player"
-msgstr ""
+msgstr "Lecteur de musique pour YouTube"
 
 #: main.cpp:46
 #, kde-format
 msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
-msgstr ""
+msgstr "© 2021 - 2023 Jonah Brüchert, 2021 - 2023 La communauté de KDE"
 
 #: main.cpp:47
 #, kde-format
 msgid "Jonah Brüchert"
-msgstr ""
+msgstr "Jonah Brüchert"
 
 #: main.cpp:47
 #, kde-format
 msgid "Maintainer"
-msgstr ""
+msgstr "Mainteneur"
 
 #: main.cpp:48
 #, kde-format
 msgid "Mathis Brüchert"
-msgstr ""
+msgstr "Mathis Brüchert"
 
 #: main.cpp:48
 #, kde-format
 msgid "Designer"
-msgstr ""
+msgstr "Concepteur"
 
 #: main.cpp:49
 #, kde-format
@@ -287,10 +285,9 @@ msgid "Your emails"
 msgstr "xavier.besnard@neuf.fr"
 
 #: main.cpp:54
-#, fuzzy, kde-format
-#| msgid "Find music on YouTube Music"
+#, kde-format
 msgid "Unofficial API for YouTube Music"
-msgstr "Rechercher de la musique sur « YouTube Music »"
+msgstr "API non officiel pour la musique sur « YouTube Music »"
 
 #~ msgid "%"
 #~ msgstr "%"
