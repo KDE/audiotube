@@ -80,6 +80,7 @@ public:
     Q_INVOKABLE void playNext(const QString &videoId, const QString &title, const std::vector<meta::Artist> &artists);
     Q_INVOKABLE void append(const QString &videoId, const QString &title, const std::vector<meta::Artist> &artists);
     Q_INVOKABLE void clear();
+    Q_INVOKABLE void clearExceptCurrent();
     Q_INVOKABLE void remove(const QString &videoId);
     Q_INVOKABLE void shufflePlaylist();
 

@@ -290,6 +290,27 @@ void UserPlaylistModel::clear()
 
 }
 
+void UserPlaylistModel::clearExceptCurrent()
+{
+    int index = currentIndex();
+    Q_ASSERT(checkIndex(createIndex(index, 0), CheckIndexOption::IndexIsValid | CheckIndexOption::DoNotUseParent));
+    if((unsigned) index < m_playlist.tracks.size() - 1) {
+        beginRemoveRows({}, index + 1, m_playlist.tracks.size() - 1);
+        m_playlist.tracks.erase(m_playlist.tracks.begin() + index + 1, m_playlist.tracks.end());
+        endRemoveRows();
+    }
+    
+    if(index > 0) {
+        beginRemoveRows({}, 0, index - 1);
+        m_playlist.tracks.erase(m_playlist.tracks.begin(), m_playlist.tracks.begin() + index);
+        endRemoveRows();
+    }
+    
+    Q_EMIT canSkipChanged();
+    Q_EMIT canSkipBackChanged();
+}
+
+
 void UserPlaylistModel::remove(const QString &videoId)
 {
     if (m_currentVideoId == videoId) {

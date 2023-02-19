@@ -186,7 +186,7 @@ Item {
                 Layout.topMargin: Kirigami.Units.largeSpacing
                 Layout.leftMargin: Kirigami.Units.gridUnit * 2
                 Layout.rightMargin: Kirigami.Units.gridUnit * 2
-                Layout.bottomMargin: Kirigami.Units.gridUnit * 2
+                Layout.bottomMargin: Kirigami.Units.gridUnit * 0.5
 
                 // song name
                 Label {
@@ -413,23 +413,6 @@ Item {
                     }
 
                     ToolButton {
-                        id: shuffleButton
-                        Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
-                        Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
-                        Layout.maximumWidth: height
-                        Layout.preferredWidth: height
-
-                        onClicked: UserPlaylistModel.shufflePlaylist()
-
-                        icon.name: "media-playlist-shuffle"
-                        icon.color: "white"
-                        text: "Shuffle"
-                        display: AbstractButton.IconOnly
-                        Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
-                        Kirigami.Theme.inherit: false
-                    }
-
-                    ToolButton {
                         id: volumeButtonSmallScreen
                         Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
                         Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
@@ -504,6 +487,7 @@ Item {
                                     }
 
                                     Slider {
+                                        id: slider
                                         value: volumeSlider.value
                                         opacity: volumeSlider.opacity
                                         wheelEnabled: true
@@ -518,7 +502,7 @@ Item {
                                     }
 
                                     Label {
-                                        Layout.preferredHeight: Slider.height
+                                        Layout.preferredHeight: slider.height
                                         Layout.preferredWidth: Kirigami.Units.gridUnit * 2.5
 
                                         text: volumeLabel.text
@@ -712,107 +696,176 @@ Item {
                 color: "white"
                 opacity: 0.2
             }
-            ScrollView {
+            ColumnLayout {
+                spacing: 0  
                 anchors.fill: parent
-                ListView {
-                    spacing: 5
-                    rightMargin: 10
-                    leftMargin:10
-                    topMargin:10
-                    bottomMargin: 10
-                    clip: true
+                ScrollView {
+                    id: playListScrollView
 
-                    Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
-                    Kirigami.Theme.inherit: false
+                    contentWidth: availableWidth
 
-                    BusyIndicator {
-                        anchors.centerIn: parent
-                        visible: UserPlaylistModel.loading || UserPlaylistModel.loading
+                    Layout.fillWidth: true
+                    Layout.fillHeight: true
+
+                    ListView {
+                        id: playListView
+                        spacing: 5
+                        rightMargin: 10
+                        leftMargin:10
+                        topMargin:10
+                        bottomMargin: 10
+                        clip: true
+                        contentWidth: playListScrollView.contentWidth - rightMargin - leftMargin
+
+                        Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
+                        Kirigami.Theme.inherit: false
+
+                        BusyIndicator {
+                            anchors.centerIn: parent
+                            visible: UserPlaylistModel.loading || UserPlaylistModel.loading
+                        }
+
+                        model: UserPlaylistModel
+
+                        delegate: Kirigami.SwipeListItem {
+                            id: delegateItem
+                            required property string title
+                            required property string videoId
+                            required property string artists
+                            required property bool isCurrent
+                            required property int index
+                            
+                            width: playListView.contentWidth
+                            alwaysVisibleActions: true
+
+                            background: Rectangle{
+                                radius: 7
+                                color:
+                                    if (parent.down){
+                                        Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.3)
+                                    }else if(parent.hovered){
+                                        Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.7)
+                                    }else if(parent.highlighted){
+                                        Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.7)
+                                    }else{
+                                        Qt.rgba(0, 0, 0, 0.4)
+                                    }
+
+                                border.color:
+                                                if (parent.down){
+                                                    Kirigami.Theme.hoverColor
+                                                }else if(parent.hovered){
+                                                    Kirigami.Theme.hoverColor
+                                                }else{
+                                                    Qt.rgba(1, 1, 1, 0)
+                                                }
+
+                                border.width: 1
+                            }
+                            highlighted: isCurrent
+                            onClicked: UserPlaylistModel.skipTo(videoId)
+                            contentItem: RowLayout{
+                                ThumbnailSource {
+                                    id: delegateThumbnailSource
+                                    videoId: delegateItem.videoId
+                                }
+                                RoundedImage {
+                                    source: delegateThumbnailSource.cachedPath
+                                    Layout.margins: 2.5
+                                    height: delegateItem.height
+                                    width: height
+                                    radius: 5
+                                }
+
+                                ColumnLayout {
+                                    Layout.margins: 5
+
+                                    Layout.fillWidth: true
+                                    Kirigami.Heading {
+    //                                        Layout.leftMargin: 5
+    //                                        Layout.rightMargin: 5
+    //                                        Layout.topMargin: 5
+
+                                        elide: Text.ElideRight
+                                        Layout.fillWidth: true
+                                        level: 2
+                                        text: title
+                                    }
+
+                                    Label {
+
+                                        elide: Text.ElideRight
+                                        Layout.fillWidth: true
+                                        color: Kirigami.Theme.disabledTextColor
+                                        text: artists
+                                    }
+                                }
+                            }
+                            actions: [
+                                Kirigami.Action {
+                                    text: i18n("Remove Track")
+                                    icon.name: "list-remove"
+                                    icon.color: "white"
+                                    onTriggered: UserPlaylistModel.remove(delegateItem.videoId)
+                                }
+                            ]
+                        }
                     }
+                }
+                
+                Kirigami.Separator {
+                    color: "white"
+                    opacity: 0.3
+                    Layout.fillWidth: true
+                }
+                
+                RowLayout{
+                    Layout.margins: Kirigami.Units.gridUnit * 0.5
+                    Item {
+                        Layout.fillWidth: true
+                    }
+                    
+                    ToolButton {
+                        id: clearPlaylistButton
 
-                    model: UserPlaylistModel
-
-                    delegate: Kirigami.SwipeListItem {
-                        id: delegateItem
-                        required property string title
-                        required property string videoId
-                        required property string artists
-                        required property bool isCurrent
-                        required property int index
-
-                        alwaysVisibleActions: true
-
-                        background: Rectangle{
-                            radius: 7
-                            color:
-                                if (parent.down){
-                                    Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.3)
-                                }else if(parent.hovered){
-                                    Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.7)
-                                }else if(parent.highlighted){
-                                    Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.7)
-                                }else{
-                                    Qt.rgba(0, 0, 0, 0.4)
-                                }
-
-                            border.color:
-                                            if (parent.down){
-                                                Kirigami.Theme.hoverColor
-                                            }else if(parent.hovered){
-                                                Kirigami.Theme.hoverColor
-                                            }else{
-                                                  Qt.rgba(1, 1, 1, 0)
-                                            }
-
-                            border.width: 1
+                        Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
+                        Layout.maximumWidth: height
+                        Layout.preferredWidth: height
+                        
+                        text: i18n("Clear Playlist")
+                        icon {
+                            name: "edit-clear-all"
+                            color: "white"
                         }
-                        highlighted: isCurrent
-                        onClicked: UserPlaylistModel.skipTo(videoId)
-                        contentItem: RowLayout{
-                            ThumbnailSource {
-                                id: delegateThumbnailSource
-                                videoId: delegateItem.videoId
-                            }
-                            RoundedImage {
-                                source: delegateThumbnailSource.cachedPath
-                                Layout.margins: 2.5
-                                height: delegateItem.height
-                                width: height
-                                radius: 5
-                            }
+                        display: AbstractButton.IconOnly
+                        
+                        onClicked: UserPlaylistModel.clearExceptCurrent()
+                        
+                        Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
+                        Kirigami.Theme.inherit: false
+                    }
+                    
+                    ToolButton {
+                        id: shuffleButton
+                        Layout.preferredHeight: Math.round(Kirigami.Units.gridUnit * 2.5)
+                        Layout.maximumWidth: height
+                        Layout.preferredWidth: height
+                        
+                        onClicked: UserPlaylistModel.shufflePlaylist()
+                        
+                        text: i18n("Shuffle")
 
-                            ColumnLayout {
-                                Layout.margins: 5
-
-                                Layout.fillWidth: true
-                                Kirigami.Heading {
-//                                        Layout.leftMargin: 5
-//                                        Layout.rightMargin: 5
-//                                        Layout.topMargin: 5
-
-                                    elide: Text.ElideRight
-                                    Layout.fillWidth: true
-                                    level: 2
-                                    text: title
-                                }
-
-                                Label {
-
-                                    elide: Text.ElideRight
-                                    Layout.fillWidth: true
-                                    color: Kirigami.Theme.disabledTextColor
-                                    text: artists
-                                }
-                            }
+                        icon {
+                            name: "media-playlist-shuffle"
+                            color: "white"
                         }
-                        actions: [
-                            Kirigami.Action {
-                                text: i18n("Remove Track")
-                                icon.name: "list-remove"
-                                icon.color: "white"
-                                onTriggered: UserPlaylistModel.remove(delegateItem.videoId)
-                            }
-                        ]
+                        display: AbstractButton.IconOnly
+                        Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
+                        Kirigami.Theme.inherit: false
+                    }
+                    
+                    Item {
+                        Layout.fillWidth: true
                     }
                 }
             }
@@ -843,8 +896,8 @@ Item {
                     opacity: 0.7
                     width: 40
                     height: 4
-
                 }
+                
                 ScrollView {
                     Layout.fillWidth: true
                     Layout.fillHeight: true
@@ -915,6 +968,57 @@ Item {
                                 }
                             ]
                         }
+                    }
+                }
+                Kirigami.Separator {
+                    color: "white"
+                    opacity: 0.3
+                    Layout.fillWidth: true
+                }
+                
+                RowLayout{
+                    Layout.topMargin: Kirigami.Units.largeSpacing
+                    Layout.bottomMargin: Kirigami.Units.largeSpacing
+                    spacing: Kirigami.Units.largeSpacing
+                    Item {
+                        Layout.fillWidth: true
+                    }
+                    
+                    ToolButton {
+                        Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
+                        Layout.maximumWidth: height
+                        Layout.preferredWidth: height
+                        
+                        text: clearPlaylistButton.text
+                        icon: clearPlaylistButton.icon
+                        display: clearPlaylistButton.display
+                        
+                        onClicked: {
+                            UserPlaylistModel.clearExceptCurrent()
+                        }
+                        
+                        Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
+                        Kirigami.Theme.inherit: false
+                    }
+                    
+                    ToolButton {
+                        Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
+                        Layout.maximumWidth: height
+                        Layout.preferredWidth: height
+                        
+                        onClicked: {
+                            UserPlaylistModel.shufflePlaylist()
+                        }
+                        
+                        icon: shuffleButton.icon
+                        text: shuffleButton.text
+                        display: shuffleButton.display
+                        Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
+                        Kirigami.Theme.inherit: false
+                    }
+                    
+                    Item {
+                        Layout.fillWidth: true
                     }
                 }
             }
