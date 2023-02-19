@@ -1,14 +1,14 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the audiotube package.
 #
-# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2021, 2022.
+# Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>, 2021, 2022, 2023.
 # Ignacy Kajdan <ignacy.kajdan@gmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-16 00:57+0000\n"
-"PO-Revision-Date: 2022-10-18 18:06+0200\n"
+"POT-Creation-Date: 2023-02-19 00:57+0000\n"
+"PO-Revision-Date: 2023-02-18 09:19+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 22.12.2\n"
 
 #: contents/ui/AlbumPage.qml:22 contents/ui/PlaylistPage.qml:26
 #, kde-format
@@ -38,14 +38,14 @@ msgstr "Otwórz w przeglądarce"
 #: contents/ui/AlbumPage.qml:44
 #, kde-format
 msgid "Album • %1"
-msgstr ""
+msgstr "Album • %1"
 
 #: contents/ui/AlbumPage.qml:88 contents/ui/ArtistPage.qml:126
 #: contents/ui/PlaybackHistory.qml:80 contents/ui/PlaylistPage.qml:91
 #: contents/ui/SearchPage.qml:130
 #, kde-format
 msgid "More"
-msgstr ""
+msgstr "Więcej"
 
 #: contents/ui/ArtistPage.qml:27
 #, kde-format
@@ -53,10 +53,9 @@ msgid "Radio"
 msgstr "Radio"
 
 #: contents/ui/ArtistPage.qml:46
-#, fuzzy, kde-format
-#| msgid "Artists"
+#, kde-format
 msgid "Artist"
-msgstr "Wykonawcy"
+msgstr "Wykonawca"
 
 #: contents/ui/ArtistPage.qml:68 contents/ui/SearchPage.qml:70
 #, kde-format
@@ -99,7 +98,7 @@ msgstr "Anuluj"
 
 #: contents/ui/LibraryPage.qml:28 contents/ui/LibraryPage.qml:44
 #: contents/ui/NavigationBar.qml:46 contents/ui/NavigationBar.qml:51
-#: contents/ui/Sidebar.qml:126 contents/ui/Sidebar.qml:133
+#: contents/ui/Sidebar.qml:128 contents/ui/Sidebar.qml:135
 #, kde-format
 msgid "Favourites"
 msgstr "Ulubione"
@@ -121,10 +120,9 @@ msgid "Most played"
 msgstr "Najczęściej odtwarzane"
 
 #: contents/ui/LibraryPage.qml:259
-#, fuzzy, kde-format
-#| msgid "Played Songs"
+#, kde-format
 msgid "played Songs"
-msgstr "Odtwarzane utwory"
+msgstr "odtworzone utwory"
 
 #: contents/ui/LibraryPage.qml:283
 #, fuzzy, kde-format
@@ -146,7 +144,7 @@ msgstr "Nic nie jest odtwarzane"
 #: contents/ui/MaximizedPlayerPage.qml:605
 #, kde-format
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: contents/ui/MaximizedPlayerPage.qml:810
 #: contents/ui/MaximizedPlayerPage.qml:911
@@ -154,18 +152,18 @@ msgstr ""
 msgid "Remove Track"
 msgstr "Usuń utwór"
 
-#: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:95
+#: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:97
 #, kde-format
 msgid "Library"
-msgstr ""
+msgstr "Biblioteka"
 
-#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:111
+#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:113
 #, kde-format
 msgid "Search"
 msgstr "Szukaj"
 
 #: contents/ui/NavigationBar.qml:58 contents/ui/NavigationBar.qml:63
-#: contents/ui/Sidebar.qml:145 contents/ui/Sidebar.qml:152
+#: contents/ui/Sidebar.qml:147 contents/ui/Sidebar.qml:154
 #, kde-format
 msgid "Played Songs"
 msgstr "Odtwarzane utwory"
@@ -181,15 +179,14 @@ msgid "No songs here yet"
 msgstr "Jeszcze nie ma tutaj utworów"
 
 #: contents/ui/PlaylistPage.qml:42
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "Playlist"
-msgstr "Listy odtwarzania"
+msgstr "Lista odtwarzania"
 
 #: contents/ui/SearchPage.qml:16
 #, kde-format
 msgid "Previous Searches:"
-msgstr ""
+msgstr "Poprzednie wyszukiwania:"
 
 #: contents/ui/SearchPage.qml:28
 #, kde-format
@@ -209,22 +206,22 @@ msgstr "Nieznany"
 #: contents/ui/SearchWithDropdown.qml:286
 #, kde-format
 msgid "No matching previous searches"
-msgstr ""
+msgstr "Żadne z poprzednich wyszukiwań nie odpowiada"
 
 #: contents/ui/SearchWithDropdown.qml:321
 #, kde-format
 msgid "remove from search history"
-msgstr ""
+msgstr "usuń z historii wyszukiwania"
 
-#: contents/ui/Sidebar.qml:169
+#: contents/ui/Sidebar.qml:171
 #, kde-format
 msgid "About"
 msgstr ""
 
-#: contents/ui/Sidebar.qml:183
+#: contents/ui/Sidebar.qml:185
 #, kde-format
 msgid "Collapse Sidebar"
-msgstr ""
+msgstr "Zwiń pasek boczny"
 
 #: contents/ui/SongMenu.qml:116 contents/ui/SongMenu.qml:175
 #, kde-format
@@ -234,24 +231,22 @@ msgstr "Odtwórz następny"
 #: contents/ui/SongMenu.qml:125 contents/ui/SongMenu.qml:181
 #, kde-format
 msgid "Add to queue"
-msgstr ""
+msgstr "Dodaj do kolejki"
 
 #: contents/ui/SongMenu.qml:135 contents/ui/SongMenu.qml:188
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "Remove Favourite"
-msgstr "Ulubione"
+msgstr "Usuń z ulubionych"
 
 #: contents/ui/SongMenu.qml:135 contents/ui/SongMenu.qml:188
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "Add Favourite"
-msgstr "Ulubione"
+msgstr "Dodaj do ulubionych"
 
 #: contents/ui/SongMenu.qml:151 contents/ui/SongMenu.qml:203
 #, kde-format
 msgid "Remove from History"
-msgstr ""
+msgstr "Usuń z historii"
 
 #: main.cpp:44
 #, kde-format

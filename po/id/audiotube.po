@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-16 00:57+0000\n"
+"POT-Creation-Date: 2023-02-19 00:57+0000\n"
 "PO-Revision-Date: 2023-02-15 16:41+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -96,7 +96,7 @@ msgstr "Batalkan"
 
 #: contents/ui/LibraryPage.qml:28 contents/ui/LibraryPage.qml:44
 #: contents/ui/NavigationBar.qml:46 contents/ui/NavigationBar.qml:51
-#: contents/ui/Sidebar.qml:126 contents/ui/Sidebar.qml:133
+#: contents/ui/Sidebar.qml:128 contents/ui/Sidebar.qml:135
 #, kde-format
 msgid "Favourites"
 msgstr "Favorit"
@@ -150,18 +150,18 @@ msgstr "%1%"
 msgid "Remove Track"
 msgstr "Hapus Trek"
 
-#: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:95
+#: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:97
 #, kde-format
 msgid "Library"
 msgstr "Pustaka"
 
-#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:111
+#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:113
 #, kde-format
 msgid "Search"
 msgstr "Cari"
 
 #: contents/ui/NavigationBar.qml:58 contents/ui/NavigationBar.qml:63
-#: contents/ui/Sidebar.qml:145 contents/ui/Sidebar.qml:152
+#: contents/ui/Sidebar.qml:147 contents/ui/Sidebar.qml:154
 #, kde-format
 msgid "Played Songs"
 msgstr "Lagu yang telah diputar"
@@ -211,12 +211,12 @@ msgstr "Tidak ada pencarian sebelumnya yang cocok"
 msgid "remove from search history"
 msgstr "hapus dari riwayat pencarian"
 
-#: contents/ui/Sidebar.qml:169
+#: contents/ui/Sidebar.qml:171
 #, kde-format
 msgid "About"
 msgstr ""
 
-#: contents/ui/Sidebar.qml:183
+#: contents/ui/Sidebar.qml:185
 #, kde-format
 msgid "Collapse Sidebar"
 msgstr "Tutup Bilah Samping"

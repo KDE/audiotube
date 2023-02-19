@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-16 00:57+0000\n"
+"POT-Creation-Date: 2023-02-19 00:57+0000\n"
 "PO-Revision-Date: 2022-01-01 09:11-0800\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -95,7 +95,7 @@ msgstr "ਰੱਦ ਕਰੋ"
 
 #: contents/ui/LibraryPage.qml:28 contents/ui/LibraryPage.qml:44
 #: contents/ui/NavigationBar.qml:46 contents/ui/NavigationBar.qml:51
-#: contents/ui/Sidebar.qml:126 contents/ui/Sidebar.qml:133
+#: contents/ui/Sidebar.qml:128 contents/ui/Sidebar.qml:135
 #, kde-format
 msgid "Favourites"
 msgstr ""
@@ -147,18 +147,18 @@ msgstr ""
 msgid "Remove Track"
 msgstr "ਟਰੈਕ ਨੂੰ ਹਟਾਓ"
 
-#: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:95
+#: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:97
 #, kde-format
 msgid "Library"
 msgstr ""
 
-#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:111
+#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:113
 #, kde-format
 msgid "Search"
 msgstr "ਖੋਜੋ"
 
 #: contents/ui/NavigationBar.qml:58 contents/ui/NavigationBar.qml:63
-#: contents/ui/Sidebar.qml:145 contents/ui/Sidebar.qml:152
+#: contents/ui/Sidebar.qml:147 contents/ui/Sidebar.qml:154
 #, kde-format
 msgid "Played Songs"
 msgstr ""
@@ -209,12 +209,12 @@ msgstr ""
 msgid "remove from search history"
 msgstr ""
 
-#: contents/ui/Sidebar.qml:169
+#: contents/ui/Sidebar.qml:171
 #, kde-format
 msgid "About"
 msgstr ""
 
-#: contents/ui/Sidebar.qml:183
+#: contents/ui/Sidebar.qml:185
 #, kde-format
 msgid "Collapse Sidebar"
 msgstr ""

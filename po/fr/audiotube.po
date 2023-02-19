@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-16 00:57+0000\n"
+"POT-Creation-Date: 2023-02-19 00:57+0000\n"
 "PO-Revision-Date: 2023-02-16 19:45+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
@@ -94,7 +94,7 @@ msgstr "Annuler"
 
 #: contents/ui/LibraryPage.qml:28 contents/ui/LibraryPage.qml:44
 #: contents/ui/NavigationBar.qml:46 contents/ui/NavigationBar.qml:51
-#: contents/ui/Sidebar.qml:126 contents/ui/Sidebar.qml:133
+#: contents/ui/Sidebar.qml:128 contents/ui/Sidebar.qml:135
 #, kde-format
 msgid "Favourites"
 msgstr "Favoris"
@@ -146,18 +146,18 @@ msgstr "%1 %"
 msgid "Remove Track"
 msgstr "Supprimer une piste"
 
-#: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:95
+#: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:97
 #, kde-format
 msgid "Library"
 msgstr "Bibliothèque"
 
-#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:111
+#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:113
 #, kde-format
 msgid "Search"
 msgstr "Rechercher"
 
 #: contents/ui/NavigationBar.qml:58 contents/ui/NavigationBar.qml:63
-#: contents/ui/Sidebar.qml:145 contents/ui/Sidebar.qml:152
+#: contents/ui/Sidebar.qml:147 contents/ui/Sidebar.qml:154
 #, kde-format
 msgid "Played Songs"
 msgstr "Titres lus"
@@ -207,12 +207,12 @@ msgstr "Aucune correspondance avec les recherches précédentes"
 msgid "remove from search history"
 msgstr "supprimer de l'historique de recherche"
 
-#: contents/ui/Sidebar.qml:169
+#: contents/ui/Sidebar.qml:171
 #, kde-format
 msgid "About"
 msgstr "À propos"
 
-#: contents/ui/Sidebar.qml:183
+#: contents/ui/Sidebar.qml:185
 #, kde-format
 msgid "Collapse Sidebar"
 msgstr "Réduire la barre latérale"
