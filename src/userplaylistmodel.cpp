@@ -345,6 +345,35 @@ void UserPlaylistModel::shufflePlaylist()
     Q_EMIT dataChanged(index(0), index(m_playlist.tracks.size() - 1), {});
 }
 
+void UserPlaylistModel::playFavourites(FavouritesModel *favouriteModel, bool shuffled)
+{
+    clear();
+    std::vector<Song> favourites(favouriteModel->getFavouriteSongs());
+    if(shuffled) {
+        std::shuffle(favourites.begin(), favourites.end(), *QRandomGenerator::global());
+    }
+    std::for_each(favourites.begin(), favourites.end(), [this](Song song) {
+        meta::Artist artist;
+        artist.name = song.artist.toStdString();
+        append(song.videoId, song.title, std::vector<meta::Artist>({artist}));
+    });
+}
+
+void UserPlaylistModel::playPlaybackHistory(PlaybackHistoryModel *playbackHistory, bool shuffle)
+{
+    clear();
+    std::vector<PlayedSong> playedSongs(playbackHistory->getPlayedSong());
+    if(shuffle) {
+        std::shuffle(playedSongs.begin(), playedSongs.end(), *QRandomGenerator::global());
+    }
+    std::for_each(playedSongs.begin(), playedSongs.end(), [this](PlayedSong song) {
+        meta::Artist artist;
+        artist.name = song.artist.toStdString();
+        append(song.videoId, song.title, std::vector<meta::Artist>({artist}));
+    });
+}
+
+
 void UserPlaylistModel::emitCurrentVideoChanged(const QString &oldVideoId)
 {
     const auto oldVideoIt = std::find_if(m_playlist.tracks.begin(), m_playlist.tracks.end(),

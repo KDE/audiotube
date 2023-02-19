@@ -9,6 +9,7 @@
 #include <ytmusic.h>
 
 #include "abstractytmusicmodel.h"
+#include "library.h"
 
 class UserPlaylistModel : public AbstractYTMusicModel
 {
@@ -83,6 +84,9 @@ public:
     Q_INVOKABLE void clearExceptCurrent();
     Q_INVOKABLE void remove(const QString &videoId);
     Q_INVOKABLE void shufflePlaylist();
+
+    Q_INVOKABLE void playFavourites(FavouritesModel *favouriteModel, bool shuffle);
+    Q_INVOKABLE void playPlaybackHistory(PlaybackHistoryModel *playbackHistory, bool shuffle);
 
 private:
     void emitCurrentVideoChanged(const QString &oldVideoId);

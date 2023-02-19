@@ -126,6 +126,15 @@ Kirigami.ApplicationWindow {
         UserPlaylistModel.shuffle = true
         UserPlaylistModel.playlistId = playlistId
     }
+
+    function playFavourites(shuffle) {
+        UserPlaylistModel.playFavourites(Library.favourites, shuffle)
+    }
+
+    function playPlaybackHistory(model, shuffle) {
+        UserPlaylistModel.playPlaybackHistory(model, shuffle)
+    }
+
     function focusSearch(){searchLoader.forceFocus()}
 
     Connections {

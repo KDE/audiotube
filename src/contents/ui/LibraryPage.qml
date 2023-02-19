@@ -24,10 +24,23 @@ Kirigami.ScrollablePage {
     ColumnLayout {
         RowLayout {
             Layout.fillWidth: true
+            spacing: Kirigami.Units.MediumSpacing
             Kirigami.Heading {
                 text: i18n("Favourites")
                 Layout.alignment: Qt.AlignLeft
                 leftPadding: 15
+            }
+
+            Controls.ToolButton {
+                text: i18n("Play")
+                icon.name: "media-playback-start"
+                onClicked: applicationWindow().playFavourites(false)
+            }
+
+            Controls.ToolButton {
+                text: i18n("Shuffle")
+                icon.name: "shuffle"
+                onClicked: applicationWindow().playFavourites(true)
             }
 
             // Spacer
@@ -238,10 +251,24 @@ Kirigami.ScrollablePage {
 
         RowLayout {
             Layout.fillWidth: true
+            spacing: Kirigami.Units.MediumSpacing
+
             Kirigami.Heading {
                 text: i18n("Most played")
                 Layout.alignment: Qt.AlignLeft
                 leftPadding: 15
+            }
+
+            Controls.ToolButton {
+                text: i18n("Play")
+                icon.name: "media-playback-start"
+                onClicked: applicationWindow().playPlaybackHistory(Library.mostPlayed, false)
+            }
+
+            Controls.ToolButton {
+                text: i18n("Shuffle")
+                icon.name: "shuffle"
+                onClicked: applicationWindow().playPlaybackHistory(Library.mostPlayed, true)
             }
 
             // Spacer

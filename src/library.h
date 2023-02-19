@@ -48,6 +48,7 @@ public:
     QHash<int, QByteArray> roleNames() const override;
     int rowCount(const QModelIndex &parent) const override;
     QVariant data(const QModelIndex &index, int role) const override;
+    std::vector<Song> getFavouriteSongs() const;
 
 private:
     std::vector<Song> m_favouriteSongs;
@@ -86,6 +87,7 @@ public:
     QHash<int, QByteArray> roleNames() const override;
     int rowCount(const QModelIndex &parent) const override;
     QVariant data(const QModelIndex &index, int role) const override;
+    std::vector<PlayedSong> getPlayedSong() const;
 
 private:
     std::vector<PlayedSong> m_playedSongs;
@@ -122,6 +124,7 @@ public:
 
     FavouritesModel *favourites();
     Q_SIGNAL void favouritesChanged();
+    Q_SIGNAL void changeFavourites();
     Q_INVOKABLE void addFavourite(const QString &videoId, const QString &title, const QString &artist, const QString &album);
     Q_INVOKABLE void removeFavourite(const QString &videoId);
     Q_INVOKABLE FavouriteWatcher *favouriteWatcher(const QString &videoId);
@@ -133,6 +136,7 @@ public:
 
     PlaybackHistoryModel *playbackHistory();
     Q_SIGNAL void playbackHistoryChanged();
+    Q_SIGNAL void changePlaybackHistory();
     Q_INVOKABLE void addPlaybackHistoryItem(const QString &videoId, const QString &title, const QString &artist, const QString &album);
     Q_INVOKABLE void removePlaybackHistoryItem(const QString &videoId);
     Q_INVOKABLE WasPlayedWatcher *wasPlayedWatcher(const QString &videoId);
@@ -150,6 +154,9 @@ private:
     QNetworkAccessManager m_networkImageCacher;
     std::unique_ptr<ThreadedDatabase> m_database;
     SearchHistoryModel *m_searches;
+    FavouritesModel *m_favourites;
+    PlaybackHistoryModel *m_mostPlayed;
+    PlaybackHistoryModel *m_playbackHistory;
 };
 
 

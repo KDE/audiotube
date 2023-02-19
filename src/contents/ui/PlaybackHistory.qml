@@ -15,6 +15,52 @@ Kirigami.ScrollablePage {
     title: i18n("Unknown list of songs")
 
     property QtObject dataModel: (objectName == "history") ? Library.playbackHistory : (objectName == "favourites" ? Library.favourites : null)
+
+    titleDelegate: ColumnLayout {
+        spacing: 0
+
+        RowLayout{
+            spacing: Kirigami.Units.MediumSpacing
+
+            Controls.ToolButton {
+                text: i18n("Play")
+                icon.name: "media-playback-start"
+                onClicked: {
+                    if(playbackHistoryPage.objectName == "favourites") {
+                        applicationWindow().playFavourites(false)
+                    }
+                    else if(playbackHistoryPage.objectName == "history") {
+                        onClicked: applicationWindow().playPlaybackHistory(playbackHistoryPage.dataModel, false)
+                    }
+                }
+            }
+
+            Controls.ToolButton {
+                text: i18n("Shuffle")
+                icon.name: "shuffle"
+                onClicked: {
+                    if(playbackHistoryPage.objectName == "favourites") {
+                        applicationWindow().playFavourites(true)
+                    }
+                    else if(playbackHistoryPage.objectName == "history") {
+                        onClicked: applicationWindow().playPlaybackHistory(playbackHistoryPage.dataModel, true)
+                    }
+                }
+            }
+
+            Item {
+                Layout.fillWidth: true
+            }
+        }
+
+        Kirigami.Separator {
+            color: white
+            opacity: 0.3
+
+            Layout.fillWidth: true
+        }
+    }
+
     SongMenu {
         id:menu
     }
