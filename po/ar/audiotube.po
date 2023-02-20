@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-19 00:57+0000\n"
+"POT-Creation-Date: 2023-02-20 00:56+0000\n"
 "PO-Revision-Date: 2023-02-02 11:59+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -24,7 +24,7 @@ msgid "Play"
 msgstr "شغّل"
 
 #: contents/ui/AlbumPage.qml:29 contents/ui/ArtistPage.qml:32
-#: contents/ui/PlaylistPage.qml:33
+#: contents/ui/MaximizedPlayerPage.qml:856 contents/ui/PlaylistPage.qml:33
 #, kde-format
 msgid "Shuffle"
 msgstr "اخلط"
@@ -138,16 +138,22 @@ msgstr "تيوب الصوتي"
 msgid "No media playing"
 msgstr "لا يوجد وسائط تعمل"
 
-#: contents/ui/MaximizedPlayerPage.qml:605
+#: contents/ui/MaximizedPlayerPage.qml:589
 #, kde-format
 msgid "%1%"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:810
-#: contents/ui/MaximizedPlayerPage.qml:911
+#: contents/ui/MaximizedPlayerPage.qml:806
+#: contents/ui/MaximizedPlayerPage.qml:964
 #, kde-format
 msgid "Remove Track"
 msgstr "أزل المسار"
+
+#: contents/ui/MaximizedPlayerPage.qml:835
+#, fuzzy, kde-format
+#| msgid "Playlist"
+msgid "Clear Playlist"
+msgstr "قائمة التشغيل"
 
 #: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:97
 #, kde-format

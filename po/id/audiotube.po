@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-19 00:57+0000\n"
+"POT-Creation-Date: 2023-02-20 00:56+0000\n"
 "PO-Revision-Date: 2023-02-15 16:41+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -23,7 +23,7 @@ msgid "Play"
 msgstr "Putar"
 
 #: contents/ui/AlbumPage.qml:29 contents/ui/ArtistPage.qml:32
-#: contents/ui/PlaylistPage.qml:33
+#: contents/ui/MaximizedPlayerPage.qml:856 contents/ui/PlaylistPage.qml:33
 #, kde-format
 msgid "Shuffle"
 msgstr "Acak"
@@ -139,16 +139,22 @@ msgstr "AudioTube"
 msgid "No media playing"
 msgstr "Tidak ada media yang diputarkan"
 
-#: contents/ui/MaximizedPlayerPage.qml:605
+#: contents/ui/MaximizedPlayerPage.qml:589
 #, kde-format
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/ui/MaximizedPlayerPage.qml:810
-#: contents/ui/MaximizedPlayerPage.qml:911
+#: contents/ui/MaximizedPlayerPage.qml:806
+#: contents/ui/MaximizedPlayerPage.qml:964
 #, kde-format
 msgid "Remove Track"
 msgstr "Hapus Trek"
+
+#: contents/ui/MaximizedPlayerPage.qml:835
+#, fuzzy, kde-format
+#| msgid "Playlist"
+msgid "Clear Playlist"
+msgstr "Daftar Putar"
 
 #: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:97
 #, kde-format

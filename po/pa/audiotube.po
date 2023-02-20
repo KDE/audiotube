@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-19 00:57+0000\n"
+"POT-Creation-Date: 2023-02-20 00:56+0000\n"
 "PO-Revision-Date: 2022-01-01 09:11-0800\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -23,7 +23,7 @@ msgid "Play"
 msgstr "ਚਲਾਓ"
 
 #: contents/ui/AlbumPage.qml:29 contents/ui/ArtistPage.qml:32
-#: contents/ui/PlaylistPage.qml:33
+#: contents/ui/MaximizedPlayerPage.qml:856 contents/ui/PlaylistPage.qml:33
 #, kde-format
 msgid "Shuffle"
 msgstr "ਰਲਵੇਂ"
@@ -136,16 +136,22 @@ msgstr "ਆਡੀਓ-ਟਿਊਬ"
 msgid "No media playing"
 msgstr "ਕੋਈ ਮੀਡੀਆ ਨਹੀਂ ਚੱਲਦਾ"
 
-#: contents/ui/MaximizedPlayerPage.qml:605
+#: contents/ui/MaximizedPlayerPage.qml:589
 #, kde-format
 msgid "%1%"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:810
-#: contents/ui/MaximizedPlayerPage.qml:911
+#: contents/ui/MaximizedPlayerPage.qml:806
+#: contents/ui/MaximizedPlayerPage.qml:964
 #, kde-format
 msgid "Remove Track"
 msgstr "ਟਰੈਕ ਨੂੰ ਹਟਾਓ"
+
+#: contents/ui/MaximizedPlayerPage.qml:835
+#, fuzzy, kde-format
+#| msgid "Playlists"
+msgid "Clear Playlist"
+msgstr "ਪਲੇਅਲਿਸਟਾਂ"
 
 #: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:97
 #, kde-format

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-19 00:57+0000\n"
+"POT-Creation-Date: 2023-02-20 00:56+0000\n"
 "PO-Revision-Date: 2023-02-17 06:49+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -26,7 +26,7 @@ msgid "Play"
 msgstr "Jo"
 
 #: contents/ui/AlbumPage.qml:29 contents/ui/ArtistPage.qml:32
-#: contents/ui/PlaylistPage.qml:33
+#: contents/ui/MaximizedPlayerPage.qml:856 contents/ui/PlaylistPage.qml:33
 #, kde-format
 msgid "Shuffle"
 msgstr "Nahastu"
@@ -140,16 +140,22 @@ msgstr "AudioTube"
 msgid "No media playing"
 msgstr "Ez da euskarririk jotzen ari"
 
-#: contents/ui/MaximizedPlayerPage.qml:605
+#: contents/ui/MaximizedPlayerPage.qml:589
 #, kde-format
 msgid "%1%"
 msgstr "%%1"
 
-#: contents/ui/MaximizedPlayerPage.qml:810
-#: contents/ui/MaximizedPlayerPage.qml:911
+#: contents/ui/MaximizedPlayerPage.qml:806
+#: contents/ui/MaximizedPlayerPage.qml:964
 #, kde-format
 msgid "Remove Track"
 msgstr "Kendu pista"
+
+#: contents/ui/MaximizedPlayerPage.qml:835
+#, fuzzy, kde-format
+#| msgid "Playlist"
+msgid "Clear Playlist"
+msgstr "Jotze-zerrenda"
 
 #: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:97
 #, kde-format
