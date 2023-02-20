@@ -5,7 +5,7 @@ AudioTube is a client for YouTube Music.
 <a href='https://flathub.org/apps/details/org.kde.audiotube'><img width='190px' alt='Download on Flathub' src='https://flathub.org/assets/badges/flathub-badge-i-en.png'/></a>
 
 ## Links
-* Project page: https://invent.kde.org/plasma-mobile/audiotube
+* Project page: https://invent.kde.org/multimedia/audiotube
 * File issues: https://bugs.kde.org/describecomponents.cgi?product=audiotube
 
 # Dependencies
