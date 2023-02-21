@@ -79,6 +79,15 @@ Kirigami.ScrollablePage {
                     Controls.Label {
                         text: model.display
                         Layout.fillWidth: true
+                        elide: Text.ElideRight
+                    }
+                    Controls.ToolButton {
+                        icon.name: "list-remove"
+                        text: i18n("remove from search history")
+                        display: Controls.AbstractButton.IconOnly
+                        onClicked: {
+                            Library.removeSearch(model.display)
+                        }
                     }
 
                 }
