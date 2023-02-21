@@ -80,13 +80,13 @@ Kirigami.ScrollablePage {
                 Kirigami.Action {
                     icon.name: "media-playback-start"
                     text: i18n("Play")
-                    onTriggered: root.objectName === "favourites"? applicationWindow().playFavourites(false) : applicationWindow().playPlaybackHistory(Library.mostPlayed, false)
+                    onTriggered: root.objectName === "favourites"? applicationWindow().playFavourites(false) : applicationWindow().playPlaybackHistory(Library.playbackHistory, false)
 
                 },
                 Kirigami.Action {
                     icon.name: "media-playlist-shuffle"
                     text: i18n("Shuffle")
-                    onTriggered: root.objectName === "favourites"? applicationWindow().playFavourites(true) : applicationWindow().playPlaybackHistory(Library.mostPlayed, true)
+                    onTriggered: root.objectName === "favourites"? applicationWindow().playFavourites(true) : applicationWindow().playPlaybackHistory(Library.playbackHistory, true)
 
                 }
             ]
