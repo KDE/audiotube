@@ -39,7 +39,7 @@ Item {
         }
         GridLayout {
 
-            x: -400
+            x: -250
             y: -400
             rowSpacing: columnSpacing
             columnSpacing: 30
@@ -71,7 +71,7 @@ Item {
 
         GridLayout {
 
-            x: -400
+            x: -250
             y: -400
             rowSpacing: columnSpacing
             columnSpacing: 30
