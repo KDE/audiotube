@@ -1,9 +1,3 @@
-<!--
-SPDX-FileCopyrightText: 2022 Jonah Brüchert <jbb@kaidan.im>
-
-SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
--->
-
 <RCC>
     <qresource prefix="/">
         <file alias="main.qml">contents/ui/main.qml</file>
@@ -30,5 +24,6 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
         <file>resources/played_placeholder.svg</file>
         <file alias="AboutAudiotube.qml">contents/ui/AboutAudiotube.qml</file>
         <file alias="ShareMenu.qml">contents/ui/ShareMenu.qml</file>
+        <file alias="PlayListHeader.qml">contents/ui/PlayListHeader.qml</file>
     </qresource>
 </RCC>

@@ -11,7 +11,7 @@ import org.kde.kirigami 2.15 as Kirigami
 import org.kde.ytmusic 1.0
 
 Kirigami.ScrollablePage {
-    id: playbackHistoryPage
+    id: root
     title: i18n("Unknown list of songs")
 
     property QtObject dataModel: (objectName == "history") ? Library.playbackHistory : (objectName == "favourites" ? Library.favourites : null)
@@ -73,8 +73,27 @@ Kirigami.ScrollablePage {
             text: i18n("No songs here yet")
             anchors.centerIn: parent
         }
+        header: PlayListHeader{
+            model: root.dataModel
+            title: root.title
+            visibleActions: [
+                Kirigami.Action {
+                    icon.name: "media-playback-start"
+                    text: i18n("Play")
+                    onTriggered: root.objectName === "favourites"? applicationWindow().playFavourites(false) : applicationWindow().playPlaybackHistory(Library.mostPlayed, false)
 
-        model: playbackHistoryPage.dataModel
+                },
+                Kirigami.Action {
+                    icon.name: "media-playlist-shuffle"
+                    text: i18n("Shuffle")
+                    onTriggered: root.objectName === "favourites"? applicationWindow().playFavourites(true) : applicationWindow().playPlaybackHistory(Library.mostPlayed, true)
+
+                }
+            ]
+
+        }
+
+        model: root.dataModel
 
         delegate: Kirigami.SwipeListItem {
             id: delegateItem
@@ -93,7 +112,6 @@ Kirigami.ScrollablePage {
             RowLayout {
                 ThumbnailSource {
                     id: thumbnailSource
-
                     videoId: delegateItem.videoId
                 }
 
