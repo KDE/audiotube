@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-20 00:56+0000\n"
-"PO-Revision-Date: 2023-02-16 09:00+0100\n"
+"PO-Revision-Date: 2023-02-20 10:05+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca\n"
@@ -152,10 +152,9 @@ msgid "Remove Track"
 msgstr "Elimina la pista"
 
 #: contents/ui/MaximizedPlayerPage.qml:835
-#, fuzzy, kde-format
-#| msgid "Playlist"
+#, kde-format
 msgid "Clear Playlist"
-msgstr "Llista de reproducció"
+msgstr "Neteja la llista de reproducció"
 
 #: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:97
 #, kde-format
