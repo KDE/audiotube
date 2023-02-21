@@ -24,6 +24,7 @@ UserPlaylistModel::UserPlaylistModel(QObject *parent)
         beginResetModel();
         m_playlist = playlist;
         endResetModel();
+        setCurrentVideoId({});
         if (m_shuffle) {
             shufflePlaylist();
 
@@ -32,8 +33,6 @@ UserPlaylistModel::UserPlaylistModel(QObject *parent)
         }
         if (!m_playlist.tracks.empty()) {
             setCurrentVideoId(QString::fromStdString(m_playlist.tracks.front().video_id));
-        } else {
-            setCurrentVideoId({});
         }
     };
     connect(this, &UserPlaylistModel::initialVideoIdChanged, this, [=, this] {
