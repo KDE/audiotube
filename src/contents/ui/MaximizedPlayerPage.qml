@@ -964,7 +964,7 @@ Item {
                                     text: i18n("Remove Track")
                                     icon.name: "list-remove"
                                     icon.color: "white"
-                                    onTriggered: UserPlaylistModel.remove(delegateItem.videoId)
+                                    onTriggered: UserPlaylistModel.remove(drawerDelegateItem.videoId)
                                 }
                             ]
                         }
