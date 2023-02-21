@@ -13,7 +13,6 @@ import org.kde.ytmusic 1.0
 
 Item {
     id:root
-
     required property string imageSourceURL
     property bool rounded : false
     required property string title
@@ -65,6 +64,7 @@ Item {
 
         flow: root.width > 500?GridLayout.LeftToRight:GridLayout.TopToBottom
         Kirigami.ShadowedRectangle {
+            Layout.alignment: Qt.AlignHCenter
             color: Kirigami.Theme.backgroundColor
             Layout.margins: 30
             width: 150
@@ -84,10 +84,12 @@ Item {
         }
         ColumnLayout {
             Layout.leftMargin: 30
+            Layout.rightMargin: 30
             Layout.fillWidth: true
 
 
             Controls.Label {
+                horizontalAlignment:  (root.width <= 500)? Qt.AlignHCenter: Qt.AlignLeft
                 Layout.fillWidth: true
                 text: title
                 font.bold: true
@@ -96,6 +98,7 @@ Item {
 
             }
             Controls.Label {
+                horizontalAlignment:  (root.width <= 500)? Qt.AlignHCenter: Qt.AlignLeft
                 Layout.fillWidth: true
                 text: subtitle
                 elide: Qt.ElideRight
@@ -104,7 +107,6 @@ Item {
             RowLayout {
                 visible: root.visibleActions.length>0
                 Layout.topMargin: 30
-                Layout.rightMargin: 30
 
                 Repeater {
                     model: root.visibleActions
