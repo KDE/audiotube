@@ -988,17 +988,18 @@ Item {
                         Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
                         Layout.maximumWidth: height
                         Layout.preferredWidth: height
-                        
+                        icon.color: Kirigami.Theme.textColor
                         text: clearPlaylistButton.text
-                        icon: clearPlaylistButton.icon
+                        icon {
+                            name: "edit-clear-all"
+                        }
                         display: clearPlaylistButton.display
                         
                         onClicked: {
                             UserPlaylistModel.clearExceptCurrent()
                         }
-                        
-                        Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
-                        Kirigami.Theme.inherit: false
+
+
                     }
                     
                     ToolButton {
@@ -1009,12 +1010,11 @@ Item {
                         onClicked: {
                             UserPlaylistModel.shufflePlaylist()
                         }
-                        
-                        icon: shuffleButton.icon
+                        icon {
+                            name: "media-playlist-shuffle"
+                        }
                         text: shuffleButton.text
                         display: shuffleButton.display
-                        Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
-                        Kirigami.Theme.inherit: false
                     }
                     
                     Item {
