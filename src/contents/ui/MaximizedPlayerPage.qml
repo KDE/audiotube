@@ -971,8 +971,6 @@ Item {
                     }
                 }
                 Kirigami.Separator {
-                    color: "white"
-                    opacity: 0.3
                     Layout.fillWidth: true
                 }
                 
