@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-20 00:56+0000\n"
+"POT-Creation-Date: 2023-02-22 00:57+0000\n"
 "PO-Revision-Date: 2023-02-18 09:19+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -189,6 +189,11 @@ msgstr "Jeszcze nie ma tutaj utworów"
 msgid "Playlist"
 msgstr "Lista odtwarzania"
 
+#: contents/ui/SearchHistoryPage.qml:86 contents/ui/SearchWithDropdown.qml:321
+#, kde-format
+msgid "remove from search history"
+msgstr "usuń z historii wyszukiwania"
+
 #: contents/ui/SearchPage.qml:16
 #, kde-format
 msgid "Previous Searches:"
@@ -213,11 +218,6 @@ msgstr "Nieznany"
 #, kde-format
 msgid "No matching previous searches"
 msgstr "Żadne z poprzednich wyszukiwań nie odpowiada"
-
-#: contents/ui/SearchWithDropdown.qml:321
-#, kde-format
-msgid "remove from search history"
-msgstr "usuń z historii wyszukiwania"
 
 #: contents/ui/Sidebar.qml:171
 #, kde-format

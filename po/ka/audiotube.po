@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-20 00:56+0000\n"
+"POT-Creation-Date: 2023-02-22 00:57+0000\n"
 "PO-Revision-Date: 2023-02-20 06:39+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -184,6 +184,11 @@ msgstr "აქ ჯერ სიმღერები არაა"
 msgid "Playlist"
 msgstr "დასაკრავი სია"
 
+#: contents/ui/SearchHistoryPage.qml:86 contents/ui/SearchWithDropdown.qml:321
+#, kde-format
+msgid "remove from search history"
+msgstr "ძებნის ისტორიიდან წაშლა"
+
 #: contents/ui/SearchPage.qml:16
 #, kde-format
 msgid "Previous Searches:"
@@ -208,11 +213,6 @@ msgstr "უცნობი"
 #, kde-format
 msgid "No matching previous searches"
 msgstr "წინა ძებნებს არ ემთხვევა"
-
-#: contents/ui/SearchWithDropdown.qml:321
-#, kde-format
-msgid "remove from search history"
-msgstr "ძებნის ისტორიიდან წაშლა"
 
 #: contents/ui/Sidebar.qml:171
 #, kde-format

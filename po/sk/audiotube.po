@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-20 00:56+0000\n"
+"POT-Creation-Date: 2023-02-22 00:57+0000\n"
 "PO-Revision-Date: 2022-04-07 18:01+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -183,6 +183,11 @@ msgstr ""
 msgid "Playlist"
 msgstr "Zoznamy skladieb"
 
+#: contents/ui/SearchHistoryPage.qml:86 contents/ui/SearchWithDropdown.qml:321
+#, kde-format
+msgid "remove from search history"
+msgstr ""
+
 #: contents/ui/SearchPage.qml:16
 #, kde-format
 msgid "Previous Searches:"
@@ -206,11 +211,6 @@ msgstr "Neznáme"
 #: contents/ui/SearchWithDropdown.qml:286
 #, kde-format
 msgid "No matching previous searches"
-msgstr ""
-
-#: contents/ui/SearchWithDropdown.qml:321
-#, kde-format
-msgid "remove from search history"
 msgstr ""
 
 #: contents/ui/Sidebar.qml:171

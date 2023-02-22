@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-20 00:56+0000\n"
+"POT-Creation-Date: 2023-02-22 00:57+0000\n"
 "PO-Revision-Date: 2023-02-17 17:05+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -185,6 +185,11 @@ msgstr "Belum ada lagu di sini"
 msgid "Playlist"
 msgstr "Daftar Putar"
 
+#: contents/ui/SearchHistoryPage.qml:86 contents/ui/SearchWithDropdown.qml:321
+#, kde-format
+msgid "remove from search history"
+msgstr "hapus dari riwayat pencarian"
+
 #: contents/ui/SearchPage.qml:16
 #, kde-format
 msgid "Previous Searches:"
@@ -209,11 +214,6 @@ msgstr "Tidak diketahui"
 #, kde-format
 msgid "No matching previous searches"
 msgstr "Tidak ada pencarian sebelumnya yang cocok"
-
-#: contents/ui/SearchWithDropdown.qml:321
-#, kde-format
-msgid "remove from search history"
-msgstr "hapus dari riwayat pencarian"
 
 #: contents/ui/Sidebar.qml:171
 #, kde-format
