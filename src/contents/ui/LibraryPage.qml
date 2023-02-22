@@ -40,7 +40,6 @@ Kirigami.ScrollablePage {
                 Layout.alignment: Qt.AlignRight
                 icon.name: "arrow-right"
                 onClicked: {pageStack.push("qrc:/PlaybackHistory.qml", {
-                      "dataModel": Library.favourites,
                       "title": i18n("Favourites"),
                       "objectName": "favourites"
                   })}
@@ -255,7 +254,6 @@ Kirigami.ScrollablePage {
                 Layout.alignment: Qt.AlignRight
                 icon.name: "arrow-right"
                 onClicked: {pageStack.push("qrc:/PlaybackHistory.qml", {
-                      "dataModel": Library.playbackHistory,
                       "title": i18n("played Songs"),
                       "objectName": "history"
                   })}

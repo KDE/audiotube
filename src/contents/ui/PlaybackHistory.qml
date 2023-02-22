@@ -14,7 +14,7 @@ Kirigami.ScrollablePage {
     id: playbackHistoryPage
     title: i18n("Unknown list of songs")
 
-    property QtObject dataModel
+    property QtObject dataModel: (objectName == "history") ? Library.playbackHistory : (objectName == "favourites" ? Library.favourites : null)
     SongMenu {
         id:menu
     }
