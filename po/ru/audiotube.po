@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-22 00:57+0000\n"
+"POT-Creation-Date: 2023-02-23 00:57+0000\n"
 "PO-Revision-Date: 2023-01-28 13:37+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -94,35 +94,35 @@ msgstr "ОК"
 msgid "Cancel"
 msgstr "Отмена"
 
-#: contents/ui/LibraryPage.qml:28 contents/ui/LibraryPage.qml:44
+#: contents/ui/LibraryPage.qml:28 contents/ui/LibraryPage.qml:43
 #: contents/ui/NavigationBar.qml:46 contents/ui/NavigationBar.qml:51
 #: contents/ui/Sidebar.qml:128 contents/ui/Sidebar.qml:135
 #, kde-format
 msgid "Favourites"
 msgstr "Избранное"
 
-#: contents/ui/LibraryPage.qml:39 contents/ui/LibraryPage.qml:254
+#: contents/ui/LibraryPage.qml:39 contents/ui/LibraryPage.qml:253
 #, kde-format
 msgid "Show All"
 msgstr "Показать все"
 
-#: contents/ui/LibraryPage.qml:69
+#: contents/ui/LibraryPage.qml:68
 #, fuzzy, kde-format
 #| msgid "Favourites"
 msgid "No Favourites Yet"
 msgstr "Избранное"
 
-#: contents/ui/LibraryPage.qml:243
+#: contents/ui/LibraryPage.qml:242
 #, kde-format
 msgid "Most played"
 msgstr "Часто воспроизводимые"
 
-#: contents/ui/LibraryPage.qml:259
+#: contents/ui/LibraryPage.qml:257
 #, kde-format
 msgid "played Songs"
 msgstr "Воспроизведённые треки"
 
-#: contents/ui/LibraryPage.qml:283
+#: contents/ui/LibraryPage.qml:281
 #, fuzzy, kde-format
 #| msgid "No songs here yet"
 msgid "No Songs Played Yet"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-22 00:57+0000\n"
+"POT-Creation-Date: 2023-02-23 00:57+0000\n"
 "PO-Revision-Date: 2023-02-17 06:49+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -97,34 +97,34 @@ msgstr "Ados"
 msgid "Cancel"
 msgstr "Utzi"
 
-#: contents/ui/LibraryPage.qml:28 contents/ui/LibraryPage.qml:44
+#: contents/ui/LibraryPage.qml:28 contents/ui/LibraryPage.qml:43
 #: contents/ui/NavigationBar.qml:46 contents/ui/NavigationBar.qml:51
 #: contents/ui/Sidebar.qml:128 contents/ui/Sidebar.qml:135
 #, kde-format
 msgid "Favourites"
 msgstr "Gogokoak"
 
-#: contents/ui/LibraryPage.qml:39 contents/ui/LibraryPage.qml:254
+#: contents/ui/LibraryPage.qml:39 contents/ui/LibraryPage.qml:253
 #, kde-format
 msgid "Show All"
 msgstr "Erakutsi denak"
 
-#: contents/ui/LibraryPage.qml:69
+#: contents/ui/LibraryPage.qml:68
 #, kde-format
 msgid "No Favourites Yet"
 msgstr "Oraindik Gogokorik ez"
 
-#: contents/ui/LibraryPage.qml:243
+#: contents/ui/LibraryPage.qml:242
 #, kde-format
 msgid "Most played"
 msgstr "Gehien jotakoa"
 
-#: contents/ui/LibraryPage.qml:259
+#: contents/ui/LibraryPage.qml:257
 #, kde-format
 msgid "played Songs"
 msgstr "jotako abestiak"
 
-#: contents/ui/LibraryPage.qml:283
+#: contents/ui/LibraryPage.qml:281
 #, kde-format
 msgid "No Songs Played Yet"
 msgstr "Oraindik ez dago jotako abestirik"

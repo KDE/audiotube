@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-22 00:57+0000\n"
+"POT-Creation-Date: 2023-02-23 00:57+0000\n"
 "PO-Revision-Date: 2023-02-17 12:38+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -96,34 +96,34 @@ msgstr "OK"
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: contents/ui/LibraryPage.qml:28 contents/ui/LibraryPage.qml:44
+#: contents/ui/LibraryPage.qml:28 contents/ui/LibraryPage.qml:43
 #: contents/ui/NavigationBar.qml:46 contents/ui/NavigationBar.qml:51
 #: contents/ui/Sidebar.qml:128 contents/ui/Sidebar.qml:135
 #, kde-format
 msgid "Favourites"
 msgstr "Favoritos"
 
-#: contents/ui/LibraryPage.qml:39 contents/ui/LibraryPage.qml:254
+#: contents/ui/LibraryPage.qml:39 contents/ui/LibraryPage.qml:253
 #, kde-format
 msgid "Show All"
 msgstr "Mostrar Tudo"
 
-#: contents/ui/LibraryPage.qml:69
+#: contents/ui/LibraryPage.qml:68
 #, kde-format
 msgid "No Favourites Yet"
 msgstr "Ainda sem Favoritos"
 
-#: contents/ui/LibraryPage.qml:243
+#: contents/ui/LibraryPage.qml:242
 #, kde-format
 msgid "Most played"
 msgstr "Mais Tocadas"
 
-#: contents/ui/LibraryPage.qml:259
+#: contents/ui/LibraryPage.qml:257
 #, kde-format
 msgid "played Songs"
 msgstr "Músicas tocadas"
 
-#: contents/ui/LibraryPage.qml:283
+#: contents/ui/LibraryPage.qml:281
 #, kde-format
 msgid "No Songs Played Yet"
 msgstr "Ainda sem Músicas Reproduzidas"

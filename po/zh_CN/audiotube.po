@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-22 00:57+0000\n"
+"POT-Creation-Date: 2023-02-23 00:57+0000\n"
 "PO-Revision-Date: 2023-02-15 11:05\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -92,35 +92,35 @@ msgstr "确定"
 msgid "Cancel"
 msgstr "取消"
 
-#: contents/ui/LibraryPage.qml:28 contents/ui/LibraryPage.qml:44
+#: contents/ui/LibraryPage.qml:28 contents/ui/LibraryPage.qml:43
 #: contents/ui/NavigationBar.qml:46 contents/ui/NavigationBar.qml:51
 #: contents/ui/Sidebar.qml:128 contents/ui/Sidebar.qml:135
 #, kde-format
 msgid "Favourites"
 msgstr "收藏夹"
 
-#: contents/ui/LibraryPage.qml:39 contents/ui/LibraryPage.qml:254
+#: contents/ui/LibraryPage.qml:39 contents/ui/LibraryPage.qml:253
 #, kde-format
 msgid "Show All"
 msgstr "显示全部"
 
-#: contents/ui/LibraryPage.qml:69
+#: contents/ui/LibraryPage.qml:68
 #, fuzzy, kde-format
 #| msgid "Favourites"
 msgid "No Favourites Yet"
 msgstr "收藏夹"
 
-#: contents/ui/LibraryPage.qml:243
+#: contents/ui/LibraryPage.qml:242
 #, kde-format
 msgid "Most played"
 msgstr "最常播放"
 
-#: contents/ui/LibraryPage.qml:259
+#: contents/ui/LibraryPage.qml:257
 #, kde-format
 msgid "played Songs"
 msgstr ""
 
-#: contents/ui/LibraryPage.qml:283
+#: contents/ui/LibraryPage.qml:281
 #, fuzzy, kde-format
 #| msgid "No songs here yet"
 msgid "No Songs Played Yet"
