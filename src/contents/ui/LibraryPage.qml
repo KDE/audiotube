@@ -13,6 +13,7 @@ Kirigami.ScrollablePage {
     objectName: "libraryPage"
     Kirigami.Theme.colorSet: Kirigami.Theme.View
     title: "AudioTube"
+    readonly property bool isWidescreen: width >= Kirigami.Units.gridUnit * 30
 
     rightPadding: 0
     leftPadding: 0
@@ -20,7 +21,6 @@ Kirigami.ScrollablePage {
     SongMenu {
         id: menu
     }
-
     ColumnLayout {
         RowLayout {
             Layout.fillWidth: true
@@ -32,20 +32,89 @@ Kirigami.ScrollablePage {
             }
 
             Controls.ToolButton {
+                visible: isWidescreen
                 text: i18n("Play")
                 icon.name: "media-playback-start"
                 onClicked: applicationWindow().playFavourites(false)
             }
 
             Controls.ToolButton {
+                visible: isWidescreen
                 text: i18n("Shuffle")
                 icon.name: "shuffle"
                 onClicked: applicationWindow().playFavourites(true)
             }
-
             // Spacer
             Item {
                 Layout.fillWidth: true
+            }
+
+            Controls.ToolButton {
+                visible: !isWidescreen
+                Layout.fillHeight: true
+                icon.name: "view-more-symbolic"
+                onPressed: Kirigami.Settings.isMobile? favDrawer.open() : favMenu.open()
+                Controls.Menu {
+                    id: favMenu
+                    Controls.MenuItem {
+                        text: i18n("Play")
+                        icon.name: "media-playback-start"
+                        onTriggered: applicationWindow().playFavourites(false)
+                    }
+                    Controls.MenuItem {
+                        text: i18n("Shuffle")
+                        icon.name: "shuffle"
+                        onTriggered: applicationWindow().playFavourites(true)
+                    }
+                }
+
+                Controls.Drawer {
+                    id: favDrawer
+
+                    edge: Qt.BottomEdge
+                    height:contents.implicitHeight+20
+                    width: applicationWindow().width
+                    interactive: false
+                    background: Kirigami.ShadowedRectangle{
+                        corners.topRightRadius: 10
+                        corners.topLeftRadius: 10
+                        shadow.size: 20
+                        shadow.color: Qt.rgba(0, 0, 0, 0.5)
+                        color: Kirigami.Theme.backgroundColor
+
+                    }
+                    onAboutToShow: favDrawer.interactive = true
+                    onClosed: favDrawer.interactive = false
+                    ColumnLayout {
+                        id: contents
+                        anchors.fill: parent
+                        Rectangle {
+                            Layout.margins: 5
+                            radius:50
+                            Layout.alignment: Qt.AlignHCenter
+                            color: Kirigami.Theme.textColor
+                            opacity: 0.7
+                            width: 40
+                            height: 4
+
+                        }
+                        Kirigami.BasicListItem{
+                            label: i18n("Play")
+                            icon: "media-playback-start"
+                            onClicked: applicationWindow().playFavourites(false)
+                        }
+                        Kirigami.BasicListItem{
+                            label: i18n("Shuffle")
+                            icon: "shuffle"
+                            onClicked: applicationWindow().playFavourites(true)
+                        }
+                        Item{
+                            Layout.fillHeight: true
+                        }
+
+                    }
+                }
+
             }
 
             Controls.ToolButton {
@@ -53,6 +122,7 @@ Kirigami.ScrollablePage {
                 Layout.alignment: Qt.AlignRight
                 icon.name: "arrow-right"
                 onClicked: {pageStack.push("qrc:/PlaybackHistory.qml", {
+                      "dataModel": Library.favourites,
                       "title": i18n("Favourites"),
                       "objectName": "favourites"
                   })}
@@ -260,12 +330,14 @@ Kirigami.ScrollablePage {
             }
 
             Controls.ToolButton {
+                visible: isWidescreen
                 text: i18n("Play")
                 icon.name: "media-playback-start"
                 onClicked: applicationWindow().playPlaybackHistory(Library.mostPlayed, false)
             }
 
             Controls.ToolButton {
+                visible: isWidescreen
                 text: i18n("Shuffle")
                 icon.name: "shuffle"
                 onClicked: applicationWindow().playPlaybackHistory(Library.mostPlayed, true)
@@ -277,11 +349,80 @@ Kirigami.ScrollablePage {
             }
 
             Controls.ToolButton {
+                visible: !isWidescreen
+                Layout.fillHeight: true
+                icon.name: "view-more-symbolic"
+                onPressed: Kirigami.Settings.isMobile? recDrawer.open() : recMenu.open()
+                Controls.Menu {
+                    id: recMenu
+                    Controls.MenuItem {
+                        text: i18n("Play")
+                        icon.name: "media-playback-start"
+                        onTriggered: applicationWindow().playPlaybackHistory(Library.mostPlayed, false)
+                    }
+                    Controls.MenuItem {
+                        text: i18n("Shuffle")
+                        icon.name: "shuffle"
+                        onTriggered: applicationWindow().playPlaybackHistory(Library.mostPlayed, true)
+                    }
+                }
+
+                Controls.Drawer {
+                    id: recDrawer
+
+                    edge: Qt.BottomEdge
+                    height:recContents.implicitHeight+20
+                    width: applicationWindow().width
+                    interactive: false
+                    background: Kirigami.ShadowedRectangle{
+                        corners.topRightRadius: 10
+                        corners.topLeftRadius: 10
+                        shadow.size: 20
+                        shadow.color: Qt.rgba(0, 0, 0, 0.5)
+                        color: Kirigami.Theme.backgroundColor
+
+                    }
+                    onAboutToShow: recDrawer.interactive = true
+                    onClosed: recDrawer.interactive = false
+                    ColumnLayout {
+                        id: recContents
+                        anchors.fill: parent
+                        Rectangle {
+                            Layout.margins: 5
+                            radius:50
+                            Layout.alignment: Qt.AlignHCenter
+                            color: Kirigami.Theme.textColor
+                            opacity: 0.7
+                            width: 40
+                            height: 4
+
+                        }
+                        Kirigami.BasicListItem{
+                            label: i18n("Play")
+                            icon: "media-playback-start"
+                            onClicked: applicationWindow().playPlaybackHistory(Library.mostPlayed, false)
+                        }
+                        Kirigami.BasicListItem{
+                            label: i18n("Shuffle")
+                            icon: "shuffle"
+                            onClicked:  applicationWindow().playPlaybackHistory(Library.mostPlayed, true)
+                        }
+                        Item{
+                            Layout.fillHeight: true
+                        }
+
+                    }
+                }
+
+            }
+
+            Controls.ToolButton {
                 text: i18n("Show All")
                 Layout.alignment: Qt.AlignRight
                 icon.name: "arrow-right"
                 onClicked: {pageStack.push("qrc:/PlaybackHistory.qml", {
-                      "title": i18n("played Songs"),
+                      "dataModel": Library.playbackHistory,
+                      "title": i18n("Played Songs"),
                       "objectName": "history"
                   })}
             }
