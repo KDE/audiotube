@@ -291,13 +291,13 @@ void UserPlaylistModel::clear()
     setCurrentVideoId({});
     Q_EMIT canSkipChanged();
     Q_EMIT canSkipBackChanged();
-
 }
 
 void UserPlaylistModel::clearExceptCurrent()
 {
     int index = currentIndex();
     Q_ASSERT(checkIndex(createIndex(index, 0), CheckIndexOption::IndexIsValid | CheckIndexOption::DoNotUseParent));
+    Q_ASSERT(!m_playlist.tracks.empty());
     if((unsigned) index < m_playlist.tracks.size() - 1) {
         beginRemoveRows({}, index + 1, m_playlist.tracks.size() - 1);
         m_playlist.tracks.erase(m_playlist.tracks.begin() + index + 1, m_playlist.tracks.end());
@@ -331,7 +331,6 @@ void UserPlaylistModel::remove(const QString &videoId)
 
     Q_EMIT canSkipChanged();
     Q_EMIT canSkipBackChanged();
-
 }
 
 void UserPlaylistModel::shufflePlaylist()

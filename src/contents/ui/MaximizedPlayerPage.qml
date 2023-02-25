@@ -821,6 +821,7 @@ Item {
                 
                 RowLayout{
                     Layout.margins: Kirigami.Units.gridUnit * 0.5
+                    enabled: playListView.count != 0
                     Item {
                         Layout.fillWidth: true
                     }
