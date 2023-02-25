@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-23 00:57+0000\n"
-"PO-Revision-Date: 2023-02-15 11:05\n"
+"PO-Revision-Date: 2023-02-24 12:44\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -105,10 +105,9 @@ msgid "Show All"
 msgstr "显示全部"
 
 #: contents/ui/LibraryPage.qml:68
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "No Favourites Yet"
-msgstr "收藏夹"
+msgstr ""
 
 #: contents/ui/LibraryPage.qml:242
 #, kde-format
@@ -121,10 +120,9 @@ msgid "played Songs"
 msgstr ""
 
 #: contents/ui/LibraryPage.qml:281
-#, fuzzy, kde-format
-#| msgid "No songs here yet"
+#, kde-format
 msgid "No Songs Played Yet"
-msgstr "此处无歌曲"
+msgstr ""
 
 #: contents/ui/main.qml:108 main.cpp:42
 #, kde-format
@@ -149,10 +147,9 @@ msgid "Remove Track"
 msgstr "移除曲目"
 
 #: contents/ui/MaximizedPlayerPage.qml:835
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "Clear Playlist"
-msgstr "播放列表"
+msgstr ""
 
 #: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:97
 #, kde-format
