@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-23 00:57+0000\n"
+"POT-Creation-Date: 2023-02-26 00:57+0000\n"
 "PO-Revision-Date: 2023-01-28 13:37+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -18,13 +18,17 @@ msgstr ""
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Lokalize 21.08.3\n"
 
-#: contents/ui/AlbumPage.qml:22 contents/ui/PlaylistPage.qml:26
+#: contents/ui/AlbumPage.qml:22 contents/ui/LibraryPage.qml:35
+#: contents/ui/LibraryPage.qml:263 contents/ui/PlaybackHistory.qml:26
+#: contents/ui/PlaylistPage.qml:26
 #, kde-format
 msgid "Play"
 msgstr "Воспроизвести"
 
 #: contents/ui/AlbumPage.qml:29 contents/ui/ArtistPage.qml:32
-#: contents/ui/MaximizedPlayerPage.qml:856 contents/ui/PlaylistPage.qml:33
+#: contents/ui/LibraryPage.qml:41 contents/ui/LibraryPage.qml:269
+#: contents/ui/MaximizedPlayerPage.qml:856 contents/ui/PlaybackHistory.qml:39
+#: contents/ui/PlaylistPage.qml:33
 #, kde-format
 msgid "Shuffle"
 msgstr "Перемешать"
@@ -40,7 +44,7 @@ msgid "Album • %1"
 msgstr "Альбом • %1"
 
 #: contents/ui/AlbumPage.qml:88 contents/ui/ArtistPage.qml:126
-#: contents/ui/PlaybackHistory.qml:80 contents/ui/PlaylistPage.qml:91
+#: contents/ui/PlaybackHistory.qml:126 contents/ui/PlaylistPage.qml:91
 #: contents/ui/SearchPage.qml:130
 #, kde-format
 msgid "More"
@@ -94,35 +98,35 @@ msgstr "ОК"
 msgid "Cancel"
 msgstr "Отмена"
 
-#: contents/ui/LibraryPage.qml:28 contents/ui/LibraryPage.qml:43
+#: contents/ui/LibraryPage.qml:29 contents/ui/LibraryPage.qml:56
 #: contents/ui/NavigationBar.qml:46 contents/ui/NavigationBar.qml:51
 #: contents/ui/Sidebar.qml:128 contents/ui/Sidebar.qml:135
 #, kde-format
 msgid "Favourites"
 msgstr "Избранное"
 
-#: contents/ui/LibraryPage.qml:39 contents/ui/LibraryPage.qml:253
+#: contents/ui/LibraryPage.qml:52 contents/ui/LibraryPage.qml:280
 #, kde-format
 msgid "Show All"
 msgstr "Показать все"
 
-#: contents/ui/LibraryPage.qml:68
+#: contents/ui/LibraryPage.qml:81
 #, fuzzy, kde-format
 #| msgid "Favourites"
 msgid "No Favourites Yet"
 msgstr "Избранное"
 
-#: contents/ui/LibraryPage.qml:242
+#: contents/ui/LibraryPage.qml:257
 #, kde-format
 msgid "Most played"
 msgstr "Часто воспроизводимые"
 
-#: contents/ui/LibraryPage.qml:257
+#: contents/ui/LibraryPage.qml:284
 #, kde-format
 msgid "played Songs"
 msgstr "Воспроизведённые треки"
 
-#: contents/ui/LibraryPage.qml:281
+#: contents/ui/LibraryPage.qml:308
 #, fuzzy, kde-format
 #| msgid "No songs here yet"
 msgid "No Songs Played Yet"
@@ -177,7 +181,7 @@ msgstr "Воспроизведённые треки"
 msgid "Unknown list of songs"
 msgstr "Неизвестный список треков"
 
-#: contents/ui/PlaybackHistory.qml:27
+#: contents/ui/PlaybackHistory.qml:73
 #, kde-format
 msgid "No songs here yet"
 msgstr "Пока нет ни одного трека"

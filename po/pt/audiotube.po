@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-23 00:57+0000\n"
+"POT-Creation-Date: 2023-02-26 00:57+0000\n"
 "PO-Revision-Date: 2023-02-17 12:38+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -19,13 +19,17 @@ msgstr ""
 "X-POFile-SpellExtra: Singles AudioTube YouTube Music Jonah Brüchert Mathis\n"
 "X-POFile-IgnoreConsistency: Singles\n"
 
-#: contents/ui/AlbumPage.qml:22 contents/ui/PlaylistPage.qml:26
+#: contents/ui/AlbumPage.qml:22 contents/ui/LibraryPage.qml:35
+#: contents/ui/LibraryPage.qml:263 contents/ui/PlaybackHistory.qml:26
+#: contents/ui/PlaylistPage.qml:26
 #, kde-format
 msgid "Play"
 msgstr "Reproduzir"
 
 #: contents/ui/AlbumPage.qml:29 contents/ui/ArtistPage.qml:32
-#: contents/ui/MaximizedPlayerPage.qml:856 contents/ui/PlaylistPage.qml:33
+#: contents/ui/LibraryPage.qml:41 contents/ui/LibraryPage.qml:269
+#: contents/ui/MaximizedPlayerPage.qml:856 contents/ui/PlaybackHistory.qml:39
+#: contents/ui/PlaylistPage.qml:33
 #, kde-format
 msgid "Shuffle"
 msgstr "Baralhar"
@@ -41,7 +45,7 @@ msgid "Album • %1"
 msgstr "Álbum • %1"
 
 #: contents/ui/AlbumPage.qml:88 contents/ui/ArtistPage.qml:126
-#: contents/ui/PlaybackHistory.qml:80 contents/ui/PlaylistPage.qml:91
+#: contents/ui/PlaybackHistory.qml:126 contents/ui/PlaylistPage.qml:91
 #: contents/ui/SearchPage.qml:130
 #, kde-format
 msgid "More"
@@ -96,34 +100,34 @@ msgstr "OK"
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: contents/ui/LibraryPage.qml:28 contents/ui/LibraryPage.qml:43
+#: contents/ui/LibraryPage.qml:29 contents/ui/LibraryPage.qml:56
 #: contents/ui/NavigationBar.qml:46 contents/ui/NavigationBar.qml:51
 #: contents/ui/Sidebar.qml:128 contents/ui/Sidebar.qml:135
 #, kde-format
 msgid "Favourites"
 msgstr "Favoritos"
 
-#: contents/ui/LibraryPage.qml:39 contents/ui/LibraryPage.qml:253
+#: contents/ui/LibraryPage.qml:52 contents/ui/LibraryPage.qml:280
 #, kde-format
 msgid "Show All"
 msgstr "Mostrar Tudo"
 
-#: contents/ui/LibraryPage.qml:68
+#: contents/ui/LibraryPage.qml:81
 #, kde-format
 msgid "No Favourites Yet"
 msgstr "Ainda sem Favoritos"
 
-#: contents/ui/LibraryPage.qml:242
+#: contents/ui/LibraryPage.qml:257
 #, kde-format
 msgid "Most played"
 msgstr "Mais Tocadas"
 
-#: contents/ui/LibraryPage.qml:257
+#: contents/ui/LibraryPage.qml:284
 #, kde-format
 msgid "played Songs"
 msgstr "Músicas tocadas"
 
-#: contents/ui/LibraryPage.qml:281
+#: contents/ui/LibraryPage.qml:308
 #, kde-format
 msgid "No Songs Played Yet"
 msgstr "Ainda sem Músicas Reproduzidas"
@@ -151,10 +155,9 @@ msgid "Remove Track"
 msgstr "Remover a Faixa"
 
 #: contents/ui/MaximizedPlayerPage.qml:835
-#, fuzzy, kde-format
-#| msgid "Playlist"
+#, kde-format
 msgid "Clear Playlist"
-msgstr "Lista de Reprodução"
+msgstr "Limpar a Lista de Reprodução"
 
 #: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:97
 #, kde-format
@@ -177,7 +180,7 @@ msgstr "Músicas Tocadas"
 msgid "Unknown list of songs"
 msgstr "Lista de músicas desconhecida"
 
-#: contents/ui/PlaybackHistory.qml:27
+#: contents/ui/PlaybackHistory.qml:73
 #, kde-format
 msgid "No songs here yet"
 msgstr "Ainda sem músicas aqui"

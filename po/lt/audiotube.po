@@ -1,28 +1,29 @@
-# Copyright (C) YEAR This file is copyright:
+# Lithuanian translations for audiotube package.
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the audiotube package.
-# Vit Pelcak <vit@pelcak.org>, 2021, 2022, 2023.
+# Automatically generated, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-26 00:57+0000\n"
-"PO-Revision-Date: 2023-02-17 09:26+0100\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
-"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
-"Language: cs\n"
+"PO-Revision-Date: 2023-02-23 00:57+0000\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.2\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n"
+"%100<10 || n%100>=20) ? 1 : 2);\n"
 
 #: contents/ui/AlbumPage.qml:22 contents/ui/LibraryPage.qml:35
 #: contents/ui/LibraryPage.qml:263 contents/ui/PlaybackHistory.qml:26
 #: contents/ui/PlaylistPage.qml:26
 #, kde-format
 msgid "Play"
-msgstr "Přehrát"
+msgstr ""
 
 #: contents/ui/AlbumPage.qml:29 contents/ui/ArtistPage.qml:32
 #: contents/ui/LibraryPage.qml:41 contents/ui/LibraryPage.qml:269
@@ -30,34 +31,34 @@ msgstr "Přehrát"
 #: contents/ui/PlaylistPage.qml:33
 #, kde-format
 msgid "Shuffle"
-msgstr "Zamíchat"
+msgstr ""
 
 #: contents/ui/AlbumPage.qml:37 contents/ui/ArtistPage.qml:39
 #, kde-format
 msgid "Open in Browser"
-msgstr "Otevřít v prohlížeči"
+msgstr ""
 
 #: contents/ui/AlbumPage.qml:44
 #, kde-format
 msgid "Album • %1"
-msgstr "Album • %1"
+msgstr ""
 
 #: contents/ui/AlbumPage.qml:88 contents/ui/ArtistPage.qml:126
 #: contents/ui/PlaybackHistory.qml:126 contents/ui/PlaylistPage.qml:91
 #: contents/ui/SearchPage.qml:130
 #, kde-format
 msgid "More"
-msgstr "Více"
+msgstr ""
 
 #: contents/ui/ArtistPage.qml:27
 #, kde-format
 msgid "Radio"
-msgstr "Rádio"
+msgstr ""
 
 #: contents/ui/ArtistPage.qml:46
 #, kde-format
 msgid "Artist"
-msgstr "Umělec"
+msgstr ""
 
 #: contents/ui/ArtistPage.qml:68 contents/ui/SearchPage.qml:70
 #, kde-format
@@ -65,237 +66,235 @@ msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
 "\"%1\"?"
 msgstr ""
-"Přehrávání videa ještě není podporováno. Chcete z \"%1\" přehrávat pouze "
-"zvuk?"
 
 #: contents/ui/ArtistPage.qml:85 contents/ui/SearchPage.qml:26
 #, kde-format
 msgid "Albums"
-msgstr "Alba"
+msgstr ""
 
 #: contents/ui/ArtistPage.qml:87
 #, kde-format
 msgid "Singles"
-msgstr "Samotné"
+msgstr ""
 
 #: contents/ui/ArtistPage.qml:89 contents/ui/SearchPage.qml:32
 #, kde-format
 msgid "Songs"
-msgstr "Písně"
+msgstr ""
 
 #: contents/ui/ArtistPage.qml:91 contents/ui/SearchPage.qml:34
 #, kde-format
 msgid "Videos"
-msgstr "Videa"
+msgstr ""
 
 #: contents/ui/ConfirmationMessage.qml:16
 #, kde-format
 msgid "OK"
-msgstr "OK"
+msgstr ""
 
 #: contents/ui/ConfirmationMessage.qml:21
 #, kde-format
 msgid "Cancel"
-msgstr "Zrušit"
+msgstr ""
 
 #: contents/ui/LibraryPage.qml:29 contents/ui/LibraryPage.qml:56
 #: contents/ui/NavigationBar.qml:46 contents/ui/NavigationBar.qml:51
 #: contents/ui/Sidebar.qml:128 contents/ui/Sidebar.qml:135
 #, kde-format
 msgid "Favourites"
-msgstr "Oblíbené"
+msgstr ""
 
 #: contents/ui/LibraryPage.qml:52 contents/ui/LibraryPage.qml:280
 #, kde-format
 msgid "Show All"
-msgstr "Zobrazit vše"
+msgstr ""
 
 #: contents/ui/LibraryPage.qml:81
 #, kde-format
 msgid "No Favourites Yet"
-msgstr "Zatím žádné oblíbené"
+msgstr ""
 
 #: contents/ui/LibraryPage.qml:257
 #, kde-format
 msgid "Most played"
-msgstr "Nejčastěji hrané"
+msgstr ""
 
 #: contents/ui/LibraryPage.qml:284
 #, kde-format
 msgid "played Songs"
-msgstr "přehrané skladby"
+msgstr ""
 
 #: contents/ui/LibraryPage.qml:308
 #, kde-format
 msgid "No Songs Played Yet"
-msgstr "Zatím nebyly přehrány žádné skladby"
+msgstr ""
 
 #: contents/ui/main.qml:108 main.cpp:42
 #, kde-format
 msgid "AudioTube"
-msgstr "AudioTube"
+msgstr ""
 
 #: contents/ui/MaximizedPlayerPage.qml:194
 #: contents/ui/MinimizedPlayerControls.qml:90
 #, kde-format
 msgid "No media playing"
-msgstr "Nepřehrává se žádné médium"
+msgstr ""
 
 #: contents/ui/MaximizedPlayerPage.qml:589
 #, kde-format
 msgid "%1%"
-msgstr "%1%"
+msgstr ""
 
 #: contents/ui/MaximizedPlayerPage.qml:806
 #: contents/ui/MaximizedPlayerPage.qml:964
 #, kde-format
 msgid "Remove Track"
-msgstr "Odstranit skladbu"
+msgstr ""
 
 #: contents/ui/MaximizedPlayerPage.qml:835
 #, kde-format
 msgid "Clear Playlist"
-msgstr "Smazat seznam skladeb"
+msgstr ""
 
 #: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:97
 #, kde-format
 msgid "Library"
-msgstr "Knihovna"
+msgstr ""
 
 #: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:113
 #, kde-format
 msgid "Search"
-msgstr "Hledat"
+msgstr ""
 
 #: contents/ui/NavigationBar.qml:58 contents/ui/NavigationBar.qml:63
 #: contents/ui/Sidebar.qml:147 contents/ui/Sidebar.qml:154
 #, kde-format
 msgid "Played Songs"
-msgstr "Přehrané skladby"
+msgstr ""
 
 #: contents/ui/PlaybackHistory.qml:15
 #, kde-format
 msgid "Unknown list of songs"
-msgstr "Neznámý seznam skladeb"
+msgstr ""
 
 #: contents/ui/PlaybackHistory.qml:73
 #, kde-format
 msgid "No songs here yet"
-msgstr "Zatím zde nejsou žádné skladby"
+msgstr ""
 
 #: contents/ui/PlaylistPage.qml:42
 #, kde-format
 msgid "Playlist"
-msgstr "Seznam skladeb"
+msgstr ""
 
 #: contents/ui/SearchHistoryPage.qml:86 contents/ui/SearchWithDropdown.qml:321
 #, kde-format
 msgid "remove from search history"
-msgstr "odstranit z historie hledání"
+msgstr ""
 
 #: contents/ui/SearchPage.qml:16
 #, kde-format
 msgid "Previous Searches:"
-msgstr "Předchozí hledání:"
+msgstr ""
 
 #: contents/ui/SearchPage.qml:28
 #, kde-format
 msgid "Artists"
-msgstr "Umělci"
+msgstr ""
 
 #: contents/ui/SearchPage.qml:30
 #, kde-format
 msgid "Playlists"
-msgstr "Seznamy skladeb"
+msgstr ""
 
 #: contents/ui/SearchPage.qml:37
 #, kde-format
 msgid "Unknown"
-msgstr "Neznámý"
+msgstr ""
 
 #: contents/ui/SearchWithDropdown.qml:286
 #, kde-format
 msgid "No matching previous searches"
-msgstr "Neodpovídají žádná předchozí hledání"
+msgstr ""
 
 #: contents/ui/Sidebar.qml:171
 #, kde-format
 msgid "About"
-msgstr "O aplikaci"
+msgstr ""
 
 #: contents/ui/Sidebar.qml:185
 #, kde-format
 msgid "Collapse Sidebar"
-msgstr "Svinout postranní panel"
+msgstr ""
 
 #: contents/ui/SongMenu.qml:116 contents/ui/SongMenu.qml:175
 #, kde-format
 msgid "Play Next"
-msgstr "Přehrát následující"
+msgstr ""
 
 #: contents/ui/SongMenu.qml:125 contents/ui/SongMenu.qml:181
 #, kde-format
 msgid "Add to queue"
-msgstr "Zařadit do fronty"
+msgstr ""
 
 #: contents/ui/SongMenu.qml:135 contents/ui/SongMenu.qml:188
 #, kde-format
 msgid "Remove Favourite"
-msgstr "Odstranit oblíbené"
+msgstr ""
 
 #: contents/ui/SongMenu.qml:135 contents/ui/SongMenu.qml:188
 #, kde-format
 msgid "Add Favourite"
-msgstr "Přidat oblíbené"
+msgstr ""
 
 #: contents/ui/SongMenu.qml:151 contents/ui/SongMenu.qml:203
 #, kde-format
 msgid "Remove from History"
-msgstr "Odstranit z historie"
+msgstr ""
 
 #: main.cpp:44
 #, kde-format
 msgid "YouTube Music Player"
-msgstr "Přehrávač hudby YouTube"
+msgstr ""
 
 #: main.cpp:46
 #, kde-format
 msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
-msgstr "© 2021-2023 Jonah Brüchert, 2021-2023 Komunita KDE"
+msgstr ""
 
 #: main.cpp:47
 #, kde-format
 msgid "Jonah Brüchert"
-msgstr "Jonah Brüchert"
+msgstr ""
 
 #: main.cpp:47
 #, kde-format
 msgid "Maintainer"
-msgstr "Správce"
+msgstr ""
 
 #: main.cpp:48
 #, kde-format
 msgid "Mathis Brüchert"
-msgstr "Mathis Brüchert"
+msgstr ""
 
 #: main.cpp:48
 #, kde-format
 msgid "Designer"
-msgstr "Návrhář"
+msgstr ""
 
 #: main.cpp:49
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Vít Pelčák"
+msgstr ""
 
 #: main.cpp:49
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "vit@pelcak.org"
+msgstr ""
 
 #: main.cpp:54
 #, kde-format
 msgid "Unofficial API for YouTube Music"
-msgstr "Neoficiální API pro hudbu YouTube"
+msgstr ""

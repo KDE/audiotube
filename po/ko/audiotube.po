@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-23 00:57+0000\n"
+"POT-Creation-Date: 2023-02-26 00:57+0000\n"
 "PO-Revision-Date: 2022-10-03 14:20+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-i18n-doc@kde.org>\n"
@@ -17,13 +17,17 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: contents/ui/AlbumPage.qml:22 contents/ui/PlaylistPage.qml:26
+#: contents/ui/AlbumPage.qml:22 contents/ui/LibraryPage.qml:35
+#: contents/ui/LibraryPage.qml:263 contents/ui/PlaybackHistory.qml:26
+#: contents/ui/PlaylistPage.qml:26
 #, kde-format
 msgid "Play"
 msgstr "재생"
 
 #: contents/ui/AlbumPage.qml:29 contents/ui/ArtistPage.qml:32
-#: contents/ui/MaximizedPlayerPage.qml:856 contents/ui/PlaylistPage.qml:33
+#: contents/ui/LibraryPage.qml:41 contents/ui/LibraryPage.qml:269
+#: contents/ui/MaximizedPlayerPage.qml:856 contents/ui/PlaybackHistory.qml:39
+#: contents/ui/PlaylistPage.qml:33
 #, kde-format
 msgid "Shuffle"
 msgstr "무순서 재생"
@@ -39,7 +43,7 @@ msgid "Album • %1"
 msgstr ""
 
 #: contents/ui/AlbumPage.qml:88 contents/ui/ArtistPage.qml:126
-#: contents/ui/PlaybackHistory.qml:80 contents/ui/PlaylistPage.qml:91
+#: contents/ui/PlaybackHistory.qml:126 contents/ui/PlaylistPage.qml:91
 #: contents/ui/SearchPage.qml:130
 #, kde-format
 msgid "More"
@@ -93,36 +97,36 @@ msgstr "확인"
 msgid "Cancel"
 msgstr "취소"
 
-#: contents/ui/LibraryPage.qml:28 contents/ui/LibraryPage.qml:43
+#: contents/ui/LibraryPage.qml:29 contents/ui/LibraryPage.qml:56
 #: contents/ui/NavigationBar.qml:46 contents/ui/NavigationBar.qml:51
 #: contents/ui/Sidebar.qml:128 contents/ui/Sidebar.qml:135
 #, kde-format
 msgid "Favourites"
 msgstr "책갈피"
 
-#: contents/ui/LibraryPage.qml:39 contents/ui/LibraryPage.qml:253
+#: contents/ui/LibraryPage.qml:52 contents/ui/LibraryPage.qml:280
 #, kde-format
 msgid "Show All"
 msgstr "모두 표시"
 
-#: contents/ui/LibraryPage.qml:68
+#: contents/ui/LibraryPage.qml:81
 #, fuzzy, kde-format
 #| msgid "Favourites"
 msgid "No Favourites Yet"
 msgstr "책갈피"
 
-#: contents/ui/LibraryPage.qml:242
+#: contents/ui/LibraryPage.qml:257
 #, kde-format
 msgid "Most played"
 msgstr "가장 많이 재생됨"
 
-#: contents/ui/LibraryPage.qml:257
+#: contents/ui/LibraryPage.qml:284
 #, fuzzy, kde-format
 #| msgid "Played Songs"
 msgid "played Songs"
 msgstr "재생한 노래"
 
-#: contents/ui/LibraryPage.qml:281
+#: contents/ui/LibraryPage.qml:308
 #, fuzzy, kde-format
 #| msgid "No songs here yet"
 msgid "No Songs Played Yet"
@@ -177,7 +181,7 @@ msgstr "재생한 노래"
 msgid "Unknown list of songs"
 msgstr "알 수 없는 노래 목록"
 
-#: contents/ui/PlaybackHistory.qml:27
+#: contents/ui/PlaybackHistory.qml:73
 #, kde-format
 msgid "No songs here yet"
 msgstr "목록에 등록된 곡 없음"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-23 00:57+0000\n"
+"POT-Creation-Date: 2023-02-26 00:57+0000\n"
 "PO-Revision-Date: 2023-02-20 11:42+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -19,13 +19,17 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 22.12.2\n"
 
-#: contents/ui/AlbumPage.qml:22 contents/ui/PlaylistPage.qml:26
+#: contents/ui/AlbumPage.qml:22 contents/ui/LibraryPage.qml:35
+#: contents/ui/LibraryPage.qml:263 contents/ui/PlaybackHistory.qml:26
+#: contents/ui/PlaylistPage.qml:26
 #, kde-format
 msgid "Play"
 msgstr "Reproducir"
 
 #: contents/ui/AlbumPage.qml:29 contents/ui/ArtistPage.qml:32
-#: contents/ui/MaximizedPlayerPage.qml:856 contents/ui/PlaylistPage.qml:33
+#: contents/ui/LibraryPage.qml:41 contents/ui/LibraryPage.qml:269
+#: contents/ui/MaximizedPlayerPage.qml:856 contents/ui/PlaybackHistory.qml:39
+#: contents/ui/PlaylistPage.qml:33
 #, kde-format
 msgid "Shuffle"
 msgstr "Desordenar"
@@ -41,7 +45,7 @@ msgid "Album • %1"
 msgstr "Álbum • %1"
 
 #: contents/ui/AlbumPage.qml:88 contents/ui/ArtistPage.qml:126
-#: contents/ui/PlaybackHistory.qml:80 contents/ui/PlaylistPage.qml:91
+#: contents/ui/PlaybackHistory.qml:126 contents/ui/PlaylistPage.qml:91
 #: contents/ui/SearchPage.qml:130
 #, kde-format
 msgid "More"
@@ -96,34 +100,34 @@ msgstr "Aceptar"
 msgid "Cancel"
 msgstr "Cancelar"
 
-#: contents/ui/LibraryPage.qml:28 contents/ui/LibraryPage.qml:43
+#: contents/ui/LibraryPage.qml:29 contents/ui/LibraryPage.qml:56
 #: contents/ui/NavigationBar.qml:46 contents/ui/NavigationBar.qml:51
 #: contents/ui/Sidebar.qml:128 contents/ui/Sidebar.qml:135
 #, kde-format
 msgid "Favourites"
 msgstr "Favoritas"
 
-#: contents/ui/LibraryPage.qml:39 contents/ui/LibraryPage.qml:253
+#: contents/ui/LibraryPage.qml:52 contents/ui/LibraryPage.qml:280
 #, kde-format
 msgid "Show All"
 msgstr "Mostrar todas"
 
-#: contents/ui/LibraryPage.qml:68
+#: contents/ui/LibraryPage.qml:81
 #, kde-format
 msgid "No Favourites Yet"
 msgstr "Todavía no hay favoritas"
 
-#: contents/ui/LibraryPage.qml:242
+#: contents/ui/LibraryPage.qml:257
 #, kde-format
 msgid "Most played"
 msgstr "Más reproducidas"
 
-#: contents/ui/LibraryPage.qml:257
+#: contents/ui/LibraryPage.qml:284
 #, kde-format
 msgid "played Songs"
 msgstr "canciones reproducidas"
 
-#: contents/ui/LibraryPage.qml:281
+#: contents/ui/LibraryPage.qml:308
 #, kde-format
 msgid "No Songs Played Yet"
 msgstr "Todavía no se han reproducido canciones"
@@ -176,7 +180,7 @@ msgstr "Canciones reproducidas"
 msgid "Unknown list of songs"
 msgstr "Lista de canciones desconocida"
 
-#: contents/ui/PlaybackHistory.qml:27
+#: contents/ui/PlaybackHistory.qml:73
 #, kde-format
 msgid "No songs here yet"
 msgstr "Todavía no contiene canciones"

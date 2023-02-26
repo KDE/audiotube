@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-23 00:57+0000\n"
+"POT-Creation-Date: 2023-02-26 00:57+0000\n"
 "PO-Revision-Date: 2023-02-02 11:59+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -18,13 +18,17 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: contents/ui/AlbumPage.qml:22 contents/ui/PlaylistPage.qml:26
+#: contents/ui/AlbumPage.qml:22 contents/ui/LibraryPage.qml:35
+#: contents/ui/LibraryPage.qml:263 contents/ui/PlaybackHistory.qml:26
+#: contents/ui/PlaylistPage.qml:26
 #, kde-format
 msgid "Play"
 msgstr "شغّل"
 
 #: contents/ui/AlbumPage.qml:29 contents/ui/ArtistPage.qml:32
-#: contents/ui/MaximizedPlayerPage.qml:856 contents/ui/PlaylistPage.qml:33
+#: contents/ui/LibraryPage.qml:41 contents/ui/LibraryPage.qml:269
+#: contents/ui/MaximizedPlayerPage.qml:856 contents/ui/PlaybackHistory.qml:39
+#: contents/ui/PlaylistPage.qml:33
 #, kde-format
 msgid "Shuffle"
 msgstr "اخلط"
@@ -40,7 +44,7 @@ msgid "Album • %1"
 msgstr "الألبوم • %1"
 
 #: contents/ui/AlbumPage.qml:88 contents/ui/ArtistPage.qml:126
-#: contents/ui/PlaybackHistory.qml:80 contents/ui/PlaylistPage.qml:91
+#: contents/ui/PlaybackHistory.qml:126 contents/ui/PlaylistPage.qml:91
 #: contents/ui/SearchPage.qml:130
 #, kde-format
 msgid "More"
@@ -93,35 +97,35 @@ msgstr "حسنًا"
 msgid "Cancel"
 msgstr "ألغِ"
 
-#: contents/ui/LibraryPage.qml:28 contents/ui/LibraryPage.qml:43
+#: contents/ui/LibraryPage.qml:29 contents/ui/LibraryPage.qml:56
 #: contents/ui/NavigationBar.qml:46 contents/ui/NavigationBar.qml:51
 #: contents/ui/Sidebar.qml:128 contents/ui/Sidebar.qml:135
 #, kde-format
 msgid "Favourites"
 msgstr "المفضلة"
 
-#: contents/ui/LibraryPage.qml:39 contents/ui/LibraryPage.qml:253
+#: contents/ui/LibraryPage.qml:52 contents/ui/LibraryPage.qml:280
 #, kde-format
 msgid "Show All"
 msgstr "أظهر الكلّ"
 
-#: contents/ui/LibraryPage.qml:68
+#: contents/ui/LibraryPage.qml:81
 #, fuzzy, kde-format
 #| msgid "Favourites"
 msgid "No Favourites Yet"
 msgstr "المفضلة"
 
-#: contents/ui/LibraryPage.qml:242
+#: contents/ui/LibraryPage.qml:257
 #, kde-format
 msgid "Most played"
 msgstr "الأكثر تشغيلا"
 
-#: contents/ui/LibraryPage.qml:257
+#: contents/ui/LibraryPage.qml:284
 #, kde-format
 msgid "played Songs"
 msgstr "الأغاني المشغلة"
 
-#: contents/ui/LibraryPage.qml:281
+#: contents/ui/LibraryPage.qml:308
 #, fuzzy, kde-format
 #| msgid "No songs here yet"
 msgid "No Songs Played Yet"
@@ -176,7 +180,7 @@ msgstr "الأغاني المشغلة"
 msgid "Unknown list of songs"
 msgstr "قائمة غير معروفة من الأغاني"
 
-#: contents/ui/PlaybackHistory.qml:27
+#: contents/ui/PlaybackHistory.qml:73
 #, kde-format
 msgid "No songs here yet"
 msgstr "لا يوجد أي أغنية بعد"
