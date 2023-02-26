@@ -15,6 +15,8 @@
 
 #include "playlistutils.h"
 
+namespace ranges = std::ranges;
+
 UserPlaylistModel::UserPlaylistModel(QObject *parent)
     : AbstractYTMusicModel(parent)
 {
@@ -160,8 +162,8 @@ void UserPlaylistModel::setCurrentVideoId(const QString &videoId)
 
 int UserPlaylistModel::currentIndex() const
 {
-    auto currentTrack = std::find_if(m_playlist.tracks.begin(), m_playlist.tracks.end(),
-                                     [this](const watch::Playlist::Track &track) {
+    auto currentTrack = ranges::find_if(m_playlist.tracks,
+                                        [this](const watch::Playlist::Track &track) {
         return track.video_id == m_currentVideoId.toStdString();
     });
 
@@ -170,8 +172,8 @@ int UserPlaylistModel::currentIndex() const
 
 bool UserPlaylistModel::canSkip() const
 {
-    const auto currentTrackIt = std::find_if(m_playlist.tracks.begin(), m_playlist.tracks.end(),
-                                        [this](const watch::Playlist::Track &track) {
+    const auto currentTrackIt = ranges::find_if(m_playlist.tracks,
+                                                [this](const watch::Playlist::Track &track) {
         return track.video_id == m_currentVideoId.toStdString();
     });
 
@@ -221,7 +223,7 @@ void UserPlaylistModel::skipTo(const QString &videoId)
 
 void UserPlaylistModel::playNext(const QString &videoId, const QString &title, const std::vector<meta::Artist> &artists)
 {
-    const auto currentIt = std::find_if(m_playlist.tracks.begin(), m_playlist.tracks.end(),
+    const auto currentIt = ranges::find_if(m_playlist.tracks,
                                         [this](const watch::Playlist::Track &track) {
         return track.video_id == m_currentVideoId.toStdString();
     });
@@ -319,7 +321,7 @@ void UserPlaylistModel::remove(const QString &videoId)
         setCurrentVideoId(nextVideoId());
     }
 
-    const auto trackIt = std::find_if(m_playlist.tracks.begin(), m_playlist.tracks.end(), [&](const watch::Playlist::Track &track) {
+    const auto trackIt = ranges::find_if(m_playlist.tracks, [&](const watch::Playlist::Track &track) {
         return track.video_id == videoId.toStdString();
     });
     int index = std::distance(m_playlist.tracks.begin(), trackIt);
@@ -336,14 +338,14 @@ void UserPlaylistModel::shufflePlaylist()
 {
     // Only shuffle playlist after current track
     if (!m_currentVideoId.isEmpty()) {
-        const auto currentIt = std::find_if(m_playlist.tracks.begin(), m_playlist.tracks.end(),
-                                                           [this](const watch::Playlist::Track &track) {
+        const auto currentIt = ranges::find_if(m_playlist.tracks,
+                                               [this](const watch::Playlist::Track &track) {
             return track.video_id == m_currentVideoId.toStdString();
         });
 
         std::shuffle(currentIt + 1, m_playlist.tracks.end(), *QRandomGenerator::global());
     } else {
-        std::shuffle(m_playlist.tracks.begin(), m_playlist.tracks.end(), *QRandomGenerator::global());
+        ranges::shuffle(m_playlist.tracks, *QRandomGenerator::global());
     }
     Q_EMIT dataChanged(index(0), index(m_playlist.tracks.size() - 1), {});
 }
@@ -355,7 +357,7 @@ void UserPlaylistModel::playFavourites(FavouritesModel *favouriteModel, bool shu
     if(shuffled) {
         std::shuffle(favourites.begin(), favourites.end(), *QRandomGenerator::global());
     }
-    std::for_each(favourites.begin(), favourites.end(), [this](Song song) {
+    ranges::for_each(favourites, [this](const Song &song) {
         meta::Artist artist;
         artist.name = song.artist.toStdString();
         append(song.videoId, song.title, std::vector<meta::Artist>({artist}));
@@ -369,7 +371,7 @@ void UserPlaylistModel::playPlaybackHistory(PlaybackHistoryModel *playbackHistor
     if(shuffle) {
         std::shuffle(playedSongs.begin(), playedSongs.end(), *QRandomGenerator::global());
     }
-    std::for_each(playedSongs.begin(), playedSongs.end(), [this](PlayedSong song) {
+    ranges::for_each(playedSongs, [this](const PlayedSong &song) {
         meta::Artist artist;
         artist.name = song.artist.toStdString();
         append(song.videoId, song.title, std::vector<meta::Artist>({artist}));
@@ -379,12 +381,12 @@ void UserPlaylistModel::playPlaybackHistory(PlaybackHistoryModel *playbackHistor
 
 void UserPlaylistModel::emitCurrentVideoChanged(const QString &oldVideoId)
 {
-    const auto oldVideoIt = std::find_if(m_playlist.tracks.begin(), m_playlist.tracks.end(),
-                                             [=](const watch::Playlist::Track &track) {
+    const auto oldVideoIt = ranges::find_if(m_playlist.tracks,
+                                            [=](const watch::Playlist::Track &track) {
         return track.video_id == oldVideoId.toStdString();
     });
-    const auto currentVideoIt = std::find_if(m_playlist.tracks.begin(), m_playlist.tracks.end(),
-                                             [this](const watch::Playlist::Track &track) {
+    const auto currentVideoIt = ranges::find_if(m_playlist.tracks,
+                                                [this](const watch::Playlist::Track &track) {
         return track.video_id == m_currentVideoId.toStdString();
     });
 
