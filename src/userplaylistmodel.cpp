@@ -179,6 +179,7 @@ bool UserPlaylistModel::canSkip() const
             && currentTrackIt != m_playlist.tracks.end()
             && !m_playlist.tracks.empty();
 }
+
 bool UserPlaylistModel::canSkipBack() const
 {
     const auto currentTrackIt = std::ranges::find_if(m_playlist.tracks, [this](const watch::Playlist::Track &track) {
@@ -275,6 +276,8 @@ void UserPlaylistModel::append(const QString &videoId, const QString &title, con
     if (m_playlist.tracks.size() == 1) {
         setCurrentVideoId(videoId);
     }
+
+    Q_EMIT canSkipChanged();
 }
 
 void UserPlaylistModel::clear()
