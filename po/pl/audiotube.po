@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-26 00:57+0000\n"
+"POT-Creation-Date: 2023-02-28 00:57+0000\n"
 "PO-Revision-Date: 2023-02-18 09:19+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -19,16 +19,20 @@ msgstr ""
 "|| n%100>=20) ? 1 : 2);\n"
 "X-Generator: Lokalize 22.12.2\n"
 
-#: contents/ui/AlbumPage.qml:22 contents/ui/LibraryPage.qml:35
-#: contents/ui/LibraryPage.qml:263 contents/ui/PlaybackHistory.qml:26
+#: contents/ui/AlbumPage.qml:22 contents/ui/LibraryPage.qml:36
+#: contents/ui/LibraryPage.qml:60 contents/ui/LibraryPage.qml:102
+#: contents/ui/LibraryPage.qml:333 contents/ui/LibraryPage.qml:358
+#: contents/ui/LibraryPage.qml:400 contents/ui/PlaybackHistory.qml:26
 #: contents/ui/PlaylistPage.qml:26
 #, kde-format
 msgid "Play"
 msgstr "Odtwórz"
 
 #: contents/ui/AlbumPage.qml:29 contents/ui/ArtistPage.qml:32
-#: contents/ui/LibraryPage.qml:41 contents/ui/LibraryPage.qml:269
-#: contents/ui/MaximizedPlayerPage.qml:856 contents/ui/PlaybackHistory.qml:39
+#: contents/ui/LibraryPage.qml:43 contents/ui/LibraryPage.qml:65
+#: contents/ui/LibraryPage.qml:107 contents/ui/LibraryPage.qml:340
+#: contents/ui/LibraryPage.qml:363 contents/ui/LibraryPage.qml:405
+#: contents/ui/MaximizedPlayerPage.qml:857 contents/ui/PlaybackHistory.qml:39
 #: contents/ui/PlaylistPage.qml:33
 #, kde-format
 msgid "Shuffle"
@@ -100,35 +104,37 @@ msgstr "OK"
 msgid "Cancel"
 msgstr "Anuluj"
 
-#: contents/ui/LibraryPage.qml:29 contents/ui/LibraryPage.qml:56
+#: contents/ui/LibraryPage.qml:29 contents/ui/LibraryPage.qml:125
 #: contents/ui/NavigationBar.qml:46 contents/ui/NavigationBar.qml:51
 #: contents/ui/Sidebar.qml:128 contents/ui/Sidebar.qml:135
 #, kde-format
 msgid "Favourites"
 msgstr "Ulubione"
 
-#: contents/ui/LibraryPage.qml:52 contents/ui/LibraryPage.qml:280
+#: contents/ui/LibraryPage.qml:121 contents/ui/LibraryPage.qml:419
 #, kde-format
 msgid "Show All"
 msgstr "Pokaż wszystkie"
 
-#: contents/ui/LibraryPage.qml:81
+#: contents/ui/LibraryPage.qml:150
 #, fuzzy, kde-format
 #| msgid "Favourites"
 msgid "No Favourites Yet"
 msgstr "Ulubione"
 
-#: contents/ui/LibraryPage.qml:257
+#: contents/ui/LibraryPage.qml:326
 #, kde-format
 msgid "Most played"
 msgstr "Najczęściej odtwarzane"
 
-#: contents/ui/LibraryPage.qml:284
+#: contents/ui/LibraryPage.qml:423 contents/ui/NavigationBar.qml:58
+#: contents/ui/NavigationBar.qml:63 contents/ui/Sidebar.qml:147
+#: contents/ui/Sidebar.qml:154
 #, kde-format
-msgid "played Songs"
-msgstr "odtworzone utwory"
+msgid "Played Songs"
+msgstr "Odtwarzane utwory"
 
-#: contents/ui/LibraryPage.qml:308
+#: contents/ui/LibraryPage.qml:447
 #, fuzzy, kde-format
 #| msgid "No songs here yet"
 msgid "No Songs Played Yet"
@@ -151,12 +157,12 @@ msgid "%1%"
 msgstr "%1%"
 
 #: contents/ui/MaximizedPlayerPage.qml:806
-#: contents/ui/MaximizedPlayerPage.qml:964
+#: contents/ui/MaximizedPlayerPage.qml:965
 #, kde-format
 msgid "Remove Track"
 msgstr "Usuń utwór"
 
-#: contents/ui/MaximizedPlayerPage.qml:835
+#: contents/ui/MaximizedPlayerPage.qml:836
 #, fuzzy, kde-format
 #| msgid "Playlist"
 msgid "Clear Playlist"
@@ -171,12 +177,6 @@ msgstr "Biblioteka"
 #, kde-format
 msgid "Search"
 msgstr "Szukaj"
-
-#: contents/ui/NavigationBar.qml:58 contents/ui/NavigationBar.qml:63
-#: contents/ui/Sidebar.qml:147 contents/ui/Sidebar.qml:154
-#, kde-format
-msgid "Played Songs"
-msgstr "Odtwarzane utwory"
 
 #: contents/ui/PlaybackHistory.qml:15
 #, kde-format
@@ -305,6 +305,9 @@ msgstr "lukasz.wojnilowicz@gmail.com, ignacy.kajdan@gmail.com"
 #| msgid "Find music on YouTube Music"
 msgid "Unofficial API for YouTube Music"
 msgstr "Znajdź muzykę w serwisie YouTube Music"
+
+#~ msgid "played Songs"
+#~ msgstr "odtworzone utwory"
 
 #~ msgid "Now Playing"
 #~ msgstr "Teraz odtwarzany"

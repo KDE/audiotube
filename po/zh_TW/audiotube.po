@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-26 00:57+0000\n"
+"POT-Creation-Date: 2023-02-28 00:57+0000\n"
 "PO-Revision-Date: 2022-05-30 00:47+0000\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -18,16 +18,20 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: contents/ui/AlbumPage.qml:22 contents/ui/LibraryPage.qml:35
-#: contents/ui/LibraryPage.qml:263 contents/ui/PlaybackHistory.qml:26
+#: contents/ui/AlbumPage.qml:22 contents/ui/LibraryPage.qml:36
+#: contents/ui/LibraryPage.qml:60 contents/ui/LibraryPage.qml:102
+#: contents/ui/LibraryPage.qml:333 contents/ui/LibraryPage.qml:358
+#: contents/ui/LibraryPage.qml:400 contents/ui/PlaybackHistory.qml:26
 #: contents/ui/PlaylistPage.qml:26
 #, kde-format
 msgid "Play"
 msgstr ""
 
 #: contents/ui/AlbumPage.qml:29 contents/ui/ArtistPage.qml:32
-#: contents/ui/LibraryPage.qml:41 contents/ui/LibraryPage.qml:269
-#: contents/ui/MaximizedPlayerPage.qml:856 contents/ui/PlaybackHistory.qml:39
+#: contents/ui/LibraryPage.qml:43 contents/ui/LibraryPage.qml:65
+#: contents/ui/LibraryPage.qml:107 contents/ui/LibraryPage.qml:340
+#: contents/ui/LibraryPage.qml:363 contents/ui/LibraryPage.qml:405
+#: contents/ui/MaximizedPlayerPage.qml:857 contents/ui/PlaybackHistory.qml:39
 #: contents/ui/PlaylistPage.qml:33
 #, kde-format
 msgid "Shuffle"
@@ -97,34 +101,36 @@ msgstr ""
 msgid "Cancel"
 msgstr ""
 
-#: contents/ui/LibraryPage.qml:29 contents/ui/LibraryPage.qml:56
+#: contents/ui/LibraryPage.qml:29 contents/ui/LibraryPage.qml:125
 #: contents/ui/NavigationBar.qml:46 contents/ui/NavigationBar.qml:51
 #: contents/ui/Sidebar.qml:128 contents/ui/Sidebar.qml:135
 #, kde-format
 msgid "Favourites"
 msgstr ""
 
-#: contents/ui/LibraryPage.qml:52 contents/ui/LibraryPage.qml:280
+#: contents/ui/LibraryPage.qml:121 contents/ui/LibraryPage.qml:419
 #, kde-format
 msgid "Show All"
 msgstr ""
 
-#: contents/ui/LibraryPage.qml:81
+#: contents/ui/LibraryPage.qml:150
 #, kde-format
 msgid "No Favourites Yet"
 msgstr ""
 
-#: contents/ui/LibraryPage.qml:257
+#: contents/ui/LibraryPage.qml:326
 #, kde-format
 msgid "Most played"
 msgstr ""
 
-#: contents/ui/LibraryPage.qml:284
+#: contents/ui/LibraryPage.qml:423 contents/ui/NavigationBar.qml:58
+#: contents/ui/NavigationBar.qml:63 contents/ui/Sidebar.qml:147
+#: contents/ui/Sidebar.qml:154
 #, kde-format
-msgid "played Songs"
+msgid "Played Songs"
 msgstr ""
 
-#: contents/ui/LibraryPage.qml:308
+#: contents/ui/LibraryPage.qml:447
 #, kde-format
 msgid "No Songs Played Yet"
 msgstr ""
@@ -146,12 +152,12 @@ msgid "%1%"
 msgstr ""
 
 #: contents/ui/MaximizedPlayerPage.qml:806
-#: contents/ui/MaximizedPlayerPage.qml:964
+#: contents/ui/MaximizedPlayerPage.qml:965
 #, kde-format
 msgid "Remove Track"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:835
+#: contents/ui/MaximizedPlayerPage.qml:836
 #, kde-format
 msgid "Clear Playlist"
 msgstr ""
@@ -164,12 +170,6 @@ msgstr ""
 #: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:113
 #, kde-format
 msgid "Search"
-msgstr ""
-
-#: contents/ui/NavigationBar.qml:58 contents/ui/NavigationBar.qml:63
-#: contents/ui/Sidebar.qml:147 contents/ui/Sidebar.qml:154
-#, kde-format
-msgid "Played Songs"
 msgstr ""
 
 #: contents/ui/PlaybackHistory.qml:15
