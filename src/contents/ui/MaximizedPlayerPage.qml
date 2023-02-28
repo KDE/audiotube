@@ -979,6 +979,7 @@ Item {
                     Layout.topMargin: Kirigami.Units.largeSpacing
                     Layout.bottomMargin: Kirigami.Units.largeSpacing
                     spacing: Kirigami.Units.largeSpacing
+                    enabled: playListView.count != 0
                     Item {
                         Layout.fillWidth: true
                     }
