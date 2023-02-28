@@ -9,6 +9,7 @@
 #include <QNetworkReply>
 #include <QNetworkRequest>
 #include <QStringBuilder>
+#include <QGuiApplication>
 
 #include "asyncdatabase.h"
 
@@ -162,9 +163,11 @@ void ThumbnailSource::setVideoId(const QString &id) {
     auto *reply = Library::instance().nam().get(QNetworkRequest(QUrl("https://i.ytimg.com/vi_webp/" % m_videoId % "/maxresdefault.webp")));
 
     auto storeResult = [this, cacheLocation](QNetworkReply *reply) {
-        QFile file(cacheLocation);
-        file.open(QFile::WriteOnly);
-        file.write(reply->readAll());
+        // Scale cover down to save qmemory
+        auto thumbnail = QImage::fromData(reply->readAll())
+            .scaledToHeight(200 * qGuiApp->devicePixelRatio());
+
+        thumbnail.save(cacheLocation);
         setCachedPath(QUrl::fromLocalFile(cacheLocation));
 
         reply->deleteLater();
