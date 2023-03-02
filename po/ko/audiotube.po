@@ -1,15 +1,15 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the audiotube package.
-# Shinjo Park <kde@peremen.name>, 2021, 2022.
+# Shinjo Park <kde@peremen.name>, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-02-28 00:57+0000\n"
-"PO-Revision-Date: 2022-10-03 14:20+0200\n"
+"PO-Revision-Date: 2023-03-01 00:43+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
-"Language-Team: Korean <kde-i18n-doc@kde.org>\n"
+"Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -44,14 +44,14 @@ msgstr "브라우저로 열기"
 #: contents/ui/AlbumPage.qml:44
 #, kde-format
 msgid "Album • %1"
-msgstr ""
+msgstr "앨범 • %1"
 
 #: contents/ui/AlbumPage.qml:88 contents/ui/ArtistPage.qml:126
 #: contents/ui/PlaybackHistory.qml:126 contents/ui/PlaylistPage.qml:91
 #: contents/ui/SearchPage.qml:130
 #, kde-format
 msgid "More"
-msgstr ""
+msgstr "더 보기"
 
 #: contents/ui/ArtistPage.qml:27
 #, kde-format
@@ -59,8 +59,7 @@ msgid "Radio"
 msgstr "라디오"
 
 #: contents/ui/ArtistPage.qml:46
-#, fuzzy, kde-format
-#| msgid "Artists"
+#, kde-format
 msgid "Artist"
 msgstr "아티스트"
 
@@ -114,10 +113,9 @@ msgid "Show All"
 msgstr "모두 표시"
 
 #: contents/ui/LibraryPage.qml:150
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "No Favourites Yet"
-msgstr "책갈피"
+msgstr "책갈피에 등록된 항목 없음"
 
 #: contents/ui/LibraryPage.qml:326
 #, kde-format
@@ -132,10 +130,9 @@ msgid "Played Songs"
 msgstr "재생한 노래"
 
 #: contents/ui/LibraryPage.qml:447
-#, fuzzy, kde-format
-#| msgid "No songs here yet"
+#, kde-format
 msgid "No Songs Played Yet"
-msgstr "목록에 등록된 곡 없음"
+msgstr "재생한 곡 없음"
 
 #: contents/ui/main.qml:108 main.cpp:42
 #, kde-format
@@ -151,7 +148,7 @@ msgstr "재생 중인 미디어 없음"
 #: contents/ui/MaximizedPlayerPage.qml:589
 #, kde-format
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: contents/ui/MaximizedPlayerPage.qml:806
 #: contents/ui/MaximizedPlayerPage.qml:965
@@ -160,15 +157,14 @@ msgid "Remove Track"
 msgstr "트랙 삭제"
 
 #: contents/ui/MaximizedPlayerPage.qml:836
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "Clear Playlist"
-msgstr "재생 목록"
+msgstr "재생 목록 비우기"
 
 #: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:97
 #, kde-format
 msgid "Library"
-msgstr ""
+msgstr "라이브러리"
 
 #: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:113
 #, kde-format
@@ -186,20 +182,19 @@ msgid "No songs here yet"
 msgstr "목록에 등록된 곡 없음"
 
 #: contents/ui/PlaylistPage.qml:42
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "Playlist"
 msgstr "재생 목록"
 
 #: contents/ui/SearchHistoryPage.qml:86 contents/ui/SearchWithDropdown.qml:321
 #, kde-format
 msgid "remove from search history"
-msgstr ""
+msgstr "검색 기록에서 삭제"
 
 #: contents/ui/SearchPage.qml:16
 #, kde-format
 msgid "Previous Searches:"
-msgstr ""
+msgstr "이전 검색:"
 
 #: contents/ui/SearchPage.qml:28
 #, kde-format
@@ -219,17 +214,17 @@ msgstr "알 수 없음"
 #: contents/ui/SearchWithDropdown.qml:286
 #, kde-format
 msgid "No matching previous searches"
-msgstr ""
+msgstr "일치하는 이전 검색 없음"
 
 #: contents/ui/Sidebar.qml:171
 #, kde-format
 msgid "About"
-msgstr ""
+msgstr "정보"
 
 #: contents/ui/Sidebar.qml:185
 #, kde-format
 msgid "Collapse Sidebar"
-msgstr ""
+msgstr "사이드바 접기"
 
 #: contents/ui/SongMenu.qml:116 contents/ui/SongMenu.qml:175
 #, kde-format
@@ -239,54 +234,52 @@ msgstr "다음 재생"
 #: contents/ui/SongMenu.qml:125 contents/ui/SongMenu.qml:181
 #, kde-format
 msgid "Add to queue"
-msgstr ""
+msgstr "대기열에 추가"
 
 #: contents/ui/SongMenu.qml:135 contents/ui/SongMenu.qml:188
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "Remove Favourite"
-msgstr "책갈피"
+msgstr "책갈피 삭제"
 
 #: contents/ui/SongMenu.qml:135 contents/ui/SongMenu.qml:188
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "Add Favourite"
-msgstr "책갈피"
+msgstr "책갈피에 추가"
 
 #: contents/ui/SongMenu.qml:151 contents/ui/SongMenu.qml:203
 #, kde-format
 msgid "Remove from History"
-msgstr ""
+msgstr "과거 기록에서 삭제"
 
 #: main.cpp:44
 #, kde-format
 msgid "YouTube Music Player"
-msgstr ""
+msgstr "YouTube Music 재생기"
 
 #: main.cpp:46
 #, kde-format
 msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
-msgstr ""
+msgstr "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
 
 #: main.cpp:47
 #, kde-format
 msgid "Jonah Brüchert"
-msgstr ""
+msgstr "Jonah Brüchert"
 
 #: main.cpp:47
 #, kde-format
 msgid "Maintainer"
-msgstr ""
+msgstr "관리자"
 
 #: main.cpp:48
 #, kde-format
 msgid "Mathis Brüchert"
-msgstr ""
+msgstr "Mathis Brüchert"
 
 #: main.cpp:48
 #, kde-format
 msgid "Designer"
-msgstr ""
+msgstr "디자이너"
 
 #: main.cpp:49
 #, kde-format
@@ -301,10 +294,9 @@ msgid "Your emails"
 msgstr "kde@peremen.name"
 
 #: main.cpp:54
-#, fuzzy, kde-format
-#| msgid "Find music on YouTube Music"
+#, kde-format
 msgid "Unofficial API for YouTube Music"
-msgstr "YouTube Music에서 음악 찾기"
+msgstr "YouTube Music 비공식 API"
 
 #, fuzzy
 #~| msgid "Played Songs"
