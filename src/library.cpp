@@ -94,10 +94,23 @@ void Library::addSearch(const QString &text)
     connectFuture(m_database->execute("insert into searches (search_query) values (?)", text), this, &Library::searchesChanged);
 }
 
+void Library::addTemporarySearch(const QString &text)
+{
+    m_searches->addSearch(text);
+    Q_EMIT searchesChanged();
+}
+
 void Library::removeSearch(const QString &text) {
     m_searches->removeSearch(text);
     connectFuture(m_database->execute("delete from searches where search_query = ?", text), this, &Library::searchesChanged);
 }
+
+void Library::removeTemporarySearch(const QString& text)
+{
+    m_searches->removeSearch(text);
+    Q_EMIT searchesChanged();
+}
+
 
 PlaybackHistoryModel *Library::playbackHistory()
 {
@@ -349,7 +362,7 @@ QVariant SearchHistoryModel::data(const QModelIndex &index, int role) const {
 }
 
 void SearchHistoryModel::addSearch(const QString& search) {
-    beginInsertRows({}, m_history.size(), m_history.size());
+    beginInsertRows({}, 0, 0);
     m_history.insert(m_history.begin(), {search});
     endInsertRows();
 }

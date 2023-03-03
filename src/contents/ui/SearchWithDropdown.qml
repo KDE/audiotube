@@ -25,18 +25,85 @@ Item {
         readOnly: true
     }
     Kirigami.SearchField {
-        property var filterExpression: new RegExp(`.*${searchField.text}.*`, "i")
+        property var filterExpression: new RegExp(`.*${filterText}.*`, "i")
+        property var filterText: ""
+        property var oldText: ""
 
         id: searchField
         autoAccept: false
         width: root.width
         selectByMouse: true
         onFocusChanged: {
+            filterText = text
             if (wideScreen && focus)
                 popup.open()
         }
+
+        onTextEdited: {
+            filterText = text
+            if(oldText) {
+                Library.removeTemporarySearch(oldText)
+            }
+            if(text && completionList.count > 0) {
+                Library.addTemporarySearch(text)
+                oldText = text
+            }
+            else {
+                oldText = ""
+            }
+        }
+
+        Keys.onPressed: {
+            if(completionList.count > 0) {
+                if (event.key == Qt.Key_Down) {
+                    if(completionList.selectedDelegate == -1 || completionList.selectedDelegate == completionList.count - 1) {
+                        completionList.selectedDelegate = 0
+                        mainScrollView.contentItem.contentY = 0
+                    }
+                    else {
+                        ++completionList.selectedDelegate
+                        if(!completionList.isSelectedDelegateVisible()) {
+                            if(!recents.visible) {
+                                mainScrollView.contentItem.contentY = (completionList.selectedDelegate + 1) * completionList.empiricDelegateHeight - mainScrollView.height
+                            }
+                            else {
+                                mainScrollView.contentItem.contentY = (completionList.selectedDelegate + 1) * completionList.empiricDelegateHeight + recents.height + mainScrollViewLayout.spacing - mainScrollView.height
+                            }
+                        }
+                    }
+                    event.accepted = true
+                }
+                else if(event.key == Qt.Key_Up) {
+                    if(completionList.selectedDelegate == -1 || completionList.selectedDelegate == 0) {
+                        completionList.selectedDelegate = completionList.count - 1
+                        mainScrollView.contentItem.contentY = mainScrollView.contentHeight - mainScrollView.height
+                    }
+                    else {
+                        --completionList.selectedDelegate
+                        if(!completionList.isSelectedDelegateVisible()) {
+                            if(!recents.visible) {
+                                mainScrollView.contentItem.contentY = completionList.empiricDelegateHeight * completionList.selectedDelegate
+                            }
+                            else {
+                                mainScrollView.contentItem.contentY = completionList.empiricDelegateHeight * completionList.selectedDelegate + recents.height + mainScrollViewLayout.spacing
+                            }
+                        }
+                    }
+                    event.accepted = true
+                }
+                if(event.accepted) {
+                    text = completionList.itemAt(completionList.selectedDelegate).text
+                }
+                else {
+                    completionList.selectedDelegate = -1
+                    mainScrollView.contentItem.contentY = 0
+                }
+            }
+        }
+
         onAccepted: {
             popup.close()
+            completionList.selectedDelegate = -1
 
             while (pageStack.depth > 0) {
                 pageStack.pop()
@@ -231,6 +298,8 @@ Item {
                 contentWidth: availableWidth
 
                 ColumnLayout {
+                    id: mainScrollViewLayout
+
                     width: mainScrollView.contentWidth
                     
                     Controls.ScrollView {
@@ -239,7 +308,7 @@ Item {
                         Layout.fillWidth: true
                         Layout.maximumWidth: popup.width
 
-                        visible: searchField.text && recentsRepeater.count > 0
+                        visible: searchField.filterText && recentsRepeater.count > 0
 
                         leftPadding: 10
                         rightPadding: 40
@@ -268,8 +337,8 @@ Item {
                         }
                     }
                     Kirigami.Separator{
+                        visible: recents.visible
                         Layout.fillWidth: true
-                        visible: searchField.text && recentsRepeater.count > 0
                         implicitWidth: popup.width
 
                     }
@@ -292,24 +361,42 @@ Item {
                     Repeater {
                         Layout.fillWidth: true
 
+                        property int selectedDelegate: -1
+                        property int delegateHeight: Kirigami.Units.gridUnit
+                        property int delegatePadding: Kirigami.Units.smallSpacing
+                        property int empiricDelegateHeight: recents.visible ? (mainScrollView.contentHeight - recents.height) / count : (mainScrollView.contentHeight + mainScrollViewLayout.spacing) / (count)
+
                         id: completionList
                         model: SortFilterModel {
                             sourceModel: Library.searches
                             filterRegularExpression: searchField.filterExpression
                         }
+
+                        function isSelectedDelegateVisible() {
+                            if(!recents.visible) {
+                                return selectedDelegate * empiricDelegateHeight > mainScrollView.contentItem.contentY && (selectedDelegate + 1) * empiricDelegateHeight < mainScrollView.contentItem.contentY + mainScrollView.height
+                            }
+                            else {
+                                    return selectedDelegate * empiricDelegateHeight + recents.height > mainScrollView.contentItem.contentY && (selectedDelegate + 1) * empiricDelegateHeight + recents.height < mainScrollView.contentItem.contentY + mainScrollView.height
+                            }
+                        }
+
                         delegate: Kirigami.AbstractListItem {
                             id: completionDelegate
-                            highlighted: focus
+                            highlighted: focus || (completionList.selectedDelegate == index)
                             Kirigami.Theme.colorSet: Kirigami.Theme.Window
                             Kirigami.Theme.inherit: false
                             Layout.fillWidth: true
-                            height: Kirigami.Units.gridUnit * 2
-                            contentItem: RowLayout {
+                            height: completionList.delegateHeight
+                            text: model.display
+                            padding: completionList.delegatePadding
+                            spacing: 0
 
+                            contentItem: RowLayout {
                                 Kirigami.Icon {
                                     source: "search"
-                                    implicitHeight: Kirigami.Units.gridUnit
-                                    implicitWidth: Kirigami.Units.gridUnit
+                                    implicitHeight: completionList.delegateHeight
+                                    implicitWidth: completionList.delegateHeight
                                     color: Kirigami.Theme.disabledTextColor
                                 }
                                 Controls.Label{
@@ -323,6 +410,8 @@ Item {
                                     onClicked: {
                                         Library.removeSearch(model.display)
                                     }
+                                    implicitHeight: completionList.delegateHeight
+                                    visible: !searchField.oldText || index != 0
                                 }
 
                             }
