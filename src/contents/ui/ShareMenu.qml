@@ -1,4 +1,5 @@
 // SPDX-FileCopyrightText: 2019 Nicolas Fella <nicolas.fella@gmx.de>
+// SPDX-FileCopyrightText: 2023 Mathis Brüchert <mbb@kaidan.im>
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 import QtQuick.Controls 2.1 as Controls
