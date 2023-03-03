@@ -26,6 +26,8 @@ class UserPlaylistModel : public AbstractYTMusicModel
     Q_PROPERTY(bool canSkip READ canSkip NOTIFY canSkipChanged)
     Q_PROPERTY(bool canSkipBack READ canSkipBack NOTIFY canSkipBackChanged)
     Q_PROPERTY(QString lyrics READ lyrics NOTIFY lyricsChanged)
+    Q_PROPERTY(QUrl webUrl READ webUrl NOTIFY currentVideoIdChanged)
+
 
 public:
     enum Role {
@@ -73,6 +75,8 @@ public:
 
     QString lyrics() const;
     Q_SIGNAL void lyricsChanged();
+
+    QUrl webUrl() const;
 
     Q_INVOKABLE void next();
     Q_INVOKABLE void previous();

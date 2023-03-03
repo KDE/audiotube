@@ -169,7 +169,7 @@ QUrl ArtistModel::thumbnailUrl() const
 
 QUrl ArtistModel::webUrl() const
 {
-    return QUrl(YTMUSIC_WEB_BASE_URL % u"channel/" % QString::fromStdString(m_artist.channel_id));
+    return QUrl(YTMUSIC_WEB_BASE_URL % u"channel/" % m_channelId);
 }
 
 void ArtistModel::triggerItem(int row)
