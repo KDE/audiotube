@@ -16,6 +16,11 @@ Kirigami.ScrollablePage {
     SongMenu {
         id: menu
     }
+    ShareMenu {
+        id: shareMenu
+        inputTitle: playlistModel.title
+        url: playlistModel.webUrl
+    }
     ListView {
         id: songList
 
@@ -34,6 +39,21 @@ Kirigami.ScrollablePage {
                     onTriggered: {
                         applicationWindow().playShufflePlaylist(playlistModel.playlistId)
                     }
+                }
+            ]
+            overflowActions: [
+                Kirigami.Action {
+                    text: i18n("Open in Browser")
+                    icon.name: "internet-services"
+                    onTriggered: Qt.openUrlExternally(playlistModel.webUrl)
+                },
+                Kirigami.Action {
+                    text: i18n("Share")
+                    icon.name: "emblem-shared-symbolic"
+                    onTriggered:{
+                        shareMenu.open()
+                    }
+
                 }
             ]
             title: playlistModel.title

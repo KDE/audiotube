@@ -29,5 +29,6 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
         <file>resources/favourites_placeholder.svg</file>
         <file>resources/played_placeholder.svg</file>
         <file alias="AboutAudiotube.qml">contents/ui/AboutAudiotube.qml</file>
+        <file alias="ShareMenu.qml">contents/ui/ShareMenu.qml</file>
     </qresource>
 </RCC>

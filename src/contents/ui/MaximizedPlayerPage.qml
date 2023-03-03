@@ -616,7 +616,27 @@ Item {
                         Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
                         Kirigami.Theme.inherit: false
                     }
+                    ToolButton {
 
+                        id: shareButton
+                        Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
+                        Layout.maximumWidth: height
+                        Layout.preferredWidth: height
+                        onClicked: shareMenu.open()
+
+                        text: "Sharee Song"
+                        icon.name: "emblem-shared-symbolic"
+                        icon.color: "white"
+                        display: AbstractButton.IconOnly
+
+                        Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
+                        Kirigami.Theme.inherit: false
+                        ShareMenu {
+                            id: shareMenu
+                            url: UserPlaylistModel.webUrl
+                            inputTitle: info.title
+                        }
+                    }
                     Item {
                         Layout.fillWidth: true
                         visible: wideScreen

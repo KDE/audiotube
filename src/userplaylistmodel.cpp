@@ -11,6 +11,8 @@
 #include <QRandomGenerator>
 #include <QFutureWatcher>
 
+#include <QStringBuilder>
+
 #include <iostream>
 
 #include "playlistutils.h"
@@ -434,3 +436,9 @@ void UserPlaylistModel::setPlaylistId(const QString &playlistId)
     m_playlistId = playlistId;
     Q_EMIT playlistIdChanged();
 }
+
+QUrl UserPlaylistModel::webUrl() const
+{
+    return QUrl(YTMUSIC_WEB_BASE_URL % "watch?v=" % m_currentVideoId);
+}
+

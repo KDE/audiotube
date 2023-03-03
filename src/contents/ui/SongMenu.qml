@@ -10,7 +10,13 @@ import QtQuick.Layouts 1.15
 
 
 Item {
+    ShareMenu {
+        id: shareMenu
+    }
     function openForSong(videoId, songTitle, artists, artistsDisplayString) {
+        shareMenu.url = "https://music.youtube.com/watch?v=" + videoId
+        shareMenu.inputTitle= songTitle
+
         menu.videoId = videoId
         drawer.videoId = videoId
 
@@ -145,6 +151,7 @@ Item {
                     drawer.close()
                 }
             }
+
             Kirigami.BasicListItem{
                 readonly property QtObject wasPlayedWatcher: Library.wasPlayedWatcher(drawer.videoId)
                 
@@ -156,6 +163,17 @@ Item {
                 }
                 visible: wasPlayedWatcher ? wasPlayedWatcher.wasPlayed : false
                 enabled: wasPlayedWatcher ? wasPlayedWatcher.wasPlayed : false
+            }
+
+            Kirigami.BasicListItem{
+                readonly property QtObject wasPlayedWatcher: Library.wasPlayedWatcher(drawer.videoId)
+
+                label: i18n("Share Song")
+                icon: "emblem-shared-symbolic"
+                onClicked: {
+                    shareMenu.open()
+                    drawer.close()
+                }
             }
             Item{
                 Layout.fillHeight: true
@@ -183,6 +201,9 @@ Item {
             onTriggered: UserPlaylistModel.append(menu.videoId, menu.songTitle, menu.artists)
         }
 
+
+        Controls.MenuSeparator{}
+
         Controls.MenuItem {
             readonly property QtObject favouriteWatcher: Library.favouriteWatcher(menu.videoId)
             text: favouriteWatcher ? (favouriteWatcher.isFavourite ? i18n("Remove Favourite"): i18n("Add Favourite")): ""
@@ -197,7 +218,6 @@ Item {
                 }
             }
         }
-
         Controls.MenuItem{
             readonly property QtObject wasPlayedWatcher: Library.wasPlayedWatcher(menu.videoId)
             text: i18n("Remove from History")
@@ -207,6 +227,13 @@ Item {
             }
             enabled: wasPlayedWatcher ? wasPlayedWatcher.wasPlayed : false
             visible: wasPlayedWatcher ? wasPlayedWatcher.wasPlayed : false
+        }
+        Controls.MenuSeparator{}
+
+        Controls.MenuItem {
+            text: i18n("Share Song")
+            icon.name: "emblem-shared-symbolic"
+            onTriggered: shareMenu.open()
         }
     }
 }

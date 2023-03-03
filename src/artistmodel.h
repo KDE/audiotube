@@ -23,7 +23,7 @@ class ArtistModel : public AbstractYTMusicModel
 
     Q_PROPERTY(QString title READ title NOTIFY titleChanged)
     Q_PROPERTY(QUrl thumbnailUrl READ thumbnailUrl NOTIFY thumbnailUrlChanged)
-    Q_PROPERTY(QUrl webUrl READ webUrl NOTIFY webUrlChanged)
+    Q_PROPERTY(QUrl webUrl READ webUrl NOTIFY channelIdChanged)
 
 public:
     enum Type {
@@ -59,7 +59,6 @@ public:
     Q_SIGNAL void thumbnailUrlChanged();
 
     QUrl webUrl() const;
-    Q_SIGNAL void webUrlChanged();
 
     Q_INVOKABLE void triggerItem(int row);
 

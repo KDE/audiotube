@@ -12,7 +12,11 @@ import org.kde.ytmusic 1.0
 Kirigami.ScrollablePage {
     property alias browseId: albumModel.browseId
     title: albumModel.title
-
+    ShareMenu {
+        id: shareMenu
+        inputTitle: albumModel.title
+        url: albumModel.webUrl
+    }
     ListView {
         id: songList
         header: ListHeader {
@@ -37,6 +41,14 @@ Kirigami.ScrollablePage {
                     text: i18n("Open in Browser")
                     icon.name: "internet-services"
                     onTriggered: Qt.openUrlExternally(albumModel.webUrl)
+                },
+                Kirigami.Action {
+                    text: i18n("Share")
+                    icon.name: "emblem-shared-symbolic"
+                    onTriggered:{
+                        shareMenu.open()
+                    }
+
                 }
             ]
             title: albumModel.title
