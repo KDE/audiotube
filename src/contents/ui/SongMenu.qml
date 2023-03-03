@@ -12,10 +12,10 @@ import QtQuick.Layouts 1.15
 Item {
     ShareMenu {
         id: shareMenu
-        inputTitle: "Title"
     }
     function openForSong(videoId, songTitle, artists, artistsDisplayString) {
         shareMenu.url = "https://music.youtube.com/watch?v=" + videoId
+        shareMenu.inputTitle= songTitle
 
         menu.videoId = videoId
         drawer.videoId = videoId

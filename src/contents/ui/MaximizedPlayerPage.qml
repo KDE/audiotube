@@ -634,7 +634,7 @@ Item {
                         ShareMenu {
                             id: shareMenu
                             url: UserPlaylistModel.webUrl
-                            inputTitle: "Title"
+                            inputTitle: info.title
                         }
                     }
                     Item {

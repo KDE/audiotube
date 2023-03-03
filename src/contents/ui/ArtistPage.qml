@@ -16,7 +16,7 @@ Kirigami.ScrollablePage {
     title: artistModel.title
     ShareMenu {
         id: shareMenu
-        inputTitle: "Title"
+        inputTitle: artistModel.title
         url: artistModel.webUrl
     }
     SongMenu {
