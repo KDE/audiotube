@@ -19,6 +19,8 @@ class PlaylistModel : public AbstractYTMusicModel
     // output
     Q_PROPERTY(QUrl thumbnailUrl READ thumbnailUrl NOTIFY thumbnailUrlChanged)
     Q_PROPERTY(QString title READ title NOTIFY titleChanged)
+    Q_PROPERTY(QUrl webUrl READ webUrl NOTIFY playlistIdChanged)
+
 
 public:
     explicit PlaylistModel(QObject *parent = nullptr);
@@ -44,6 +46,9 @@ public:
 
     QString title() const;
     Q_SIGNAL void titleChanged();
+
+    QUrl webUrl() const;
+
 
 private:
     QString m_playlistId;

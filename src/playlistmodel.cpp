@@ -10,6 +10,9 @@
 #include "asyncytmusic.h"
 #include "playlistutils.h"
 
+#include <QStringBuilder>
+
+
 PlaylistModel::PlaylistModel(QObject *parent)
     : AbstractYTMusicModel(parent)
 {
@@ -98,4 +101,9 @@ QUrl PlaylistModel::thumbnailUrl() const
 QString PlaylistModel::title() const
 {
     return QString::fromStdString(m_playlist.title);
+}
+
+QUrl PlaylistModel::webUrl() const
+{
+    return QUrl(YTMUSIC_WEB_BASE_URL % "playlist?list=" % playlistId());
 }
