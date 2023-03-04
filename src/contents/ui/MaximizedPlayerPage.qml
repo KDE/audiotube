@@ -426,46 +426,15 @@ Item {
                         onClicked:{
                             if(!volumeDrawer.opened){
                                 volumeDrawer.open()
-                                volumeDrawer.interactive = true
                             }
                             else{
                                 volumeDrawer.close()
                             }
                         }
-                        Drawer {
+                        BottomDrawer {
                             id: volumeDrawer
-
-                            edge: Qt.BottomEdge
-                            width: applicationWindow().width
-                            height: contents.height + 40
-                            interactive: false
-                            background: Kirigami.ShadowedRectangle{
-                                corners.topRightRadius: 10
-                                corners.topLeftRadius: 10
-                                shadow.size: 20
-                                shadow.color: Qt.rgba(0, 0, 0, 0.5)
-                                color: Kirigami.Theme.backgroundColor
-                            }
-                            onClosed: {
-                                interactive = false
-                            }
-                            ColumnLayout {
-                                width: volumeDrawer.width
-
-                                Rectangle {
-                                    Layout.margins: 5
-                                    radius:50
-                                    Layout.alignment: Qt.AlignHCenter
-                                    color: Kirigami.Theme.textColor
-                                    opacity: 0.7
-                                    width: 40
-                                    height: 4
-
-                                }
+                            drawerContentItem: ColumnLayout {
                                 RowLayout {
-                                    Layout.fillWidth: true
-                                    Layout.fillHeight: true
-                                    id: contents
                                     ToolButton{
                                         Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
                                         Layout.maximumWidth: height
@@ -892,33 +861,14 @@ Item {
             }
         }
 
-        Drawer {
+        BottomDrawer {
             id: queueDrawer
             onClosed:{sideDrawer.collapsed=true}
-            edge: Qt.BottomEdge
-            width: applicationWindow().width
             height: applicationWindow().height-50
-//            interactive: false
-            background: Kirigami.ShadowedRectangle{
-                corners.topRightRadius: 10
-                corners.topLeftRadius: 10
-                shadow.size: 20
-                shadow.color: Qt.rgba(0, 0, 0, 0.5)
-                color: Kirigami.Theme.backgroundColor
-            }
+            interactive: true
 
-            contentItem: ColumnLayout{
+            drawerContentItem: ColumnLayout{
                 spacing:0
-                Rectangle {
-                    Layout.margins: 5
-                    radius:50
-                    Layout.alignment: Qt.AlignHCenter
-                    color: Kirigami.Theme.textColor
-                    opacity: 0.7
-                    width: 40
-                    height: 4
-                }
-                
                 ScrollView {
                     Layout.fillWidth: true
                     Layout.fillHeight: true

@@ -76,36 +76,9 @@ Kirigami.ScrollablePage {
                     }
                 }
 
-                Controls.Drawer {
+                BottomDrawer{
                     id: favDrawer
-
-                    edge: Qt.BottomEdge
-                    height:contents.implicitHeight+20
-                    width: applicationWindow().width
-                    interactive: false
-                    background: Kirigami.ShadowedRectangle{
-                        corners.topRightRadius: 10
-                        corners.topLeftRadius: 10
-                        shadow.size: 20
-                        shadow.color: Qt.rgba(0, 0, 0, 0.5)
-                        color: Kirigami.Theme.backgroundColor
-
-                    }
-                    onAboutToShow: favDrawer.interactive = true
-                    onClosed: favDrawer.interactive = false
-                    ColumnLayout {
-                        id: contents
-                        anchors.fill: parent
-                        Rectangle {
-                            Layout.margins: 5
-                            radius:50
-                            Layout.alignment: Qt.AlignHCenter
-                            color: Kirigami.Theme.textColor
-                            opacity: 0.7
-                            width: 40
-                            height: 4
-
-                        }
+                    drawerContentItem: ColumnLayout {
                         Kirigami.BasicListItem{
                             label: i18n("Play")
                             icon: "media-playback-start"
@@ -133,7 +106,6 @@ Kirigami.ScrollablePage {
                         Item{
                             Layout.fillHeight: true
                         }
-
                     }
                 }
 
@@ -398,36 +370,9 @@ Kirigami.ScrollablePage {
                     }
                 }
 
-                Controls.Drawer {
+                BottomDrawer{
                     id: recDrawer
-
-                    edge: Qt.BottomEdge
-                    height:recContents.implicitHeight+20
-                    width: applicationWindow().width
-                    interactive: false
-                    background: Kirigami.ShadowedRectangle{
-                        corners.topRightRadius: 10
-                        corners.topLeftRadius: 10
-                        shadow.size: 20
-                        shadow.color: Qt.rgba(0, 0, 0, 0.5)
-                        color: Kirigami.Theme.backgroundColor
-
-                    }
-                    onAboutToShow: recDrawer.interactive = true
-                    onClosed: recDrawer.interactive = false
-                    ColumnLayout {
-                        id: recContents
-                        anchors.fill: parent
-                        Rectangle {
-                            Layout.margins: 5
-                            radius:50
-                            Layout.alignment: Qt.AlignHCenter
-                            color: Kirigami.Theme.textColor
-                            opacity: 0.7
-                            width: 40
-                            height: 4
-
-                        }
+                    drawerContentItem: ColumnLayout {
                         Kirigami.BasicListItem{
                             label: i18n("Play")
                             icon: "media-playback-start"
