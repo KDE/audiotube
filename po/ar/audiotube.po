@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-28 00:57+0000\n"
+"POT-Creation-Date: 2023-03-04 00:46+0000\n"
 "PO-Revision-Date: 2023-02-02 11:59+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -18,75 +18,82 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Generator: Lokalize 21.12.3\n"
 
-#: contents/ui/AlbumPage.qml:22 contents/ui/LibraryPage.qml:36
+#: contents/ui/AlbumPage.qml:26 contents/ui/LibraryPage.qml:36
 #: contents/ui/LibraryPage.qml:60 contents/ui/LibraryPage.qml:102
 #: contents/ui/LibraryPage.qml:333 contents/ui/LibraryPage.qml:358
 #: contents/ui/LibraryPage.qml:400 contents/ui/PlaybackHistory.qml:26
-#: contents/ui/PlaylistPage.qml:26
+#: contents/ui/PlaylistPage.qml:31
 #, kde-format
 msgid "Play"
 msgstr "شغّل"
 
-#: contents/ui/AlbumPage.qml:29 contents/ui/ArtistPage.qml:32
+#: contents/ui/AlbumPage.qml:33 contents/ui/ArtistPage.qml:36
 #: contents/ui/LibraryPage.qml:43 contents/ui/LibraryPage.qml:65
 #: contents/ui/LibraryPage.qml:107 contents/ui/LibraryPage.qml:340
 #: contents/ui/LibraryPage.qml:363 contents/ui/LibraryPage.qml:405
-#: contents/ui/MaximizedPlayerPage.qml:857 contents/ui/PlaybackHistory.qml:39
-#: contents/ui/PlaylistPage.qml:33
+#: contents/ui/MaximizedPlayerPage.qml:877 contents/ui/PlaybackHistory.qml:39
+#: contents/ui/PlaylistPage.qml:38
 #, kde-format
 msgid "Shuffle"
 msgstr "اخلط"
 
-#: contents/ui/AlbumPage.qml:37 contents/ui/ArtistPage.qml:39
+#: contents/ui/AlbumPage.qml:41 contents/ui/ArtistPage.qml:43
+#: contents/ui/PlaylistPage.qml:46
 #, kde-format
 msgid "Open in Browser"
 msgstr "افتح في المتصفّح"
 
-#: contents/ui/AlbumPage.qml:44
+#: contents/ui/AlbumPage.qml:46 contents/ui/ArtistPage.qml:48
+#: contents/ui/PlaylistPage.qml:51
+#, kde-format
+msgid "Share"
+msgstr ""
+
+#: contents/ui/AlbumPage.qml:56
 #, kde-format
 msgid "Album • %1"
 msgstr "الألبوم • %1"
 
-#: contents/ui/AlbumPage.qml:88 contents/ui/ArtistPage.qml:126
-#: contents/ui/PlaybackHistory.qml:126 contents/ui/PlaylistPage.qml:91
+#: contents/ui/AlbumPage.qml:100 contents/ui/ArtistPage.qml:137
+#: contents/ui/PlaybackHistory.qml:126 contents/ui/PlaylistPage.qml:111
 #: contents/ui/SearchPage.qml:130
 #, kde-format
 msgid "More"
 msgstr "المزيد"
 
-#: contents/ui/ArtistPage.qml:27
+#: contents/ui/ArtistPage.qml:31
 #, kde-format
 msgid "Radio"
 msgstr "راديو"
 
-#: contents/ui/ArtistPage.qml:46
+#: contents/ui/ArtistPage.qml:57
 #, kde-format
 msgid "Artist"
 msgstr "الفنّانون"
 
-#: contents/ui/ArtistPage.qml:68 contents/ui/SearchPage.qml:70
+#: contents/ui/ArtistPage.qml:79 contents/ui/SearchPage.qml:70
 #, kde-format
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
 "\"%1\"?"
 msgstr "تشغيل الفيديو غير مدعوم حتى الآن. هل تريد تشغيل صوت فقط من \"%1\"؟"
 
-#: contents/ui/ArtistPage.qml:85 contents/ui/SearchPage.qml:26
+#: contents/ui/ArtistPage.qml:96 contents/ui/SearchPage.qml:26
 #, kde-format
 msgid "Albums"
 msgstr "الألبومات"
 
-#: contents/ui/ArtistPage.qml:87
+#: contents/ui/ArtistPage.qml:98
 #, kde-format
 msgid "Singles"
 msgstr "فردي"
 
-#: contents/ui/ArtistPage.qml:89 contents/ui/SearchPage.qml:32
+#: contents/ui/ArtistPage.qml:100 contents/ui/SearchPage.qml:32
 #, kde-format
 msgid "Songs"
 msgstr "أغاني"
 
-#: contents/ui/ArtistPage.qml:91 contents/ui/SearchPage.qml:34
+#: contents/ui/ArtistPage.qml:102 contents/ui/SearchPage.qml:34
 #, kde-format
 msgid "Videos"
 msgstr "الفيديوهات"
@@ -153,13 +160,13 @@ msgstr "لا يوجد وسائط تعمل"
 msgid "%1%"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:806
-#: contents/ui/MaximizedPlayerPage.qml:965
+#: contents/ui/MaximizedPlayerPage.qml:826
+#: contents/ui/MaximizedPlayerPage.qml:985
 #, kde-format
 msgid "Remove Track"
 msgstr "أزل المسار"
 
-#: contents/ui/MaximizedPlayerPage.qml:836
+#: contents/ui/MaximizedPlayerPage.qml:856
 #, fuzzy, kde-format
 #| msgid "Playlist"
 msgid "Clear Playlist"
@@ -185,12 +192,12 @@ msgstr "قائمة غير معروفة من الأغاني"
 msgid "No songs here yet"
 msgstr "لا يوجد أي أغنية بعد"
 
-#: contents/ui/PlaylistPage.qml:42
+#: contents/ui/PlaylistPage.qml:62
 #, kde-format
 msgid "Playlist"
 msgstr "قائمة التشغيل"
 
-#: contents/ui/SearchHistoryPage.qml:86 contents/ui/SearchWithDropdown.qml:321
+#: contents/ui/SearchHistoryPage.qml:86 contents/ui/SearchWithDropdown.qml:408
 #, kde-format
 msgid "remove from search history"
 msgstr "أزل من تاريخ البحث"
@@ -215,10 +222,15 @@ msgstr "قوائم التّشغيل"
 msgid "Unknown"
 msgstr "مجهول"
 
-#: contents/ui/SearchWithDropdown.qml:286
+#: contents/ui/SearchWithDropdown.qml:355
 #, kde-format
 msgid "No matching previous searches"
 msgstr "لا يوجد تطابق من  البحوث الأخيرة"
+
+#: contents/ui/ShareMenu.qml:36 contents/ui/ShareMenu.qml:100
+#, kde-format
+msgid "Share to"
+msgstr ""
 
 #: contents/ui/Sidebar.qml:171
 #, kde-format
@@ -230,30 +242,36 @@ msgstr ""
 msgid "Collapse Sidebar"
 msgstr " اطوِ الشريط الجانبي"
 
-#: contents/ui/SongMenu.qml:116 contents/ui/SongMenu.qml:175
+#: contents/ui/SongMenu.qml:122 contents/ui/SongMenu.qml:193
 #, kde-format
 msgid "Play Next"
 msgstr "شغل التالي"
 
-#: contents/ui/SongMenu.qml:125 contents/ui/SongMenu.qml:181
+#: contents/ui/SongMenu.qml:131 contents/ui/SongMenu.qml:199
 #, kde-format
 msgid "Add to queue"
 msgstr "أضف للطابور"
 
-#: contents/ui/SongMenu.qml:135 contents/ui/SongMenu.qml:188
+#: contents/ui/SongMenu.qml:141 contents/ui/SongMenu.qml:209
 #, kde-format
 msgid "Remove Favourite"
 msgstr "أزل المفضلة"
 
-#: contents/ui/SongMenu.qml:135 contents/ui/SongMenu.qml:188
+#: contents/ui/SongMenu.qml:141 contents/ui/SongMenu.qml:209
 #, kde-format
 msgid "Add Favourite"
 msgstr "أضف للمفضلة"
 
-#: contents/ui/SongMenu.qml:151 contents/ui/SongMenu.qml:203
+#: contents/ui/SongMenu.qml:158 contents/ui/SongMenu.qml:223
 #, kde-format
 msgid "Remove from History"
 msgstr "أزل من التّاريخ"
+
+#: contents/ui/SongMenu.qml:171 contents/ui/SongMenu.qml:234
+#, fuzzy, kde-format
+#| msgid "Favourite Songs"
+msgid "Share Song"
+msgstr "الأغاني المفضّلة"
 
 #: main.cpp:44
 #, kde-format
@@ -314,9 +332,6 @@ msgstr "اعثر على موسيقى على موسيقى يوتيوب"
 
 #~ msgid "Lyrics"
 #~ msgstr "الكلمات"
-
-#~ msgid "Favourite Songs"
-#~ msgstr "الأغاني المفضّلة"
 
 #~ msgid "Back"
 #~ msgstr "عُد"

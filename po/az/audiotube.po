@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-28 00:57+0000\n"
+"POT-Creation-Date: 2023-03-04 00:46+0000\n"
 "PO-Revision-Date: 2022-06-19 12:16+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -17,54 +17,61 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 22.04.2\n"
 
-#: contents/ui/AlbumPage.qml:22 contents/ui/LibraryPage.qml:36
+#: contents/ui/AlbumPage.qml:26 contents/ui/LibraryPage.qml:36
 #: contents/ui/LibraryPage.qml:60 contents/ui/LibraryPage.qml:102
 #: contents/ui/LibraryPage.qml:333 contents/ui/LibraryPage.qml:358
 #: contents/ui/LibraryPage.qml:400 contents/ui/PlaybackHistory.qml:26
-#: contents/ui/PlaylistPage.qml:26
+#: contents/ui/PlaylistPage.qml:31
 #, kde-format
 msgid "Play"
 msgstr "Başladın"
 
-#: contents/ui/AlbumPage.qml:29 contents/ui/ArtistPage.qml:32
+#: contents/ui/AlbumPage.qml:33 contents/ui/ArtistPage.qml:36
 #: contents/ui/LibraryPage.qml:43 contents/ui/LibraryPage.qml:65
 #: contents/ui/LibraryPage.qml:107 contents/ui/LibraryPage.qml:340
 #: contents/ui/LibraryPage.qml:363 contents/ui/LibraryPage.qml:405
-#: contents/ui/MaximizedPlayerPage.qml:857 contents/ui/PlaybackHistory.qml:39
-#: contents/ui/PlaylistPage.qml:33
+#: contents/ui/MaximizedPlayerPage.qml:877 contents/ui/PlaybackHistory.qml:39
+#: contents/ui/PlaylistPage.qml:38
 #, kde-format
 msgid "Shuffle"
 msgstr "Qarışıq"
 
-#: contents/ui/AlbumPage.qml:37 contents/ui/ArtistPage.qml:39
+#: contents/ui/AlbumPage.qml:41 contents/ui/ArtistPage.qml:43
+#: contents/ui/PlaylistPage.qml:46
 #, kde-format
 msgid "Open in Browser"
 msgstr ""
 
-#: contents/ui/AlbumPage.qml:44
+#: contents/ui/AlbumPage.qml:46 contents/ui/ArtistPage.qml:48
+#: contents/ui/PlaylistPage.qml:51
+#, kde-format
+msgid "Share"
+msgstr ""
+
+#: contents/ui/AlbumPage.qml:56
 #, kde-format
 msgid "Album • %1"
 msgstr ""
 
-#: contents/ui/AlbumPage.qml:88 contents/ui/ArtistPage.qml:126
-#: contents/ui/PlaybackHistory.qml:126 contents/ui/PlaylistPage.qml:91
+#: contents/ui/AlbumPage.qml:100 contents/ui/ArtistPage.qml:137
+#: contents/ui/PlaybackHistory.qml:126 contents/ui/PlaylistPage.qml:111
 #: contents/ui/SearchPage.qml:130
 #, kde-format
 msgid "More"
 msgstr ""
 
-#: contents/ui/ArtistPage.qml:27
+#: contents/ui/ArtistPage.qml:31
 #, kde-format
 msgid "Radio"
 msgstr "Radio"
 
-#: contents/ui/ArtistPage.qml:46
+#: contents/ui/ArtistPage.qml:57
 #, fuzzy, kde-format
 #| msgid "Artists"
 msgid "Artist"
 msgstr "İfaçılar"
 
-#: contents/ui/ArtistPage.qml:68 contents/ui/SearchPage.qml:70
+#: contents/ui/ArtistPage.qml:79 contents/ui/SearchPage.qml:70
 #, kde-format
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
@@ -73,22 +80,22 @@ msgstr ""
 "Video göstərilməsi hələlik dəstəklənmir. Siz yalnız \"%1\" videosunun səsini "
 "oynatmaq istəyirsiniz?"
 
-#: contents/ui/ArtistPage.qml:85 contents/ui/SearchPage.qml:26
+#: contents/ui/ArtistPage.qml:96 contents/ui/SearchPage.qml:26
 #, kde-format
 msgid "Albums"
 msgstr "Albomlar"
 
-#: contents/ui/ArtistPage.qml:87
+#: contents/ui/ArtistPage.qml:98
 #, kde-format
 msgid "Singles"
 msgstr "Musiqilər"
 
-#: contents/ui/ArtistPage.qml:89 contents/ui/SearchPage.qml:32
+#: contents/ui/ArtistPage.qml:100 contents/ui/SearchPage.qml:32
 #, kde-format
 msgid "Songs"
 msgstr "Mahnılar"
 
-#: contents/ui/ArtistPage.qml:91 contents/ui/SearchPage.qml:34
+#: contents/ui/ArtistPage.qml:102 contents/ui/SearchPage.qml:34
 #, kde-format
 msgid "Videos"
 msgstr "Videolar"
@@ -155,13 +162,13 @@ msgstr "Media faylı oynadılmır"
 msgid "%1%"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:806
-#: contents/ui/MaximizedPlayerPage.qml:965
+#: contents/ui/MaximizedPlayerPage.qml:826
+#: contents/ui/MaximizedPlayerPage.qml:985
 #, kde-format
 msgid "Remove Track"
 msgstr "Mahnını silin"
 
-#: contents/ui/MaximizedPlayerPage.qml:836
+#: contents/ui/MaximizedPlayerPage.qml:856
 #, fuzzy, kde-format
 #| msgid "Playlists"
 msgid "Clear Playlist"
@@ -187,13 +194,13 @@ msgstr "Naməlum mahnı siyahısı"
 msgid "No songs here yet"
 msgstr "Hələlik burada mahnılar yoxdur"
 
-#: contents/ui/PlaylistPage.qml:42
+#: contents/ui/PlaylistPage.qml:62
 #, fuzzy, kde-format
 #| msgid "Playlists"
 msgid "Playlist"
 msgstr "Mahnı siyahıları"
 
-#: contents/ui/SearchHistoryPage.qml:86 contents/ui/SearchWithDropdown.qml:321
+#: contents/ui/SearchHistoryPage.qml:86 contents/ui/SearchWithDropdown.qml:408
 #, kde-format
 msgid "remove from search history"
 msgstr ""
@@ -218,9 +225,14 @@ msgstr "Mahnı siyahıları"
 msgid "Unknown"
 msgstr "Bilinməyən"
 
-#: contents/ui/SearchWithDropdown.qml:286
+#: contents/ui/SearchWithDropdown.qml:355
 #, kde-format
 msgid "No matching previous searches"
+msgstr ""
+
+#: contents/ui/ShareMenu.qml:36 contents/ui/ShareMenu.qml:100
+#, kde-format
+msgid "Share to"
 msgstr ""
 
 #: contents/ui/Sidebar.qml:171
@@ -233,32 +245,38 @@ msgstr ""
 msgid "Collapse Sidebar"
 msgstr ""
 
-#: contents/ui/SongMenu.qml:116 contents/ui/SongMenu.qml:175
+#: contents/ui/SongMenu.qml:122 contents/ui/SongMenu.qml:193
 #, kde-format
 msgid "Play Next"
 msgstr "Sonrakını oxudun"
 
-#: contents/ui/SongMenu.qml:125 contents/ui/SongMenu.qml:181
+#: contents/ui/SongMenu.qml:131 contents/ui/SongMenu.qml:199
 #, kde-format
 msgid "Add to queue"
 msgstr ""
 
-#: contents/ui/SongMenu.qml:135 contents/ui/SongMenu.qml:188
+#: contents/ui/SongMenu.qml:141 contents/ui/SongMenu.qml:209
 #, fuzzy, kde-format
 #| msgid "Favourites"
 msgid "Remove Favourite"
 msgstr "Süçilmişlər"
 
-#: contents/ui/SongMenu.qml:135 contents/ui/SongMenu.qml:188
+#: contents/ui/SongMenu.qml:141 contents/ui/SongMenu.qml:209
 #, fuzzy, kde-format
 #| msgid "Favourites"
 msgid "Add Favourite"
 msgstr "Süçilmişlər"
 
-#: contents/ui/SongMenu.qml:151 contents/ui/SongMenu.qml:203
+#: contents/ui/SongMenu.qml:158 contents/ui/SongMenu.qml:223
 #, kde-format
 msgid "Remove from History"
 msgstr ""
+
+#: contents/ui/SongMenu.qml:171 contents/ui/SongMenu.qml:234
+#, fuzzy, kde-format
+#| msgid "Favourite Songs"
+msgid "Share Song"
+msgstr "Seçilmiş mahnılar"
 
 #: main.cpp:44
 #, kde-format
@@ -318,9 +336,6 @@ msgstr "Musiqini YouTube Musiqi-də tapın"
 
 #~ msgid "Queue"
 #~ msgstr "Növbə"
-
-#~ msgid "Favourite Songs"
-#~ msgstr "Seçilmiş mahnılar"
 
 #~ msgid "Back"
 #~ msgstr "Geriyə"
