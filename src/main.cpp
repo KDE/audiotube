@@ -7,11 +7,13 @@
 #include <QtQml>
 #include <QSortFilterProxyModel>
 #include <QUrl>
+#include <QQuickWindow>
+#include <QQuickStyle>
+
 #include <KLocalizedContext>
 #include <KLocalizedString>
 #include <KCrash>
 #include <KAboutData>
-#include <QQuickWindow>
 
 #include "searchmodel.h"
 #include "albummodel.h"
@@ -31,6 +33,12 @@ constexpr auto URI = "org.kde.ytmusic";
 
 Q_DECL_EXPORT int main(int argc, char *argv[])
 {
+    // set default style and icon theme
+    QIcon::setFallbackThemeName(QStringLiteral("breeze"));
+    if (qEnvironmentVariableIsEmpty("QT_QUICK_CONTROLS_STYLE") && QQuickStyle::name().isEmpty()) {
+        QQuickStyle::setStyle(QStringLiteral("org.kde.desktop"));
+    }
+
     QGuiApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QApplication app(argc, argv);
     QCoreApplication::setOrganizationName(QStringLiteral("KDE"));
