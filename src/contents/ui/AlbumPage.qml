@@ -101,7 +101,7 @@ Kirigami.ScrollablePage {
 
             actions: [
                 Kirigami.Action {
-                    icon.name: "view-more-horizontal-symbolic"
+                    icon.name: "overflow-menu"
                     text: i18n("More")
                     onTriggered: menu.openForSong(delegateItem.videoId, delegateItem.title, delegateItem.artists, delegateItem.artistsDisplayString)
                 }

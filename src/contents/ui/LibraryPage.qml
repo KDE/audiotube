@@ -324,7 +324,7 @@ Kirigami.ScrollablePage {
                             }
                             Controls.ToolButton {
                                 Layout.fillHeight: true
-                                icon.name: "view-more-horizontal-symbolic"
+                                icon.name: "overflow-menu"
                                 onPressed: menu.openForSong(delegateItem.videoId,
                                                                delegateItem.title,
                                                                delegateItem.artists,
@@ -636,7 +636,7 @@ Kirigami.ScrollablePage {
                             }
                             Controls.ToolButton {
                                 Layout.fillHeight: true
-                                icon.name: "view-more-horizontal-symbolic"
+                                icon.name: "overflow-menu"
                                 onPressed: menu.openForSong(mpdelegateItem.videoId,
                                                               mpdelegateItem.title,
                                                               mpdelegateItem.artists,
