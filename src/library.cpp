@@ -6,11 +6,8 @@
 
 #include <QStandardPaths>
 #include <QDir>
-#include <QNetworkReply>
-#include <QNetworkRequest>
 #include <QStringBuilder>
 #include <QGuiApplication>
-#include <QtConcurrent>
 
 #include "asyncdatabase.h"
 
@@ -155,59 +152,6 @@ QFuture<void> Library::addSong(const QString &videoId, const QString &title, con
 {
     // replace is used here to update songs from times when we didn't store artist and album
     return m_database->execute("insert or replace into songs (video_id, title, artist, album) values (?, ?, ?, ?)", videoId, title, artist, album);
-}
-
-void ThumbnailSource::setVideoId(const QString &id) {
-    if (m_videoId == id) {
-        return;
-    }
-
-    m_videoId = id;
-    Q_EMIT videoIdChanged();
-
-    const QString cacheDir = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) % QDir::separator() % "thumbnails";
-    QDir(cacheDir).mkpath(QStringLiteral("."));
-    const QString cacheLocation = cacheDir % QDir::separator() % id % ".webp";
-
-    if (QFile::exists(cacheLocation)) {
-        setCachedPath(QUrl::fromLocalFile(cacheLocation));
-        return;
-    }
-
-    auto *reply = Library::instance().nam().get(QNetworkRequest(QUrl("https://i.ytimg.com/vi_webp/" % m_videoId % "/maxresdefault.webp")));
-
-    auto storeResult = [this, cacheLocation](QNetworkReply *reply) {
-        auto data = reply->readAll();
-        reply->deleteLater();
-        auto future = QtConcurrent::run([data = std::move(data), cacheLocation]() {
-            // Scale cover down to save qmemory
-            auto thumbnail = QImage::fromData(data)
-                .scaledToHeight(200 * qGuiApp->devicePixelRatio());
-
-            thumbnail.save(cacheLocation);
-        });
-
-        connectFuture(future, this, [this, cacheLocation]() {
-            setCachedPath(QUrl::fromLocalFile(cacheLocation));
-        });
-    };
-
-    connect(reply, &QNetworkReply::errorOccurred, this, [this, storeResult](auto error) {
-        if (error == QNetworkReply::NetworkError::ContentNotFoundError) {
-            qDebug() << "Naive thumbnail resolution failed, falling back to yt-dlp (slower)";
-
-            connectFuture(YTMusicThread::instance()->extractVideoInfo(m_videoId), this, [this, storeResult](auto info) {
-                auto *reply = Library::instance().nam().get(QNetworkRequest(QUrl(QString::fromStdString(info.thumbnail))));
-                connect(reply, &QNetworkReply::finished, this, [reply, storeResult]() {
-                    storeResult(reply);
-                });
-            });
-        }
-    });
-
-    connect(reply, &QNetworkReply::finished, this, [reply, storeResult]() {
-        storeResult(reply);
-    });
 }
 
 PlaybackHistoryModel::PlaybackHistoryModel(QFuture<std::vector<PlayedSong> > &&songs, QObject *parent)

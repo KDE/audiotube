@@ -32,6 +32,7 @@ add_executable(audiotube
     playlistutils.cpp
     errorhandler.cpp
     playerutils.cpp
+    thumbnailsource.cpp
     abstractytmusicmodel.cpp
     multiiterableview.h
     library.cpp

@@ -22,6 +22,7 @@
 #include "playlistmodel.h"
 #include "playerutils.h"
 #include "library.h"
+#include "thumbnailsource.h"
 #include "blur.h"
 
 #include "asyncdatabase.h"
