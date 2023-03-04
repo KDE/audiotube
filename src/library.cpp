@@ -10,6 +10,7 @@
 #include <QNetworkRequest>
 #include <QStringBuilder>
 #include <QGuiApplication>
+#include <QtConcurrent>
 
 #include "asyncdatabase.h"
 
@@ -176,14 +177,19 @@ void ThumbnailSource::setVideoId(const QString &id) {
     auto *reply = Library::instance().nam().get(QNetworkRequest(QUrl("https://i.ytimg.com/vi_webp/" % m_videoId % "/maxresdefault.webp")));
 
     auto storeResult = [this, cacheLocation](QNetworkReply *reply) {
-        // Scale cover down to save qmemory
-        auto thumbnail = QImage::fromData(reply->readAll())
-            .scaledToHeight(200 * qGuiApp->devicePixelRatio());
-
-        thumbnail.save(cacheLocation);
-        setCachedPath(QUrl::fromLocalFile(cacheLocation));
-
+        auto data = reply->readAll();
         reply->deleteLater();
+        auto future = QtConcurrent::run([data = std::move(data), cacheLocation]() {
+            // Scale cover down to save qmemory
+            auto thumbnail = QImage::fromData(data)
+                .scaledToHeight(200 * qGuiApp->devicePixelRatio());
+
+            thumbnail.save(cacheLocation);
+        });
+
+        connectFuture(future, this, [this, cacheLocation]() {
+            setCachedPath(QUrl::fromLocalFile(cacheLocation));
+        });
     };
 
     connect(reply, &QNetworkReply::errorOccurred, this, [this, storeResult](auto error) {

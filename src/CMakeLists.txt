@@ -47,6 +47,7 @@ target_link_libraries(audiotube
     Qt::QuickControls2
     Qt::Svg
     Qt::Widgets
+    Qt::Concurrent
     KF5::I18n
     KF5::CoreAddons
     KF5::Crash
