@@ -3,13 +3,14 @@
 // SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 #pragma once
 
-#include <QAbstractListModel>
-#include <QFuture>
-
 #include <ytmusic.h>
 
 #include "abstractytmusicmodel.h"
 #include "library.h"
+
+class PlaylistModel;
+class AlbumModel;
+
 
 class UserPlaylistModel : public AbstractYTMusicModel
 {
@@ -88,9 +89,13 @@ public:
     Q_INVOKABLE void clearExceptCurrent();
     Q_INVOKABLE void remove(const QString &videoId);
     Q_INVOKABLE void shufflePlaylist();
+    Q_INVOKABLE void appendPlaylist(PlaylistModel *playlistModel);
+    Q_INVOKABLE void appendAlbum(AlbumModel *albumModel);
 
-    Q_INVOKABLE void playFavourites(FavouritesModel *favouriteModel, bool shuffle);
-    Q_INVOKABLE void playPlaybackHistory(PlaybackHistoryModel *playbackHistory, bool shuffle);
+    Q_INVOKABLE void playFavourites(FavouritesModel *favouriteModel, bool shuffled);
+    Q_INVOKABLE void appendFavourites(FavouritesModel *favouriteModel, bool shuffled);
+    Q_INVOKABLE void playPlaybackHistory(PlaybackHistoryModel *playbackHistory, bool shuffled);
+    Q_INVOKABLE void appendPlaybackHistory(PlaybackHistoryModel *playbackHistory, bool shuffled);
 
 private:
     void emitCurrentVideoChanged(const QString &oldVideoId);

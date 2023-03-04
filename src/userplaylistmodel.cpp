@@ -15,7 +15,9 @@
 
 #include <iostream>
 
+#include "albummodel.h"
 #include "playlistutils.h"
+#include "playlistmodel.h"
 
 namespace ranges = std::ranges;
 
@@ -351,9 +353,33 @@ void UserPlaylistModel::shufflePlaylist()
     Q_EMIT dataChanged(index(0), index(m_playlist.tracks.size() - 1), {});
 }
 
+void UserPlaylistModel::appendPlaylist(PlaylistModel *playlistModel)
+{
+    for (const auto &track : playlistModel->playlist().tracks) {
+        if (track.video_id) {
+            append(QString::fromStdString(*track.video_id), QString::fromStdString(track.title), track.artists);
+        }
+    }
+}
+
+void UserPlaylistModel::appendAlbum(AlbumModel *albumModel)
+{
+    for (const auto &track : albumModel->album().tracks) {
+        if (track.video_id) {
+            append(QString::fromStdString(*track.video_id), QString::fromStdString(track.title), track.artists);
+        }
+    }
+}
+
 void UserPlaylistModel::playFavourites(FavouritesModel *favouriteModel, bool shuffled)
 {
     clear();
+    appendFavourites(favouriteModel, shuffled);
+
+}
+
+void UserPlaylistModel::appendFavourites(FavouritesModel *favouriteModel, bool shuffled)
+{
     std::vector<Song> favourites(favouriteModel->getFavouriteSongs());
     if(shuffled) {
         std::shuffle(favourites.begin(), favourites.end(), *QRandomGenerator::global());
@@ -365,11 +391,17 @@ void UserPlaylistModel::playFavourites(FavouritesModel *favouriteModel, bool shu
     });
 }
 
-void UserPlaylistModel::playPlaybackHistory(PlaybackHistoryModel *playbackHistory, bool shuffle)
+void UserPlaylistModel::playPlaybackHistory(PlaybackHistoryModel *playbackHistory, bool shuffled)
 {
     clear();
+    appendPlaybackHistory(playbackHistory, shuffled);
+
+}
+
+void UserPlaylistModel::appendPlaybackHistory(PlaybackHistoryModel *playbackHistory, bool shuffled)
+{
     std::vector<PlayedSong> playedSongs(playbackHistory->getPlayedSong());
-    if(shuffle) {
+    if(shuffled) {
         std::shuffle(playedSongs.begin(), playedSongs.end(), *QRandomGenerator::global());
     }
     ranges::for_each(playedSongs, [this](const PlayedSong &song) {
@@ -382,6 +414,7 @@ void UserPlaylistModel::playPlaybackHistory(PlaybackHistoryModel *playbackHistor
 
 void UserPlaylistModel::emitCurrentVideoChanged(const QString &oldVideoId)
 {
+
     const auto oldVideoIt = ranges::find_if(m_playlist.tracks,
                                             [=](const watch::Playlist::Track &track) {
         return track.video_id == oldVideoId.toStdString();

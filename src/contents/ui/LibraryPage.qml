@@ -35,36 +35,44 @@ Kirigami.ScrollablePage {
                 visible: isWidescreen
                 text: i18n("Play")
                 icon.name: "media-playback-start"
-                onClicked: applicationWindow().playFavourites(false)
+                onClicked: UserPlaylistModel.playFavourites(Library.favourites, false)
             }
 
             Controls.ToolButton {
                 visible: isWidescreen
                 text: i18n("Shuffle")
                 icon.name: "shuffle"
-                onClicked: applicationWindow().playFavourites(true)
+                onClicked: UserPlaylistModel.playFavourites(Library.favourites, true)
             }
+
             // Spacer
             Item {
+                visible: !isWidescreen
                 Layout.fillWidth: true
             }
 
             Controls.ToolButton {
-                visible: !isWidescreen
                 Layout.fillHeight: true
                 icon.name: "view-more-symbolic"
                 onPressed: Kirigami.Settings.isMobile? favDrawer.open() : favMenu.open()
                 Controls.Menu {
                     id: favMenu
                     Controls.MenuItem {
+                        visible: !isWidescreen
                         text: i18n("Play")
                         icon.name: "media-playback-start"
-                        onTriggered: applicationWindow().playFavourites(false)
+                        onTriggered: UserPlaylistModel.playFavourites(Library.favourites, false)
                     }
                     Controls.MenuItem {
+                        visible: !isWidescreen
                         text: i18n("Shuffle")
                         icon.name: "shuffle"
-                        onTriggered: applicationWindow().playFavourites(true)
+                        onTriggered: UserPlaylistModel.playFavourites(Library.favourites, true)
+                    }
+                    Controls.MenuItem {
+                        text: i18n("Append to queue")
+                        icon.name: "media-playlist-append"
+                        onTriggered: UserPlaylistModel.appendFavourites(Library.favourites,false)
                     }
                 }
 
@@ -101,12 +109,26 @@ Kirigami.ScrollablePage {
                         Kirigami.BasicListItem{
                             label: i18n("Play")
                             icon: "media-playback-start"
-                            onClicked: applicationWindow().playFavourites(false)
+                            onClicked: {
+                                UserPlaylistModel.playFavourites(Library.favourites, false)
+                                favDrawer.close()
+                            }
                         }
                         Kirigami.BasicListItem{
                             label: i18n("Shuffle")
                             icon: "shuffle"
-                            onClicked: applicationWindow().playFavourites(true)
+                            onClicked: {
+                                UserPlaylistModel.playFavourites(Library.favourites, true)
+                                favDrawer.close()
+                            }
+                        }
+                        Kirigami.BasicListItem{
+                            label: i18n("Append to queue")
+                            icon: "media-playlist-append"
+                            onClicked: {
+                                UserPlaylistModel.appendFavourites(Library.favourites,false)
+                                favDrawer.close()
+                            }
                         }
                         Item{
                             Layout.fillHeight: true
@@ -116,7 +138,10 @@ Kirigami.ScrollablePage {
                 }
 
             }
-
+            Item {
+                visible: isWidescreen
+                Layout.fillWidth: true
+            }
             Controls.ToolButton {
                 text: i18n("Show All")
                 Layout.alignment: Qt.AlignRight
@@ -332,37 +357,44 @@ Kirigami.ScrollablePage {
                 visible: isWidescreen
                 text: i18n("Play")
                 icon.name: "media-playback-start"
-                onClicked: applicationWindow().playPlaybackHistory(Library.mostPlayed, false)
+                onClicked: UserPlaylistModel.playPlaybackHistory(Library.mostPlayed, false)
             }
 
             Controls.ToolButton {
                 visible: isWidescreen
                 text: i18n("Shuffle")
                 icon.name: "shuffle"
-                onClicked: applicationWindow().playPlaybackHistory(Library.mostPlayed, true)
+                onClicked: UserPlaylistModel.playPlaybackHistory(Library.mostPlayed, true)
             }
 
             // Spacer
             Item {
+                visible: !isWidescreen
                 Layout.fillWidth: true
             }
 
             Controls.ToolButton {
-                visible: !isWidescreen
                 Layout.fillHeight: true
                 icon.name: "view-more-symbolic"
                 onPressed: Kirigami.Settings.isMobile? recDrawer.open() : recMenu.open()
                 Controls.Menu {
                     id: recMenu
                     Controls.MenuItem {
+                        visible: !isWidescreen
                         text: i18n("Play")
                         icon.name: "media-playback-start"
-                        onTriggered: applicationWindow().playPlaybackHistory(Library.mostPlayed, false)
+                        onTriggered: UserPlaylistModel.playPlaybackHistory(Library.mostPlayed, false)
                     }
                     Controls.MenuItem {
+                        visible: !isWidescreen
                         text: i18n("Shuffle")
                         icon.name: "shuffle"
-                        onTriggered: applicationWindow().playPlaybackHistory(Library.mostPlayed, true)
+                        onTriggered: UserPlaylistModel.playPlaybackHistory(Library.mostPlayed, true)
+                    }
+                    Controls.MenuItem {
+                        text: i18n("Append to queue")
+                        icon.name: "media-playlist-append"
+                        onTriggered: UserPlaylistModel.appendPlaybackHistory(Library.mostPlayed, false)
                     }
                 }
 
@@ -399,12 +431,27 @@ Kirigami.ScrollablePage {
                         Kirigami.BasicListItem{
                             label: i18n("Play")
                             icon: "media-playback-start"
-                            onClicked: applicationWindow().playPlaybackHistory(Library.mostPlayed, false)
+                            onClicked: {
+                                UserPlaylistModel.playPlaybackHistory(Library.mostPlayed, false)
+                                recDrawer.close()
+                            }
+
                         }
                         Kirigami.BasicListItem{
                             label: i18n("Shuffle")
                             icon: "shuffle"
-                            onClicked:  applicationWindow().playPlaybackHistory(Library.mostPlayed, true)
+                            onClicked: {
+                                UserPlaylistModel.playPlaybackHistory(Library.mostPlayed, true)
+                                recDrawer.close()
+                            }
+                        }
+                        Kirigami.BasicListItem{
+                            label: i18n("Append to queue")
+                            icon: "media-playlist-append"
+                            onClicked: {
+                                UserPlaylistModel.appendPlaybackHistory(Library.mostPlayed, false)
+                                recDrawer.close()
+                            }
                         }
                         Item{
                             Layout.fillHeight: true
@@ -414,7 +461,10 @@ Kirigami.ScrollablePage {
                 }
 
             }
-
+            Item {
+                visible: isWidescreen
+                Layout.fillWidth: true
+            }
             Controls.ToolButton {
                 text: i18n("Show All")
                 Layout.alignment: Qt.AlignRight

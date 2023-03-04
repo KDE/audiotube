@@ -43,6 +43,11 @@ Kirigami.ScrollablePage {
             ]
             overflowActions: [
                 Kirigami.Action {
+                    text: i18n("Append to queue")
+                    icon.name: "media-playlist-append"
+                    onTriggered: UserPlaylistModel.appendPlaylist(playlistModel)
+                },
+                Kirigami.Action {
                     text: i18n("Open in Browser")
                     icon.name: "internet-services"
                     onTriggered: Qt.openUrlExternally(playlistModel.webUrl)
@@ -53,8 +58,8 @@ Kirigami.ScrollablePage {
                     onTriggered:{
                         shareMenu.open()
                     }
-
                 }
+
             ]
             title: playlistModel.title
             imageSourceURL: playlistModel.thumbnailUrl

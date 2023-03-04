@@ -49,6 +49,7 @@ public:
 
     QUrl webUrl() const;
 
+    playlist::Playlist playlist() const;
 
 private:
     QString m_playlistId;

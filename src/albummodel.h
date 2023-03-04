@@ -53,6 +53,8 @@ public:
 
     QUrl webUrl() const;
 
+    const album::Album &album() const;
+
 private:
     QString m_browseId;
 

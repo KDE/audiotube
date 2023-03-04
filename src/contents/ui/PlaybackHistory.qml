@@ -27,10 +27,10 @@ Kirigami.ScrollablePage {
                 icon.name: "media-playback-start"
                 onClicked: {
                     if(playbackHistoryPage.objectName == "favourites") {
-                        applicationWindow().playFavourites(false)
+                        UserPlaylistModel.playFavourites(Library.favourites, false)
                     }
                     else if(playbackHistoryPage.objectName == "history") {
-                        onClicked: applicationWindow().playPlaybackHistory(playbackHistoryPage.dataModel, false)
+                        onClicked: UserPlaylistModel.playPlaybackHistory(playbackHistoryPage.dataModel, false)
                     }
                 }
             }
@@ -40,14 +40,25 @@ Kirigami.ScrollablePage {
                 icon.name: "shuffle"
                 onClicked: {
                     if(playbackHistoryPage.objectName == "favourites") {
-                        applicationWindow().playFavourites(true)
+                        UserPlaylistModel.playFavourites(Library.favourites, true)
                     }
                     else if(playbackHistoryPage.objectName == "history") {
-                        onClicked: applicationWindow().playPlaybackHistory(playbackHistoryPage.dataModel, true)
+                        onClicked: UserPlaylistModel.playPlaybackHistory(playbackHistoryPage.dataModel, true)
                     }
                 }
             }
-
+            Controls.ToolButton {
+                text: i18n("Append to queue")
+                icon.name: "media-playlist-append"
+                onClicked: {
+                    if(playbackHistoryPage.objectName == "favourites") {
+                        UserPlaylistModel.appendFavourites(Library.favourites,false)
+                    }
+                    else if(playbackHistoryPage.objectName == "history") {
+                        UserPlaylistModel.appendPlaybackHistory(Library.mostPlayed, false)
+                    }
+                }
+            }
             Item {
                 Layout.fillWidth: true
             }
