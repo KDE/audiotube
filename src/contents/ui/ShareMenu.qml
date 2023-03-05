@@ -9,6 +9,9 @@ import QtQuick.Window 2.15
 
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.purpose 1.0 as Purpose
+
+import org.kde.ytmusic 1.0
+
 Item{
     id:root
     property url url
@@ -36,44 +39,76 @@ Item{
         title: i18n("Share to")
         preferredWidth: Kirigami.Units.gridUnit * 16
         standardButtons: Kirigami.Dialog.NoButton
-
-        Purpose.AlternativesView {
-            id: view
-            pluginType: "ShareUrl"
-            clip: true
-
-            delegate: Kirigami.BasicListItem {
-                id: shareDelegate
-
-                required property string iconName
-                required property string display
-                required property int index
-
-                label: shareDelegate.display
-                onClicked: view.createJob (shareDelegate.index)
-                Keys.onReturnPressed: view.createJob (shareDelegate.index)
-                Keys.onEnterPressed: view.createJob (shareDelegate.index)
+        ColumnLayout {
+            spacing:0
+            anchors.fill: inputSheet
+            Kirigami.BasicListItem {
+                Layout.fillWidth: true
                 leading: Kirigami.Icon {
-                    source: shareDelegate.iconName
+                    source: "edit-copy"
                 }
-                trailing: Kirigami.Icon {
-                    implicitWidth: Kirigami.Units.iconSizes.small
-                    implicitHeight: Kirigami.Units.iconSizes.small
-                    source: "arrow-right"
+                label: i18n("Copy Link")
+                visible: view.depth === 1
+                onClicked: {
+                    Clipboard.text = root.url
+                    inputSheet.close()
+                    applicationWindow().showPassiveNotification(i18n("Link copied to clipboard"))
                 }
             }
+            Purpose.AlternativesView {
+                Layout.fillHeight: true
+                Layout.fillWidth: true
+                id: view
+                pluginType: "ShareUrl"
+                clip: true
 
-            onFinished: close()
+                delegate: Kirigami.BasicListItem {
+                    id: shareDelegate
+
+                    required property string iconName
+                    required property string display
+                    required property int index
+
+                    label: shareDelegate.display
+                    onClicked: view.createJob (shareDelegate.index)
+                    Keys.onReturnPressed: view.createJob (shareDelegate.index)
+                    Keys.onEnterPressed: view.createJob (shareDelegate.index)
+                    leading: Kirigami.Icon {
+                        source: shareDelegate.iconName
+                    }
+                    trailing: Kirigami.Icon {
+                        implicitWidth: Kirigami.Units.iconSizes.small
+                        implicitHeight: Kirigami.Units.iconSizes.small
+                        source: "arrow-right"
+                    }
+                }
+
+                onFinished: close()
+            }
         }
     }
 
     BottomDrawer {
         id: inputDrawer
         drawerContentItem: ColumnLayout {
+
             Kirigami.Heading{
                 text: i18n("Share to")
                 leftPadding: 20
-
+                visible: drawerView.depth === 1
+            }
+            Kirigami.BasicListItem {
+                Layout.fillWidth: true
+                leading: Kirigami.Icon {
+                    source: "edit-copy"
+                }
+                label: i18n("Copy Link")
+                visible: drawerView.depth === 1
+                onClicked: {
+                    Clipboard.text = root.url
+                    inputDrawer.close()
+                    applicationWindow().showPassiveNotification(i18n("Link copied to clipboard"))
+                }
             }
             Purpose.AlternativesView {
                 id: drawerView

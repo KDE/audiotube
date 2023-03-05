@@ -15,6 +15,7 @@
 #include <KCrash>
 #include <KAboutData>
 
+#include "clipboard.h"
 #include "searchmodel.h"
 #include "albummodel.h"
 #include "videoinfoextractor.h"
@@ -91,6 +92,9 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 
     qmlRegisterSingletonType<PlayerUtils>(URI, 1, 0, "PlayerUtils", [](QQmlEngine *, QJSEngine *) {
         return new PlayerUtils();
+    });
+    qmlRegisterSingletonType<Clipboard>(URI, 1, 0, "Clipboard", [](QQmlEngine *, QJSEngine *) {
+        return new Clipboard();
     });
 
     qmlRegisterSingletonInstance<Library>(URI, 1, 0, "Library", &Library::instance());

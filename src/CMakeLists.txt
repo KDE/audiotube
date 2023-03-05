@@ -38,6 +38,7 @@ add_executable(audiotube
     library.cpp
     resources.qrc
     blur.cpp
+    clipboard.cpp
 )
 
 target_link_libraries(audiotube
