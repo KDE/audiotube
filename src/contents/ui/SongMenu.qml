@@ -42,58 +42,55 @@ Item {
         property string songTitle
         property var artists
         property string artistsDisplayString
+
+        headerContentItem: RowLayout {
+            spacing: 10
+            Layout.topMargin: 0
+            Kirigami.ShadowedRectangle {
+                Layout.rightMargin: 5
+                Layout.topMargin: 0
+                color: Kirigami.Theme.backgroundColor
+                width: 60
+                height: width
+                radius: 5
+                shadow.size: 15
+                shadow.xOffset: 5
+                shadow.yOffset: 5
+                shadow.color: Qt.rgba(0, 0, 0, 0.2)
+                RoundedImage {
+                    source: thumbnailSource.cachedPath
+                    height: width
+                    width: parent.width
+                    radius: parent.radius
+                }
+            }
+            ColumnLayout {
+                Layout.margins: 0
+                Layout.topMargin: 0
+                Controls.Label{
+                    text: drawer.songTitle
+                    elide: Text.ElideRight
+                    Layout.fillWidth: true
+                }
+                Controls.Label{
+                    text: drawer.artistsDisplayString
+                    color: Kirigami.Theme.disabledTextColor
+                    elide: Text.ElideRight
+                    Layout.fillWidth: true
+
+                }
+            }
+        }
+
         drawerContentItem: ColumnLayout {
+
             ThumbnailSource {
                 id: thumbnailSource
                 videoId: drawer.videoId
             }
 
-            RowLayout {
-                Layout.topMargin: 0
-                spacing: 10
-                Kirigami.ShadowedRectangle {
-                    Layout.margins: 10
-                    color: Kirigami.Theme.backgroundColor
-                    width: 60
-                    height: width
-                    radius: 5
-                    shadow.size: 15
-                    shadow.xOffset: 5
-                    shadow.yOffset: 5
-                    shadow.color: Qt.rgba(0, 0, 0, 0.2)
-                    RoundedImage {
-                        source: thumbnailSource.cachedPath
-                        height: width
-                        width: parent.width
-                        radius: parent.radius
-                    }
-                }
-                ColumnLayout {
-                    Controls.Label{
-                        text: drawer.songTitle
-                        elide: Text.ElideRight
-                        Layout.fillWidth: true
-
-
-                    }
-                    Controls.Label{
-                        text: drawer.artistsDisplayString
-                        color: Kirigami.Theme.disabledTextColor
-                        elide: Text.ElideRight
-                        Layout.fillWidth: true
-
-                    }
-                }
-            }
-            Kirigami.Separator {
-                Layout.fillWidth: true
-                Layout.leftMargin: 10
-                Layout.rightMargin: 10
-
-
-            }
             Kirigami.BasicListItem{
-
+                Layout.topMargin: 10
                 label: i18n("Play Next")
                 icon: "go-next"
                 onClicked: {

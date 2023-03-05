@@ -91,12 +91,7 @@ Item{
     BottomDrawer {
         id: inputDrawer
         drawerContentItem: ColumnLayout {
-
-            Kirigami.Heading{
-                text: i18n("Share to")
-                leftPadding: 20
-                visible: drawerView.depth === 1
-            }
+            spacing:0
             Kirigami.BasicListItem {
                 Layout.fillWidth: true
                 leading: Kirigami.Icon {
