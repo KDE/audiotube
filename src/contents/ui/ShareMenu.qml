@@ -83,7 +83,7 @@ Item{
                     }
                 }
 
-                onFinished: close()
+                onFinished: inputSheet.close()
             }
         }
     }
@@ -137,7 +137,7 @@ Item{
                     }
                 }
 
-                onFinished: close()
+                onFinished: inputDrawer.close()
             }
 
             Item{
