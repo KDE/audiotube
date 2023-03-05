@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-04 00:46+0000\n"
+"POT-Creation-Date: 2023-03-05 00:48+0000\n"
 "PO-Revision-Date: 2022-01-01 09:11-0800\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -18,43 +18,51 @@ msgstr ""
 "X-Generator: Lokalize 21.04.3\n"
 
 #: contents/ui/AlbumPage.qml:26 contents/ui/LibraryPage.qml:36
-#: contents/ui/LibraryPage.qml:60 contents/ui/LibraryPage.qml:102
-#: contents/ui/LibraryPage.qml:333 contents/ui/LibraryPage.qml:358
-#: contents/ui/LibraryPage.qml:400 contents/ui/PlaybackHistory.qml:26
+#: contents/ui/LibraryPage.qml:62 contents/ui/LibraryPage.qml:110
+#: contents/ui/LibraryPage.qml:358 contents/ui/LibraryPage.qml:384
+#: contents/ui/LibraryPage.qml:432 contents/ui/PlaybackHistory.qml:26
 #: contents/ui/PlaylistPage.qml:31
 #, kde-format
 msgid "Play"
 msgstr "ਚਲਾਓ"
 
 #: contents/ui/AlbumPage.qml:33 contents/ui/ArtistPage.qml:36
-#: contents/ui/LibraryPage.qml:43 contents/ui/LibraryPage.qml:65
-#: contents/ui/LibraryPage.qml:107 contents/ui/LibraryPage.qml:340
-#: contents/ui/LibraryPage.qml:363 contents/ui/LibraryPage.qml:405
+#: contents/ui/LibraryPage.qml:43 contents/ui/LibraryPage.qml:68
+#: contents/ui/LibraryPage.qml:118 contents/ui/LibraryPage.qml:365
+#: contents/ui/LibraryPage.qml:390 contents/ui/LibraryPage.qml:441
 #: contents/ui/MaximizedPlayerPage.qml:877 contents/ui/PlaybackHistory.qml:39
 #: contents/ui/PlaylistPage.qml:38
 #, kde-format
 msgid "Shuffle"
 msgstr "ਰਲਵੇਂ"
 
-#: contents/ui/AlbumPage.qml:41 contents/ui/ArtistPage.qml:43
+#: contents/ui/AlbumPage.qml:41 contents/ui/LibraryPage.qml:73
+#: contents/ui/LibraryPage.qml:126 contents/ui/LibraryPage.qml:395
+#: contents/ui/LibraryPage.qml:449 contents/ui/PlaybackHistory.qml:51
 #: contents/ui/PlaylistPage.qml:46
+#, kde-format
+msgid "Append to queue"
+msgstr ""
+
+#: contents/ui/AlbumPage.qml:46 contents/ui/ArtistPage.qml:43
+#: contents/ui/PlaylistPage.qml:51
 #, kde-format
 msgid "Open in Browser"
 msgstr ""
 
-#: contents/ui/AlbumPage.qml:46 contents/ui/ArtistPage.qml:48
-#: contents/ui/PlaylistPage.qml:51
+#: contents/ui/AlbumPage.qml:51 contents/ui/ArtistPage.qml:48
+#: contents/ui/PlaylistPage.qml:56
 #, kde-format
 msgid "Share"
 msgstr ""
 
-#: contents/ui/AlbumPage.qml:56
+#: contents/ui/AlbumPage.qml:61
 #, kde-format
 msgid "Album • %1"
 msgstr ""
 
-#: contents/ui/AlbumPage.qml:100 contents/ui/ArtistPage.qml:137
-#: contents/ui/PlaybackHistory.qml:126 contents/ui/PlaylistPage.qml:111
+#: contents/ui/AlbumPage.qml:105 contents/ui/ArtistPage.qml:137
+#: contents/ui/PlaybackHistory.qml:137 contents/ui/PlaylistPage.qml:116
 #: contents/ui/SearchPage.qml:130
 #, kde-format
 msgid "More"
@@ -108,41 +116,41 @@ msgstr "ਠੀਕ ਹੈ"
 msgid "Cancel"
 msgstr "ਰੱਦ ਕਰੋ"
 
-#: contents/ui/LibraryPage.qml:29 contents/ui/LibraryPage.qml:125
+#: contents/ui/LibraryPage.qml:29 contents/ui/LibraryPage.qml:150
 #: contents/ui/NavigationBar.qml:46 contents/ui/NavigationBar.qml:51
 #: contents/ui/Sidebar.qml:128 contents/ui/Sidebar.qml:135
 #, kde-format
 msgid "Favourites"
 msgstr ""
 
-#: contents/ui/LibraryPage.qml:121 contents/ui/LibraryPage.qml:419
+#: contents/ui/LibraryPage.qml:146 contents/ui/LibraryPage.qml:469
 #, kde-format
 msgid "Show All"
 msgstr ""
 
-#: contents/ui/LibraryPage.qml:150
+#: contents/ui/LibraryPage.qml:175
 #, kde-format
 msgid "No Favourites Yet"
 msgstr ""
 
-#: contents/ui/LibraryPage.qml:326
+#: contents/ui/LibraryPage.qml:351
 #, kde-format
 msgid "Most played"
 msgstr ""
 
-#: contents/ui/LibraryPage.qml:423 contents/ui/NavigationBar.qml:58
+#: contents/ui/LibraryPage.qml:473 contents/ui/NavigationBar.qml:58
 #: contents/ui/NavigationBar.qml:63 contents/ui/Sidebar.qml:147
 #: contents/ui/Sidebar.qml:154
 #, kde-format
 msgid "Played Songs"
 msgstr ""
 
-#: contents/ui/LibraryPage.qml:447
+#: contents/ui/LibraryPage.qml:497
 #, kde-format
 msgid "No Songs Played Yet"
 msgstr ""
 
-#: contents/ui/main.qml:108 main.cpp:42
+#: contents/ui/main.qml:108 main.cpp:51
 #, kde-format
 msgid "AudioTube"
 msgstr "ਆਡੀਓ-ਟਿਊਬ"
@@ -185,12 +193,12 @@ msgstr "ਖੋਜੋ"
 msgid "Unknown list of songs"
 msgstr ""
 
-#: contents/ui/PlaybackHistory.qml:73
+#: contents/ui/PlaybackHistory.qml:84
 #, kde-format
 msgid "No songs here yet"
 msgstr ""
 
-#: contents/ui/PlaylistPage.qml:62
+#: contents/ui/PlaylistPage.qml:67
 #, fuzzy, kde-format
 #| msgid "Playlists"
 msgid "Playlist"
@@ -271,49 +279,49 @@ msgstr ""
 msgid "Share Song"
 msgstr ""
 
-#: main.cpp:44
+#: main.cpp:53
 #, kde-format
 msgid "YouTube Music Player"
 msgstr ""
 
-#: main.cpp:46
+#: main.cpp:55
 #, kde-format
 msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
 msgstr ""
 
-#: main.cpp:47
+#: main.cpp:56
 #, kde-format
 msgid "Jonah Brüchert"
 msgstr ""
 
-#: main.cpp:47
+#: main.cpp:56
 #, kde-format
 msgid "Maintainer"
 msgstr ""
 
-#: main.cpp:48
+#: main.cpp:57
 #, kde-format
 msgid "Mathis Brüchert"
 msgstr ""
 
-#: main.cpp:48
+#: main.cpp:57
 #, kde-format
 msgid "Designer"
 msgstr ""
 
-#: main.cpp:49
+#: main.cpp:58
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "ਅਮਨਪਰੀਤ ਸਿੰਘ ਆਲਮ ੨੦੨੧"
 
-#: main.cpp:49
+#: main.cpp:58
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "alam yellow @ gmail.com"
 
-#: main.cpp:54
+#: main.cpp:63
 #, fuzzy, kde-format
 #| msgid "Find music on YouTube Music"
 msgid "Unofficial API for YouTube Music"

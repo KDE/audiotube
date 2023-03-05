@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-04 00:46+0000\n"
-"PO-Revision-Date: 2023-02-20 10:56+0100\n"
+"POT-Creation-Date: 2023-03-05 00:48+0000\n"
+"PO-Revision-Date: 2023-03-04 17:52+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,46 +15,55 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: contents/ui/AlbumPage.qml:26 contents/ui/LibraryPage.qml:36
-#: contents/ui/LibraryPage.qml:60 contents/ui/LibraryPage.qml:102
-#: contents/ui/LibraryPage.qml:333 contents/ui/LibraryPage.qml:358
-#: contents/ui/LibraryPage.qml:400 contents/ui/PlaybackHistory.qml:26
+#: contents/ui/LibraryPage.qml:62 contents/ui/LibraryPage.qml:110
+#: contents/ui/LibraryPage.qml:358 contents/ui/LibraryPage.qml:384
+#: contents/ui/LibraryPage.qml:432 contents/ui/PlaybackHistory.qml:26
 #: contents/ui/PlaylistPage.qml:31
 #, kde-format
 msgid "Play"
 msgstr "Afspelen"
 
 #: contents/ui/AlbumPage.qml:33 contents/ui/ArtistPage.qml:36
-#: contents/ui/LibraryPage.qml:43 contents/ui/LibraryPage.qml:65
-#: contents/ui/LibraryPage.qml:107 contents/ui/LibraryPage.qml:340
-#: contents/ui/LibraryPage.qml:363 contents/ui/LibraryPage.qml:405
+#: contents/ui/LibraryPage.qml:43 contents/ui/LibraryPage.qml:68
+#: contents/ui/LibraryPage.qml:118 contents/ui/LibraryPage.qml:365
+#: contents/ui/LibraryPage.qml:390 contents/ui/LibraryPage.qml:441
 #: contents/ui/MaximizedPlayerPage.qml:877 contents/ui/PlaybackHistory.qml:39
 #: contents/ui/PlaylistPage.qml:38
 #, kde-format
 msgid "Shuffle"
 msgstr "Willekeurig afspelen"
 
-#: contents/ui/AlbumPage.qml:41 contents/ui/ArtistPage.qml:43
+#: contents/ui/AlbumPage.qml:41 contents/ui/LibraryPage.qml:73
+#: contents/ui/LibraryPage.qml:126 contents/ui/LibraryPage.qml:395
+#: contents/ui/LibraryPage.qml:449 contents/ui/PlaybackHistory.qml:51
 #: contents/ui/PlaylistPage.qml:46
+#, fuzzy, kde-format
+#| msgid "Add to queue"
+msgid "Append to queue"
+msgstr "Aan wachtrij toevoegen"
+
+#: contents/ui/AlbumPage.qml:46 contents/ui/ArtistPage.qml:43
+#: contents/ui/PlaylistPage.qml:51
 #, kde-format
 msgid "Open in Browser"
 msgstr "In browser openen"
 
-#: contents/ui/AlbumPage.qml:46 contents/ui/ArtistPage.qml:48
-#: contents/ui/PlaylistPage.qml:51
+#: contents/ui/AlbumPage.qml:51 contents/ui/ArtistPage.qml:48
+#: contents/ui/PlaylistPage.qml:56
 #, kde-format
 msgid "Share"
-msgstr ""
+msgstr "Delen"
 
-#: contents/ui/AlbumPage.qml:56
+#: contents/ui/AlbumPage.qml:61
 #, kde-format
 msgid "Album • %1"
 msgstr "Album • %1"
 
-#: contents/ui/AlbumPage.qml:100 contents/ui/ArtistPage.qml:137
-#: contents/ui/PlaybackHistory.qml:126 contents/ui/PlaylistPage.qml:111
+#: contents/ui/AlbumPage.qml:105 contents/ui/ArtistPage.qml:137
+#: contents/ui/PlaybackHistory.qml:137 contents/ui/PlaylistPage.qml:116
 #: contents/ui/SearchPage.qml:130
 #, kde-format
 msgid "More"
@@ -109,41 +118,41 @@ msgstr "OK"
 msgid "Cancel"
 msgstr "Annuleren"
 
-#: contents/ui/LibraryPage.qml:29 contents/ui/LibraryPage.qml:125
+#: contents/ui/LibraryPage.qml:29 contents/ui/LibraryPage.qml:150
 #: contents/ui/NavigationBar.qml:46 contents/ui/NavigationBar.qml:51
 #: contents/ui/Sidebar.qml:128 contents/ui/Sidebar.qml:135
 #, kde-format
 msgid "Favourites"
 msgstr "Favorieten"
 
-#: contents/ui/LibraryPage.qml:121 contents/ui/LibraryPage.qml:419
+#: contents/ui/LibraryPage.qml:146 contents/ui/LibraryPage.qml:469
 #, kde-format
 msgid "Show All"
 msgstr "Alles tonen"
 
-#: contents/ui/LibraryPage.qml:150
+#: contents/ui/LibraryPage.qml:175
 #, kde-format
 msgid "No Favourites Yet"
 msgstr "Nog geen favorieten"
 
-#: contents/ui/LibraryPage.qml:326
+#: contents/ui/LibraryPage.qml:351
 #, kde-format
 msgid "Most played"
 msgstr "Meest afgespeeld"
 
-#: contents/ui/LibraryPage.qml:423 contents/ui/NavigationBar.qml:58
+#: contents/ui/LibraryPage.qml:473 contents/ui/NavigationBar.qml:58
 #: contents/ui/NavigationBar.qml:63 contents/ui/Sidebar.qml:147
 #: contents/ui/Sidebar.qml:154
 #, kde-format
 msgid "Played Songs"
 msgstr "Afgespeelde songs"
 
-#: contents/ui/LibraryPage.qml:447
+#: contents/ui/LibraryPage.qml:497
 #, kde-format
 msgid "No Songs Played Yet"
 msgstr "Nog geen songs afgespeeld"
 
-#: contents/ui/main.qml:108 main.cpp:42
+#: contents/ui/main.qml:108 main.cpp:51
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
@@ -185,12 +194,12 @@ msgstr "Zoeken"
 msgid "Unknown list of songs"
 msgstr "Onbekende lijst met songs"
 
-#: contents/ui/PlaybackHistory.qml:73
+#: contents/ui/PlaybackHistory.qml:84
 #, kde-format
 msgid "No songs here yet"
 msgstr "Er zijn hier nog geen songs"
 
-#: contents/ui/PlaylistPage.qml:62
+#: contents/ui/PlaylistPage.qml:67
 #, kde-format
 msgid "Playlist"
 msgstr "Afspeellijst"
@@ -228,7 +237,7 @@ msgstr "Geen overeenkomende vorige zoekopdrachten"
 #: contents/ui/ShareMenu.qml:36 contents/ui/ShareMenu.qml:100
 #, kde-format
 msgid "Share to"
-msgstr ""
+msgstr "Delen (share) naar"
 
 #: contents/ui/Sidebar.qml:171
 #, kde-format
@@ -266,54 +275,53 @@ msgid "Remove from History"
 msgstr "Uit geschiedenis verwijderen"
 
 #: contents/ui/SongMenu.qml:171 contents/ui/SongMenu.qml:234
-#, fuzzy, kde-format
-#| msgid "Favourite Songs"
+#, kde-format
 msgid "Share Song"
-msgstr "Favoriete songs"
+msgstr "Songs delen"
 
-#: main.cpp:44
+#: main.cpp:53
 #, kde-format
 msgid "YouTube Music Player"
 msgstr "YouTube muziekspeler"
 
-#: main.cpp:46
+#: main.cpp:55
 #, kde-format
 msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
 msgstr "© 2021-2023 Jonah Brüchert, 2021-2023 KDE-gemeenschap"
 
-#: main.cpp:47
+#: main.cpp:56
 #, kde-format
 msgid "Jonah Brüchert"
 msgstr "Jonah Brüchert"
 
-#: main.cpp:47
+#: main.cpp:56
 #, kde-format
 msgid "Maintainer"
 msgstr "Onderhouder"
 
-#: main.cpp:48
+#: main.cpp:57
 #, kde-format
 msgid "Mathis Brüchert"
 msgstr "Mathis Brüchert"
 
-#: main.cpp:48
+#: main.cpp:57
 #, kde-format
 msgid "Designer"
 msgstr "Ontwerper"
 
-#: main.cpp:49
+#: main.cpp:58
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Freek de Kruijf - 2021 t/m 2023"
 
-#: main.cpp:49
+#: main.cpp:58
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "freekdekruijf@kde.nl"
 
-#: main.cpp:54
+#: main.cpp:63
 #, kde-format
 msgid "Unofficial API for YouTube Music"
 msgstr "Niet officiële API voor YouTube Music"
