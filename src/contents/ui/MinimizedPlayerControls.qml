@@ -24,7 +24,10 @@ Item {
     
     readonly property bool isWidescreen: width >= Kirigami.Units.gridUnit * 50
     signal requestOpen()
-    
+    Shortcut {
+        sequence: "Ctrl+P"
+        onActivated: root.requestOpen()
+    }
     Rectangle {
         id: miniProgressBar
         z: 1

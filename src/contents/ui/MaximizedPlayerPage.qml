@@ -238,6 +238,7 @@ Item {
 
                     Button {
                         id: skipBackwardButton
+                        focusPolicy: Qt.TabFocus
                         implicitHeight: 40
                         implicitWidth: 40
 
@@ -257,6 +258,8 @@ Item {
                             }
                         }
                         background: Kirigami.ShadowedRectangle{
+                            border.color: Kirigami.Theme.hoverColor
+                            border.width: skipBackwardButton.activeFocus? 1 :0
                             corners.topLeftRadius: 7
                             corners.bottomLeftRadius: 7
 
@@ -273,9 +276,11 @@ Item {
 
                     Button {
                         id: playPauseButton
+                        focusPolicy: Qt.TabFocus
                         implicitHeight: 40
                         implicitWidth: 60
                         onClicked: audio.playbackState === Audio.PlayingState ? audio.pause() : audio.play()
+                        enabled: info.title
                         contentItem: Item{
                             Kirigami.Icon {
                                 anchors.centerIn:parent
@@ -286,6 +291,8 @@ Item {
                             }
                         }
                         background: Kirigami.ShadowedRectangle{
+                            border.color: Kirigami.Theme.hoverColor
+                            border.width: playPauseButton.activeFocus? 1 :0
                             color: if (parent.down){
                                     Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.3)
                                 }else if(parent.hovered){
@@ -298,6 +305,7 @@ Item {
 
                     Button {
                         id: skipForwardButton
+                        focusPolicy: Qt.TabFocus
                         implicitHeight: 40
                         implicitWidth: 40
                         Layout.rightMargin:isWidescreen?0:10
@@ -318,6 +326,8 @@ Item {
                             }
                         }
                         background: Kirigami.ShadowedRectangle{
+                            border.color: Kirigami.Theme.hoverColor
+                            border.width: skipForwardButton.activeFocus? 1 :0
                             corners.topRightRadius: 7
                             corners.bottomRightRadius: 7
                             color: if (parent.down){
@@ -405,7 +415,8 @@ Item {
                             }
                         }
                         text: "Favourite"
-                        icon.name: favouriteWatcher ? (favouriteWatcher.isFavourite ? "starred-symbolic" : "non-starred-symbolic") : ""
+                        icon.name: favouriteWatcher ? (favouriteWatcher.isFavourite ? "starred-symbolic" : "non-starred-symbolic") : "non-starred-symbolic"
+                        enabled: favouriteWatcher
                         icon.color: "white"
                         display: AbstractButton.IconOnly
                         Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
@@ -577,6 +588,7 @@ Item {
                                 }
                                 lyricsShown = !lyricsShown
                         }
+                        enabled: UserPlaylistModel.lyrics
                         text: "Lyrics"
                         icon.name: "view-media-lyrics"
                         icon.color: "white"
@@ -597,6 +609,7 @@ Item {
                         icon.name: "emblem-shared-symbolic"
                         icon.color: "white"
                         display: AbstractButton.IconOnly
+                        enabled: info.title
 
                         Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
                         Kirigami.Theme.inherit: false
@@ -618,6 +631,7 @@ Item {
                         Layout.maximumWidth: height
                         Layout.preferredWidth: height
                         checked: !sideDrawer.collapsed && wideScreen
+                        enabled: playListView.count != 0
 
                         onClicked: {
                             if (wideScreen){
