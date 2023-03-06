@@ -893,6 +893,7 @@ Item {
                             required property bool isCurrent
                             required property int index
 
+                            alwaysVisibleActions:true
                             backgroundColor:"transparent"
                             highlighted: isCurrent
                             onClicked: {
