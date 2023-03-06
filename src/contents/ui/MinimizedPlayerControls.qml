@@ -81,7 +81,7 @@ Item {
                 
                 // track information
                 ColumnLayout {
-
+                    Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
                     Layout.fillWidth: true
                     Layout.fillHeight: true
                     
@@ -99,7 +99,7 @@ Item {
                         // Hardcoded because the footerbar blur always makes a dark-ish
                         // background, so we don't want to use a color scheme color that
                         // might also be dark
-                        color: "white"
+                        color: Kirigami.Theme.textColor
                         font.weight: Font.Bold
                     }
                     
@@ -117,7 +117,7 @@ Item {
                         // Hardcoded because the footerbar blur always makes a dark-ish
                         // background, so we don't want to use a color scheme color that
                         // might also be dark
-                        color: "white"
+                        color: Kirigami.Theme.disabledTextColor
                     }
                 }
                 Item{Layout.fillWidth: true}
