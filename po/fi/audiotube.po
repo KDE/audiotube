@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-05 00:48+0000\n"
+"POT-Creation-Date: 2023-03-06 00:47+0000\n"
 "PO-Revision-Date: 2022-10-24 07:57+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -18,9 +18,9 @@ msgstr ""
 "X-Generator: Lokalize 20.12.0\n"
 
 #: contents/ui/AlbumPage.qml:26 contents/ui/LibraryPage.qml:36
-#: contents/ui/LibraryPage.qml:62 contents/ui/LibraryPage.qml:110
-#: contents/ui/LibraryPage.qml:358 contents/ui/LibraryPage.qml:384
-#: contents/ui/LibraryPage.qml:432 contents/ui/PlaybackHistory.qml:26
+#: contents/ui/LibraryPage.qml:62 contents/ui/LibraryPage.qml:83
+#: contents/ui/LibraryPage.qml:330 contents/ui/LibraryPage.qml:356
+#: contents/ui/LibraryPage.qml:377 contents/ui/PlaybackHistory.qml:26
 #: contents/ui/PlaylistPage.qml:31
 #, kde-format
 msgid "Play"
@@ -28,17 +28,17 @@ msgstr "Toista"
 
 #: contents/ui/AlbumPage.qml:33 contents/ui/ArtistPage.qml:36
 #: contents/ui/LibraryPage.qml:43 contents/ui/LibraryPage.qml:68
-#: contents/ui/LibraryPage.qml:118 contents/ui/LibraryPage.qml:365
-#: contents/ui/LibraryPage.qml:390 contents/ui/LibraryPage.qml:441
-#: contents/ui/MaximizedPlayerPage.qml:877 contents/ui/PlaybackHistory.qml:39
+#: contents/ui/LibraryPage.qml:91 contents/ui/LibraryPage.qml:337
+#: contents/ui/LibraryPage.qml:362 contents/ui/LibraryPage.qml:386
+#: contents/ui/MaximizedPlayerPage.qml:846 contents/ui/PlaybackHistory.qml:39
 #: contents/ui/PlaylistPage.qml:38
 #, kde-format
 msgid "Shuffle"
 msgstr "Sekoita"
 
 #: contents/ui/AlbumPage.qml:41 contents/ui/LibraryPage.qml:73
-#: contents/ui/LibraryPage.qml:126 contents/ui/LibraryPage.qml:395
-#: contents/ui/LibraryPage.qml:449 contents/ui/PlaybackHistory.qml:51
+#: contents/ui/LibraryPage.qml:99 contents/ui/LibraryPage.qml:367
+#: contents/ui/LibraryPage.qml:394 contents/ui/PlaybackHistory.qml:51
 #: contents/ui/PlaylistPage.qml:46
 #, kde-format
 msgid "Append to queue"
@@ -117,43 +117,43 @@ msgstr "OK"
 msgid "Cancel"
 msgstr "Peru"
 
-#: contents/ui/LibraryPage.qml:29 contents/ui/LibraryPage.qml:150
+#: contents/ui/LibraryPage.qml:29 contents/ui/LibraryPage.qml:122
 #: contents/ui/NavigationBar.qml:46 contents/ui/NavigationBar.qml:51
 #: contents/ui/Sidebar.qml:128 contents/ui/Sidebar.qml:135
 #, kde-format
 msgid "Favourites"
 msgstr "Suosikit"
 
-#: contents/ui/LibraryPage.qml:146 contents/ui/LibraryPage.qml:469
+#: contents/ui/LibraryPage.qml:118 contents/ui/LibraryPage.qml:414
 #, kde-format
 msgid "Show All"
 msgstr "Näytä kaikki"
 
-#: contents/ui/LibraryPage.qml:175
+#: contents/ui/LibraryPage.qml:147
 #, fuzzy, kde-format
 #| msgid "Favourites"
 msgid "No Favourites Yet"
 msgstr "Suosikit"
 
-#: contents/ui/LibraryPage.qml:351
+#: contents/ui/LibraryPage.qml:323
 #, kde-format
 msgid "Most played"
 msgstr "Soitetuimmat"
 
-#: contents/ui/LibraryPage.qml:473 contents/ui/NavigationBar.qml:58
+#: contents/ui/LibraryPage.qml:418 contents/ui/NavigationBar.qml:58
 #: contents/ui/NavigationBar.qml:63 contents/ui/Sidebar.qml:147
 #: contents/ui/Sidebar.qml:154
 #, kde-format
 msgid "Played Songs"
 msgstr "Soitetut kappaleet"
 
-#: contents/ui/LibraryPage.qml:497
+#: contents/ui/LibraryPage.qml:442
 #, fuzzy, kde-format
 #| msgid "No songs here yet"
 msgid "No Songs Played Yet"
 msgstr "Ei vielä kappaleita"
 
-#: contents/ui/main.qml:108 main.cpp:51
+#: contents/ui/main.qml:108 main.cpp:52
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
@@ -164,18 +164,18 @@ msgstr "AudioTube"
 msgid "No media playing"
 msgstr "Mitään ei toisteta"
 
-#: contents/ui/MaximizedPlayerPage.qml:589
+#: contents/ui/MaximizedPlayerPage.qml:558
 #, kde-format
 msgid "%1%"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:826
-#: contents/ui/MaximizedPlayerPage.qml:985
+#: contents/ui/MaximizedPlayerPage.qml:795
+#: contents/ui/MaximizedPlayerPage.qml:935
 #, kde-format
 msgid "Remove Track"
 msgstr "Poista raita"
 
-#: contents/ui/MaximizedPlayerPage.qml:856
+#: contents/ui/MaximizedPlayerPage.qml:825
 #, fuzzy, kde-format
 #| msgid "Playlists"
 msgid "Clear Playlist"
@@ -237,9 +237,19 @@ msgstr "Tuntematon"
 msgid "No matching previous searches"
 msgstr ""
 
-#: contents/ui/ShareMenu.qml:36 contents/ui/ShareMenu.qml:100
+#: contents/ui/ShareMenu.qml:39 contents/ui/ShareMenu.qml:96
 #, kde-format
 msgid "Share to"
+msgstr ""
+
+#: contents/ui/ShareMenu.qml:50 contents/ui/ShareMenu.qml:105
+#, kde-format
+msgid "Copy Link"
+msgstr ""
+
+#: contents/ui/ShareMenu.qml:55 contents/ui/ShareMenu.qml:110
+#, kde-format
+msgid "Link copied to clipboard"
 msgstr ""
 
 #: contents/ui/Sidebar.qml:171
@@ -252,82 +262,82 @@ msgstr ""
 msgid "Collapse Sidebar"
 msgstr ""
 
-#: contents/ui/SongMenu.qml:122 contents/ui/SongMenu.qml:193
+#: contents/ui/SongMenu.qml:97 contents/ui/SongMenu.qml:168
 #, kde-format
 msgid "Play Next"
 msgstr "Toista seuraava"
 
-#: contents/ui/SongMenu.qml:131 contents/ui/SongMenu.qml:199
+#: contents/ui/SongMenu.qml:106 contents/ui/SongMenu.qml:174
 #, kde-format
 msgid "Add to queue"
 msgstr ""
 
-#: contents/ui/SongMenu.qml:141 contents/ui/SongMenu.qml:209
+#: contents/ui/SongMenu.qml:116 contents/ui/SongMenu.qml:184
 #, fuzzy, kde-format
 #| msgid "Favourites"
 msgid "Remove Favourite"
 msgstr "Suosikit"
 
-#: contents/ui/SongMenu.qml:141 contents/ui/SongMenu.qml:209
+#: contents/ui/SongMenu.qml:116 contents/ui/SongMenu.qml:184
 #, fuzzy, kde-format
 #| msgid "Favourites"
 msgid "Add Favourite"
 msgstr "Suosikit"
 
-#: contents/ui/SongMenu.qml:158 contents/ui/SongMenu.qml:223
+#: contents/ui/SongMenu.qml:133 contents/ui/SongMenu.qml:198
 #, kde-format
 msgid "Remove from History"
 msgstr ""
 
-#: contents/ui/SongMenu.qml:171 contents/ui/SongMenu.qml:234
+#: contents/ui/SongMenu.qml:146 contents/ui/SongMenu.qml:209
 #, fuzzy, kde-format
 #| msgid "Favourite Songs"
 msgid "Share Song"
 msgstr "Suosikkikappaleet"
 
-#: main.cpp:53
+#: main.cpp:54
 #, kde-format
 msgid "YouTube Music Player"
 msgstr ""
 
-#: main.cpp:55
+#: main.cpp:56
 #, kde-format
 msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
 msgstr ""
 
-#: main.cpp:56
+#: main.cpp:57
 #, kde-format
 msgid "Jonah Brüchert"
 msgstr ""
 
-#: main.cpp:56
+#: main.cpp:57
 #, kde-format
 msgid "Maintainer"
 msgstr ""
 
-#: main.cpp:57
+#: main.cpp:58
 #, kde-format
 msgid "Mathis Brüchert"
 msgstr ""
 
-#: main.cpp:57
+#: main.cpp:58
 #, kde-format
 msgid "Designer"
 msgstr ""
 
-#: main.cpp:58
+#: main.cpp:59
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Tommi Nieminen"
 
-#: main.cpp:58
+#: main.cpp:59
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "translator@legisign.org"
 
-#: main.cpp:63
+#: main.cpp:64
 #, fuzzy, kde-format
 #| msgid "Find music on YouTube Music"
 msgid "Unofficial API for YouTube Music"
