@@ -12,7 +12,8 @@ import org.kde.ytmusic 1.0
 
 Kirigami.ApplicationWindow {
     id: root
-
+    minimumWidth: 300
+    minimumHeight: 300
     pageStack.globalToolBar.style: wideScreen? Kirigami.ApplicationHeaderStyle.None: Kirigami.ApplicationHeaderStyle.Breadcrumb
 
     color: "transparent"
