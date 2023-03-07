@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-06 00:47+0000\n"
-"PO-Revision-Date: 2023-02-17 12:38+0000\n"
+"POT-Creation-Date: 2023-03-07 00:45+0000\n"
+"PO-Revision-Date: 2023-03-06 16:42+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -42,8 +42,7 @@ msgstr "Baralhar"
 #: contents/ui/LibraryPage.qml:99 contents/ui/LibraryPage.qml:367
 #: contents/ui/LibraryPage.qml:394 contents/ui/PlaybackHistory.qml:51
 #: contents/ui/PlaylistPage.qml:46
-#, fuzzy, kde-format
-#| msgid "Add to queue"
+#, kde-format
 msgid "Append to queue"
 msgstr "Adicionar à fila"
 
@@ -57,7 +56,7 @@ msgstr "Abrir no Navegador"
 #: contents/ui/PlaylistPage.qml:56
 #, kde-format
 msgid "Share"
-msgstr ""
+msgstr "Partilhar"
 
 #: contents/ui/AlbumPage.qml:61
 #, kde-format
@@ -171,7 +170,7 @@ msgid "%1%"
 msgstr "%1%"
 
 #: contents/ui/MaximizedPlayerPage.qml:795
-#: contents/ui/MaximizedPlayerPage.qml:935
+#: contents/ui/MaximizedPlayerPage.qml:936
 #, kde-format
 msgid "Remove Track"
 msgstr "Remover a Faixa"
@@ -239,17 +238,17 @@ msgstr "Sem pesquisas anteriores correspondentes"
 #: contents/ui/ShareMenu.qml:39 contents/ui/ShareMenu.qml:96
 #, kde-format
 msgid "Share to"
-msgstr ""
+msgstr "Partilhar em"
 
 #: contents/ui/ShareMenu.qml:50 contents/ui/ShareMenu.qml:105
 #, kde-format
 msgid "Copy Link"
-msgstr ""
+msgstr "Copiar a Ligação"
 
 #: contents/ui/ShareMenu.qml:55 contents/ui/ShareMenu.qml:110
 #, kde-format
 msgid "Link copied to clipboard"
-msgstr ""
+msgstr "Ligação copiada para a área de transferência"
 
 #: contents/ui/Sidebar.qml:171
 #, kde-format
@@ -287,10 +286,9 @@ msgid "Remove from History"
 msgstr "Remover do Histórico"
 
 #: contents/ui/SongMenu.qml:146 contents/ui/SongMenu.qml:209
-#, fuzzy, kde-format
-#| msgid "Played Songs"
+#, kde-format
 msgid "Share Song"
-msgstr "Músicas Tocadas"
+msgstr "Partilhar a Música"
 
 #: main.cpp:54
 #, kde-format
@@ -338,6 +336,3 @@ msgstr "zepires@gmail.com"
 #, kde-format
 msgid "Unofficial API for YouTube Music"
 msgstr "API não oficial do YouTube Music"
-
-#~ msgid "played Songs"
-#~ msgstr "Músicas tocadas"

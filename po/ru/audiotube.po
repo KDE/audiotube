@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-06 00:47+0000\n"
+"POT-Creation-Date: 2023-03-07 00:45+0000\n"
 "PO-Revision-Date: 2023-01-28 13:37+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -171,7 +171,7 @@ msgid "%1%"
 msgstr ""
 
 #: contents/ui/MaximizedPlayerPage.qml:795
-#: contents/ui/MaximizedPlayerPage.qml:935
+#: contents/ui/MaximizedPlayerPage.qml:936
 #, kde-format
 msgid "Remove Track"
 msgstr "Удалить дорожку"

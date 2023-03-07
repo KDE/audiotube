@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-06 00:47+0000\n"
+"POT-Creation-Date: 2023-03-07 00:45+0000\n"
 "PO-Revision-Date: 2023-02-24 17:15-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -170,7 +170,7 @@ msgid "%1%"
 msgstr "%1%"
 
 #: contents/ui/MaximizedPlayerPage.qml:795
-#: contents/ui/MaximizedPlayerPage.qml:935
+#: contents/ui/MaximizedPlayerPage.qml:936
 #, kde-format
 msgid "Remove Track"
 msgstr "Remover faixa"

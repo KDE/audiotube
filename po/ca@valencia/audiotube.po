@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-06 00:47+0000\n"
-"PO-Revision-Date: 2023-03-05 10:44+0100\n"
+"POT-Creation-Date: 2023-03-07 00:45+0000\n"
+"PO-Revision-Date: 2023-03-06 11:01+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -171,7 +171,7 @@ msgid "%1%"
 msgstr "%1%"
 
 #: contents/ui/MaximizedPlayerPage.qml:795
-#: contents/ui/MaximizedPlayerPage.qml:935
+#: contents/ui/MaximizedPlayerPage.qml:936
 #, kde-format
 msgid "Remove Track"
 msgstr "Elimina la pista"
@@ -244,12 +244,12 @@ msgstr "Compartix a"
 #: contents/ui/ShareMenu.qml:50 contents/ui/ShareMenu.qml:105
 #, kde-format
 msgid "Copy Link"
-msgstr ""
+msgstr "Copia l'enllaç"
 
 #: contents/ui/ShareMenu.qml:55 contents/ui/ShareMenu.qml:110
 #, kde-format
 msgid "Link copied to clipboard"
-msgstr ""
+msgstr "L'enllaç s'ha copiat al porta-retalls"
 
 #: contents/ui/Sidebar.qml:171
 #, kde-format
