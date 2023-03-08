@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 00:45+0000\n"
+"POT-Creation-Date: 2023-03-08 00:46+0000\n"
 "PO-Revision-Date: 2023-03-06 16:11+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -32,7 +32,7 @@ msgstr "Reproducir"
 #: contents/ui/LibraryPage.qml:43 contents/ui/LibraryPage.qml:68
 #: contents/ui/LibraryPage.qml:91 contents/ui/LibraryPage.qml:337
 #: contents/ui/LibraryPage.qml:362 contents/ui/LibraryPage.qml:386
-#: contents/ui/MaximizedPlayerPage.qml:846 contents/ui/PlaybackHistory.qml:39
+#: contents/ui/MaximizedPlayerPage.qml:860 contents/ui/PlaybackHistory.qml:39
 #: contents/ui/PlaylistPage.qml:38
 #, kde-format
 msgid "Shuffle"
@@ -153,32 +153,37 @@ msgstr "Canciones reproducidas"
 msgid "No Songs Played Yet"
 msgstr "Todavía no se han reproducido canciones"
 
-#: contents/ui/main.qml:108 main.cpp:52
+#: contents/ui/main.qml:109 main.cpp:52
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
 
 #: contents/ui/MaximizedPlayerPage.qml:194
-#: contents/ui/MinimizedPlayerControls.qml:90
+#: contents/ui/MinimizedPlayerControls.qml:93
 #, kde-format
 msgid "No media playing"
 msgstr "Ningún medio en reproducción"
 
-#: contents/ui/MaximizedPlayerPage.qml:558
+#: contents/ui/MaximizedPlayerPage.qml:569
 #, kde-format
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/ui/MaximizedPlayerPage.qml:795
-#: contents/ui/MaximizedPlayerPage.qml:936
+#: contents/ui/MaximizedPlayerPage.qml:809
+#: contents/ui/MaximizedPlayerPage.qml:983
 #, kde-format
 msgid "Remove Track"
 msgstr "Eliminar pista"
 
-#: contents/ui/MaximizedPlayerPage.qml:825
+#: contents/ui/MaximizedPlayerPage.qml:839
 #, kde-format
 msgid "Clear Playlist"
 msgstr "Borrar la lista de reproducción"
+
+#: contents/ui/MaximizedPlayerPage.qml:886
+#, kde-format
+msgid "Upcoming Songs"
+msgstr ""
 
 #: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:97
 #, kde-format
@@ -235,17 +240,17 @@ msgstr "Desconocido"
 msgid "No matching previous searches"
 msgstr "No hay búsquedas anteriores coincidentes"
 
-#: contents/ui/ShareMenu.qml:39 contents/ui/ShareMenu.qml:96
+#: contents/ui/ShareMenu.qml:39
 #, kde-format
 msgid "Share to"
 msgstr "Compartir con"
 
-#: contents/ui/ShareMenu.qml:50 contents/ui/ShareMenu.qml:105
+#: contents/ui/ShareMenu.qml:50 contents/ui/ShareMenu.qml:100
 #, kde-format
 msgid "Copy Link"
 msgstr "Copiar enlace"
 
-#: contents/ui/ShareMenu.qml:55 contents/ui/ShareMenu.qml:110
+#: contents/ui/ShareMenu.qml:55 contents/ui/ShareMenu.qml:105
 #, kde-format
 msgid "Link copied to clipboard"
 msgstr "Se ha copiado el enlace en el portapapeles"
@@ -260,32 +265,32 @@ msgstr "Acerca de"
 msgid "Collapse Sidebar"
 msgstr "Contraer la barra lateral"
 
-#: contents/ui/SongMenu.qml:97 contents/ui/SongMenu.qml:168
+#: contents/ui/SongMenu.qml:94 contents/ui/SongMenu.qml:165
 #, kde-format
 msgid "Play Next"
 msgstr "Reproducir siguiente"
 
-#: contents/ui/SongMenu.qml:106 contents/ui/SongMenu.qml:174
+#: contents/ui/SongMenu.qml:103 contents/ui/SongMenu.qml:171
 #, kde-format
 msgid "Add to queue"
 msgstr "Añadir a la cola"
 
-#: contents/ui/SongMenu.qml:116 contents/ui/SongMenu.qml:184
+#: contents/ui/SongMenu.qml:113 contents/ui/SongMenu.qml:181
 #, kde-format
 msgid "Remove Favourite"
 msgstr "Eliminar favorita"
 
-#: contents/ui/SongMenu.qml:116 contents/ui/SongMenu.qml:184
+#: contents/ui/SongMenu.qml:113 contents/ui/SongMenu.qml:181
 #, kde-format
 msgid "Add Favourite"
 msgstr "Añadir favorita"
 
-#: contents/ui/SongMenu.qml:133 contents/ui/SongMenu.qml:198
+#: contents/ui/SongMenu.qml:130 contents/ui/SongMenu.qml:195
 #, kde-format
 msgid "Remove from History"
 msgstr "Eliminar del historial"
 
-#: contents/ui/SongMenu.qml:146 contents/ui/SongMenu.qml:209
+#: contents/ui/SongMenu.qml:143 contents/ui/SongMenu.qml:206
 #, kde-format
 msgid "Share Song"
 msgstr "Compartir canción"

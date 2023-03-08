@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-07 00:45+0000\n"
+"POT-Creation-Date: 2023-03-08 00:46+0000\n"
 "PO-Revision-Date: 2023-03-01 00:43+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -30,7 +30,7 @@ msgstr "재생"
 #: contents/ui/LibraryPage.qml:43 contents/ui/LibraryPage.qml:68
 #: contents/ui/LibraryPage.qml:91 contents/ui/LibraryPage.qml:337
 #: contents/ui/LibraryPage.qml:362 contents/ui/LibraryPage.qml:386
-#: contents/ui/MaximizedPlayerPage.qml:846 contents/ui/PlaybackHistory.qml:39
+#: contents/ui/MaximizedPlayerPage.qml:860 contents/ui/PlaybackHistory.qml:39
 #: contents/ui/PlaylistPage.qml:38
 #, kde-format
 msgid "Shuffle"
@@ -150,32 +150,37 @@ msgstr "재생한 노래"
 msgid "No Songs Played Yet"
 msgstr "재생한 곡 없음"
 
-#: contents/ui/main.qml:108 main.cpp:52
+#: contents/ui/main.qml:109 main.cpp:52
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
 
 #: contents/ui/MaximizedPlayerPage.qml:194
-#: contents/ui/MinimizedPlayerControls.qml:90
+#: contents/ui/MinimizedPlayerControls.qml:93
 #, kde-format
 msgid "No media playing"
 msgstr "재생 중인 미디어 없음"
 
-#: contents/ui/MaximizedPlayerPage.qml:558
+#: contents/ui/MaximizedPlayerPage.qml:569
 #, kde-format
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/ui/MaximizedPlayerPage.qml:795
-#: contents/ui/MaximizedPlayerPage.qml:936
+#: contents/ui/MaximizedPlayerPage.qml:809
+#: contents/ui/MaximizedPlayerPage.qml:983
 #, kde-format
 msgid "Remove Track"
 msgstr "트랙 삭제"
 
-#: contents/ui/MaximizedPlayerPage.qml:825
+#: contents/ui/MaximizedPlayerPage.qml:839
 #, kde-format
 msgid "Clear Playlist"
 msgstr "재생 목록 비우기"
+
+#: contents/ui/MaximizedPlayerPage.qml:886
+#, kde-format
+msgid "Upcoming Songs"
+msgstr ""
 
 #: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:97
 #, kde-format
@@ -232,17 +237,17 @@ msgstr "알 수 없음"
 msgid "No matching previous searches"
 msgstr "일치하는 이전 검색 없음"
 
-#: contents/ui/ShareMenu.qml:39 contents/ui/ShareMenu.qml:96
+#: contents/ui/ShareMenu.qml:39
 #, kde-format
 msgid "Share to"
 msgstr ""
 
-#: contents/ui/ShareMenu.qml:50 contents/ui/ShareMenu.qml:105
+#: contents/ui/ShareMenu.qml:50 contents/ui/ShareMenu.qml:100
 #, kde-format
 msgid "Copy Link"
 msgstr ""
 
-#: contents/ui/ShareMenu.qml:55 contents/ui/ShareMenu.qml:110
+#: contents/ui/ShareMenu.qml:55 contents/ui/ShareMenu.qml:105
 #, kde-format
 msgid "Link copied to clipboard"
 msgstr ""
@@ -257,32 +262,32 @@ msgstr "정보"
 msgid "Collapse Sidebar"
 msgstr "사이드바 접기"
 
-#: contents/ui/SongMenu.qml:97 contents/ui/SongMenu.qml:168
+#: contents/ui/SongMenu.qml:94 contents/ui/SongMenu.qml:165
 #, kde-format
 msgid "Play Next"
 msgstr "다음 재생"
 
-#: contents/ui/SongMenu.qml:106 contents/ui/SongMenu.qml:174
+#: contents/ui/SongMenu.qml:103 contents/ui/SongMenu.qml:171
 #, kde-format
 msgid "Add to queue"
 msgstr "대기열에 추가"
 
-#: contents/ui/SongMenu.qml:116 contents/ui/SongMenu.qml:184
+#: contents/ui/SongMenu.qml:113 contents/ui/SongMenu.qml:181
 #, kde-format
 msgid "Remove Favourite"
 msgstr "책갈피 삭제"
 
-#: contents/ui/SongMenu.qml:116 contents/ui/SongMenu.qml:184
+#: contents/ui/SongMenu.qml:113 contents/ui/SongMenu.qml:181
 #, kde-format
 msgid "Add Favourite"
 msgstr "책갈피에 추가"
 
-#: contents/ui/SongMenu.qml:133 contents/ui/SongMenu.qml:198
+#: contents/ui/SongMenu.qml:130 contents/ui/SongMenu.qml:195
 #, kde-format
 msgid "Remove from History"
 msgstr "과거 기록에서 삭제"
 
-#: contents/ui/SongMenu.qml:146 contents/ui/SongMenu.qml:209
+#: contents/ui/SongMenu.qml:143 contents/ui/SongMenu.qml:206
 #, fuzzy, kde-format
 #| msgid "Favourite Songs"
 msgid "Share Song"
