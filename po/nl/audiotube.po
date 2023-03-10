@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-09 00:45+0000\n"
-"PO-Revision-Date: 2023-03-08 09:49+0100\n"
+"PO-Revision-Date: 2023-03-09 10:28+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -118,43 +118,37 @@ msgid "Cancel"
 msgstr "Annuleren"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:17
-#, fuzzy, kde-format
-#| msgid "Add to Playlist"
+#, kde-format
 msgid "Add playlist"
 msgstr "Aan afspeellijst toevoegen"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:23
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:24
-#, fuzzy, kde-format
-#| msgid "Playlist"
+#, kde-format
 msgid "Playlist Title"
-msgstr "Afspeellijst"
+msgstr "Titel van afspeellijst"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:28
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:30
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "Playlist Description"
-msgstr "Afspeellijsten"
+msgstr "Beschrijving van afspeellijst"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:20
-#, fuzzy, kde-format
-#| msgid "Add to Playlist"
+#, kde-format
 msgid "Add Song to Playlist"
-msgstr "Aan afspeellijst toevoegen"
+msgstr "Song aan afspeellijst toevoegen"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:29
 #: contents/ui/LocalPlaylistsPage.qml:90
-#, fuzzy, kde-format
-#| msgid "Playlist"
+#, kde-format
 msgid "New Playlist"
-msgstr "Afspeellijst"
+msgstr "Nieuwe afspeellijst"
 
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:18
-#, fuzzy, kde-format
-#| msgid "Clear Playlist"
+#, kde-format
 msgid "Rename playlist"
-msgstr "Afspeellijst wissen"
+msgstr "Afspeellijst hernoemen"
 
 #: contents/ui/LibraryPage.qml:30 contents/ui/LibraryPage.qml:123
 #: contents/ui/NavigationBar.qml:48 contents/ui/NavigationBar.qml:54
@@ -199,33 +193,31 @@ msgid "Playlists"
 msgstr "Afspeellijsten"
 
 #: contents/ui/LibraryPage.qml:650
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "No Playlists Yet"
-msgstr "Afspeellijsten"
+msgstr "Nog geen afspeellijst"
 
 #: contents/ui/LibraryPage.qml:670 contents/ui/LibraryPage.qml:692
 #: contents/ui/LocalPlaylistsPage.qml:33 contents/ui/LocalPlaylistsPage.qml:55
 #, kde-format
 msgid "Rename"
-msgstr ""
+msgstr "Hernoemen"
 
 #: contents/ui/LibraryPage.qml:679 contents/ui/LibraryPage.qml:700
 #: contents/ui/LocalPlaylistsPage.qml:42 contents/ui/LocalPlaylistsPage.qml:63
 #, kde-format
 msgid "Delete"
-msgstr ""
+msgstr "Verwijderen"
 
 #: contents/ui/LocalPlaylistPage.qml:19
-#, fuzzy, kde-format
-#| msgid "Remove from History"
+#, kde-format
 msgid "Remove from Playlist"
-msgstr "Uit geschiedenis verwijderen"
+msgstr "Uit afspeellijst verwijderen"
 
 #: contents/ui/LocalPlaylistPage.qml:29
 #, kde-format
 msgid "This playlist is still empty"
-msgstr ""
+msgstr "Deze afspeellijst is nog leeg"
 
 #: contents/ui/main.qml:109 main.cpp:54
 #, kde-format
@@ -360,8 +352,7 @@ msgid "Remove from History"
 msgstr "Uit geschiedenis verwijderen"
 
 #: contents/ui/SongMenu.qml:156 contents/ui/SongMenu.qml:244
-#, fuzzy, kde-format
-#| msgid "Add to Playlist"
+#, kde-format
 msgid "Add to playlist"
 msgstr "Aan afspeellijst toevoegen"
 

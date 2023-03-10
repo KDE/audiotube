@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-09 00:45+0000\n"
-"PO-Revision-Date: 2023-03-08 09:15+0000\n"
+"PO-Revision-Date: 2023-03-09 09:59+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -120,42 +120,37 @@ msgid "Cancel"
 msgstr "Cancelar"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:17
-#, fuzzy, kde-format
-#| msgid "Playlist"
+#, kde-format
 msgid "Add playlist"
-msgstr "Lista de Reprodução"
+msgstr "Adicionar à lista de reprodução"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:23
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:24
-#, fuzzy, kde-format
-#| msgid "Playlist"
+#, kde-format
 msgid "Playlist Title"
-msgstr "Lista de Reprodução"
+msgstr "Título da Lista de Reprodução"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:28
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:30
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "Playlist Description"
-msgstr "Listas de Reprodução"
+msgstr "Descrição da Lista de Reprodução"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:20
 #, kde-format
 msgid "Add Song to Playlist"
-msgstr ""
+msgstr "Adicionar a Música à Lista"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:29
 #: contents/ui/LocalPlaylistsPage.qml:90
-#, fuzzy, kde-format
-#| msgid "Playlist"
+#, kde-format
 msgid "New Playlist"
-msgstr "Lista de Reprodução"
+msgstr "Nova Lista de Reprodução"
 
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:18
-#, fuzzy, kde-format
-#| msgid "Clear Playlist"
+#, kde-format
 msgid "Rename playlist"
-msgstr "Limpar a Lista de Reprodução"
+msgstr "Mudar o nome da lista de reprodução"
 
 #: contents/ui/LibraryPage.qml:30 contents/ui/LibraryPage.qml:123
 #: contents/ui/NavigationBar.qml:48 contents/ui/NavigationBar.qml:54
@@ -200,33 +195,31 @@ msgid "Playlists"
 msgstr "Listas de Reprodução"
 
 #: contents/ui/LibraryPage.qml:650
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "No Playlists Yet"
-msgstr "Listas de Reprodução"
+msgstr "Ainda sem Listas de Reprodução"
 
 #: contents/ui/LibraryPage.qml:670 contents/ui/LibraryPage.qml:692
 #: contents/ui/LocalPlaylistsPage.qml:33 contents/ui/LocalPlaylistsPage.qml:55
 #, kde-format
 msgid "Rename"
-msgstr ""
+msgstr "Mudar o Nome"
 
 #: contents/ui/LibraryPage.qml:679 contents/ui/LibraryPage.qml:700
 #: contents/ui/LocalPlaylistsPage.qml:42 contents/ui/LocalPlaylistsPage.qml:63
 #, kde-format
 msgid "Delete"
-msgstr ""
+msgstr "Apagar"
 
 #: contents/ui/LocalPlaylistPage.qml:19
-#, fuzzy, kde-format
-#| msgid "Remove from History"
+#, kde-format
 msgid "Remove from Playlist"
-msgstr "Remover do Histórico"
+msgstr "Remover da Lista de Reprodução"
 
 #: contents/ui/LocalPlaylistPage.qml:29
 #, kde-format
 msgid "This playlist is still empty"
-msgstr ""
+msgstr "Esta lista de reprodução continua vazia"
 
 #: contents/ui/main.qml:109 main.cpp:54
 #, kde-format
@@ -361,10 +354,9 @@ msgid "Remove from History"
 msgstr "Remover do Histórico"
 
 #: contents/ui/SongMenu.qml:156 contents/ui/SongMenu.qml:244
-#, fuzzy, kde-format
-#| msgid "Playlist"
+#, kde-format
 msgid "Add to playlist"
-msgstr "Lista de Reprodução"
+msgstr "Adicionar à lista de reprodução"
 
 #: contents/ui/SongMenu.qml:183 contents/ui/SongMenu.qml:269
 #, kde-format

@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-09 00:45+0000\n"
-"PO-Revision-Date: 2023-03-06 13:10+0300\n"
+"PO-Revision-Date: 2023-03-09 13:09+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -118,43 +118,37 @@ msgid "Cancel"
 msgstr "İptal"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:17
-#, fuzzy, kde-format
-#| msgid "Add to Playlist"
+#, kde-format
 msgid "Add playlist"
-msgstr "Çalma Listesine Ekle"
+msgstr "Çalma listesi ekle"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:23
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:24
-#, fuzzy, kde-format
-#| msgid "Playlist"
+#, kde-format
 msgid "Playlist Title"
-msgstr "Çalma Listesi"
+msgstr "Çalma Listesi Başlığı"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:28
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:30
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "Playlist Description"
-msgstr "Çalma Listeleri"
+msgstr "Çalma Listesi Açıklaması"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:20
-#, fuzzy, kde-format
-#| msgid "Add to Playlist"
+#, kde-format
 msgid "Add Song to Playlist"
-msgstr "Çalma Listesine Ekle"
+msgstr "Çalma Listesine Şarkı Ekle"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:29
 #: contents/ui/LocalPlaylistsPage.qml:90
-#, fuzzy, kde-format
-#| msgid "Playlist"
+#, kde-format
 msgid "New Playlist"
-msgstr "Çalma Listesi"
+msgstr "Yeni Çalma Listesi"
 
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:18
-#, fuzzy, kde-format
-#| msgid "Clear Playlist"
+#, kde-format
 msgid "Rename playlist"
-msgstr "Çalma Listesini Temizle"
+msgstr "Çalma Listesini Yeniden Adlandır"
 
 #: contents/ui/LibraryPage.qml:30 contents/ui/LibraryPage.qml:123
 #: contents/ui/NavigationBar.qml:48 contents/ui/NavigationBar.qml:54
@@ -199,33 +193,31 @@ msgid "Playlists"
 msgstr "Çalma Listeleri"
 
 #: contents/ui/LibraryPage.qml:650
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "No Playlists Yet"
-msgstr "Çalma Listeleri"
+msgstr "Çalma Listesi Yok"
 
 #: contents/ui/LibraryPage.qml:670 contents/ui/LibraryPage.qml:692
 #: contents/ui/LocalPlaylistsPage.qml:33 contents/ui/LocalPlaylistsPage.qml:55
 #, kde-format
 msgid "Rename"
-msgstr ""
+msgstr "Yeniden Adlandır"
 
 #: contents/ui/LibraryPage.qml:679 contents/ui/LibraryPage.qml:700
 #: contents/ui/LocalPlaylistsPage.qml:42 contents/ui/LocalPlaylistsPage.qml:63
 #, kde-format
 msgid "Delete"
-msgstr ""
+msgstr "Sil"
 
 #: contents/ui/LocalPlaylistPage.qml:19
-#, fuzzy, kde-format
-#| msgid "Remove from History"
+#, kde-format
 msgid "Remove from Playlist"
-msgstr "Geçmişten Kaldır"
+msgstr "Çalma Listesinden Kaldır"
 
 #: contents/ui/LocalPlaylistPage.qml:29
 #, kde-format
 msgid "This playlist is still empty"
-msgstr ""
+msgstr "Bu çalma listesi hâlâ boş"
 
 #: contents/ui/main.qml:109 main.cpp:54
 #, kde-format
@@ -257,7 +249,7 @@ msgstr "Çalma Listesini Temizle"
 #: contents/ui/MaximizedPlayerPage.qml:916
 #, kde-format
 msgid "Upcoming Songs"
-msgstr ""
+msgstr "Sıradaki Şarkılar"
 
 #: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:100
 #, kde-format
@@ -307,7 +299,7 @@ msgstr "Bilinmiyor"
 #: contents/ui/SearchWithDropdown.qml:355
 #, kde-format
 msgid "No matching previous searches"
-msgstr "Eşleşen daha önceden yapılmış arama yok"
+msgstr "Daha önceden yapılmış eşleşen arama yok"
 
 #: contents/ui/ShareMenu.qml:39
 #, kde-format
@@ -360,10 +352,9 @@ msgid "Remove from History"
 msgstr "Geçmişten Kaldır"
 
 #: contents/ui/SongMenu.qml:156 contents/ui/SongMenu.qml:244
-#, fuzzy, kde-format
-#| msgid "Add to Playlist"
+#, kde-format
 msgid "Add to playlist"
-msgstr "Çalma Listesine Ekle"
+msgstr "Çalma listesine ekle"
 
 #: contents/ui/SongMenu.qml:183 contents/ui/SongMenu.qml:269
 #, kde-format
