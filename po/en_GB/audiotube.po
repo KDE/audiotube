@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-09 00:45+0000\n"
-"PO-Revision-Date: 2023-03-04 16:30+0000\n"
+"PO-Revision-Date: 2023-03-10 17:27+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
 "Language: en_GB\n"
@@ -40,10 +40,9 @@ msgstr "Shuffle"
 #: contents/ui/LibraryPage.qml:100 contents/ui/LibraryPage.qml:369
 #: contents/ui/LibraryPage.qml:396 contents/ui/LocalPlaylistPage.qml:55
 #: contents/ui/PlaybackHistory.qml:48 contents/ui/PlaylistPage.qml:46
-#, fuzzy, kde-format
-#| msgid "Add to queue"
+#, kde-format
 msgid "Append to queue"
-msgstr "Add to queue"
+msgstr "Append to queue"
 
 #: contents/ui/AlbumPage.qml:46 contents/ui/ArtistPage.qml:43
 #: contents/ui/PlaylistPage.qml:51
@@ -119,43 +118,37 @@ msgid "Cancel"
 msgstr "Cancel"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:17
-#, fuzzy, kde-format
-#| msgid "Add to Playlist"
+#, kde-format
 msgid "Add playlist"
-msgstr "Add to Playlist"
+msgstr "Add playlist"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:23
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:24
-#, fuzzy, kde-format
-#| msgid "Playlist"
+#, kde-format
 msgid "Playlist Title"
-msgstr "Playlist"
+msgstr "Playlist Title"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:28
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:30
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "Playlist Description"
-msgstr "Playlists"
+msgstr "Playlist Description"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:20
-#, fuzzy, kde-format
-#| msgid "Add to Playlist"
+#, kde-format
 msgid "Add Song to Playlist"
-msgstr "Add to Playlist"
+msgstr "Add Song to Playlist"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:29
 #: contents/ui/LocalPlaylistsPage.qml:90
-#, fuzzy, kde-format
-#| msgid "Playlist"
+#, kde-format
 msgid "New Playlist"
-msgstr "Playlist"
+msgstr "New Playlist"
 
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:18
-#, fuzzy, kde-format
-#| msgid "Clear Playlist"
+#, kde-format
 msgid "Rename playlist"
-msgstr "Clear Playlist"
+msgstr "Rename playlist"
 
 #: contents/ui/LibraryPage.qml:30 contents/ui/LibraryPage.qml:123
 #: contents/ui/NavigationBar.qml:48 contents/ui/NavigationBar.qml:54
@@ -200,33 +193,31 @@ msgid "Playlists"
 msgstr "Playlists"
 
 #: contents/ui/LibraryPage.qml:650
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "No Playlists Yet"
-msgstr "Playlists"
+msgstr "No Playlists Yet"
 
 #: contents/ui/LibraryPage.qml:670 contents/ui/LibraryPage.qml:692
 #: contents/ui/LocalPlaylistsPage.qml:33 contents/ui/LocalPlaylistsPage.qml:55
 #, kde-format
 msgid "Rename"
-msgstr ""
+msgstr "Rename"
 
 #: contents/ui/LibraryPage.qml:679 contents/ui/LibraryPage.qml:700
 #: contents/ui/LocalPlaylistsPage.qml:42 contents/ui/LocalPlaylistsPage.qml:63
 #, kde-format
 msgid "Delete"
-msgstr ""
+msgstr "Delete"
 
 #: contents/ui/LocalPlaylistPage.qml:19
-#, fuzzy, kde-format
-#| msgid "Remove from History"
+#, kde-format
 msgid "Remove from Playlist"
-msgstr "Remove from History"
+msgstr "Remove from Playlist"
 
 #: contents/ui/LocalPlaylistPage.qml:29
 #, kde-format
 msgid "This playlist is still empty"
-msgstr ""
+msgstr "This playlist is still empty"
 
 #: contents/ui/main.qml:109 main.cpp:54
 #, kde-format
@@ -258,7 +249,7 @@ msgstr "Clear Playlist"
 #: contents/ui/MaximizedPlayerPage.qml:916
 #, kde-format
 msgid "Upcoming Songs"
-msgstr ""
+msgstr "Upcoming Songs"
 
 #: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:100
 #, kde-format
@@ -318,12 +309,12 @@ msgstr "Share to"
 #: contents/ui/ShareMenu.qml:49 contents/ui/ShareMenu.qml:99
 #, kde-format
 msgid "Copy Link"
-msgstr ""
+msgstr "Copy Link"
 
 #: contents/ui/ShareMenu.qml:54 contents/ui/ShareMenu.qml:104
 #, kde-format
 msgid "Link copied to clipboard"
-msgstr ""
+msgstr "Link copied to clipboard"
 
 #: contents/ui/Sidebar.qml:189
 #, kde-format
@@ -361,10 +352,9 @@ msgid "Remove from History"
 msgstr "Remove from History"
 
 #: contents/ui/SongMenu.qml:156 contents/ui/SongMenu.qml:244
-#, fuzzy, kde-format
-#| msgid "Add to Playlist"
+#, kde-format
 msgid "Add to playlist"
-msgstr "Add to Playlist"
+msgstr "Add to playlist"
 
 #: contents/ui/SongMenu.qml:183 contents/ui/SongMenu.qml:269
 #, kde-format
