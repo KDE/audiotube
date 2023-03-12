@@ -104,6 +104,10 @@ Item {
         onAccepted: {
             popup.close()
             completionList.selectedDelegate = -1
+            if(oldText) {
+                Library.removeTemporarySearch(oldText)
+                oldText = ""
+            }
 
             while (pageStack.depth > 0) {
                 pageStack.pop()
