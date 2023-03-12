@@ -676,6 +676,7 @@ Item {
                                 }
                                 sideDrawer.collapsed = !sideDrawer.collapsed
                             }else{queueDrawer.open()}
+                            checked = !sideDrawer.collapsed && wideScreen
                         }
 
                         text: "Queue"
