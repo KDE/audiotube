@@ -650,6 +650,7 @@ Item {
                         icon.color: "white"
                         Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
                         Kirigami.Theme.inherit: false
+                        enabled: playListView.count != 0
                     }
                     Item {
                         Layout.fillWidth: true
@@ -663,7 +664,7 @@ Item {
                         Layout.maximumWidth: height
                         Layout.preferredWidth: height
                         checked: !sideDrawer.collapsed && wideScreen
-                        enabled: playListView.count != 0
+                        enabled: playListView.count != 0 || !sideDrawer.collapsed
 
                         onClicked: {
                             if (wideScreen){
@@ -933,6 +934,7 @@ Item {
                     onClicked: {
                         UserPlaylistModel.clearExceptCurrent()
                     }
+                    enabled: playListView.count != 0
                 }
 
                 ToolButton {
@@ -946,6 +948,7 @@ Item {
                     onClicked: {
                         UserPlaylistModel.shufflePlaylist()
                     }
+                    enabled: playListView.count != 0
                 }
             }
 
