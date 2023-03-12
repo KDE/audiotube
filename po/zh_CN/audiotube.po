@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-09 00:45+0000\n"
-"PO-Revision-Date: 2023-02-24 12:44\n"
+"PO-Revision-Date: 2023-03-11 04:53\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -116,24 +116,21 @@ msgid "Cancel"
 msgstr "取消"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:17
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "Add playlist"
-msgstr "播放列表"
+msgstr ""
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:23
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:24
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "Playlist Title"
-msgstr "播放列表"
+msgstr ""
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:28
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:30
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "Playlist Description"
-msgstr "播放列表"
+msgstr ""
 
 #: contents/ui/dialogs/PlaylistDialog.qml:20
 #, kde-format
@@ -142,10 +139,9 @@ msgstr ""
 
 #: contents/ui/dialogs/PlaylistDialog.qml:29
 #: contents/ui/LocalPlaylistsPage.qml:90
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "New Playlist"
-msgstr "播放列表"
+msgstr ""
 
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:18
 #, kde-format
@@ -195,10 +191,9 @@ msgid "Playlists"
 msgstr "播放列表"
 
 #: contents/ui/LibraryPage.qml:650
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "No Playlists Yet"
-msgstr "播放列表"
+msgstr ""
 
 #: contents/ui/LibraryPage.qml:670 contents/ui/LibraryPage.qml:692
 #: contents/ui/LocalPlaylistsPage.qml:33 contents/ui/LocalPlaylistsPage.qml:55
@@ -360,10 +355,9 @@ msgid "Add to playlist"
 msgstr ""
 
 #: contents/ui/SongMenu.qml:183 contents/ui/SongMenu.qml:269
-#, fuzzy, kde-format
-#| msgid "Played Songs"
+#, kde-format
 msgid "Share Song"
-msgstr "已播放歌曲"
+msgstr ""
 
 #: main.cpp:56
 #, kde-format
