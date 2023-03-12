@@ -313,9 +313,14 @@ QVariant SearchHistoryModel::data(const QModelIndex &index, int role) const {
 }
 
 void SearchHistoryModel::addSearch(const QString& search) {
-    beginInsertRows({}, 0, 0);
-    m_history.insert(m_history.begin(), {search});
-    endInsertRows();
+    auto itr = find_if(m_history.begin(), m_history.end(), [&](const auto &checkedValue) {
+        return checkedValue.value == search;
+    });
+    if(itr == m_history.end()) {
+        beginInsertRows({}, 0, 0);
+        m_history.insert(m_history.begin(), {search});
+        endInsertRows();
+    }
 }
 
 
