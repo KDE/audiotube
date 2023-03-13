@@ -630,6 +630,7 @@ Item {
                         Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
                         Layout.maximumWidth: height
                         Layout.preferredWidth: height
+                        enabled: info.videoId
 
                         onClicked: {
                             let index = UserPlaylistModel.index(UserPlaylistModel.currentIndex, 0)
