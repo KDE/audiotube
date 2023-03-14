@@ -53,7 +53,6 @@ QVariant LocalPlaylistsModel::data(const QModelIndex &index, int role) const
 void LocalPlaylistsModel::refreshModel()
 {
     connectFuture(Library::instance().database().getResults<Playlist>("select * from playlists"), this, [this](const auto &&playlists) {
-        qDebug() << "number of playlists" << playlists.size();
         m_thumbnailIds.resize(playlists.size());
         for (size_t i = 0; i < playlists.size(); i++) {
             auto future = Library::instance().database().getResults<SingleValue<QString>>("select video_id from playlist_entries where playlist_id = ? order by random() limit 4", playlists.at(i).playlistId);

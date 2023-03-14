@@ -725,7 +725,6 @@ Kirigami.ScrollablePage {
                         required property string description
                         required property date createdOn
                         required property var thumbnailIds
-                        onThumbnailIdsChanged: console.log(thumbnailIds)
 
                         Layout.fillWidth: false
                         Layout.maximumWidth: 200
