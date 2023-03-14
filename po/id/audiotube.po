@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-09 00:45+0000\n"
+"POT-Creation-Date: 2023-03-14 00:45+0000\n"
 "PO-Revision-Date: 2023-02-17 17:05+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -30,7 +30,7 @@ msgstr "Putar"
 #: contents/ui/LibraryPage.qml:44 contents/ui/LibraryPage.qml:69
 #: contents/ui/LibraryPage.qml:92 contents/ui/LibraryPage.qml:339
 #: contents/ui/LibraryPage.qml:364 contents/ui/LibraryPage.qml:388
-#: contents/ui/LocalPlaylistPage.qml:49 contents/ui/MaximizedPlayerPage.qml:890
+#: contents/ui/LocalPlaylistPage.qml:49 contents/ui/MaximizedPlayerPage.qml:891
 #: contents/ui/PlaybackHistory.qml:36 contents/ui/PlaylistPage.qml:38
 #, kde-format
 msgid "Shuffle"
@@ -244,19 +244,19 @@ msgstr "Tidak ada media yang diputarkan"
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/ui/MaximizedPlayerPage.qml:838
-#: contents/ui/MaximizedPlayerPage.qml:1013
+#: contents/ui/MaximizedPlayerPage.qml:839
+#: contents/ui/MaximizedPlayerPage.qml:1014
 #, kde-format
 msgid "Remove Track"
 msgstr "Hapus Trek"
 
-#: contents/ui/MaximizedPlayerPage.qml:869
+#: contents/ui/MaximizedPlayerPage.qml:870
 #, fuzzy, kde-format
 #| msgid "Playlist"
 msgid "Clear Playlist"
 msgstr "Daftar Putar"
 
-#: contents/ui/MaximizedPlayerPage.qml:916
+#: contents/ui/MaximizedPlayerPage.qml:917
 #, kde-format
 msgid "Upcoming Songs"
 msgstr ""
@@ -286,7 +286,7 @@ msgstr "Belum ada lagu di sini"
 msgid "Playlist"
 msgstr "Daftar Putar"
 
-#: contents/ui/SearchHistoryPage.qml:86 contents/ui/SearchWithDropdown.qml:408
+#: contents/ui/SearchHistoryPage.qml:86 contents/ui/SearchWithDropdown.qml:412
 #, kde-format
 msgid "remove from search history"
 msgstr "hapus dari riwayat pencarian"
@@ -306,7 +306,7 @@ msgstr "Artis"
 msgid "Unknown"
 msgstr "Tidak diketahui"
 
-#: contents/ui/SearchWithDropdown.qml:355
+#: contents/ui/SearchWithDropdown.qml:359
 #, kde-format
 msgid "No matching previous searches"
 msgstr "Tidak ada pencarian sebelumnya yang cocok"

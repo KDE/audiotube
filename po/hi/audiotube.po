@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-09 00:45+0000\n"
+"POT-Creation-Date: 2023-03-14 00:45+0000\n"
 "PO-Revision-Date: 2021-09-17 20:09+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -30,7 +30,7 @@ msgstr "बजाएँ"
 #: contents/ui/LibraryPage.qml:44 contents/ui/LibraryPage.qml:69
 #: contents/ui/LibraryPage.qml:92 contents/ui/LibraryPage.qml:339
 #: contents/ui/LibraryPage.qml:364 contents/ui/LibraryPage.qml:388
-#: contents/ui/LocalPlaylistPage.qml:49 contents/ui/MaximizedPlayerPage.qml:890
+#: contents/ui/LocalPlaylistPage.qml:49 contents/ui/MaximizedPlayerPage.qml:891
 #: contents/ui/PlaybackHistory.qml:36 contents/ui/PlaylistPage.qml:38
 #, kde-format
 msgid "Shuffle"
@@ -243,19 +243,19 @@ msgstr "कोई मीडिया नहीं बजा रहा है"
 msgid "%1%"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:838
-#: contents/ui/MaximizedPlayerPage.qml:1013
+#: contents/ui/MaximizedPlayerPage.qml:839
+#: contents/ui/MaximizedPlayerPage.qml:1014
 #, kde-format
 msgid "Remove Track"
 msgstr "गाना हटाएँ"
 
-#: contents/ui/MaximizedPlayerPage.qml:869
+#: contents/ui/MaximizedPlayerPage.qml:870
 #, fuzzy, kde-format
 #| msgid "Playlists"
 msgid "Clear Playlist"
 msgstr "गीत-सूचीयाँ"
 
-#: contents/ui/MaximizedPlayerPage.qml:916
+#: contents/ui/MaximizedPlayerPage.qml:917
 #, kde-format
 msgid "Upcoming Songs"
 msgstr ""
@@ -286,7 +286,7 @@ msgstr ""
 msgid "Playlist"
 msgstr "गीत-सूचीयाँ"
 
-#: contents/ui/SearchHistoryPage.qml:86 contents/ui/SearchWithDropdown.qml:408
+#: contents/ui/SearchHistoryPage.qml:86 contents/ui/SearchWithDropdown.qml:412
 #, kde-format
 msgid "remove from search history"
 msgstr ""
@@ -306,7 +306,7 @@ msgstr "कलाकार"
 msgid "Unknown"
 msgstr "अज्ञात"
 
-#: contents/ui/SearchWithDropdown.qml:355
+#: contents/ui/SearchWithDropdown.qml:359
 #, kde-format
 msgid "No matching previous searches"
 msgstr ""
