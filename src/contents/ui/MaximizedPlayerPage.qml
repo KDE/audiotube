@@ -650,7 +650,6 @@ Item {
                         icon.color: "white"
                         Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
                         Kirigami.Theme.inherit: false
-                        enabled: playListView.count != 0
                     }
                     Item {
                         Layout.fillWidth: true
