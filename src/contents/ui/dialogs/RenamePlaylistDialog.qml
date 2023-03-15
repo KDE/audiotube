@@ -22,14 +22,13 @@ Kirigami.PromptDialog {
             id: titleField
 
             Kirigami.FormData.label: i18n("Playlist Title")
-            text: modelData.title
+            text: modelData ? modelData.title : ""
         }
         Controls.TextField {
             id: descriptionField
 
             Kirigami.FormData.label: i18n("Playlist Description")
-            text: modelData.description
-
+            text: modelData ? modelData.description : ""
         }
     }
 

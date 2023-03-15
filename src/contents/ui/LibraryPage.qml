@@ -26,7 +26,6 @@ Kirigami.ScrollablePage {
     ColumnLayout {
         RowLayout {
             Layout.fillWidth: true
-            spacing: Kirigami.Units.MediumSpacing
             Kirigami.Heading {
                 text: i18n("Favourites")
                 Layout.alignment: Qt.AlignLeft
@@ -211,7 +210,6 @@ Kirigami.ScrollablePage {
 
         RowLayout {
             Layout.fillWidth: true
-            spacing: Kirigami.Units.MediumSpacing
 
             Kirigami.Heading {
                 text: i18n("Most played")
@@ -389,7 +387,6 @@ Kirigami.ScrollablePage {
         }
         RowLayout {
             Layout.fillWidth: true
-            spacing: Kirigami.Units.MediumSpacing
             Kirigami.Heading {
                 text: i18n("Playlists")
                 Layout.alignment: Qt.AlignLeft
