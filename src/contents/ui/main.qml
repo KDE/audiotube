@@ -94,7 +94,7 @@ Kirigami.ApplicationWindow {
                 Layout.fillWidth: true
                 Layout.fillHeight: true
                 height: back.height
-                width: wideScreen?null:root.width
+                width: wideScreen ? null : root.width
                 Layout.maximumWidth: wideScreen ? 400 : root.width
             }
 

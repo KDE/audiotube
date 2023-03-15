@@ -2,7 +2,8 @@
 //
 // SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
-import QtQuick 2.1
+import QtQuick 2.15
+import QtQuick.Window 2.15
 import QtQuick.Controls 2.12 as Controls
 import QtQuick.Layouts 1.3
 import org.kde.kirigami 2.19 as Kirigami
@@ -129,7 +130,7 @@ Kirigami.ScrollablePage {
         Kirigami.Icon {
             id: favouritesPlaceholder
 
-            visible: mostPlayedRepeater.count == 0
+            visible: favouriteRepeater.count === 0
             Layout.margins: 20
             isMask: true
             opacity:0.4
@@ -155,161 +156,52 @@ Kirigami.ScrollablePage {
             }
         }
 
-        Controls.ScrollView {
-            leftPadding: 15
-            rightPadding: 25
+        HorizontalCoverView {
+            id: favouriteRepeater
+
             Layout.fillWidth: true
-            RowLayout {
-                spacing: 20
-                Repeater {
-                    id: favouriteRepeater
+
+            model: Library.favourites
+            delegate: ColumnLayout {
+                id: delegateItem
+                required property string title
+                required property var artists
+                required property string artistsDisplayString
+                required property string videoId
+                required property int index
+
+                Layout.fillWidth: false
+                Layout.maximumWidth: 200
+
+                ThumbnailSource {
+                    id: thumbnailSource
+                    videoId: delegateItem.videoId
+                }
+
+                AlbumCoverItem {
                     Layout.fillWidth: true
-                    model: Library.favourites
-                    delegate: ColumnLayout {
-                        id: delegateItem
-                        required property string title
-                        required property var artists
-                        required property string artistsDisplayString
-                        required property string videoId
-                        required property int index
+                    Layout.fillHeight: true
 
-                        Layout.fillWidth: false
-                        Layout.maximumWidth: 200
+                    onClicked: play(delegateItem.videoId)
+                    onOptionsClicked: menu.openForSong(delegateItem.videoId,
+                                                              delegateItem.title,
+                                                              delegateItem.artists,
+                                                              delegateItem.artistsDisplayString)
 
-                        Kirigami.ShadowedRectangle {
-                            color: Kirigami.Theme.backgroundColor
-                            id: favCover
-                            MouseArea {
-                                id: favArea
-                                anchors.fill: parent
-                                onClicked: play(delegateItem.videoId)
-                                hoverEnabled: !Kirigami.Settings.hasTransientTouchInput
-                                onEntered: {
-                                    if (!Kirigami.Settings.hasTransientTouchInput){
-                                        favSelected.visible = true
-                                        favTitle.color = Kirigami.Theme.hoverColor
-                                        favSubtitle.color = Kirigami.Theme.hoverColor
-                                        favTitle.font.bold = true
-                                        playAnimationPosition.running = true
-                                        playAnimationOpacity.running = true
-                                    }
+                    title: delegateItem.title
+                    subtitle: delegateItem.artistsDisplayString
 
-                                }
-
-                                onExited:{
-                                    favSelected.visible = false
-                                    favTitle.color = Kirigami.Theme.textColor
-                                    favSubtitle.color = Kirigami.Theme.disabledTextColor
-                                    favTitle.font.bold = false
-                                }
-                            }
-                            Layout.margins: 5
-
-                            width: 200
-                            height: 200
-                            radius: 10
-                            shadow.size: 15
-                            shadow.xOffset: 5
-                            shadow.yOffset: 5
-                            shadow.color: Qt.rgba(0, 0, 0, 0.2)
-                            ThumbnailSource {
-                                id: thumbnailSource
-                                videoId: delegateItem.videoId
-                            }
-                            RoundedImage {
-                                source: thumbnailSource.cachedPath
-                                height: 200
-                                width: height
-                                radius: 10
-                            }
-                            Rectangle {
-                                id: favSelected
-
-                                Rectangle {
-                                    anchors.fill: parent
-                                    color: Kirigami.Theme.hoverColor
-                                    radius: 10
-                                    opacity: 0.2
-                                }
-                                Item{
-                                    height: parent.height
-                                    width: parent.width
-                                    NumberAnimation on opacity{
-                                        id: playAnimationOpacity
-                                        easing.type: Easing.OutCubic
-                                        running: false
-                                        from: 0; to: 1
-                                    }
-                                    NumberAnimation on y {
-                                        id: playAnimationPosition
-                                        easing.type: Easing.OutCubic
-                                        running: false
-                                        from: 20; to: 0
-                                        duration: 100
-                                    }
-                                    Rectangle {
-                                        height: 45
-                                        width: 45
-                                        radius: 50
-                                        color: Kirigami.Theme.hoverColor
-                                        opacity: 0.8
-                                        anchors.centerIn: parent
-
-
-                                    }
-                                    Kirigami.Icon {
-                                        x: 100 - 0.43 * height
-                                        y: 100 - 0.5  * height
-                                        color: "white"
-                                        source: "media-playback-start"
-                                    }
-                                }
-                                visible: false
-                                anchors.fill: parent
-
-                                radius: 9
-
-                                border.color: Kirigami.Theme.hoverColor
-                                border.width: 2
-                                color: "transparent"
-                            }
-                        }
-
-                        RowLayout {
-                            ColumnLayout {
-                                Controls.Label {
-                                    id:favTitle
-                                    text: delegateItem.title
-                                    Layout.maximumWidth: 200
-                                    Layout.fillWidth: true
-                                    leftPadding: 5
-                                    elide: Text.ElideRight
-
-                                }
-                                Controls.Label {
-                                    id: favSubtitle
-                                    Layout.fillWidth: true
-                                    Layout.maximumWidth: 200
-                                    leftPadding: 5
-                                    color: Kirigami.Theme.disabledTextColor
-                                    text: delegateItem.artistsDisplayString
-                                    elide: Text.ElideRight
-                                }
-                            }
-                            Controls.ToolButton {
-                                Layout.fillHeight: true
-                                icon.name: "overflow-menu"
-                                onPressed: menu.openForSong(delegateItem.videoId,
-                                                               delegateItem.title,
-                                                               delegateItem.artists,
-                                                               delegateItem.artistsDisplayString)
-                            }
-
-                        }
-                        Item {
-                            height: 5
-                        }
+                    contentItem: Image {
+                        source: thumbnailSource.cachedPath
+                        anchors.fill: parent
+                        fillMode: Image.PreserveAspectCrop
+                        asynchronous: true
+                        sourceSize.width: parent.implicitWidth * Screen.devicePixelRatio
                     }
+                }
+
+                Item {
+                    height: 5
                 }
             }
         }
@@ -423,7 +315,7 @@ Kirigami.ScrollablePage {
             }
         }
         Kirigami.Icon {
-            visible: mostPlayedRepeater.count == 0
+            visible: mostPlayedRepeater.count === 0
             Layout.margins: 20
             isMask: true
             opacity:0.4
@@ -436,7 +328,7 @@ Kirigami.ScrollablePage {
             source: "qrc:/resources/played_placeholder.svg"
 
             Controls.Label {
-                visible: mostPlayedRepeater.count == 0
+                visible: mostPlayedRepeater.count === 0
                 color: Kirigami.Theme.disabledTextColor
                 anchors.centerIn:playedPlaceholder
                 font.bold: true
@@ -445,159 +337,50 @@ Kirigami.ScrollablePage {
             }
         }
 
-        Controls.ScrollView {
-            leftPadding: 15
-            rightPadding: 25
+        HorizontalCoverView {
+            id: mostPlayedRepeater
+
             Layout.fillWidth: true
-            RowLayout {
-                spacing: 20
+            model: Library.mostPlayed
+            delegate: ColumnLayout {
+                id: mpdelegateItem
+                required property string title
+                required property var artists
+                required property string artistsDisplayString
+                required property string videoId
 
-                Repeater {
-                    id: mostPlayedRepeater
+                Layout.fillWidth: false
+                Layout.maximumWidth: 200
+
+                ThumbnailSource {
+                    id: mpthumbnailSource
+                    videoId: mpdelegateItem.videoId
+                }
+
+                AlbumCoverItem {
                     Layout.fillWidth: true
-                    model: Library.mostPlayed
-                    delegate: ColumnLayout {
-                        id: mpdelegateItem
-                        required property string title
-                        required property var artists
-                        required property string artistsDisplayString
-                        required property string videoId
+                    Layout.fillHeight: true
 
-                        Layout.fillWidth: false
-                        Layout.maximumWidth: 200
-
-                        Kirigami.ShadowedRectangle {
-                            color: Kirigami.Theme.backgroundColor
-                            id: recCover
-                            MouseArea {
-                                id: recArea
-                                anchors.fill: parent
-                                onClicked: play(mpdelegateItem.videoId)
-                                hoverEnabled: !Kirigami.Settings.hasTransientTouchInput
-                                onEntered: {
-                                    if (!Kirigami.Settings.hasTransientTouchInput)
-                                        recSelected.visible = true
-                                        recTitle.color = Kirigami.Theme.hoverColor
-                                        recSubtitle.color = Kirigami.Theme.hoverColor
-                                        recTitle.font.bold = true
-                                        playAnimationPositionRec.running = true
-                                        playAnimationOpacityRec.running = true
-                                }
-                                onExited:{
-                                    recSelected.visible = false
-                                    recTitle.color = Kirigami.Theme.textColor
-                                    recSubtitle.color = Kirigami.Theme.disabledTextColor
-                                    recTitle.font.bold = false
-                                }
-
-                            }
-                            Layout.margins: 5
-
-                            width: 200
-                            height: 200
-                            radius: 10
-                            shadow.size: 15
-                            shadow.xOffset: 5
-                            shadow.yOffset: 5
-                            shadow.color: Qt.rgba(0, 0, 0, 0.2)
-                            ThumbnailSource {
-                                id: mpthumbnailSource
-                                videoId: mpdelegateItem.videoId
-                            }
-                            RoundedImage {
-                                source: mpthumbnailSource.cachedPath
-                                height: 200
-                                width: height
-                                radius: 10
-                            }
-                            Rectangle {
-                                id: recSelected
-
-                                Rectangle {
-                                    anchors.fill: parent
-                                    color: Kirigami.Theme.hoverColor
-                                    radius: 10
-                                    opacity: 0.2
-                                }
-                                Item{
-                                    height: parent.height
-                                    width: parent.width
-                                    NumberAnimation on opacity{
-                                        id: playAnimationOpacityRec
-                                        easing.type: Easing.OutCubic
-                                        running: false
-                                        from: 0; to: 1
-                                    }
-                                    NumberAnimation on y {
-                                        id: playAnimationPositionRec
-                                        easing.type: Easing.OutCubic
-                                        running: false
-                                        from: 20; to: 0
-                                        duration: 100
-                                    }
-                                    Rectangle {
-                                        height: 45
-                                        width: 45
-                                        radius: 50
-                                        color: Kirigami.Theme.hoverColor
-                                        opacity: 0.8
-                                        anchors.centerIn: parent
-
-
-                                    }
-                                    Kirigami.Icon {
-                                        x: 100 - 0.43 * height
-                                        y: 100 - 0.5  * height
-                                        color: "white"
-                                        source: "media-playback-start"
-                                    }
-                                }
-
-                                visible: false
-                                anchors.fill: parent
-
-                                radius: 9
-
-                                border.color: Kirigami.Theme.hoverColor
-                                border.width: 2
-                                color: "transparent"
-                            }
-                        }
-                        RowLayout {
-                            ColumnLayout {
-                                Controls.Label {
-                                    id: recTitle
-                                    text: mpdelegateItem.title
-                                    Layout.maximumWidth: 200
-                                    Layout.fillWidth: true
-                                    leftPadding: 5
-                                    elide: Text.ElideRight
-
-                                }
-                                Controls.Label {
-                                    id: recSubtitle
-                                    Layout.fillWidth: true
-                                    Layout.maximumWidth: 200
-                                    leftPadding: 5
-                                    color: Kirigami.Theme.disabledTextColor
-                                    text: mpdelegateItem.artistsDisplayString
-                                    elide: Text.ElideRight
-                                }
-                            }
-                            Controls.ToolButton {
-                                Layout.fillHeight: true
-                                icon.name: "overflow-menu"
-                                onPressed: menu.openForSong(mpdelegateItem.videoId,
+                    onClicked: play(mpdelegateItem.videoId)
+                    onOptionsClicked: menu.openForSong(mpdelegateItem.videoId,
                                                               mpdelegateItem.title,
                                                               mpdelegateItem.artists,
                                                               mpdelegateItem.artistsDisplayString)
-                            }
 
-                        }
-                        Item {
-                            height: 5
-                        }
+                    title: mpdelegateItem.title
+                    subtitle: mpdelegateItem.artistsDisplayString
+
+                    contentItem: Image {
+                        source: mpthumbnailSource.cachedPath
+                        anchors.fill: parent
+                        fillMode: Image.PreserveAspectCrop
+                        asynchronous: true
+                        sourceSize.width: parent.implicitWidth * Screen.devicePixelRatio
                     }
+                }
+
+                Item {
+                    height: 5
                 }
             }
         }
@@ -632,7 +415,7 @@ Kirigami.ScrollablePage {
         Kirigami.Icon {
             id: playlistsPlaceholder
 
-            visible: mostPlayedRepeater.count == 0
+            visible: playlistsRepeater.count === 0
             Layout.margins: 20
             isMask: true
             opacity:0.4
@@ -705,150 +488,70 @@ Kirigami.ScrollablePage {
             }
         }
 
-        Controls.ScrollView {
-            leftPadding: 15
-            rightPadding: 25
+        HorizontalCoverView {
+            id: playlistsRepeater
             Layout.fillWidth: true
-            RowLayout {
-                spacing: 20
-                Repeater {
-                    id: playlistsRepeater
+            model: LocalPlaylistsModel {
+                id: localPlaylistsModel
+            }
+            delegate: ColumnLayout {
+                id: playlistDelegate
+                required property var model
+                required property string playlistId
+                required property string title
+                required property string description
+                required property date createdOn
+                required property var thumbnailIds
+
+                Layout.fillWidth: false
+                Layout.maximumWidth: 200
+                Layout.preferredWidth: 200
+
+                AlbumCoverItem {
                     Layout.fillWidth: true
-                    model: LocalPlaylistsModel {
-                        id: localPlaylistsModel
+                    Layout.fillHeight: true
+
+                    title: playlistDelegate.title
+                    subtitle: playlistDelegate.description
+
+                    LocalPlaylistsModel{id:localPlaylistModel}
+
+                    ThumbnailSource {
+                        id: thumbnailSource1
+                        videoId: thumbnailIds[0]
                     }
-                    delegate: ColumnLayout {
-                        id: playlistDelegate
-                        required property var model
-                        required property string playlistId
-                        required property string title
-                        required property string description
-                        required property date createdOn
-                        required property var thumbnailIds
+                    ThumbnailSource {
+                        id: thumbnailSource2
+                        videoId: thumbnailIds[1] ?? thumbnailIds[0]
+                    }
+                    ThumbnailSource {
+                        id: thumbnailSource3
+                        videoId: thumbnailIds[2] ?? thumbnailIds[0]
+                    }
+                    ThumbnailSource {
+                        id: thumbnailSource4
+                        videoId: thumbnailIds[3] ?? thumbnailIds[0]
+                    }
+                    contentItem: PlaylistCover {
+                        source1: thumbnailSource1.cachedPath
+                        source2: thumbnailSource2.cachedPath
+                        source3: thumbnailSource3.cachedPath
+                        source4: thumbnailSource4.cachedPath
+                        title: playlistDelegate.title
+                        height: 200
+                        width: height
+                        radius: 10
+                    }
 
-                        Layout.fillWidth: false
-                        Layout.maximumWidth: 200
-                        Layout.preferredWidth: 200
-                        Kirigami.ShadowedRectangle {
-                            color: Kirigami.Theme.backgroundColor
-                            id: playlistsCover
-                            MouseArea {
-                                id: playlistsArea
-                                anchors.fill: parent
-                                onClicked: pageStack.push("qrc:/LocalPlaylistPage.qml", {
-                                                                     "playlistId": playlistDelegate.playlistId,
-                                                                     "title": playlistDelegate.title
-                                                                 })
-                                hoverEnabled: !Kirigami.Settings.hasTransientTouchInput
-                                onEntered: {
-                                    if (!Kirigami.Settings.hasTransientTouchInput){
-                                        playlistSelected.visible = true
-                                        playlistTitle.color = Kirigami.Theme.hoverColor
-                                        playlistSubtitle.color = Kirigami.Theme.hoverColor
-                                        playlistTitle.font.bold = true
-                                    }
+                    onClicked: pageStack.push("qrc:/LocalPlaylistPage.qml", {
+                        "playlistId": playlistDelegate.playlistId,
+                        "title": playlistDelegate.title
+                    })
 
-                                }
-
-                                onExited:{
-                                    playlistSelected.visible = false
-                                    playlistTitle.color = Kirigami.Theme.textColor
-                                    playlistSubtitle.color = Kirigami.Theme.disabledTextColor
-                                    playlistTitle.font.bold = false
-                                }
-                            }
-                            Layout.margins: 5
-                            width: 200
-                            height: 200
-                            radius: 10
-                            shadow.size: 15
-                            shadow.xOffset: 5
-                            shadow.yOffset: 5
-                            shadow.color: Qt.rgba(0, 0, 0, 0.2)
-
-
-                            LocalPlaylistsModel{id:localPlaylistModel}
-
-                            ThumbnailSource {
-                                id: thumbnailSource1
-                                videoId: thumbnailIds[0]
-                            }
-                            ThumbnailSource {
-                                id: thumbnailSource2
-                                videoId: thumbnailIds[1] ?? thumbnailIds[0]
-                            }
-                            ThumbnailSource {
-                                id: thumbnailSource3
-                                videoId: thumbnailIds[2] ?? thumbnailIds[0]
-                            }
-                            ThumbnailSource {
-                                id: thumbnailSource4
-                                videoId: thumbnailIds[3] ?? thumbnailIds[0]
-                            }
-                            PlaylistCover {
-                                source1: thumbnailSource1.cachedPath
-                                source2: thumbnailSource2.cachedPath
-                                source3: thumbnailSource3.cachedPath
-                                source4: thumbnailSource4.cachedPath
-                                title: playlistDelegate.title
-                                height: 200
-                                width: height
-                                radius: 10
-                            }
-
-                            Rectangle {
-                                id: playlistSelected
-
-                                Rectangle {
-                                    anchors.fill: parent
-                                    color: Kirigami.Theme.hoverColor
-                                    radius: 10
-                                    opacity: 0.2
-                                }
-
-
-                                visible: false
-                                anchors.fill: parent
-
-                                radius: 9
-
-                                border.color: Kirigami.Theme.hoverColor
-                                border.width: 2
-                                color: "transparent"
-                            }
-                        }
-
-                        RowLayout {
-                            ColumnLayout {
-                                Controls.Label {
-                                    id: playlistTitle
-                                    text: playlistDelegate.title
-                                    Layout.maximumWidth: 200
-                                    Layout.fillWidth: true
-                                    leftPadding: 5
-                                    elide: Text.ElideRight
-
-                                }
-                                Controls.Label {
-                                    id: playlistSubtitle
-                                    Layout.fillWidth: true
-                                    Layout.maximumWidth: 200
-                                    leftPadding: 5
-                                    color: Kirigami.Theme.disabledTextColor
-                                    text: playlistDelegate.description
-                                    elide: Text.ElideRight
-                                }
-                            }
-                            Controls.ToolButton {
-                                Layout.fillHeight: true
-                                icon.name: "overflow-menu"
-                                onClicked:{
-                                    playlistMenu.modelData = playlistDelegate.model
-                                    playlistDrawer.modelData = playlistDelegate.model
-                                    Kirigami.Settings.isMobile? playlistDrawer.open() : playlistMenu.popup()
-                                }
-                            }
-                        }
+                    onOptionsClicked:{
+                        playlistMenu.modelData = playlistDelegate.model
+                        playlistDrawer.modelData = playlistDelegate.model
+                        Kirigami.Settings.isMobile? playlistDrawer.open() : playlistMenu.popup()
                     }
                 }
             }
