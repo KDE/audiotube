@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-14 00:45+0000\n"
+"POT-Creation-Date: 2023-03-15 00:46+0000\n"
 "PO-Revision-Date: 2023-03-10 02:35+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -31,7 +31,7 @@ msgstr "დაკვრა"
 #: contents/ui/LibraryPage.qml:44 contents/ui/LibraryPage.qml:69
 #: contents/ui/LibraryPage.qml:92 contents/ui/LibraryPage.qml:339
 #: contents/ui/LibraryPage.qml:364 contents/ui/LibraryPage.qml:388
-#: contents/ui/LocalPlaylistPage.qml:49 contents/ui/MaximizedPlayerPage.qml:891
+#: contents/ui/LocalPlaylistPage.qml:49 contents/ui/MaximizedPlayerPage.qml:893
 #: contents/ui/PlaybackHistory.qml:36 contents/ui/PlaylistPage.qml:38
 #, kde-format
 msgid "Shuffle"
@@ -235,18 +235,18 @@ msgstr "არაფერს ვუკრავ"
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/ui/MaximizedPlayerPage.qml:839
-#: contents/ui/MaximizedPlayerPage.qml:1014
+#: contents/ui/MaximizedPlayerPage.qml:841
+#: contents/ui/MaximizedPlayerPage.qml:1018
 #, kde-format
 msgid "Remove Track"
 msgstr "აუდიობილიკის წაშლა"
 
-#: contents/ui/MaximizedPlayerPage.qml:870
+#: contents/ui/MaximizedPlayerPage.qml:872
 #, kde-format
 msgid "Clear Playlist"
 msgstr "დასაკრავი სიის გასუფთავება"
 
-#: contents/ui/MaximizedPlayerPage.qml:917
+#: contents/ui/MaximizedPlayerPage.qml:919
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "მომავალი სიმღერები"
