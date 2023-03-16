@@ -136,10 +136,11 @@ ColumnLayout {
     }
 
     RowLayout {
+        Layout.maximumWidth: 210
         ColumnLayout {
+            Layout.fillWidth: true
             Controls.Label {
                 id: favTitle
-                Layout.maximumWidth: 200
                 Layout.fillWidth: true
                 leftPadding: 5
                 elide: Text.ElideRight
@@ -147,7 +148,6 @@ ColumnLayout {
             Controls.Label {
                 id: favSubtitle
                 Layout.fillWidth: true
-                Layout.maximumWidth: 200
                 leftPadding: 5
                 color: Kirigami.Theme.disabledTextColor
                 elide: Text.ElideRight
