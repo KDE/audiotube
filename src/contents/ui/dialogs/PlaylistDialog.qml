@@ -104,7 +104,6 @@ Kirigami.PromptDialog {
             }
 
             onClicked: {
-
                 localPlaylistsModel.addPlaylistEntry(playlistId, videoId, songTitle, artists, album )
                 playlistsDialog.close()
             }

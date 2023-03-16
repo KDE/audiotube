@@ -510,6 +510,7 @@ Kirigami.ScrollablePage {
 
                     title: playlistDelegate.title
                     subtitle: playlistDelegate.description
+                    showIcon: false
 
                     LocalPlaylistsModel{id:localPlaylistModel}
 
