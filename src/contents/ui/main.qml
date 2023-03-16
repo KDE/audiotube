@@ -36,7 +36,6 @@ Kirigami.ApplicationWindow {
         visible: wideScreen
     }
 
-
     Sidebar {
         id:sidebar
         visible: wideScreen
@@ -46,7 +45,6 @@ Kirigami.ApplicationWindow {
     NavigationBar{
         id: bottombar
         visible: !wideScreen
-
     }
 
     header: Controls.Control {

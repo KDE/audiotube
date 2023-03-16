@@ -19,6 +19,7 @@ Item {
 
     required property var info // VideoInfoExtractor object
     required property var audio // Audio object
+    required property string thumbnail
     readonly property bool isWidescreen: width >= Kirigami.Units.gridUnit * 50
 
     signal requestClose()
@@ -40,7 +41,7 @@ Item {
             anchors.fill: parent
             asynchronous: true
 
-            source: info.thumbnail
+            source: root.thumbnail
             fillMode: Image.PreserveAspectCrop
 
             sourceSize.width: 512
@@ -59,13 +60,8 @@ Item {
                 cached: true
                 radius: 100
             }
-
-
         }
-
     }
-
-
 
     Rectangle {
         anchors.fill: parent
@@ -152,7 +148,7 @@ Item {
                             shadow.yOffset: 5
                             shadow.color: Qt.rgba(0, 0, 0, 0.2)
                             RoundedImage {
-                                source: info.thumbnail
+                                source: root.thumbnail
                                 height: parent.height
                                 width: height
                                 radius: 10

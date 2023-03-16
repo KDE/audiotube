@@ -17,12 +17,14 @@ import org.kde.ytmusic 1.0
 Flickable {
     id: footerItem
     
-    property int footerSpacing:0
+    property int footerSpacing: 0
     property bool maximized: false
     
     readonly property int progressBarHeight: Kirigami.Units.gridUnit / 4
     readonly property int minimizedPlayerContentHeight: Math.round(Kirigami.Units.gridUnit * 3.5)
     readonly property int minimizedPlayerHeight: minimizedPlayerContentHeight + progressBarHeight
+
+    readonly property string thumbnail: thumbnailSource.cachedPath
 
     boundsBehavior: Flickable.StopAtBounds
     
@@ -106,6 +108,11 @@ Flickable {
             Library.addPlaybackHistoryItem(videoId, title, artist, album)
         }
     }
+
+    ThumbnailSource {
+        id: thumbnailSource
+        videoId: UserPlaylistModel.currentVideoId
+    }
     
     property var audioPlayer: Audio {
         id: audio
@@ -147,7 +154,7 @@ Flickable {
                 
                 Image {
                     opacity: 0.2
-                    source: info.thumbnail
+                    source: thumbnailSource.cachedPath
                     asynchronous: true
                     
                     anchors.fill: parent
@@ -180,6 +187,7 @@ Flickable {
                 anchors.right: parent.right
                 anchors.top: parent.top
                 
+                thumbnail: thumbnailSource.thumbnail
                 info: footerItem.videoInfoExtractor
                 audio: footerItem.audioPlayer
                 
@@ -193,14 +201,11 @@ Flickable {
             Layout.fillHeight: true
             implicitHeight: footerItem.height
             
+            thumbnail: thumbnailSource.cachedPath
             info: footerItem.videoInfoExtractor
             audio: footerItem.audioPlayer
                 
             onRequestClose: toClose.start();
         }
-        
-
     }
-
-
 }

@@ -21,6 +21,7 @@ Item {
     
     required property var info // VideoInfoExtractor object
     required property var audio // Audio object
+    required property string thumbnail
     
     readonly property bool isWidescreen: width >= Kirigami.Units.gridUnit * 50
     signal requestOpen()
@@ -68,7 +69,7 @@ Item {
                         id: mainIcon
                         anchors.fill: parent
                         visible: !loadingIndicator.visible
-                        source: info.thumbnail
+                        source: root.thumbnail
                         radius: 5
                     }
                     
