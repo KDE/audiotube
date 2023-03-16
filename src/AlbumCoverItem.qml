@@ -15,6 +15,7 @@ ColumnLayout {
     property alias contentItem: content.children
     property alias title: favTitle.text
     property alias subtitle: favSubtitle.text
+    property bool showIcon: true
 
     signal clicked
     signal optionsClicked
@@ -89,6 +90,8 @@ ColumnLayout {
                 opacity: 0.2
             }
             Item {
+                visible: root.showIcon
+
                 height: parent.height
                 width: parent.width
                 NumberAnimation on opacity {
