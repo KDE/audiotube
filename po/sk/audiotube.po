@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-15 00:46+0000\n"
+"POT-Creation-Date: 2023-03-16 00:59+0000\n"
 "PO-Revision-Date: 2022-04-07 18:01+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -28,7 +28,7 @@ msgstr "Prehrať"
 #: contents/ui/LibraryPage.qml:44 contents/ui/LibraryPage.qml:69
 #: contents/ui/LibraryPage.qml:92 contents/ui/LibraryPage.qml:339
 #: contents/ui/LibraryPage.qml:364 contents/ui/LibraryPage.qml:388
-#: contents/ui/LocalPlaylistPage.qml:49 contents/ui/MaximizedPlayerPage.qml:893
+#: contents/ui/LocalPlaylistPage.qml:49 contents/ui/MaximizedPlayerPage.qml:892
 #: contents/ui/PlaybackHistory.qml:36 contents/ui/PlaylistPage.qml:38
 #, kde-format
 msgid "Shuffle"
@@ -240,19 +240,19 @@ msgstr "Neprehráva sa žiadne médium"
 msgid "%1%"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:841
-#: contents/ui/MaximizedPlayerPage.qml:1018
+#: contents/ui/MaximizedPlayerPage.qml:840
+#: contents/ui/MaximizedPlayerPage.qml:1017
 #, kde-format
 msgid "Remove Track"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:872
+#: contents/ui/MaximizedPlayerPage.qml:871
 #, fuzzy, kde-format
 #| msgid "Playlists"
 msgid "Clear Playlist"
 msgstr "Zoznamy skladieb"
 
-#: contents/ui/MaximizedPlayerPage.qml:919
+#: contents/ui/MaximizedPlayerPage.qml:918
 #, kde-format
 msgid "Upcoming Songs"
 msgstr ""
