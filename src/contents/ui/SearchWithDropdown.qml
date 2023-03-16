@@ -324,8 +324,8 @@ Item {
                         }
                         delegate: searchAlbum
                     }
-                    Kirigami.Separator{
-                        visible: recents.visible
+                    Kirigami.Separator {
+                        visible: recentsRepeater.visible
                         Layout.fillWidth: true
                         implicitWidth: popup.width
                     }
@@ -351,7 +351,7 @@ Item {
                         property int selectedDelegate: -1
                         property int delegateHeight: Kirigami.Units.gridUnit
                         property int delegatePadding: Kirigami.Units.smallSpacing
-                        property int empiricDelegateHeight: recents.visible ? (mainScrollView.contentHeight - recents.height) / count : (mainScrollView.contentHeight + mainScrollViewLayout.spacing) / (count)
+                        property int empiricDelegateHeight: recentsRepeater.visible ? (mainScrollView.contentHeight - recentsRepeater.height) / count : (mainScrollView.contentHeight + mainScrollViewLayout.spacing) / (count)
 
                         id: completionList
                         model: SortFilterModel {
