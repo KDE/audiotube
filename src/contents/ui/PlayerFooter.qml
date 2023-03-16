@@ -187,7 +187,7 @@ Flickable {
                 anchors.right: parent.right
                 anchors.top: parent.top
                 
-                thumbnail: thumbnailSource.thumbnail
+                thumbnail: thumbnailSource.cachedPath
                 info: footerItem.videoInfoExtractor
                 audio: footerItem.audioPlayer
                 
