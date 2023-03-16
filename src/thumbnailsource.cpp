@@ -40,10 +40,15 @@ void ThumbnailSource::setVideoId(const QString &id) {
         reply->deleteLater();
         auto future = QtConcurrent::run([data = std::move(data), cacheLocation]() {
             // Scale cover down to save qmemory
-            auto thumbnail = QImage::fromData(data)
-                .scaledToHeight(200 * qGuiApp->devicePixelRatio());
+            int targetHeight = 200 * qGuiApp->devicePixelRatio();
+            auto scaled = QImage::fromData(data)
+                .scaledToHeight(targetHeight);
 
-            thumbnail.save(cacheLocation);
+            int targetLeft = scaled.width() / 2 - targetHeight / 2;
+            auto cropped = scaled
+                .copy(QRect(targetLeft, 0, targetHeight, targetHeight));
+
+            cropped.save(cacheLocation);
         });
 
         connectFuture(future, this, [this, cacheLocation]() {
