@@ -9,6 +9,7 @@ Controls.ScrollView {
     property alias model: listView.model
     property alias delegate: listView.delegate
     property alias count: listView.count
+    property alias itemSpacing: listView.spacing
 
     height: 250
     contentHeight: 265

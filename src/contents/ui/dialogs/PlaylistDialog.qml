@@ -29,7 +29,6 @@ Kirigami.PromptDialog {
             text: i18n("New Playlist")
             iconName: "list-add"
             onTriggered: {
-
                 addPlaylistDialog.open()
             }
         }

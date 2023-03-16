@@ -26,8 +26,8 @@ Item {
     }
     Kirigami.SearchField {
         property var filterExpression: new RegExp(`.*${filterText}.*`, "i")
-        property var filterText: ""
-        property var oldText: ""
+        property string filterText: ""
+        property string oldText: ""
 
         id: searchField
         autoAccept: false
@@ -55,7 +55,7 @@ Item {
 
         Keys.onPressed: {
             if(completionList.count > 0) {
-                if (event.key == Qt.Key_Down) {
+                if (event.key === Qt.Key_Down) {
                     if(completionList.selectedDelegate == -1 || completionList.selectedDelegate == completionList.count - 1) {
                         completionList.selectedDelegate = 0
                         mainScrollView.contentItem.contentY = 0
@@ -209,7 +209,7 @@ Item {
             from: searchField.height
             duration: 200
             to: completionList
-                ? (Math.min(fieldContainer.height+ completionList.count * Kirigami.Units.gridUnit * 2 + recents.implicitHeight, Kirigami.Units.gridUnit * 20))+2*(popup.shadowSize+popup.expansion)
+                ? (Math.min(fieldContainer.height+ completionList.count * Kirigami.Units.gridUnit * 2 + recentsRepeater.implicitHeight, Kirigami.Units.gridUnit * 20))+2*(popup.shadowSize+popup.expansion)
                 : (Kirigami.Units.gridUnit * 20)+2*(popup.shadowSize+popup.expansion)
         }
         NumberAnimation on width{
@@ -306,45 +306,28 @@ Item {
 
                     width: mainScrollView.contentWidth
                     
-                    Controls.ScrollView {
-                        id: recents
+                    HorizontalCoverView {
+                        id: recentsRepeater
+                        Controls.ScrollBar.horizontal.policy: Controls.ScrollBar.AlwaysOff
+
+                        contentHeight: 120
+                        itemSpacing: 0
 
                         Layout.fillWidth: true
-                        Layout.maximumWidth: popup.width
 
                         visible: searchField.filterText && recentsRepeater.count > 0
 
-                        leftPadding: 10
-                        rightPadding: 40
-                        topPadding: 10
-                        Controls.ScrollBar.horizontal.policy: Controls.ScrollBar.AlwaysOff
-                        RowLayout {
-                            spacing: 10
-                            Layout.fillWidth: true
-                            Layout.maximumWidth: popup.width - 23
-
-                            Repeater {
-
-                                id: recentsRepeater
-                                Layout.fillWidth: true
-                                model: SortFilterModel {
-                                    filterRole: PlaybackHistoryModel.Title
-                                    filterRegularExpression: searchField.filterExpression
-                                    sourceModel: Library.playbackHistory
-                                }
-                                delegate: Kirigami.DelegateRecycler {
-                                    Layout.alignment: Qt.AlignTop
-                                    width: popup.width
-                                    sourceComponent: searchAlbum
-                                }
-                            }
+                        model: SortFilterModel {
+                            filterRole: PlaybackHistoryModel.Title
+                            filterRegularExpression: searchField.filterExpression
+                            sourceModel: Library.playbackHistory
                         }
+                        delegate: searchAlbum
                     }
                     Kirigami.Separator{
                         visible: recents.visible
                         Layout.fillWidth: true
                         implicitWidth: popup.width
-
                     }
                     RowLayout{
                         Layout.margins: 10

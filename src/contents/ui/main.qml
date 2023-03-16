@@ -152,7 +152,7 @@ Kirigami.ApplicationWindow {
         ColumnLayout {
             id: mpdelegateItem
 
-            width: 100
+            width: 90
             Layout.maximumWidth: 70
 
             Kirigami.ShadowedRectangle {
@@ -163,19 +163,17 @@ Kirigami.ApplicationWindow {
                     onClicked: play(model.videoId)
                     hoverEnabled: !Kirigami.Settings.hasTransientTouchInput
                     onEntered: {
-                        if (!Kirigami.Settings.hasTransientTouchInput)
+                        if (!Kirigami.Settings.hasTransientTouchInput) {
                             recSelected.visible = true
                             searchTitle.color = Kirigami.Theme.hoverColor
                             searchTitle.font.bold = true
-
-
+                        }
                     }
-                    onExited:{
+                    onExited: {
                         recSelected.visible = false
                         searchTitle.color = Kirigami.Theme.textColor
                         searchTitle.font.bold = false
                     }
-
                 }
                 Layout.margins: 5
 
