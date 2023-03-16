@@ -35,7 +35,7 @@ Kirigami.ScrollablePage {
             id: playlistModel
         }
 
-        header:RowLayout{
+        header: RowLayout{
             spacing: Kirigami.Units.MediumSpacing
 
             Controls.ToolButton {

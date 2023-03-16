@@ -2,7 +2,7 @@
 //
 // SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
-import QtQuick 2.1
+import QtQuick 2.15
 import QtQuick.Controls 2.12 as Controls
 import QtQuick.Layouts 1.3
 import org.kde.kirigami 2.19 as Kirigami
@@ -33,11 +33,16 @@ Kirigami.PromptDialog {
             }
         }
     ]
-    mainItem: ListView {
-        AddPlaylistDialog{
-            id:addPlaylistDialog
+
+    Item {
+        AddPlaylistDialog {
+            id: addPlaylistDialog
             model: localPlaylistsModel
         }
+    }
+
+    mainItem: ListView {
+        reuseItems: true
 
         implicitHeight: 200
         model: LocalPlaylistsModel {

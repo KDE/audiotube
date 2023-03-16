@@ -75,8 +75,8 @@ Item {
         }
     }
 
-        // content
-    RowLayout{
+    // content
+    RowLayout {
         anchors.fill: parent
         
         ColumnLayout {
@@ -158,7 +158,7 @@ Item {
                                 radius: 10
                             }
                         }
-                }
+                    }
                 }
 
                 ColumnLayout{
@@ -745,6 +745,9 @@ Item {
 
                     ListView {
                         id: playListView
+
+                        reuseItems: true
+
                         spacing: 5
                         rightMargin: 10
                         leftMargin:10
