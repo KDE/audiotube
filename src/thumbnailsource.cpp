@@ -26,6 +26,39 @@ void ThumbnailSource::setVideoId(const QString &id) {
 
     const QString cacheDir = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) % QDir::separator() % "thumbnails";
     QDir(cacheDir).mkpath(QStringLiteral("."));
+
+    // Clear cache if it is old, so people can profit from memory usage improvements from downscaling,
+    // and get the new cropped thumbnails
+    auto cacheVersionFile = QString(cacheDir % "/.cache_version");
+
+    constexpr auto CURRENT_CACHE_VERSION = 1;
+
+    auto getCacheVersion = [cacheVersionFile]() {
+        QFile file(cacheVersionFile);
+        if (!file.open(QFile::ReadOnly)) {
+            return 0;
+        }
+        auto version = file.read(3); // Read at most three characters, we will not need more soon
+        return version.toInt();
+    };
+
+    if (!QFile::exists(cacheVersionFile) || getCacheVersion() < CURRENT_CACHE_VERSION) {
+        qDebug() << "Deleting and re-generating thumbnail cache";
+
+        QDir dir(cacheDir);
+        const auto entries = dir.entryList(QDir::Files);
+        for (const auto &thumbnail : entries) {
+            if (thumbnail.endsWith(QLatin1String(".webp"))) {
+                QFile::remove(cacheDir % "/" % thumbnail);
+            }
+        }
+        QFile file(cacheVersionFile);
+        if (file.open(QFile::WriteOnly)) {
+            file.seek(0);
+            file.write(QString::number(CURRENT_CACHE_VERSION).toUtf8());
+        }
+    }
+
     const QString cacheLocation = cacheDir % QDir::separator() % id % ".webp";
 
     if (QFile::exists(cacheLocation)) {
