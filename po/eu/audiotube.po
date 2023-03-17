@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-16 00:59+0000\n"
+"POT-Creation-Date: 2023-03-17 00:56+0000\n"
 "PO-Revision-Date: 2023-02-25 23:53+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -22,8 +22,8 @@ msgstr ""
 
 #: contents/ui/AlbumPage.qml:26 contents/ui/LibraryPage.qml:37
 #: contents/ui/LibraryPage.qml:63 contents/ui/LibraryPage.qml:84
-#: contents/ui/LibraryPage.qml:332 contents/ui/LibraryPage.qml:358
-#: contents/ui/LibraryPage.qml:379 contents/ui/LocalPlaylistPage.qml:42
+#: contents/ui/LibraryPage.qml:222 contents/ui/LibraryPage.qml:248
+#: contents/ui/LibraryPage.qml:269 contents/ui/LocalPlaylistPage.qml:42
 #: contents/ui/PlaybackHistory.qml:23 contents/ui/PlaylistPage.qml:31
 #, kde-format
 msgid "Play"
@@ -31,17 +31,17 @@ msgstr "Jo"
 
 #: contents/ui/AlbumPage.qml:33 contents/ui/ArtistPage.qml:36
 #: contents/ui/LibraryPage.qml:44 contents/ui/LibraryPage.qml:69
-#: contents/ui/LibraryPage.qml:92 contents/ui/LibraryPage.qml:339
-#: contents/ui/LibraryPage.qml:364 contents/ui/LibraryPage.qml:388
-#: contents/ui/LocalPlaylistPage.qml:49 contents/ui/MaximizedPlayerPage.qml:892
+#: contents/ui/LibraryPage.qml:92 contents/ui/LibraryPage.qml:229
+#: contents/ui/LibraryPage.qml:254 contents/ui/LibraryPage.qml:278
+#: contents/ui/LocalPlaylistPage.qml:49 contents/ui/MaximizedPlayerPage.qml:891
 #: contents/ui/PlaybackHistory.qml:36 contents/ui/PlaylistPage.qml:38
 #, kde-format
 msgid "Shuffle"
 msgstr "Nahastu"
 
 #: contents/ui/AlbumPage.qml:41 contents/ui/LibraryPage.qml:74
-#: contents/ui/LibraryPage.qml:100 contents/ui/LibraryPage.qml:369
-#: contents/ui/LibraryPage.qml:396 contents/ui/LocalPlaylistPage.qml:55
+#: contents/ui/LibraryPage.qml:100 contents/ui/LibraryPage.qml:259
+#: contents/ui/LibraryPage.qml:286 contents/ui/LocalPlaylistPage.qml:55
 #: contents/ui/PlaybackHistory.qml:48 contents/ui/PlaylistPage.qml:46
 #, fuzzy, kde-format
 #| msgid "Add to queue"
@@ -167,8 +167,8 @@ msgstr "Garbitu jotze-zerrenda"
 msgid "Favourites"
 msgstr "Gogokoak"
 
-#: contents/ui/LibraryPage.qml:119 contents/ui/LibraryPage.qml:416
-#: contents/ui/LibraryPage.qml:623
+#: contents/ui/LibraryPage.qml:119 contents/ui/LibraryPage.qml:306
+#: contents/ui/LibraryPage.qml:403
 #, kde-format
 msgid "Show All"
 msgstr "Erakutsi denak"
@@ -178,43 +178,43 @@ msgstr "Erakutsi denak"
 msgid "No Favourites Yet"
 msgstr "Oraindik Gogokorik ez"
 
-#: contents/ui/LibraryPage.qml:325
+#: contents/ui/LibraryPage.qml:215
 #, kde-format
 msgid "Most played"
 msgstr "Gehien jotakoa"
 
-#: contents/ui/LibraryPage.qml:420 contents/ui/NavigationBar.qml:61
+#: contents/ui/LibraryPage.qml:310 contents/ui/NavigationBar.qml:61
 #: contents/ui/NavigationBar.qml:67 contents/ui/Sidebar.qml:150
 #: contents/ui/Sidebar.qml:157
 #, kde-format
 msgid "Played Songs"
 msgstr "Jotako abestiak"
 
-#: contents/ui/LibraryPage.qml:444
+#: contents/ui/LibraryPage.qml:334
 #, kde-format
 msgid "No Songs Played Yet"
 msgstr "Oraindik ez dago jotako abestirik"
 
-#: contents/ui/LibraryPage.qml:611 contents/ui/LocalPlaylistsPage.qml:18
+#: contents/ui/LibraryPage.qml:391 contents/ui/LocalPlaylistsPage.qml:18
 #: contents/ui/LocalPlaylistsPage.qml:78 contents/ui/NavigationBar.qml:75
 #: contents/ui/SearchPage.qml:30 contents/ui/Sidebar.qml:167
 #, kde-format
 msgid "Playlists"
 msgstr "Jotze-zerrendak"
 
-#: contents/ui/LibraryPage.qml:650
+#: contents/ui/LibraryPage.qml:430
 #, fuzzy, kde-format
 #| msgid "Playlists"
 msgid "No Playlists Yet"
 msgstr "Jotze-zerrendak"
 
-#: contents/ui/LibraryPage.qml:670 contents/ui/LibraryPage.qml:692
+#: contents/ui/LibraryPage.qml:450 contents/ui/LibraryPage.qml:472
 #: contents/ui/LocalPlaylistsPage.qml:33 contents/ui/LocalPlaylistsPage.qml:55
 #, kde-format
 msgid "Rename"
 msgstr ""
 
-#: contents/ui/LibraryPage.qml:679 contents/ui/LibraryPage.qml:700
+#: contents/ui/LibraryPage.qml:459 contents/ui/LibraryPage.qml:480
 #: contents/ui/LocalPlaylistsPage.qml:42 contents/ui/LocalPlaylistsPage.qml:63
 #, kde-format
 msgid "Delete"
@@ -231,34 +231,34 @@ msgstr "Kendu historiatik"
 msgid "This playlist is still empty"
 msgstr ""
 
-#: contents/ui/main.qml:109 main.cpp:54
+#: contents/ui/main.qml:107 main.cpp:54
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
 
-#: contents/ui/MaximizedPlayerPage.qml:196
-#: contents/ui/MinimizedPlayerControls.qml:93
+#: contents/ui/MaximizedPlayerPage.qml:192
+#: contents/ui/MinimizedPlayerControls.qml:94
 #, kde-format
 msgid "No media playing"
 msgstr "Ez da euskarririk jotzen ari"
 
-#: contents/ui/MaximizedPlayerPage.qml:571
+#: contents/ui/MaximizedPlayerPage.qml:567
 #, kde-format
 msgid "%1%"
 msgstr "%%1"
 
-#: contents/ui/MaximizedPlayerPage.qml:840
-#: contents/ui/MaximizedPlayerPage.qml:1017
+#: contents/ui/MaximizedPlayerPage.qml:839
+#: contents/ui/MaximizedPlayerPage.qml:1016
 #, kde-format
 msgid "Remove Track"
 msgstr "Kendu pista"
 
-#: contents/ui/MaximizedPlayerPage.qml:871
+#: contents/ui/MaximizedPlayerPage.qml:870
 #, kde-format
 msgid "Clear Playlist"
 msgstr "Garbitu jotze-zerrenda"
 
-#: contents/ui/MaximizedPlayerPage.qml:918
+#: contents/ui/MaximizedPlayerPage.qml:917
 #, kde-format
 msgid "Upcoming Songs"
 msgstr ""
@@ -288,7 +288,7 @@ msgstr "Hemen oraindik ez dago abestirik"
 msgid "Playlist"
 msgstr "Jotze-zerrenda"
 
-#: contents/ui/SearchHistoryPage.qml:86 contents/ui/SearchWithDropdown.qml:412
+#: contents/ui/SearchHistoryPage.qml:86 contents/ui/SearchWithDropdown.qml:395
 #, kde-format
 msgid "remove from search history"
 msgstr "Kendu bilaketa-historiatik"
@@ -308,7 +308,7 @@ msgstr "Artistak"
 msgid "Unknown"
 msgstr "Ezezaguna"
 
-#: contents/ui/SearchWithDropdown.qml:359
+#: contents/ui/SearchWithDropdown.qml:342
 #, kde-format
 msgid "No matching previous searches"
 msgstr "Ez dago bat datorren aurreko bilaketarik"
