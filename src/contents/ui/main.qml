@@ -7,8 +7,11 @@ import QtQuick.Controls 2.12 as Controls
 import QtQuick.Layouts 1.3
 import org.kde.kirigami 2.14 as Kirigami
 import QtGraphicalEffects 1.0
+import QtMultimedia 5.12
 
 import org.kde.ytmusic 1.0
+
+import org.nemomobile.qtmpris 1.0
 
 Kirigami.ApplicationWindow {
     id: root
@@ -247,5 +250,112 @@ Kirigami.ApplicationWindow {
 
         // only expand flicking area to full screen when it is open
         z: (contentY === 0) ? -1 : 999
+    }
+
+    MprisPlayer {
+        id: mprisPlayer
+        serviceName: "AudioTube"
+
+        property string artist: playerFooter.videoInfoExtractor.artist
+        property string songTitle: playerFooter.videoInfoExtractor.title ? playerFooter.videoInfoExtractor.title : i18n("No song playing")
+        property int songLength: playerFooter.audioPlayer.duration * 1000
+        property string thumbnail: playerFooter.thumbnail
+
+        function next() {
+            if(UserPlaylistModel.canSkip) {
+                UserPlaylistModel.next()
+            }
+            else{
+                playerFooter.audioPlayer.stop()
+            }
+        }
+
+        //Mpris2 Root interface
+        identity: root.title
+        supportedUriSchemes: []
+        supportedMimeTypes: []
+        desktopEntry: "org.kde.audiotube"
+
+        //Mpris2 Player Interface
+        canControl: true
+        canGoNext: UserPlaylistModel.canSkip
+        canGoPrevious: UserPlaylistModel.canSkipBack
+        canPause: playerFooter.audioPlayer.status !== Audio.NoMedia
+        canPlay: playerFooter.audioPlayer.status !== Audio.NoMedia
+        canSeek: false
+
+        playbackStatus: playerFooter.audioPlayer.playbackState === Audio.PlayingState ? Mpris.Playing : (playerFooter.audioPlayer.playbackState == Audio.PausedState ? Mpris.Paused : Mpris.Stopped)
+        shuffle: false
+        volume: playerFooter.audioPlayer.muted ? 0.0 : playerFooter.audioPlayer.volume
+        position: playerFooter.audioPlayer.position * 1000
+
+        onPauseRequested: playerFooter.audioPlayer.pause()
+        onPlayRequested: playerFooter.audioPlayer.play()
+        onPlayPauseRequested: {
+            if(playerFooter.audioPlayer.playbackStatus === PlayingState) {
+                playerFooter.audioPlayer.pause()
+            }
+            else if(playerFooter.PlayingState === PausedState) {
+                PlayerFooter.audioPlayer.play()
+            }
+        }
+        onStopRequested: playerFooter.audioPlayer.stop()
+        onNextRequested: {
+            next()
+        }
+        onPreviousRequested: {
+            if(UserPlaylistModel.canSkipBack) {
+                UserPlaylistModel.previous()
+            }
+            else{
+                playerFooter.audioPlayer.stop()
+            }
+        }
+        onSeekRequested: {
+            if(canSeek) {
+                if(playerFooter.audioPlayer.position + offset/1000 < 0) {
+                    playerFooter.audioPlayer.seek(0)
+                }
+                else if(playerFooter.audioPlayer.position + offset/1000 > playerFooter.audioPlayer.duration) {
+                    next()
+                }
+                else {
+                    playerFooter.audioPlayer.seek(Math.floor(playerFooter.audioPlayer.position + offset/1000));
+                }
+                emitSeeked()
+            }
+        }
+        onSetPositionRequested: {
+            if(canSeek) {
+                if(position >= 0 && position/1000 <= playerFooter.audioPlayer.duration) {
+                    playerFooter.audioPlayer.seek(Math.floor(position/1000))
+                    emitSeeked()
+                }
+            }
+        }
+        onShuffleRequested: {
+            UserPlaylistModel.shufflePlaylist()
+        }
+
+        onArtistChanged: {
+            var metadata = mprisPlayer.metadata
+            metadata[Mpris.metadataToString(Mpris.Artist)] = [artist]
+            mprisPlayer.metadata = metadata
+        }
+        onSongTitleChanged: {
+            var metadata = mprisPlayer.metadata
+            metadata[Mpris.metadataToString(Mpris.Title)] = songTitle
+            mprisPlayer.metadata = metadata
+        }
+        onSongLengthChanged: {
+            var metadata = mprisPlayer.metadata
+            metadata[Mpris.metadataToString(Mpris.Length)] = songLength
+            mprisPlayer.metadata = metadata
+        }
+        onThumbnailChanged: {
+            var metadata = mprisPlayer.metadata
+            metadata[Mpris.metadataToString(Mpris.ArtUrl)] = thumbnail
+            mprisPlayer.metadata = metadata
+        }
     }
 }

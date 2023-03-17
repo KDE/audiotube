@@ -38,7 +38,7 @@ ecm_setup_version(${PROJECT_VERSION}
 
 kde_enable_exceptions()
 
-find_package(Qt${QT_MAJOR_VERSION} ${QT5_MIN_VERSION} REQUIRED COMPONENTS Core Gui Qml QuickControls2 Svg Sql Widgets Concurrent)
+find_package(Qt${QT_MAJOR_VERSION} ${QT5_MIN_VERSION} REQUIRED COMPONENTS Core Gui Qml QuickControls2 Svg Sql Widgets Concurrent DBus)
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS Kirigami2 I18n CoreAddons Crash WindowSystem)
 find_package(pybind11 REQUIRED)
 find_package(Ytdlp REQUIRED RUNTIME)

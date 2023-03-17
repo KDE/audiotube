@@ -15,6 +15,8 @@
 #include <KCrash>
 #include <KAboutData>
 
+#include <mprisplugin.h>
+
 #include "clipboard.h"
 #include "searchmodel.h"
 #include "albummodel.h"
@@ -72,6 +74,8 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     KCrash::initialize();
 
     QQmlApplicationEngine engine;
+
+    MprisPlugin(&engine).registerTypes("org.nemomobile.qtmpris");
 
     qmlRegisterType<SearchModel>(URI, 1, 0, "SearchModel");
     qmlRegisterType<AlbumModel>(URI, 1, 0, "AlbumModel");
