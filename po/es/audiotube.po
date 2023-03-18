@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 00:56+0000\n"
+"POT-Creation-Date: 2023-03-18 00:57+0000\n"
 "PO-Revision-Date: 2023-03-09 11:48+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -221,10 +221,16 @@ msgstr "Eliminar de la lista de reproducción"
 msgid "This playlist is still empty"
 msgstr "Esta lista de reproducción está vacía"
 
-#: contents/ui/main.qml:107 main.cpp:54
+#: contents/ui/main.qml:110 main.cpp:56
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
+
+#: contents/ui/main.qml:260
+#, fuzzy, kde-format
+#| msgid "No media playing"
+msgid "No song playing"
+msgstr "Ningún medio en reproducción"
 
 #: contents/ui/MaximizedPlayerPage.qml:192
 #: contents/ui/MinimizedPlayerControls.qml:94
@@ -363,49 +369,49 @@ msgstr "Añadir a la lista de reproducción"
 msgid "Share Song"
 msgstr "Compartir canción"
 
-#: main.cpp:56
+#: main.cpp:58
 #, kde-format
 msgid "YouTube Music Player"
 msgstr "Reproductor de música de YouTube"
 
-#: main.cpp:58
+#: main.cpp:60
 #, kde-format
 msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
 msgstr "© 2021-2023 Jonah Brüchert, 2021-2023 La Comunidad KDE"
 
-#: main.cpp:59
+#: main.cpp:61
 #, kde-format
 msgid "Jonah Brüchert"
 msgstr "Jonah Brüchert"
 
-#: main.cpp:59
+#: main.cpp:61
 #, kde-format
 msgid "Maintainer"
 msgstr "Responsable"
 
-#: main.cpp:60
+#: main.cpp:62
 #, kde-format
 msgid "Mathis Brüchert"
 msgstr "Mathis Brüchert"
 
-#: main.cpp:60
+#: main.cpp:62
 #, kde-format
 msgid "Designer"
 msgstr "Diseñador"
 
-#: main.cpp:61
+#: main.cpp:63
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Eloy Cuadra"
 
-#: main.cpp:61
+#: main.cpp:63
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ecuadra@eloihr.net"
 
-#: main.cpp:66
+#: main.cpp:68
 #, kde-format
 msgid "Unofficial API for YouTube Music"
 msgstr "API no oficial para YouTube Music"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-17 00:56+0000\n"
+"POT-Creation-Date: 2023-03-18 00:57+0000\n"
 "PO-Revision-Date: 2023-03-09 10:34+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -222,10 +222,16 @@ msgstr "Elimina de la llista de reproducció"
 msgid "This playlist is still empty"
 msgstr "Esta llista de reproducció encara està buida"
 
-#: contents/ui/main.qml:107 main.cpp:54
+#: contents/ui/main.qml:110 main.cpp:56
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
+
+#: contents/ui/main.qml:260
+#, fuzzy, kde-format
+#| msgid "No media playing"
+msgid "No song playing"
+msgstr "No s'està reproduint cap suport"
 
 #: contents/ui/MaximizedPlayerPage.qml:192
 #: contents/ui/MinimizedPlayerControls.qml:94
@@ -364,49 +370,49 @@ msgstr "Afig a la llista de reproducció"
 msgid "Share Song"
 msgstr "Compartix una cançó"
 
-#: main.cpp:56
+#: main.cpp:58
 #, kde-format
 msgid "YouTube Music Player"
 msgstr "Reproductor musical de YouTube"
 
-#: main.cpp:58
+#: main.cpp:60
 #, kde-format
 msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
 msgstr "© 2021-2023 Jonah Brüchert, 2021-2023 Comunitat KDE"
 
-#: main.cpp:59
+#: main.cpp:61
 #, kde-format
 msgid "Jonah Brüchert"
 msgstr "Jonah Brüchert"
 
-#: main.cpp:59
+#: main.cpp:61
 #, kde-format
 msgid "Maintainer"
 msgstr "Mantenidor"
 
-#: main.cpp:60
+#: main.cpp:62
 #, kde-format
 msgid "Mathis Brüchert"
 msgstr "Mathis Brüchert"
 
-#: main.cpp:60
+#: main.cpp:62
 #, kde-format
 msgid "Designer"
 msgstr "Dissenyador"
 
-#: main.cpp:61
+#: main.cpp:63
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Antoni Bella"
 
-#: main.cpp:61
+#: main.cpp:63
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "antonibella5@yahoo.com"
 
-#: main.cpp:66
+#: main.cpp:68
 #, kde-format
 msgid "Unofficial API for YouTube Music"
 msgstr "API no oficial per a YouTube Music"
