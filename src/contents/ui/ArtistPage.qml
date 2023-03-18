@@ -7,9 +7,12 @@ import org.kde.kirigami 2.14 as Kirigami
 import QtQuick.Controls 2.14 as Controls
 import QtQuick.Layouts 1.3
 
+import "components"
+
 import org.kde.ytmusic 1.0
 
 Kirigami.ScrollablePage {
+    id: root
     property alias channelId: artistModel.channelId
     property string radioId
     property string shuffleId
@@ -22,9 +25,56 @@ Kirigami.ScrollablePage {
     SongMenu {
         id: menu
     }
+
+    DoubleActionButton {
+        id: action
+        visible: false
+        property bool shown
+        shown: !root.flickable.atYBeginning
+        onShownChanged:
+            if(shown){
+                visible = true
+                appear.running = true
+            } else {
+                disappear.running = true
+            }
+
+        parent: overlay
+        x: root.width - width - margin
+        y: root.height - height - margin
+        NumberAnimation on y {
+            id: appear
+            easing.type: Easing.InCubic
+            running: false
+            from: root.height
+            to: root.height - action.height - action.margin
+            duration: 100
+        }
+        NumberAnimation on y {
+            id: disappear
+            easing.type: Easing.OutCubic
+            running: false
+            from: root.height - action.height - action.margin
+            to: root.height
+            duration: 100
+            onFinished: action.visible = false
+        }
+        rightAction: Kirigami.Action {
+            icon.name: "media-playlist-shuffle"
+            onTriggered: playPlaylist(shuffleId)
+            text: "Shuffle"
+        }
+        leftAction: Kirigami.Action {
+            icon.name: "radio"
+            onTriggered: playPlaylist(radioId)
+            text: "Radio"
+        }
+
+    }
+
     ListView {
         id: songList
-
+        footer: Item { height: 60 }
         header: ListHeader {
             visibleActions: [
                 Kirigami.Action {

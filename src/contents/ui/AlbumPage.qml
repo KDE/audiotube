@@ -9,7 +9,10 @@ import QtQuick.Layouts 1.3
 
 import org.kde.ytmusic 1.0
 
+import "components"
+
 Kirigami.ScrollablePage {
+    id: root
     property alias browseId: albumModel.browseId
     title: albumModel.title
     ShareMenu {
@@ -17,8 +20,54 @@ Kirigami.ScrollablePage {
         inputTitle: albumModel.title
         url: albumModel.webUrl
     }
+    DoubleActionButton {
+        id: action
+        visible: false
+        property bool shown
+        shown: !root.flickable.atYBeginning
+        onShownChanged:
+            if(shown){
+                visible = true
+                appear.running = true
+            } else {
+                disappear.running = true
+            }
+
+        parent: overlay
+        x: root.width - width - margin
+        y: root.height - height - margin
+        NumberAnimation on y {
+            id: appear
+            easing.type: Easing.InCubic
+            running: false
+            from: root.height
+            to: root.height - action.height - action.margin
+            duration: 100
+        }
+        NumberAnimation on y {
+            id: disappear
+            easing.type: Easing.OutCubic
+            running: false
+            from: root.height - action.height - action.margin
+            to: root.height
+            duration: 100
+            onFinished: action.visible = false
+        }
+        rightAction: Kirigami.Action {
+            icon.name: "media-playlist-shuffle"
+            onTriggered: applicationWindow().playShufflePlaylist(albumModel.playlistId)
+            text: "Shuffle"
+        }
+        leftAction: Kirigami.Action {
+            icon.name: "media-playback-start"
+            onTriggered: applicationWindow().playPlaylist(albumModel.playlistId)
+            text: "Play"
+        }
+    }
+
     ListView {
         id: songList
+        footer: Item { height: 60 }
         header: ListHeader {
             visibleActions: [
                 Kirigami.Action {

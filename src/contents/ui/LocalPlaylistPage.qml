@@ -3,11 +3,13 @@
 // SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
 
-import QtQuick 2.1
+import QtQuick 2.15
 import QtQuick.Controls 2.12 as Controls
 import QtQuick.Layouts 1.3
 import org.kde.kirigami 2.14 as Kirigami
 import org.kde.ytmusic 1.0
+
+import "components"
 
 Kirigami.ScrollablePage {
     id: root
@@ -24,7 +26,55 @@ Kirigami.ScrollablePage {
             }
         ]
     }
+
+    DoubleActionButton {
+        id: action
+        visible: false
+        property bool shown
+        shown: !root.flickable.atYBeginning
+        onShownChanged:
+            if(shown){
+                visible = true
+                appear.running = true
+            } else {
+                disappear.running = true
+            }
+
+        parent: overlay
+        x: root.width - width - margin
+        y: root.height - height - margin
+        NumberAnimation on y {
+            id: appear
+            easing.type: Easing.InCubic
+            running: false
+            from: root.height
+            to: root.height - action.height - action.margin
+            duration: 100
+        }
+        NumberAnimation on y {
+            id: disappear
+            easing.type: Easing.OutCubic
+            running: false
+            from: root.height - action.height - action.margin
+            to: root.height
+            duration: 100
+            onFinished: action.visible = false
+        }
+        rightAction: Kirigami.Action {
+            icon.name: "media-playlist-shuffle"
+            text: i18n("Shuffle")
+            onTriggered: UserPlaylistModel.playLocalPlaylist(playlistModel, true)
+        }
+        leftAction: Kirigami.Action {
+            icon.name: "media-playback-start"
+            text: i18n("Play")
+            onTriggered: UserPlaylistModel.playLocalPlaylist(playlistModel, false)
+        }
+
+    }
+
     ListView {
+        footer: Item { height: 60 }
         Kirigami.PlaceholderMessage {
             text: i18n("This playlist is still empty")
             anchors.centerIn: parent

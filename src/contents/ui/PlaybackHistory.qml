@@ -10,32 +10,50 @@ import org.kde.kirigami 2.15 as Kirigami
 
 import org.kde.ytmusic 1.0
 
+import "components"
+
 Kirigami.ScrollablePage {
     id: playbackHistoryPage
     title: i18n("Unknown list of songs")
-
     property QtObject dataModel: (objectName == "history") ? Library.playbackHistory : (objectName == "favourites" ? Library.favourites : null)
 
-    titleDelegate: RowLayout{
-            spacing: Kirigami.Units.MediumSpacing
-
-            Controls.ToolButton {
-                text: i18n("Play")
-                icon.name: "media-playback-start"
-                onClicked: {
-                    if(playbackHistoryPage.objectName == "favourites") {
-                        UserPlaylistModel.playFavourites(Library.favourites, false)
-                    }
-                    else if(playbackHistoryPage.objectName == "history") {
-                        onClicked: UserPlaylistModel.playPlaybackHistory(playbackHistoryPage.dataModel, false)
-                    }
-                }
+    DoubleActionButton {
+        id: action
+        visible: false
+        property bool shown
+        shown: !playbackHistoryPage.flickable.atYBeginning
+        onShownChanged:
+            if(shown){
+                visible = true
+                appear.running = true
+            } else {
+                disappear.running = true
             }
 
-        Controls.ToolButton {
+        parent: overlay
+        x: playbackHistoryPage.width - width - margin
+        y: playbackHistoryPage.height - height - margin
+        NumberAnimation on y {
+            id: appear
+            easing.type: Easing.InCubic
+            running: false
+            from: playbackHistoryPage.height
+            to: playbackHistoryPage.height - action.height - action.margin
+            duration: 100
+        }
+        NumberAnimation on y {
+            id: disappear
+            easing.type: Easing.OutCubic
+            running: false
+            from: playbackHistoryPage.height - action.height - action.margin
+            to: playbackHistoryPage.height
+            duration: 100
+            onFinished: action.visible = false
+        }
+        rightAction: Kirigami.Action {
+            icon.name: "media-playlist-shuffle"
             text: i18n("Shuffle")
-            icon.name: "shuffle"
-            onClicked: {
+            onTriggered: {
                 if(playbackHistoryPage.objectName == "favourites") {
                     UserPlaylistModel.playFavourites(Library.favourites, true)
                 }
@@ -44,28 +62,71 @@ Kirigami.ScrollablePage {
                 }
             }
         }
-        Controls.ToolButton {
-            text: i18n("Append to queue")
-            icon.name: "media-playlist-append"
-            onClicked: {
+        leftAction: Kirigami.Action {
+            icon.name: "media-playback-start"
+            text: i18n("Play")
+            onTriggered: {
                 if(playbackHistoryPage.objectName == "favourites") {
-                    UserPlaylistModel.appendFavourites(Library.favourites,false)
+                    UserPlaylistModel.playFavourites(Library.favourites, false)
                 }
                 else if(playbackHistoryPage.objectName == "history") {
-                    UserPlaylistModel.appendPlaybackHistory(playbackHistoryPage.dataModel, false)
+                    onClicked: UserPlaylistModel.playPlaybackHistory(playbackHistoryPage.dataModel, false)
                 }
             }
         }
-        Item {
-            Layout.fillWidth: true
-        }
-    }
 
+    }
 
     SongMenu {
         id:menu
     }
     ListView {
+        footer: Item { height: 60 }
+        header: RowLayout{
+                spacing: Kirigami.Units.MediumSpacing
+
+                Controls.ToolButton {
+                    text: i18n("Play")
+                    icon.name: "media-playback-start"
+                    onClicked: {
+                        if(playbackHistoryPage.objectName == "favourites") {
+                            UserPlaylistModel.playFavourites(Library.favourites, false)
+                        }
+                        else if(playbackHistoryPage.objectName == "history") {
+                            onClicked: UserPlaylistModel.playPlaybackHistory(playbackHistoryPage.dataModel, false)
+                        }
+                    }
+                }
+
+            Controls.ToolButton {
+                text: i18n("Shuffle")
+                icon.name: "shuffle"
+                onClicked: {
+                    if(playbackHistoryPage.objectName == "favourites") {
+                        UserPlaylistModel.playFavourites(Library.favourites, true)
+                    }
+                    else if(playbackHistoryPage.objectName == "history") {
+                        onClicked: UserPlaylistModel.playPlaybackHistory(playbackHistoryPage.dataModel, true)
+                    }
+                }
+            }
+            Controls.ToolButton {
+                text: i18n("Append to queue")
+                icon.name: "media-playlist-append"
+                onClicked: {
+                    if(playbackHistoryPage.objectName == "favourites") {
+                        UserPlaylistModel.appendFavourites(Library.favourites,false)
+                    }
+                    else if(playbackHistoryPage.objectName == "history") {
+                        UserPlaylistModel.appendPlaybackHistory(playbackHistoryPage.dataModel, false)
+                    }
+                }
+            }
+            Item {
+                Layout.fillWidth: true
+            }
+        }
+
         id: listView
         reuseItems: true
 

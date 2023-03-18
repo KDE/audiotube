@@ -9,7 +9,10 @@ import org.kde.kirigami 2.12 as Kirigami
 
 import org.kde.ytmusic 1.0
 
+import "components"
+
 Kirigami.ScrollablePage {
+    id: root
     property alias playlistId: playlistModel.playlistId
     title: playlistModel.title
 
@@ -21,9 +24,59 @@ Kirigami.ScrollablePage {
         inputTitle: playlistModel.title
         url: playlistModel.webUrl
     }
+    DoubleActionButton {
+        id: action
+        visible: false
+        property bool shown
+        shown: !root.flickable.atYBeginning
+        onShownChanged:
+            if(shown){
+                visible = true
+                appear.running = true
+            } else {
+                disappear.running = true
+            }
+
+        parent: overlay
+        x: root.width - width - margin
+        y: root.height - height - margin
+        NumberAnimation on y {
+            id: appear
+            easing.type: Easing.InCubic
+            running: false
+            from: root.height
+            to: root.height - action.height - action.margin
+            duration: 100
+        }
+        NumberAnimation on y {
+            id: disappear
+            easing.type: Easing.OutCubic
+            running: false
+            from: root.height - action.height - action.margin
+            to: root.height
+            duration: 100
+            onFinished: action.visible = false
+        }
+        rightAction: Kirigami.Action {
+            icon.name: "media-playlist-shuffle"
+            text: i18n("Shuffle")
+            onTriggered: {
+                applicationWindow().playShufflePlaylist(playlistModel.playlistId)
+            }
+        }
+        leftAction: Kirigami.Action {
+            icon.name: "media-playback-start"
+            text: i18n("Play")
+            onTriggered: {
+                applicationWindow().playPlaylist(playlistModel.playlistId)
+            }
+        }
+
+    }
+
     ListView {
         id: songList
-
+        footer: Item { height: 60 }
         header: ListHeader {
             visibleActions: [
                 Kirigami.Action {
