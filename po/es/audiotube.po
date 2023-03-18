@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-09 00:45+0000\n"
+"POT-Creation-Date: 2023-03-18 03:09+0000\n"
 "PO-Revision-Date: 2023-03-09 11:48+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -32,7 +32,7 @@ msgstr "Reproducir"
 #: contents/ui/LibraryPage.qml:44 contents/ui/LibraryPage.qml:69
 #: contents/ui/LibraryPage.qml:92 contents/ui/LibraryPage.qml:339
 #: contents/ui/LibraryPage.qml:364 contents/ui/LibraryPage.qml:388
-#: contents/ui/LocalPlaylistPage.qml:49 contents/ui/MaximizedPlayerPage.qml:890
+#: contents/ui/LocalPlaylistPage.qml:49 contents/ui/MaximizedPlayerPage.qml:891
 #: contents/ui/PlaybackHistory.qml:36 contents/ui/PlaylistPage.qml:38
 #, kde-format
 msgid "Shuffle"
@@ -237,18 +237,18 @@ msgstr "Ningún medio en reproducción"
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/ui/MaximizedPlayerPage.qml:838
-#: contents/ui/MaximizedPlayerPage.qml:1013
+#: contents/ui/MaximizedPlayerPage.qml:839
+#: contents/ui/MaximizedPlayerPage.qml:1016
 #, kde-format
 msgid "Remove Track"
 msgstr "Eliminar pista"
 
-#: contents/ui/MaximizedPlayerPage.qml:869
+#: contents/ui/MaximizedPlayerPage.qml:870
 #, kde-format
 msgid "Clear Playlist"
 msgstr "Borrar la lista de reproducción"
 
-#: contents/ui/MaximizedPlayerPage.qml:916
+#: contents/ui/MaximizedPlayerPage.qml:917
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "Próximas canciones"
@@ -278,7 +278,7 @@ msgstr "Todavía no contiene canciones"
 msgid "Playlist"
 msgstr "Lista de reproducción"
 
-#: contents/ui/SearchHistoryPage.qml:86 contents/ui/SearchWithDropdown.qml:408
+#: contents/ui/SearchHistoryPage.qml:86 contents/ui/SearchWithDropdown.qml:412
 #, kde-format
 msgid "remove from search history"
 msgstr "eliminar del historial de búsqueda"
@@ -298,7 +298,7 @@ msgstr "Artistas"
 msgid "Unknown"
 msgstr "Desconocido"
 
-#: contents/ui/SearchWithDropdown.qml:355
+#: contents/ui/SearchWithDropdown.qml:359
 #, kde-format
 msgid "No matching previous searches"
 msgstr "No hay búsquedas anteriores coincidentes"

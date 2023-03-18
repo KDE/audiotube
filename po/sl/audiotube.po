@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-09 00:45+0000\n"
+"POT-Creation-Date: 2023-03-18 03:09+0000\n"
 "PO-Revision-Date: 2023-03-09 09:03+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -31,7 +31,7 @@ msgstr "Predvajaj"
 #: contents/ui/LibraryPage.qml:44 contents/ui/LibraryPage.qml:69
 #: contents/ui/LibraryPage.qml:92 contents/ui/LibraryPage.qml:339
 #: contents/ui/LibraryPage.qml:364 contents/ui/LibraryPage.qml:388
-#: contents/ui/LocalPlaylistPage.qml:49 contents/ui/MaximizedPlayerPage.qml:890
+#: contents/ui/LocalPlaylistPage.qml:49 contents/ui/MaximizedPlayerPage.qml:891
 #: contents/ui/PlaybackHistory.qml:36 contents/ui/PlaylistPage.qml:38
 #, kde-format
 msgid "Shuffle"
@@ -234,18 +234,18 @@ msgstr "Niče se ne predvaja"
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/ui/MaximizedPlayerPage.qml:838
-#: contents/ui/MaximizedPlayerPage.qml:1013
+#: contents/ui/MaximizedPlayerPage.qml:839
+#: contents/ui/MaximizedPlayerPage.qml:1016
 #, kde-format
 msgid "Remove Track"
 msgstr "Odstrani sled"
 
-#: contents/ui/MaximizedPlayerPage.qml:869
+#: contents/ui/MaximizedPlayerPage.qml:870
 #, kde-format
 msgid "Clear Playlist"
 msgstr "Očisti seznam predvajanja"
 
-#: contents/ui/MaximizedPlayerPage.qml:916
+#: contents/ui/MaximizedPlayerPage.qml:917
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "Prihajajoče pesmi"
@@ -275,7 +275,7 @@ msgstr "Tu še ni nobene pesmi"
 msgid "Playlist"
 msgstr "Seznam predvajanja"
 
-#: contents/ui/SearchHistoryPage.qml:86 contents/ui/SearchWithDropdown.qml:408
+#: contents/ui/SearchHistoryPage.qml:86 contents/ui/SearchWithDropdown.qml:412
 #, kde-format
 msgid "remove from search history"
 msgstr "odstrani iz zgodovine iskanj"
@@ -295,7 +295,7 @@ msgstr "Avtorji"
 msgid "Unknown"
 msgstr "Neznano"
 
-#: contents/ui/SearchWithDropdown.qml:355
+#: contents/ui/SearchWithDropdown.qml:359
 #, kde-format
 msgid "No matching previous searches"
 msgstr "Ni zadetkov iz prejšnjih iskanj"
