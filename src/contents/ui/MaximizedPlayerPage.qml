@@ -80,17 +80,26 @@ Item {
             // hide arrow button
             ToolButton {
                 id: closeButton
+
                 Layout.alignment: Qt.AlignHCenter | Qt.AlignTop
                 Layout.maximumHeight: parent.height
                 Layout.preferredHeight: Kirigami.Units.gridUnit * 3
                 Layout.maximumWidth: parent.height
                 Layout.preferredWidth: Kirigami.Units.gridUnit * 3
                 Layout.topMargin: Kirigami.Units.smallSpacing
+
                 icon.name: "arrow-down"
                 icon.color: "white"
                 Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
                 Kirigami.Theme.inherit: false
                 onClicked: root.requestClose()
+                text: i18n("Close Maximized Player")
+                display: ToolButton.IconOnly
+                ToolTip {
+                    text: parent.text
+                    delay: 700
+                    visible: Kirigami.Settings.isMobile ? parent.pressed : parent.hovered
+                }
             }
 
             SwipeView {
@@ -412,11 +421,16 @@ Item {
                                 }
                             }
                         }
-                        text: "Favourite"
+                        text: favouriteWatcher ? (favouriteWatcher.isFavourite ? i18n("Remove from Favourites") : i18n("Add to Favourites")) : i18n("Add to Favourites")
                         icon.name: favouriteWatcher ? (favouriteWatcher.isFavourite ? "starred-symbolic" : "non-starred-symbolic") : "non-starred-symbolic"
                         enabled: favouriteWatcher
                         icon.color: "white"
                         display: AbstractButton.IconOnly
+                        ToolTip {
+                            text: parent.text
+                            delay: 700
+                            visible: Kirigami.Settings.isMobile ? parent.pressed : parent.hovered
+                        }
                         Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
                         Kirigami.Theme.inherit: false
                     }
@@ -431,6 +445,14 @@ Item {
                         enabled: !isWidescreen
 
                         icon.name: muteButton.icon.name
+
+                        text: i18n("Open Volume Drawer")
+                        display: AbstractButton.IconOnly
+                        ToolTip {
+                            text: parent.text
+                            delay: 700
+                            visible: Kirigami.Settings.isMobile ? parent.pressed : parent.hovered
+                        }
 
                         onClicked:{
                             if(!volumeDrawer.opened){
@@ -452,6 +474,13 @@ Item {
                                         icon.name: muteButton.icon.name
                                         checkable: true
                                         checked: muteButton.checked
+                                        text: muteButton.text
+                                        display: muteButton.display
+                                        ToolTip {
+                                            text: parent.text
+                                            delay: 700
+                                            visible: Kirigami.Settings.isMobile ? parent.pressed : parent.hovered
+                                        }
                                         onClicked: {
                                             if(audio.muted)
                                             {
@@ -527,6 +556,13 @@ Item {
                         checkable: true
                         visible: isWidescreen
                         enabled: isWidescreen
+                        text: audio.muted ? i18n("Unmute Audio") : i18n("Mute Audio")
+                        display: AbstractButton.IconOnly
+                        ToolTip {
+                            text: parent.text
+                            delay: 700
+                            visible: Kirigami.Settings.isMobile ? parent.pressed : parent.hovered
+                        }
                     }
 
                     Slider {
@@ -587,10 +623,15 @@ Item {
                                 lyricsShown = !lyricsShown
                         }
                         enabled: UserPlaylistModel.lyrics
-                        text: "Lyrics"
+                        text: lyricsShown ? i18n("Hide Lyrics") : i18n("Show Lyrics")
                         icon.name: "view-media-lyrics"
                         icon.color: "white"
                         display: AbstractButton.IconOnly
+                        ToolTip {
+                            text: parent.text
+                            delay: 700
+                            visible: Kirigami.Settings.isMobile ? parent.pressed : parent.hovered
+                        }
 
                         Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
                         Kirigami.Theme.inherit: false
@@ -603,10 +644,15 @@ Item {
                         Layout.preferredWidth: height
                         onClicked: shareMenu.open()
 
-                        text: "Share Song"
+                        text: i18n("Share Song")
                         icon.name: "emblem-shared-symbolic"
                         icon.color: "white"
                         display: AbstractButton.IconOnly
+                        ToolTip {
+                            text: parent.text
+                            delay: 700
+                            visible: Kirigami.Settings.isMobile ? parent.pressed : parent.hovered
+                        }
                         enabled: info.title
 
                         Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
@@ -644,6 +690,13 @@ Item {
 
                         icon.name: "media-playlist-append"
                         icon.color: "white"
+                        text: i18n("Add to a local playlist")
+                        display: AbstractButton.IconOnly
+                        ToolTip {
+                            text: parent.text
+                            delay: 700
+                            visible: Kirigami.Settings.isMobile ? parent.pressed : parent.hovered
+                        }
                         Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
                         Kirigami.Theme.inherit: false
                     }
@@ -674,8 +727,13 @@ Item {
                             checked = !sideDrawer.collapsed && wideScreen
                         }
 
-                        text: "Queue"
+                        text: checked ? i18n("Hide Queue") : i18n("Show Queue")
                         display: AbstractButton.IconOnly
+                        ToolTip {
+                            text: parent.text
+                            delay: 700
+                            visible: Kirigami.Settings.isMobile ? parent.pressed : parent.hovered
+                        }
                         icon.name: "amarok_playlist"
                         icon.color: "white"
 
@@ -837,6 +895,11 @@ Item {
                             actions: [
                                 Kirigami.Action {
                                     text: i18n("Remove Track")
+                                    ToolTip {
+                                        text: parent.text
+                                        delay: 700
+                                        visible: Kirigami.Settings.isMobile ? parent.pressed : parent.hovered
+                                    }
                                     icon.name: "list-remove"
                                     icon.color: "white"
                                     onTriggered: UserPlaylistModel.remove(delegateItem.videoId)
@@ -867,12 +930,17 @@ Item {
                         Layout.maximumWidth: height
                         Layout.preferredWidth: height
                         
-                        text: i18n("Clear Playlist")
+                        text: i18n("Clear Queue")
                         icon {
                             name: "edit-clear-all"
                             color: "white"
                         }
                         display: AbstractButton.IconOnly
+                        ToolTip {
+                            text: parent.text
+                            delay: 700
+                            visible: Kirigami.Settings.isMobile ? parent.pressed : parent.hovered
+                        }
                         
                         onClicked: UserPlaylistModel.clearExceptCurrent()
                         
@@ -888,7 +956,12 @@ Item {
                         
                         onClicked: UserPlaylistModel.shufflePlaylist()
                         
-                        text: i18n("Shuffle")
+                        text: i18n("Shuffle Queue")
+                        ToolTip {
+                            text: parent.text
+                            delay: 700
+                            visible: Kirigami.Settings.isMobile ? parent.pressed : parent.hovered
+                        }
 
                         icon {
                             name: "media-playlist-shuffle"
@@ -928,6 +1001,11 @@ Item {
                     Layout.maximumWidth: height
                     Layout.preferredWidth: height
                     text: clearPlaylistButton.text
+                    ToolTip {
+                        text: parent.text
+                        delay: 700
+                        visible: Kirigami.Settings.isMobile ? parent.pressed : parent.hovered
+                    }
                     icon.name: "edit-clear-all"
                     display: clearPlaylistButton.display
                     onClicked: {
@@ -944,6 +1022,11 @@ Item {
                     icon.name: "media-playlist-shuffle"
                     text: shuffleButton.text
                     display: shuffleButton.display
+                    ToolTip {
+                        text: parent.text
+                        delay: 700
+                        visible: Kirigami.Settings.isMobile ? parent.pressed : parent.hovered
+                    }
                     onClicked: {
                         UserPlaylistModel.shufflePlaylist()
                     }
@@ -1014,6 +1097,11 @@ Item {
                         actions: [
                             Kirigami.Action {
                                 text: i18n("Remove Track")
+                                ToolTip {
+                                    text: parent.text
+                                    delay: 700
+                                    visible: Kirigami.Settings.isMobile ? parent.pressed : parent.hovered
+                                }
                                 icon.name: "list-remove"
                                 icon.color: "white"
                                 onTriggered: UserPlaylistModel.remove(drawerDelegateItem.videoId)
