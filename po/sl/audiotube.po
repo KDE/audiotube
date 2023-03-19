@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-18 00:57+0000\n"
-"PO-Revision-Date: 2023-03-09 09:03+0100\n"
+"POT-Creation-Date: 2023-03-19 00:46+0000\n"
+"PO-Revision-Date: 2023-03-18 07:27+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -16,92 +16,96 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Poedit 3.2.2\n"
 
-#: contents/ui/AlbumPage.qml:26 contents/ui/LibraryPage.qml:37
+#: contents/ui/AlbumPage.qml:75 contents/ui/LibraryPage.qml:37
 #: contents/ui/LibraryPage.qml:63 contents/ui/LibraryPage.qml:84
 #: contents/ui/LibraryPage.qml:222 contents/ui/LibraryPage.qml:248
-#: contents/ui/LibraryPage.qml:269 contents/ui/LocalPlaylistPage.qml:42
-#: contents/ui/PlaybackHistory.qml:23 contents/ui/PlaylistPage.qml:31
+#: contents/ui/LibraryPage.qml:269 contents/ui/LocalPlaylistPage.qml:70
+#: contents/ui/LocalPlaylistPage.qml:92 contents/ui/PlaybackHistory.qml:67
+#: contents/ui/PlaybackHistory.qml:89 contents/ui/PlaylistPage.qml:69
+#: contents/ui/PlaylistPage.qml:84
 #, kde-format
 msgid "Play"
 msgstr "Predvajaj"
 
-#: contents/ui/AlbumPage.qml:33 contents/ui/ArtistPage.qml:36
+#: contents/ui/AlbumPage.qml:82 contents/ui/ArtistPage.qml:86
 #: contents/ui/LibraryPage.qml:44 contents/ui/LibraryPage.qml:69
 #: contents/ui/LibraryPage.qml:92 contents/ui/LibraryPage.qml:229
 #: contents/ui/LibraryPage.qml:254 contents/ui/LibraryPage.qml:278
-#: contents/ui/LocalPlaylistPage.qml:49 contents/ui/MaximizedPlayerPage.qml:891
-#: contents/ui/PlaybackHistory.qml:36 contents/ui/PlaylistPage.qml:38
+#: contents/ui/LocalPlaylistPage.qml:65 contents/ui/LocalPlaylistPage.qml:99
+#: contents/ui/MaximizedPlayerPage.qml:891 contents/ui/PlaybackHistory.qml:55
+#: contents/ui/PlaybackHistory.qml:102 contents/ui/PlaylistPage.qml:62
+#: contents/ui/PlaylistPage.qml:91
 #, kde-format
 msgid "Shuffle"
 msgstr "Premešaj"
 
-#: contents/ui/AlbumPage.qml:41 contents/ui/LibraryPage.qml:74
+#: contents/ui/AlbumPage.qml:90 contents/ui/LibraryPage.qml:74
 #: contents/ui/LibraryPage.qml:100 contents/ui/LibraryPage.qml:259
-#: contents/ui/LibraryPage.qml:286 contents/ui/LocalPlaylistPage.qml:55
-#: contents/ui/PlaybackHistory.qml:48 contents/ui/PlaylistPage.qml:46
+#: contents/ui/LibraryPage.qml:286 contents/ui/LocalPlaylistPage.qml:105
+#: contents/ui/PlaybackHistory.qml:114 contents/ui/PlaylistPage.qml:99
 #, kde-format
 msgid "Append to queue"
 msgstr "Dodaj v v čakalno vrsto"
 
-#: contents/ui/AlbumPage.qml:46 contents/ui/ArtistPage.qml:43
-#: contents/ui/PlaylistPage.qml:51
+#: contents/ui/AlbumPage.qml:95 contents/ui/ArtistPage.qml:93
+#: contents/ui/PlaylistPage.qml:104
 #, kde-format
 msgid "Open in Browser"
 msgstr "Odpri v brskalniku"
 
-#: contents/ui/AlbumPage.qml:51 contents/ui/ArtistPage.qml:48
-#: contents/ui/PlaylistPage.qml:56
+#: contents/ui/AlbumPage.qml:100 contents/ui/ArtistPage.qml:98
+#: contents/ui/PlaylistPage.qml:109
 #, kde-format
 msgid "Share"
 msgstr "Deli"
 
-#: contents/ui/AlbumPage.qml:61
+#: contents/ui/AlbumPage.qml:110
 #, kde-format
 msgid "Album • %1"
 msgstr "Album • %1"
 
-#: contents/ui/AlbumPage.qml:105 contents/ui/ArtistPage.qml:137
-#: contents/ui/LocalPlaylistPage.qml:114 contents/ui/PlaybackHistory.qml:127
-#: contents/ui/PlaylistPage.qml:116 contents/ui/SearchPage.qml:130
+#: contents/ui/AlbumPage.qml:154 contents/ui/ArtistPage.qml:187
+#: contents/ui/LocalPlaylistPage.qml:164 contents/ui/PlaybackHistory.qml:188
+#: contents/ui/PlaylistPage.qml:169 contents/ui/SearchPage.qml:130
 #, kde-format
 msgid "More"
 msgstr "Več"
 
-#: contents/ui/ArtistPage.qml:31
+#: contents/ui/ArtistPage.qml:81
 #, kde-format
 msgid "Radio"
 msgstr "Radio"
 
-#: contents/ui/ArtistPage.qml:57
+#: contents/ui/ArtistPage.qml:107
 #, kde-format
 msgid "Artist"
 msgstr "Avtor"
 
-#: contents/ui/ArtistPage.qml:79 contents/ui/SearchPage.qml:70
+#: contents/ui/ArtistPage.qml:129 contents/ui/SearchPage.qml:70
 #, kde-format
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
 "\"%1\"?"
 msgstr "Video playback še ni podprt. Ali želite predvajati samo zvok \"%1\"?"
 
-#: contents/ui/ArtistPage.qml:96 contents/ui/SearchPage.qml:26
+#: contents/ui/ArtistPage.qml:146 contents/ui/SearchPage.qml:26
 #, kde-format
 msgid "Albums"
 msgstr "Albumi"
 
-#: contents/ui/ArtistPage.qml:98
+#: contents/ui/ArtistPage.qml:148
 #, kde-format
 msgid "Singles"
 msgstr "Singli"
 
-#: contents/ui/ArtistPage.qml:100 contents/ui/SearchPage.qml:32
+#: contents/ui/ArtistPage.qml:150 contents/ui/SearchPage.qml:32
 #, kde-format
 msgid "Songs"
 msgstr "Glasba"
 
-#: contents/ui/ArtistPage.qml:102 contents/ui/SearchPage.qml:34
+#: contents/ui/ArtistPage.qml:152 contents/ui/SearchPage.qml:34
 #, kde-format
 msgid "Videos"
 msgstr "Videposnetki"
@@ -208,12 +212,12 @@ msgstr "Preimenuj"
 msgid "Delete"
 msgstr "Zbriši"
 
-#: contents/ui/LocalPlaylistPage.qml:19
+#: contents/ui/LocalPlaylistPage.qml:21
 #, kde-format
 msgid "Remove from Playlist"
 msgstr "Odstrani iz seznama predvajanja"
 
-#: contents/ui/LocalPlaylistPage.qml:29
+#: contents/ui/LocalPlaylistPage.qml:79
 #, kde-format
 msgid "This playlist is still empty"
 msgstr "Ta seznam predvajanja je še prazen"
@@ -224,10 +228,9 @@ msgid "AudioTube"
 msgstr "AudioTube"
 
 #: contents/ui/main.qml:260
-#, fuzzy, kde-format
-#| msgid "No media playing"
+#, kde-format
 msgid "No song playing"
-msgstr "Niče se ne predvaja"
+msgstr "Nobene pesmi se ne predvaja"
 
 #: contents/ui/MaximizedPlayerPage.qml:192
 #: contents/ui/MinimizedPlayerControls.qml:94
@@ -266,17 +269,17 @@ msgstr "Knjižnica"
 msgid "Search"
 msgstr "Išči"
 
-#: contents/ui/PlaybackHistory.qml:15
+#: contents/ui/PlaybackHistory.qml:17
 #, kde-format
 msgid "Unknown list of songs"
 msgstr "Neznan seznam pesmi"
 
-#: contents/ui/PlaybackHistory.qml:74
+#: contents/ui/PlaybackHistory.qml:135
 #, kde-format
 msgid "No songs here yet"
 msgstr "Tu še ni nobene pesmi"
 
-#: contents/ui/PlaylistPage.qml:67
+#: contents/ui/PlaylistPage.qml:120
 #, kde-format
 msgid "Playlist"
 msgstr "Seznam predvajanja"

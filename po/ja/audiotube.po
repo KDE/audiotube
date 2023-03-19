@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-18 00:57+0000\n"
+"POT-Creation-Date: 2023-03-19 00:46+0000\n"
 "PO-Revision-Date: 2021-05-29 19:15-0700\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -14,90 +14,94 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
-#: contents/ui/AlbumPage.qml:26 contents/ui/LibraryPage.qml:37
+#: contents/ui/AlbumPage.qml:75 contents/ui/LibraryPage.qml:37
 #: contents/ui/LibraryPage.qml:63 contents/ui/LibraryPage.qml:84
 #: contents/ui/LibraryPage.qml:222 contents/ui/LibraryPage.qml:248
-#: contents/ui/LibraryPage.qml:269 contents/ui/LocalPlaylistPage.qml:42
-#: contents/ui/PlaybackHistory.qml:23 contents/ui/PlaylistPage.qml:31
+#: contents/ui/LibraryPage.qml:269 contents/ui/LocalPlaylistPage.qml:70
+#: contents/ui/LocalPlaylistPage.qml:92 contents/ui/PlaybackHistory.qml:67
+#: contents/ui/PlaybackHistory.qml:89 contents/ui/PlaylistPage.qml:69
+#: contents/ui/PlaylistPage.qml:84
 #, kde-format
 msgid "Play"
 msgstr ""
 
-#: contents/ui/AlbumPage.qml:33 contents/ui/ArtistPage.qml:36
+#: contents/ui/AlbumPage.qml:82 contents/ui/ArtistPage.qml:86
 #: contents/ui/LibraryPage.qml:44 contents/ui/LibraryPage.qml:69
 #: contents/ui/LibraryPage.qml:92 contents/ui/LibraryPage.qml:229
 #: contents/ui/LibraryPage.qml:254 contents/ui/LibraryPage.qml:278
-#: contents/ui/LocalPlaylistPage.qml:49 contents/ui/MaximizedPlayerPage.qml:891
-#: contents/ui/PlaybackHistory.qml:36 contents/ui/PlaylistPage.qml:38
+#: contents/ui/LocalPlaylistPage.qml:65 contents/ui/LocalPlaylistPage.qml:99
+#: contents/ui/MaximizedPlayerPage.qml:891 contents/ui/PlaybackHistory.qml:55
+#: contents/ui/PlaybackHistory.qml:102 contents/ui/PlaylistPage.qml:62
+#: contents/ui/PlaylistPage.qml:91
 #, kde-format
 msgid "Shuffle"
 msgstr ""
 
-#: contents/ui/AlbumPage.qml:41 contents/ui/LibraryPage.qml:74
+#: contents/ui/AlbumPage.qml:90 contents/ui/LibraryPage.qml:74
 #: contents/ui/LibraryPage.qml:100 contents/ui/LibraryPage.qml:259
-#: contents/ui/LibraryPage.qml:286 contents/ui/LocalPlaylistPage.qml:55
-#: contents/ui/PlaybackHistory.qml:48 contents/ui/PlaylistPage.qml:46
+#: contents/ui/LibraryPage.qml:286 contents/ui/LocalPlaylistPage.qml:105
+#: contents/ui/PlaybackHistory.qml:114 contents/ui/PlaylistPage.qml:99
 #, kde-format
 msgid "Append to queue"
 msgstr ""
 
-#: contents/ui/AlbumPage.qml:46 contents/ui/ArtistPage.qml:43
-#: contents/ui/PlaylistPage.qml:51
+#: contents/ui/AlbumPage.qml:95 contents/ui/ArtistPage.qml:93
+#: contents/ui/PlaylistPage.qml:104
 #, kde-format
 msgid "Open in Browser"
 msgstr ""
 
-#: contents/ui/AlbumPage.qml:51 contents/ui/ArtistPage.qml:48
-#: contents/ui/PlaylistPage.qml:56
+#: contents/ui/AlbumPage.qml:100 contents/ui/ArtistPage.qml:98
+#: contents/ui/PlaylistPage.qml:109
 #, kde-format
 msgid "Share"
 msgstr ""
 
-#: contents/ui/AlbumPage.qml:61
+#: contents/ui/AlbumPage.qml:110
 #, kde-format
 msgid "Album • %1"
 msgstr ""
 
-#: contents/ui/AlbumPage.qml:105 contents/ui/ArtistPage.qml:137
-#: contents/ui/LocalPlaylistPage.qml:114 contents/ui/PlaybackHistory.qml:127
-#: contents/ui/PlaylistPage.qml:116 contents/ui/SearchPage.qml:130
+#: contents/ui/AlbumPage.qml:154 contents/ui/ArtistPage.qml:187
+#: contents/ui/LocalPlaylistPage.qml:164 contents/ui/PlaybackHistory.qml:188
+#: contents/ui/PlaylistPage.qml:169 contents/ui/SearchPage.qml:130
 #, kde-format
 msgid "More"
 msgstr ""
 
-#: contents/ui/ArtistPage.qml:31
+#: contents/ui/ArtistPage.qml:81
 #, kde-format
 msgid "Radio"
 msgstr ""
 
-#: contents/ui/ArtistPage.qml:57
+#: contents/ui/ArtistPage.qml:107
 #, kde-format
 msgid "Artist"
 msgstr ""
 
-#: contents/ui/ArtistPage.qml:79 contents/ui/SearchPage.qml:70
+#: contents/ui/ArtistPage.qml:129 contents/ui/SearchPage.qml:70
 #, kde-format
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
 "\"%1\"?"
 msgstr ""
 
-#: contents/ui/ArtistPage.qml:96 contents/ui/SearchPage.qml:26
+#: contents/ui/ArtistPage.qml:146 contents/ui/SearchPage.qml:26
 #, kde-format
 msgid "Albums"
 msgstr ""
 
-#: contents/ui/ArtistPage.qml:98
+#: contents/ui/ArtistPage.qml:148
 #, kde-format
 msgid "Singles"
 msgstr ""
 
-#: contents/ui/ArtistPage.qml:100 contents/ui/SearchPage.qml:32
+#: contents/ui/ArtistPage.qml:150 contents/ui/SearchPage.qml:32
 #, kde-format
 msgid "Songs"
 msgstr ""
 
-#: contents/ui/ArtistPage.qml:102 contents/ui/SearchPage.qml:34
+#: contents/ui/ArtistPage.qml:152 contents/ui/SearchPage.qml:34
 #, kde-format
 msgid "Videos"
 msgstr ""
@@ -204,12 +208,12 @@ msgstr ""
 msgid "Delete"
 msgstr ""
 
-#: contents/ui/LocalPlaylistPage.qml:19
+#: contents/ui/LocalPlaylistPage.qml:21
 #, kde-format
 msgid "Remove from Playlist"
 msgstr ""
 
-#: contents/ui/LocalPlaylistPage.qml:29
+#: contents/ui/LocalPlaylistPage.qml:79
 #, kde-format
 msgid "This playlist is still empty"
 msgstr ""
@@ -261,17 +265,17 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: contents/ui/PlaybackHistory.qml:15
+#: contents/ui/PlaybackHistory.qml:17
 #, kde-format
 msgid "Unknown list of songs"
 msgstr ""
 
-#: contents/ui/PlaybackHistory.qml:74
+#: contents/ui/PlaybackHistory.qml:135
 #, kde-format
 msgid "No songs here yet"
 msgstr ""
 
-#: contents/ui/PlaylistPage.qml:67
+#: contents/ui/PlaylistPage.qml:120
 #, kde-format
 msgid "Playlist"
 msgstr ""
