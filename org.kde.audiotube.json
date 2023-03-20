@@ -12,7 +12,8 @@
         "--socket=x11",
         "--socket=wayland",
         "--socket=pulseaudio",
-        "--device=dri"
+        "--device=dri",
+        "--own-name=org.mpris.MediaPlayer2.AudioTube"
     ],
     "separate-locales": false,
     "cleanup": [
