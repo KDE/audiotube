@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-19 00:46+0000\n"
-"PO-Revision-Date: 2023-03-09 10:34+0100\n"
+"PO-Revision-Date: 2023-03-18 11:23+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -232,16 +232,15 @@ msgid "AudioTube"
 msgstr "AudioTube"
 
 #: contents/ui/main.qml:260
-#, fuzzy, kde-format
-#| msgid "No media playing"
+#, kde-format
 msgid "No song playing"
-msgstr "No s'està reproduint cap suport"
+msgstr "No s'està reproduint cap cançó"
 
 #: contents/ui/MaximizedPlayerPage.qml:192
 #: contents/ui/MinimizedPlayerControls.qml:94
 #, kde-format
 msgid "No media playing"
-msgstr "No s'està reproduint cap suport"
+msgstr "No s'està reproduint cap fitxer multimèdia"
 
 #: contents/ui/MaximizedPlayerPage.qml:567
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-19 00:46+0000\n"
-"PO-Revision-Date: 2023-03-09 09:59+0000\n"
+"PO-Revision-Date: 2023-03-20 16:45+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
 "Language: pt\n"
@@ -231,8 +231,7 @@ msgid "AudioTube"
 msgstr "AudioTube"
 
 #: contents/ui/main.qml:260
-#, fuzzy, kde-format
-#| msgid "No media playing"
+#, kde-format
 msgid "No song playing"
 msgstr "Nada em reprodução"
 

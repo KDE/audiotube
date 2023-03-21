@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-19 00:46+0000\n"
-"PO-Revision-Date: 2023-03-09 13:48+0100\n"
+"PO-Revision-Date: 2023-03-20 14:20+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -229,10 +229,9 @@ msgid "AudioTube"
 msgstr "AudioTube"
 
 #: contents/ui/main.qml:260
-#, fuzzy, kde-format
-#| msgid "No media playing"
+#, kde-format
 msgid "No song playing"
-msgstr "Nepřehrává se žádné médium"
+msgstr "Nepřehrává se žádná hudba"
 
 #: contents/ui/MaximizedPlayerPage.qml:192
 #: contents/ui/MinimizedPlayerControls.qml:94
