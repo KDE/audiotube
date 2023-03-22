@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-19 00:46+0000\n"
+"POT-Creation-Date: 2023-03-22 00:47+0000\n"
 "PO-Revision-Date: 2023-03-18 11:23+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -36,9 +36,8 @@ msgstr "Reproduïx"
 #: contents/ui/LibraryPage.qml:92 contents/ui/LibraryPage.qml:229
 #: contents/ui/LibraryPage.qml:254 contents/ui/LibraryPage.qml:278
 #: contents/ui/LocalPlaylistPage.qml:65 contents/ui/LocalPlaylistPage.qml:99
-#: contents/ui/MaximizedPlayerPage.qml:891 contents/ui/PlaybackHistory.qml:55
-#: contents/ui/PlaybackHistory.qml:102 contents/ui/PlaylistPage.qml:62
-#: contents/ui/PlaylistPage.qml:91
+#: contents/ui/PlaybackHistory.qml:55 contents/ui/PlaybackHistory.qml:102
+#: contents/ui/PlaylistPage.qml:62 contents/ui/PlaylistPage.qml:91
 #, kde-format
 msgid "Shuffle"
 msgstr "Barreja"
@@ -236,29 +235,100 @@ msgstr "AudioTube"
 msgid "No song playing"
 msgstr "No s'està reproduint cap cançó"
 
-#: contents/ui/MaximizedPlayerPage.qml:192
+#: contents/ui/MaximizedPlayerPage.qml:96
+#, kde-format
+msgid "Close Maximized Player"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:201
 #: contents/ui/MinimizedPlayerControls.qml:94
 #, kde-format
 msgid "No media playing"
 msgstr "No s'està reproduint cap fitxer multimèdia"
 
-#: contents/ui/MaximizedPlayerPage.qml:567
+#: contents/ui/MaximizedPlayerPage.qml:424
+#, fuzzy, kde-format
+#| msgid "Remove Favourite"
+msgid "Remove from Favourites"
+msgstr "Elimina de les preferides"
+
+#: contents/ui/MaximizedPlayerPage.qml:424
+#, fuzzy, kde-format
+#| msgid "Add Favourite"
+msgid "Add to Favourites"
+msgstr "Afig a les preferides"
+
+#: contents/ui/MaximizedPlayerPage.qml:449
+#, fuzzy, kde-format
+#| msgid "Open in Browser"
+msgid "Open Volume Drawer"
+msgstr "Obri en el navegador"
+
+#: contents/ui/MaximizedPlayerPage.qml:559
+#, kde-format
+msgid "Unmute Audio"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:559
+#, kde-format
+msgid "Mute Audio"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:603
 #, kde-format
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/ui/MaximizedPlayerPage.qml:839
-#: contents/ui/MaximizedPlayerPage.qml:1016
+#: contents/ui/MaximizedPlayerPage.qml:626
+#, kde-format
+msgid "Hide Lyrics"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:626
+#, kde-format
+msgid "Show Lyrics"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:647 contents/ui/SongMenu.qml:183
+#: contents/ui/SongMenu.qml:269
+#, kde-format
+msgid "Share Song"
+msgstr "Compartix una cançó"
+
+#: contents/ui/MaximizedPlayerPage.qml:693
+#, fuzzy, kde-format
+#| msgid "Add to playlist"
+msgid "Add to a local playlist"
+msgstr "Afig a la llista de reproducció"
+
+#: contents/ui/MaximizedPlayerPage.qml:730
+#, kde-format
+msgid "Hide Queue"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:730
+#, kde-format
+msgid "Show Queue"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:897
+#: contents/ui/MaximizedPlayerPage.qml:1099
 #, kde-format
 msgid "Remove Track"
 msgstr "Elimina la pista"
 
-#: contents/ui/MaximizedPlayerPage.qml:870
+#: contents/ui/MaximizedPlayerPage.qml:933
 #, kde-format
-msgid "Clear Playlist"
-msgstr "Neteja la llista de reproducció"
+msgid "Clear Queue"
+msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:917
+#: contents/ui/MaximizedPlayerPage.qml:959
+#, fuzzy, kde-format
+#| msgid "Shuffle"
+msgid "Shuffle Queue"
+msgstr "Barreja"
+
+#: contents/ui/MaximizedPlayerPage.qml:990
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "Cançons properes"
@@ -368,11 +438,6 @@ msgstr "Elimina de l'historial"
 msgid "Add to playlist"
 msgstr "Afig a la llista de reproducció"
 
-#: contents/ui/SongMenu.qml:183 contents/ui/SongMenu.qml:269
-#, kde-format
-msgid "Share Song"
-msgstr "Compartix una cançó"
-
 #: main.cpp:58
 #, kde-format
 msgid "YouTube Music Player"
@@ -419,3 +484,6 @@ msgstr "antonibella5@yahoo.com"
 #, kde-format
 msgid "Unofficial API for YouTube Music"
 msgstr "API no oficial per a YouTube Music"
+
+#~ msgid "Clear Playlist"
+#~ msgstr "Neteja la llista de reproducció"

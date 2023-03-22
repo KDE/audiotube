@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-19 00:46+0000\n"
+"POT-Creation-Date: 2023-03-22 00:47+0000\n"
 "PO-Revision-Date: 2021-09-17 20:09+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -33,9 +33,8 @@ msgstr "बजाएँ"
 #: contents/ui/LibraryPage.qml:92 contents/ui/LibraryPage.qml:229
 #: contents/ui/LibraryPage.qml:254 contents/ui/LibraryPage.qml:278
 #: contents/ui/LocalPlaylistPage.qml:65 contents/ui/LocalPlaylistPage.qml:99
-#: contents/ui/MaximizedPlayerPage.qml:891 contents/ui/PlaybackHistory.qml:55
-#: contents/ui/PlaybackHistory.qml:102 contents/ui/PlaylistPage.qml:62
-#: contents/ui/PlaylistPage.qml:91
+#: contents/ui/PlaybackHistory.qml:55 contents/ui/PlaybackHistory.qml:102
+#: contents/ui/PlaylistPage.qml:62 contents/ui/PlaylistPage.qml:91
 #, kde-format
 msgid "Shuffle"
 msgstr "फेंटें"
@@ -242,30 +241,100 @@ msgstr "ओडियो-ट्यूब"
 msgid "No song playing"
 msgstr "कोई मीडिया नहीं बजा रहा है"
 
-#: contents/ui/MaximizedPlayerPage.qml:192
+#: contents/ui/MaximizedPlayerPage.qml:96
+#, kde-format
+msgid "Close Maximized Player"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:201
 #: contents/ui/MinimizedPlayerControls.qml:94
 #, kde-format
 msgid "No media playing"
 msgstr "कोई मीडिया नहीं बजा रहा है"
 
-#: contents/ui/MaximizedPlayerPage.qml:567
+#: contents/ui/MaximizedPlayerPage.qml:424
+#, fuzzy, kde-format
+#| msgid "Playlists"
+msgid "Remove from Favourites"
+msgstr "गीत-सूचीयाँ"
+
+#: contents/ui/MaximizedPlayerPage.qml:424
+#, fuzzy, kde-format
+#| msgid "Add to Playlist"
+msgid "Add to Favourites"
+msgstr "गीत-सूची में जोड़ें"
+
+#: contents/ui/MaximizedPlayerPage.qml:449
+#, kde-format
+msgid "Open Volume Drawer"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:559
+#, kde-format
+msgid "Unmute Audio"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:559
+#, kde-format
+msgid "Mute Audio"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:603
 #, kde-format
 msgid "%1%"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:839
-#: contents/ui/MaximizedPlayerPage.qml:1016
+#: contents/ui/MaximizedPlayerPage.qml:626
+#, kde-format
+msgid "Hide Lyrics"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:626
+#, kde-format
+msgid "Show Lyrics"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:647 contents/ui/SongMenu.qml:183
+#: contents/ui/SongMenu.qml:269
+#, kde-format
+msgid "Share Song"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:693
+#, fuzzy, kde-format
+#| msgid "Add to Playlist"
+msgid "Add to a local playlist"
+msgstr "गीत-सूची में जोड़ें"
+
+#: contents/ui/MaximizedPlayerPage.qml:730
+#, kde-format
+msgid "Hide Queue"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:730
+#, kde-format
+msgid "Show Queue"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:897
+#: contents/ui/MaximizedPlayerPage.qml:1099
 #, kde-format
 msgid "Remove Track"
 msgstr "गाना हटाएँ"
 
-#: contents/ui/MaximizedPlayerPage.qml:870
+#: contents/ui/MaximizedPlayerPage.qml:933
 #, fuzzy, kde-format
-#| msgid "Playlists"
-msgid "Clear Playlist"
-msgstr "गीत-सूचीयाँ"
+#| msgid "Clear"
+msgid "Clear Queue"
+msgstr "साफ करें"
 
-#: contents/ui/MaximizedPlayerPage.qml:917
+#: contents/ui/MaximizedPlayerPage.qml:959
+#, fuzzy, kde-format
+#| msgid "Shuffle"
+msgid "Shuffle Queue"
+msgstr "फेंटें"
+
+#: contents/ui/MaximizedPlayerPage.qml:990
 #, kde-format
 msgid "Upcoming Songs"
 msgstr ""
@@ -377,11 +446,6 @@ msgstr ""
 msgid "Add to playlist"
 msgstr "गीत-सूची में जोड़ें"
 
-#: contents/ui/SongMenu.qml:183 contents/ui/SongMenu.qml:269
-#, kde-format
-msgid "Share Song"
-msgstr ""
-
 #: main.cpp:58
 #, kde-format
 msgid "YouTube Music Player"
@@ -431,15 +495,17 @@ msgid "Unofficial API for YouTube Music"
 msgstr "यूट्यूब संगीत पर संगीत ढूंढें"
 
 #, fuzzy
+#~| msgid "Playlists"
+#~ msgid "Clear Playlist"
+#~ msgstr "गीत-सूचीयाँ"
+
+#, fuzzy
 #~| msgid "No media playing"
 #~ msgid "Now Playing"
 #~ msgstr "कोई मीडिया नहीं बजा रहा है"
 
 #~ msgid "Play next"
 #~ msgstr "अगला बजाएँ"
-
-#~ msgid "Clear"
-#~ msgstr "साफ करें"
 
 #~ msgid "Pause"
 #~ msgstr "रोकें"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-19 00:46+0000\n"
+"POT-Creation-Date: 2023-03-22 00:47+0000\n"
 "PO-Revision-Date: 2022-06-19 12:16+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -33,9 +33,8 @@ msgstr "Başladın"
 #: contents/ui/LibraryPage.qml:92 contents/ui/LibraryPage.qml:229
 #: contents/ui/LibraryPage.qml:254 contents/ui/LibraryPage.qml:278
 #: contents/ui/LocalPlaylistPage.qml:65 contents/ui/LocalPlaylistPage.qml:99
-#: contents/ui/MaximizedPlayerPage.qml:891 contents/ui/PlaybackHistory.qml:55
-#: contents/ui/PlaybackHistory.qml:102 contents/ui/PlaylistPage.qml:62
-#: contents/ui/PlaylistPage.qml:91
+#: contents/ui/PlaybackHistory.qml:55 contents/ui/PlaybackHistory.qml:102
+#: contents/ui/PlaylistPage.qml:62 contents/ui/PlaylistPage.qml:91
 #, kde-format
 msgid "Shuffle"
 msgstr "Qarışıq"
@@ -245,30 +244,103 @@ msgstr "AudioTube"
 msgid "No song playing"
 msgstr "Media faylı oynadılmır"
 
-#: contents/ui/MaximizedPlayerPage.qml:192
+#: contents/ui/MaximizedPlayerPage.qml:96
+#, kde-format
+msgid "Close Maximized Player"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:201
 #: contents/ui/MinimizedPlayerControls.qml:94
 #, kde-format
 msgid "No media playing"
 msgstr "Media faylı oynadılmır"
 
-#: contents/ui/MaximizedPlayerPage.qml:567
+#: contents/ui/MaximizedPlayerPage.qml:424
+#, fuzzy, kde-format
+#| msgid "Favourites"
+msgid "Remove from Favourites"
+msgstr "Süçilmişlər"
+
+#: contents/ui/MaximizedPlayerPage.qml:424
+#, fuzzy, kde-format
+#| msgid "Favourites"
+msgid "Add to Favourites"
+msgstr "Süçilmişlər"
+
+#: contents/ui/MaximizedPlayerPage.qml:449
+#, kde-format
+msgid "Open Volume Drawer"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:559
+#, kde-format
+msgid "Unmute Audio"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:559
+#, kde-format
+msgid "Mute Audio"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:603
 #, kde-format
 msgid "%1%"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:839
-#: contents/ui/MaximizedPlayerPage.qml:1016
+#: contents/ui/MaximizedPlayerPage.qml:626
+#, kde-format
+msgid "Hide Lyrics"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:626
+#, kde-format
+msgid "Show Lyrics"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:647 contents/ui/SongMenu.qml:183
+#: contents/ui/SongMenu.qml:269
+#, fuzzy, kde-format
+#| msgid "Favourite Songs"
+msgid "Share Song"
+msgstr "Seçilmiş mahnılar"
+
+#: contents/ui/MaximizedPlayerPage.qml:693
+#, fuzzy, kde-format
+#| msgid "Add to Playlist"
+msgid "Add to a local playlist"
+msgstr "Mahnı siyahısına əlavə edin"
+
+#: contents/ui/MaximizedPlayerPage.qml:730
+#, fuzzy, kde-format
+#| msgid "Queue"
+msgid "Hide Queue"
+msgstr "Növbə"
+
+#: contents/ui/MaximizedPlayerPage.qml:730
+#, fuzzy, kde-format
+#| msgid "Queue"
+msgid "Show Queue"
+msgstr "Növbə"
+
+#: contents/ui/MaximizedPlayerPage.qml:897
+#: contents/ui/MaximizedPlayerPage.qml:1099
 #, kde-format
 msgid "Remove Track"
 msgstr "Mahnını silin"
 
-#: contents/ui/MaximizedPlayerPage.qml:870
+#: contents/ui/MaximizedPlayerPage.qml:933
 #, fuzzy, kde-format
-#| msgid "Playlists"
-msgid "Clear Playlist"
-msgstr "Mahnı siyahıları"
+#| msgid "Queue"
+msgid "Clear Queue"
+msgstr "Növbə"
 
-#: contents/ui/MaximizedPlayerPage.qml:917
+#: contents/ui/MaximizedPlayerPage.qml:959
+#, fuzzy, kde-format
+#| msgid "Shuffle"
+msgid "Shuffle Queue"
+msgstr "Qarışıq"
+
+#: contents/ui/MaximizedPlayerPage.qml:990
 #, kde-format
 msgid "Upcoming Songs"
 msgstr ""
@@ -382,12 +454,6 @@ msgstr ""
 msgid "Add to playlist"
 msgstr "Mahnı siyahısına əlavə edin"
 
-#: contents/ui/SongMenu.qml:183 contents/ui/SongMenu.qml:269
-#, fuzzy, kde-format
-#| msgid "Favourite Songs"
-msgid "Share Song"
-msgstr "Seçilmiş mahnılar"
-
 #: main.cpp:58
 #, kde-format
 msgid "YouTube Music Player"
@@ -437,15 +503,17 @@ msgid "Unofficial API for YouTube Music"
 msgstr "Musiqini YouTube Musiqi-də tapın"
 
 #, fuzzy
+#~| msgid "Playlists"
+#~ msgid "Clear Playlist"
+#~ msgstr "Mahnı siyahıları"
+
+#, fuzzy
 #~| msgid "Played Songs"
 #~ msgid "played Songs"
 #~ msgstr "Oxudulan mahnılar"
 
 #~ msgid "Now Playing"
 #~ msgstr "İndi səslənir"
-
-#~ msgid "Queue"
-#~ msgstr "Növbə"
 
 #~ msgid "Back"
 #~ msgstr "Geriyə"

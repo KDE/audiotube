@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-19 00:46+0000\n"
+"POT-Creation-Date: 2023-03-22 00:47+0000\n"
 "PO-Revision-Date: 2023-02-17 17:05+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -33,9 +33,8 @@ msgstr "Putar"
 #: contents/ui/LibraryPage.qml:92 contents/ui/LibraryPage.qml:229
 #: contents/ui/LibraryPage.qml:254 contents/ui/LibraryPage.qml:278
 #: contents/ui/LocalPlaylistPage.qml:65 contents/ui/LocalPlaylistPage.qml:99
-#: contents/ui/MaximizedPlayerPage.qml:891 contents/ui/PlaybackHistory.qml:55
-#: contents/ui/PlaybackHistory.qml:102 contents/ui/PlaylistPage.qml:62
-#: contents/ui/PlaylistPage.qml:91
+#: contents/ui/PlaybackHistory.qml:55 contents/ui/PlaybackHistory.qml:102
+#: contents/ui/PlaylistPage.qml:62 contents/ui/PlaylistPage.qml:91
 #, kde-format
 msgid "Shuffle"
 msgstr "Acak"
@@ -243,30 +242,106 @@ msgstr "AudioTube"
 msgid "No song playing"
 msgstr "Tidak ada media yang diputarkan"
 
-#: contents/ui/MaximizedPlayerPage.qml:192
+#: contents/ui/MaximizedPlayerPage.qml:96
+#, kde-format
+msgid "Close Maximized Player"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:201
 #: contents/ui/MinimizedPlayerControls.qml:94
 #, kde-format
 msgid "No media playing"
 msgstr "Tidak ada media yang diputarkan"
 
-#: contents/ui/MaximizedPlayerPage.qml:567
+#: contents/ui/MaximizedPlayerPage.qml:424
+#, fuzzy, kde-format
+#| msgid "Remove Favourite"
+msgid "Remove from Favourites"
+msgstr "Hapus Favorit"
+
+#: contents/ui/MaximizedPlayerPage.qml:424
+#, fuzzy, kde-format
+#| msgid "Add Favourite"
+msgid "Add to Favourites"
+msgstr "Tambahkan Favorit"
+
+#: contents/ui/MaximizedPlayerPage.qml:449
+#, fuzzy, kde-format
+#| msgid "Open in Browser"
+msgid "Open Volume Drawer"
+msgstr "Buka di Peramban"
+
+#: contents/ui/MaximizedPlayerPage.qml:559
+#, kde-format
+msgid "Unmute Audio"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:559
+#, kde-format
+msgid "Mute Audio"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:603
 #, kde-format
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/ui/MaximizedPlayerPage.qml:839
-#: contents/ui/MaximizedPlayerPage.qml:1016
+#: contents/ui/MaximizedPlayerPage.qml:626
+#, fuzzy, kde-format
+#| msgid "Lyrics"
+msgid "Hide Lyrics"
+msgstr "Lirik"
+
+#: contents/ui/MaximizedPlayerPage.qml:626
+#, fuzzy, kde-format
+#| msgid "Lyrics"
+msgid "Show Lyrics"
+msgstr "Lirik"
+
+#: contents/ui/MaximizedPlayerPage.qml:647 contents/ui/SongMenu.qml:183
+#: contents/ui/SongMenu.qml:269
+#, fuzzy, kde-format
+#| msgid "Favourite Songs"
+msgid "Share Song"
+msgstr "Lagu Favorit"
+
+#: contents/ui/MaximizedPlayerPage.qml:693
+#, fuzzy, kde-format
+#| msgid "Add to Playlist"
+msgid "Add to a local playlist"
+msgstr "Tambahkan ke Daftar Putar"
+
+#: contents/ui/MaximizedPlayerPage.qml:730
+#, fuzzy, kde-format
+#| msgid "Queue"
+msgid "Hide Queue"
+msgstr "Antrean"
+
+#: contents/ui/MaximizedPlayerPage.qml:730
+#, fuzzy, kde-format
+#| msgid "Queue"
+msgid "Show Queue"
+msgstr "Antrean"
+
+#: contents/ui/MaximizedPlayerPage.qml:897
+#: contents/ui/MaximizedPlayerPage.qml:1099
 #, kde-format
 msgid "Remove Track"
 msgstr "Hapus Trek"
 
-#: contents/ui/MaximizedPlayerPage.qml:870
+#: contents/ui/MaximizedPlayerPage.qml:933
 #, fuzzy, kde-format
-#| msgid "Playlist"
-msgid "Clear Playlist"
-msgstr "Daftar Putar"
+#| msgid "Queue"
+msgid "Clear Queue"
+msgstr "Antrean"
 
-#: contents/ui/MaximizedPlayerPage.qml:917
+#: contents/ui/MaximizedPlayerPage.qml:959
+#, fuzzy, kde-format
+#| msgid "Shuffle"
+msgid "Shuffle Queue"
+msgstr "Acak"
+
+#: contents/ui/MaximizedPlayerPage.qml:990
 #, kde-format
 msgid "Upcoming Songs"
 msgstr ""
@@ -377,12 +452,6 @@ msgstr "Hapus dari Riwayat"
 msgid "Add to playlist"
 msgstr "Tambahkan ke Daftar Putar"
 
-#: contents/ui/SongMenu.qml:183 contents/ui/SongMenu.qml:269
-#, fuzzy, kde-format
-#| msgid "Favourite Songs"
-msgid "Share Song"
-msgstr "Lagu Favorit"
-
 #: main.cpp:58
 #, kde-format
 msgid "YouTube Music Player"
@@ -430,17 +499,16 @@ msgstr "linerly@protonmail.com"
 msgid "Unofficial API for YouTube Music"
 msgstr "API tidak resmi untuk YouTube Music"
 
+#, fuzzy
+#~| msgid "Playlist"
+#~ msgid "Clear Playlist"
+#~ msgstr "Daftar Putar"
+
 #~ msgid "played Songs"
 #~ msgstr "Lagu yang telah diputar"
 
 #~ msgid "Now Playing"
 #~ msgstr "Sekarang Diputarkan"
-
-#~ msgid "Queue"
-#~ msgstr "Antrean"
-
-#~ msgid "Lyrics"
-#~ msgstr "Lirik"
 
 #~ msgid "Back"
 #~ msgstr "Kembali"

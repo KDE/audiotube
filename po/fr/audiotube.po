@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-19 00:46+0000\n"
+"POT-Creation-Date: 2023-03-22 00:47+0000\n"
 "PO-Revision-Date: 2023-03-19 09:04+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
@@ -31,9 +31,8 @@ msgstr "Lire"
 #: contents/ui/LibraryPage.qml:92 contents/ui/LibraryPage.qml:229
 #: contents/ui/LibraryPage.qml:254 contents/ui/LibraryPage.qml:278
 #: contents/ui/LocalPlaylistPage.qml:65 contents/ui/LocalPlaylistPage.qml:99
-#: contents/ui/MaximizedPlayerPage.qml:891 contents/ui/PlaybackHistory.qml:55
-#: contents/ui/PlaybackHistory.qml:102 contents/ui/PlaylistPage.qml:62
-#: contents/ui/PlaylistPage.qml:91
+#: contents/ui/PlaybackHistory.qml:55 contents/ui/PlaybackHistory.qml:102
+#: contents/ui/PlaylistPage.qml:62 contents/ui/PlaylistPage.qml:91
 #, kde-format
 msgid "Shuffle"
 msgstr "Mélanger"
@@ -231,29 +230,105 @@ msgstr "AudioTube"
 msgid "No song playing"
 msgstr "Aucune chanson en lecture"
 
-#: contents/ui/MaximizedPlayerPage.qml:192
+#: contents/ui/MaximizedPlayerPage.qml:96
+#, kde-format
+msgid "Close Maximized Player"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:201
 #: contents/ui/MinimizedPlayerControls.qml:94
 #, kde-format
 msgid "No media playing"
 msgstr "Aucun média en lecture"
 
-#: contents/ui/MaximizedPlayerPage.qml:567
+#: contents/ui/MaximizedPlayerPage.qml:424
+#, fuzzy, kde-format
+#| msgid "Remove Favourite"
+msgid "Remove from Favourites"
+msgstr "Supprimer un favori"
+
+#: contents/ui/MaximizedPlayerPage.qml:424
+#, fuzzy, kde-format
+#| msgid "Add Favourite"
+msgid "Add to Favourites"
+msgstr "Ajouter un favori"
+
+#: contents/ui/MaximizedPlayerPage.qml:449
+#, fuzzy, kde-format
+#| msgid "Open in Browser"
+msgid "Open Volume Drawer"
+msgstr "Ouvrir dans un navigateur"
+
+#: contents/ui/MaximizedPlayerPage.qml:559
+#, kde-format
+msgid "Unmute Audio"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:559
+#, kde-format
+msgid "Mute Audio"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:603
 #, kde-format
 msgid "%1%"
 msgstr "%1 %"
 
-#: contents/ui/MaximizedPlayerPage.qml:839
-#: contents/ui/MaximizedPlayerPage.qml:1016
+#: contents/ui/MaximizedPlayerPage.qml:626
+#, fuzzy, kde-format
+#| msgid "Lyrics"
+msgid "Hide Lyrics"
+msgstr "Paroles"
+
+#: contents/ui/MaximizedPlayerPage.qml:626
+#, fuzzy, kde-format
+#| msgid "Lyrics"
+msgid "Show Lyrics"
+msgstr "Paroles"
+
+#: contents/ui/MaximizedPlayerPage.qml:647 contents/ui/SongMenu.qml:183
+#: contents/ui/SongMenu.qml:269
+#, kde-format
+msgid "Share Song"
+msgstr "Partager une chanson"
+
+#: contents/ui/MaximizedPlayerPage.qml:693
+#, fuzzy, kde-format
+#| msgid "Add to playlist"
+msgid "Add to a local playlist"
+msgstr "Ajouter à la liste de lecture"
+
+#: contents/ui/MaximizedPlayerPage.qml:730
+#, fuzzy, kde-format
+#| msgid "Queue"
+msgid "Hide Queue"
+msgstr "Mettre en file d'attente"
+
+#: contents/ui/MaximizedPlayerPage.qml:730
+#, fuzzy, kde-format
+#| msgid "Queue"
+msgid "Show Queue"
+msgstr "Mettre en file d'attente"
+
+#: contents/ui/MaximizedPlayerPage.qml:897
+#: contents/ui/MaximizedPlayerPage.qml:1099
 #, kde-format
 msgid "Remove Track"
 msgstr "Supprimer une piste"
 
-#: contents/ui/MaximizedPlayerPage.qml:870
-#, kde-format
-msgid "Clear Playlist"
-msgstr "Effacer une liste de lecture"
+#: contents/ui/MaximizedPlayerPage.qml:933
+#, fuzzy, kde-format
+#| msgid "Queue"
+msgid "Clear Queue"
+msgstr "Mettre en file d'attente"
 
-#: contents/ui/MaximizedPlayerPage.qml:917
+#: contents/ui/MaximizedPlayerPage.qml:959
+#, fuzzy, kde-format
+#| msgid "Shuffle"
+msgid "Shuffle Queue"
+msgstr "Mélanger"
+
+#: contents/ui/MaximizedPlayerPage.qml:990
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "Prochaines chansons"
@@ -363,11 +438,6 @@ msgstr "Supprimer de l'historique"
 msgid "Add to playlist"
 msgstr "Ajouter à la liste de lecture"
 
-#: contents/ui/SongMenu.qml:183 contents/ui/SongMenu.qml:269
-#, kde-format
-msgid "Share Song"
-msgstr "Partager une chanson"
-
 #: main.cpp:58
 #, kde-format
 msgid "YouTube Music Player"
@@ -415,6 +485,9 @@ msgstr "xavier.besnard@neuf.fr"
 msgid "Unofficial API for YouTube Music"
 msgstr "API non officiel pour la musique sur « YouTube Music »"
 
+#~ msgid "Clear Playlist"
+#~ msgstr "Effacer une liste de lecture"
+
 #~ msgid "played Songs"
 #~ msgstr "Titres lus"
 
@@ -423,12 +496,6 @@ msgstr "API non officiel pour la musique sur « YouTube Music »"
 
 #~ msgid "Now Playing"
 #~ msgstr "En cours de lecture"
-
-#~ msgid "Queue"
-#~ msgstr "Mettre en file d'attente"
-
-#~ msgid "Lyrics"
-#~ msgstr "Paroles"
 
 #~ msgid "Back"
 #~ msgstr "En arrière"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-19 00:46+0000\n"
+"POT-Creation-Date: 2023-03-22 00:47+0000\n"
 "PO-Revision-Date: 2023-03-07 14:06+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -33,9 +33,8 @@ msgstr "Toista"
 #: contents/ui/LibraryPage.qml:92 contents/ui/LibraryPage.qml:229
 #: contents/ui/LibraryPage.qml:254 contents/ui/LibraryPage.qml:278
 #: contents/ui/LocalPlaylistPage.qml:65 contents/ui/LocalPlaylistPage.qml:99
-#: contents/ui/MaximizedPlayerPage.qml:891 contents/ui/PlaybackHistory.qml:55
-#: contents/ui/PlaybackHistory.qml:102 contents/ui/PlaylistPage.qml:62
-#: contents/ui/PlaylistPage.qml:91
+#: contents/ui/PlaybackHistory.qml:55 contents/ui/PlaybackHistory.qml:102
+#: contents/ui/PlaylistPage.qml:62 contents/ui/PlaylistPage.qml:91
 #, kde-format
 msgid "Shuffle"
 msgstr "Sekoita"
@@ -241,29 +240,104 @@ msgstr "AudioTube"
 msgid "No song playing"
 msgstr "Mitään ei toisteta"
 
-#: contents/ui/MaximizedPlayerPage.qml:192
+#: contents/ui/MaximizedPlayerPage.qml:96
+#, kde-format
+msgid "Close Maximized Player"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:201
 #: contents/ui/MinimizedPlayerControls.qml:94
 #, kde-format
 msgid "No media playing"
 msgstr "Mitään ei toisteta"
 
-#: contents/ui/MaximizedPlayerPage.qml:567
+#: contents/ui/MaximizedPlayerPage.qml:424
+#, fuzzy, kde-format
+#| msgid "Remove Favourite"
+msgid "Remove from Favourites"
+msgstr "Poista suosikki"
+
+#: contents/ui/MaximizedPlayerPage.qml:424
+#, fuzzy, kde-format
+#| msgid "Add Favourite"
+msgid "Add to Favourites"
+msgstr "Lisää suosikki"
+
+#: contents/ui/MaximizedPlayerPage.qml:449
+#, fuzzy, kde-format
+#| msgid "Open in Browser"
+msgid "Open Volume Drawer"
+msgstr "Avaa selaimeen"
+
+#: contents/ui/MaximizedPlayerPage.qml:559
+#, kde-format
+msgid "Unmute Audio"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:559
+#, kde-format
+msgid "Mute Audio"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:603
 #, kde-format
 msgid "%1%"
 msgstr "%1 %"
 
-#: contents/ui/MaximizedPlayerPage.qml:839
-#: contents/ui/MaximizedPlayerPage.qml:1016
+#: contents/ui/MaximizedPlayerPage.qml:626
+#, kde-format
+msgid "Hide Lyrics"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:626
+#, kde-format
+msgid "Show Lyrics"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:647 contents/ui/SongMenu.qml:183
+#: contents/ui/SongMenu.qml:269
+#, fuzzy, kde-format
+#| msgid "Favourite Songs"
+msgid "Share Song"
+msgstr "Suosikkikappaleet"
+
+#: contents/ui/MaximizedPlayerPage.qml:693
+#, fuzzy, kde-format
+#| msgid "Add to Playlist"
+msgid "Add to a local playlist"
+msgstr "Lisää soittolistaan"
+
+#: contents/ui/MaximizedPlayerPage.qml:730
+#, fuzzy, kde-format
+#| msgid "Queue"
+msgid "Hide Queue"
+msgstr "Jono"
+
+#: contents/ui/MaximizedPlayerPage.qml:730
+#, fuzzy, kde-format
+#| msgid "Queue"
+msgid "Show Queue"
+msgstr "Jono"
+
+#: contents/ui/MaximizedPlayerPage.qml:897
+#: contents/ui/MaximizedPlayerPage.qml:1099
 #, kde-format
 msgid "Remove Track"
 msgstr "Poista raita"
 
-#: contents/ui/MaximizedPlayerPage.qml:870
-#, kde-format
-msgid "Clear Playlist"
-msgstr "Tyhjennä soittolista"
+#: contents/ui/MaximizedPlayerPage.qml:933
+#, fuzzy, kde-format
+#| msgid "Queue"
+msgid "Clear Queue"
+msgstr "Jono"
 
-#: contents/ui/MaximizedPlayerPage.qml:917
+#: contents/ui/MaximizedPlayerPage.qml:959
+#, fuzzy, kde-format
+#| msgid "Shuffle"
+msgid "Shuffle Queue"
+msgstr "Sekoita"
+
+#: contents/ui/MaximizedPlayerPage.qml:990
 #, kde-format
 msgid "Upcoming Songs"
 msgstr ""
@@ -374,12 +448,6 @@ msgstr "Poista historiasta"
 msgid "Add to playlist"
 msgstr "Lisää soittolistaan"
 
-#: contents/ui/SongMenu.qml:183 contents/ui/SongMenu.qml:269
-#, fuzzy, kde-format
-#| msgid "Favourite Songs"
-msgid "Share Song"
-msgstr "Suosikkikappaleet"
-
 #: main.cpp:58
 #, kde-format
 msgid "YouTube Music Player"
@@ -427,6 +495,9 @@ msgstr "translator@legisign.org"
 msgid "Unofficial API for YouTube Music"
 msgstr "Epävirallinen YouTube Music -API"
 
+#~ msgid "Clear Playlist"
+#~ msgstr "Tyhjennä soittolista"
+
 #, fuzzy
 #~| msgid "Played Songs"
 #~ msgid "played Songs"
@@ -434,9 +505,6 @@ msgstr "Epävirallinen YouTube Music -API"
 
 #~ msgid "Now Playing"
 #~ msgstr "Nyt soi"
-
-#~ msgid "Queue"
-#~ msgstr "Jono"
 
 #~ msgid "Back"
 #~ msgstr "Takaisin"

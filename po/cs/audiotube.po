@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-19 00:46+0000\n"
+"POT-Creation-Date: 2023-03-22 00:47+0000\n"
 "PO-Revision-Date: 2023-03-20 14:20+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -33,9 +33,8 @@ msgstr "Přehrát"
 #: contents/ui/LibraryPage.qml:92 contents/ui/LibraryPage.qml:229
 #: contents/ui/LibraryPage.qml:254 contents/ui/LibraryPage.qml:278
 #: contents/ui/LocalPlaylistPage.qml:65 contents/ui/LocalPlaylistPage.qml:99
-#: contents/ui/MaximizedPlayerPage.qml:891 contents/ui/PlaybackHistory.qml:55
-#: contents/ui/PlaybackHistory.qml:102 contents/ui/PlaylistPage.qml:62
-#: contents/ui/PlaylistPage.qml:91
+#: contents/ui/PlaybackHistory.qml:55 contents/ui/PlaybackHistory.qml:102
+#: contents/ui/PlaylistPage.qml:62 contents/ui/PlaylistPage.qml:91
 #, kde-format
 msgid "Shuffle"
 msgstr "Zamíchat"
@@ -233,29 +232,100 @@ msgstr "AudioTube"
 msgid "No song playing"
 msgstr "Nepřehrává se žádná hudba"
 
-#: contents/ui/MaximizedPlayerPage.qml:192
+#: contents/ui/MaximizedPlayerPage.qml:96
+#, kde-format
+msgid "Close Maximized Player"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:201
 #: contents/ui/MinimizedPlayerControls.qml:94
 #, kde-format
 msgid "No media playing"
 msgstr "Nepřehrává se žádné médium"
 
-#: contents/ui/MaximizedPlayerPage.qml:567
+#: contents/ui/MaximizedPlayerPage.qml:424
+#, fuzzy, kde-format
+#| msgid "Remove Favourite"
+msgid "Remove from Favourites"
+msgstr "Odstranit oblíbené"
+
+#: contents/ui/MaximizedPlayerPage.qml:424
+#, fuzzy, kde-format
+#| msgid "Add Favourite"
+msgid "Add to Favourites"
+msgstr "Přidat oblíbené"
+
+#: contents/ui/MaximizedPlayerPage.qml:449
+#, fuzzy, kde-format
+#| msgid "Open in Browser"
+msgid "Open Volume Drawer"
+msgstr "Otevřít v prohlížeči"
+
+#: contents/ui/MaximizedPlayerPage.qml:559
+#, kde-format
+msgid "Unmute Audio"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:559
+#, kde-format
+msgid "Mute Audio"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:603
 #, kde-format
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/ui/MaximizedPlayerPage.qml:839
-#: contents/ui/MaximizedPlayerPage.qml:1016
+#: contents/ui/MaximizedPlayerPage.qml:626
+#, kde-format
+msgid "Hide Lyrics"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:626
+#, kde-format
+msgid "Show Lyrics"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:647 contents/ui/SongMenu.qml:183
+#: contents/ui/SongMenu.qml:269
+#, kde-format
+msgid "Share Song"
+msgstr "Sdílet píseň"
+
+#: contents/ui/MaximizedPlayerPage.qml:693
+#, fuzzy, kde-format
+#| msgid "Add to playlist"
+msgid "Add to a local playlist"
+msgstr "Přidat do seznamu stop"
+
+#: contents/ui/MaximizedPlayerPage.qml:730
+#, kde-format
+msgid "Hide Queue"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:730
+#, kde-format
+msgid "Show Queue"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:897
+#: contents/ui/MaximizedPlayerPage.qml:1099
 #, kde-format
 msgid "Remove Track"
 msgstr "Odstranit skladbu"
 
-#: contents/ui/MaximizedPlayerPage.qml:870
+#: contents/ui/MaximizedPlayerPage.qml:933
 #, kde-format
-msgid "Clear Playlist"
-msgstr "Smazat seznam skladeb"
+msgid "Clear Queue"
+msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:917
+#: contents/ui/MaximizedPlayerPage.qml:959
+#, fuzzy, kde-format
+#| msgid "Shuffle"
+msgid "Shuffle Queue"
+msgstr "Zamíchat"
+
+#: contents/ui/MaximizedPlayerPage.qml:990
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "Nadcházející písně"
@@ -365,11 +435,6 @@ msgstr "Odstranit z historie"
 msgid "Add to playlist"
 msgstr "Přidat do seznamu stop"
 
-#: contents/ui/SongMenu.qml:183 contents/ui/SongMenu.qml:269
-#, kde-format
-msgid "Share Song"
-msgstr "Sdílet píseň"
-
 #: main.cpp:58
 #, kde-format
 msgid "YouTube Music Player"
@@ -416,3 +481,6 @@ msgstr "vit@pelcak.org"
 #, kde-format
 msgid "Unofficial API for YouTube Music"
 msgstr "Neoficiální API pro hudbu YouTube"
+
+#~ msgid "Clear Playlist"
+#~ msgstr "Smazat seznam skladeb"

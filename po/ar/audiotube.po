@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-19 00:46+0000\n"
+"POT-Creation-Date: 2023-03-22 00:47+0000\n"
 "PO-Revision-Date: 2023-02-02 11:59+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -34,9 +34,8 @@ msgstr "شغّل"
 #: contents/ui/LibraryPage.qml:92 contents/ui/LibraryPage.qml:229
 #: contents/ui/LibraryPage.qml:254 contents/ui/LibraryPage.qml:278
 #: contents/ui/LocalPlaylistPage.qml:65 contents/ui/LocalPlaylistPage.qml:99
-#: contents/ui/MaximizedPlayerPage.qml:891 contents/ui/PlaybackHistory.qml:55
-#: contents/ui/PlaybackHistory.qml:102 contents/ui/PlaylistPage.qml:62
-#: contents/ui/PlaylistPage.qml:91
+#: contents/ui/PlaybackHistory.qml:55 contents/ui/PlaybackHistory.qml:102
+#: contents/ui/PlaylistPage.qml:62 contents/ui/PlaylistPage.qml:91
 #, kde-format
 msgid "Shuffle"
 msgstr "اخلط"
@@ -244,30 +243,106 @@ msgstr "تيوب الصوتي"
 msgid "No song playing"
 msgstr "لا يوجد وسائط تعمل"
 
-#: contents/ui/MaximizedPlayerPage.qml:192
+#: contents/ui/MaximizedPlayerPage.qml:96
+#, kde-format
+msgid "Close Maximized Player"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:201
 #: contents/ui/MinimizedPlayerControls.qml:94
 #, kde-format
 msgid "No media playing"
 msgstr "لا يوجد وسائط تعمل"
 
-#: contents/ui/MaximizedPlayerPage.qml:567
+#: contents/ui/MaximizedPlayerPage.qml:424
+#, fuzzy, kde-format
+#| msgid "Remove Favourite"
+msgid "Remove from Favourites"
+msgstr "أزل المفضلة"
+
+#: contents/ui/MaximizedPlayerPage.qml:424
+#, fuzzy, kde-format
+#| msgid "Add Favourite"
+msgid "Add to Favourites"
+msgstr "أضف للمفضلة"
+
+#: contents/ui/MaximizedPlayerPage.qml:449
+#, fuzzy, kde-format
+#| msgid "Open in Browser"
+msgid "Open Volume Drawer"
+msgstr "افتح في المتصفّح"
+
+#: contents/ui/MaximizedPlayerPage.qml:559
+#, kde-format
+msgid "Unmute Audio"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:559
+#, kde-format
+msgid "Mute Audio"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:603
 #, kde-format
 msgid "%1%"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:839
-#: contents/ui/MaximizedPlayerPage.qml:1016
+#: contents/ui/MaximizedPlayerPage.qml:626
+#, fuzzy, kde-format
+#| msgid "Lyrics"
+msgid "Hide Lyrics"
+msgstr "الكلمات"
+
+#: contents/ui/MaximizedPlayerPage.qml:626
+#, fuzzy, kde-format
+#| msgid "Lyrics"
+msgid "Show Lyrics"
+msgstr "الكلمات"
+
+#: contents/ui/MaximizedPlayerPage.qml:647 contents/ui/SongMenu.qml:183
+#: contents/ui/SongMenu.qml:269
+#, fuzzy, kde-format
+#| msgid "Favourite Songs"
+msgid "Share Song"
+msgstr "الأغاني المفضّلة"
+
+#: contents/ui/MaximizedPlayerPage.qml:693
+#, fuzzy, kde-format
+#| msgid "Add to Playlist"
+msgid "Add to a local playlist"
+msgstr "أضف إلى قائمة التّشغيل"
+
+#: contents/ui/MaximizedPlayerPage.qml:730
+#, fuzzy, kde-format
+#| msgid "Queue"
+msgid "Hide Queue"
+msgstr "صُفّ"
+
+#: contents/ui/MaximizedPlayerPage.qml:730
+#, fuzzy, kde-format
+#| msgid "Queue"
+msgid "Show Queue"
+msgstr "صُفّ"
+
+#: contents/ui/MaximizedPlayerPage.qml:897
+#: contents/ui/MaximizedPlayerPage.qml:1099
 #, kde-format
 msgid "Remove Track"
 msgstr "أزل المسار"
 
-#: contents/ui/MaximizedPlayerPage.qml:870
+#: contents/ui/MaximizedPlayerPage.qml:933
 #, fuzzy, kde-format
-#| msgid "Playlist"
-msgid "Clear Playlist"
-msgstr "قائمة التشغيل"
+#| msgid "Queue"
+msgid "Clear Queue"
+msgstr "صُفّ"
 
-#: contents/ui/MaximizedPlayerPage.qml:917
+#: contents/ui/MaximizedPlayerPage.qml:959
+#, fuzzy, kde-format
+#| msgid "Shuffle"
+msgid "Shuffle Queue"
+msgstr "اخلط"
+
+#: contents/ui/MaximizedPlayerPage.qml:990
 #, kde-format
 msgid "Upcoming Songs"
 msgstr ""
@@ -378,12 +453,6 @@ msgstr "أزل من التّاريخ"
 msgid "Add to playlist"
 msgstr "أضف إلى قائمة التّشغيل"
 
-#: contents/ui/SongMenu.qml:183 contents/ui/SongMenu.qml:269
-#, fuzzy, kde-format
-#| msgid "Favourite Songs"
-msgid "Share Song"
-msgstr "الأغاني المفضّلة"
-
 #: main.cpp:58
 #, kde-format
 msgid "YouTube Music Player"
@@ -432,17 +501,16 @@ msgstr "zayed.alsaidi@gmail.com"
 msgid "Unofficial API for YouTube Music"
 msgstr "اعثر على موسيقى على موسيقى يوتيوب"
 
+#, fuzzy
+#~| msgid "Playlist"
+#~ msgid "Clear Playlist"
+#~ msgstr "قائمة التشغيل"
+
 #~ msgid "played Songs"
 #~ msgstr "الأغاني المشغلة"
 
 #~ msgid "Now Playing"
 #~ msgstr "المشغل الآن"
-
-#~ msgid "Queue"
-#~ msgstr "صُفّ"
-
-#~ msgid "Lyrics"
-#~ msgstr "الكلمات"
 
 #~ msgid "Back"
 #~ msgstr "عُد"
