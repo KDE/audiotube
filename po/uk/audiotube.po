@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-22 00:47+0000\n"
-"PO-Revision-Date: 2023-03-18 08:53+0200\n"
+"PO-Revision-Date: 2023-03-22 13:12+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -236,7 +236,7 @@ msgstr "Відтворення не відбувається"
 #: contents/ui/MaximizedPlayerPage.qml:96
 #, kde-format
 msgid "Close Maximized Player"
-msgstr ""
+msgstr "Закрити максимізований програвач"
 
 #: contents/ui/MaximizedPlayerPage.qml:201
 #: contents/ui/MinimizedPlayerControls.qml:94
@@ -245,32 +245,29 @@ msgid "No media playing"
 msgstr "Відтворення не відбувається"
 
 #: contents/ui/MaximizedPlayerPage.qml:424
-#, fuzzy, kde-format
-#| msgid "Remove Favourite"
+#, kde-format
 msgid "Remove from Favourites"
 msgstr "Вилучити з улюблених"
 
 #: contents/ui/MaximizedPlayerPage.qml:424
-#, fuzzy, kde-format
-#| msgid "Add Favourite"
+#, kde-format
 msgid "Add to Favourites"
-msgstr "Додати до улюблених"
+msgstr "Додати до улюбленого"
 
 #: contents/ui/MaximizedPlayerPage.qml:449
-#, fuzzy, kde-format
-#| msgid "Open in Browser"
+#, kde-format
 msgid "Open Volume Drawer"
-msgstr "Відкрити у переглядачі"
+msgstr "Відкрити висувну панель гучності"
 
 #: contents/ui/MaximizedPlayerPage.qml:559
 #, kde-format
 msgid "Unmute Audio"
-msgstr ""
+msgstr "Увімкнути звук"
 
 #: contents/ui/MaximizedPlayerPage.qml:559
 #, kde-format
 msgid "Mute Audio"
-msgstr ""
+msgstr "Вимкнути звук"
 
 #: contents/ui/MaximizedPlayerPage.qml:603
 #, kde-format
@@ -278,16 +275,14 @@ msgid "%1%"
 msgstr "%1%"
 
 #: contents/ui/MaximizedPlayerPage.qml:626
-#, fuzzy, kde-format
-#| msgid "Lyrics"
+#, kde-format
 msgid "Hide Lyrics"
-msgstr "Текст"
+msgstr "Приховати текст"
 
 #: contents/ui/MaximizedPlayerPage.qml:626
-#, fuzzy, kde-format
-#| msgid "Lyrics"
+#, kde-format
 msgid "Show Lyrics"
-msgstr "Текст"
+msgstr "Показати текст"
 
 #: contents/ui/MaximizedPlayerPage.qml:647 contents/ui/SongMenu.qml:183
 #: contents/ui/SongMenu.qml:269
@@ -296,22 +291,19 @@ msgid "Share Song"
 msgstr "Оприлюднити композицію"
 
 #: contents/ui/MaximizedPlayerPage.qml:693
-#, fuzzy, kde-format
-#| msgid "Add to playlist"
+#, kde-format
 msgid "Add to a local playlist"
-msgstr "Додати до списку відтворення"
+msgstr "Додати до локального списку відтворення"
 
 #: contents/ui/MaximizedPlayerPage.qml:730
-#, fuzzy, kde-format
-#| msgid "Queue"
+#, kde-format
 msgid "Hide Queue"
-msgstr "Додати до черги"
+msgstr "Приховати чергу"
 
 #: contents/ui/MaximizedPlayerPage.qml:730
-#, fuzzy, kde-format
-#| msgid "Queue"
+#, kde-format
 msgid "Show Queue"
-msgstr "Додати до черги"
+msgstr "Показати чергу"
 
 #: contents/ui/MaximizedPlayerPage.qml:897
 #: contents/ui/MaximizedPlayerPage.qml:1099
@@ -320,16 +312,14 @@ msgid "Remove Track"
 msgstr "Вилучити композицію"
 
 #: contents/ui/MaximizedPlayerPage.qml:933
-#, fuzzy, kde-format
-#| msgid "Queue"
+#, kde-format
 msgid "Clear Queue"
-msgstr "Додати до черги"
+msgstr "Спорожнити чергу"
 
 #: contents/ui/MaximizedPlayerPage.qml:959
-#, fuzzy, kde-format
-#| msgid "Shuffle"
+#, kde-format
 msgid "Shuffle Queue"
-msgstr "Перемішати"
+msgstr "Перемішати чергу"
 
 #: contents/ui/MaximizedPlayerPage.qml:990
 #, kde-format

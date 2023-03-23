@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-22 00:47+0000\n"
-"PO-Revision-Date: 2023-03-18 10:18+0100\n"
+"PO-Revision-Date: 2023-03-22 13:22+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -235,7 +235,7 @@ msgstr "Er speelt geen song"
 #: contents/ui/MaximizedPlayerPage.qml:96
 #, kde-format
 msgid "Close Maximized Player"
-msgstr ""
+msgstr "Gemaximaliseerde speler sluiten"
 
 #: contents/ui/MaximizedPlayerPage.qml:201
 #: contents/ui/MinimizedPlayerControls.qml:94
@@ -244,32 +244,29 @@ msgid "No media playing"
 msgstr "Er speelt geen medium"
 
 #: contents/ui/MaximizedPlayerPage.qml:424
-#, fuzzy, kde-format
-#| msgid "Remove Favourite"
+#, kde-format
 msgid "Remove from Favourites"
-msgstr "Favoriet verwijderen"
+msgstr "Uit favorieten verwijderen"
 
 #: contents/ui/MaximizedPlayerPage.qml:424
-#, fuzzy, kde-format
-#| msgid "Add Favourite"
+#, kde-format
 msgid "Add to Favourites"
-msgstr "Favoriet toevoegen"
+msgstr "Aan favorieten toevoegen"
 
 #: contents/ui/MaximizedPlayerPage.qml:449
-#, fuzzy, kde-format
-#| msgid "Open in Browser"
+#, kde-format
 msgid "Open Volume Drawer"
-msgstr "In browser openen"
+msgstr "Volume lader openen"
 
 #: contents/ui/MaximizedPlayerPage.qml:559
 #, kde-format
 msgid "Unmute Audio"
-msgstr ""
+msgstr "Dempen van geluid opheffen"
 
 #: contents/ui/MaximizedPlayerPage.qml:559
 #, kde-format
 msgid "Mute Audio"
-msgstr ""
+msgstr "Geluid dempen"
 
 #: contents/ui/MaximizedPlayerPage.qml:603
 #, kde-format
@@ -277,16 +274,14 @@ msgid "%1%"
 msgstr "%1%"
 
 #: contents/ui/MaximizedPlayerPage.qml:626
-#, fuzzy, kde-format
-#| msgid "Lyrics"
+#, kde-format
 msgid "Hide Lyrics"
-msgstr "Liedteksten"
+msgstr "Liedteksten verbergen"
 
 #: contents/ui/MaximizedPlayerPage.qml:626
-#, fuzzy, kde-format
-#| msgid "Lyrics"
+#, kde-format
 msgid "Show Lyrics"
-msgstr "Liedteksten"
+msgstr "Liedteksten tonen"
 
 #: contents/ui/MaximizedPlayerPage.qml:647 contents/ui/SongMenu.qml:183
 #: contents/ui/SongMenu.qml:269
@@ -295,22 +290,19 @@ msgid "Share Song"
 msgstr "Songs delen"
 
 #: contents/ui/MaximizedPlayerPage.qml:693
-#, fuzzy, kde-format
-#| msgid "Add to playlist"
+#, kde-format
 msgid "Add to a local playlist"
-msgstr "Aan afspeellijst toevoegen"
+msgstr "Aan een lokale afspeellijst toevoegen"
 
 #: contents/ui/MaximizedPlayerPage.qml:730
-#, fuzzy, kde-format
-#| msgid "Queue"
+#, kde-format
 msgid "Hide Queue"
-msgstr "Wachtrij"
+msgstr "Wachtrij verbergen"
 
 #: contents/ui/MaximizedPlayerPage.qml:730
-#, fuzzy, kde-format
-#| msgid "Queue"
+#, kde-format
 msgid "Show Queue"
-msgstr "Wachtrij"
+msgstr "Wachtrij tonen"
 
 #: contents/ui/MaximizedPlayerPage.qml:897
 #: contents/ui/MaximizedPlayerPage.qml:1099
@@ -319,16 +311,14 @@ msgid "Remove Track"
 msgstr "Track verwijderen"
 
 #: contents/ui/MaximizedPlayerPage.qml:933
-#, fuzzy, kde-format
-#| msgid "Queue"
+#, kde-format
 msgid "Clear Queue"
-msgstr "Wachtrij"
+msgstr "Wachtrij wissen"
 
 #: contents/ui/MaximizedPlayerPage.qml:959
-#, fuzzy, kde-format
-#| msgid "Shuffle"
+#, kde-format
 msgid "Shuffle Queue"
-msgstr "Willekeurig afspelen"
+msgstr "Wachtrij voor willekeurig afspelen"
 
 #: contents/ui/MaximizedPlayerPage.qml:990
 #, kde-format
