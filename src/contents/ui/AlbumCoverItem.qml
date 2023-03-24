@@ -20,36 +20,35 @@ ColumnLayout {
     signal clicked
     signal optionsClicked
 
-    Kirigami.ShadowedRectangle {
-        color: Kirigami.Theme.backgroundColor
-        id: cover
-
-        Layout.margins: 5
-
-        MouseArea {
-            id: coverArea
-            anchors.fill: parent
-            onClicked: root.clicked()
-            hoverEnabled: !Kirigami.Settings.hasTransientTouchInput
-            onEntered: {
-                if (!Kirigami.Settings.hasTransientTouchInput) {
-                    selection.visible = true
-                    favTitle.color = Kirigami.Theme.hoverColor
-                    favSubtitle.color = Kirigami.Theme.hoverColor
-                    favTitle.font.bold = true
-                    playAnimationPosition.running = true
-                    playAnimationOpacity.running = true
-                }
-            }
-
-            onExited: {
-                selection.visible = false
-                favTitle.color = Kirigami.Theme.textColor
-                favSubtitle.color = Kirigami.Theme.disabledTextColor
-                favTitle.font.bold = false
+    MouseArea {
+        id: coverArea
+        anchors.fill: parent
+        onClicked: root.clicked()
+        hoverEnabled: !Kirigami.Settings.hasTransientTouchInput
+        onEntered: {
+            if (!Kirigami.Settings.hasTransientTouchInput) {
+                selection.visible = true
+                favTitle.color = Kirigami.Theme.hoverColor
+                favSubtitle.color = Kirigami.Theme.hoverColor
+                favTitle.font.bold = true
+                playAnimationPosition.running = true
+                playAnimationOpacity.running = true
             }
         }
 
+        onExited: {
+            selection.visible = false
+            favTitle.color = Kirigami.Theme.textColor
+            favSubtitle.color = Kirigami.Theme.disabledTextColor
+            favTitle.font.bold = false
+        }
+    }
+
+    Kirigami.ShadowedRectangle {
+        id: cover
+
+        color: Kirigami.Theme.backgroundColor
+        Layout.margins: 5
         width: 200
         height: 200
         radius: 10
@@ -144,6 +143,7 @@ ColumnLayout {
                 Layout.fillWidth: true
                 leftPadding: 5
                 elide: Text.ElideRight
+                enabled: false
             }
             Controls.Label {
                 id: favSubtitle
@@ -151,6 +151,8 @@ ColumnLayout {
                 leftPadding: 5
                 color: Kirigami.Theme.disabledTextColor
                 elide: Text.ElideRight
+                enabled: false
+
             }
         }
         Controls.ToolButton {
