@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-22 00:47+0000\n"
-"PO-Revision-Date: 2023-03-18 07:27+0100\n"
+"PO-Revision-Date: 2023-03-23 08:39+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: contents/ui/AlbumPage.qml:75 contents/ui/LibraryPage.qml:37
 #: contents/ui/LibraryPage.qml:63 contents/ui/LibraryPage.qml:84
@@ -234,7 +234,7 @@ msgstr "Nobene pesmi se ne predvaja"
 #: contents/ui/MaximizedPlayerPage.qml:96
 #, kde-format
 msgid "Close Maximized Player"
-msgstr ""
+msgstr "Zapri maksimiziran predvajalnik"
 
 #: contents/ui/MaximizedPlayerPage.qml:201
 #: contents/ui/MinimizedPlayerControls.qml:94
@@ -243,32 +243,29 @@ msgid "No media playing"
 msgstr "Niče se ne predvaja"
 
 #: contents/ui/MaximizedPlayerPage.qml:424
-#, fuzzy, kde-format
-#| msgid "Remove Favourite"
+#, kde-format
 msgid "Remove from Favourites"
-msgstr "Odstrani priljubljenega"
+msgstr "Odstrani iz priljubljenih"
 
 #: contents/ui/MaximizedPlayerPage.qml:424
-#, fuzzy, kde-format
-#| msgid "Add Favourite"
+#, kde-format
 msgid "Add to Favourites"
-msgstr "Dodaj priljubljenega"
+msgstr "Dodaj med priljubljene"
 
 #: contents/ui/MaximizedPlayerPage.qml:449
-#, fuzzy, kde-format
-#| msgid "Open in Browser"
+#, kde-format
 msgid "Open Volume Drawer"
-msgstr "Odpri v brskalniku"
+msgstr "Odpri predal glasnosti"
 
 #: contents/ui/MaximizedPlayerPage.qml:559
 #, kde-format
 msgid "Unmute Audio"
-msgstr ""
+msgstr "Povrni zvok"
 
 #: contents/ui/MaximizedPlayerPage.qml:559
 #, kde-format
 msgid "Mute Audio"
-msgstr ""
+msgstr "Utišaj"
 
 #: contents/ui/MaximizedPlayerPage.qml:603
 #, kde-format
@@ -276,16 +273,14 @@ msgid "%1%"
 msgstr "%1%"
 
 #: contents/ui/MaximizedPlayerPage.qml:626
-#, fuzzy, kde-format
-#| msgid "Lyrics"
+#, kde-format
 msgid "Hide Lyrics"
-msgstr "Besedilo"
+msgstr "Skrij besedila"
 
 #: contents/ui/MaximizedPlayerPage.qml:626
-#, fuzzy, kde-format
-#| msgid "Lyrics"
+#, kde-format
 msgid "Show Lyrics"
-msgstr "Besedilo"
+msgstr "Prikazuj besedila"
 
 #: contents/ui/MaximizedPlayerPage.qml:647 contents/ui/SongMenu.qml:183
 #: contents/ui/SongMenu.qml:269
@@ -294,22 +289,19 @@ msgid "Share Song"
 msgstr "Deli pesem"
 
 #: contents/ui/MaximizedPlayerPage.qml:693
-#, fuzzy, kde-format
-#| msgid "Add to playlist"
+#, kde-format
 msgid "Add to a local playlist"
-msgstr "Dodaj v seznam predvajanja"
+msgstr "Dodaj v lokalni seznam predvajanja"
 
 #: contents/ui/MaximizedPlayerPage.qml:730
-#, fuzzy, kde-format
-#| msgid "Queue"
+#, kde-format
 msgid "Hide Queue"
-msgstr "Čakalna vrsta"
+msgstr "Skrij čakalno vrsto"
 
 #: contents/ui/MaximizedPlayerPage.qml:730
-#, fuzzy, kde-format
-#| msgid "Queue"
+#, kde-format
 msgid "Show Queue"
-msgstr "Čakalna vrsta"
+msgstr "Prikazuj čakalno vrsto"
 
 #: contents/ui/MaximizedPlayerPage.qml:897
 #: contents/ui/MaximizedPlayerPage.qml:1099
@@ -318,16 +310,14 @@ msgid "Remove Track"
 msgstr "Odstrani sled"
 
 #: contents/ui/MaximizedPlayerPage.qml:933
-#, fuzzy, kde-format
-#| msgid "Queue"
+#, kde-format
 msgid "Clear Queue"
-msgstr "Čakalna vrsta"
+msgstr "Počisti čakalno vrsto"
 
 #: contents/ui/MaximizedPlayerPage.qml:959
-#, fuzzy, kde-format
-#| msgid "Shuffle"
+#, kde-format
 msgid "Shuffle Queue"
-msgstr "Premešaj"
+msgstr "Premešaj čakalno vrsto"
 
 #: contents/ui/MaximizedPlayerPage.qml:990
 #, kde-format

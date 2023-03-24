@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-22 00:47+0000\n"
-"PO-Revision-Date: 2023-03-19 05:13+0100\n"
+"PO-Revision-Date: 2023-03-23 14:22+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -235,7 +235,7 @@ msgstr "არაფერს ვუკრავ"
 #: contents/ui/MaximizedPlayerPage.qml:96
 #, kde-format
 msgid "Close Maximized Player"
-msgstr ""
+msgstr "მთელ ეკრანზე გაშლილი დამკვრელის დახურვა"
 
 #: contents/ui/MaximizedPlayerPage.qml:201
 #: contents/ui/MinimizedPlayerControls.qml:94
@@ -244,32 +244,29 @@ msgid "No media playing"
 msgstr "არაფერს ვუკრავ"
 
 #: contents/ui/MaximizedPlayerPage.qml:424
-#, fuzzy, kde-format
-#| msgid "Remove Favourite"
+#, kde-format
 msgid "Remove from Favourites"
-msgstr "რჩეულის წაშლა"
+msgstr "რჩეულებიდან წაშლა"
 
 #: contents/ui/MaximizedPlayerPage.qml:424
-#, fuzzy, kde-format
-#| msgid "Add Favourite"
+#, kde-format
 msgid "Add to Favourites"
-msgstr "რჩეულის დამატება"
+msgstr "რჩეულებში ჩამატება"
 
 #: contents/ui/MaximizedPlayerPage.qml:449
-#, fuzzy, kde-format
-#| msgid "Open in Browser"
+#, kde-format
 msgid "Open Volume Drawer"
-msgstr "ბრაუზერში გახსნა"
+msgstr "ხმის დახატვის გახსნა"
 
 #: contents/ui/MaximizedPlayerPage.qml:559
 #, kde-format
 msgid "Unmute Audio"
-msgstr ""
+msgstr "ხმის ჩართვა"
 
 #: contents/ui/MaximizedPlayerPage.qml:559
 #, kde-format
 msgid "Mute Audio"
-msgstr ""
+msgstr "ხმის დადუმება"
 
 #: contents/ui/MaximizedPlayerPage.qml:603
 #, kde-format
@@ -277,16 +274,14 @@ msgid "%1%"
 msgstr "%1%"
 
 #: contents/ui/MaximizedPlayerPage.qml:626
-#, fuzzy, kde-format
-#| msgid "Lyrics"
+#, kde-format
 msgid "Hide Lyrics"
-msgstr "ლირიკა"
+msgstr "ლირიკის დამალვა"
 
 #: contents/ui/MaximizedPlayerPage.qml:626
-#, fuzzy, kde-format
-#| msgid "Lyrics"
+#, kde-format
 msgid "Show Lyrics"
-msgstr "ლირიკა"
+msgstr "ლირიკის ჩვენება"
 
 #: contents/ui/MaximizedPlayerPage.qml:647 contents/ui/SongMenu.qml:183
 #: contents/ui/SongMenu.qml:269
@@ -295,22 +290,19 @@ msgid "Share Song"
 msgstr "სიმღერის გაზიარება"
 
 #: contents/ui/MaximizedPlayerPage.qml:693
-#, fuzzy, kde-format
-#| msgid "Add to playlist"
+#, kde-format
 msgid "Add to a local playlist"
-msgstr "დასაკრავ სიაში დამატება"
+msgstr "ლოკალურ დასაკრავ სიაში ჩამატება"
 
 #: contents/ui/MaximizedPlayerPage.qml:730
-#, fuzzy, kde-format
-#| msgid "Queue"
+#, kde-format
 msgid "Hide Queue"
-msgstr "რიგი"
+msgstr "რიგის დამალვა"
 
 #: contents/ui/MaximizedPlayerPage.qml:730
-#, fuzzy, kde-format
-#| msgid "Queue"
+#, kde-format
 msgid "Show Queue"
-msgstr "რიგი"
+msgstr "რიგის ჩვენება"
 
 #: contents/ui/MaximizedPlayerPage.qml:897
 #: contents/ui/MaximizedPlayerPage.qml:1099
@@ -319,14 +311,12 @@ msgid "Remove Track"
 msgstr "აუდიობილიკის წაშლა"
 
 #: contents/ui/MaximizedPlayerPage.qml:933
-#, fuzzy, kde-format
-#| msgid "Queue"
+#, kde-format
 msgid "Clear Queue"
-msgstr "რიგი"
+msgstr "რიგის გასუფთავება"
 
 #: contents/ui/MaximizedPlayerPage.qml:959
-#, fuzzy, kde-format
-#| msgid "Shuffle"
+#, kde-format
 msgid "Shuffle Queue"
 msgstr "შემთხვევით"
 
