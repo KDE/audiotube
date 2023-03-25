@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-18 03:09+0000\n"
-"PO-Revision-Date: 2023-02-17 17:05+0700\n"
+"PO-Revision-Date: 2023-03-22 00:18+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
 "Language: id\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: contents/ui/AlbumPage.qml:26 contents/ui/LibraryPage.qml:37
 #: contents/ui/LibraryPage.qml:63 contents/ui/LibraryPage.qml:84
@@ -40,8 +40,7 @@ msgstr "Acak"
 #: contents/ui/LibraryPage.qml:100 contents/ui/LibraryPage.qml:369
 #: contents/ui/LibraryPage.qml:396 contents/ui/LocalPlaylistPage.qml:55
 #: contents/ui/PlaybackHistory.qml:48 contents/ui/PlaylistPage.qml:46
-#, fuzzy, kde-format
-#| msgid "Add to queue"
+#, kde-format
 msgid "Append to queue"
 msgstr "Tambahkan ke antrean"
 
@@ -55,7 +54,7 @@ msgstr "Buka di Peramban"
 #: contents/ui/PlaylistPage.qml:56
 #, kde-format
 msgid "Share"
-msgstr ""
+msgstr "Bagikan"
 
 #: contents/ui/AlbumPage.qml:61
 #, kde-format
@@ -119,43 +118,37 @@ msgid "Cancel"
 msgstr "Batalkan"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:17
-#, fuzzy, kde-format
-#| msgid "Add to Playlist"
+#, kde-format
 msgid "Add playlist"
-msgstr "Tambahkan ke Daftar Putar"
+msgstr "Tambahkan ke daftar putar"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:23
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:24
-#, fuzzy, kde-format
-#| msgid "Playlist"
+#, kde-format
 msgid "Playlist Title"
-msgstr "Daftar Putar"
+msgstr "Judul Daftar Putar"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:28
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:30
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "Playlist Description"
-msgstr "Daftar Putar"
+msgstr "Deskripsi Daftar Putar"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:20
-#, fuzzy, kde-format
-#| msgid "Add to Playlist"
+#, kde-format
 msgid "Add Song to Playlist"
-msgstr "Tambahkan ke Daftar Putar"
+msgstr "Tambahkan Lagu ke Daftar Putar"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:29
 #: contents/ui/LocalPlaylistsPage.qml:90
-#, fuzzy, kde-format
-#| msgid "Playlist"
+#, kde-format
 msgid "New Playlist"
-msgstr "Daftar Putar"
+msgstr "Daftar Putar Baru"
 
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:18
-#, fuzzy, kde-format
-#| msgid "Playlist"
+#, kde-format
 msgid "Rename playlist"
-msgstr "Daftar Putar"
+msgstr "Ubah nama daftar putar"
 
 #: contents/ui/LibraryPage.qml:30 contents/ui/LibraryPage.qml:123
 #: contents/ui/NavigationBar.qml:48 contents/ui/NavigationBar.qml:54
@@ -200,33 +193,31 @@ msgid "Playlists"
 msgstr "Daftar Putar"
 
 #: contents/ui/LibraryPage.qml:650
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "No Playlists Yet"
-msgstr "Daftar Putar"
+msgstr "Belum Ada Daftar Putar"
 
 #: contents/ui/LibraryPage.qml:670 contents/ui/LibraryPage.qml:692
 #: contents/ui/LocalPlaylistsPage.qml:33 contents/ui/LocalPlaylistsPage.qml:55
 #, kde-format
 msgid "Rename"
-msgstr ""
+msgstr "Ubah Nama"
 
 #: contents/ui/LibraryPage.qml:679 contents/ui/LibraryPage.qml:700
 #: contents/ui/LocalPlaylistsPage.qml:42 contents/ui/LocalPlaylistsPage.qml:63
 #, kde-format
 msgid "Delete"
-msgstr ""
+msgstr "Hapus"
 
 #: contents/ui/LocalPlaylistPage.qml:19
-#, fuzzy, kde-format
-#| msgid "Remove from History"
+#, kde-format
 msgid "Remove from Playlist"
-msgstr "Hapus dari Riwayat"
+msgstr "Hapus dari Daftar Putar"
 
 #: contents/ui/LocalPlaylistPage.qml:29
 #, kde-format
 msgid "This playlist is still empty"
-msgstr ""
+msgstr "Daftar putar ini masih kosong"
 
 #: contents/ui/main.qml:109 main.cpp:54
 #, kde-format
@@ -251,15 +242,14 @@ msgid "Remove Track"
 msgstr "Hapus Trek"
 
 #: contents/ui/MaximizedPlayerPage.qml:870
-#, fuzzy, kde-format
-#| msgid "Playlist"
+#, kde-format
 msgid "Clear Playlist"
-msgstr "Daftar Putar"
+msgstr "Hapus Daftar Putar"
 
 #: contents/ui/MaximizedPlayerPage.qml:917
 #, kde-format
 msgid "Upcoming Songs"
-msgstr ""
+msgstr "Lagu Berikutnya"
 
 #: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:100
 #, kde-format
@@ -314,17 +304,17 @@ msgstr "Tidak ada pencarian sebelumnya yang cocok"
 #: contents/ui/ShareMenu.qml:39
 #, kde-format
 msgid "Share to"
-msgstr ""
+msgstr "Bagikan ke"
 
 #: contents/ui/ShareMenu.qml:49 contents/ui/ShareMenu.qml:99
 #, kde-format
 msgid "Copy Link"
-msgstr ""
+msgstr "Salin Tautan"
 
 #: contents/ui/ShareMenu.qml:54 contents/ui/ShareMenu.qml:104
 #, kde-format
 msgid "Link copied to clipboard"
-msgstr ""
+msgstr "Tautan disalin ke papan klip"
 
 #: contents/ui/Sidebar.qml:189
 #, kde-format
@@ -362,16 +352,14 @@ msgid "Remove from History"
 msgstr "Hapus dari Riwayat"
 
 #: contents/ui/SongMenu.qml:156 contents/ui/SongMenu.qml:244
-#, fuzzy, kde-format
-#| msgid "Add to Playlist"
+#, kde-format
 msgid "Add to playlist"
-msgstr "Tambahkan ke Daftar Putar"
+msgstr "Tambahkan ke daftar putar"
 
 #: contents/ui/SongMenu.qml:183 contents/ui/SongMenu.qml:269
-#, fuzzy, kde-format
-#| msgid "Favourite Songs"
+#, kde-format
 msgid "Share Song"
-msgstr "Lagu Favorit"
+msgstr "Bagikan Lagu"
 
 #: main.cpp:56
 #, kde-format
