@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-22 00:47+0000\n"
-"PO-Revision-Date: 2023-03-11 04:53\n"
+"PO-Revision-Date: 2023-03-26 02:19\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -226,10 +226,9 @@ msgid "AudioTube"
 msgstr "AudioTube"
 
 #: contents/ui/main.qml:260
-#, fuzzy, kde-format
-#| msgid "No media playing"
+#, kde-format
 msgid "No song playing"
-msgstr "没有正在播放的媒体"
+msgstr ""
 
 #: contents/ui/MaximizedPlayerPage.qml:96
 #, kde-format
@@ -243,22 +242,19 @@ msgid "No media playing"
 msgstr "没有正在播放的媒体"
 
 #: contents/ui/MaximizedPlayerPage.qml:424
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "Remove from Favourites"
-msgstr "收藏夹"
+msgstr ""
 
 #: contents/ui/MaximizedPlayerPage.qml:424
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "Add to Favourites"
-msgstr "收藏夹"
+msgstr ""
 
 #: contents/ui/MaximizedPlayerPage.qml:449
-#, fuzzy, kde-format
-#| msgid "Open in Browser"
+#, kde-format
 msgid "Open Volume Drawer"
-msgstr "在浏览器中打开"
+msgstr ""
 
 #: contents/ui/MaximizedPlayerPage.qml:559
 #, kde-format
@@ -318,10 +314,9 @@ msgid "Clear Queue"
 msgstr ""
 
 #: contents/ui/MaximizedPlayerPage.qml:959
-#, fuzzy, kde-format
-#| msgid "Shuffle"
+#, kde-format
 msgid "Shuffle Queue"
-msgstr "随机播放"
+msgstr ""
 
 #: contents/ui/MaximizedPlayerPage.qml:990
 #, kde-format
