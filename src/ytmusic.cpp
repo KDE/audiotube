@@ -175,6 +175,10 @@ watch::Playlist::Track extract_watch_track(py::handle track) {
                 return std::nullopt;
             }
 
+            if (track["album"].is_none()) {
+                return std::nullopt;
+            }
+
             return extract_meta_album(track["album"]);
         }()
     };
@@ -293,7 +297,7 @@ std::optional<search::SearchResultItem> extract_search_result(py::handle result)
                 result["duration"].cast<std::string>(),
                 extract_py_list<meta::Thumbnail>(result["thumbnails"])
             },
-            extract_meta_album(result["album"]),
+            result["album"].is_none() ? std::optional<meta::Album> {} : extract_meta_album(result["album"]),
             result["isExplicit"].cast<bool>()
         };
     } else if (resultType == "album") {
@@ -392,7 +396,7 @@ album::Album YTMusic::get_album(const std::string &browseId) const
         album["trackCount"].cast<int>(),
         album["duration"].cast<std::string>(),
         album["audioPlaylistId"].cast<std::string>(),
-        album["year"].cast<std::string>(),
+        optional_key<std::string>(album, "year"),
         optional_key<std::string>(album, "description"),
         extract_py_list<meta::Thumbnail>(album["thumbnails"]),
         extract_py_list<album::Track>(album["tracks"]),
