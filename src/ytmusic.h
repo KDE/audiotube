@@ -60,7 +60,7 @@ struct Playlist {
 };
 
 struct Song : public Media {
-    meta::Album album;
+    std::optional<meta::Album> album;
     bool is_explicit;
 };
 
@@ -167,7 +167,7 @@ namespace album {
         int track_count;
         std::string duration;
         std::string audio_playlist_id;
-        std::string year;
+        std::optional<std::string> year;
         std::optional<std::string> description;
         std::vector<meta::Thumbnail> thumbnails;
         std::vector<Track> tracks;
