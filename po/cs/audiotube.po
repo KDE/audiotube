@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-22 00:47+0000\n"
-"PO-Revision-Date: 2023-03-20 14:20+0100\n"
+"PO-Revision-Date: 2023-03-29 16:12+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -235,7 +235,7 @@ msgstr "Nepřehrává se žádná hudba"
 #: contents/ui/MaximizedPlayerPage.qml:96
 #, kde-format
 msgid "Close Maximized Player"
-msgstr ""
+msgstr "Zavřít minimalizovaný přehrávač"
 
 #: contents/ui/MaximizedPlayerPage.qml:201
 #: contents/ui/MinimizedPlayerControls.qml:94
@@ -244,32 +244,29 @@ msgid "No media playing"
 msgstr "Nepřehrává se žádné médium"
 
 #: contents/ui/MaximizedPlayerPage.qml:424
-#, fuzzy, kde-format
-#| msgid "Remove Favourite"
+#, kde-format
 msgid "Remove from Favourites"
-msgstr "Odstranit oblíbené"
+msgstr "Odstranit z oblíbených"
 
 #: contents/ui/MaximizedPlayerPage.qml:424
-#, fuzzy, kde-format
-#| msgid "Add Favourite"
+#, kde-format
 msgid "Add to Favourites"
-msgstr "Přidat oblíbené"
+msgstr "Přidat k oblíbeným"
 
 #: contents/ui/MaximizedPlayerPage.qml:449
-#, fuzzy, kde-format
-#| msgid "Open in Browser"
+#, kde-format
 msgid "Open Volume Drawer"
-msgstr "Otevřít v prohlížeči"
+msgstr "Otevřít šuplík hlasitosti"
 
 #: contents/ui/MaximizedPlayerPage.qml:559
 #, kde-format
 msgid "Unmute Audio"
-msgstr ""
+msgstr "Povolit zvuk"
 
 #: contents/ui/MaximizedPlayerPage.qml:559
 #, kde-format
 msgid "Mute Audio"
-msgstr ""
+msgstr "Ztlumit zvuk"
 
 #: contents/ui/MaximizedPlayerPage.qml:603
 #, kde-format
@@ -279,12 +276,12 @@ msgstr "%1%"
 #: contents/ui/MaximizedPlayerPage.qml:626
 #, kde-format
 msgid "Hide Lyrics"
-msgstr ""
+msgstr "Skrýt text písně"
 
 #: contents/ui/MaximizedPlayerPage.qml:626
 #, kde-format
 msgid "Show Lyrics"
-msgstr ""
+msgstr "Zobrazit text písně"
 
 #: contents/ui/MaximizedPlayerPage.qml:647 contents/ui/SongMenu.qml:183
 #: contents/ui/SongMenu.qml:269
@@ -293,20 +290,19 @@ msgid "Share Song"
 msgstr "Sdílet píseň"
 
 #: contents/ui/MaximizedPlayerPage.qml:693
-#, fuzzy, kde-format
-#| msgid "Add to playlist"
+#, kde-format
 msgid "Add to a local playlist"
-msgstr "Přidat do seznamu stop"
+msgstr "Přidat do místního seznamu stop"
 
 #: contents/ui/MaximizedPlayerPage.qml:730
 #, kde-format
 msgid "Hide Queue"
-msgstr ""
+msgstr "Skrýt frontu"
 
 #: contents/ui/MaximizedPlayerPage.qml:730
 #, kde-format
 msgid "Show Queue"
-msgstr ""
+msgstr "Zobrazit frontu"
 
 #: contents/ui/MaximizedPlayerPage.qml:897
 #: contents/ui/MaximizedPlayerPage.qml:1099
@@ -317,13 +313,12 @@ msgstr "Odstranit skladbu"
 #: contents/ui/MaximizedPlayerPage.qml:933
 #, kde-format
 msgid "Clear Queue"
-msgstr ""
+msgstr "Vymazat frontu"
 
 #: contents/ui/MaximizedPlayerPage.qml:959
-#, fuzzy, kde-format
-#| msgid "Shuffle"
+#, kde-format
 msgid "Shuffle Queue"
-msgstr "Zamíchat"
+msgstr "Zamíchat frontu"
 
 #: contents/ui/MaximizedPlayerPage.qml:990
 #, kde-format
@@ -481,6 +476,3 @@ msgstr "vit@pelcak.org"
 #, kde-format
 msgid "Unofficial API for YouTube Music"
 msgstr "Neoficiální API pro hudbu YouTube"
-
-#~ msgid "Clear Playlist"
-#~ msgstr "Smazat seznam skladeb"
