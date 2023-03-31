@@ -361,6 +361,9 @@ std::vector<search::SearchResultItem> YTMusic::search(
 
     std::vector<search::SearchResultItem> output;
     for (const auto &result : results) {
+        if (result.is_none()) {
+            continue;
+        }
         if (const auto opt = extract_search_result(result); opt.has_value()) {
             output.push_back(opt.value());
         }
