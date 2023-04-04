@@ -1,21 +1,21 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the audiotube package.
-# Tommi Nieminen <translator@legisign.org>, 2021, 2022, 2023.
 #
+# giovanni <g.sora@tiscali.it>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-22 00:47+0000\n"
-"PO-Revision-Date: 2023-03-30 10:03+0300\n"
-"Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
-"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
-"Language: fi\n"
+"PO-Revision-Date: 2023-04-03 16:03+0200\n"
+"Last-Translator: giovanni <g.sora@tiscali.it>\n"
+"Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
+"Language: ia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 21.12.3\n"
 
 #: contents/ui/AlbumPage.qml:75 contents/ui/LibraryPage.qml:37
 #: contents/ui/LibraryPage.qml:63 contents/ui/LibraryPage.qml:84
@@ -26,7 +26,7 @@ msgstr ""
 #: contents/ui/PlaylistPage.qml:84
 #, kde-format
 msgid "Play"
-msgstr "Toista"
+msgstr "Reproduce"
 
 #: contents/ui/AlbumPage.qml:82 contents/ui/ArtistPage.qml:86
 #: contents/ui/LibraryPage.qml:44 contents/ui/LibraryPage.qml:69
@@ -37,7 +37,7 @@ msgstr "Toista"
 #: contents/ui/PlaylistPage.qml:62 contents/ui/PlaylistPage.qml:91
 #, kde-format
 msgid "Shuffle"
-msgstr "Sekoita"
+msgstr "Shuffle (miscer)"
 
 #: contents/ui/AlbumPage.qml:90 contents/ui/LibraryPage.qml:74
 #: contents/ui/LibraryPage.qml:100 contents/ui/LibraryPage.qml:259
@@ -45,31 +45,31 @@ msgstr "Sekoita"
 #: contents/ui/PlaybackHistory.qml:114 contents/ui/PlaylistPage.qml:99
 #, kde-format
 msgid "Append to queue"
-msgstr "Lisää jonoon"
+msgstr ""
 
 #: contents/ui/AlbumPage.qml:95 contents/ui/ArtistPage.qml:93
 #: contents/ui/PlaylistPage.qml:104
 #, kde-format
 msgid "Open in Browser"
-msgstr "Avaa selaimeen"
+msgstr "Aperi con navigator"
 
 #: contents/ui/AlbumPage.qml:100 contents/ui/ArtistPage.qml:98
 #: contents/ui/PlaylistPage.qml:109
 #, kde-format
 msgid "Share"
-msgstr "Jaa"
+msgstr "Comparti"
 
 #: contents/ui/AlbumPage.qml:110
 #, kde-format
 msgid "Album • %1"
-msgstr "Albumi • %1"
+msgstr "Album • %1"
 
 #: contents/ui/AlbumPage.qml:154 contents/ui/ArtistPage.qml:187
 #: contents/ui/LocalPlaylistPage.qml:164 contents/ui/PlaybackHistory.qml:188
 #: contents/ui/PlaylistPage.qml:169 contents/ui/SearchPage.qml:130
 #, kde-format
 msgid "More"
-msgstr "Lisää"
+msgstr "Altere"
 
 #: contents/ui/ArtistPage.qml:81
 #, kde-format
@@ -79,7 +79,7 @@ msgstr "Radio"
 #: contents/ui/ArtistPage.qml:107
 #, kde-format
 msgid "Artist"
-msgstr "Artisti"
+msgstr "Artista"
 
 #: contents/ui/ArtistPage.qml:129 contents/ui/SearchPage.qml:70
 #, kde-format
@@ -87,27 +87,26 @@ msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
 "\"%1\"?"
 msgstr ""
-"Videotoistoa ei vielä tueta. Haluatko toistaa videosta ”%1” vain äänen?"
 
 #: contents/ui/ArtistPage.qml:146 contents/ui/SearchPage.qml:26
 #, kde-format
 msgid "Albums"
-msgstr "Albumit"
+msgstr "Albumes"
 
 #: contents/ui/ArtistPage.qml:148
 #, kde-format
 msgid "Singles"
-msgstr "Singlet"
+msgstr ""
 
 #: contents/ui/ArtistPage.qml:150 contents/ui/SearchPage.qml:32
 #, kde-format
 msgid "Songs"
-msgstr "Kappaleet"
+msgstr ""
 
 #: contents/ui/ArtistPage.qml:152 contents/ui/SearchPage.qml:34
 #, kde-format
 msgid "Videos"
-msgstr "Videot"
+msgstr "Videos"
 
 #: contents/ui/ConfirmationMessage.qml:16
 #, kde-format
@@ -117,109 +116,109 @@ msgstr "OK"
 #: contents/ui/ConfirmationMessage.qml:21
 #, kde-format
 msgid "Cancel"
-msgstr "Peru"
+msgstr "Cancella"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:17
 #, kde-format
 msgid "Add playlist"
-msgstr "Lisää soittolista"
+msgstr ""
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:23
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:24
 #, kde-format
 msgid "Playlist Title"
-msgstr "Soittolistan otsikko"
+msgstr ""
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:28
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:30
 #, kde-format
 msgid "Playlist Description"
-msgstr "Soittolistan kuvaus"
+msgstr ""
 
 #: contents/ui/dialogs/PlaylistDialog.qml:20
 #, kde-format
 msgid "Add Song to Playlist"
-msgstr "Lisää kappale soittolistaan"
+msgstr ""
 
 #: contents/ui/dialogs/PlaylistDialog.qml:29
 #: contents/ui/LocalPlaylistsPage.qml:90
 #, kde-format
 msgid "New Playlist"
-msgstr "Uusi soittolista"
+msgstr ""
 
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:18
 #, kde-format
 msgid "Rename playlist"
-msgstr "Muuta soittolistan nimeä"
+msgstr ""
 
 #: contents/ui/LibraryPage.qml:30 contents/ui/LibraryPage.qml:123
 #: contents/ui/NavigationBar.qml:48 contents/ui/NavigationBar.qml:54
 #: contents/ui/Sidebar.qml:131 contents/ui/Sidebar.qml:138
 #, kde-format
 msgid "Favourites"
-msgstr "Suosikit"
+msgstr "Favoritos"
 
 #: contents/ui/LibraryPage.qml:119 contents/ui/LibraryPage.qml:306
 #: contents/ui/LibraryPage.qml:403
 #, kde-format
 msgid "Show All"
-msgstr "Näytä kaikki"
+msgstr "Monstra omne"
 
 #: contents/ui/LibraryPage.qml:147
 #, kde-format
 msgid "No Favourites Yet"
-msgstr "Ei vielä suosikkeja"
+msgstr ""
 
 #: contents/ui/LibraryPage.qml:215
 #, kde-format
 msgid "Most played"
-msgstr "Soitetuimmat"
+msgstr ""
 
 #: contents/ui/LibraryPage.qml:310 contents/ui/NavigationBar.qml:61
 #: contents/ui/NavigationBar.qml:67 contents/ui/Sidebar.qml:150
 #: contents/ui/Sidebar.qml:157
 #, kde-format
 msgid "Played Songs"
-msgstr "Soitetut kappaleet"
+msgstr ""
 
 #: contents/ui/LibraryPage.qml:334
 #, kde-format
 msgid "No Songs Played Yet"
-msgstr "Ei vielä soitettuja kappaleita"
+msgstr ""
 
 #: contents/ui/LibraryPage.qml:391 contents/ui/LocalPlaylistsPage.qml:18
 #: contents/ui/LocalPlaylistsPage.qml:78 contents/ui/NavigationBar.qml:75
 #: contents/ui/SearchPage.qml:30 contents/ui/Sidebar.qml:167
 #, kde-format
 msgid "Playlists"
-msgstr "Soittolistat"
+msgstr "Listas de reproduction"
 
 #: contents/ui/LibraryPage.qml:430
 #, kde-format
 msgid "No Playlists Yet"
-msgstr "Ei vielä soittolistoja"
+msgstr ""
 
 #: contents/ui/LibraryPage.qml:450 contents/ui/LibraryPage.qml:472
 #: contents/ui/LocalPlaylistsPage.qml:33 contents/ui/LocalPlaylistsPage.qml:55
 #, kde-format
 msgid "Rename"
-msgstr "Muuta nimeä"
+msgstr "Renomina"
 
 #: contents/ui/LibraryPage.qml:459 contents/ui/LibraryPage.qml:480
 #: contents/ui/LocalPlaylistsPage.qml:42 contents/ui/LocalPlaylistsPage.qml:63
 #, kde-format
 msgid "Delete"
-msgstr "Poista"
+msgstr "Dele"
 
 #: contents/ui/LocalPlaylistPage.qml:21
 #, kde-format
 msgid "Remove from Playlist"
-msgstr "Poista soittolistalta"
+msgstr "Remove ex lista de reproduction"
 
 #: contents/ui/LocalPlaylistPage.qml:79
 #, kde-format
 msgid "This playlist is still empty"
-msgstr "Soittolista on yhä tyhjä"
+msgstr ""
 
 #: contents/ui/main.qml:110 main.cpp:56
 #, kde-format
@@ -229,215 +228,215 @@ msgstr "AudioTube"
 #: contents/ui/main.qml:260
 #, kde-format
 msgid "No song playing"
-msgstr "Mitään ei soiteta"
+msgstr ""
 
 #: contents/ui/MaximizedPlayerPage.qml:96
 #, kde-format
 msgid "Close Maximized Player"
-msgstr "Sulje suurennettu soitin"
+msgstr ""
 
 #: contents/ui/MaximizedPlayerPage.qml:201
 #: contents/ui/MinimizedPlayerControls.qml:94
 #, kde-format
 msgid "No media playing"
-msgstr "Mitään ei toisteta"
+msgstr "Necun media reproducente"
 
 #: contents/ui/MaximizedPlayerPage.qml:424
 #, kde-format
 msgid "Remove from Favourites"
-msgstr "Poista suosikeista"
+msgstr "Remove ex favoritos"
 
 #: contents/ui/MaximizedPlayerPage.qml:424
 #, kde-format
 msgid "Add to Favourites"
-msgstr "Lisää suosikkeihin"
+msgstr "Adde a favoritos"
 
 #: contents/ui/MaximizedPlayerPage.qml:449
 #, kde-format
 msgid "Open Volume Drawer"
-msgstr "Avaa äänenvoimakkuus"
+msgstr ""
 
 #: contents/ui/MaximizedPlayerPage.qml:559
 #, kde-format
 msgid "Unmute Audio"
-msgstr "Poista äänen vaimennus"
+msgstr ""
 
 #: contents/ui/MaximizedPlayerPage.qml:559
 #, kde-format
 msgid "Mute Audio"
-msgstr "Vaimenna ääni"
+msgstr ""
 
 #: contents/ui/MaximizedPlayerPage.qml:603
 #, kde-format
 msgid "%1%"
-msgstr "%1 %"
+msgstr ""
 
 #: contents/ui/MaximizedPlayerPage.qml:626
 #, kde-format
 msgid "Hide Lyrics"
-msgstr "Piilota sanat"
+msgstr ""
 
 #: contents/ui/MaximizedPlayerPage.qml:626
 #, kde-format
 msgid "Show Lyrics"
-msgstr "Näytä sanoitukset"
+msgstr "Monstra parolas"
 
 #: contents/ui/MaximizedPlayerPage.qml:647 contents/ui/SongMenu.qml:183
 #: contents/ui/SongMenu.qml:269
 #, kde-format
 msgid "Share Song"
-msgstr "Jaa kappale"
+msgstr ""
 
 #: contents/ui/MaximizedPlayerPage.qml:693
 #, kde-format
 msgid "Add to a local playlist"
-msgstr "Lisää paikalliseen soittolistaan"
+msgstr ""
 
 #: contents/ui/MaximizedPlayerPage.qml:730
 #, kde-format
 msgid "Hide Queue"
-msgstr "Piilota jono"
+msgstr ""
 
 #: contents/ui/MaximizedPlayerPage.qml:730
 #, kde-format
 msgid "Show Queue"
-msgstr "Näytä jono"
+msgstr ""
 
 #: contents/ui/MaximizedPlayerPage.qml:897
 #: contents/ui/MaximizedPlayerPage.qml:1099
 #, kde-format
 msgid "Remove Track"
-msgstr "Poista raita"
+msgstr ""
 
 #: contents/ui/MaximizedPlayerPage.qml:933
 #, kde-format
 msgid "Clear Queue"
-msgstr "Tyhjennä jono"
+msgstr ""
 
 #: contents/ui/MaximizedPlayerPage.qml:959
 #, kde-format
 msgid "Shuffle Queue"
-msgstr "Sekoita jono"
+msgstr ""
 
 #: contents/ui/MaximizedPlayerPage.qml:990
 #, kde-format
 msgid "Upcoming Songs"
-msgstr "Tulossa olevat kappaleet"
+msgstr ""
 
 #: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:100
 #, kde-format
 msgid "Library"
-msgstr "Kirjasto"
+msgstr "Libreria"
 
 #: contents/ui/NavigationBar.qml:36 contents/ui/Sidebar.qml:116
 #, kde-format
 msgid "Search"
-msgstr "Etsi"
+msgstr "Cerca"
 
 #: contents/ui/PlaybackHistory.qml:17
 #, kde-format
 msgid "Unknown list of songs"
-msgstr "Tuntematon kappaleluettelo"
+msgstr ""
 
 #: contents/ui/PlaybackHistory.qml:135
 #, kde-format
 msgid "No songs here yet"
-msgstr "Ei vielä kappaleita"
+msgstr ""
 
 #: contents/ui/PlaylistPage.qml:120
 #, kde-format
 msgid "Playlist"
-msgstr "Soittolista"
+msgstr "Lista de reproduction"
 
 #: contents/ui/SearchHistoryPage.qml:86 contents/ui/SearchWithDropdown.qml:395
 #, kde-format
 msgid "remove from search history"
-msgstr "poista hakuhistoriasta"
+msgstr ""
 
 #: contents/ui/SearchPage.qml:16
 #, kde-format
 msgid "Previous Searches:"
-msgstr "Aiemmat haut:"
+msgstr ""
 
 #: contents/ui/SearchPage.qml:28
 #, kde-format
 msgid "Artists"
-msgstr "Artistit"
+msgstr "Artistas"
 
 #: contents/ui/SearchPage.qml:37
 #, kde-format
 msgid "Unknown"
-msgstr "Tuntematon"
+msgstr "Incognite"
 
 #: contents/ui/SearchWithDropdown.qml:342
 #, kde-format
 msgid "No matching previous searches"
-msgstr "Ei osumia aiemmista hauista"
+msgstr ""
 
 #: contents/ui/ShareMenu.qml:39
 #, kde-format
 msgid "Share to"
-msgstr "Jaa kohteeseen"
+msgstr "Comparti a"
 
 #: contents/ui/ShareMenu.qml:49 contents/ui/ShareMenu.qml:99
 #, kde-format
 msgid "Copy Link"
-msgstr "Kopioi linkki"
+msgstr "Copia Ligamine"
 
 #: contents/ui/ShareMenu.qml:54 contents/ui/ShareMenu.qml:104
 #, kde-format
 msgid "Link copied to clipboard"
-msgstr "Linkki kopioitu leikepöydälle"
+msgstr ""
 
 #: contents/ui/Sidebar.qml:189
 #, kde-format
 msgid "About"
-msgstr "Tietoa"
+msgstr "A proposito"
 
 #: contents/ui/Sidebar.qml:203
 #, kde-format
 msgid "Collapse Sidebar"
-msgstr "Supista sivupaneeli"
+msgstr "Plica barra lateral"
 
 #: contents/ui/SongMenu.qml:107 contents/ui/SongMenu.qml:205
 #, kde-format
 msgid "Play Next"
-msgstr "Toista seuraava"
+msgstr ""
 
 #: contents/ui/SongMenu.qml:116 contents/ui/SongMenu.qml:211
 #, kde-format
 msgid "Add to queue"
-msgstr "Lisää jonoon"
+msgstr "Adde a cauda"
 
 #: contents/ui/SongMenu.qml:126 contents/ui/SongMenu.qml:221
 #, kde-format
 msgid "Remove Favourite"
-msgstr "Poista suosikki"
+msgstr ""
 
 #: contents/ui/SongMenu.qml:126 contents/ui/SongMenu.qml:221
 #, kde-format
 msgid "Add Favourite"
-msgstr "Lisää suosikki"
+msgstr ""
 
 #: contents/ui/SongMenu.qml:143 contents/ui/SongMenu.qml:235
 #, kde-format
 msgid "Remove from History"
-msgstr "Poista historiasta"
+msgstr "Remove ex chronologia"
 
 #: contents/ui/SongMenu.qml:156 contents/ui/SongMenu.qml:244
 #, kde-format
 msgid "Add to playlist"
-msgstr "Lisää soittolistaan"
+msgstr "Adde al lista de reproduction"
 
 #: main.cpp:58
 #, kde-format
 msgid "YouTube Music Player"
-msgstr "YouTube-musiikkisoitin"
+msgstr ""
 
 #: main.cpp:60
 #, kde-format
 msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
-msgstr "© 2021–2023 Jonah Brüchert, 2021–2023 KDE-yhteisö"
+msgstr ""
 
 #: main.cpp:61
 #, kde-format
@@ -447,60 +446,31 @@ msgstr "Jonah Brüchert"
 #: main.cpp:61
 #, kde-format
 msgid "Maintainer"
-msgstr "Ylläpitäjä"
+msgstr "Mantenitor"
 
 #: main.cpp:62
 #, kde-format
 msgid "Mathis Brüchert"
-msgstr "Mathis Brüchert"
+msgstr ""
 
 #: main.cpp:62
 #, kde-format
 msgid "Designer"
-msgstr "Suunnittelija"
+msgstr "Designator"
 
 #: main.cpp:63
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Tommi Nieminen"
+msgstr "Giovanni Sora"
 
 #: main.cpp:63
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "translator@legisign.org"
+msgstr "g.sora@tiscali.it"
 
 #: main.cpp:68
 #, kde-format
 msgid "Unofficial API for YouTube Music"
-msgstr "Epävirallinen YouTube Music -API"
-
-#~ msgid "Clear Playlist"
-#~ msgstr "Tyhjennä soittolista"
-
-#, fuzzy
-#~| msgid "Played Songs"
-#~ msgid "played Songs"
-#~ msgstr "Soitetut kappaleet"
-
-#~ msgid "Now Playing"
-#~ msgstr "Nyt soi"
-
-#~ msgid "Back"
-#~ msgstr "Takaisin"
-
-#~ msgid "Play next"
-#~ msgstr "Toista seuraava"
-
-#~ msgid "Clear"
-#~ msgstr "Tyhjennä"
-
-#~ msgid "Pause"
-#~ msgstr "Tauko"
-
-#~ msgid "Expand"
-#~ msgstr "Laajenna"
-
-#~ msgid "Play only Audio"
-#~ msgstr "Toista vain ääni"
+msgstr ""
