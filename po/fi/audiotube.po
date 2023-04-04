@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-18 03:09+0000\n"
-"PO-Revision-Date: 2023-03-07 14:06+0200\n"
+"PO-Revision-Date: 2023-03-30 10:03+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -42,7 +42,7 @@ msgstr "Sekoita"
 #: contents/ui/PlaybackHistory.qml:48 contents/ui/PlaylistPage.qml:46
 #, kde-format
 msgid "Append to queue"
-msgstr ""
+msgstr "Lisää jonoon"
 
 #: contents/ui/AlbumPage.qml:46 contents/ui/ArtistPage.qml:43
 #: contents/ui/PlaylistPage.qml:51
@@ -54,7 +54,7 @@ msgstr "Avaa selaimeen"
 #: contents/ui/PlaylistPage.qml:56
 #, kde-format
 msgid "Share"
-msgstr ""
+msgstr "Jaa"
 
 #: contents/ui/AlbumPage.qml:61
 #, kde-format
@@ -117,43 +117,37 @@ msgid "Cancel"
 msgstr "Peru"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:17
-#, fuzzy, kde-format
-#| msgid "Add to Playlist"
+#, kde-format
 msgid "Add playlist"
-msgstr "Lisää soittolistaan"
+msgstr "Lisää soittolista"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:23
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:24
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "Playlist Title"
-msgstr "Soittolistat"
+msgstr "Soittolistan otsikko"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:28
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:30
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "Playlist Description"
-msgstr "Soittolistat"
+msgstr "Soittolistan kuvaus"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:20
-#, fuzzy, kde-format
-#| msgid "Add to Playlist"
+#, kde-format
 msgid "Add Song to Playlist"
-msgstr "Lisää soittolistaan"
+msgstr "Lisää kappale soittolistaan"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:29
 #: contents/ui/LocalPlaylistsPage.qml:90
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "New Playlist"
-msgstr "Soittolistat"
+msgstr "Uusi soittolista"
 
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:18
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "Rename playlist"
-msgstr "Soittolistat"
+msgstr "Muuta soittolistan nimeä"
 
 #: contents/ui/LibraryPage.qml:30 contents/ui/LibraryPage.qml:123
 #: contents/ui/NavigationBar.qml:48 contents/ui/NavigationBar.qml:54
@@ -198,33 +192,31 @@ msgid "Playlists"
 msgstr "Soittolistat"
 
 #: contents/ui/LibraryPage.qml:650
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "No Playlists Yet"
-msgstr "Soittolistat"
+msgstr "Ei vielä soittolistoja"
 
 #: contents/ui/LibraryPage.qml:670 contents/ui/LibraryPage.qml:692
 #: contents/ui/LocalPlaylistsPage.qml:33 contents/ui/LocalPlaylistsPage.qml:55
 #, kde-format
 msgid "Rename"
-msgstr ""
+msgstr "Muuta nimeä"
 
 #: contents/ui/LibraryPage.qml:679 contents/ui/LibraryPage.qml:700
 #: contents/ui/LocalPlaylistsPage.qml:42 contents/ui/LocalPlaylistsPage.qml:63
 #, kde-format
 msgid "Delete"
-msgstr ""
+msgstr "Poista"
 
 #: contents/ui/LocalPlaylistPage.qml:19
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "Remove from Playlist"
-msgstr "Soittolistat"
+msgstr "Poista soittolistalta"
 
 #: contents/ui/LocalPlaylistPage.qml:29
 #, kde-format
 msgid "This playlist is still empty"
-msgstr ""
+msgstr "Soittolista on yhä tyhjä"
 
 #: contents/ui/main.qml:109 main.cpp:54
 #, kde-format
@@ -256,7 +248,7 @@ msgstr "Tyhjennä soittolista"
 #: contents/ui/MaximizedPlayerPage.qml:917
 #, kde-format
 msgid "Upcoming Songs"
-msgstr ""
+msgstr "Tulossa olevat kappaleet"
 
 #: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:100
 #, kde-format
@@ -311,17 +303,17 @@ msgstr "Ei osumia aiemmista hauista"
 #: contents/ui/ShareMenu.qml:39
 #, kde-format
 msgid "Share to"
-msgstr ""
+msgstr "Jaa kohteeseen"
 
 #: contents/ui/ShareMenu.qml:49 contents/ui/ShareMenu.qml:99
 #, kde-format
 msgid "Copy Link"
-msgstr ""
+msgstr "Kopioi linkki"
 
 #: contents/ui/ShareMenu.qml:54 contents/ui/ShareMenu.qml:104
 #, kde-format
 msgid "Link copied to clipboard"
-msgstr ""
+msgstr "Linkki kopioitu leikepöydälle"
 
 #: contents/ui/Sidebar.qml:189
 #, kde-format
@@ -359,16 +351,14 @@ msgid "Remove from History"
 msgstr "Poista historiasta"
 
 #: contents/ui/SongMenu.qml:156 contents/ui/SongMenu.qml:244
-#, fuzzy, kde-format
-#| msgid "Add to Playlist"
+#, kde-format
 msgid "Add to playlist"
 msgstr "Lisää soittolistaan"
 
 #: contents/ui/SongMenu.qml:183 contents/ui/SongMenu.qml:269
-#, fuzzy, kde-format
-#| msgid "Favourite Songs"
+#, kde-format
 msgid "Share Song"
-msgstr "Suosikkikappaleet"
+msgstr "Jaa kappale"
 
 #: main.cpp:56
 #, kde-format
