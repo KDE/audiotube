@@ -56,36 +56,36 @@ Item {
         Keys.onPressed: {
             if(completionList.count > 0) {
                 if (event.key === Qt.Key_Down) {
-                    if(completionList.selectedDelegate == -1 || completionList.selectedDelegate == completionList.count - 1) {
+                    if(completionList.selectedDelegate === -1 || completionList.selectedDelegate === completionList.count - 1) {
                         completionList.selectedDelegate = 0
                         mainScrollView.contentItem.contentY = 0
                     }
                     else {
                         ++completionList.selectedDelegate
                         if(!completionList.isSelectedDelegateVisible()) {
-                            if(!recents.visible) {
+                            if(!recentsRepeater.visible) {
                                 mainScrollView.contentItem.contentY = (completionList.selectedDelegate + 1) * completionList.empiricDelegateHeight - mainScrollView.height
                             }
                             else {
-                                mainScrollView.contentItem.contentY = (completionList.selectedDelegate + 1) * completionList.empiricDelegateHeight + recents.height + mainScrollViewLayout.spacing - mainScrollView.height
+                                mainScrollView.contentItem.contentY = (completionList.selectedDelegate + 1) * completionList.empiricDelegateHeight + recentsRepeater.height + mainScrollViewLayout.spacing - mainScrollView.height
                             }
                         }
                     }
                     event.accepted = true
                 }
-                else if(event.key == Qt.Key_Up) {
-                    if(completionList.selectedDelegate == -1 || completionList.selectedDelegate == 0) {
+                else if(event.key === Qt.Key_Up) {
+                    if(completionList.selectedDelegate === -1 || completionList.selectedDelegate === 0) {
                         completionList.selectedDelegate = completionList.count - 1
                         mainScrollView.contentItem.contentY = mainScrollView.contentHeight - mainScrollView.height
                     }
                     else {
                         --completionList.selectedDelegate
                         if(!completionList.isSelectedDelegateVisible()) {
-                            if(!recents.visible) {
+                            if(!recentsRepeater.visible) {
                                 mainScrollView.contentItem.contentY = completionList.empiricDelegateHeight * completionList.selectedDelegate
                             }
                             else {
-                                mainScrollView.contentItem.contentY = completionList.empiricDelegateHeight * completionList.selectedDelegate + recents.height + mainScrollViewLayout.spacing
+                                mainScrollView.contentItem.contentY = completionList.empiricDelegateHeight * completionList.selectedDelegate + recentsRepeater.height + mainScrollViewLayout.spacing
                             }
                         }
                     }
@@ -360,11 +360,11 @@ Item {
                         }
 
                         function isSelectedDelegateVisible() {
-                            if(!recents.visible) {
+                            if(!recentsRepeater.visible) {
                                 return selectedDelegate * empiricDelegateHeight > mainScrollView.contentItem.contentY && (selectedDelegate + 1) * empiricDelegateHeight < mainScrollView.contentItem.contentY + mainScrollView.height
                             }
                             else {
-                                    return selectedDelegate * empiricDelegateHeight + recents.height > mainScrollView.contentItem.contentY && (selectedDelegate + 1) * empiricDelegateHeight + recents.height < mainScrollView.contentItem.contentY + mainScrollView.height
+                                    return selectedDelegate * empiricDelegateHeight + recentsRepeater.height > mainScrollView.contentItem.contentY && (selectedDelegate + 1) * empiricDelegateHeight + recentsRepeater.height < mainScrollView.contentItem.contentY + mainScrollView.height
                             }
                         }
 
