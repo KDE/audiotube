@@ -23,7 +23,7 @@ class UserPlaylistModel : public AbstractYTMusicModel
 
     // output
     Q_PROPERTY(QString currentVideoId READ currentVideoId NOTIFY currentVideoIdChanged)
-    Q_PROPERTY(int currentIndex READ currentIndex NOTIFY currentVideoIdChanged)
+    Q_PROPERTY(int currentIndex READ currentIndex NOTIFY currentIndexChanged)
     Q_PROPERTY(bool canSkip READ canSkip NOTIFY canSkipChanged)
     Q_PROPERTY(bool canSkipBack READ canSkipBack NOTIFY canSkipBackChanged)
     Q_PROPERTY(QString lyrics READ lyrics NOTIFY lyricsChanged)
@@ -45,6 +45,7 @@ public:
     int rowCount(const QModelIndex &parent) const override;
     QVariant data(const QModelIndex &index, int role) const override;
     QHash<int, QByteArray> roleNames() const override;
+    Q_INVOKABLE bool moveRow(int sourceRow, int destinationRow);
 
     QString initialVideoId() const;
     void setInitialVideoId(const QString &videoId);
@@ -56,6 +57,7 @@ public:
     QString currentVideoId() const;
     void setCurrentVideoId(const QString &videoId);
     Q_SIGNAL void currentVideoIdChanged();
+    Q_SIGNAL void currentIndexChanged();
 
     int currentIndex() const;
 

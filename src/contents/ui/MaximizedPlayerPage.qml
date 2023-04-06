@@ -796,7 +796,7 @@ Item {
 
                     Layout.fillWidth: true
                     Layout.fillHeight: true
-
+                        Layout.leftMargin:10
                     ListView {
                         id: playListView
 
@@ -804,7 +804,6 @@ Item {
 
                         spacing: 5
                         rightMargin: 10
-                        leftMargin:10
                         topMargin:10
                         bottomMargin: 10
                         clip: true
@@ -820,20 +819,32 @@ Item {
 
                         model: UserPlaylistModel
 
-                        delegate: Kirigami.SwipeListItem {
+                        moveDisplaced: Transition {
+                            YAnimator {
+                                duration: Kirigami.Units.mediumDuration
+                                easing.type: Easing.InOutQuad
+                            }
+                        }
+
+                        delegate: Item{
+                            //listItemDragHandle requires queueEntry to be a child of the delegate, and not the delegate itself
                             id: delegateItem
                             required property string title
                             required property string videoId
                             required property string artists
                             required property bool isCurrent
                             required property int index
-                            
-                            width: playListView.contentWidth
-                            alwaysVisibleActions: true
+                            width: queueEntry.width
+                            height: queueEntry.height
+                            Kirigami.SwipeListItem {
+                                id: queueEntry
 
-                            background: Rectangle{
-                                radius: 7
-                                color:
+                                width: playListView.contentWidth
+                                alwaysVisibleActions: true
+
+                                background: Rectangle{
+                                    radius: 7
+                                    color:
                                     if (parent.down){
                                         Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.3)
                                     }else if(parent.hovered){
@@ -844,67 +855,87 @@ Item {
                                         Qt.rgba(0, 0, 0, 0.4)
                                     }
 
-                                border.color:
-                                                if (parent.down){
-                                                    Kirigami.Theme.hoverColor
-                                                }else if(parent.hovered){
-                                                    Kirigami.Theme.hoverColor
-                                                }else{
-                                                    Qt.rgba(1, 1, 1, 0)
-                                                }
+                                    border.color:
+                                    if (parent.down){
+                                        Kirigami.Theme.hoverColor
+                                    }else if(parent.hovered){
+                                        Kirigami.Theme.hoverColor
+                                    }else{
+                                        Qt.rgba(1, 1, 1, 0)
+                                    }
 
-                                border.width: 1
-                            }
-                            highlighted: isCurrent
-                            onClicked: UserPlaylistModel.skipTo(videoId)
-                            contentItem: RowLayout{
-                                ThumbnailSource {
-                                    id: delegateThumbnailSource
-                                    videoId: delegateItem.videoId
+                                    border.width: 1
                                 }
-                                RoundedImage {
-                                    source: delegateThumbnailSource.cachedPath
-                                    Layout.margins: 2.5
-                                    height: delegateItem.height
-                                    width: height
-                                    radius: 5
-                                }
+                                highlighted: isCurrent
+                                onClicked: UserPlaylistModel.skipTo(videoId)
+                                contentItem: RowLayout{
+                                    Item {
+                                        width: handle.width
+                                        height: handle.height
+                                        Kirigami.ListItemDragHandle {
+                                            id: handle
+                                            Layout.fillHeight: true
+                                            listItem: queueEntry
+                                            listView: playListView
+                                            onMoveRequested: UserPlaylistModel.moveRow(oldIndex, newIndex)
 
-                                ColumnLayout {
-                                    Layout.margins: 5
+                                        }
+                                        Rectangle {
+                                            anchors.fill: handle
+                                            layer.enabled: true
+                                            layer.effect: OpacityMask {
+                                                maskSource: handle
+                                            }
+                                        }
+                                    }
+                                    ThumbnailSource {
+                                        id: delegateThumbnailSource
+                                        videoId: delegateItem.videoId
+                                    }
+                                    RoundedImage {
+                                        source: delegateThumbnailSource.cachedPath
+                                        Layout.margins: 2.5
+                                        height: delegateItem.height
+                                        width: height
+                                        radius: 5
+                                    }
 
-                                    Layout.fillWidth: true
-                                    Kirigami.Heading {
+                                    ColumnLayout {
+                                        Layout.margins: 5
 
-
-                                        elide: Text.ElideRight
                                         Layout.fillWidth: true
-                                        level: 2
-                                        text: title
-                                    }
+                                        Kirigami.Heading {
 
-                                    Label {
 
-                                        elide: Text.ElideRight
-                                        Layout.fillWidth: true
-                                        color: Kirigami.Theme.disabledTextColor
-                                        text: artists
+                                            elide: Text.ElideRight
+                                            Layout.fillWidth: true
+                                            level: 2
+                                            text: title
+                                        }
+
+                                        Label {
+
+                                            elide: Text.ElideRight
+                                            Layout.fillWidth: true
+                                            color: Kirigami.Theme.disabledTextColor
+                                            text: artists
+                                        }
                                     }
                                 }
+                                actions: [
+                                    Kirigami.Action {
+                                        text: i18n("Remove Track")
+                                        ToolTip {
+                                            text: parent.text
+                                            delay: 700
+                                            visible: Kirigami.Settings.isMobile ? parent.pressed : parent.hovered
+                                        }
+                                        icon.name: "list-remove"
+                                        icon.color: "white"
+                                        onTriggered: UserPlaylistModel.remove(delegateItem.videoId)
+                                    }
+                                ]
                             }
-                            actions: [
-                                Kirigami.Action {
-                                    text: i18n("Remove Track")
-                                    ToolTip {
-                                        text: parent.text
-                                        delay: 700
-                                        visible: Kirigami.Settings.isMobile ? parent.pressed : parent.hovered
-                                    }
-                                    icon.name: "list-remove"
-                                    icon.color: "white"
-                                    onTriggered: UserPlaylistModel.remove(delegateItem.videoId)
-                                }
-                            ]
                         }
                     }
                 }
@@ -1037,6 +1068,7 @@ Item {
             drawerContentItem: ScrollView {
 
                 ListView {
+                    id: drawerListView
                     topMargin: 10
                     clip: true
 
@@ -1047,8 +1079,14 @@ Item {
 
                     model: UserPlaylistModel
 
-                    delegate: Kirigami.SwipeListItem {
+                    moveDisplaced: Transition {
+                        YAnimator {
+                            duration: Kirigami.Units.mediumDuration
+                            easing.type: Easing.InOutQuad
+                        }
+                    }
 
+                    delegate: Item{
                         id: drawerDelegateItem
                         required property string title
                         required property string videoId
@@ -1056,57 +1094,82 @@ Item {
                         required property bool isCurrent
                         required property int index
 
-                        alwaysVisibleActions:true
-                        backgroundColor:"transparent"
-                        highlighted: isCurrent
-                        onClicked: {
-                            queueDrawer.close()
-                            UserPlaylistModel.skipTo(videoId)
-                        }
-                        RowLayout{
-                            Layout.fillWidth: true
-                            ThumbnailSource {
-                                id: drawerDelegateThumbnailSource
-                                videoId: drawerDelegateItem.videoId
-                            }
-                            RoundedImage {
-                                source: drawerDelegateThumbnailSource.cachedPath
-                                height: 50
-                                width: height
-                                radius: 5
-                            }
+                        width: drawerListView.width
+                        height: drawerQueueEntry.height
 
-                            ColumnLayout {
-                                Layout.margins: 5
+                        Kirigami.SwipeListItem {
+                            id: drawerQueueEntry
+                            alwaysVisibleActions:true
+                            backgroundColor:"transparent"
+                            highlighted: drawerDelegateItem.isCurrent
+                            onClicked: {
+                                queueDrawer.close()
+                                UserPlaylistModel.skipTo(drawerDelegateItem.videoId)
+                            }
+                            contentItem: RowLayout{
                                 Layout.fillWidth: true
-                                Kirigami.Heading {
-                                    elide: Text.ElideRight
-                                    Layout.fillWidth: true
-                                    level: 2
-                                    text: title
+                                Item {
+                                    width: handle.width
+                                    height: handle.height
+                                    Kirigami.ListItemDragHandle {
+                                        id: handle
+                                        Layout.fillHeight: true
+                                        listItem: drawerQueueEntry
+                                        listView: drawerListView
+                                        onMoveRequested: UserPlaylistModel.moveRow(oldIndex, newIndex)
+
+                                    }
+                                    Rectangle {
+                                        anchors.fill: handle
+                                        layer.enabled: true
+                                        layer.effect: OpacityMask {
+                                            maskSource: handle
+                                        }
+                                    }
+                                }
+                                ThumbnailSource {
+                                    id: drawerDelegateThumbnailSource
+                                    videoId: drawerDelegateItem.videoId
+                                }
+                                RoundedImage {
+                                    source: drawerDelegateThumbnailSource.cachedPath
+                                    height: 50
+                                    width: height
+                                    radius: 5
                                 }
 
-                                Label {
-                                    elide: Text.ElideRight
+                                ColumnLayout {
+                                    Layout.margins: 5
                                     Layout.fillWidth: true
-                                    color: Kirigami.Theme.disabledTextColor
-                                    text: artists
+                                    Kirigami.Heading {
+                                        elide: Text.ElideRight
+                                        Layout.fillWidth: true
+                                        level: 2
+                                        text: drawerDelegateItem.title
+                                    }
+
+                                    Label {
+                                        elide: Text.ElideRight
+                                        Layout.fillWidth: true
+                                        color: Kirigami.Theme.disabledTextColor
+                                        text: drawerDelegateItem.artists
+                                    }
                                 }
                             }
+                            actions: [
+                                Kirigami.Action {
+                                    text: i18n("Remove Track")
+                                    ToolTip {
+                                        text: parent.text
+                                        delay: 700
+                                        visible: Kirigami.Settings.isMobile ? parent.pressed : parent.hovered
+                                    }
+                                    icon.name: "list-remove"
+                                    icon.color: "white"
+                                    onTriggered: UserPlaylistModel.remove(drawerDelegateItem.videoId)
+                                }
+                            ]
                         }
-                        actions: [
-                            Kirigami.Action {
-                                text: i18n("Remove Track")
-                                ToolTip {
-                                    text: parent.text
-                                    delay: 700
-                                    visible: Kirigami.Settings.isMobile ? parent.pressed : parent.hovered
-                                }
-                                icon.name: "list-remove"
-                                icon.color: "white"
-                                onTriggered: UserPlaylistModel.remove(drawerDelegateItem.videoId)
-                            }
-                        ]
                     }
                 }
             }

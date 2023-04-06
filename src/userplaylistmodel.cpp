@@ -64,6 +64,7 @@ UserPlaylistModel::UserPlaylistModel(QObject *parent)
         setLoading(false);
     });
     connect(this, &UserPlaylistModel::currentVideoIdChanged, this, [this]() {
+        Q_EMIT currentIndexChanged();
         // Clear lyrics, so we won't display old ones if the next song doesn't have any.
         m_lyrics = {};
         Q_EMIT lyricsChanged();
@@ -108,6 +109,26 @@ QHash<int, QByteArray> UserPlaylistModel::roleNames() const
         {Album, "album"},
         {IsCurrent, "isCurrent"},
     };
+}
+
+bool UserPlaylistModel::moveRow(int sourceRow,int destinationRow)
+{
+    if(beginMoveRows(QModelIndex(), sourceRow, sourceRow, QModelIndex(), destinationRow)) {
+        m_playlist.tracks.insert(m_playlist.tracks.begin()+destinationRow, 1, m_playlist.tracks[sourceRow]);
+        if(sourceRow < destinationRow) {
+            m_playlist.tracks.erase(m_playlist.tracks.begin()+sourceRow);
+        }
+        else {
+            m_playlist.tracks.erase(m_playlist.tracks.begin()+sourceRow+1);
+        }
+        endMoveRows();
+
+        Q_EMIT currentIndexChanged();
+        Q_EMIT canSkipChanged();
+        Q_EMIT canSkipBackChanged();
+        return true;
+    }
+    return false;
 }
 
 QString UserPlaylistModel::initialVideoId() const
