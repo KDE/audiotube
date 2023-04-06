@@ -51,6 +51,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="fi">Mukautuva YouTube Music -asiakas</summary>
   <summary xml:lang="fr">Client convergent pour musique sur YouTube</summary>
   <summary xml:lang="hi">अभिसृत यूट्यूब संगीत क्लाएंट</summary>
+  <summary xml:lang="ia">Cliente de musica de YouTube convergente</summary>
   <summary xml:lang="id">Klien YouTube Music konvergen</summary>
   <summary xml:lang="it">Client YouTube Music convergente</summary>
   <summary xml:lang="ka">YouTube Music -ის კონვერგენტული კლიენტი</summary>
@@ -185,6 +186,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="fi">AudioTube osaa etsiä YouTube Music -haun, albumien ja artistien luettelun, luotujen soittolistojen automaattisen toiston ja omien soittolistojen kokoamisen.</p>
     <p xml:lang="fr">AudioTube peut effectuer des recherches de musiques sur la partie « Musique » de YouTube, établir une liste d'albums et d'artistes, lire des listes de lecture générées automatiquement, des albums et permet de composer sa propre liste de lecture.</p>
     <p xml:lang="hi">ऑडियोट्यूब यूट्यूब संगीत खोज सकता है, एल्बम और कलाकारों की सूची बना सकता है, स्वचालित रूप से उत्पन्न की गई गीतसूची, एल्बम बजा सकता है और आपकी अपनी खुद की प्लेलिस्ट को एक साथ रखने में मदद करता है।</p>
+    <p xml:lang="ia">AudioTube pote cercar in YouTube Music, listar albums e artistas, reproducer listas de reproduction generate automaticamente, albums e te permitte poner  tu proprie lista de reproduction insimul.</p>
     <p xml:lang="id">AudioTube dapat menelusuri YouTube Music, mendaftarkan album dan artis, putar daftar putar dan yang dibuat secara otomatis dan album, dan memungkinkan Anda untuk membuat daftar putar Anda sendiri.</p>
     <p xml:lang="it">AudioTube può eseguire ricerche su YouTube Music, elencare album e artisti, riprodurre scalette e album generati automaticamente e ti consente di creare la tua scaletta.</p>
     <p xml:lang="ka">AudioTube -ს შეუძლია მოძებნოს მუსიკა YouTube-ზე, გაჩვენოთ ალბომებისა და შემსრულებლების სია, დაუკრას დაგენერირებული დასაკრავი სიები, ალბომები და საშუალებას გაძლევთ, თქვენი დასაკრავი სია შექმნათ.</p>
