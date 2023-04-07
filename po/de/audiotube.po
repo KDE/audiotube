@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-22 00:47+0000\n"
+"POT-Creation-Date: 2023-04-07 00:46+0000\n"
 "PO-Revision-Date: 2023-02-09 00:18+0100\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -327,25 +327,25 @@ msgstr "Warteschlange"
 msgid "Show Queue"
 msgstr "Warteschlange"
 
-#: contents/ui/MaximizedPlayerPage.qml:897
-#: contents/ui/MaximizedPlayerPage.qml:1099
+#: contents/ui/MaximizedPlayerPage.qml:927
+#: contents/ui/MaximizedPlayerPage.qml:1161
 #, kde-format
 msgid "Remove Track"
 msgstr "Stück entfernen"
 
-#: contents/ui/MaximizedPlayerPage.qml:933
+#: contents/ui/MaximizedPlayerPage.qml:964
 #, fuzzy, kde-format
 #| msgid "Queue"
 msgid "Clear Queue"
 msgstr "Warteschlange"
 
-#: contents/ui/MaximizedPlayerPage.qml:959
+#: contents/ui/MaximizedPlayerPage.qml:990
 #, fuzzy, kde-format
 #| msgid "Shuffle"
 msgid "Shuffle Queue"
 msgstr "Zufällig"
 
-#: contents/ui/MaximizedPlayerPage.qml:990
+#: contents/ui/MaximizedPlayerPage.qml:1021
 #, kde-format
 msgid "Upcoming Songs"
 msgstr ""

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-22 00:47+0000\n"
+"POT-Creation-Date: 2023-04-07 00:46+0000\n"
 "PO-Revision-Date: 2023-03-22 13:12+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -305,23 +305,23 @@ msgstr "Приховати чергу"
 msgid "Show Queue"
 msgstr "Показати чергу"
 
-#: contents/ui/MaximizedPlayerPage.qml:897
-#: contents/ui/MaximizedPlayerPage.qml:1099
+#: contents/ui/MaximizedPlayerPage.qml:927
+#: contents/ui/MaximizedPlayerPage.qml:1161
 #, kde-format
 msgid "Remove Track"
 msgstr "Вилучити композицію"
 
-#: contents/ui/MaximizedPlayerPage.qml:933
+#: contents/ui/MaximizedPlayerPage.qml:964
 #, kde-format
 msgid "Clear Queue"
 msgstr "Спорожнити чергу"
 
-#: contents/ui/MaximizedPlayerPage.qml:959
+#: contents/ui/MaximizedPlayerPage.qml:990
 #, kde-format
 msgid "Shuffle Queue"
 msgstr "Перемішати чергу"
 
-#: contents/ui/MaximizedPlayerPage.qml:990
+#: contents/ui/MaximizedPlayerPage.qml:1021
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "Майбутні композиції"

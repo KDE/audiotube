@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-22 00:47+0000\n"
+"POT-Creation-Date: 2023-04-07 00:46+0000\n"
 "PO-Revision-Date: 2023-03-29 16:12+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -304,23 +304,23 @@ msgstr "Skrýt frontu"
 msgid "Show Queue"
 msgstr "Zobrazit frontu"
 
-#: contents/ui/MaximizedPlayerPage.qml:897
-#: contents/ui/MaximizedPlayerPage.qml:1099
+#: contents/ui/MaximizedPlayerPage.qml:927
+#: contents/ui/MaximizedPlayerPage.qml:1161
 #, kde-format
 msgid "Remove Track"
 msgstr "Odstranit skladbu"
 
-#: contents/ui/MaximizedPlayerPage.qml:933
+#: contents/ui/MaximizedPlayerPage.qml:964
 #, kde-format
 msgid "Clear Queue"
 msgstr "Vymazat frontu"
 
-#: contents/ui/MaximizedPlayerPage.qml:959
+#: contents/ui/MaximizedPlayerPage.qml:990
 #, kde-format
 msgid "Shuffle Queue"
 msgstr "Zamíchat frontu"
 
-#: contents/ui/MaximizedPlayerPage.qml:990
+#: contents/ui/MaximizedPlayerPage.qml:1021
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "Nadcházející písně"

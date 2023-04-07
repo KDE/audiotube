@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-22 00:47+0000\n"
+"POT-Creation-Date: 2023-04-07 00:46+0000\n"
 "PO-Revision-Date: 2023-03-22 02:54+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -306,23 +306,23 @@ msgstr "Ocultar cola"
 msgid "Show Queue"
 msgstr "Mostrar cola"
 
-#: contents/ui/MaximizedPlayerPage.qml:897
-#: contents/ui/MaximizedPlayerPage.qml:1099
+#: contents/ui/MaximizedPlayerPage.qml:927
+#: contents/ui/MaximizedPlayerPage.qml:1161
 #, kde-format
 msgid "Remove Track"
 msgstr "Eliminar pista"
 
-#: contents/ui/MaximizedPlayerPage.qml:933
+#: contents/ui/MaximizedPlayerPage.qml:964
 #, kde-format
 msgid "Clear Queue"
 msgstr "Borrar cola"
 
-#: contents/ui/MaximizedPlayerPage.qml:959
+#: contents/ui/MaximizedPlayerPage.qml:990
 #, kde-format
 msgid "Shuffle Queue"
 msgstr "Desordenar cola"
 
-#: contents/ui/MaximizedPlayerPage.qml:990
+#: contents/ui/MaximizedPlayerPage.qml:1021
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "Próximas canciones"
