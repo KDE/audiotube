@@ -95,11 +95,10 @@ Item {
                 onClicked: root.requestClose()
                 text: i18n("Close Maximized Player")
                 display: ToolButton.IconOnly
-                ToolTip {
-                    text: parent.text
-                    delay: 700
-                    visible: Kirigami.Settings.isMobile ? parent.pressed : parent.hovered
-                }
+
+                ToolTip.text: text
+                ToolTip.delay: Kirigami.Units.toolTipDelay
+                ToolTip.visible: Kirigami.Settings.isMobile ? pressed : hovered
             }
 
             SwipeView {
@@ -426,11 +425,11 @@ Item {
                         enabled: favouriteWatcher
                         icon.color: "white"
                         display: AbstractButton.IconOnly
-                        ToolTip {
-                            text: parent.text
-                            delay: 700
-                            visible: Kirigami.Settings.isMobile ? parent.pressed : parent.hovered
-                        }
+
+                        ToolTip.text: text
+                        ToolTip.delay: Kirigami.Units.toolTipDelay
+                        ToolTip.visible: Kirigami.Settings.isMobile ? pressed : hovered
+
                         Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
                         Kirigami.Theme.inherit: false
                     }
@@ -448,11 +447,9 @@ Item {
 
                         text: i18n("Open Volume Drawer")
                         display: AbstractButton.IconOnly
-                        ToolTip {
-                            text: parent.text
-                            delay: 700
-                            visible: Kirigami.Settings.isMobile ? parent.pressed : parent.hovered
-                        }
+                        ToolTip.text: text
+                        ToolTip.delay: Kirigami.Units.toolTipDelay
+                        ToolTip.visible: Kirigami.Settings.isMobile ? pressed : hovered
 
                         onClicked:{
                             if(!volumeDrawer.opened){
@@ -476,11 +473,11 @@ Item {
                                         checked: muteButton.checked
                                         text: muteButton.text
                                         display: muteButton.display
-                                        ToolTip {
-                                            text: parent.text
-                                            delay: 700
-                                            visible: Kirigami.Settings.isMobile ? parent.pressed : parent.hovered
-                                        }
+
+                                        ToolTip.text: text
+                                        ToolTip.delay: Kirigami.Units.toolTipDelay
+                                        ToolTip.visible: Kirigami.Settings.isMobile ? pressed : hovered
+
                                         onClicked: {
                                             if(audio.muted)
                                             {
@@ -558,11 +555,10 @@ Item {
                         enabled: isWidescreen
                         text: audio.muted ? i18n("Unmute Audio") : i18n("Mute Audio")
                         display: AbstractButton.IconOnly
-                        ToolTip {
-                            text: parent.text
-                            delay: 700
-                            visible: Kirigami.Settings.isMobile ? parent.pressed : parent.hovered
-                        }
+
+                        ToolTip.text: text
+                        ToolTip.delay: Kirigami.Units.toolTipDelay
+                        ToolTip.visible: Kirigami.Settings.isMobile ? pressed : hovered
                     }
 
                     Slider {
@@ -627,11 +623,10 @@ Item {
                         icon.name: "view-media-lyrics"
                         icon.color: "white"
                         display: AbstractButton.IconOnly
-                        ToolTip {
-                            text: parent.text
-                            delay: 700
-                            visible: Kirigami.Settings.isMobile ? parent.pressed : parent.hovered
-                        }
+
+                        ToolTip.text: text
+                        ToolTip.delay: Kirigami.Units.toolTipDelay
+                        ToolTip.visible: Kirigami.Settings.isMobile ? pressed : hovered
 
                         Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
                         Kirigami.Theme.inherit: false
@@ -648,11 +643,11 @@ Item {
                         icon.name: "emblem-shared-symbolic"
                         icon.color: "white"
                         display: AbstractButton.IconOnly
-                        ToolTip {
-                            text: parent.text
-                            delay: 700
-                            visible: Kirigami.Settings.isMobile ? parent.pressed : parent.hovered
-                        }
+
+                        ToolTip.text: text
+                        ToolTip.delay: Kirigami.Units.toolTipDelay
+                        ToolTip.visible: Kirigami.Settings.isMobile ? pressed : hovered
+
                         enabled: info.title
 
                         Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
@@ -692,11 +687,11 @@ Item {
                         icon.color: "white"
                         text: i18n("Add to a local playlist")
                         display: AbstractButton.IconOnly
-                        ToolTip {
-                            text: parent.text
-                            delay: 700
-                            visible: Kirigami.Settings.isMobile ? parent.pressed : parent.hovered
-                        }
+
+                        ToolTip.text: text
+                        ToolTip.delay: Kirigami.Units.toolTipDelay
+                        ToolTip.visible: Kirigami.Settings.isMobile ? pressed : hovered
+
                         Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
                         Kirigami.Theme.inherit: false
                     }
@@ -729,11 +724,11 @@ Item {
 
                         text: checked ? i18n("Hide Queue") : i18n("Show Queue")
                         display: AbstractButton.IconOnly
-                        ToolTip {
-                            text: parent.text
-                            delay: 700
-                            visible: Kirigami.Settings.isMobile ? parent.pressed : parent.hovered
-                        }
+
+                        ToolTip.text: text
+                        ToolTip.delay: Kirigami.Units.toolTipDelay
+                        ToolTip.visible: Kirigami.Settings.isMobile ? pressed : hovered
+
                         icon.name: "amarok_playlist"
                         icon.color: "white"
 
@@ -925,10 +920,10 @@ Item {
                                 actions: [
                                     Kirigami.Action {
                                         text: i18n("Remove Track")
-                                        ToolTip {
-                                            text: parent.text
-                                            delay: 700
-                                            visible: Kirigami.Settings.isMobile ? parent.pressed : parent.hovered
+                                        Item{
+                                            ToolTip.text: parent ? parent.text : ""
+                                            ToolTip.delay: Kirigami.Units.toolTipDelay
+                                            ToolTip.visible: parent ?  (Kirigami.Settings.isMobile ? parent.pressed : parent.hovered) : false
                                         }
                                         icon.name: "list-remove"
                                         icon.color: "white"
@@ -967,11 +962,10 @@ Item {
                             color: "white"
                         }
                         display: AbstractButton.IconOnly
-                        ToolTip {
-                            text: parent.text
-                            delay: 700
-                            visible: Kirigami.Settings.isMobile ? parent.pressed : parent.hovered
-                        }
+
+                        ToolTip.text: text
+                        ToolTip.delay: Kirigami.Units.toolTipDelay
+                        ToolTip.visible: Kirigami.Settings.isMobile ? pressed : hovered
                         
                         onClicked: UserPlaylistModel.clearExceptCurrent()
                         
@@ -988,11 +982,10 @@ Item {
                         onClicked: UserPlaylistModel.shufflePlaylist()
                         
                         text: i18n("Shuffle Queue")
-                        ToolTip {
-                            text: parent.text
-                            delay: 700
-                            visible: Kirigami.Settings.isMobile ? parent.pressed : parent.hovered
-                        }
+
+                        ToolTip.text: text
+                        ToolTip.delay: Kirigami.Units.toolTipDelay
+                        ToolTip.visible: Kirigami.Settings.isMobile ? pressed : hovered
 
                         icon {
                             name: "media-playlist-shuffle"
@@ -1032,11 +1025,11 @@ Item {
                     Layout.maximumWidth: height
                     Layout.preferredWidth: height
                     text: clearPlaylistButton.text
-                    ToolTip {
-                        text: parent.text
-                        delay: 700
-                        visible: Kirigami.Settings.isMobile ? parent.pressed : parent.hovered
-                    }
+
+                    ToolTip.text: text
+                    ToolTip.delay: Kirigami.Units.toolTipDelay
+                    ToolTip.visible: Kirigami.Settings.isMobile ? pressed : hovered
+
                     icon.name: "edit-clear-all"
                     display: clearPlaylistButton.display
                     onClicked: {
@@ -1053,11 +1046,11 @@ Item {
                     icon.name: "media-playlist-shuffle"
                     text: shuffleButton.text
                     display: shuffleButton.display
-                    ToolTip {
-                        text: parent.text
-                        delay: 700
-                        visible: Kirigami.Settings.isMobile ? parent.pressed : parent.hovered
-                    }
+
+                    ToolTip.text: text
+                    ToolTip.delay: Kirigami.Units.toolTipDelay
+                    ToolTip.visible: Kirigami.Settings.isMobile ? pressed : hovered
+
                     onClicked: {
                         UserPlaylistModel.shufflePlaylist()
                     }
@@ -1159,10 +1152,10 @@ Item {
                             actions: [
                                 Kirigami.Action {
                                     text: i18n("Remove Track")
-                                    ToolTip {
-                                        text: parent.text
-                                        delay: 700
-                                        visible: Kirigami.Settings.isMobile ? parent.pressed : parent.hovered
+                                    Item{
+                                        ToolTip.text: parent ? parent.text : ""
+                                        ToolTip.delay: Kirigami.Units.toolTipDelay
+                                        ToolTip.visible: parent ?  (Kirigami.Settings.isMobile ? parent.pressed : parent.hovered) : false
                                     }
                                     icon.name: "list-remove"
                                     icon.color: "white"
