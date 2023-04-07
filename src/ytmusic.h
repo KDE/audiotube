@@ -48,7 +48,7 @@ struct Media {
 };
 
 struct Video : public Media {
-    std::string views;
+    std::optional<std::string> views;
 };
 
 struct Playlist {
