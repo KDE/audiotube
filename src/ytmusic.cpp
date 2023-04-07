@@ -276,16 +276,17 @@ std::optional<artist::Artist::Section<T>> extract_artist_section(py::handle arti
 
 std::optional<search::SearchResultItem> extract_search_result(py::handle result) {
     const auto resultType = result["resultType"].cast<std::string>();
+
     if (resultType == "video") {
         return search::Video {
             {
                 result["videoId"].cast<std::string>(),
                 result["title"].cast<std::string>(),
                 extract_py_list<meta::Artist>(result["artists"]),
-                result["views"].cast<std::string>(),
+                result["duration"].cast<std::string>(),
                 extract_py_list<meta::Thumbnail>(result["thumbnails"])
             },
-            result["duration"].cast<std::string>()
+            optional_key<std::string>(result, "views")
         };
     } else if (resultType == "song") {
         return search::Song {
