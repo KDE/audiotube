@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-07 00:46+0000\n"
+"POT-Creation-Date: 2023-04-08 00:46+0000\n"
 "PO-Revision-Date: 2023-03-22 11:56+0000\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -239,90 +239,90 @@ msgstr "Nada em reprodução"
 msgid "Close Maximized Player"
 msgstr "Fechar o Leitor Maximizado"
 
-#: contents/ui/MaximizedPlayerPage.qml:201
+#: contents/ui/MaximizedPlayerPage.qml:200
 #: contents/ui/MinimizedPlayerControls.qml:94
 #, kde-format
 msgid "No media playing"
 msgstr "Nada em reprodução"
 
-#: contents/ui/MaximizedPlayerPage.qml:424
+#: contents/ui/MaximizedPlayerPage.qml:423
 #, kde-format
 msgid "Remove from Favourites"
 msgstr "Remover dos Favoritos"
 
-#: contents/ui/MaximizedPlayerPage.qml:424
+#: contents/ui/MaximizedPlayerPage.qml:423
 #, kde-format
 msgid "Add to Favourites"
 msgstr "Adicionar aos Favoritos"
 
-#: contents/ui/MaximizedPlayerPage.qml:449
+#: contents/ui/MaximizedPlayerPage.qml:448
 #, kde-format
 msgid "Open Volume Drawer"
 msgstr "Abrir a Área do Volume"
 
-#: contents/ui/MaximizedPlayerPage.qml:559
+#: contents/ui/MaximizedPlayerPage.qml:556
 #, kde-format
 msgid "Unmute Audio"
 msgstr "Repor o Áudio"
 
-#: contents/ui/MaximizedPlayerPage.qml:559
+#: contents/ui/MaximizedPlayerPage.qml:556
 #, kde-format
 msgid "Mute Audio"
 msgstr "Silenciar o Áudio"
 
-#: contents/ui/MaximizedPlayerPage.qml:603
+#: contents/ui/MaximizedPlayerPage.qml:599
 #, kde-format
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/ui/MaximizedPlayerPage.qml:626
+#: contents/ui/MaximizedPlayerPage.qml:622
 #, kde-format
 msgid "Hide Lyrics"
 msgstr "Esconder as Letras Musicais"
 
-#: contents/ui/MaximizedPlayerPage.qml:626
+#: contents/ui/MaximizedPlayerPage.qml:622
 #, kde-format
 msgid "Show Lyrics"
 msgstr "Mostrar as Letras Musicais"
 
-#: contents/ui/MaximizedPlayerPage.qml:647 contents/ui/SongMenu.qml:183
+#: contents/ui/MaximizedPlayerPage.qml:642 contents/ui/SongMenu.qml:183
 #: contents/ui/SongMenu.qml:269
 #, kde-format
 msgid "Share Song"
 msgstr "Partilhar a Música"
 
-#: contents/ui/MaximizedPlayerPage.qml:693
+#: contents/ui/MaximizedPlayerPage.qml:688
 #, kde-format
 msgid "Add to a local playlist"
 msgstr "Adicionar a uma lista de reprodução local"
 
-#: contents/ui/MaximizedPlayerPage.qml:730
+#: contents/ui/MaximizedPlayerPage.qml:725
 #, kde-format
 msgid "Hide Queue"
 msgstr "Esconder a Fila"
 
-#: contents/ui/MaximizedPlayerPage.qml:730
+#: contents/ui/MaximizedPlayerPage.qml:725
 #, kde-format
 msgid "Show Queue"
 msgstr "Mostrar a Fila"
 
-#: contents/ui/MaximizedPlayerPage.qml:927
-#: contents/ui/MaximizedPlayerPage.qml:1161
+#: contents/ui/MaximizedPlayerPage.qml:922
+#: contents/ui/MaximizedPlayerPage.qml:1154
 #, kde-format
 msgid "Remove Track"
 msgstr "Remover a Faixa"
 
-#: contents/ui/MaximizedPlayerPage.qml:964
+#: contents/ui/MaximizedPlayerPage.qml:959
 #, kde-format
 msgid "Clear Queue"
 msgstr "Limpar a Fila"
 
-#: contents/ui/MaximizedPlayerPage.qml:990
+#: contents/ui/MaximizedPlayerPage.qml:984
 #, kde-format
 msgid "Shuffle Queue"
 msgstr "Baralhar a Fila"
 
-#: contents/ui/MaximizedPlayerPage.qml:1021
+#: contents/ui/MaximizedPlayerPage.qml:1014
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "Próximas Músicas"
