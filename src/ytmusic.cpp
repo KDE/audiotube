@@ -22,7 +22,7 @@ void pyPrintPretty(py::handle obj) {
 
 #define UNEXPORT __attribute__ ((visibility("hidden")))
 
-constexpr auto TESTED_YTMUSICAPI_VERSION = "0.25.0";
+constexpr auto TESTED_YTMUSICAPI_VERSION = "1.0.0";
 
 struct UNEXPORT YTMusicPrivate {
     py::scoped_interpreter guard {};
@@ -135,7 +135,7 @@ inline auto extract_py_list(py::handle obj) {
 
 album::Track extract_album_track(py::handle track) {
     return {
-        track["isExplicit"].cast<bool>(),
+        optional_key<bool>(track, "isExplicit"),
         track["title"].cast<std::string>(),
         extract_py_list<meta::Artist>(track["artists"]),
         track["album"].cast<std::optional<std::string>>(),
@@ -201,7 +201,7 @@ playlist::Track extract_playlist_track(py::handle track) {
         track["likeStatus"].cast<std::optional<std::string>>(),
         extract_py_list<meta::Thumbnail>(track["thumbnails"]),
         track["isAvailable"].cast<bool>(),
-        track["isExplicit"].cast<bool>()
+        optional_key<bool>(track, "isExplicit")
     };
 }
 
@@ -277,6 +277,10 @@ std::optional<artist::Artist::Section<T>> extract_artist_section(py::handle arti
 std::optional<search::SearchResultItem> extract_search_result(py::handle result) {
     const auto resultType = result["resultType"].cast<std::string>();
 
+    if (result["category"].cast<std::optional<std::string>>() == "Top result") {
+        return {};
+    }
+
     if (resultType == "video") {
         return search::Video {
             {
@@ -298,7 +302,7 @@ std::optional<search::SearchResultItem> extract_search_result(py::handle result)
                 extract_py_list<meta::Thumbnail>(result["thumbnails"])
             },
             result["album"].is_none() ? std::optional<meta::Album> {} : extract_meta_album(result["album"]),
-            result["isExplicit"].cast<bool>()
+            optional_key<bool>(result, "isExplicit")
         };
     } else if (resultType == "album") {
         return search::Album {

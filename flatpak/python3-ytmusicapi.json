@@ -27,13 +27,13 @@
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/fe/ca/466766e20b767ddb9b951202542310cba37ea5f2d792dae7589f1741af58/urllib3-1.26.14-py2.py3-none-any.whl",
-            "sha256": "75edcdc2f7d85b137124a6c3c9fc3933cdeaa12ecb9a6a959f22797a0feca7e1"
+            "url": "https://files.pythonhosted.org/packages/7b/f5/890a0baca17a61c1f92f72b81d3c31523c99bec609e60c292ea55b387ae8/urllib3-1.26.15-py2.py3-none-any.whl",
+            "sha256": "aa751d169e23c7479ce47a0cb0da579e3ede798f994f5816a74e4f4500dcea42"
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/14/a9/5ba638ca601c74f169e0e0b055526566f2fa6b6402233a29aba607dca58e/ytmusicapi-0.25.0-py3-none-any.whl",
-            "sha256": "be355bb3409c0e6c25a95ffd92213bd216561cdd8a0493a36a82d1726ff6efb9"
+            "url": "https://files.pythonhosted.org/packages/0a/74/fee0f00aa3205662c12bf216f609b713ed015695476c60416127871d476c/ytmusicapi-1.0.0-py3-none-any.whl",
+            "sha256": "769f4ac9fc90b59e9bdb2cc5ef1e9829dd0a7b1ff1a246007b6c738770fce939"
         }
     ]
 }

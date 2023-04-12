@@ -61,7 +61,7 @@ struct Playlist {
 
 struct Song : public Media {
     std::optional<meta::Album> album;
-    bool is_explicit;
+    std::optional<bool> is_explicit;
 };
 
 struct Album {
@@ -147,7 +147,7 @@ struct Artist {
 
 namespace album {
     struct Track {
-        bool is_explicit;
+        std::optional<bool> is_explicit;
         std::string title;
         std::vector<meta::Artist> artists;
         std::optional<std::string> album;
@@ -216,7 +216,7 @@ struct Track {
     std::optional<std::string> like_status;
     std::vector<meta::Thumbnail> thumbnails;
     bool is_available;
-    bool is_explicit;
+    std::optional<bool> is_explicit;
 };
 
 struct Playlist {
