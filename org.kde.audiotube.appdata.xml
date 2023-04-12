@@ -107,6 +107,7 @@ SPDX-License-Identifier: CC0-1.0
   <content_rating type="oars-1.0"/>
   <url type="homepage">https://apps.kde.org/en/audiotube</url>
   <releases>
+    <release version="23.04.0" date="2023-04-20"/>
     <release version="23.01" date="2023-01-30">
       <url>https://plasma-mobile.org/2023/01/30/january-blog-post/</url>
     </release>
