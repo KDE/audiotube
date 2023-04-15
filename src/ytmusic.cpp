@@ -457,7 +457,7 @@ playlist::Playlist YTMusic::get_playlist(const std::string &playlist_id, int lim
         playlist["title"].cast<std::string>(),
         extract_py_list<meta::Thumbnail>(playlist["thumbnails"]),
         extract_meta_artist(playlist["author"]),
-        playlist["year"].cast<std::string>(),
+        optional_key<std::string>(playlist, "year"),
         playlist["duration"].cast<std::string>(),
         playlist["trackCount"].cast<int>(),
         extract_py_list<playlist::Track>(playlist["tracks"]),

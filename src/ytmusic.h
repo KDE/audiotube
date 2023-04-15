@@ -225,7 +225,7 @@ struct Playlist {
     std::string title;
     std::vector<meta::Thumbnail> thumbnails;
     meta::Artist author;
-    std::string year;
+    std::optional<std::string> year;
     std::string duration;
     int track_count;
     std::vector<Track> tracks;
