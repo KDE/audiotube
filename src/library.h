@@ -102,10 +102,13 @@ public:
     void removeSearch(const QString &search);
     QVariant data(const QModelIndex &index, int role) const override;
     void addSearch(QString const& search);
+    const QString & temporarySearch() const;
+    void setTemporarySearch(QString const& text);
 
 private:
     size_t getRow(QString const &search) const;
     std::vector<SingleValue<QString>> m_history;
+    QString m_temporarySearch;
 };
 
 class Library : public QObject
@@ -115,6 +118,7 @@ class Library : public QObject
     Q_PROPERTY(QAbstractListModel *searches READ searches CONSTANT)
     Q_PROPERTY(QAbstractListModel *playbackHistory READ playbackHistory NOTIFY playbackHistoryChanged)
     Q_PROPERTY(QAbstractListModel *mostPlayed READ mostPlayed NOTIFY playbackHistoryChanged)
+    Q_PROPERTY(QString temporarySearch READ temporarySearch WRITE setTemporarySearch NOTIFY temporarySearchChanged)
 
 public:
     explicit Library(QObject *parent = nullptr);
@@ -132,9 +136,10 @@ public:
     SearchHistoryModel *searches();
     Q_SIGNAL void searchesChanged();
     Q_INVOKABLE void addSearch(const QString &text);
-    Q_INVOKABLE void addTemporarySearch(const QString &text);
     Q_INVOKABLE void removeSearch(const QString &text);
-    Q_INVOKABLE void removeTemporarySearch(const QString &text);
+    const QString& temporarySearch();
+    void setTemporarySearch(const QString& text);
+    Q_SIGNAL void temporarySearchChanged();
 
     PlaybackHistoryModel *playbackHistory();
     Q_SIGNAL void playbackHistoryChanged();

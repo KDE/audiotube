@@ -27,7 +27,6 @@ Item {
     Kirigami.SearchField {
         property var filterExpression: new RegExp(`.*${filterText}.*`, "i")
         property string filterText: ""
-        property string oldText: ""
 
         id: searchField
         autoAccept: false
@@ -41,15 +40,12 @@ Item {
 
         onTextEdited: {
             filterText = text
-            if(oldText) {
-                Library.removeTemporarySearch(oldText)
-            }
-            if(text && completionList.count > 0) {
-                Library.addTemporarySearch(text)
-                oldText = text
+            if(completionList.count === 0) {
+                //no matching search -> message should display
+                Library.temporarySearch = ""
             }
             else {
-                oldText = ""
+                Library.temporarySearch = text
             }
         }
 
@@ -104,10 +100,7 @@ Item {
         onAccepted: {
             popup.close()
             completionList.selectedDelegate = -1
-            if(oldText) {
-                Library.removeTemporarySearch(oldText)
-                oldText = ""
-            }
+            Library.temporarySearch = ""
 
             while (pageStack.depth > 0) {
                 pageStack.pop()
@@ -209,7 +202,13 @@ Item {
             from: searchField.height
             duration: 200
             to: completionList
-                ? (Math.min(fieldContainer.height+ completionList.count * Kirigami.Units.gridUnit * 2 + recentsRepeater.implicitHeight, Kirigami.Units.gridUnit * 20))+2*(popup.shadowSize+popup.expansion)
+                ? (searchField.filterText && recentsRepeater.count > 0 //can't use recentsRepeater.visible directly, because it always returns false at this stage
+                    ? (Math.min(fieldContainer.height+ (completionList.count) * (completionList.delegateHeight + completionList.delegatePadding) + Kirigami.Separator.implicitHeight + recentsRepeater.implicitHeight, Kirigami.Units.gridUnit * 20))+2*(popup.shadowSize+popup.expansion)
+                    : (completionList.count === 0
+                        ?(Math.min(fieldContainer.height+ noMatchingSearchLabel.height + 2*noMatchingSearchLabel.Layout.margins, Kirigami.Units.gridUnit * 20))+2*(popup.shadowSize+popup.expansion)
+                        :(Math.min(fieldContainer.height+ (completionList.count) * (completionList.delegateHeight + 2.725*completionList.delegatePadding) + 2*mainScrollViewLayout.spacing, Kirigami.Units.gridUnit * 20))+2*(popup.shadowSize+popup.expansion)
+                    )
+                )
                 : (Kirigami.Units.gridUnit * 20)+2*(popup.shadowSize+popup.expansion)
         }
         NumberAnimation on width{
@@ -315,7 +314,7 @@ Item {
 
                         Layout.fillWidth: true
 
-                        visible: searchField.filterText && recentsRepeater.count > 0
+                        visible: searchField.filterText && recentsRepeater.count > 0 //if changed, adjust playOpenHeight
 
                         model: SortFilterModel {
                             filterRole: PlaybackHistoryModel.Title
@@ -330,6 +329,8 @@ Item {
                         implicitWidth: popup.width
                     }
                     RowLayout{
+                        id: noMatchingSearchLabel
+
                         Layout.margins: 10
                         visible: completionList.count == 0
                         Kirigami.Icon {
@@ -398,7 +399,7 @@ Item {
                                         Library.removeSearch(model.display)
                                     }
                                     implicitHeight: completionList.delegateHeight
-                                    visible: !searchField.oldText || index != 0
+                                    visible: Library.temporarySearch == "" || index != 0
                                 }
 
                             }

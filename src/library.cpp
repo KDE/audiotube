@@ -92,21 +92,20 @@ void Library::addSearch(const QString &text)
     connectFuture(m_database->execute("insert into searches (search_query) values (?)", text), this, &Library::searchesChanged);
 }
 
-void Library::addTemporarySearch(const QString &text)
-{
-    m_searches->addSearch(text);
-    Q_EMIT searchesChanged();
-}
-
 void Library::removeSearch(const QString &text) {
     m_searches->removeSearch(text);
     connectFuture(m_database->execute("delete from searches where search_query = ?", text), this, &Library::searchesChanged);
 }
 
-void Library::removeTemporarySearch(const QString& text)
+const QString& Library::temporarySearch()
 {
-    m_searches->removeSearch(text);
-    Q_EMIT searchesChanged();
+    return m_searches->temporarySearch();
+}
+
+void Library::setTemporarySearch(const QString& text)
+{
+    m_searches->setTemporarySearch(text);
+    Q_EMIT temporarySearchChanged();
 }
 
 
@@ -284,7 +283,15 @@ SearchHistoryModel::SearchHistoryModel(QFuture<std::vector<SingleValue<QString>>
 }
 
 int SearchHistoryModel::rowCount(const QModelIndex &parent) const {
-    return parent.isValid() ? 0 : m_history.size();
+    if(parent.isValid()) {
+        return 0;
+    }
+    else if (temporarySearch().isEmpty()) {
+        return m_history.size();
+    }
+    else {
+        return m_history.size() + 1;
+    }
 }
 
 void SearchHistoryModel::removeSearch(const QString &search) {
@@ -306,7 +313,15 @@ size_t SearchHistoryModel::getRow(const QString &search) const {
 QVariant SearchHistoryModel::data(const QModelIndex &index, int role) const {
     switch (role) {
         case Qt::DisplayRole:
-            return m_history[index.row()].value;
+            if(m_temporarySearch == "") {
+                return m_history[index.row()].value;
+            }
+            else if(index.row() == 0) {
+                return m_temporarySearch;
+            }
+            else{
+                return m_history[index.row() - 1].value;
+            }
     }
     
     Q_UNREACHABLE();
@@ -322,6 +337,31 @@ void SearchHistoryModel::addSearch(const QString& search) {
         endInsertRows();
     }
 }
+
+const QString& SearchHistoryModel::temporarySearch() const
+{
+    return m_temporarySearch;
+}
+
+void SearchHistoryModel::setTemporarySearch(const QString& text)
+{
+    if(text == "" && m_temporarySearch != "") {
+        beginRemoveRows(QModelIndex(), 0, 0);
+        m_temporarySearch = text;
+        endRemoveRows();
+    }
+    else if(text != "" && m_temporarySearch == "") {
+        beginInsertRows(QModelIndex(), 0, 0);
+        m_temporarySearch = text;
+        endInsertRows();
+    }
+    else if(m_temporarySearch != "") {
+        m_temporarySearch = text;
+        Q_EMIT dataChanged(createIndex(0,0), createIndex(0,0));
+    }
+}
+
+
 
 
 WasPlayedWatcher::WasPlayedWatcher(Library* library, const QString& videoId)
