@@ -54,7 +54,7 @@ struct Video : public Media {
 struct Playlist {
     std::string browse_id;
     std::string title;
-    std::string author;
+    std::optional<std::string> author;
     std::string item_count;
     std::vector<meta::Thumbnail> thumbnails;
 };

@@ -8,7 +8,7 @@
 
 int main() {
     const auto ytm = YTMusic();
-    const auto results = ytm.search("Saint Motel");
+    const auto results = ytm.search("grüne augen lügen nich");
 
     std::cout << "Found " << results.size() << " results." << std::endl;
 

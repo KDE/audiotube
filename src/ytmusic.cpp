@@ -318,7 +318,7 @@ std::optional<search::SearchResultItem> extract_search_result(py::handle result)
         return search::Playlist {
             result["browseId"].cast<std::string>(),
             result["title"].cast<std::string>(),
-            result["author"].cast<std::string>(),
+            result["author"].cast<std::optional<std::string>>(),
             result["itemCount"].cast<std::string>(),
             extract_py_list<meta::Thumbnail>(result["thumbnails"])
         };
