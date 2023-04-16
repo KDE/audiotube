@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-08 00:46+0000\n"
+"POT-Creation-Date: 2023-04-16 00:47+0000\n"
 "PO-Revision-Date: 2023-03-22 13:22+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -350,7 +350,7 @@ msgstr "Er zijn hier nog geen songs"
 msgid "Playlist"
 msgstr "Afspeellijst"
 
-#: contents/ui/SearchHistoryPage.qml:86 contents/ui/SearchWithDropdown.qml:395
+#: contents/ui/SearchHistoryPage.qml:86 contents/ui/SearchWithDropdown.qml:396
 #, kde-format
 msgid "remove from search history"
 msgstr "uit zoekgeschiedenis verwijderen"
@@ -370,7 +370,7 @@ msgstr "Artiesten"
 msgid "Unknown"
 msgstr "Onbekend"
 
-#: contents/ui/SearchWithDropdown.qml:342
+#: contents/ui/SearchWithDropdown.qml:343
 #, kde-format
 msgid "No matching previous searches"
 msgstr "Geen overeenkomende vorige zoekopdrachten"

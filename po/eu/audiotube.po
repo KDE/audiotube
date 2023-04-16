@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-08 00:46+0000\n"
+"POT-Creation-Date: 2023-04-16 00:47+0000\n"
 "PO-Revision-Date: 2023-02-25 23:53+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -374,7 +374,7 @@ msgstr "Hemen oraindik ez dago abestirik"
 msgid "Playlist"
 msgstr "Jotze-zerrenda"
 
-#: contents/ui/SearchHistoryPage.qml:86 contents/ui/SearchWithDropdown.qml:395
+#: contents/ui/SearchHistoryPage.qml:86 contents/ui/SearchWithDropdown.qml:396
 #, kde-format
 msgid "remove from search history"
 msgstr "Kendu bilaketa-historiatik"
@@ -394,7 +394,7 @@ msgstr "Artistak"
 msgid "Unknown"
 msgstr "Ezezaguna"
 
-#: contents/ui/SearchWithDropdown.qml:342
+#: contents/ui/SearchWithDropdown.qml:343
 #, kde-format
 msgid "No matching previous searches"
 msgstr "Ez dago bat datorren aurreko bilaketarik"
