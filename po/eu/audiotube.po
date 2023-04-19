@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-18 03:09+0000\n"
-"PO-Revision-Date: 2023-02-25 23:53+0100\n"
+"PO-Revision-Date: 2023-04-19 00:04+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: contents/ui/AlbumPage.qml:26 contents/ui/LibraryPage.qml:37
 #: contents/ui/LibraryPage.qml:63 contents/ui/LibraryPage.qml:84
@@ -43,10 +43,9 @@ msgstr "Nahastu"
 #: contents/ui/LibraryPage.qml:100 contents/ui/LibraryPage.qml:369
 #: contents/ui/LibraryPage.qml:396 contents/ui/LocalPlaylistPage.qml:55
 #: contents/ui/PlaybackHistory.qml:48 contents/ui/PlaylistPage.qml:46
-#, fuzzy, kde-format
-#| msgid "Add to queue"
+#, kde-format
 msgid "Append to queue"
-msgstr "Gehitu ilaran"
+msgstr "Jarri ilaran"
 
 #: contents/ui/AlbumPage.qml:46 contents/ui/ArtistPage.qml:43
 #: contents/ui/PlaylistPage.qml:51
@@ -58,7 +57,7 @@ msgstr "Ireki arakatzailean"
 #: contents/ui/PlaylistPage.qml:56
 #, kde-format
 msgid "Share"
-msgstr ""
+msgstr "Partekatu"
 
 #: contents/ui/AlbumPage.qml:61
 #, kde-format
@@ -122,43 +121,37 @@ msgid "Cancel"
 msgstr "Utzi"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:17
-#, fuzzy, kde-format
-#| msgid "Add to Playlist"
+#, kde-format
 msgid "Add playlist"
-msgstr "Gehitu jotze-zerrendara"
+msgstr "Gehitu jotze-zerrenda"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:23
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:24
-#, fuzzy, kde-format
-#| msgid "Playlist"
+#, kde-format
 msgid "Playlist Title"
-msgstr "Jotze-zerrenda"
+msgstr "Jotze-zerrendaren titulua"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:28
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:30
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "Playlist Description"
-msgstr "Jotze-zerrendak"
+msgstr "Jotze-zerrendaren deskribapena"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:20
-#, fuzzy, kde-format
-#| msgid "Add to Playlist"
+#, kde-format
 msgid "Add Song to Playlist"
-msgstr "Gehitu jotze-zerrendara"
+msgstr "Gehitu abestia jotze-zerrendara"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:29
 #: contents/ui/LocalPlaylistsPage.qml:90
-#, fuzzy, kde-format
-#| msgid "Playlist"
+#, kde-format
 msgid "New Playlist"
-msgstr "Jotze-zerrenda"
+msgstr "Jotze-zerrenda berria"
 
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:18
-#, fuzzy, kde-format
-#| msgid "Clear Playlist"
+#, kde-format
 msgid "Rename playlist"
-msgstr "Garbitu jotze-zerrenda"
+msgstr "Berrizendatu jotze-zerrenda"
 
 #: contents/ui/LibraryPage.qml:30 contents/ui/LibraryPage.qml:123
 #: contents/ui/NavigationBar.qml:48 contents/ui/NavigationBar.qml:54
@@ -203,33 +196,31 @@ msgid "Playlists"
 msgstr "Jotze-zerrendak"
 
 #: contents/ui/LibraryPage.qml:650
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "No Playlists Yet"
-msgstr "Jotze-zerrendak"
+msgstr "Oraindik jotze-zerrendarik ez"
 
 #: contents/ui/LibraryPage.qml:670 contents/ui/LibraryPage.qml:692
 #: contents/ui/LocalPlaylistsPage.qml:33 contents/ui/LocalPlaylistsPage.qml:55
 #, kde-format
 msgid "Rename"
-msgstr ""
+msgstr "Berrizendatu"
 
 #: contents/ui/LibraryPage.qml:679 contents/ui/LibraryPage.qml:700
 #: contents/ui/LocalPlaylistsPage.qml:42 contents/ui/LocalPlaylistsPage.qml:63
 #, kde-format
 msgid "Delete"
-msgstr ""
+msgstr "Ezabatu"
 
 #: contents/ui/LocalPlaylistPage.qml:19
-#, fuzzy, kde-format
-#| msgid "Remove from History"
+#, kde-format
 msgid "Remove from Playlist"
-msgstr "Kendu historiatik"
+msgstr "Kendu jotze-zerrendatik"
 
 #: contents/ui/LocalPlaylistPage.qml:29
 #, kde-format
 msgid "This playlist is still empty"
-msgstr ""
+msgstr "Jotze-zerrenda hau oraindik hutsik dago"
 
 #: contents/ui/main.qml:109 main.cpp:54
 #, kde-format
@@ -261,7 +252,7 @@ msgstr "Garbitu jotze-zerrenda"
 #: contents/ui/MaximizedPlayerPage.qml:917
 #, kde-format
 msgid "Upcoming Songs"
-msgstr ""
+msgstr "Hurrengo abestiak"
 
 #: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:100
 #, kde-format
@@ -316,17 +307,17 @@ msgstr "Ez dago bat datorren aurreko bilaketarik"
 #: contents/ui/ShareMenu.qml:39
 #, kde-format
 msgid "Share to"
-msgstr ""
+msgstr "Partekatu honi,"
 
 #: contents/ui/ShareMenu.qml:49 contents/ui/ShareMenu.qml:99
 #, kde-format
 msgid "Copy Link"
-msgstr ""
+msgstr "Kopiatu esteka"
 
 #: contents/ui/ShareMenu.qml:54 contents/ui/ShareMenu.qml:104
 #, kde-format
 msgid "Link copied to clipboard"
-msgstr ""
+msgstr "Esteka arbelera kopiatu da"
 
 #: contents/ui/Sidebar.qml:189
 #, kde-format
@@ -364,16 +355,14 @@ msgid "Remove from History"
 msgstr "Kendu historiatik"
 
 #: contents/ui/SongMenu.qml:156 contents/ui/SongMenu.qml:244
-#, fuzzy, kde-format
-#| msgid "Add to Playlist"
+#, kde-format
 msgid "Add to playlist"
 msgstr "Gehitu jotze-zerrendara"
 
 #: contents/ui/SongMenu.qml:183 contents/ui/SongMenu.qml:269
-#, fuzzy, kde-format
-#| msgid "Favourite Songs"
+#, kde-format
 msgid "Share Song"
-msgstr "Gogoko abestiak"
+msgstr "Partekatu abestia"
 
 #: main.cpp:56
 #, kde-format
