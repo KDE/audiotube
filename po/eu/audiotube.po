@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-16 00:47+0000\n"
-"PO-Revision-Date: 2023-02-25 23:53+0100\n"
+"PO-Revision-Date: 2023-04-19 00:04+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 
 #: contents/ui/AlbumPage.qml:75 contents/ui/LibraryPage.qml:37
 #: contents/ui/LibraryPage.qml:63 contents/ui/LibraryPage.qml:84
@@ -46,10 +46,9 @@ msgstr "Nahastu"
 #: contents/ui/LibraryPage.qml:100 contents/ui/LibraryPage.qml:259
 #: contents/ui/LibraryPage.qml:286 contents/ui/LocalPlaylistPage.qml:105
 #: contents/ui/PlaybackHistory.qml:114 contents/ui/PlaylistPage.qml:99
-#, fuzzy, kde-format
-#| msgid "Add to queue"
+#, kde-format
 msgid "Append to queue"
-msgstr "Gehitu ilaran"
+msgstr "Jarri ilaran"
 
 #: contents/ui/AlbumPage.qml:95 contents/ui/ArtistPage.qml:93
 #: contents/ui/PlaylistPage.qml:104
@@ -61,7 +60,7 @@ msgstr "Ireki arakatzailean"
 #: contents/ui/PlaylistPage.qml:109
 #, kde-format
 msgid "Share"
-msgstr ""
+msgstr "Partekatu"
 
 #: contents/ui/AlbumPage.qml:110
 #, kde-format
@@ -125,43 +124,37 @@ msgid "Cancel"
 msgstr "Utzi"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:17
-#, fuzzy, kde-format
-#| msgid "Add to Playlist"
+#, kde-format
 msgid "Add playlist"
-msgstr "Gehitu jotze-zerrendara"
+msgstr "Gehitu jotze-zerrenda"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:23
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:24
-#, fuzzy, kde-format
-#| msgid "Playlist"
+#, kde-format
 msgid "Playlist Title"
-msgstr "Jotze-zerrenda"
+msgstr "Jotze-zerrendaren titulua"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:28
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:30
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "Playlist Description"
-msgstr "Jotze-zerrendak"
+msgstr "Jotze-zerrendaren deskribapena"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:20
-#, fuzzy, kde-format
-#| msgid "Add to Playlist"
+#, kde-format
 msgid "Add Song to Playlist"
-msgstr "Gehitu jotze-zerrendara"
+msgstr "Gehitu abestia jotze-zerrendara"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:29
 #: contents/ui/LocalPlaylistsPage.qml:90
-#, fuzzy, kde-format
-#| msgid "Playlist"
+#, kde-format
 msgid "New Playlist"
-msgstr "Jotze-zerrenda"
+msgstr "Jotze-zerrenda berria"
 
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:18
-#, fuzzy, kde-format
-#| msgid "Clear Playlist"
+#, kde-format
 msgid "Rename playlist"
-msgstr "Garbitu jotze-zerrenda"
+msgstr "Berrizendatu jotze-zerrenda"
 
 #: contents/ui/LibraryPage.qml:30 contents/ui/LibraryPage.qml:123
 #: contents/ui/NavigationBar.qml:48 contents/ui/NavigationBar.qml:54
@@ -206,33 +199,31 @@ msgid "Playlists"
 msgstr "Jotze-zerrendak"
 
 #: contents/ui/LibraryPage.qml:430
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "No Playlists Yet"
-msgstr "Jotze-zerrendak"
+msgstr "Oraindik jotze-zerrendarik ez"
 
 #: contents/ui/LibraryPage.qml:450 contents/ui/LibraryPage.qml:472
 #: contents/ui/LocalPlaylistsPage.qml:33 contents/ui/LocalPlaylistsPage.qml:55
 #, kde-format
 msgid "Rename"
-msgstr ""
+msgstr "Berrizendatu"
 
 #: contents/ui/LibraryPage.qml:459 contents/ui/LibraryPage.qml:480
 #: contents/ui/LocalPlaylistsPage.qml:42 contents/ui/LocalPlaylistsPage.qml:63
 #, kde-format
 msgid "Delete"
-msgstr ""
+msgstr "Ezabatu"
 
 #: contents/ui/LocalPlaylistPage.qml:21
-#, fuzzy, kde-format
-#| msgid "Remove from History"
+#, kde-format
 msgid "Remove from Playlist"
-msgstr "Kendu historiatik"
+msgstr "Kendu jotze-zerrendatik"
 
 #: contents/ui/LocalPlaylistPage.qml:79
 #, kde-format
 msgid "This playlist is still empty"
-msgstr ""
+msgstr "Jotze-zerrenda hau oraindik hutsik dago"
 
 #: contents/ui/main.qml:110 main.cpp:56
 #, kde-format
@@ -240,15 +231,14 @@ msgid "AudioTube"
 msgstr "AudioTube"
 
 #: contents/ui/main.qml:260
-#, fuzzy, kde-format
-#| msgid "No media playing"
+#, kde-format
 msgid "No song playing"
-msgstr "Ez da euskarririk jotzen ari"
+msgstr "Ez da abestirik jotzen ari"
 
 #: contents/ui/MaximizedPlayerPage.qml:96
 #, kde-format
 msgid "Close Maximized Player"
-msgstr ""
+msgstr "Itxi maximizatutako jotzailea"
 
 #: contents/ui/MaximizedPlayerPage.qml:200
 #: contents/ui/MinimizedPlayerControls.qml:94
@@ -257,32 +247,29 @@ msgid "No media playing"
 msgstr "Ez da euskarririk jotzen ari"
 
 #: contents/ui/MaximizedPlayerPage.qml:423
-#, fuzzy, kde-format
-#| msgid "Remove Favourite"
+#, kde-format
 msgid "Remove from Favourites"
-msgstr "Kendu gogokoa"
+msgstr "Kendu gogokoetatik"
 
 #: contents/ui/MaximizedPlayerPage.qml:423
-#, fuzzy, kde-format
-#| msgid "Add Favourite"
+#, kde-format
 msgid "Add to Favourites"
-msgstr "Gehitu gogokoa"
+msgstr "Gehitu gogokoetara"
 
 #: contents/ui/MaximizedPlayerPage.qml:448
-#, fuzzy, kde-format
-#| msgid "Open in Browser"
+#, kde-format
 msgid "Open Volume Drawer"
-msgstr "Ireki arakatzailean"
+msgstr "Ireki bolumenaren tiradera"
 
 #: contents/ui/MaximizedPlayerPage.qml:556
 #, kde-format
 msgid "Unmute Audio"
-msgstr ""
+msgstr "Ozendu audioa"
 
 #: contents/ui/MaximizedPlayerPage.qml:556
 #, kde-format
 msgid "Mute Audio"
-msgstr ""
+msgstr "Isilarazi audioa"
 
 #: contents/ui/MaximizedPlayerPage.qml:599
 #, kde-format
@@ -290,41 +277,35 @@ msgid "%1%"
 msgstr "%%1"
 
 #: contents/ui/MaximizedPlayerPage.qml:622
-#, fuzzy, kde-format
-#| msgid "Lyrics"
+#, kde-format
 msgid "Hide Lyrics"
-msgstr "Hitzak"
+msgstr "Ezkutatu hitzak"
 
 #: contents/ui/MaximizedPlayerPage.qml:622
-#, fuzzy, kde-format
-#| msgid "Lyrics"
+#, kde-format
 msgid "Show Lyrics"
-msgstr "Hitzak"
+msgstr "Erakutsi hitzak"
 
 #: contents/ui/MaximizedPlayerPage.qml:642 contents/ui/SongMenu.qml:183
 #: contents/ui/SongMenu.qml:269
-#, fuzzy, kde-format
-#| msgid "Favourite Songs"
+#, kde-format
 msgid "Share Song"
-msgstr "Gogoko abestiak"
+msgstr "Partekatu abestia"
 
 #: contents/ui/MaximizedPlayerPage.qml:688
-#, fuzzy, kde-format
-#| msgid "Add to Playlist"
+#, kde-format
 msgid "Add to a local playlist"
-msgstr "Gehitu jotze-zerrendara"
+msgstr "Gehitu bertako jotze-zerrenda batera."
 
 #: contents/ui/MaximizedPlayerPage.qml:725
-#, fuzzy, kde-format
-#| msgid "Queue"
+#, kde-format
 msgid "Hide Queue"
-msgstr "Ilara"
+msgstr "Ezkutatu ilara"
 
 #: contents/ui/MaximizedPlayerPage.qml:725
-#, fuzzy, kde-format
-#| msgid "Queue"
+#, kde-format
 msgid "Show Queue"
-msgstr "Ilara"
+msgstr "Erakutsi ilara"
 
 #: contents/ui/MaximizedPlayerPage.qml:922
 #: contents/ui/MaximizedPlayerPage.qml:1154
@@ -333,21 +314,19 @@ msgid "Remove Track"
 msgstr "Kendu pista"
 
 #: contents/ui/MaximizedPlayerPage.qml:959
-#, fuzzy, kde-format
-#| msgid "Queue"
+#, kde-format
 msgid "Clear Queue"
-msgstr "Ilara"
+msgstr "Hustu ilara"
 
 #: contents/ui/MaximizedPlayerPage.qml:984
-#, fuzzy, kde-format
-#| msgid "Shuffle"
+#, kde-format
 msgid "Shuffle Queue"
-msgstr "Nahastu"
+msgstr "Nahastu ilara"
 
 #: contents/ui/MaximizedPlayerPage.qml:1014
 #, kde-format
 msgid "Upcoming Songs"
-msgstr ""
+msgstr "Hurrengo abestiak"
 
 #: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:100
 #, kde-format
@@ -402,17 +381,17 @@ msgstr "Ez dago bat datorren aurreko bilaketarik"
 #: contents/ui/ShareMenu.qml:39
 #, kde-format
 msgid "Share to"
-msgstr ""
+msgstr "Partekatu honi,"
 
 #: contents/ui/ShareMenu.qml:49 contents/ui/ShareMenu.qml:99
 #, kde-format
 msgid "Copy Link"
-msgstr ""
+msgstr "Kopiatu esteka"
 
 #: contents/ui/ShareMenu.qml:54 contents/ui/ShareMenu.qml:104
 #, kde-format
 msgid "Link copied to clipboard"
-msgstr ""
+msgstr "Esteka arbelera kopiatu da"
 
 #: contents/ui/Sidebar.qml:189
 #, kde-format
@@ -450,8 +429,7 @@ msgid "Remove from History"
 msgstr "Kendu historiatik"
 
 #: contents/ui/SongMenu.qml:156 contents/ui/SongMenu.qml:244
-#, fuzzy, kde-format
-#| msgid "Add to Playlist"
+#, kde-format
 msgid "Add to playlist"
 msgstr "Gehitu jotze-zerrendara"
 
