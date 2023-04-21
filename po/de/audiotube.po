@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-18 03:09+0000\n"
-"PO-Revision-Date: 2023-04-18 23:03+0200\n"
+"PO-Revision-Date: 2023-04-20 20:03+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -166,10 +166,9 @@ msgid "Show All"
 msgstr "Alle anzeigen"
 
 #: contents/ui/LibraryPage.qml:147
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "No Favourites Yet"
-msgstr "Favoriten"
+msgstr "Noch keine Favoriten"
 
 #: contents/ui/LibraryPage.qml:325
 #, kde-format
@@ -252,7 +251,7 @@ msgstr "Wiedergabeliste leeren"
 #: contents/ui/MaximizedPlayerPage.qml:917
 #, kde-format
 msgid "Upcoming Songs"
-msgstr ""
+msgstr "Kommende Lieder"
 
 #: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:100
 #, kde-format
@@ -307,7 +306,7 @@ msgstr "Keine passenden vorherigen Suchvorgänge"
 #: contents/ui/ShareMenu.qml:39
 #, kde-format
 msgid "Share to"
-msgstr ""
+msgstr "Teilen auf"
 
 #: contents/ui/ShareMenu.qml:49 contents/ui/ShareMenu.qml:99
 #, kde-format
@@ -360,10 +359,9 @@ msgid "Add to playlist"
 msgstr "Zur Wiedergabeliste hinzufügen"
 
 #: contents/ui/SongMenu.qml:183 contents/ui/SongMenu.qml:269
-#, fuzzy, kde-format
-#| msgid "Favourite Songs"
+#, kde-format
 msgid "Share Song"
-msgstr "Lieblingsstücke"
+msgstr "Lied teilen"
 
 #: main.cpp:56
 #, kde-format
