@@ -26,6 +26,30 @@
         "flatpak/python3-ytmusicapi.json",
         "flatpak/kirigami-addons.json",
         {
+            "name": "qcoro",
+            "buildsystem": "cmake-ninja",
+            "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_BUILD_TYPE=Release"],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/danvratil/qcoro/archive/refs/tags/v0.8.0.tar.gz",
+                    "sha256": "28f90d817f42352084242f7a1ff090c5cff92359e4dbecea8f04d39ebcf630f8"
+                }
+            ]
+        },
+        {
+            "name": "futuresql",
+            "buildsystem": "cmake-ninja",
+            "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_BUILD_TYPE=Release"],
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://download.kde.org/stable/futuresql/futuresql-0.1.0.tar.xz",
+                    "sha256": "ecd354c26c48a67795b0004e701066f6176d25d39adda1b8a1bf9c07fa48ba6a"
+                }
+            ]
+        },
+        {
             "name": "pybind11",
             "config-opts": ["-DPYBIND11_FINDPYTHON=ON", "-DPYBIND11_TEST=OFF"],
             "buildsystem": "cmake-ninja",
