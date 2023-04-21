@@ -13,5 +13,9 @@ import org.kde.ytmusic 1.0
 MobileForm.AboutPage {
     aboutData: About
 
-    showAboutKDE: false
+    Component.onCompleted: {
+        if (hasOwnProperty("showAboutKDE")) {
+            showAboutKDE = false
+        }
+    }
 }
