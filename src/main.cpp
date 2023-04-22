@@ -9,6 +9,8 @@
 #include <QUrl>
 #include <QQuickWindow>
 #include <QQuickStyle>
+#include <QStyle>
+#include <QStyleFactory>
 
 #include <KLocalizedContext>
 #include <KLocalizedString>
@@ -36,14 +38,17 @@ constexpr auto URI = "org.kde.ytmusic";
 
 Q_DECL_EXPORT int main(int argc, char *argv[])
 {
+    QGuiApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+    QApplication app(argc, argv);
+
     // set default style and icon theme
     QIcon::setFallbackThemeName(QStringLiteral("breeze"));
     if (qEnvironmentVariableIsEmpty("QT_QUICK_CONTROLS_STYLE") && QQuickStyle::name().isEmpty()) {
         QQuickStyle::setStyle(QStringLiteral("org.kde.desktop"));
+        QApplication::setStyle(QStyleFactory::create(QStringLiteral("Breeze")));
     }
 
-    QGuiApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
-    QApplication app(argc, argv);
+
     QCoreApplication::setOrganizationName(QStringLiteral("KDE"));
     QCoreApplication::setOrganizationDomain(QStringLiteral("kde.org"));
     QCoreApplication::setApplicationName(QStringLiteral("audiotube"));
