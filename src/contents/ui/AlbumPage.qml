@@ -130,24 +130,32 @@ Kirigami.ScrollablePage {
             required property string thumbnailUrl
             required property string artistsDisplayString
             required property int index
+            MouseArea {
+                implicitHeight: content.implicitHeight
+                acceptedButtons: Qt.LeftButton | Qt.RightButton
+                onClicked: if (mouse.button === Qt.RightButton) {
+                                menu.openForSong(delegateItem.videoId, delegateItem.title, delegateItem.artists, delegateItem.artistsDisplayString)
+                           } else if (mouse.button === Qt.LeftButton) {
+                                play(delegateItem.videoId)
+                           }
+                RowLayout {
+                    id: content
+                    anchors.fill: parent
+                    Controls.Label {
+                        text: (index + 1)
+                        font.bold: true
+                        leftPadding: 5
+                        color: Kirigami.Theme.disabledTextColor
+                        Layout.preferredWidth: 30
+                    }
 
-            RowLayout {
-                Layout.fillHeight: true
-                Controls.Label {
-                    text: (index + 1)
-                    font.bold: true
-                    leftPadding: 5
-                    color: Kirigami.Theme.disabledTextColor
-                    Layout.preferredWidth: 30
-                }
-
-                Controls.Label {
-                    Layout.fillWidth: true
-                    text: title
-                    elide: Qt.ElideRight
+                    Controls.Label {
+                        Layout.fillWidth: true
+                        text: title
+                        elide: Qt.ElideRight
+                    }
                 }
             }
-
             actions: [
                 Kirigami.Action {
                     icon.name: "overflow-menu"
@@ -155,8 +163,6 @@ Kirigami.ScrollablePage {
                     onTriggered: menu.openForSong(delegateItem.videoId, delegateItem.title, delegateItem.artists, delegateItem.artistsDisplayString)
                 }
             ]
-
-            onClicked: play(delegateItem.videoId)
         }
 
         Controls.BusyIndicator {

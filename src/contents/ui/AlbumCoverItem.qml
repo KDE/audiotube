@@ -22,8 +22,14 @@ ColumnLayout {
 
     MouseArea {
         id: coverArea
+        acceptedButtons: Qt.LeftButton | Qt.RightButton
         anchors.fill: parent
-        onClicked: root.clicked()
+        onClicked: if (mouse.button === Qt.RightButton) {
+                       root.optionsClicked()
+                   } else if (mouse.button === Qt.LeftButton) {
+                       root.clicked()
+                   }
+
         hoverEnabled: !Kirigami.Settings.hasTransientTouchInput
         onEntered: {
             if (!Kirigami.Settings.hasTransientTouchInput) {

@@ -96,32 +96,44 @@ Kirigami.ScrollablePage {
             required property string artistsDisplayString
             required property string radioPlaylistId
             required property string thumbnailUrl
-
-            RowLayout {
-                Layout.fillHeight: true
-                RoundedImage {
-                    source: delegateItem.thumbnailUrl
-                    height: 35
-                    width: height
-                    radius: delegateItem.type === SearchModel.Artist?height/2:5
-                }
-
-                ColumnLayout {
-                    Controls.Label {
-                        Layout.fillWidth: true
-                        text: title
-                        elide: Qt.ElideRight
+            MouseArea {
+                implicitHeight: content.implicitHeight
+                acceptedButtons: Qt.LeftButton | Qt.RightButton
+                onClicked: if (mouse.button === Qt.RightButton) {
+                               if (delegateItem.type === SearchModel.Song || delegateItem.type === SearchModel.Video) {
+                                    menu.openForSong(delegateItem.videoId, delegateItem.title, delegateItem.artists, delegateItem.artistsDisplayString)
+                               }
+                          } else if (mouse.button === Qt.LeftButton) {
+                                searchModel.triggerItem(index)
+                          }
+                RowLayout {
+                    id: content
+                    anchors.fill: parent
+                    RoundedImage {
+                        source: delegateItem.thumbnailUrl
+                        height: 35
+                        width: height
+                        radius: delegateItem.type === SearchModel.Artist?height/2:5
                     }
 
-                    Controls.Label {
-                        Layout.fillWidth: true
-                        visible: delegateItem.artistsDisplayString
-                        color: Kirigami.Theme.disabledTextColor
-                        text: delegateItem.artistsDisplayString
-                        elide: Qt.ElideRight
+                    ColumnLayout {
+                        Controls.Label {
+                            Layout.fillWidth: true
+                            text: title
+                            elide: Qt.ElideRight
+                        }
 
+                        Controls.Label {
+                            Layout.fillWidth: true
+                            visible: delegateItem.artistsDisplayString
+                            color: Kirigami.Theme.disabledTextColor
+                            text: delegateItem.artistsDisplayString
+                            elide: Qt.ElideRight
+
+                        }
                     }
                 }
+
             }
 
             actions: [
@@ -133,7 +145,8 @@ Kirigami.ScrollablePage {
                 }
             ]
 
-            onClicked: searchModel.triggerItem(index)
+
+
         }
         Controls.BusyIndicator {
             anchors.centerIn: parent

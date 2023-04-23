@@ -124,40 +124,46 @@ Kirigami.ScrollablePage {
             required property string artistsDisplayString
             required property int index
 
-            onClicked: {
-                play(videoId)
-            }
+            MouseArea {
+                implicitHeight: content.implicitHeight
+                acceptedButtons: Qt.LeftButton | Qt.RightButton
+                onClicked: if (mouse.button === Qt.RightButton) {
+                               menu.openForSong(delegateItem.videoId, delegateItem.title, delegateItem.artists, delegateItem.artistsDisplayString)
+                          } else if (mouse.button === Qt.LeftButton) {
+                               play(videoId)
+                          }
+                RowLayout {
+                    id: content
+                    anchors.fill: parent
+                    ThumbnailSource {
+                        id: thumbnailSource
 
-            RowLayout {
-                ThumbnailSource {
-                    id: thumbnailSource
-
-                    videoId: delegateItem.videoId
-                }
-
-                RoundedImage {
-                    source: thumbnailSource.cachedPath
-                    height: 35
-                    width: height
-                    radius: 5
-                }
-                ColumnLayout {
-                    Controls.Label {
-                        text: delegateItem.title
-                        Layout.fillWidth: true
-                        elide: Qt.ElideRight
-
+                        videoId: delegateItem.videoId
                     }
-                    Controls.Label {
-                        Layout.fillWidth: true
-                        color: Kirigami.Theme.disabledTextColor
-                        text: delegateItem.artistsDisplayString
-                        elide: Qt.ElideRight
 
+                    RoundedImage {
+                        source: thumbnailSource.cachedPath
+                        height: 35
+                        width: height
+                        radius: 5
+                    }
+                    ColumnLayout {
+                        Controls.Label {
+                            text: delegateItem.title
+                            Layout.fillWidth: true
+                            elide: Qt.ElideRight
+
+                        }
+                        Controls.Label {
+                            Layout.fillWidth: true
+                            color: Kirigami.Theme.disabledTextColor
+                            text: delegateItem.artistsDisplayString
+                            elide: Qt.ElideRight
+
+                        }
                     }
                 }
             }
-
             actions: [
                 Kirigami.Action {
                     icon.name: "overflow-menu"

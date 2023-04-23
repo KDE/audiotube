@@ -137,28 +137,38 @@ Kirigami.ScrollablePage {
             required property string artistsDisplayString
             required property int index
 
-            RowLayout {
-                Layout.fillHeight: true
-                RoundedImage {
-                    source: delegateItem.thumbnailUrl
-                    height: 35
-                    width: height
-                    radius: 5
-                }
-
-                ColumnLayout {
-                    Controls.Label {
-                        Layout.fillWidth: true
-                        text: title
-                        elide: Qt.ElideRight
+            MouseArea {
+                implicitHeight: content.implicitHeight
+                acceptedButtons: Qt.LeftButton | Qt.RightButton
+                onClicked: if (mouse.button === Qt.RightButton) {
+                               menu.openForSong(delegateItem.videoId, delegateItem.title, delegateItem.artists, delegateItem.artistsDisplayString)
+                           } else if (mouse.button === Qt.LeftButton) {
+                               play(videoId)
+                          }
+                RowLayout {
+                    id: content
+                    anchors.fill: parent
+                    RoundedImage {
+                        source: delegateItem.thumbnailUrl
+                        height: 35
+                        width: height
+                        radius: 5
                     }
 
-                    Controls.Label {
-                        Layout.fillWidth: true
-                        visible: delegateItem.artistsDisplayString
-                        color: Kirigami.Theme.disabledTextColor
-                        text: delegateItem.artistsDisplayString
-                        elide: Qt.ElideRight
+                    ColumnLayout {
+                        Controls.Label {
+                            Layout.fillWidth: true
+                            text: title
+                            elide: Qt.ElideRight
+                        }
+
+                        Controls.Label {
+                            Layout.fillWidth: true
+                            visible: delegateItem.artistsDisplayString
+                            color: Kirigami.Theme.disabledTextColor
+                            text: delegateItem.artistsDisplayString
+                            elide: Qt.ElideRight
+                        }
                     }
                 }
             }
@@ -170,8 +180,6 @@ Kirigami.ScrollablePage {
                     onTriggered: menu.openForSong(delegateItem.videoId, delegateItem.title, delegateItem.artists, delegateItem.artistsDisplayString)
                 }
             ]
-
-            onClicked: play(videoId)
         }
 
         Controls.BusyIndicator {

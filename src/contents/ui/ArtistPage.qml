@@ -164,23 +164,33 @@ Kirigami.ScrollablePage {
             required property var artists
             required property string videoId
             required property string thumbnailUrl
+            MouseArea {
+                implicitHeight: content.implicitHeight
+                acceptedButtons: Qt.LeftButton | Qt.RightButton
+                onClicked: if (mouse.button === Qt.RightButton) {
+                               if (type === ArtistModel.Song) {
+                                   menu.openForSong(delegateItem.videoId, delegateItem.title, delegateItem.artists, artistModel.title)
+                                }
+                           } else if (mouse.button === Qt.LeftButton) {
+                                artistModel.triggerItem(index)
+                           }
+                RowLayout {
+                    id: content
+                    anchors.fill: parent
+                    RoundedImage {
+                        source: delegateItem.thumbnailUrl
+                        height: 35
+                        width: height
+                        radius:5
+                    }
 
-            RowLayout {
-                Layout.fillHeight: true
-                RoundedImage {
-                    source: delegateItem.thumbnailUrl
-                    height: 35
-                    width: height
-                    radius:5
-                }
-
-                Controls.Label {
-                    Layout.fillWidth: true
-                    text: title
-                    elide: Qt.ElideRight
+                    Controls.Label {
+                        Layout.fillWidth: true
+                        text: title
+                        elide: Qt.ElideRight
+                    }
                 }
             }
-
             actions: [
                 Kirigami.Action {
                     icon.name: "overflow-menu"
@@ -189,8 +199,6 @@ Kirigami.ScrollablePage {
                     onTriggered: menu.openForSong(delegateItem.videoId, delegateItem.title, delegateItem.artists, artistModel.title)
                 }
             ]
-
-            onClicked: artistModel.triggerItem(index)
         }
 
         Controls.BusyIndicator {
