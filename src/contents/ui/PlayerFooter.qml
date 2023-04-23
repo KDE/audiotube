@@ -201,7 +201,7 @@ Flickable {
             Layout.fillHeight: true
             implicitHeight: footerItem.height
             
-            thumbnail: thumbnailSource.cachedPath
+            thumbnail: footerItem.videoInfoExtractor.thumbnail
             info: footerItem.videoInfoExtractor
             audio: footerItem.audioPlayer
                 
