@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-16 00:47+0000\n"
+"POT-Creation-Date: 2023-04-23 00:48+0000\n"
 "PO-Revision-Date: 2023-04-16 12:32\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -220,7 +220,7 @@ msgstr "从播放列表中移除"
 msgid "This playlist is still empty"
 msgstr "此播放列表未包含歌曲"
 
-#: contents/ui/main.qml:110 main.cpp:56
+#: contents/ui/main.qml:110 main.cpp:61
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
@@ -428,49 +428,49 @@ msgstr "从历史记录中删除"
 msgid "Add to playlist"
 msgstr "添加到播放列表"
 
-#: main.cpp:58
+#: main.cpp:63
 #, kde-format
 msgid "YouTube Music Player"
 msgstr ""
 
-#: main.cpp:60
+#: main.cpp:65
 #, kde-format
 msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
 msgstr ""
 
-#: main.cpp:61
+#: main.cpp:66
 #, kde-format
 msgid "Jonah Brüchert"
 msgstr ""
 
-#: main.cpp:61
+#: main.cpp:66
 #, kde-format
 msgid "Maintainer"
 msgstr ""
 
-#: main.cpp:62
+#: main.cpp:67
 #, kde-format
 msgid "Mathis Brüchert"
 msgstr ""
 
-#: main.cpp:62
+#: main.cpp:67
 #, kde-format
 msgid "Designer"
 msgstr ""
 
-#: main.cpp:63
+#: main.cpp:68
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Qi Binye, Tyson Tan"
 
-#: main.cpp:63
+#: main.cpp:68
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "weearc@kde.org, tysontan@tysontan.com"
 
-#: main.cpp:68
+#: main.cpp:73
 #, kde-format
 msgid "Unofficial API for YouTube Music"
 msgstr ""

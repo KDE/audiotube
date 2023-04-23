@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-16 00:47+0000\n"
+"POT-Creation-Date: 2023-04-23 00:48+0000\n"
 "PO-Revision-Date: 2023-03-23 08:39+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -221,7 +221,7 @@ msgstr "Odstrani iz seznama predvajanja"
 msgid "This playlist is still empty"
 msgstr "Ta seznam predvajanja je še prazen"
 
-#: contents/ui/main.qml:110 main.cpp:56
+#: contents/ui/main.qml:110 main.cpp:61
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
@@ -429,49 +429,49 @@ msgstr "Odstrani iz zgodovine"
 msgid "Add to playlist"
 msgstr "Dodaj v seznam predvajanja"
 
-#: main.cpp:58
+#: main.cpp:63
 #, kde-format
 msgid "YouTube Music Player"
 msgstr "Predvajalnik glasbe YouTube"
 
-#: main.cpp:60
+#: main.cpp:65
 #, kde-format
 msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
 msgstr "© 2021-2023 Jonah Brüchert, 2021-2023 Skupnost KDE"
 
-#: main.cpp:61
+#: main.cpp:66
 #, kde-format
 msgid "Jonah Brüchert"
 msgstr "Jonah Brüchert"
 
-#: main.cpp:61
+#: main.cpp:66
 #, kde-format
 msgid "Maintainer"
 msgstr "Vzdrževalec"
 
-#: main.cpp:62
+#: main.cpp:67
 #, kde-format
 msgid "Mathis Brüchert"
 msgstr "Mathis Brüchert"
 
-#: main.cpp:62
+#: main.cpp:67
 #, kde-format
 msgid "Designer"
 msgstr "Oblikovalec"
 
-#: main.cpp:63
+#: main.cpp:68
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Matjaž Jeran"
 
-#: main.cpp:63
+#: main.cpp:68
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "matjaz.jeran@amis.net"
 
-#: main.cpp:68
+#: main.cpp:73
 #, kde-format
 msgid "Unofficial API for YouTube Music"
 msgstr "Neuradni programski vmesnik za Youtube Music"
