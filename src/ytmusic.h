@@ -12,6 +12,8 @@
 #include <vector>
 #include <memory>
 
+constexpr auto TESTED_YTMUSICAPI_VERSION = "1.0.0";
+
 struct YTMusicPrivate;
 
 namespace meta {

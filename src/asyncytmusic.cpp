@@ -10,6 +10,9 @@
 #include <QJsonArray>
 #include <QFutureInterface>
 #include <QCoreApplication>
+#include <QTimer>
+
+#include <KLocalizedString>
 
 #include <pybind11/embed.h>
 
@@ -54,6 +57,15 @@ AsyncYTMusic::AsyncYTMusic(QObject *parent)
 
     connect(this, &AsyncYTMusic::errorOccurred, this, [](const QString &err) {
         std::cerr << qPrintable(err);
+    });
+
+    QTimer::singleShot(0, this, [this]() {
+        connectFuture(version(), this, [this](auto &&version) {
+            if (version != TESTED_YTMUSICAPI_VERSION) {
+                Q_EMIT errorOccurred(i18n("Running with untested version of ytmusicapi %1. "
+                                          "If you experience errors, please report them to your distribution.", version));
+            }
+        });
     });
 }
 
