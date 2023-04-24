@@ -63,14 +63,14 @@ FavouritesModel *Library::favourites()
 
 void Library::addFavourite(const QString &videoId, const QString &title, const QString &artist, const QString &album)
 {
-    connectFuture(addSong(videoId, title, artist, album), this, [=, this] {
-        connectFuture(m_database->execute("insert or ignore into favourites (video_id) values (?)", videoId), this, &Library::changeFavourites);
+    QCoro::connect(addSong(videoId, title, artist, album), this, [=, this] {
+        QCoro::connect(m_database->execute("insert or ignore into favourites (video_id) values (?)", videoId), this, &Library::changeFavourites);
     });
 }
 
 void Library::removeFavourite(const QString &videoId)
 {
-    connectFuture(m_database->execute("delete from favourites where video_id = ?", videoId), this, &Library::changeFavourites);
+    QCoro::connect(m_database->execute("delete from favourites where video_id = ?", videoId), this, &Library::changeFavourites);
 }
 
 FavouriteWatcher *Library::favouriteWatcher(const QString &videoId)
@@ -89,12 +89,12 @@ SearchHistoryModel *Library::searches()
 void Library::addSearch(const QString &text)
 {
     m_searches->addSearch(text);
-    connectFuture(m_database->execute("insert into searches (search_query) values (?)", text), this, &Library::searchesChanged);
+    QCoro::connect(m_database->execute("insert into searches (search_query) values (?)", text), this, &Library::searchesChanged);
 }
 
 void Library::removeSearch(const QString &text) {
     m_searches->removeSearch(text);
-    connectFuture(m_database->execute("delete from searches where search_query = ?", text), this, &Library::searchesChanged);
+    QCoro::connect(m_database->execute("delete from searches where search_query = ?", text), this, &Library::searchesChanged);
 }
 
 const QString& Library::temporarySearch()
@@ -116,15 +116,15 @@ PlaybackHistoryModel *Library::playbackHistory()
 
 void Library::addPlaybackHistoryItem(const QString &videoId, const QString &title, const QString &artist, const QString &album)
 {
-    connectFuture(addSong(videoId, title, artist, album), this, [=, this] {
-        connectFuture(m_database->execute("insert or ignore into played_songs (video_id, plays) values (?, ?)", videoId, 0), this, [=, this] {
-            connectFuture(m_database->execute("update played_songs set plays = plays + 1 where video_id = ? ", videoId), this, &Library::changePlaybackHistory);
+    QCoro::connect(addSong(videoId, title, artist, album), this, [=, this] {
+        QCoro::connect(m_database->execute("insert or ignore into played_songs (video_id, plays) values (?, ?)", videoId, 0), this, [=, this] {
+            QCoro::connect(m_database->execute("update played_songs set plays = plays + 1 where video_id = ? ", videoId), this, &Library::changePlaybackHistory);
         });
     });
 }
 void Library::removePlaybackHistoryItem(const QString &videoId)
 {
-    connectFuture(m_database->execute("delete from played_songs where video_id = ?", videoId), this, &Library::changePlaybackHistory);
+    QCoro::connect(m_database->execute("delete from played_songs where video_id = ?", videoId), this, &Library::changePlaybackHistory);
 }
 
 WasPlayedWatcher *Library::wasPlayedWatcher(const QString& videoId)
@@ -154,10 +154,10 @@ QFuture<void> Library::addSong(const QString &videoId, const QString &title, con
     return m_database->execute("insert or replace into songs (video_id, title, artist, album) values (?, ?, ?, ?)", videoId, title, artist, album);
 }
 
-PlaybackHistoryModel::PlaybackHistoryModel(QFuture<std::vector<PlayedSong> > &&songs, QObject *parent)
+PlaybackHistoryModel::PlaybackHistoryModel(QFuture<std::vector<PlayedSong>> &&songs, QObject *parent)
     : QAbstractListModel(parent)
 {
-    connectFuture(songs, this, [this](const auto songs) {
+    QCoro::connect(std::move(songs), this, [this](const auto songs) {
         beginResetModel();
         m_playedSongs = songs;
         endResetModel();
@@ -209,7 +209,7 @@ std::vector<PlayedSong> PlaybackHistoryModel::getPlayedSong() const
 FavouritesModel::FavouritesModel(QFuture<std::vector<Song>> &&songs, QObject *parent)
     : QAbstractListModel(parent)
 {
-    connectFuture(songs, this, [this](const auto songs) {
+    QCoro::connect(std::move(songs), this, [this](const auto songs) {
         beginResetModel();
         m_favouriteSongs = songs;
         endResetModel();
@@ -257,7 +257,7 @@ FavouriteWatcher::FavouriteWatcher(Library *library, const QString &videoId)
     : QObject(library), m_videoId(videoId), m_library(library)
 {
     auto update = [this] {
-        connectFuture(m_library->database().getResult<SingleValue<bool>>("select count(*) > 0 from favourites where video_id = ?", m_videoId), this, [this](auto count) {
+        QCoro::connect(m_library->database().getResult<SingleValue<bool>>("select count(*) > 0 from favourites where video_id = ?", m_videoId), this, [this](auto count) {
             if (count) {
                 m_isFavourite = count->value;
                 Q_EMIT isFavouriteChanged();
@@ -275,7 +275,7 @@ bool FavouriteWatcher::isFavourite() const {
 SearchHistoryModel::SearchHistoryModel(QFuture<std::vector<SingleValue<QString>>> &&historyFuture, QObject *parent)
     : QAbstractListModel(parent)
 {
-    connectFuture(historyFuture, this, [this](const auto history) {
+    QCoro::connect(std::move(historyFuture), this, [this](const auto history) {
         beginResetModel();
         m_history = history;
         endResetModel();
@@ -373,7 +373,7 @@ WasPlayedWatcher::WasPlayedWatcher(Library* library, const QString& videoId)
 
 void WasPlayedWatcher::query()
 {
-    connectFuture(m_library->database().getResult<SingleValue<bool>>("select count(*) > 0 from played_songs where video_id = ?", m_videoId), this, &WasPlayedWatcher::update);
+    QCoro::connect(m_library->database().getResult<SingleValue<bool>>("select count(*) > 0 from played_songs where video_id = ?", m_videoId), this, &WasPlayedWatcher::update);
 }
 
 
@@ -383,7 +383,7 @@ bool WasPlayedWatcher::wasPlayed() const
 }
 
 
-void WasPlayedWatcher::update(std::optional<SingleValue<bool>> result)
+void WasPlayedWatcher::update(std::optional<SingleValue<bool> > result)
 {
     if(result.has_value())
     {

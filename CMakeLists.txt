@@ -46,6 +46,7 @@ find_package(Ytdlp REQUIRED RUNTIME)
 find_package(YTMusicAPI 1.0.2 REQUIRED RUNTIME)
 find_package(KF5KirigamiAddons 0.6.0 REQUIRED)
 find_package(FutureSQL${QT_MAJOR_VERSION} REQUIRED)
+find_package(QCoro${QT_MAJOR_VERSION} REQUIRED COMPONENTS Core)
 
 ki18n_install(po)
 

@@ -19,7 +19,7 @@ PlaylistModel::PlaylistModel(QObject *parent)
     connect(this, &PlaylistModel::playlistIdChanged, this, [=, this] {
         setLoading(true);
         auto future = YTMusicThread::instance()->fetchPlaylist(m_playlistId);
-        connectFuture(future, this, [=, this](const playlist::Playlist &playlist) {
+        QCoro::connect(std::move(future), this, [=, this](const playlist::Playlist &playlist) {
             setLoading(false);
             beginResetModel();
             m_playlist = playlist;

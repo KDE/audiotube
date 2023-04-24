@@ -49,7 +49,7 @@ UserPlaylistModel::UserPlaylistModel(QObject *parent)
 
         setLoading(true);
         auto future = YTMusicThread::instance()->fetchWatchPlaylist(m_initialVideoId);
-        connectFuture(future, this, handleResult);
+        QCoro::connect(std::move(future), this, handleResult);
     });
     connect(this, &UserPlaylistModel::playlistIdChanged, this, [=, this] {
         if (m_playlistId.isEmpty()) {
@@ -58,7 +58,7 @@ UserPlaylistModel::UserPlaylistModel(QObject *parent)
 
         setLoading(true);
         auto future = YTMusicThread::instance()->fetchWatchPlaylist(std::nullopt, m_playlistId);
-        connectFuture(future, this, handleResult);;
+        QCoro::connect(std::move(future), this, handleResult);;
     });
     connect(&YTMusicThread::instance().get(), &AsyncYTMusic::errorOccurred, this, [this] {
         setLoading(false);
@@ -474,9 +474,9 @@ void UserPlaylistModel::emitCurrentVideoChanged(const QString &oldVideoId)
 void UserPlaylistModel::fetchLyrics(const QString &videoId)
 {
     auto future = YTMusicThread::instance()->fetchWatchPlaylist(videoId);
-    connectFuture(future, this, [=, this](const auto &playlist) {
+    QCoro::connect(std::move(future), this, [=, this](const auto &playlist) {
         if (playlist.lyrics) {
-            connectFuture(YTMusicThread::instance()->fetchLyrics(QString::fromStdString(*playlist.lyrics)), this, [=, this](const auto &lyrics) {
+            QCoro::connect(YTMusicThread::instance()->fetchLyrics(QString::fromStdString(*playlist.lyrics)), this, [=, this](const auto &lyrics) {
                 m_lyrics = lyrics;
                 Q_EMIT lyricsChanged();
             });

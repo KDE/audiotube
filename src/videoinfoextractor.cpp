@@ -26,7 +26,7 @@ VideoInfoExtractor::VideoInfoExtractor(QObject *parent)
         setLoading(true);
 
         auto future = YTMusicThread::instance()->extractVideoInfo(QString::fromStdString(m_videoId.toStdString()));
-        connectFuture(future, this, [this](const video_info::VideoInfo &videoInfo) {
+        QCoro::connect(std::move(future), this, [this](const video_info::VideoInfo &videoInfo) {
             m_videoInfo = videoInfo;
             setLoading(false);
             Q_EMIT audioUrlChanged();

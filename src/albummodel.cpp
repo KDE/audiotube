@@ -13,7 +13,7 @@ AlbumModel::AlbumModel(QObject *parent)
     connect(this, &AlbumModel::browseIdChanged, this, [this] {
         setLoading(true);
         auto future = YTMusicThread::instance()->fetchAlbum(m_browseId);
-        connectFuture(future, this, [=, this](const album::Album &album) {
+        QCoro::connect(std::move(future), this, [=, this](const album::Album &album) {
             setLoading(false);
 
             beginResetModel();

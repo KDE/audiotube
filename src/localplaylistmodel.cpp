@@ -71,7 +71,7 @@ void LocalPlaylistModel::refreshModel()
                 "select video_id, title, artist, album from "
                 "playlist_entries natural join songs where playlist_id = ?", m_playlistId);
 
-    connectFuture(future, this, [this](auto entries) {
+    QCoro::connect(std::move(future), this, [this](auto entries) {
         beginResetModel();
         m_entries = entries;
         endResetModel();
@@ -85,5 +85,5 @@ const std::vector<PlaylistEntry> &LocalPlaylistModel::entries() const
 
 void LocalPlaylistModel::removeSong(QString videoId, qint64 playlistId)
 {
-    connectFuture(Library::instance().database().execute("delete from playlist_entries where playlist_id = ? and video_id = ?", playlistId, videoId), this, &LocalPlaylistModel::refreshModel);
+    QCoro::connect(Library::instance().database().execute("delete from playlist_entries where playlist_id = ? and video_id = ?", playlistId, videoId), this, &LocalPlaylistModel::refreshModel);
 }

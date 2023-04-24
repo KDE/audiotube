@@ -84,7 +84,7 @@ void ThumbnailSource::setVideoId(const QString &id) {
             cropped.save(cacheLocation);
         });
 
-        connectFuture(future, this, [this, cacheLocation]() {
+        QCoro::connect(std::move(future), this, [this, cacheLocation]() {
             setCachedPath(QUrl::fromLocalFile(cacheLocation));
         });
     };
@@ -93,7 +93,7 @@ void ThumbnailSource::setVideoId(const QString &id) {
         if (error == QNetworkReply::NetworkError::ContentNotFoundError) {
             qDebug() << "Naive thumbnail resolution failed, falling back to yt-dlp (slower)";
 
-            connectFuture(YTMusicThread::instance()->extractVideoInfo(m_videoId), this, [this, storeResult](auto info) {
+            QCoro::connect(YTMusicThread::instance()->extractVideoInfo(m_videoId), this, [this, storeResult](auto info) {
                 auto *reply = Library::instance().nam().get(QNetworkRequest(QUrl(QString::fromStdString(info.thumbnail))));
                 connect(reply, &QNetworkReply::finished, this, [reply, storeResult]() {
                     storeResult(reply);

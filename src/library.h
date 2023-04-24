@@ -204,6 +204,6 @@ private:
     bool m_wasPlayed = false;
     QString m_videoId;
     Library *m_library;
-    Q_SLOT void update(std::optional<SingleValue<bool>> result);
+    Q_SLOT void update(std::optional<SingleValue<bool> > result);
     Q_SLOT void query();
 };

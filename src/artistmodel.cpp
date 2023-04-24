@@ -20,7 +20,7 @@ ArtistModel::ArtistModel(QObject *parent)
         setLoading(true);
 
         auto future = YTMusicThread::instance()->fetchArtist(m_channelId);
-        connectFuture(future, this, [=, this](const artist::Artist &artist) {
+        QCoro::connect(std::move(future), this, [=, this](const artist::Artist &artist) {
             setLoading(false);
 
             beginResetModel();

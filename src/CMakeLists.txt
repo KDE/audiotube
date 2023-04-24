@@ -50,6 +50,7 @@ target_link_libraries(audiotube
     KF5::Crash
     KF5::WindowSystem
     FutureSQL${QT_MAJOR_VERSION}::FutureSQL
+    QCoro${QT_MAJOR_VERSION}::Core
     declarative
     ytm
 )

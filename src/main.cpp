@@ -69,7 +69,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     about.setOrganizationDomain("kde.org");
     about.setBugAddress("https://bugs.kde.org/describecomponents.cgi?product=audiotube");
     auto future = YTMusicThread::instance()->version();
-    connectFuture(future, &app, [&about](const auto &version) {
+    QCoro::connect(std::move(future), &app, [&about](const auto &version) {
         about.addComponent(QStringLiteral("ytmusicapi"), i18n("Unofficial API for YouTube Music"), version);
         KAboutData::setApplicationData(about);
     });
