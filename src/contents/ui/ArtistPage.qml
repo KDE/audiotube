@@ -81,11 +81,13 @@ Kirigami.ScrollablePage {
                     text: i18n("Radio")
                     icon.name: "radio"
                     onTriggered: playPlaylist(radioId)
+                    visible: radioId
                 },
                 Kirigami.Action {
                     text: i18n("Shuffle")
                     icon.name: "media-playlist-shuffle"
                     onTriggered: playPlaylist(shuffleId)
+                    visible: shuffleId
                 }
             ]
             overflowActions: [

@@ -118,6 +118,7 @@ Item {
                         icon.name: modelData.icon.name
                         text:modelData.text
                         onClicked: modelData.triggered()
+                        visible: modelData.visible
                     }
                 }
                 Controls.Menu {

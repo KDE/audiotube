@@ -23,7 +23,8 @@ public:
         Album,
         Playlist,
         Song,
-        Video
+        Video,
+        TopResult
     };
     Q_ENUM(Type)
 

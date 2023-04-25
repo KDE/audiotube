@@ -84,7 +84,16 @@ struct Artist {
     std::vector<meta::Thumbnail> thumbnails;
 };
 
-using SearchResultItem = std::variant<Video, Playlist, Song, Album, Artist>;
+struct TopResult {
+    std::string category;
+    std::string result_type;
+    std::optional<std::string> video_id;
+    std::optional<std::string> title;
+    std::vector<meta::Artist> artists;
+    std::vector<meta::Thumbnail> thumbnails;
+};
+
+using SearchResultItem = std::variant<Video, Playlist, Song, Album, Artist, TopResult>;
 };
 
 

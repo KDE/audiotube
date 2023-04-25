@@ -32,6 +32,8 @@ Kirigami.ScrollablePage {
                     return i18n("Songs")
                 case SearchModel.Video:
                     return i18n("Videos")
+                case SearchModel.TopResult:
+                    return i18n("Top Results")
                 }
 
                 return i18n("Unknown")

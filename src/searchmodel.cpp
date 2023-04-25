@@ -54,6 +54,16 @@ QVariant SearchModel::data(const QModelIndex &index, int role) const
                 return arg.title;
             } else if constexpr (std::is_same_v<T, search::Video>) {
                 return arg.title;
+            } else if constexpr (std::is_same_v<T, search::TopResult>) {
+                if (arg.title) {
+                    return *arg.title;
+                } else {
+                    if (!arg.artists.empty()) {
+                        return arg.artists.front().name;
+                    } else {
+                        return std::string();
+                    }
+                }
             } else {
                 Q_UNREACHABLE();
             }
@@ -71,6 +81,8 @@ QVariant SearchModel::data(const QModelIndex &index, int role) const
                 return Type::Song;
             } else if constexpr (std::is_same_v<T, search::Video>) {
                 return Type::Video;
+            } else if constexpr (std::is_same_v<T, search::TopResult>) {
+                return Type::TopResult;
             } else {
                 Q_UNREACHABLE();
             }
@@ -88,6 +100,12 @@ QVariant SearchModel::data(const QModelIndex &index, int role) const
                 return QString::fromStdString(arg.video_id);
             } else if constexpr (std::is_same_v<T, search::Video>) {
                 return QString::fromStdString(arg.video_id);
+            } else if constexpr (std::is_same_v<T, search::TopResult>) {
+                if (arg.video_id) {
+                    return QString::fromStdString(*arg.video_id);
+                } else {
+                    return QString();
+                }
             } else {
                 Q_UNREACHABLE();
             }
@@ -104,6 +122,8 @@ QVariant SearchModel::data(const QModelIndex &index, int role) const
             } else if constexpr (std::is_same_v<T, search::Song>) {
                 return arg.artists;
             } else if constexpr (std::is_same_v<T, search::Video>) {
+                return arg.artists;
+            } else if constexpr (std::is_same_v<T, search::TopResult>) {
                 return arg.artists;
             } else {
                 Q_UNREACHABLE();
@@ -134,6 +154,10 @@ QVariant SearchModel::data(const QModelIndex &index, int role) const
             using T = std::decay_t<decltype(arg)>;
             if constexpr (std::is_same_v<T, search::Song> || std::is_same_v<T, search::Video> || std::is_same_v<T, search::Album>) {
                 return PlaylistUtils::artistsToString(arg.artists);
+            } else if constexpr(std::is_same_v<T, search::TopResult>) {
+                if (arg.title) {
+                    return PlaylistUtils::artistsToString(arg.artists);
+                }
             }
             return QString();
         }, m_searchResults.at(index.row())));
@@ -182,6 +206,14 @@ void SearchModel::triggerItem(int row)
             Q_EMIT openSong(QString::fromStdString(arg.video_id));
         } else if constexpr (std::is_same_v<T, search::Video>) {
             Q_EMIT openVideo(QString::fromStdString(arg.video_id), QString::fromStdString(arg.title));
+        } else if constexpr (std::is_same_v<T, search::TopResult>) {
+            if (arg.video_id) {
+                Q_EMIT openSong(QString::fromStdString(*arg.video_id));
+            } else {
+                if (!arg.artists.empty() && arg.artists.front().id) {
+                    Q_EMIT openArtist(QString::fromStdString(*arg.artists.front().id), {}, {});
+                }
+            }
         } else {
             Q_UNREACHABLE();
         }
@@ -203,6 +235,8 @@ int SearchModel::itemType(search::SearchResultItem const &item)
             return SearchModel::Type::Song;
         } else if constexpr(std::is_same_v<T, search::Video>) {
             return SearchModel::Type::Video;
+        } else if constexpr(std::is_same_v<T, search::TopResult>) {
+            return SearchModel::Type::TopResult;
         } else {
             Q_UNREACHABLE();
         }

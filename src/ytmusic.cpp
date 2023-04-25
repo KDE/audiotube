@@ -276,7 +276,14 @@ std::optional<search::SearchResultItem> extract_search_result(py::handle result)
     const auto resultType = result["resultType"].cast<std::string>();
 
     if (result["category"].cast<std::optional<std::string>>() == "Top result") {
-        return {};
+        return search::TopResult {
+            result["category"].cast<std::string>(),
+            result["resultType"].cast<std::string>(),
+            optional_key<std::string>(result, "videoId"),
+            optional_key<std::string>(result, "title"),
+            extract_py_list<meta::Artist>(result["artists"]),
+            extract_py_list<meta::Thumbnail>(result["thumbnails"])
+        };
     }
 
     if (resultType == "video") {
