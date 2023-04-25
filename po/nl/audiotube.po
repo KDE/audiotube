@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-23 00:48+0000\n"
+"POT-Creation-Date: 2023-04-25 00:49+0000\n"
 "PO-Revision-Date: 2023-03-22 13:22+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -64,9 +64,9 @@ msgstr "Delen"
 msgid "Album • %1"
 msgstr "Album • %1"
 
-#: contents/ui/AlbumPage.qml:154 contents/ui/ArtistPage.qml:187
-#: contents/ui/LocalPlaylistPage.qml:164 contents/ui/PlaybackHistory.qml:188
-#: contents/ui/PlaylistPage.qml:169 contents/ui/SearchPage.qml:130
+#: contents/ui/AlbumPage.qml:162 contents/ui/ArtistPage.qml:197
+#: contents/ui/LocalPlaylistPage.qml:170 contents/ui/PlaybackHistory.qml:194
+#: contents/ui/PlaylistPage.qml:179 contents/ui/SearchPage.qml:142
 #, kde-format
 msgid "More"
 msgstr "Meer"
