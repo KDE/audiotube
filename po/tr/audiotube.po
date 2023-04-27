@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-26 00:48+0000\n"
-"PO-Revision-Date: 2023-03-22 11:54+0300\n"
+"POT-Creation-Date: 2023-04-27 00:47+0000\n"
+"PO-Revision-Date: 2023-04-26 12:47+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.03.70\n"
 
 #: asyncytmusic.cpp:65
 #, kde-format
@@ -23,6 +23,8 @@ msgid ""
 "Running with untested version of ytmusicapi %1. If you experience errors, "
 "please report them to your distribution."
 msgstr ""
+"ytmusicapi %1 denenmemiş sürümüyle çalışıyor. Hatalarla karşılaşırsanız "
+"lütfen bunları dağıtımınıza bildirin."
 
 #: contents/ui/AlbumPage.qml:75 contents/ui/LibraryPage.qml:37
 #: contents/ui/LibraryPage.qml:63 contents/ui/LibraryPage.qml:84
@@ -35,7 +37,7 @@ msgstr ""
 msgid "Play"
 msgstr "Çal"
 
-#: contents/ui/AlbumPage.qml:82 contents/ui/ArtistPage.qml:86
+#: contents/ui/AlbumPage.qml:82 contents/ui/ArtistPage.qml:87
 #: contents/ui/LibraryPage.qml:44 contents/ui/LibraryPage.qml:69
 #: contents/ui/LibraryPage.qml:92 contents/ui/LibraryPage.qml:229
 #: contents/ui/LibraryPage.qml:254 contents/ui/LibraryPage.qml:278
@@ -54,13 +56,13 @@ msgstr "Karıştır"
 msgid "Append to queue"
 msgstr "Kuyruğa iliştir"
 
-#: contents/ui/AlbumPage.qml:95 contents/ui/ArtistPage.qml:93
+#: contents/ui/AlbumPage.qml:95 contents/ui/ArtistPage.qml:95
 #: contents/ui/PlaylistPage.qml:104
 #, kde-format
 msgid "Open in Browser"
 msgstr "Tarayıcıda Aç"
 
-#: contents/ui/AlbumPage.qml:100 contents/ui/ArtistPage.qml:98
+#: contents/ui/AlbumPage.qml:100 contents/ui/ArtistPage.qml:100
 #: contents/ui/PlaylistPage.qml:109
 #, kde-format
 msgid "Share"
@@ -71,9 +73,9 @@ msgstr "Paylaş"
 msgid "Album • %1"
 msgstr "Albüm • %1"
 
-#: contents/ui/AlbumPage.qml:162 contents/ui/ArtistPage.qml:197
+#: contents/ui/AlbumPage.qml:162 contents/ui/ArtistPage.qml:199
 #: contents/ui/LocalPlaylistPage.qml:170 contents/ui/PlaybackHistory.qml:194
-#: contents/ui/PlaylistPage.qml:179 contents/ui/SearchPage.qml:142
+#: contents/ui/PlaylistPage.qml:179 contents/ui/SearchPage.qml:144
 #, kde-format
 msgid "More"
 msgstr "Daha Fazla"
@@ -83,12 +85,12 @@ msgstr "Daha Fazla"
 msgid "Radio"
 msgstr "Radyo"
 
-#: contents/ui/ArtistPage.qml:107
+#: contents/ui/ArtistPage.qml:109
 #, kde-format
 msgid "Artist"
 msgstr "Sanatçı"
 
-#: contents/ui/ArtistPage.qml:129 contents/ui/SearchPage.qml:70
+#: contents/ui/ArtistPage.qml:131 contents/ui/SearchPage.qml:72
 #, kde-format
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
@@ -97,22 +99,22 @@ msgstr ""
 "Video oynatımı henüz desteklenmiyor. \"%1\" videosunun yalnızca sesinin "
 "çalınmasını ister misiniz?"
 
-#: contents/ui/ArtistPage.qml:146 contents/ui/SearchPage.qml:26
+#: contents/ui/ArtistPage.qml:148 contents/ui/SearchPage.qml:26
 #, kde-format
 msgid "Albums"
 msgstr "Albümler"
 
-#: contents/ui/ArtistPage.qml:148
+#: contents/ui/ArtistPage.qml:150
 #, kde-format
 msgid "Singles"
 msgstr "Tekliler"
 
-#: contents/ui/ArtistPage.qml:150 contents/ui/SearchPage.qml:32
+#: contents/ui/ArtistPage.qml:152 contents/ui/SearchPage.qml:32
 #, kde-format
 msgid "Songs"
 msgstr "Şarkılar"
 
-#: contents/ui/ArtistPage.qml:152 contents/ui/SearchPage.qml:34
+#: contents/ui/ArtistPage.qml:154 contents/ui/SearchPage.qml:34
 #, kde-format
 msgid "Videos"
 msgstr "Videolar"
@@ -372,7 +374,12 @@ msgstr "Önceki Aramalar:"
 msgid "Artists"
 msgstr "Sanatçılar"
 
-#: contents/ui/SearchPage.qml:37
+#: contents/ui/SearchPage.qml:36
+#, kde-format
+msgid "Top Results"
+msgstr ""
+
+#: contents/ui/SearchPage.qml:39
 #, kde-format
 msgid "Unknown"
 msgstr "Bilinmiyor"
