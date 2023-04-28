@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-27 00:47+0000\n"
-"PO-Revision-Date: 2023-04-26 12:47+0300\n"
+"PO-Revision-Date: 2023-04-27 12:02+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -377,7 +377,7 @@ msgstr "Sanatçılar"
 #: contents/ui/SearchPage.qml:36
 #, kde-format
 msgid "Top Results"
-msgstr ""
+msgstr "En İyi Sonuçlar"
 
 #: contents/ui/SearchPage.qml:39
 #, kde-format

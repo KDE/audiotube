@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-27 00:47+0000\n"
-"PO-Revision-Date: 2023-04-26 10:48+0200\n"
+"PO-Revision-Date: 2023-04-27 14:44+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -377,7 +377,7 @@ msgstr "Artiesten"
 #: contents/ui/SearchPage.qml:36
 #, kde-format
 msgid "Top Results"
-msgstr ""
+msgstr "Top resultaten"
 
 #: contents/ui/SearchPage.qml:39
 #, kde-format
