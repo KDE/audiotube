@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-27 00:47+0000\n"
-"PO-Revision-Date: 2023-03-22 12:46+0100\n"
+"PO-Revision-Date: 2023-04-27 11:35+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -26,6 +26,8 @@ msgid ""
 "Running with untested version of ytmusicapi %1. If you experience errors, "
 "please report them to your distribution."
 msgstr ""
+"S'està executant amb la versió no provada de «ytmusicapi» %1. Si es "
+"produïxen errors, informeu-ne a la distribució."
 
 #: contents/ui/AlbumPage.qml:75 contents/ui/LibraryPage.qml:37
 #: contents/ui/LibraryPage.qml:63 contents/ui/LibraryPage.qml:84
@@ -378,12 +380,12 @@ msgstr "Artistes"
 #: contents/ui/SearchPage.qml:36
 #, kde-format
 msgid "Top Results"
-msgstr ""
+msgstr "Resultats principals"
 
 #: contents/ui/SearchPage.qml:39
 #, kde-format
 msgid "Unknown"
-msgstr "Desconeguda"
+msgstr "Desconegut"
 
 #: contents/ui/SearchWithDropdown.qml:343
 #, kde-format

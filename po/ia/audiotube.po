@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-27 00:47+0000\n"
-"PO-Revision-Date: 2023-04-05 11:16+0200\n"
+"PO-Revision-Date: 2023-04-28 22:38+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.04.0\n"
 
 #: asyncytmusic.cpp:65
 #, kde-format
@@ -23,6 +23,8 @@ msgid ""
 "Running with untested version of ytmusicapi %1. If you experience errors, "
 "please report them to your distribution."
 msgstr ""
+"Executante con version non essayate de ytmusicapi %1. Si tu experientia "
+"errores, pro favor reporta los a tu distribution."
 
 #: contents/ui/AlbumPage.qml:75 contents/ui/LibraryPage.qml:37
 #: contents/ui/LibraryPage.qml:63 contents/ui/LibraryPage.qml:84
@@ -375,7 +377,7 @@ msgstr "Artistas"
 #: contents/ui/SearchPage.qml:36
 #, kde-format
 msgid "Top Results"
-msgstr ""
+msgstr "Exitos al culmine (Top)"
 
 #: contents/ui/SearchPage.qml:39
 #, kde-format
