@@ -746,7 +746,7 @@ Item {
         }
 
         Item {
-            onWidthChanged: if(!wideScreen) {collapse.running=true; collapsed=true}
+            onWidthChanged: if(!wideScreen) {collapse.running=true; collapsed=true; queueButton.checked=false}
             property bool collapsed: true
             id: sideDrawer
             Layout.fillWidth: true
