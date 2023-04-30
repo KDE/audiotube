@@ -27,8 +27,8 @@
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/bd/90/6b5802fad3992d6eac7163216e0389a72475cbb57b23005135190e96d160/websockets-11.0.1.tar.gz",
-            "sha256": "369410925b240b30ef1c1deadbd6331e9cd865ad0b8966bf31e276cc8e0da159"
+            "url": "https://files.pythonhosted.org/packages/9d/67/68e568bb4a0617529db2723c75958223b70b95921cd114b5fd13567db4d8/websockets-11.0.2.tar.gz",
+            "sha256": "b1a69701eb98ed83dd099de4a686dc892c413d974fa31602bc00aca7cb988ac9"
         },
         {
             "type": "file",
