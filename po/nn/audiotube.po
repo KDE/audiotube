@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-16 00:47+0000\n"
+"POT-Creation-Date: 2023-04-27 00:47+0000\n"
 "PO-Revision-Date: 2023-02-23 19:21+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -20,6 +20,13 @@ msgstr ""
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
 
+#: asyncytmusic.cpp:65
+#, kde-format
+msgid ""
+"Running with untested version of ytmusicapi %1. If you experience errors, "
+"please report them to your distribution."
+msgstr ""
+
 #: contents/ui/AlbumPage.qml:75 contents/ui/LibraryPage.qml:37
 #: contents/ui/LibraryPage.qml:63 contents/ui/LibraryPage.qml:84
 #: contents/ui/LibraryPage.qml:222 contents/ui/LibraryPage.qml:248
@@ -31,7 +38,7 @@ msgstr ""
 msgid "Play"
 msgstr "Spel av"
 
-#: contents/ui/AlbumPage.qml:82 contents/ui/ArtistPage.qml:86
+#: contents/ui/AlbumPage.qml:82 contents/ui/ArtistPage.qml:87
 #: contents/ui/LibraryPage.qml:44 contents/ui/LibraryPage.qml:69
 #: contents/ui/LibraryPage.qml:92 contents/ui/LibraryPage.qml:229
 #: contents/ui/LibraryPage.qml:254 contents/ui/LibraryPage.qml:278
@@ -50,13 +57,13 @@ msgstr "Stokk om"
 msgid "Append to queue"
 msgstr ""
 
-#: contents/ui/AlbumPage.qml:95 contents/ui/ArtistPage.qml:93
+#: contents/ui/AlbumPage.qml:95 contents/ui/ArtistPage.qml:95
 #: contents/ui/PlaylistPage.qml:104
 #, kde-format
 msgid "Open in Browser"
 msgstr "Opna i nettlesar"
 
-#: contents/ui/AlbumPage.qml:100 contents/ui/ArtistPage.qml:98
+#: contents/ui/AlbumPage.qml:100 contents/ui/ArtistPage.qml:100
 #: contents/ui/PlaylistPage.qml:109
 #, kde-format
 msgid "Share"
@@ -67,9 +74,9 @@ msgstr ""
 msgid "Album • %1"
 msgstr "Album • %1"
 
-#: contents/ui/AlbumPage.qml:154 contents/ui/ArtistPage.qml:187
-#: contents/ui/LocalPlaylistPage.qml:164 contents/ui/PlaybackHistory.qml:188
-#: contents/ui/PlaylistPage.qml:169 contents/ui/SearchPage.qml:130
+#: contents/ui/AlbumPage.qml:162 contents/ui/ArtistPage.qml:199
+#: contents/ui/LocalPlaylistPage.qml:170 contents/ui/PlaybackHistory.qml:194
+#: contents/ui/PlaylistPage.qml:179 contents/ui/SearchPage.qml:144
 #, kde-format
 msgid "More"
 msgstr "Meir"
@@ -79,34 +86,34 @@ msgstr "Meir"
 msgid "Radio"
 msgstr "Radio"
 
-#: contents/ui/ArtistPage.qml:107
+#: contents/ui/ArtistPage.qml:109
 #, kde-format
 msgid "Artist"
 msgstr "Artist"
 
-#: contents/ui/ArtistPage.qml:129 contents/ui/SearchPage.qml:70
+#: contents/ui/ArtistPage.qml:131 contents/ui/SearchPage.qml:72
 #, kde-format
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
 "\"%1\"?"
 msgstr "Videoavspeling er endå ikkje støtta. Vil du spela av lyden til «%1»?"
 
-#: contents/ui/ArtistPage.qml:146 contents/ui/SearchPage.qml:26
+#: contents/ui/ArtistPage.qml:148 contents/ui/SearchPage.qml:26
 #, kde-format
 msgid "Albums"
 msgstr "Album"
 
-#: contents/ui/ArtistPage.qml:148
+#: contents/ui/ArtistPage.qml:150
 #, kde-format
 msgid "Singles"
 msgstr "Singelplater"
 
-#: contents/ui/ArtistPage.qml:150 contents/ui/SearchPage.qml:32
+#: contents/ui/ArtistPage.qml:152 contents/ui/SearchPage.qml:32
 #, kde-format
 msgid "Songs"
 msgstr "Songar"
 
-#: contents/ui/ArtistPage.qml:152 contents/ui/SearchPage.qml:34
+#: contents/ui/ArtistPage.qml:154 contents/ui/SearchPage.qml:34
 #, kde-format
 msgid "Videos"
 msgstr "Videoar"
@@ -223,7 +230,7 @@ msgstr ""
 msgid "This playlist is still empty"
 msgstr ""
 
-#: contents/ui/main.qml:110 main.cpp:56
+#: contents/ui/main.qml:110 main.cpp:61
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
@@ -366,7 +373,12 @@ msgstr "Tidlegare søk:"
 msgid "Artists"
 msgstr "Artistar"
 
-#: contents/ui/SearchPage.qml:37
+#: contents/ui/SearchPage.qml:36
+#, kde-format
+msgid "Top Results"
+msgstr ""
+
+#: contents/ui/SearchPage.qml:39
 #, kde-format
 msgid "Unknown"
 msgstr "Ukjend"
@@ -431,49 +443,49 @@ msgstr "Fjern frå loggen"
 msgid "Add to playlist"
 msgstr ""
 
-#: main.cpp:58
+#: main.cpp:63
 #, kde-format
 msgid "YouTube Music Player"
 msgstr ""
 
-#: main.cpp:60
+#: main.cpp:65
 #, kde-format
 msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
 msgstr ""
 
-#: main.cpp:61
+#: main.cpp:66
 #, kde-format
 msgid "Jonah Brüchert"
 msgstr ""
 
-#: main.cpp:61
+#: main.cpp:66
 #, kde-format
 msgid "Maintainer"
 msgstr ""
 
-#: main.cpp:62
+#: main.cpp:67
 #, kde-format
 msgid "Mathis Brüchert"
 msgstr ""
 
-#: main.cpp:62
+#: main.cpp:67
 #, kde-format
 msgid "Designer"
 msgstr ""
 
-#: main.cpp:63
+#: main.cpp:68
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Øystein Steffensen-Alværvik"
 
-#: main.cpp:63
+#: main.cpp:68
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "oysteins.omsetting@protonmail.com"
 
-#: main.cpp:68
+#: main.cpp:73
 #, kde-format
 msgid "Unofficial API for YouTube Music"
 msgstr ""
