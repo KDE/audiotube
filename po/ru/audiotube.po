@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-04-23 04:10+0000\n"
-"PO-Revision-Date: 2023-01-28 13:37+0300\n"
+"PO-Revision-Date: 2023-04-30 14:45+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -41,8 +41,7 @@ msgstr "Перемешать"
 #: contents/ui/LibraryPage.qml:100 contents/ui/LibraryPage.qml:369
 #: contents/ui/LibraryPage.qml:396 contents/ui/LocalPlaylistPage.qml:55
 #: contents/ui/PlaybackHistory.qml:48 contents/ui/PlaylistPage.qml:46
-#, fuzzy, kde-format
-#| msgid "Add to queue"
+#, kde-format
 msgid "Append to queue"
 msgstr "Добавить в очередь воспроизведения"
 
@@ -56,7 +55,7 @@ msgstr "Открыть в браузере"
 #: contents/ui/PlaylistPage.qml:56
 #, kde-format
 msgid "Share"
-msgstr ""
+msgstr "Поделиться"
 
 #: contents/ui/AlbumPage.qml:61
 #, kde-format
@@ -119,42 +118,37 @@ msgid "Cancel"
 msgstr "Отмена"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:17
-#, fuzzy, kde-format
-#| msgid "Playlist"
+#, kde-format
 msgid "Add playlist"
-msgstr "Список воспроизведения"
+msgstr "Создание списка воспроизведения"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:23
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:24
-#, fuzzy, kde-format
-#| msgid "Playlist"
+#, kde-format
 msgid "Playlist Title"
-msgstr "Список воспроизведения"
+msgstr "Название"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:28
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:30
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "Playlist Description"
-msgstr "Списки воспроизведения"
+msgstr "Описание"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:20
 #, kde-format
 msgid "Add Song to Playlist"
-msgstr ""
+msgstr "Добавление трека в список воспроизведения"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:29
 #: contents/ui/LocalPlaylistsPage.qml:90
-#, fuzzy, kde-format
-#| msgid "Playlist"
+#, kde-format
 msgid "New Playlist"
-msgstr "Список воспроизведения"
+msgstr "Создать список воспроизведения"
 
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:18
-#, fuzzy, kde-format
-#| msgid "Playlist"
+#, kde-format
 msgid "Rename playlist"
-msgstr "Список воспроизведения"
+msgstr "Переименовать список воспроизведения"
 
 #: contents/ui/LibraryPage.qml:30 contents/ui/LibraryPage.qml:123
 #: contents/ui/NavigationBar.qml:48 contents/ui/NavigationBar.qml:54
@@ -170,10 +164,9 @@ msgid "Show All"
 msgstr "Показать все"
 
 #: contents/ui/LibraryPage.qml:147
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "No Favourites Yet"
-msgstr "Избранное"
+msgstr "В избранное ещё ничего не добавлено"
 
 #: contents/ui/LibraryPage.qml:325
 #, kde-format
@@ -188,10 +181,9 @@ msgid "Played Songs"
 msgstr "Воспроизведённые треки"
 
 #: contents/ui/LibraryPage.qml:444
-#, fuzzy, kde-format
-#| msgid "No songs here yet"
+#, kde-format
 msgid "No Songs Played Yet"
-msgstr "Пока нет ни одного трека"
+msgstr "Пока ничего не воспроизводилось"
 
 #: contents/ui/LibraryPage.qml:611 contents/ui/LocalPlaylistsPage.qml:18
 #: contents/ui/LocalPlaylistsPage.qml:78 contents/ui/NavigationBar.qml:75
@@ -201,33 +193,31 @@ msgid "Playlists"
 msgstr "Списки воспроизведения"
 
 #: contents/ui/LibraryPage.qml:650
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "No Playlists Yet"
-msgstr "Списки воспроизведения"
+msgstr "Пока нет ни одного списка воспроизведения"
 
 #: contents/ui/LibraryPage.qml:670 contents/ui/LibraryPage.qml:692
 #: contents/ui/LocalPlaylistsPage.qml:33 contents/ui/LocalPlaylistsPage.qml:55
 #, kde-format
 msgid "Rename"
-msgstr ""
+msgstr "Переименовать"
 
 #: contents/ui/LibraryPage.qml:679 contents/ui/LibraryPage.qml:700
 #: contents/ui/LocalPlaylistsPage.qml:42 contents/ui/LocalPlaylistsPage.qml:63
 #, kde-format
 msgid "Delete"
-msgstr ""
+msgstr "Удалить"
 
 #: contents/ui/LocalPlaylistPage.qml:19
-#, fuzzy, kde-format
-#| msgid "Remove from History"
+#, kde-format
 msgid "Remove from Playlist"
-msgstr "Удалить из журнала"
+msgstr "Удалить из списка воспроизведения"
 
 #: contents/ui/LocalPlaylistPage.qml:29
 #, kde-format
 msgid "This playlist is still empty"
-msgstr ""
+msgstr "Список воспроизведения всё ещё пуст"
 
 #: contents/ui/main.qml:109 main.cpp:59
 #, kde-format
@@ -243,7 +233,7 @@ msgstr "Ничего не воспроизводится"
 #: contents/ui/MaximizedPlayerPage.qml:571
 #, kde-format
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: contents/ui/MaximizedPlayerPage.qml:839
 #: contents/ui/MaximizedPlayerPage.qml:1016
@@ -252,15 +242,14 @@ msgid "Remove Track"
 msgstr "Удалить дорожку"
 
 #: contents/ui/MaximizedPlayerPage.qml:870
-#, fuzzy, kde-format
-#| msgid "Playlist"
+#, kde-format
 msgid "Clear Playlist"
-msgstr "Список воспроизведения"
+msgstr "Очистить список воспроизведения"
 
 #: contents/ui/MaximizedPlayerPage.qml:917
 #, kde-format
 msgid "Upcoming Songs"
-msgstr ""
+msgstr "Следующие треки"
 
 #: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:100
 #, kde-format
@@ -290,7 +279,7 @@ msgstr "Список воспроизведения"
 #: contents/ui/SearchHistoryPage.qml:86 contents/ui/SearchWithDropdown.qml:412
 #, kde-format
 msgid "remove from search history"
-msgstr ""
+msgstr "Удалить из истории поиска"
 
 #: contents/ui/SearchPage.qml:16
 #, kde-format
@@ -315,22 +304,22 @@ msgstr "Не найдено соответствующих предыдущих 
 #: contents/ui/ShareMenu.qml:39
 #, kde-format
 msgid "Share to"
-msgstr ""
+msgstr "Выбор способа публикации"
 
 #: contents/ui/ShareMenu.qml:49 contents/ui/ShareMenu.qml:99
 #, kde-format
 msgid "Copy Link"
-msgstr ""
+msgstr "Копировать адрес ссылки"
 
 #: contents/ui/ShareMenu.qml:54 contents/ui/ShareMenu.qml:104
 #, kde-format
 msgid "Link copied to clipboard"
-msgstr ""
+msgstr "Ссылка скопирована в буфер обмена"
 
 #: contents/ui/Sidebar.qml:189
 #, kde-format
 msgid "About"
-msgstr ""
+msgstr "О программе"
 
 #: contents/ui/Sidebar.qml:203
 #, kde-format
@@ -363,64 +352,61 @@ msgid "Remove from History"
 msgstr "Удалить из журнала"
 
 #: contents/ui/SongMenu.qml:156 contents/ui/SongMenu.qml:244
-#, fuzzy, kde-format
-#| msgid "Playlist"
+#, kde-format
 msgid "Add to playlist"
-msgstr "Список воспроизведения"
+msgstr "Добавить в список воспроизведения"
 
 #: contents/ui/SongMenu.qml:183 contents/ui/SongMenu.qml:269
-#, fuzzy, kde-format
-#| msgid "Favourite Songs"
+#, kde-format
 msgid "Share Song"
-msgstr "Избранные треки"
+msgstr "Опубликовать трек"
 
 #: main.cpp:61
 #, kde-format
 msgid "YouTube Music Player"
-msgstr ""
+msgstr "Музыкальный проигрыватель YouTube"
 
 #: main.cpp:63
 #, kde-format
 msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
-msgstr ""
+msgstr "© 2021-2023 Jonah Brüchert, 2021-2023 сообщество KDE"
 
 #: main.cpp:64
 #, kde-format
 msgid "Jonah Brüchert"
-msgstr ""
+msgstr "Jonah Brüchert"
 
 #: main.cpp:64
 #, kde-format
 msgid "Maintainer"
-msgstr ""
+msgstr "Сопровождающий"
 
 #: main.cpp:65
 #, kde-format
 msgid "Mathis Brüchert"
-msgstr ""
+msgstr "Mathis Brüchert"
 
 #: main.cpp:65
 #, kde-format
 msgid "Designer"
-msgstr ""
+msgstr "Дизайнер"
 
 #: main.cpp:66
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Александр Яворский, Павел Чернышов"
+msgstr "Александр Яворский, Павел Чернышов, Мария Шикунова"
 
 #: main.cpp:66
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "kekcuha@gmail.com, farline99@yandex.ru"
+msgstr "kekcuha@gmail.com, farline99@yandex.ru, translation-team@basealt.ru"
 
 #: main.cpp:71
-#, fuzzy, kde-format
-#| msgid "Find music on YouTube Music"
+#, kde-format
 msgid "Unofficial API for YouTube Music"
-msgstr "Найти музыку в YouTube Music"
+msgstr "Неофициальный API для YouTube Music"
 
 #~ msgid "played Songs"
 #~ msgstr "Воспроизведённые треки"
