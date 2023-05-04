@@ -387,9 +387,10 @@ Item {
                                     implicitWidth: completionList.delegateHeight
                                     color: Kirigami.Theme.disabledTextColor
                                 }
-                                Controls.Label{
+                                Controls.Label {
                                     text: model.display
                                     Layout.fillWidth: true
+                                    elide: Text.ElideRight
                                 }
                                 Controls.ToolButton {
                                     icon.name: "list-remove"
