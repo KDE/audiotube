@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 00:47+0000\n"
+"POT-Creation-Date: 2023-05-05 00:47+0000\n"
 "PO-Revision-Date: 2021-05-29 19:15-0700\n"
 "Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -352,7 +352,7 @@ msgstr ""
 msgid "Playlist"
 msgstr ""
 
-#: contents/ui/SearchHistoryPage.qml:86 contents/ui/SearchWithDropdown.qml:396
+#: contents/ui/SearchHistoryPage.qml:86 contents/ui/SearchWithDropdown.qml:397
 #, kde-format
 msgid "remove from search history"
 msgstr ""

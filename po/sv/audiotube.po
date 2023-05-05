@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 00:47+0000\n"
+"POT-Creation-Date: 2023-05-05 00:47+0000\n"
 "PO-Revision-Date: 2022-09-24 14:57+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -377,7 +377,7 @@ msgstr "Inga låtar här ännu"
 msgid "Playlist"
 msgstr "Spellistor"
 
-#: contents/ui/SearchHistoryPage.qml:86 contents/ui/SearchWithDropdown.qml:396
+#: contents/ui/SearchHistoryPage.qml:86 contents/ui/SearchWithDropdown.qml:397
 #, kde-format
 msgid "remove from search history"
 msgstr ""

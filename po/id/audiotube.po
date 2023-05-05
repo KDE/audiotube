@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-27 00:47+0000\n"
+"POT-Creation-Date: 2023-05-05 00:47+0000\n"
 "PO-Revision-Date: 2023-03-22 00:18+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -368,7 +368,7 @@ msgstr "Belum ada lagu di sini"
 msgid "Playlist"
 msgstr "Daftar Putar"
 
-#: contents/ui/SearchHistoryPage.qml:86 contents/ui/SearchWithDropdown.qml:396
+#: contents/ui/SearchHistoryPage.qml:86 contents/ui/SearchWithDropdown.qml:397
 #, kde-format
 msgid "remove from search history"
 msgstr "hapus dari riwayat pencarian"
