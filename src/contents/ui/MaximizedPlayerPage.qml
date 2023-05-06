@@ -24,6 +24,8 @@ Item {
 
     signal requestClose()
 
+    onWidthChanged: {sideDrawer.Layout.minimumWidth = -1}
+
     // background image
 
 
@@ -76,6 +78,7 @@ Item {
         anchors.fill: parent
         
         ColumnLayout {
+            id: mainContent
             Layout.fillWidth: true
             // hide arrow button
             ToolButton {
@@ -750,8 +753,8 @@ Item {
             property bool collapsed: true
             id: sideDrawer
             Layout.fillWidth: true
-            Layout.maximumWidth: 0
-            Layout.preferredWidth: 350
+            Layout.maximumWidth: -1
+            Layout.preferredWidth: Math.max(350, root.width/3)
 
             Layout.fillHeight: true
             visible: false
@@ -759,14 +762,14 @@ Item {
                 id: collapse
                 easing.type: Easing.OutCubic
                 running: false
-                from: sideDrawer.Layout.preferredWidth; to: 0
+                from: Math.min(sideDrawer.Layout.preferredWidth, sideDrawer.Layout.maximumWidth); to: 0
                 onFinished: { sideDrawer.visible=false}
             }
             NumberAnimation on Layout.maximumWidth {
                 id: show
                 easing.type: Easing.OutCubic
                 running: false
-                from: 0; to: 350
+                from: 0; to: Math.min(sideDrawer.Layout.preferredWidth, root.width - mainContent.Layout.minimumWidth)
                 //onFinished: { sideDrawer.visible=false}
             }
             Kirigami.Separator{
@@ -781,6 +784,23 @@ Item {
                 color: "white"
                 opacity: 0.2
             }
+
+            MouseArea {
+                id: queueResizer
+
+                anchors.horizontalCenter: parent.left
+                anchors.top: parent.top
+                anchors.bottom: parent.bottom
+                width: Kirigami.Units.gridUnit
+
+                cursorShape: Qt.SplitHCursor
+                onPositionChanged: {
+                    if(Math.max(sideDrawer.width - (mouse.x - width/2), queueFooter.Layout.minimumWidth) + mainContent.Layout.minimumWidth < root.width){
+                        sideDrawer.Layout.preferredWidth = sideDrawer.Layout.minimumWidth = sideDrawer.Layout.maximumWidth = Math.max(sideDrawer.width - (mouse.x - width/2), queueFooter.Layout.minimumWidth)
+                    }
+                }
+            }
+
             ColumnLayout {
                 spacing: 0  
                 anchors.fill: parent
@@ -949,6 +969,8 @@ Item {
                 }
                 
                 RowLayout{
+                    id: queueFooter
+
                     Layout.margins: Kirigami.Units.gridUnit * 0.5
                     enabled: playListView.count != 0
                     Item {
