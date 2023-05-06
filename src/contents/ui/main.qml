@@ -259,7 +259,7 @@ Kirigami.ApplicationWindow {
         property string artist: playerFooter.videoInfoExtractor.artist
         property string songTitle: playerFooter.videoInfoExtractor.title ? playerFooter.videoInfoExtractor.title : i18n("No song playing")
         property int songLength: playerFooter.audioPlayer.duration * 1000
-        property string thumbnail: playerFooter.thumbnail
+        property alias thumbnail: playerFooter.thumbnail
 
         function next() {
             if(UserPlaylistModel.canSkip) {
