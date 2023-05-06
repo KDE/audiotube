@@ -900,12 +900,18 @@ Item {
 
                                         Layout.fillWidth: true
                                         Kirigami.Heading {
-
-
                                             elide: Text.ElideRight
                                             Layout.fillWidth: true
                                             level: 2
                                             text: title
+
+                                            MouseArea {
+                                                anchors.fill: parent
+                                                hoverEnabled: true
+                                                ToolTip.text: parent.text
+                                                ToolTip.delay: Kirigami.Units.toolTipDelay
+                                                ToolTip.visible: parent.truncated ? (Kirigami.Settings.isMobile ? containsPress : containsMouse) : false
+                                            }
                                         }
 
                                         Label {
@@ -1139,6 +1145,14 @@ Item {
                                         Layout.fillWidth: true
                                         level: 2
                                         text: drawerDelegateItem.title
+
+                                        MouseArea {
+                                            anchors.fill: parent
+                                            hoverEnabled: true
+                                            ToolTip.text: parent.text
+                                            ToolTip.delay: Kirigami.Units.toolTipDelay
+                                            ToolTip.visible: parent.truncated ? (Kirigami.Settings.isMobile ? containsPress : containsMouse) : false
+                                        }
                                     }
 
                                     Label {
