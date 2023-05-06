@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-05 00:47+0000\n"
-"PO-Revision-Date: 2023-04-20 20:03+0200\n"
+"PO-Revision-Date: 2023-05-05 19:56+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -263,10 +263,9 @@ msgid "Add to Favourites"
 msgstr "Zu Favoriten hinzufügen"
 
 #: contents/ui/MaximizedPlayerPage.qml:448
-#, fuzzy, kde-format
-#| msgid "Open in Browser"
+#, kde-format
 msgid "Open Volume Drawer"
-msgstr "In Browser öffnen"
+msgstr "Lautstärkenleiste öffnen"
 
 #: contents/ui/MaximizedPlayerPage.qml:556
 #, kde-format
@@ -378,7 +377,7 @@ msgstr "Interpreten"
 #: contents/ui/SearchPage.qml:36
 #, kde-format
 msgid "Top Results"
-msgstr ""
+msgstr "Beste Ergebnisse"
 
 #: contents/ui/SearchPage.qml:39
 #, kde-format
@@ -448,7 +447,7 @@ msgstr "Zur Wiedergabeliste hinzufügen"
 #: main.cpp:63
 #, kde-format
 msgid "YouTube Music Player"
-msgstr ""
+msgstr "YouTube-Musikprogramm"
 
 #: main.cpp:65
 #, kde-format
