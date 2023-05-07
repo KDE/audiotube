@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-05 00:47+0000\n"
+"POT-Creation-Date: 2023-05-07 00:49+0000\n"
 "PO-Revision-Date: 2022-04-07 18:01+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -245,100 +245,100 @@ msgstr "AudioTube"
 msgid "No song playing"
 msgstr "Neprehráva sa žiadne médium"
 
-#: contents/ui/MaximizedPlayerPage.qml:96
+#: contents/ui/MaximizedPlayerPage.qml:99
 #, kde-format
 msgid "Close Maximized Player"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:200
+#: contents/ui/MaximizedPlayerPage.qml:203
 #: contents/ui/MinimizedPlayerControls.qml:94
 #, kde-format
 msgid "No media playing"
 msgstr "Neprehráva sa žiadne médium"
 
-#: contents/ui/MaximizedPlayerPage.qml:423
+#: contents/ui/MaximizedPlayerPage.qml:426
 #, fuzzy, kde-format
 #| msgid "Playlists"
 msgid "Remove from Favourites"
 msgstr "Zoznamy skladieb"
 
-#: contents/ui/MaximizedPlayerPage.qml:423
+#: contents/ui/MaximizedPlayerPage.qml:426
 #, fuzzy, kde-format
 #| msgid "Add to Playlist"
 msgid "Add to Favourites"
 msgstr "Pridať do zoznamu skladieb"
 
-#: contents/ui/MaximizedPlayerPage.qml:448
+#: contents/ui/MaximizedPlayerPage.qml:451
 #, kde-format
 msgid "Open Volume Drawer"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:556
+#: contents/ui/MaximizedPlayerPage.qml:559
 #, kde-format
 msgid "Unmute Audio"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:556
+#: contents/ui/MaximizedPlayerPage.qml:559
 #, kde-format
 msgid "Mute Audio"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:599
+#: contents/ui/MaximizedPlayerPage.qml:602
 #, kde-format
 msgid "%1%"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:622
+#: contents/ui/MaximizedPlayerPage.qml:625
 #, kde-format
 msgid "Hide Lyrics"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:622
+#: contents/ui/MaximizedPlayerPage.qml:625
 #, kde-format
 msgid "Show Lyrics"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:642 contents/ui/SongMenu.qml:183
+#: contents/ui/MaximizedPlayerPage.qml:645 contents/ui/SongMenu.qml:183
 #: contents/ui/SongMenu.qml:269
 #, kde-format
 msgid "Share Song"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:688
+#: contents/ui/MaximizedPlayerPage.qml:691
 #, fuzzy, kde-format
 #| msgid "Add to Playlist"
 msgid "Add to a local playlist"
 msgstr "Pridať do zoznamu skladieb"
 
-#: contents/ui/MaximizedPlayerPage.qml:725
+#: contents/ui/MaximizedPlayerPage.qml:728
 #, kde-format
 msgid "Hide Queue"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:725
+#: contents/ui/MaximizedPlayerPage.qml:728
 #, kde-format
 msgid "Show Queue"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:922
-#: contents/ui/MaximizedPlayerPage.qml:1154
+#: contents/ui/MaximizedPlayerPage.qml:948
+#: contents/ui/MaximizedPlayerPage.qml:1190
 #, kde-format
 msgid "Remove Track"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:959
+#: contents/ui/MaximizedPlayerPage.qml:987
 #, fuzzy, kde-format
 #| msgid "Clear"
 msgid "Clear Queue"
 msgstr "Vyčistiť"
 
-#: contents/ui/MaximizedPlayerPage.qml:984
+#: contents/ui/MaximizedPlayerPage.qml:1012
 #, fuzzy, kde-format
 #| msgid "Shuffle"
 msgid "Shuffle Queue"
 msgstr "Zamiešať"
 
-#: contents/ui/MaximizedPlayerPage.qml:1014
+#: contents/ui/MaximizedPlayerPage.qml:1042
 #, kde-format
 msgid "Upcoming Songs"
 msgstr ""
