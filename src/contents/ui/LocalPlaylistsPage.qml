@@ -73,28 +73,87 @@ Kirigami.ScrollablePage {
         header: RowLayout {
             width: parent.width
             spacing: Kirigami.Units.mediumSpacing
+            readonly property bool isWidescreen: width >= Kirigami.Units.gridUnit * 25
             Kirigami.Heading {
                 Layout.topMargin: 20
                 text: i18n("Playlists")
                 Layout.alignment: Qt.AlignLeft
                 leftPadding: 15
             }
+            AddPlaylistDialog {
+                id: addPlaylistDialog
+                model: localPlaylistsModel
+            }
+            ImportPlaylistDialog {
+                id: importPlaylistDialog
+                model: localPlaylistsModel
+            }
 
             // Spacer
             Item {
-                visible: !isWidescreen
+                visible: isWidescreen
                 Layout.fillWidth: true
             }
+
+            // Widescreen layout
             Controls.ToolButton {
+                visible: isWidescreen
                 Layout.topMargin: 20
                 text: i18n("New Playlist")
                 Layout.alignment: Qt.AlignRight
                 icon.name: "list-add"
-                AddPlaylistDialog{
-                    id: addPlaylistDialog
-                    model: localPlaylistsModel
-                }
                 onClicked: addPlaylistDialog.open()
+            }
+            Controls.ToolButton {
+                visible: isWidescreen
+                Layout.topMargin: 20
+                text: i18n("Import Playlist")
+                Layout.alignment: Qt.AlignRight
+                icon.name: "download"
+                onClicked: importPlaylistDialog.open()
+            }
+
+            // Compact layout
+            Controls.ToolButton {
+                visible: !isWidescreen
+                Layout.fillHeight: true
+                icon.name: "list-add"
+                Layout.topMargin: 20
+                Layout.alignment: Qt.AlignRight
+                onPressed: Kirigami.Settings.isMobile? favDrawer.open() : favMenu.popup()
+
+                Controls.Menu {
+                    id: favMenu
+                    Controls.MenuItem {
+                        text: i18n("New Playlist")
+                        icon.name: "list-add"
+                        onTriggered: addPlaylistDialog.open()
+                    }
+                    Controls.MenuItem {
+                        text: i18n("Import Playlist")
+                        icon.name: "download"
+                        onTriggered: importPlaylistDialog.open()
+                    }
+                }
+
+                BottomDrawer { 
+                    id: favDrawer
+                    drawerContentItem: ColumnLayout {
+                        Kirigami.BasicListItem{
+                            label: i18n("New Playlist")
+                            icon: "list-add"
+                            onClicked: addPlaylistDialog.open()
+                        }
+                        Kirigami.BasicListItem{
+                            label: i18n("Import Playlist")
+                            icon: "download"
+                            onClicked: importPlaylistDialog.open()
+                        }
+                        Item{
+                            Layout.fillHeight: true
+                        }
+                    }
+                }
             }
         }
 

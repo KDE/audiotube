@@ -39,6 +39,10 @@ Kirigami.PromptDialog {
             id: addPlaylistDialog
             model: localPlaylistsModel
         }
+        ImportPlaylistDialog {
+            id: importPlaylistDialog
+            model: localPlaylistsModel
+        }
     }
 
     mainItem: ListView {

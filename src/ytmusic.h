@@ -315,7 +315,7 @@ public:
     std::optional<song::Song> get_song(const std::string &video_id) const;
 
     /// https://ytmusicapi.readthedocs.io/en/latest/reference.html#ytmusicapi.YTMusic.get_playlist
-    playlist::Playlist get_playlist(const std::string &playlist_id, int limit = 100) const;
+    playlist::Playlist get_playlist(const std::string &playlist_id, int limit = 1024) const;
 
     /// https://ytmusicapi.readthedocs.io/en/latest/reference.html#ytmusicapi.YTMusic.get_artist_albums
     std::vector<artist::Artist::Album> get_artist_albums(const std::string &channel_id, const std::string &params) const;

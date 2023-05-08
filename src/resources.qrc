@@ -40,6 +40,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
         <file alias="PlaylistCover.qml">contents/ui/PlaylistCover.qml</file>
         <file alias="dialogs/PlaylistDialog.qml">contents/ui/dialogs/PlaylistDialog.qml</file>
         <file alias="dialogs/AddPlaylistDialog.qml">contents/ui/dialogs/AddPlaylistDialog.qml</file>
+        <file alias="dialogs/ImportPlaylistDialog.qml">contents/ui/dialogs/ImportPlaylistDialog.qml</file>
         <file alias="dialogs/RenamePlaylistDialog.qml">contents/ui/dialogs/RenamePlaylistDialog.qml</file>
         <file alias="resources/playlist_placeholder.svg">resources/playlist_placeholder.svg</file>
         <file alias="HorizontalCoverView.qml">contents/ui/HorizontalCoverView.qml</file>

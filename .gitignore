@@ -8,3 +8,4 @@ CMakeLists.txt.user
 flatpak/flatpak-builder-tools/
 build/
 compile_commands.json
+.cache

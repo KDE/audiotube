@@ -3,8 +3,15 @@
 // SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
 #include "localplaylistsmodel.h"
+#include "playlistutils.h"
 
 #include "library.h"
+#include <qfuture.h>
+#include <qglobal.h>
+#include <qsqldatabase.h>
+#include <threadeddatabase.h>
+
+#include <KLocalizedString>
 
 Q_DECLARE_METATYPE(std::vector<QString>);
 
@@ -81,6 +88,38 @@ void LocalPlaylistsModel::addPlaylistEntry(qint64 playlistId, const QString &vid
     });
 }
 
+void LocalPlaylistsModel::addPlaylistEntry(qint64 playlistId, const playlist::Track &track)
+{
+    const QString videoId = track.video_id.value().c_str();
+    const QString title   = (!track.title.empty()) ? QString::fromStdString(track.title) : i18n("No title");
+    const QString artists = PlaylistUtils::artistsToString(track.artists);
+    const QString album   = (track.album ) ? QString::fromStdString(track.album->name) : i18n("No album");
+    this->addPlaylistEntry(playlistId, videoId, title, artists, album);
+}
+
+void LocalPlaylistsModel::importPlaylist(const QString &url)
+{
+    const QString croppedURL = this->cropURL(url).toString(), title = i18n("Unknown"), description = i18n("No description");
+    connectFuture(Library::instance().database().execute("insert into playlists (title, description) values (?, ?)", title, description), &Library::instance(), [this, croppedURL]() {
+        connectFuture(Library::instance().database().getResults<SingleValue<qint64>>("select * from playlists"), &Library::instance(), [this, croppedURL](const auto& playlists) {
+            const quint64 playlistId = playlists.back().value;
+            Q_EMIT Library::instance().playlistsChanged();
+
+            connectFuture(YTMusicThread::instance()->fetchPlaylist(croppedURL), this, [this, playlistId](const auto& playlist) {
+                this->renamePlaylist(playlistId, QString::fromStdString(playlist.title), QString::fromStdString(playlist.author.name));
+
+                for (const auto& track : playlist.tracks) {
+                    if (track.is_available && track.video_id) {
+                        this->addPlaylistEntry(playlistId, track);
+                    }
+                }
+
+                Q_EMIT Library::instance().playlistsChanged();
+            });
+        });
+    });
+}
+
 void LocalPlaylistsModel::renamePlaylist(qint64 playlistId, const QString &name, const QString &description)
 {
     connectFuture(Library::instance().database().execute("update playlists set title = ? , description = ? where playlist_id = ?", name, description, playlistId), this, &LocalPlaylistsModel::refreshModel);
@@ -89,4 +128,21 @@ void LocalPlaylistsModel::renamePlaylist(qint64 playlistId, const QString &name,
 void LocalPlaylistsModel::deletePlaylist(qint64 playlistId)
 {
     connectFuture(Library::instance().database().execute("delete from playlists where playlist_id = ?", playlistId), this, &LocalPlaylistsModel::refreshModel);
+}
+
+QStringView LocalPlaylistsModel::cropURL(QStringView srcUrl)
+{
+    // Find entry point
+    constexpr auto urlFragment = QStringView(u"?list=");
+    qsizetype urlPos = srcUrl.indexOf(urlFragment);
+    if (urlPos != -1) {
+        urlPos += urlFragment.size();
+    } else {
+        urlPos = 0;
+    }
+    auto mid = srcUrl.mid(urlPos);
+
+    // Find exit point
+    urlPos = std::min(mid.indexOf(u"?"), mid.indexOf(u"&"));
+    return mid.mid(0, urlPos);
 }
