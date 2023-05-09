@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-07 00:49+0000\n"
+"POT-Creation-Date: 2023-05-09 00:46+0000\n"
 "PO-Revision-Date: 2021-09-17 20:09+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -147,6 +147,18 @@ msgstr "गीत-सूचीयाँ"
 msgid "Playlist Description"
 msgstr "गीत-सूचीयाँ"
 
+#: contents/ui/dialogs/ImportPlaylistDialog.qml:17
+#, fuzzy, kde-format
+#| msgid "Add to Playlist"
+msgid "Import playlist"
+msgstr "गीत-सूची में जोड़ें"
+
+#: contents/ui/dialogs/ImportPlaylistDialog.qml:23
+#, fuzzy, kde-format
+#| msgid "Playlists"
+msgid "Playlist URL (Youtube)"
+msgstr "गीत-सूचीयाँ"
+
 #: contents/ui/dialogs/PlaylistDialog.qml:20
 #, fuzzy, kde-format
 #| msgid "Add to Playlist"
@@ -154,7 +166,9 @@ msgid "Add Song to Playlist"
 msgstr "गीत-सूची में जोड़ें"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:29
-#: contents/ui/LocalPlaylistsPage.qml:90
+#: contents/ui/LocalPlaylistsPage.qml:102
+#: contents/ui/LocalPlaylistsPage.qml:128
+#: contents/ui/LocalPlaylistsPage.qml:143
 #, fuzzy, kde-format
 #| msgid "Playlists"
 msgid "New Playlist"
@@ -202,7 +216,7 @@ msgid "No Songs Played Yet"
 msgstr ""
 
 #: contents/ui/LibraryPage.qml:391 contents/ui/LocalPlaylistsPage.qml:18
-#: contents/ui/LocalPlaylistsPage.qml:78 contents/ui/NavigationBar.qml:75
+#: contents/ui/LocalPlaylistsPage.qml:79 contents/ui/NavigationBar.qml:75
 #: contents/ui/SearchPage.qml:30 contents/ui/Sidebar.qml:167
 #, kde-format
 msgid "Playlists"
@@ -236,6 +250,14 @@ msgstr "गीत-सूचीयाँ"
 #, kde-format
 msgid "This playlist is still empty"
 msgstr ""
+
+#: contents/ui/LocalPlaylistsPage.qml:110
+#: contents/ui/LocalPlaylistsPage.qml:133
+#: contents/ui/LocalPlaylistsPage.qml:148
+#, fuzzy, kde-format
+#| msgid "Playlists"
+msgid "Import Playlist"
+msgstr "गीत-सूचीयाँ"
 
 #: contents/ui/main.qml:110 main.cpp:61
 #, kde-format
@@ -392,7 +414,7 @@ msgstr "कलाकार"
 msgid "Top Results"
 msgstr ""
 
-#: contents/ui/SearchPage.qml:39
+#: contents/ui/SearchPage.qml:39 localplaylistsmodel.cpp:102
 #, kde-format
 msgid "Unknown"
 msgstr "अज्ञात"
@@ -457,6 +479,22 @@ msgstr ""
 #| msgid "Add to Playlist"
 msgid "Add to playlist"
 msgstr "गीत-सूची में जोड़ें"
+
+#: localplaylistsmodel.cpp:94
+#, kde-format
+msgid "No title"
+msgstr ""
+
+#: localplaylistsmodel.cpp:96
+#, kde-format
+msgid "No album"
+msgstr ""
+
+#: localplaylistsmodel.cpp:102
+#, fuzzy, kde-format
+#| msgid "Playlists"
+msgid "No description"
+msgstr "गीत-सूचीयाँ"
 
 #: main.cpp:63
 #, kde-format

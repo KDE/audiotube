@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-07 00:49+0000\n"
+"POT-Creation-Date: 2023-05-09 00:46+0000\n"
 "PO-Revision-Date: 2023-04-27 06:51+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -146,13 +146,27 @@ msgstr "დასაკრავი სიის სათაური"
 msgid "Playlist Description"
 msgstr "დასაკრავი სიის აღწერა"
 
+#: contents/ui/dialogs/ImportPlaylistDialog.qml:17
+#, fuzzy, kde-format
+#| msgid "Add playlist"
+msgid "Import playlist"
+msgstr "დასაკრავი სიაში დამატება"
+
+#: contents/ui/dialogs/ImportPlaylistDialog.qml:23
+#, fuzzy, kde-format
+#| msgid "Playlist Title"
+msgid "Playlist URL (Youtube)"
+msgstr "დასაკრავი სიის სათაური"
+
 #: contents/ui/dialogs/PlaylistDialog.qml:20
 #, kde-format
 msgid "Add Song to Playlist"
 msgstr "სიმღერის დასაკრავ სიაში ჩამატება"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:29
-#: contents/ui/LocalPlaylistsPage.qml:90
+#: contents/ui/LocalPlaylistsPage.qml:102
+#: contents/ui/LocalPlaylistsPage.qml:128
+#: contents/ui/LocalPlaylistsPage.qml:143
 #, kde-format
 msgid "New Playlist"
 msgstr "ახალი დასაკრავი სია"
@@ -198,7 +212,7 @@ msgid "No Songs Played Yet"
 msgstr "სიმღერები ჯერ არ დაგიკრავთ"
 
 #: contents/ui/LibraryPage.qml:391 contents/ui/LocalPlaylistsPage.qml:18
-#: contents/ui/LocalPlaylistsPage.qml:78 contents/ui/NavigationBar.qml:75
+#: contents/ui/LocalPlaylistsPage.qml:79 contents/ui/NavigationBar.qml:75
 #: contents/ui/SearchPage.qml:30 contents/ui/Sidebar.qml:167
 #, kde-format
 msgid "Playlists"
@@ -230,6 +244,14 @@ msgstr "დასაკრავი სიიდან წაშლა"
 #, kde-format
 msgid "This playlist is still empty"
 msgstr "ეს დასაკრავი სია ჯერ კიდევ ცარიელია"
+
+#: contents/ui/LocalPlaylistsPage.qml:110
+#: contents/ui/LocalPlaylistsPage.qml:133
+#: contents/ui/LocalPlaylistsPage.qml:148
+#, fuzzy, kde-format
+#| msgid "Playlist"
+msgid "Import Playlist"
+msgstr "დასაკრავი სია"
 
 #: contents/ui/main.qml:110 main.cpp:61
 #, kde-format
@@ -379,7 +401,7 @@ msgstr "შემსრულებლები"
 msgid "Top Results"
 msgstr "საუკეთესო შედეგები"
 
-#: contents/ui/SearchPage.qml:39
+#: contents/ui/SearchPage.qml:39 localplaylistsmodel.cpp:102
 #, kde-format
 msgid "Unknown"
 msgstr "უცნობი"
@@ -443,6 +465,22 @@ msgstr "ისტორიიდან წაშლა"
 #, kde-format
 msgid "Add to playlist"
 msgstr "დასაკრავ სიაში დამატება"
+
+#: localplaylistsmodel.cpp:94
+#, kde-format
+msgid "No title"
+msgstr ""
+
+#: localplaylistsmodel.cpp:96
+#, kde-format
+msgid "No album"
+msgstr ""
+
+#: localplaylistsmodel.cpp:102
+#, fuzzy, kde-format
+#| msgid "Playlist Description"
+msgid "No description"
+msgstr "დასაკრავი სიის აღწერა"
 
 #: main.cpp:63
 #, kde-format

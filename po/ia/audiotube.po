@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-07 00:49+0000\n"
+"POT-Creation-Date: 2023-05-09 00:46+0000\n"
 "PO-Revision-Date: 2023-04-28 22:38+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -146,13 +146,27 @@ msgstr "Titulo de Lista de reproduction"
 msgid "Playlist Description"
 msgstr "Description de lista de reproduction"
 
+#: contents/ui/dialogs/ImportPlaylistDialog.qml:17
+#, fuzzy, kde-format
+#| msgid "Add playlist"
+msgid "Import playlist"
+msgstr "Adde lista de reproduction"
+
+#: contents/ui/dialogs/ImportPlaylistDialog.qml:23
+#, fuzzy, kde-format
+#| msgid "Playlist Title"
+msgid "Playlist URL (Youtube)"
+msgstr "Titulo de Lista de reproduction"
+
 #: contents/ui/dialogs/PlaylistDialog.qml:20
 #, kde-format
 msgid "Add Song to Playlist"
 msgstr "Adde Canto al lista de reproduction"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:29
-#: contents/ui/LocalPlaylistsPage.qml:90
+#: contents/ui/LocalPlaylistsPage.qml:102
+#: contents/ui/LocalPlaylistsPage.qml:128
+#: contents/ui/LocalPlaylistsPage.qml:143
 #, kde-format
 msgid "New Playlist"
 msgstr "Nove lista de reproduction"
@@ -198,7 +212,7 @@ msgid "No Songs Played Yet"
 msgstr "Nulle cantos ancora sonate"
 
 #: contents/ui/LibraryPage.qml:391 contents/ui/LocalPlaylistsPage.qml:18
-#: contents/ui/LocalPlaylistsPage.qml:78 contents/ui/NavigationBar.qml:75
+#: contents/ui/LocalPlaylistsPage.qml:79 contents/ui/NavigationBar.qml:75
 #: contents/ui/SearchPage.qml:30 contents/ui/Sidebar.qml:167
 #, kde-format
 msgid "Playlists"
@@ -230,6 +244,14 @@ msgstr "Remove ex lista de reproduction"
 #, kde-format
 msgid "This playlist is still empty"
 msgstr "Iste lista de reproduction es vacue"
+
+#: contents/ui/LocalPlaylistsPage.qml:110
+#: contents/ui/LocalPlaylistsPage.qml:133
+#: contents/ui/LocalPlaylistsPage.qml:148
+#, fuzzy, kde-format
+#| msgid "Playlist"
+msgid "Import Playlist"
+msgstr "Lista de reproduction"
 
 #: contents/ui/main.qml:110 main.cpp:61
 #, kde-format
@@ -379,7 +401,7 @@ msgstr "Artistas"
 msgid "Top Results"
 msgstr "Exitos al culmine (Top)"
 
-#: contents/ui/SearchPage.qml:39
+#: contents/ui/SearchPage.qml:39 localplaylistsmodel.cpp:102
 #, kde-format
 msgid "Unknown"
 msgstr "Incognite"
@@ -443,6 +465,22 @@ msgstr "Remove ex chronologia"
 #, kde-format
 msgid "Add to playlist"
 msgstr "Adde al lista de reproduction"
+
+#: localplaylistsmodel.cpp:94
+#, kde-format
+msgid "No title"
+msgstr ""
+
+#: localplaylistsmodel.cpp:96
+#, kde-format
+msgid "No album"
+msgstr ""
+
+#: localplaylistsmodel.cpp:102
+#, fuzzy, kde-format
+#| msgid "Playlist Description"
+msgid "No description"
+msgstr "Description de lista de reproduction"
 
 #: main.cpp:63
 #, kde-format
