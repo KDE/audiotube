@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-09 00:46+0000\n"
-"PO-Revision-Date: 2023-04-28 19:54+0200\n"
+"PO-Revision-Date: 2023-05-10 11:55+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -145,16 +145,14 @@ msgid "Playlist Description"
 msgstr "Description de la liste de lecture"
 
 #: contents/ui/dialogs/ImportPlaylistDialog.qml:17
-#, fuzzy, kde-format
-#| msgid "Add playlist"
+#, kde-format
 msgid "Import playlist"
-msgstr "Ajouter une liste de lecture"
+msgstr "Importer une liste de lecture"
 
 #: contents/ui/dialogs/ImportPlaylistDialog.qml:23
-#, fuzzy, kde-format
-#| msgid "Playlist Title"
+#, kde-format
 msgid "Playlist URL (Youtube)"
-msgstr "Titre de la liste de lecture"
+msgstr "URL de liste de lecture (YouTube)"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:20
 #, kde-format
@@ -246,10 +244,9 @@ msgstr "La liste de lecture est vide pour l'instant."
 #: contents/ui/LocalPlaylistsPage.qml:110
 #: contents/ui/LocalPlaylistsPage.qml:133
 #: contents/ui/LocalPlaylistsPage.qml:148
-#, fuzzy, kde-format
-#| msgid "Playlist"
+#, kde-format
 msgid "Import Playlist"
-msgstr "Liste de lecture"
+msgstr "Importer une liste de lecture"
 
 #: contents/ui/main.qml:110 main.cpp:61
 #, kde-format
@@ -467,18 +464,17 @@ msgstr "Ajouter à la liste de lecture"
 #: localplaylistsmodel.cpp:94
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "Aucun titre"
 
 #: localplaylistsmodel.cpp:96
 #, kde-format
 msgid "No album"
-msgstr ""
+msgstr "Aucun album"
 
 #: localplaylistsmodel.cpp:102
-#, fuzzy, kde-format
-#| msgid "Playlist Description"
+#, kde-format
 msgid "No description"
-msgstr "Description de la liste de lecture"
+msgstr "Aucune description"
 
 #: main.cpp:63
 #, kde-format

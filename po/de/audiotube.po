@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-09 00:46+0000\n"
-"PO-Revision-Date: 2023-05-10 20:35+0200\n"
+"PO-Revision-Date: 2023-05-12 19:59+0200\n"
 "Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -152,10 +152,9 @@ msgid "Import playlist"
 msgstr "Wiedergabeliste importieren"
 
 #: contents/ui/dialogs/ImportPlaylistDialog.qml:23
-#, fuzzy, kde-format
-#| msgid "Playlist Title"
+#, kde-format
 msgid "Playlist URL (Youtube)"
-msgstr "Titel der Wiedergabeliste"
+msgstr "Adresse der Wiedergabeliste (YouTube)"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:20
 #, kde-format
@@ -522,10 +521,9 @@ msgid "Your emails"
 msgstr "kde-i18n-de@kde.org"
 
 #: main.cpp:73
-#, fuzzy, kde-format
-#| msgid "Find music on YouTube Music"
+#, kde-format
 msgid "Unofficial API for YouTube Music"
-msgstr "Musik auf YouTube suchen"
+msgstr "Inoffizielle API für Musik auf YouTube"
 
 #, fuzzy
 #~| msgid "Playlist"
