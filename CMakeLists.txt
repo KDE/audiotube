@@ -43,7 +43,7 @@ find_package(Qt${QT_MAJOR_VERSION} ${QT5_MIN_VERSION} REQUIRED COMPONENTS Core G
 find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS Kirigami2 I18n CoreAddons Crash WindowSystem)
 find_package(pybind11 REQUIRED)
 find_package(Ytdlp REQUIRED RUNTIME)
-find_package(YTMusicAPI 0.24.0 REQUIRED RUNTIME)
+find_package(YTMusicAPI 1.0.2 REQUIRED RUNTIME)
 find_package(KF5KirigamiAddons 0.6.0 REQUIRED)
 find_package(FutureSQL${QT_MAJOR_VERSION} REQUIRED)
 
