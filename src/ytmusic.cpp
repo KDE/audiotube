@@ -292,7 +292,7 @@ std::optional<search::SearchResultItem> extract_search_result(py::handle result)
                 result["videoId"].cast<std::string>(),
                 result["title"].cast<std::string>(),
                 extract_py_list<meta::Artist>(result["artists"]),
-                result["duration"].cast<std::string>(),
+                optional_key<std::string>(result, "duration"),
                 extract_py_list<meta::Thumbnail>(result["thumbnails"])
             },
             optional_key<std::string>(result, "views")
@@ -303,7 +303,7 @@ std::optional<search::SearchResultItem> extract_search_result(py::handle result)
                 result["videoId"].cast<std::string>(),
                 result["title"].cast<std::string>(),
                 extract_py_list<meta::Artist>(result["artists"]),
-                result["duration"].cast<std::string>(),
+                optional_key<std::string>(result, "duration"),
                 extract_py_list<meta::Thumbnail>(result["thumbnails"])
             },
             result["album"].is_none() ? std::optional<meta::Album> {} : extract_meta_album(result["album"]),
