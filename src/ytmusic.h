@@ -43,7 +43,7 @@ struct Media {
     std::string video_id;
     std::string title;
     std::vector<meta::Artist> artists;
-    std::string duration;
+    std::optional<std::string> duration;
     std::vector<meta::Thumbnail> thumbnails;
 };
 
