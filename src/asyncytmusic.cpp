@@ -104,7 +104,11 @@ QFuture<album::Album> AsyncYTMusic::fetchAlbum(const QString &browseId)
 //
 QFuture<std::optional<song::Song>> AsyncYTMusic::fetchSong(const QString &videoId)
 {
-    return invokeAndCatchOnThread([=, this]() {
+    return invokeAndCatchOnThread([=, this]() -> std::optional<song::Song> {
+        if (videoId.isEmpty()) {
+            return {};
+        }
+
         return m_ytm->get_song(videoId.toStdString());
     });
 }
