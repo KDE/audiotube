@@ -480,6 +480,8 @@ void UserPlaylistModel::fetchLyrics(const QString &videoId)
                 m_lyrics = lyrics;
                 Q_EMIT lyricsChanged();
             });
+        } else {
+            Q_EMIT noLyrics();
         }
     });
 }

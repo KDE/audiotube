@@ -621,6 +621,14 @@ Item {
                                 }
                                 lyricsShown = !lyricsShown
                         }
+                        Connections {
+                            target: UserPlaylistModel
+                            function onNoLyrics() {
+                                if(lyricsButton.lyricsShown) {
+                                    lyricsButton.onClicked()
+                                }
+                            }
+                        }
                         enabled: UserPlaylistModel.lyrics
                         text: lyricsShown ? i18n("Hide Lyrics") : i18n("Show Lyrics")
                         icon.name: "view-media-lyrics"

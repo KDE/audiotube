@@ -78,6 +78,7 @@ public:
 
     QString lyrics() const;
     Q_SIGNAL void lyricsChanged();
+    Q_SIGNAL void noLyrics();
 
     QUrl webUrl() const;
 
