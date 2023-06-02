@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-09 00:46+0000\n"
+"POT-Creation-Date: 2023-06-02 00:46+0000\n"
 "PO-Revision-Date: 2023-05-20 09:19+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -303,54 +303,54 @@ msgstr "Wycisz dźwięk"
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/ui/MaximizedPlayerPage.qml:625
+#: contents/ui/MaximizedPlayerPage.qml:633
 #, kde-format
 msgid "Hide Lyrics"
 msgstr "Ukryj słowa"
 
-#: contents/ui/MaximizedPlayerPage.qml:625
+#: contents/ui/MaximizedPlayerPage.qml:633
 #, kde-format
 msgid "Show Lyrics"
 msgstr "Pokaż słowa"
 
-#: contents/ui/MaximizedPlayerPage.qml:645 contents/ui/SongMenu.qml:183
+#: contents/ui/MaximizedPlayerPage.qml:653 contents/ui/SongMenu.qml:183
 #: contents/ui/SongMenu.qml:269
 #, kde-format
 msgid "Share Song"
 msgstr "Udostępnij utwór"
 
-#: contents/ui/MaximizedPlayerPage.qml:691
+#: contents/ui/MaximizedPlayerPage.qml:699
 #, kde-format
 msgid "Add to a local playlist"
 msgstr "Dodaj do miejscowej listy odtwarzania"
 
-#: contents/ui/MaximizedPlayerPage.qml:728
+#: contents/ui/MaximizedPlayerPage.qml:736
 #, kde-format
 msgid "Hide Queue"
 msgstr "Ukryj kolejkę"
 
-#: contents/ui/MaximizedPlayerPage.qml:728
+#: contents/ui/MaximizedPlayerPage.qml:736
 #, kde-format
 msgid "Show Queue"
 msgstr "Pokaż kolejkę"
 
-#: contents/ui/MaximizedPlayerPage.qml:948
-#: contents/ui/MaximizedPlayerPage.qml:1190
+#: contents/ui/MaximizedPlayerPage.qml:956
+#: contents/ui/MaximizedPlayerPage.qml:1198
 #, kde-format
 msgid "Remove Track"
 msgstr "Usuń utwór"
 
-#: contents/ui/MaximizedPlayerPage.qml:987
+#: contents/ui/MaximizedPlayerPage.qml:995
 #, kde-format
 msgid "Clear Queue"
 msgstr "Wyczyść kolejkę"
 
-#: contents/ui/MaximizedPlayerPage.qml:1012
+#: contents/ui/MaximizedPlayerPage.qml:1020
 #, kde-format
 msgid "Shuffle Queue"
 msgstr "Wymieszaj kolejkę"
 
-#: contents/ui/MaximizedPlayerPage.qml:1042
+#: contents/ui/MaximizedPlayerPage.qml:1050
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "Nadchodzące utwory"

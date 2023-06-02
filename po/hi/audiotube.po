@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-09 00:46+0000\n"
+"POT-Creation-Date: 2023-06-02 00:46+0000\n"
 "PO-Revision-Date: 2021-09-17 20:09+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -313,57 +313,57 @@ msgstr ""
 msgid "%1%"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:625
+#: contents/ui/MaximizedPlayerPage.qml:633
 #, kde-format
 msgid "Hide Lyrics"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:625
+#: contents/ui/MaximizedPlayerPage.qml:633
 #, kde-format
 msgid "Show Lyrics"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:645 contents/ui/SongMenu.qml:183
+#: contents/ui/MaximizedPlayerPage.qml:653 contents/ui/SongMenu.qml:183
 #: contents/ui/SongMenu.qml:269
 #, kde-format
 msgid "Share Song"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:691
+#: contents/ui/MaximizedPlayerPage.qml:699
 #, fuzzy, kde-format
 #| msgid "Add to Playlist"
 msgid "Add to a local playlist"
 msgstr "गीत-सूची में जोड़ें"
 
-#: contents/ui/MaximizedPlayerPage.qml:728
+#: contents/ui/MaximizedPlayerPage.qml:736
 #, kde-format
 msgid "Hide Queue"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:728
+#: contents/ui/MaximizedPlayerPage.qml:736
 #, kde-format
 msgid "Show Queue"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:948
-#: contents/ui/MaximizedPlayerPage.qml:1190
+#: contents/ui/MaximizedPlayerPage.qml:956
+#: contents/ui/MaximizedPlayerPage.qml:1198
 #, kde-format
 msgid "Remove Track"
 msgstr "गाना हटाएँ"
 
-#: contents/ui/MaximizedPlayerPage.qml:987
+#: contents/ui/MaximizedPlayerPage.qml:995
 #, fuzzy, kde-format
 #| msgid "Clear"
 msgid "Clear Queue"
 msgstr "साफ करें"
 
-#: contents/ui/MaximizedPlayerPage.qml:1012
+#: contents/ui/MaximizedPlayerPage.qml:1020
 #, fuzzy, kde-format
 #| msgid "Shuffle"
 msgid "Shuffle Queue"
 msgstr "फेंटें"
 
-#: contents/ui/MaximizedPlayerPage.qml:1042
+#: contents/ui/MaximizedPlayerPage.qml:1050
 #, kde-format
 msgid "Upcoming Songs"
 msgstr ""
