@@ -31,6 +31,7 @@ add_executable(audiotube
     library.cpp
     localplaylistmodel.cpp
     localplaylistsmodel.cpp
+    playlistimporter.cpp
     resources.qrc
     blur.cpp
     clipboard.cpp

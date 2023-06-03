@@ -33,6 +33,7 @@
 #include "blur.h"
 #include "localplaylistmodel.h"
 #include "localplaylistsmodel.h"
+#include "playlistimporter.h"
 
 #include <ThreadedDatabase>
 
@@ -92,6 +93,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlRegisterType<Blur>(URI, 1, 0, "Blur");
     qmlRegisterType<LocalPlaylistModel>(URI, 1, 0, "LocalPlaylistModel");
     qmlRegisterType<LocalPlaylistsModel>(URI, 1, 0, "LocalPlaylistsModel");
+    qmlRegisterType<PlaylistImporter>(URI, 1, 0, "PlaylistImporter");
     qmlRegisterSingletonType(URI, 1, 0, "About", [](QQmlEngine *engine, QJSEngine *) -> QJSValue {
         return engine->toScriptValue(KAboutData::applicationData());
     });

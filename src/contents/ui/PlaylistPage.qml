@@ -101,6 +101,17 @@ Kirigami.ScrollablePage {
                     onTriggered: UserPlaylistModel.appendPlaylist(playlistModel)
                 },
                 Kirigami.Action {
+                    text: i18n("Import Playlist")
+                    icon.name: "document-save"
+                    onTriggered: localPlaylistsModel.importPlaylist(playlistModel.webUrl)
+                    PlaylistImporter{
+                        id: localPlaylistsModel
+                        onImportFinished: {
+                            applicationWindow().showPassiveNotification(i18n("Playlist successfully imported"))
+                        }
+                    }
+                },
+                Kirigami.Action {
                     text: i18n("Open in Browser")
                     icon.name: "internet-services"
                     onTriggered: Qt.openUrlExternally(playlistModel.webUrl)

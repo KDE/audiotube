@@ -18,6 +18,10 @@ Q_DECLARE_METATYPE(std::vector<QString>);
 LocalPlaylistsModel::LocalPlaylistsModel(QObject *parent)
     : QAbstractListModel(parent)
 {
+    importer = new PlaylistImporter(this);
+    connect(importer, &PlaylistImporter::playlistEntriesChanged, this, &LocalPlaylistsModel::playlistEntriesChanged);
+    connect(importer,&PlaylistImporter::importFinished, this, &LocalPlaylistsModel::importFinished);
+    connect(importer, &PlaylistImporter::refreshModel, this, &LocalPlaylistsModel::refreshModel);
     connect(&Library::instance(), &Library::playlistsChanged,
             this, &LocalPlaylistsModel::refreshModel);
     refreshModel();
@@ -81,48 +85,22 @@ void LocalPlaylistsModel::addPlaylist(const QString &title, const QString &descr
 
 void LocalPlaylistsModel::addPlaylistEntry(qint64 playlistId, const QString &videoId, const QString &title, const QString &artist, const QString &album)
 {
-    QCoro::connect(Library::instance().addSong(videoId, title, artist, album), this, [=, this] {
-        QCoro::connect(Library::instance().database().execute("insert into playlist_entries (playlist_id, video_id) values (?, ?)", playlistId, videoId), this, [=, this] {
-            Q_EMIT playlistEntriesChanged(playlistId);
-        });
-    });
+    importer->addPlaylistEntry(playlistId, videoId, title, artist, album);
 }
 
 void LocalPlaylistsModel::addPlaylistEntry(qint64 playlistId, const playlist::Track &track)
 {
-    const QString videoId = track.video_id.value().c_str();
-    const QString title   = (!track.title.empty()) ? QString::fromStdString(track.title) : i18n("No title");
-    const QString artists = PlaylistUtils::artistsToString(track.artists);
-    const QString album   = (track.album ) ? QString::fromStdString(track.album->name) : i18n("No album");
-    this->addPlaylistEntry(playlistId, videoId, title, artists, album);
+    importer->addPlaylistEntry(playlistId, track);
 }
 
 void LocalPlaylistsModel::importPlaylist(const QString &url)
 {
-    const QString croppedURL = this->cropURL(url).toString(), title = i18n("Unknown"), description = i18n("No description");
-    QCoro::connect(Library::instance().database().execute("insert into playlists (title, description) values (?, ?)", title, description), &Library::instance(), [this, croppedURL]() {
-        QCoro::connect(Library::instance().database().getResults<SingleValue<qint64>>("select * from playlists"), &Library::instance(), [this, croppedURL](const auto& playlists) {
-            const quint64 playlistId = playlists.back().value;
-            Q_EMIT Library::instance().playlistsChanged();
-
-            QCoro::connect(YTMusicThread::instance()->fetchPlaylist(croppedURL), this, [this, playlistId](const auto& playlist) {
-                this->renamePlaylist(playlistId, QString::fromStdString(playlist.title), QString::fromStdString(playlist.author.name));
-
-                for (const auto& track : playlist.tracks) {
-                    if (track.is_available && track.video_id) {
-                        this->addPlaylistEntry(playlistId, track);
-                    }
-                }
-
-                Q_EMIT Library::instance().playlistsChanged();
-            });
-        });
-    });
+    importer->importPlaylist(url);
 }
 
 void LocalPlaylistsModel::renamePlaylist(qint64 playlistId, const QString &name, const QString &description)
 {
-    QCoro::connect(Library::instance().database().execute("update playlists set title = ? , description = ? where playlist_id = ?", name, description, playlistId), this, &LocalPlaylistsModel::refreshModel);
+    importer->renamePlaylist(playlistId, name, description);
 }
 
 void LocalPlaylistsModel::deletePlaylist(qint64 playlistId)

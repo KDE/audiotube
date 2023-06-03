@@ -5,6 +5,7 @@
 #pragma once
 
 #include "ytmusic.h"
+#include "playlistimporter.h"
 #include <QAbstractListModel>
 #include <QDateTime>
 
@@ -48,6 +49,7 @@ public:
     Q_INVOKABLE void addPlaylistEntry(qint64 playlistId, const QString &videoId, const QString &title, const QString &artist, const QString &album);
     Q_INVOKABLE void addPlaylistEntry(qint64 playlistId, const playlist::Track &track);
     Q_INVOKABLE void importPlaylist(const QString &url);
+    Q_SIGNAL void importFinished();
 
     Q_INVOKABLE void renamePlaylist(qint64 playlistId, const QString &name, const QString &description);
     Q_INVOKABLE void deletePlaylist(qint64 playlistId);
@@ -61,5 +63,6 @@ private:
     QStringView cropURL(QStringView srcURL);
     std::vector<Playlist> m_playlists;
     std::vector<std::vector<QString>> m_thumbnailIds;
+    PlaylistImporter *importer;
 };
 
