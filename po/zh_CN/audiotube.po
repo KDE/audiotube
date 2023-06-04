@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-02 00:46+0000\n"
+"POT-Creation-Date: 2023-06-04 00:45+0000\n"
 "PO-Revision-Date: 2023-05-22 14:01\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -55,13 +55,13 @@ msgid "Append to queue"
 msgstr "追加到队列"
 
 #: contents/ui/AlbumPage.qml:95 contents/ui/ArtistPage.qml:95
-#: contents/ui/PlaylistPage.qml:104
+#: contents/ui/PlaylistPage.qml:115
 #, kde-format
 msgid "Open in Browser"
 msgstr "在浏览器中打开"
 
 #: contents/ui/AlbumPage.qml:100 contents/ui/ArtistPage.qml:100
-#: contents/ui/PlaylistPage.qml:109
+#: contents/ui/PlaylistPage.qml:120
 #, kde-format
 msgid "Share"
 msgstr "分享"
@@ -73,7 +73,7 @@ msgstr "专辑：%1"
 
 #: contents/ui/AlbumPage.qml:162 contents/ui/ArtistPage.qml:199
 #: contents/ui/LocalPlaylistPage.qml:170 contents/ui/PlaybackHistory.qml:194
-#: contents/ui/PlaylistPage.qml:179 contents/ui/SearchPage.qml:144
+#: contents/ui/PlaylistPage.qml:190 contents/ui/SearchPage.qml:144
 #, kde-format
 msgid "More"
 msgstr "更多"
@@ -241,12 +241,12 @@ msgstr "此播放列表未包含歌曲"
 
 #: contents/ui/LocalPlaylistsPage.qml:110
 #: contents/ui/LocalPlaylistsPage.qml:133
-#: contents/ui/LocalPlaylistsPage.qml:148
+#: contents/ui/LocalPlaylistsPage.qml:148 contents/ui/PlaylistPage.qml:104
 #, kde-format
 msgid "Import Playlist"
 msgstr ""
 
-#: contents/ui/main.qml:110 main.cpp:61
+#: contents/ui/main.qml:110 main.cpp:62
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
@@ -369,7 +369,12 @@ msgstr "未知歌曲列表"
 msgid "No songs here yet"
 msgstr "此处无歌曲"
 
-#: contents/ui/PlaylistPage.qml:120
+#: contents/ui/PlaylistPage.qml:110
+#, kde-format
+msgid "Playlist successfully imported"
+msgstr ""
+
+#: contents/ui/PlaylistPage.qml:131
 #, kde-format
 msgid "Playlist"
 msgstr "播放列表"
@@ -394,7 +399,7 @@ msgstr "艺人"
 msgid "Top Results"
 msgstr ""
 
-#: contents/ui/SearchPage.qml:39 localplaylistsmodel.cpp:102
+#: contents/ui/SearchPage.qml:39 playlistimporter.cpp:23
 #, kde-format
 msgid "Unknown"
 msgstr "未知"
@@ -459,64 +464,64 @@ msgstr "从历史记录中删除"
 msgid "Add to playlist"
 msgstr "添加到播放列表"
 
-#: localplaylistsmodel.cpp:94
-#, kde-format
-msgid "No title"
-msgstr ""
-
-#: localplaylistsmodel.cpp:96
-#, kde-format
-msgid "No album"
-msgstr ""
-
-#: localplaylistsmodel.cpp:102
-#, kde-format
-msgid "No description"
-msgstr ""
-
-#: main.cpp:63
+#: main.cpp:64
 #, kde-format
 msgid "YouTube Music Player"
 msgstr ""
 
-#: main.cpp:65
+#: main.cpp:66
 #, kde-format
 msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
 msgstr ""
 
-#: main.cpp:66
+#: main.cpp:67
 #, kde-format
 msgid "Jonah Brüchert"
 msgstr ""
 
-#: main.cpp:66
+#: main.cpp:67
 #, kde-format
 msgid "Maintainer"
 msgstr ""
 
-#: main.cpp:67
+#: main.cpp:68
 #, kde-format
 msgid "Mathis Brüchert"
 msgstr ""
 
-#: main.cpp:67
+#: main.cpp:68
 #, kde-format
 msgid "Designer"
 msgstr ""
 
-#: main.cpp:68
+#: main.cpp:69
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Qi Binye, Tyson Tan"
 
-#: main.cpp:68
+#: main.cpp:69
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "weearc@kde.org, tysontan@tysontan.com"
 
-#: main.cpp:73
+#: main.cpp:74
 #, kde-format
 msgid "Unofficial API for YouTube Music"
+msgstr ""
+
+#: playlistimporter.cpp:23
+#, kde-format
+msgid "No description"
+msgstr ""
+
+#: playlistimporter.cpp:57
+#, kde-format
+msgid "No title"
+msgstr ""
+
+#: playlistimporter.cpp:59
+#, kde-format
+msgid "No album"
 msgstr ""

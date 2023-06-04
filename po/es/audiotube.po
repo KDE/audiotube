@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-02 00:46+0000\n"
+"POT-Creation-Date: 2023-06-04 00:45+0000\n"
 "PO-Revision-Date: 2023-05-09 04:09+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -59,13 +59,13 @@ msgid "Append to queue"
 msgstr "Añadir a la cola"
 
 #: contents/ui/AlbumPage.qml:95 contents/ui/ArtistPage.qml:95
-#: contents/ui/PlaylistPage.qml:104
+#: contents/ui/PlaylistPage.qml:115
 #, kde-format
 msgid "Open in Browser"
 msgstr "Abrir en el navegador"
 
 #: contents/ui/AlbumPage.qml:100 contents/ui/ArtistPage.qml:100
-#: contents/ui/PlaylistPage.qml:109
+#: contents/ui/PlaylistPage.qml:120
 #, kde-format
 msgid "Share"
 msgstr "Compartir"
@@ -77,7 +77,7 @@ msgstr "Álbum • %1"
 
 #: contents/ui/AlbumPage.qml:162 contents/ui/ArtistPage.qml:199
 #: contents/ui/LocalPlaylistPage.qml:170 contents/ui/PlaybackHistory.qml:194
-#: contents/ui/PlaylistPage.qml:179 contents/ui/SearchPage.qml:144
+#: contents/ui/PlaylistPage.qml:190 contents/ui/SearchPage.qml:144
 #, kde-format
 msgid "More"
 msgstr "Más"
@@ -247,12 +247,12 @@ msgstr "Esta lista de reproducción está vacía"
 
 #: contents/ui/LocalPlaylistsPage.qml:110
 #: contents/ui/LocalPlaylistsPage.qml:133
-#: contents/ui/LocalPlaylistsPage.qml:148
+#: contents/ui/LocalPlaylistsPage.qml:148 contents/ui/PlaylistPage.qml:104
 #, kde-format
 msgid "Import Playlist"
 msgstr "Importar lista de reproducción"
 
-#: contents/ui/main.qml:110 main.cpp:61
+#: contents/ui/main.qml:110 main.cpp:62
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
@@ -375,7 +375,12 @@ msgstr "Lista de canciones desconocida"
 msgid "No songs here yet"
 msgstr "Todavía no contiene canciones"
 
-#: contents/ui/PlaylistPage.qml:120
+#: contents/ui/PlaylistPage.qml:110
+#, kde-format
+msgid "Playlist successfully imported"
+msgstr ""
+
+#: contents/ui/PlaylistPage.qml:131
 #, kde-format
 msgid "Playlist"
 msgstr "Lista de reproducción"
@@ -400,7 +405,7 @@ msgstr "Artistas"
 msgid "Top Results"
 msgstr "Resultados principales"
 
-#: contents/ui/SearchPage.qml:39 localplaylistsmodel.cpp:102
+#: contents/ui/SearchPage.qml:39 playlistimporter.cpp:23
 #, kde-format
 msgid "Unknown"
 msgstr "Desconocido"
@@ -465,67 +470,67 @@ msgstr "Eliminar del historial"
 msgid "Add to playlist"
 msgstr "Añadir a la lista de reproducción"
 
-#: localplaylistsmodel.cpp:94
-#, kde-format
-msgid "No title"
-msgstr "Sin título"
-
-#: localplaylistsmodel.cpp:96
-#, kde-format
-msgid "No album"
-msgstr "Sin álbumes"
-
-#: localplaylistsmodel.cpp:102
-#, kde-format
-msgid "No description"
-msgstr "Sin descripción"
-
-#: main.cpp:63
+#: main.cpp:64
 #, kde-format
 msgid "YouTube Music Player"
 msgstr "Reproductor de música de YouTube"
 
-#: main.cpp:65
+#: main.cpp:66
 #, kde-format
 msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
 msgstr "© 2021-2023 Jonah Brüchert, 2021-2023 La Comunidad KDE"
 
-#: main.cpp:66
+#: main.cpp:67
 #, kde-format
 msgid "Jonah Brüchert"
 msgstr "Jonah Brüchert"
 
-#: main.cpp:66
+#: main.cpp:67
 #, kde-format
 msgid "Maintainer"
 msgstr "Responsable"
 
-#: main.cpp:67
+#: main.cpp:68
 #, kde-format
 msgid "Mathis Brüchert"
 msgstr "Mathis Brüchert"
 
-#: main.cpp:67
+#: main.cpp:68
 #, kde-format
 msgid "Designer"
 msgstr "Diseñador"
 
-#: main.cpp:68
+#: main.cpp:69
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Eloy Cuadra"
 
-#: main.cpp:68
+#: main.cpp:69
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "ecuadra@eloihr.net"
 
-#: main.cpp:73
+#: main.cpp:74
 #, kde-format
 msgid "Unofficial API for YouTube Music"
 msgstr "API no oficial para YouTube Music"
+
+#: playlistimporter.cpp:23
+#, kde-format
+msgid "No description"
+msgstr "Sin descripción"
+
+#: playlistimporter.cpp:57
+#, kde-format
+msgid "No title"
+msgstr "Sin título"
+
+#: playlistimporter.cpp:59
+#, kde-format
+msgid "No album"
+msgstr "Sin álbumes"
 
 #~ msgid "Clear Playlist"
 #~ msgstr "Borrar la lista de reproducción"

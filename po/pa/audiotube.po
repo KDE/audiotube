@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-02 00:46+0000\n"
+"POT-Creation-Date: 2023-06-04 00:45+0000\n"
 "PO-Revision-Date: 2022-01-01 09:11-0800\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -55,13 +55,13 @@ msgid "Append to queue"
 msgstr ""
 
 #: contents/ui/AlbumPage.qml:95 contents/ui/ArtistPage.qml:95
-#: contents/ui/PlaylistPage.qml:104
+#: contents/ui/PlaylistPage.qml:115
 #, kde-format
 msgid "Open in Browser"
 msgstr ""
 
 #: contents/ui/AlbumPage.qml:100 contents/ui/ArtistPage.qml:100
-#: contents/ui/PlaylistPage.qml:109
+#: contents/ui/PlaylistPage.qml:120
 #, kde-format
 msgid "Share"
 msgstr ""
@@ -73,7 +73,7 @@ msgstr ""
 
 #: contents/ui/AlbumPage.qml:162 contents/ui/ArtistPage.qml:199
 #: contents/ui/LocalPlaylistPage.qml:170 contents/ui/PlaybackHistory.qml:194
-#: contents/ui/PlaylistPage.qml:179 contents/ui/SearchPage.qml:144
+#: contents/ui/PlaylistPage.qml:190 contents/ui/SearchPage.qml:144
 #, kde-format
 msgid "More"
 msgstr ""
@@ -252,13 +252,13 @@ msgstr ""
 
 #: contents/ui/LocalPlaylistsPage.qml:110
 #: contents/ui/LocalPlaylistsPage.qml:133
-#: contents/ui/LocalPlaylistsPage.qml:148
+#: contents/ui/LocalPlaylistsPage.qml:148 contents/ui/PlaylistPage.qml:104
 #, fuzzy, kde-format
 #| msgid "Playlists"
 msgid "Import Playlist"
 msgstr "ਪਲੇਅਲਿਸਟਾਂ"
 
-#: contents/ui/main.qml:110 main.cpp:61
+#: contents/ui/main.qml:110 main.cpp:62
 #, kde-format
 msgid "AudioTube"
 msgstr "ਆਡੀਓ-ਟਿਊਬ"
@@ -387,7 +387,12 @@ msgstr ""
 msgid "No songs here yet"
 msgstr ""
 
-#: contents/ui/PlaylistPage.qml:120
+#: contents/ui/PlaylistPage.qml:110
+#, kde-format
+msgid "Playlist successfully imported"
+msgstr ""
+
+#: contents/ui/PlaylistPage.qml:131
 #, fuzzy, kde-format
 #| msgid "Playlists"
 msgid "Playlist"
@@ -413,7 +418,7 @@ msgstr "ਕਲਾਕਾਰ"
 msgid "Top Results"
 msgstr ""
 
-#: contents/ui/SearchPage.qml:39 localplaylistsmodel.cpp:102
+#: contents/ui/SearchPage.qml:39 playlistimporter.cpp:23
 #, kde-format
 msgid "Unknown"
 msgstr "ਅਣਪਛਾਤਾ"
@@ -479,69 +484,69 @@ msgstr ""
 msgid "Add to playlist"
 msgstr "ਪਲੇਅਲਿਸਟ ਵਿੱਚ ਜੋੜੋ"
 
-#: localplaylistsmodel.cpp:94
-#, kde-format
-msgid "No title"
-msgstr ""
-
-#: localplaylistsmodel.cpp:96
-#, kde-format
-msgid "No album"
-msgstr ""
-
-#: localplaylistsmodel.cpp:102
-#, fuzzy, kde-format
-#| msgid "Playlists"
-msgid "No description"
-msgstr "ਪਲੇਅਲਿਸਟਾਂ"
-
-#: main.cpp:63
+#: main.cpp:64
 #, kde-format
 msgid "YouTube Music Player"
 msgstr ""
 
-#: main.cpp:65
+#: main.cpp:66
 #, kde-format
 msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
 msgstr ""
 
-#: main.cpp:66
+#: main.cpp:67
 #, kde-format
 msgid "Jonah Brüchert"
 msgstr ""
 
-#: main.cpp:66
+#: main.cpp:67
 #, kde-format
 msgid "Maintainer"
 msgstr ""
 
-#: main.cpp:67
+#: main.cpp:68
 #, kde-format
 msgid "Mathis Brüchert"
 msgstr ""
 
-#: main.cpp:67
+#: main.cpp:68
 #, kde-format
 msgid "Designer"
 msgstr ""
 
-#: main.cpp:68
+#: main.cpp:69
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "ਅਮਨਪਰੀਤ ਸਿੰਘ ਆਲਮ ੨੦੨੧"
 
-#: main.cpp:68
+#: main.cpp:69
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "alam yellow @ gmail.com"
 
-#: main.cpp:73
+#: main.cpp:74
 #, fuzzy, kde-format
 #| msgid "Find music on YouTube Music"
 msgid "Unofficial API for YouTube Music"
 msgstr "ਯੂਟਿਊਬ ਸੰਗੀਤ ਉੱਤੇ ਸੰਗੀਤ ਲੱਭੋ"
+
+#: playlistimporter.cpp:23
+#, fuzzy, kde-format
+#| msgid "Playlists"
+msgid "No description"
+msgstr "ਪਲੇਅਲਿਸਟਾਂ"
+
+#: playlistimporter.cpp:57
+#, kde-format
+msgid "No title"
+msgstr ""
+
+#: playlistimporter.cpp:59
+#, kde-format
+msgid "No album"
+msgstr ""
 
 #, fuzzy
 #~| msgid "Playlists"
