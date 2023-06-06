@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-04 00:45+0000\n"
-"PO-Revision-Date: 2023-05-09 09:24+0200\n"
+"PO-Revision-Date: 2023-06-04 09:43+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -379,7 +379,7 @@ msgstr "Encara no hi ha cap cançó"
 #: contents/ui/PlaylistPage.qml:110
 #, kde-format
 msgid "Playlist successfully imported"
-msgstr ""
+msgstr "La llista de reproducció s'ha importat correctament"
 
 #: contents/ui/PlaylistPage.qml:131
 #, kde-format
