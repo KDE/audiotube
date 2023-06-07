@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-04 00:45+0000\n"
-"PO-Revision-Date: 2023-03-29 16:12+0200\n"
+"PO-Revision-Date: 2023-06-05 11:14+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.04.1\n"
 
 #: asyncytmusic.cpp:65
 #, kde-format
@@ -23,6 +23,8 @@ msgid ""
 "Running with untested version of ytmusicapi %1. If you experience errors, "
 "please report them to your distribution."
 msgstr ""
+"Aplikace běží s netestovanou verzí ytmusicapi %1. Pokud narazíte na chyby, "
+"prosím nahlaste je vydavateli vaší distribuce."
 
 #: contents/ui/AlbumPage.qml:75 contents/ui/LibraryPage.qml:37
 #: contents/ui/LibraryPage.qml:63 contents/ui/LibraryPage.qml:84
@@ -145,16 +147,14 @@ msgid "Playlist Description"
 msgstr "Popis seznamu skladeb"
 
 #: contents/ui/dialogs/ImportPlaylistDialog.qml:17
-#, fuzzy, kde-format
-#| msgid "Add playlist"
+#, kde-format
 msgid "Import playlist"
-msgstr "Přidat seznam médií"
+msgstr "Importovat seznam skladeb"
 
 #: contents/ui/dialogs/ImportPlaylistDialog.qml:23
-#, fuzzy, kde-format
-#| msgid "Playlist Title"
+#, kde-format
 msgid "Playlist URL (Youtube)"
-msgstr "Název seznamu skladeb"
+msgstr "URL seznamu skladeb (Youtube)"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:20
 #, kde-format
@@ -246,10 +246,9 @@ msgstr "Tento seznam skladeb je prázdný"
 #: contents/ui/LocalPlaylistsPage.qml:110
 #: contents/ui/LocalPlaylistsPage.qml:133
 #: contents/ui/LocalPlaylistsPage.qml:148 contents/ui/PlaylistPage.qml:104
-#, fuzzy, kde-format
-#| msgid "Playlist"
+#, kde-format
 msgid "Import Playlist"
-msgstr "Seznam skladeb"
+msgstr "Importovat seznam skladeb"
 
 #: contents/ui/main.qml:110 main.cpp:62
 #, kde-format
@@ -377,7 +376,7 @@ msgstr "Zatím zde nejsou žádné skladby"
 #: contents/ui/PlaylistPage.qml:110
 #, kde-format
 msgid "Playlist successfully imported"
-msgstr ""
+msgstr "Seznam skladeb byl úspěšně importován."
 
 #: contents/ui/PlaylistPage.qml:131
 #, kde-format
@@ -402,7 +401,7 @@ msgstr "Umělci"
 #: contents/ui/SearchPage.qml:36
 #, kde-format
 msgid "Top Results"
-msgstr ""
+msgstr "Nejlepší výsledky"
 
 #: contents/ui/SearchPage.qml:39 playlistimporter.cpp:23
 #, kde-format
@@ -517,17 +516,16 @@ msgid "Unofficial API for YouTube Music"
 msgstr "Neoficiální API pro hudbu YouTube"
 
 #: playlistimporter.cpp:23
-#, fuzzy, kde-format
-#| msgid "Playlist Description"
+#, kde-format
 msgid "No description"
-msgstr "Popis seznamu skladeb"
+msgstr "Žádný popis"
 
 #: playlistimporter.cpp:57
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "Bez názvu"
 
 #: playlistimporter.cpp:59
 #, kde-format
 msgid "No album"
-msgstr ""
+msgstr "Žádné album"
