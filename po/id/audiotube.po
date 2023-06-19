@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-04 00:45+0000\n"
-"PO-Revision-Date: 2023-03-22 00:18+0700\n"
+"PO-Revision-Date: 2023-06-16 19:34+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
 "Language: id\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Poedit 3.3.1\n"
 
 #: asyncytmusic.cpp:65
 #, kde-format
@@ -23,6 +23,8 @@ msgid ""
 "Running with untested version of ytmusicapi %1. If you experience errors, "
 "please report them to your distribution."
 msgstr ""
+"Berjalan dengan versi ytmusicapi %1 yang belum diuji. JIka Anda mengalami "
+"kesalahan, silakan laporkan ke distribusi Anda."
 
 #: contents/ui/AlbumPage.qml:75 contents/ui/LibraryPage.qml:37
 #: contents/ui/LibraryPage.qml:63 contents/ui/LibraryPage.qml:84
@@ -265,7 +267,7 @@ msgstr "Tidak ada media yang diputarkan"
 #: contents/ui/MaximizedPlayerPage.qml:99
 #, kde-format
 msgid "Close Maximized Player"
-msgstr ""
+msgstr "Tutup Pemutar Termaksimalkan"
 
 #: contents/ui/MaximizedPlayerPage.qml:203
 #: contents/ui/MinimizedPlayerControls.qml:94
@@ -294,12 +296,12 @@ msgstr "Buka di Peramban"
 #: contents/ui/MaximizedPlayerPage.qml:559
 #, kde-format
 msgid "Unmute Audio"
-msgstr ""
+msgstr "Suarakan Audio"
 
 #: contents/ui/MaximizedPlayerPage.qml:559
 #, kde-format
 msgid "Mute Audio"
-msgstr ""
+msgstr "Bisukan Audio"
 
 #: contents/ui/MaximizedPlayerPage.qml:602
 #, kde-format
@@ -388,7 +390,7 @@ msgstr "Belum ada lagu di sini"
 #: contents/ui/PlaylistPage.qml:110
 #, kde-format
 msgid "Playlist successfully imported"
-msgstr ""
+msgstr "Daftar putar berhasil diimpor"
 
 #: contents/ui/PlaylistPage.qml:131
 #, kde-format
@@ -413,7 +415,7 @@ msgstr "Artis"
 #: contents/ui/SearchPage.qml:36
 #, kde-format
 msgid "Top Results"
-msgstr ""
+msgstr "Hasil Teratas"
 
 #: contents/ui/SearchPage.qml:39 playlistimporter.cpp:23
 #, kde-format
@@ -536,12 +538,12 @@ msgstr "Deskripsi Daftar Putar"
 #: playlistimporter.cpp:57
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "Tidak ada judul"
 
 #: playlistimporter.cpp:59
 #, kde-format
 msgid "No album"
-msgstr ""
+msgstr "Tidak ada album"
 
 #, fuzzy
 #~| msgid "Playlist"
