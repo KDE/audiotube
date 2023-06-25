@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-04 00:45+0000\n"
-"PO-Revision-Date: 2023-03-30 10:03+0300\n"
+"PO-Revision-Date: 2023-05-28 16:32+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.04.1\n"
 
 #: asyncytmusic.cpp:65
 #, kde-format
@@ -23,6 +23,8 @@ msgid ""
 "Running with untested version of ytmusicapi %1. If you experience errors, "
 "please report them to your distribution."
 msgstr ""
+"Käytössä on ytmusicapin testaamaton versio %1. Jos kohtaat virheitä, ilmoita "
+"niistä jakelullesi."
 
 #: contents/ui/AlbumPage.qml:75 contents/ui/LibraryPage.qml:37
 #: contents/ui/LibraryPage.qml:63 contents/ui/LibraryPage.qml:84
@@ -144,16 +146,14 @@ msgid "Playlist Description"
 msgstr "Soittolistan kuvaus"
 
 #: contents/ui/dialogs/ImportPlaylistDialog.qml:17
-#, fuzzy, kde-format
-#| msgid "Add playlist"
+#, kde-format
 msgid "Import playlist"
-msgstr "Lisää soittolista"
+msgstr "Tuo soittolista"
 
 #: contents/ui/dialogs/ImportPlaylistDialog.qml:23
-#, fuzzy, kde-format
-#| msgid "Playlist Title"
+#, kde-format
 msgid "Playlist URL (Youtube)"
-msgstr "Soittolistan otsikko"
+msgstr "Soittolistan verkko-osoite (Youtube)"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:20
 #, kde-format
@@ -245,10 +245,9 @@ msgstr "Soittolista on yhä tyhjä"
 #: contents/ui/LocalPlaylistsPage.qml:110
 #: contents/ui/LocalPlaylistsPage.qml:133
 #: contents/ui/LocalPlaylistsPage.qml:148 contents/ui/PlaylistPage.qml:104
-#, fuzzy, kde-format
-#| msgid "Playlist"
+#, kde-format
 msgid "Import Playlist"
-msgstr "Soittolista"
+msgstr "Tuo soittolista"
 
 #: contents/ui/main.qml:110 main.cpp:62
 #, kde-format
@@ -401,7 +400,7 @@ msgstr "Artistit"
 #: contents/ui/SearchPage.qml:36
 #, kde-format
 msgid "Top Results"
-msgstr ""
+msgstr "Parhaat tulokset"
 
 #: contents/ui/SearchPage.qml:39 playlistimporter.cpp:23
 #, kde-format
@@ -516,20 +515,19 @@ msgid "Unofficial API for YouTube Music"
 msgstr "Epävirallinen YouTube Music -API"
 
 #: playlistimporter.cpp:23
-#, fuzzy, kde-format
-#| msgid "Playlist Description"
+#, kde-format
 msgid "No description"
-msgstr "Soittolistan kuvaus"
+msgstr "Ei kuvausta"
 
 #: playlistimporter.cpp:57
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "Ei otsikkoa"
 
 #: playlistimporter.cpp:59
 #, kde-format
 msgid "No album"
-msgstr ""
+msgstr "Ei albumia"
 
 #~ msgid "Clear Playlist"
 #~ msgstr "Tyhjennä soittolista"
