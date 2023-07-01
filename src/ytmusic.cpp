@@ -418,7 +418,7 @@ album::Album YTMusic::get_album(const std::string &browseId) const
 
 std::optional<song::Song> YTMusic::get_song(const std::string &video_id) const
 {
-    const auto song = d->get_ytmusic().attr("get_song")(video_id);
+    const auto song = d->get_ytmusic().attr("get_song")(video_id)["videoDetails"];
 
     if (!song.cast<py::dict>().contains("videoId")) {
         return std::nullopt;

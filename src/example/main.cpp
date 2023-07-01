@@ -35,14 +35,16 @@ int main() {
                 std::cout << arg.title << std::endl;
                 ytm.get_playlist(arg.browse_id);
             } else if constexpr (std::is_same_v<T, search::Song>) {
-                ytm.get_song(arg.video_id);
+                if (!ytm.get_song(arg.video_id)) {
+                    std::cout << "Song info was empty" << std::endl;
+                }
                 ytm.extract_video_info(arg.video_id);
                 ytm.get_watch_playlist(arg.video_id);
                 std::cout << arg.title << std::endl;
             } else if constexpr (std::is_same_v<T, search::Video>) {
                 std::cout << arg.title << std::endl;
             } else {
-                std::cout << "non exaustive visitor";
+                std::cout << "non exaustive visitor" << std::endl;
             }
         }, result);
     }
