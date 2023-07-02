@@ -148,7 +148,7 @@ video_info::Format extract_format(py::handle format) {
         optional_key<float>(format, "quality"),
         format["url"].cast<std::string>(),
         format["vcodec"].cast<std::string>(),
-        format["acodec"].cast<std::string>()
+        optional_key<std::string>(format, "acodec").value_or("none") // returned inconsistently by yt-dlp
     };
 }
 
@@ -195,7 +195,7 @@ playlist::Track extract_playlist_track(py::handle track) {
 
             return extract_meta_album(track["album"]);
         }(),
-        track["duration"].cast<std::string>(),
+        optional_key<std::string>(track, "duration"),
         track["likeStatus"].cast<std::optional<std::string>>(),
         extract_py_list<meta::Thumbnail>(track["thumbnails"]),
         track["isAvailable"].cast<bool>(),
@@ -418,37 +418,35 @@ album::Album YTMusic::get_album(const std::string &browseId) const
 
 std::optional<song::Song> YTMusic::get_song(const std::string &video_id) const
 {
-    const auto song = d->get_ytmusic().attr("get_song")(video_id)["videoDetails"];
+    const auto song = d->get_ytmusic().attr("get_song")(video_id);
+    auto videoDetails = song["videoDetails"].cast<py::dict>();
 
-    if (!song.cast<py::dict>().contains("videoId")) {
+    if (!videoDetails.contains("videoId")) {
         return std::nullopt;
     }
 
     return song::Song {
-        song["videoId"].cast<std::string>(),
-        song["title"].cast<std::string>(),
-        song["lengthSeconds"].cast<std::string>(),
-        extract_py_list<std::string>(song["keywords"]),
-        song["channelId"].cast<std::string>(),
-        song["isOwnerViewing"].cast<bool>(),
-        song["shortDescription"].cast<std::string>(),
-        song["isCrawlable"].cast<bool>(),
+        videoDetails["videoId"].cast<std::string>(),
+        videoDetails["title"].cast<std::string>(),
+        videoDetails["lengthSeconds"].cast<std::string>(),
+        videoDetails["channelId"].cast<std::string>(),
+        videoDetails["isOwnerViewing"].cast<bool>(),
+        videoDetails["isCrawlable"].cast<bool>(),
         song::Song::Thumbnail {
-            extract_py_list<meta::Thumbnail>(song["thumbnail"]["thumbnails"])
+            extract_py_list<meta::Thumbnail>(videoDetails["thumbnail"]["thumbnails"])
         },
-        song["averageRating"].cast<float>(),
-        song["allowRatings"].cast<bool>(),
-        song["viewCount"].cast<std::string>(),
-        song["author"].cast<std::string>(),
-        song["isPrivate"].cast<bool>(),
-        song["isUnpluggedCorpus"].cast<bool>(),
-        song["isLiveContent"].cast<bool>(),
-        song["provider"].cast<std::string>(),
-        extract_py_list<std::string>(song["artists"]),
-        song["copyright"].cast<std::string>(),
-        extract_py_list<std::string>(song["production"]),
-        song["release"].cast<std::string>(),
-        song["category"].cast<std::string>()
+        videoDetails["viewCount"].cast<std::string>(),
+        videoDetails["author"].cast<std::string>(),
+        videoDetails["isPrivate"].cast<bool>(),
+        videoDetails["isUnpluggedCorpus"].cast<bool>(),
+        videoDetails["isLiveContent"].cast<bool>(),
+        [&]() -> std::vector<std::string> {
+            if (videoDetails.contains("artists")) {
+                return extract_py_list<std::string>(videoDetails["artists"]);
+            } else {
+                return {};
+            }
+        }(),
     };
 }
 

@@ -12,7 +12,7 @@
 #include <vector>
 #include <memory>
 
-constexpr auto TESTED_YTMUSICAPI_VERSION = "1.0.2";
+constexpr auto TESTED_YTMUSICAPI_VERSION = "1.1.0";
 
 struct YTMusicPrivate;
 
@@ -195,25 +195,16 @@ struct Song {
     std::string video_id;
     std::string title;
     std::string length;
-    std::vector<std::string> keywords;
     std::string channel_id;
     bool is_owner_viewer;
-    std::string short_description;
     bool is_crawlable;
     Thumbnail thumbnail;
-    float average_rating;
-    bool allow_ratings;
     std::string view_count;
     std::string author;
     bool is_private;
     bool is_unplugged_corpus;
     bool is_live_content;
-    std::string provider;
     std::vector<std::string> artists;
-    std::string copyright;
-    std::vector<std::string> production;
-    std::string release;
-    std::string category;
 };
 }
 
@@ -223,7 +214,7 @@ struct Track {
     std::string title;
     std::vector<meta::Artist> artists;
     std::optional<meta::Album> album;
-    std::string duration;
+    std::optional<std::string> duration;
     std::optional<std::string> like_status;
     std::vector<meta::Thumbnail> thumbnails;
     bool is_available;

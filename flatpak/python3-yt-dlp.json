@@ -12,8 +12,8 @@
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/71/4c/3db2b8021bd6f2f0ceb0e088d6b2d49147671f25832fb17970e9b583d742/certifi-2022.12.7-py3-none-any.whl",
-            "sha256": "4ad3232f5e926d6718ec31cfc1fcadfde020920e278684144551c91769c7bc18"
+            "url": "https://files.pythonhosted.org/packages/9d/19/59961b522e6757f0c9097e4493fa906031b95b3ebe9360b2c3083561a6b4/certifi-2023.5.7-py3-none-any.whl",
+            "sha256": "c6c2e98f5c7869efca1f8916fed228dd91539f9f1b444c314c06eef02980c716"
         },
         {
             "type": "file",
@@ -22,18 +22,18 @@
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/3d/07/cfd8f52b9068877801317d26dc7225e19421bc659e1395d2cd6933b1a351/pycryptodomex-3.17.tar.gz",
-            "sha256": "0af93aad8d62e810247beedef0261c148790c52f3cd33643791cc6396dd217c1"
+            "url": "https://files.pythonhosted.org/packages/40/92/efd675dba957315d705f792b28d900bddc36f39252f6713961b4221ee9af/pycryptodomex-3.18.0.tar.gz",
+            "sha256": "3e3ecb5fe979e7c1bb0027e518340acf7ee60415d79295e5251d13c68dde576e"
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/9d/67/68e568bb4a0617529db2723c75958223b70b95921cd114b5fd13567db4d8/websockets-11.0.2.tar.gz",
-            "sha256": "b1a69701eb98ed83dd099de4a686dc892c413d974fa31602bc00aca7cb988ac9"
+            "url": "https://files.pythonhosted.org/packages/d8/3b/2ed38e52eed4cf277f9df5f0463a99199a04d9e29c9e227cfafa57bd3993/websockets-11.0.3.tar.gz",
+            "sha256": "88fc51d9a26b10fc331be344f1781224a375b78488fc343620184e95a4b27016"
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/a7/df/498c57f641e9993376cf52489047158e6d660e8bab06b72c470ad5cce2bd/yt_dlp-2023.3.4-py2.py3-none-any.whl",
-            "sha256": "40ca421407ce07c8fd700854fd978d58526ec6fff3468caa34ff1c7333b8dc34"
+            "url": "https://files.pythonhosted.org/packages/65/9b/21628ca5bcf40f58c33f0fbb4927a1bb91e12f3c33a3cf8e29e03f6bc1d1/yt_dlp-2023.6.22-py2.py3-none-any.whl",
+            "sha256": "c559885322f7f492c1e7fc8f5a59e2a72e47719b59575599cf8b0e69ea70d0a8"
         }
     ]
 }
