@@ -1,10 +1,11 @@
+# Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-04 00:45+0000\n"
-"PO-Revision-Date: 2021-05-29 19:15-0700\n"
-"Last-Translator: Japanese KDE translation team <kde-jp@kde.org>\n"
+"PO-Revision-Date: 2023-07-01 15:47-0700\n"
+"Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
 "Language: ja\n"
 "MIME-Version: 1.0\n"
@@ -20,6 +21,8 @@ msgid ""
 "Running with untested version of ytmusicapi %1. If you experience errors, "
 "please report them to your distribution."
 msgstr ""
+"未テストのバージョンの ymusicapi %1 で実行中です。エラーが発生時には、お使い"
+"のディストリビューションに報告してください。"
 
 #: contents/ui/AlbumPage.qml:75 contents/ui/LibraryPage.qml:37
 #: contents/ui/LibraryPage.qml:63 contents/ui/LibraryPage.qml:84
@@ -30,7 +33,7 @@ msgstr ""
 #: contents/ui/PlaylistPage.qml:84
 #, kde-format
 msgid "Play"
-msgstr ""
+msgstr "再生"
 
 #: contents/ui/AlbumPage.qml:82 contents/ui/ArtistPage.qml:87
 #: contents/ui/LibraryPage.qml:44 contents/ui/LibraryPage.qml:69
@@ -41,7 +44,7 @@ msgstr ""
 #: contents/ui/PlaylistPage.qml:62 contents/ui/PlaylistPage.qml:91
 #, kde-format
 msgid "Shuffle"
-msgstr ""
+msgstr "シャッフル"
 
 #: contents/ui/AlbumPage.qml:90 contents/ui/LibraryPage.qml:74
 #: contents/ui/LibraryPage.qml:100 contents/ui/LibraryPage.qml:259
@@ -49,110 +52,110 @@ msgstr ""
 #: contents/ui/PlaybackHistory.qml:114 contents/ui/PlaylistPage.qml:99
 #, kde-format
 msgid "Append to queue"
-msgstr ""
+msgstr "キューに追加"
 
 #: contents/ui/AlbumPage.qml:95 contents/ui/ArtistPage.qml:95
 #: contents/ui/PlaylistPage.qml:115
 #, kde-format
 msgid "Open in Browser"
-msgstr ""
+msgstr "ブラウザーで開く"
 
 #: contents/ui/AlbumPage.qml:100 contents/ui/ArtistPage.qml:100
 #: contents/ui/PlaylistPage.qml:120
 #, kde-format
 msgid "Share"
-msgstr ""
+msgstr "共有"
 
 #: contents/ui/AlbumPage.qml:110
 #, kde-format
 msgid "Album • %1"
-msgstr ""
+msgstr "アルバム • %1"
 
 #: contents/ui/AlbumPage.qml:162 contents/ui/ArtistPage.qml:199
 #: contents/ui/LocalPlaylistPage.qml:170 contents/ui/PlaybackHistory.qml:194
 #: contents/ui/PlaylistPage.qml:190 contents/ui/SearchPage.qml:144
 #, kde-format
 msgid "More"
-msgstr ""
+msgstr "もっと"
 
 #: contents/ui/ArtistPage.qml:81
 #, kde-format
 msgid "Radio"
-msgstr ""
+msgstr "ラジオ"
 
 #: contents/ui/ArtistPage.qml:109
 #, kde-format
 msgid "Artist"
-msgstr ""
+msgstr "アーティスト"
 
 #: contents/ui/ArtistPage.qml:131 contents/ui/SearchPage.qml:72
 #, kde-format
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
 "\"%1\"?"
-msgstr ""
+msgstr "動画の再生はまだ未対応です。「%1」の音声のみを再生しますか？"
 
 #: contents/ui/ArtistPage.qml:148 contents/ui/SearchPage.qml:26
 #, kde-format
 msgid "Albums"
-msgstr ""
+msgstr "アルバム"
 
 #: contents/ui/ArtistPage.qml:150
 #, kde-format
 msgid "Singles"
-msgstr ""
+msgstr "シングル"
 
 #: contents/ui/ArtistPage.qml:152 contents/ui/SearchPage.qml:32
 #, kde-format
 msgid "Songs"
-msgstr ""
+msgstr "曲"
 
 #: contents/ui/ArtistPage.qml:154 contents/ui/SearchPage.qml:34
 #, kde-format
 msgid "Videos"
-msgstr ""
+msgstr "動画"
 
 #: contents/ui/ConfirmationMessage.qml:16
 #, kde-format
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: contents/ui/ConfirmationMessage.qml:21
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "キャンセル"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:17
 #, kde-format
 msgid "Add playlist"
-msgstr ""
+msgstr "再生リスト追加"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:23
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:24
 #, kde-format
 msgid "Playlist Title"
-msgstr ""
+msgstr "再生リスト名"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:28
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:30
 #, kde-format
 msgid "Playlist Description"
-msgstr ""
+msgstr "リストの説明"
 
 #: contents/ui/dialogs/ImportPlaylistDialog.qml:17
 #, kde-format
 msgid "Import playlist"
-msgstr ""
+msgstr "再生リストのインポート"
 
 #: contents/ui/dialogs/ImportPlaylistDialog.qml:23
 #, kde-format
 msgid "Playlist URL (Youtube)"
-msgstr ""
+msgstr "再生リストの URL (Youtube)"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:20
 #, kde-format
 msgid "Add Song to Playlist"
-msgstr ""
+msgstr "再生リストに曲を追加"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:29
 #: contents/ui/LocalPlaylistsPage.qml:102
@@ -160,88 +163,88 @@ msgstr ""
 #: contents/ui/LocalPlaylistsPage.qml:143
 #, kde-format
 msgid "New Playlist"
-msgstr ""
+msgstr "新規再生リスト"
 
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:18
 #, kde-format
 msgid "Rename playlist"
-msgstr ""
+msgstr "再生リストの名前を変更"
 
 #: contents/ui/LibraryPage.qml:30 contents/ui/LibraryPage.qml:123
 #: contents/ui/NavigationBar.qml:48 contents/ui/NavigationBar.qml:54
 #: contents/ui/Sidebar.qml:131 contents/ui/Sidebar.qml:138
 #, kde-format
 msgid "Favourites"
-msgstr ""
+msgstr "お気に入り"
 
 #: contents/ui/LibraryPage.qml:119 contents/ui/LibraryPage.qml:306
 #: contents/ui/LibraryPage.qml:403
 #, kde-format
 msgid "Show All"
-msgstr ""
+msgstr "すべて表示"
 
 #: contents/ui/LibraryPage.qml:147
 #, kde-format
 msgid "No Favourites Yet"
-msgstr ""
+msgstr "まだお気に入りなし"
 
 #: contents/ui/LibraryPage.qml:215
 #, kde-format
 msgid "Most played"
-msgstr ""
+msgstr "再生回数が多い"
 
 #: contents/ui/LibraryPage.qml:310 contents/ui/NavigationBar.qml:61
 #: contents/ui/NavigationBar.qml:67 contents/ui/Sidebar.qml:150
 #: contents/ui/Sidebar.qml:157
 #, kde-format
 msgid "Played Songs"
-msgstr ""
+msgstr "再生した曲"
 
 #: contents/ui/LibraryPage.qml:334
 #, kde-format
 msgid "No Songs Played Yet"
-msgstr ""
+msgstr "まだ再生した曲なし"
 
 #: contents/ui/LibraryPage.qml:391 contents/ui/LocalPlaylistsPage.qml:18
 #: contents/ui/LocalPlaylistsPage.qml:79 contents/ui/NavigationBar.qml:75
 #: contents/ui/SearchPage.qml:30 contents/ui/Sidebar.qml:167
 #, kde-format
 msgid "Playlists"
-msgstr ""
+msgstr "再生リスト"
 
 #: contents/ui/LibraryPage.qml:430
 #, kde-format
 msgid "No Playlists Yet"
-msgstr ""
+msgstr "まだ再生リストなし"
 
 #: contents/ui/LibraryPage.qml:450 contents/ui/LibraryPage.qml:472
 #: contents/ui/LocalPlaylistsPage.qml:33 contents/ui/LocalPlaylistsPage.qml:55
 #, kde-format
 msgid "Rename"
-msgstr ""
+msgstr "名前の変更"
 
 #: contents/ui/LibraryPage.qml:459 contents/ui/LibraryPage.qml:480
 #: contents/ui/LocalPlaylistsPage.qml:42 contents/ui/LocalPlaylistsPage.qml:63
 #, kde-format
 msgid "Delete"
-msgstr ""
+msgstr "削除"
 
 #: contents/ui/LocalPlaylistPage.qml:21
 #, kde-format
 msgid "Remove from Playlist"
-msgstr ""
+msgstr "再生リストから除去"
 
 #: contents/ui/LocalPlaylistPage.qml:79
 #, kde-format
 msgid "This playlist is still empty"
-msgstr ""
+msgstr "この再生リストにまだ中身がありません"
 
 #: contents/ui/LocalPlaylistsPage.qml:110
 #: contents/ui/LocalPlaylistsPage.qml:133
 #: contents/ui/LocalPlaylistsPage.qml:148 contents/ui/PlaylistPage.qml:104
 #, kde-format
 msgid "Import Playlist"
-msgstr ""
+msgstr "再生リストのインポート"
 
 #: contents/ui/main.qml:110 main.cpp:62
 #, kde-format
@@ -251,28 +254,28 @@ msgstr ""
 #: contents/ui/main.qml:260
 #, kde-format
 msgid "No song playing"
-msgstr ""
+msgstr "再生中の曲なし"
 
 #: contents/ui/MaximizedPlayerPage.qml:99
 #, kde-format
 msgid "Close Maximized Player"
-msgstr ""
+msgstr "最大化したプレーヤーを閉じる"
 
 #: contents/ui/MaximizedPlayerPage.qml:203
 #: contents/ui/MinimizedPlayerControls.qml:94
 #, kde-format
 msgid "No media playing"
-msgstr ""
+msgstr "再生中のメディアなし"
 
 #: contents/ui/MaximizedPlayerPage.qml:426
 #, kde-format
 msgid "Remove from Favourites"
-msgstr ""
+msgstr "お気に入りから削除"
 
 #: contents/ui/MaximizedPlayerPage.qml:426
 #, kde-format
 msgid "Add to Favourites"
-msgstr ""
+msgstr "お気に入りに追加"
 
 #: contents/ui/MaximizedPlayerPage.qml:451
 #, kde-format
@@ -282,12 +285,12 @@ msgstr ""
 #: contents/ui/MaximizedPlayerPage.qml:559
 #, kde-format
 msgid "Unmute Audio"
-msgstr ""
+msgstr "音声のミュート解除"
 
 #: contents/ui/MaximizedPlayerPage.qml:559
 #, kde-format
 msgid "Mute Audio"
-msgstr ""
+msgstr "音声をミュート"
 
 #: contents/ui/MaximizedPlayerPage.qml:602
 #, kde-format
@@ -297,33 +300,33 @@ msgstr ""
 #: contents/ui/MaximizedPlayerPage.qml:633
 #, kde-format
 msgid "Hide Lyrics"
-msgstr ""
+msgstr "歌詞を隠す"
 
 #: contents/ui/MaximizedPlayerPage.qml:633
 #, kde-format
 msgid "Show Lyrics"
-msgstr ""
+msgstr "歌詞を表示"
 
 #: contents/ui/MaximizedPlayerPage.qml:653 contents/ui/SongMenu.qml:183
 #: contents/ui/SongMenu.qml:269
 #, kde-format
 msgid "Share Song"
-msgstr ""
+msgstr "曲を共有"
 
 #: contents/ui/MaximizedPlayerPage.qml:699
 #, kde-format
 msgid "Add to a local playlist"
-msgstr ""
+msgstr "端末内の再生リストに曲を追加"
 
 #: contents/ui/MaximizedPlayerPage.qml:736
 #, kde-format
 msgid "Hide Queue"
-msgstr ""
+msgstr "再生キューを隠す"
 
 #: contents/ui/MaximizedPlayerPage.qml:736
 #, kde-format
 msgid "Show Queue"
-msgstr ""
+msgstr "再生キューを表示"
 
 #: contents/ui/MaximizedPlayerPage.qml:956
 #: contents/ui/MaximizedPlayerPage.qml:1198
@@ -334,12 +337,12 @@ msgstr ""
 #: contents/ui/MaximizedPlayerPage.qml:995
 #, kde-format
 msgid "Clear Queue"
-msgstr ""
+msgstr "キューを消去"
 
 #: contents/ui/MaximizedPlayerPage.qml:1020
 #, kde-format
 msgid "Shuffle Queue"
-msgstr ""
+msgstr "キューをシャッフル"
 
 #: contents/ui/MaximizedPlayerPage.qml:1050
 #, kde-format
@@ -349,12 +352,12 @@ msgstr ""
 #: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:100
 #, kde-format
 msgid "Library"
-msgstr ""
+msgstr "ライブラリ"
 
 #: contents/ui/NavigationBar.qml:36 contents/ui/Sidebar.qml:116
 #, kde-format
 msgid "Search"
-msgstr ""
+msgstr "検索"
 
 #: contents/ui/PlaybackHistory.qml:17
 #, kde-format
@@ -364,32 +367,32 @@ msgstr ""
 #: contents/ui/PlaybackHistory.qml:135
 #, kde-format
 msgid "No songs here yet"
-msgstr ""
+msgstr "ここにはまだ曲なし"
 
 #: contents/ui/PlaylistPage.qml:110
 #, kde-format
 msgid "Playlist successfully imported"
-msgstr ""
+msgstr "再生リストのインポートに成功"
 
 #: contents/ui/PlaylistPage.qml:131
 #, kde-format
 msgid "Playlist"
-msgstr ""
+msgstr "再生リスト"
 
 #: contents/ui/SearchHistoryPage.qml:86 contents/ui/SearchWithDropdown.qml:397
 #, kde-format
 msgid "remove from search history"
-msgstr ""
+msgstr "検索履歴から除去"
 
 #: contents/ui/SearchPage.qml:16
 #, kde-format
 msgid "Previous Searches:"
-msgstr ""
+msgstr "以前の検索:"
 
 #: contents/ui/SearchPage.qml:28
 #, kde-format
 msgid "Artists"
-msgstr ""
+msgstr "アーティスト"
 
 #: contents/ui/SearchPage.qml:36
 #, kde-format
@@ -399,7 +402,7 @@ msgstr ""
 #: contents/ui/SearchPage.qml:39 playlistimporter.cpp:23
 #, kde-format
 msgid "Unknown"
-msgstr ""
+msgstr "不明"
 
 #: contents/ui/SearchWithDropdown.qml:343
 #, kde-format
@@ -409,62 +412,62 @@ msgstr ""
 #: contents/ui/ShareMenu.qml:39
 #, kde-format
 msgid "Share to"
-msgstr ""
+msgstr "共有"
 
 #: contents/ui/ShareMenu.qml:49 contents/ui/ShareMenu.qml:99
 #, kde-format
 msgid "Copy Link"
-msgstr ""
+msgstr "リンクをコピー"
 
 #: contents/ui/ShareMenu.qml:54 contents/ui/ShareMenu.qml:104
 #, kde-format
 msgid "Link copied to clipboard"
-msgstr ""
+msgstr "リンクをクリップボードにコピーしました"
 
 #: contents/ui/Sidebar.qml:189
 #, kde-format
 msgid "About"
-msgstr ""
+msgstr "情報"
 
 #: contents/ui/Sidebar.qml:203
 #, kde-format
 msgid "Collapse Sidebar"
-msgstr ""
+msgstr "サイドバーをたたむ"
 
 #: contents/ui/SongMenu.qml:107 contents/ui/SongMenu.qml:205
 #, kde-format
 msgid "Play Next"
-msgstr ""
+msgstr "次に再生"
 
 #: contents/ui/SongMenu.qml:116 contents/ui/SongMenu.qml:211
 #, kde-format
 msgid "Add to queue"
-msgstr ""
+msgstr "再生キューに追加"
 
 #: contents/ui/SongMenu.qml:126 contents/ui/SongMenu.qml:221
 #, kde-format
 msgid "Remove Favourite"
-msgstr ""
+msgstr "お気に入りから除去"
 
 #: contents/ui/SongMenu.qml:126 contents/ui/SongMenu.qml:221
 #, kde-format
 msgid "Add Favourite"
-msgstr ""
+msgstr "お気に入りに追加"
 
 #: contents/ui/SongMenu.qml:143 contents/ui/SongMenu.qml:235
 #, kde-format
 msgid "Remove from History"
-msgstr ""
+msgstr "履歴から除去"
 
 #: contents/ui/SongMenu.qml:156 contents/ui/SongMenu.qml:244
 #, kde-format
 msgid "Add to playlist"
-msgstr ""
+msgstr "再生リストに追加"
 
 #: main.cpp:64
 #, kde-format
 msgid "YouTube Music Player"
-msgstr ""
+msgstr "YouTube Music プレーヤー"
 
 #: main.cpp:66
 #, kde-format
@@ -479,7 +482,7 @@ msgstr ""
 #: main.cpp:67
 #, kde-format
 msgid "Maintainer"
-msgstr ""
+msgstr "保守管理者"
 
 #: main.cpp:68
 #, kde-format
@@ -489,36 +492,36 @@ msgstr ""
 #: main.cpp:68
 #, kde-format
 msgid "Designer"
-msgstr ""
+msgstr "デザイナー"
 
 #: main.cpp:69
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "maboroshin"
 
 #: main.cpp:69
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "pc.genkaku.in"
 
 #: main.cpp:74
 #, kde-format
 msgid "Unofficial API for YouTube Music"
-msgstr ""
+msgstr "YouTube Music 用の非公式 API"
 
 #: playlistimporter.cpp:23
 #, kde-format
 msgid "No description"
-msgstr ""
+msgstr "説明なし"
 
 #: playlistimporter.cpp:57
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "タイトルなし"
 
 #: playlistimporter.cpp:59
 #, kde-format
 msgid "No album"
-msgstr ""
+msgstr "アルバムなし"
