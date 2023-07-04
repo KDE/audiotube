@@ -8,6 +8,7 @@ import QtQuick.Layouts 1.3
 import org.kde.kirigami 2.14 as Kirigami
 import QtGraphicalEffects 1.0
 import QtMultimedia 5.12
+import QtQuick.Dialogs 1.3
 
 import org.kde.ytmusic 1.0
 
@@ -138,6 +139,55 @@ Kirigami.ApplicationWindow {
     }
 
     function focusSearch(){searchLoader.forceFocus()}
+
+    property alias fileDialog: fileDialog
+    FileDialog {
+        id: fileDialog
+        function exportPlaylist() {
+            fileDialog.defaultSuffix = 'm3u'
+            fileDialog.selectExisting = false
+            fileDialog.selectFolder = false
+            fileDialog.selectMultiple = false
+            fileDialog.folder = fileDialog.shortcuts.music
+            fileDialog.title = i18n("Export Playlist")
+            fileDialog.nameFilters = [i18n("m3u, m3u8 Playlist File (*.m3u *.m3u8)")]
+            fileDialog.open()
+        }
+        function importPlaylist() {
+            fileDialog.defaultSuffix = 'm3u'
+            fileDialog.selectExisting = true
+            fileDialog.selectFolder = false
+            fileDialog.selectMultiple = true
+            fileDialog.folder = fileDialog.shortcuts.music
+            fileDialog.title = i18n("Import Playlists")
+            fileDialog.nameFilters = [i18n("m3u, m3u8 Playlist Files (*.m3u *.m3u8)")]
+            fileDialog.open()
+        }
+
+        onAccepted: {
+            if(selectExisting) {
+                for(let url of fileDialog.fileUrls) {
+                    playlistImporter.importPlaylistFromFile(url)
+                }
+            } else {
+                if(!localPlaylistModel.exportPlaylist(fileDialog.fileUrl)) {
+                    applicationWindow().showPassiveNotification(i18n("Saving Failed"))
+                }
+            }
+        }
+    }
+
+    Connections {
+        target: playlistImporter
+        function onImportFailed(path) {applicationWindow().showPassiveNotification(i18nc("%1 is the path to a playlist file.", "Failed to Import %1", path))}
+    }
+    PlaylistImporter {
+        id: playlistImporter
+    }
+    property alias localPlaylistModel: localPlaylistModel
+    LocalPlaylistModel {
+        id: localPlaylistModel
+    }
 
     Connections {
         target: ErrorHandler

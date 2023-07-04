@@ -6,6 +6,7 @@
 
 #include "ytmusic.h"
 #include <QObject>
+#include <QIODevice>
 #include <ThreadedDatabase>
 
 class PlaylistImporter : public QObject
@@ -19,11 +20,15 @@ public:
     Q_SIGNAL void importFinished();
     Q_INVOKABLE void addPlaylistEntry(qint64 playlistId, const QString &videoId, const QString &title, const QString &artist, const QString &album);
     Q_INVOKABLE void addPlaylistEntry(qint64 playlistId, const playlist::Track &track);
+    Q_INVOKABLE void addPlaylistEntry(qint64 playlistId, const song::Song &song);
+
+    Q_INVOKABLE void importPlaylistFromFile(QUrl const& filePath);
 
     Q_INVOKABLE void renamePlaylist(qint64 playlistId, const QString &name, const QString &description);
+    Q_SIGNAL void importFailed(QString path);
 
     Q_SIGNAL void playlistEntriesChanged(quint64 playlistId);
-	Q_SIGNAL void refreshModel();
+    Q_SIGNAL void refreshModel();
 
 private:
     QStringView cropURL(QStringView srcURL);

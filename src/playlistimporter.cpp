@@ -7,6 +7,7 @@
 
 #include "library.h"
 #include <qfuture.h>
+#include <QFile>
 #include <qglobal.h>
 #include <qsqldatabase.h>
 #include <threadeddatabase.h>
@@ -59,6 +60,54 @@ void PlaylistImporter::addPlaylistEntry(qint64 playlistId, const playlist::Track
     const QString album   = (track.album ) ? QString::fromStdString(track.album->name) : i18n("No album");
     this->addPlaylistEntry(playlistId, videoId, title, artists, album);
 }
+
+void PlaylistImporter::addPlaylistEntry(qint64 playlistId, const song::Song& song)
+{
+    const QString videoId = song.video_id.c_str();
+    const QString title = song.title.c_str();
+    const QString artist = song.author.c_str();
+    this->addPlaylistEntry(playlistId, videoId, title, artist, "");
+}
+
+
+void PlaylistImporter::importPlaylistFromFile(const QUrl& filePath)
+{
+    if(!filePath.isLocalFile()) {
+        Q_EMIT importFailed(filePath.path());
+        return;
+    }
+    const QString title = filePath.fileName();
+    const QString description = i18n("No description");
+    QString path(filePath.path());
+    QCoro::connect(Library::instance().database().execute("insert into playlists (title, description) values (?, ?)", title, description), &Library::instance(), [this, path]() {
+        QCoro::connect(Library::instance().database().getResults<SingleValue<qint64>>("select * from playlists"), &Library::instance(), [this, path](const auto& playlists) {
+            const quint64 playlistId = playlists.back().value;
+            QFile file(path, this);
+            if(!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+                Q_EMIT importFailed(path);
+                return;
+            }
+            QTextStream in(&file);
+            Q_EMIT Library::instance().playlistsChanged();
+            while(!in.atEnd()) {
+                in.skipWhiteSpace();
+                QString url = in.readLine();
+                if(url[0] != '#') {
+                    int x = url.indexOf("v=");
+                    QString videoId = url.right(url.size() - x - 2);
+                    videoId.truncate(11);
+                    QCoro::connect(YTMusicThread::instance()->fetchSong(videoId), this, [this, playlistId](const auto& song) {
+                        if(song) {
+                            this->addPlaylistEntry(playlistId, song.value());
+                            Q_EMIT Library::instance().playlistsChanged();
+                        }
+                    });;
+                }
+            }
+        });
+    });
+}
+
 
 void PlaylistImporter::renamePlaylist(qint64 playlistId, const QString &name, const QString &description)
 {
