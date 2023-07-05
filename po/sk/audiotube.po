@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-04 00:45+0000\n"
+"POT-Creation-Date: 2023-07-05 00:58+0000\n"
 "PO-Revision-Date: 2022-04-07 18:01+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -25,8 +25,8 @@ msgstr ""
 #: contents/ui/AlbumPage.qml:75 contents/ui/LibraryPage.qml:37
 #: contents/ui/LibraryPage.qml:63 contents/ui/LibraryPage.qml:84
 #: contents/ui/LibraryPage.qml:222 contents/ui/LibraryPage.qml:248
-#: contents/ui/LibraryPage.qml:269 contents/ui/LocalPlaylistPage.qml:70
-#: contents/ui/LocalPlaylistPage.qml:92 contents/ui/PlaybackHistory.qml:67
+#: contents/ui/LibraryPage.qml:269 contents/ui/LocalPlaylistPage.qml:71
+#: contents/ui/LocalPlaylistPage.qml:95 contents/ui/PlaybackHistory.qml:67
 #: contents/ui/PlaybackHistory.qml:89 contents/ui/PlaylistPage.qml:69
 #: contents/ui/PlaylistPage.qml:84
 #, kde-format
@@ -37,7 +37,7 @@ msgstr "Prehrať"
 #: contents/ui/LibraryPage.qml:44 contents/ui/LibraryPage.qml:69
 #: contents/ui/LibraryPage.qml:92 contents/ui/LibraryPage.qml:229
 #: contents/ui/LibraryPage.qml:254 contents/ui/LibraryPage.qml:278
-#: contents/ui/LocalPlaylistPage.qml:65 contents/ui/LocalPlaylistPage.qml:99
+#: contents/ui/LocalPlaylistPage.qml:66 contents/ui/LocalPlaylistPage.qml:102
 #: contents/ui/PlaybackHistory.qml:55 contents/ui/PlaybackHistory.qml:102
 #: contents/ui/PlaylistPage.qml:62 contents/ui/PlaylistPage.qml:91
 #, kde-format
@@ -46,7 +46,8 @@ msgstr "Zamiešať"
 
 #: contents/ui/AlbumPage.qml:90 contents/ui/LibraryPage.qml:74
 #: contents/ui/LibraryPage.qml:100 contents/ui/LibraryPage.qml:259
-#: contents/ui/LibraryPage.qml:286 contents/ui/LocalPlaylistPage.qml:105
+#: contents/ui/LibraryPage.qml:286 contents/ui/LocalPlaylistPage.qml:108
+#: contents/ui/LocalPlaylistPage.qml:135 contents/ui/LocalPlaylistPage.qml:153
 #: contents/ui/PlaybackHistory.qml:114 contents/ui/PlaylistPage.qml:99
 #, kde-format
 msgid "Append to queue"
@@ -70,7 +71,7 @@ msgid "Album • %1"
 msgstr ""
 
 #: contents/ui/AlbumPage.qml:162 contents/ui/ArtistPage.qml:199
-#: contents/ui/LocalPlaylistPage.qml:170 contents/ui/PlaybackHistory.qml:194
+#: contents/ui/LocalPlaylistPage.qml:238 contents/ui/PlaybackHistory.qml:194
 #: contents/ui/PlaylistPage.qml:190 contents/ui/SearchPage.qml:144
 #, kde-format
 msgid "More"
@@ -163,9 +164,9 @@ msgid "Add Song to Playlist"
 msgstr "Pridať do zoznamu skladieb"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:29
-#: contents/ui/LocalPlaylistsPage.qml:102
-#: contents/ui/LocalPlaylistsPage.qml:128
-#: contents/ui/LocalPlaylistsPage.qml:143
+#: contents/ui/LocalPlaylistsPage.qml:118
+#: contents/ui/LocalPlaylistsPage.qml:152
+#: contents/ui/LocalPlaylistsPage.qml:172
 #, fuzzy, kde-format
 #| msgid "Playlists"
 msgid "New Playlist"
@@ -213,7 +214,7 @@ msgid "No Songs Played Yet"
 msgstr ""
 
 #: contents/ui/LibraryPage.qml:391 contents/ui/LocalPlaylistsPage.qml:18
-#: contents/ui/LocalPlaylistsPage.qml:79 contents/ui/NavigationBar.qml:75
+#: contents/ui/LocalPlaylistsPage.qml:95 contents/ui/NavigationBar.qml:75
 #: contents/ui/SearchPage.qml:30 contents/ui/Sidebar.qml:167
 #, kde-format
 msgid "Playlists"
@@ -225,43 +226,92 @@ msgstr "Zoznamy skladieb"
 msgid "No Playlists Yet"
 msgstr "Zoznamy skladieb"
 
-#: contents/ui/LibraryPage.qml:450 contents/ui/LibraryPage.qml:472
-#: contents/ui/LocalPlaylistsPage.qml:33 contents/ui/LocalPlaylistsPage.qml:55
+#: contents/ui/LibraryPage.qml:450 contents/ui/LibraryPage.qml:480
+#: contents/ui/LocalPlaylistsPage.qml:33 contents/ui/LocalPlaylistsPage.qml:63
 #, kde-format
 msgid "Rename"
 msgstr ""
 
-#: contents/ui/LibraryPage.qml:459 contents/ui/LibraryPage.qml:480
-#: contents/ui/LocalPlaylistsPage.qml:42 contents/ui/LocalPlaylistsPage.qml:63
+#: contents/ui/LibraryPage.qml:459 contents/ui/LibraryPage.qml:488
+#: contents/ui/LocalPlaylistsPage.qml:42 contents/ui/LocalPlaylistsPage.qml:71
 #, kde-format
 msgid "Delete"
 msgstr ""
 
-#: contents/ui/LocalPlaylistPage.qml:21
+#: contents/ui/LibraryPage.qml:467 contents/ui/LibraryPage.qml:495
+#: contents/ui/LocalPlaylistPage.qml:114 contents/ui/LocalPlaylistPage.qml:140
+#: contents/ui/LocalPlaylistPage.qml:161 contents/ui/LocalPlaylistsPage.qml:50
+#: contents/ui/LocalPlaylistsPage.qml:78
+#, kde-format
+msgid "Export"
+msgstr ""
+
+#: contents/ui/LocalPlaylistPage.qml:22
 #, fuzzy, kde-format
 #| msgid "Playlists"
 msgid "Remove from Playlist"
 msgstr "Zoznamy skladieb"
 
-#: contents/ui/LocalPlaylistPage.qml:79
+#: contents/ui/LocalPlaylistPage.qml:80
 #, kde-format
 msgid "This playlist is still empty"
 msgstr ""
 
-#: contents/ui/LocalPlaylistsPage.qml:110
-#: contents/ui/LocalPlaylistsPage.qml:133
-#: contents/ui/LocalPlaylistsPage.qml:148 contents/ui/PlaylistPage.qml:104
+#: contents/ui/LocalPlaylistsPage.qml:126
+#: contents/ui/LocalPlaylistsPage.qml:157
+#: contents/ui/LocalPlaylistsPage.qml:177
 #, fuzzy, kde-format
 #| msgid "Playlists"
-msgid "Import Playlist"
+msgid "Import Playlist from Url"
 msgstr "Zoznamy skladieb"
 
-#: contents/ui/main.qml:110 main.cpp:62
+#: contents/ui/LocalPlaylistsPage.qml:134
+#: contents/ui/LocalPlaylistsPage.qml:162
+#: contents/ui/LocalPlaylistsPage.qml:182
+#, fuzzy, kde-format
+#| msgid "Playlists"
+msgid "Import Playlist from File"
+msgstr "Zoznamy skladieb"
+
+#: contents/ui/main.qml:111 main.cpp:62
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
 
-#: contents/ui/main.qml:260
+#: contents/ui/main.qml:152
+#, fuzzy, kde-format
+#| msgid "Playlists"
+msgid "Export Playlist"
+msgstr "Zoznamy skladieb"
+
+#: contents/ui/main.qml:153
+#, kde-format
+msgid "m3u, m3u8 Playlist File (*.m3u *.m3u8)"
+msgstr ""
+
+#: contents/ui/main.qml:162
+#, fuzzy, kde-format
+#| msgid "Playlists"
+msgid "Import Playlists"
+msgstr "Zoznamy skladieb"
+
+#: contents/ui/main.qml:163
+#, kde-format
+msgid "m3u, m3u8 Playlist Files (*.m3u *.m3u8)"
+msgstr ""
+
+#: contents/ui/main.qml:174
+#, kde-format
+msgid "Saving Failed"
+msgstr ""
+
+#: contents/ui/main.qml:182
+#, kde-format
+msgctxt "%1 is the path to a playlist file."
+msgid "Failed to Import %1"
+msgstr ""
+
+#: contents/ui/main.qml:310
 #, fuzzy, kde-format
 #| msgid "No media playing"
 msgid "No song playing"
@@ -385,6 +435,12 @@ msgstr ""
 msgid "No songs here yet"
 msgstr ""
 
+#: contents/ui/PlaylistPage.qml:104
+#, fuzzy, kde-format
+#| msgid "Playlists"
+msgid "Import Playlist"
+msgstr "Zoznamy skladieb"
+
 #: contents/ui/PlaylistPage.qml:110
 #, kde-format
 msgid "Playlist successfully imported"
@@ -416,7 +472,7 @@ msgstr "Interpreti"
 msgid "Top Results"
 msgstr ""
 
-#: contents/ui/SearchPage.qml:39 playlistimporter.cpp:23
+#: contents/ui/SearchPage.qml:39 playlistimporter.cpp:24
 #, kde-format
 msgid "Unknown"
 msgstr "Neznáme"
@@ -530,18 +586,18 @@ msgstr "wizzardsk@gmail.com"
 msgid "Unofficial API for YouTube Music"
 msgstr ""
 
-#: playlistimporter.cpp:23
+#: playlistimporter.cpp:24 playlistimporter.cpp:80
 #, fuzzy, kde-format
 #| msgid "Playlists"
 msgid "No description"
 msgstr "Zoznamy skladieb"
 
-#: playlistimporter.cpp:57
+#: playlistimporter.cpp:58
 #, kde-format
 msgid "No title"
 msgstr ""
 
-#: playlistimporter.cpp:59
+#: playlistimporter.cpp:60
 #, kde-format
 msgid "No album"
 msgstr ""
