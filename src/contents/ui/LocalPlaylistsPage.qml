@@ -144,10 +144,10 @@ Kirigami.ScrollablePage {
                 icon.name: "list-add"
                 Layout.topMargin: 20
                 Layout.alignment: Qt.AlignRight
-                onPressed: Kirigami.Settings.isMobile? favDrawer.open() : favMenu.popup()
+                onPressed: Kirigami.Settings.isMobile? addDrawer.open() : addMenu.popup()
 
                 Controls.Menu {
-                    id: favMenu
+                    id: addMenu
                     Controls.MenuItem {
                         text: i18n("New Playlist")
                         icon.name: "list-add"
@@ -166,22 +166,31 @@ Kirigami.ScrollablePage {
                 }
 
                 BottomDrawer { 
-                    id: favDrawer
+                    id: addDrawer
                     drawerContentItem: ColumnLayout {
                         Kirigami.BasicListItem{
                             label: i18n("New Playlist")
                             icon: "list-add"
-                            onClicked: addPlaylistDialog.open()
+                            onClicked: {
+                                addPlaylistDialog.open()
+                                addDrawer.close()
+                            }
                         }
                         Kirigami.BasicListItem{
                             label: i18n("Import Playlist from Url")
                             icon: "download"
-                            onClicked: importDrawer.open()
+                            onClicked: {
+                                importPlaylistDialog.open()
+                                addDrawer.close()
+                            }
                         }
                         Kirigami.BasicListItem {
                             label: i18n("Import Playlist from File")
                             icon: "folder"
-                            onClicked: applicationWindow().fileDialog.importPlaylist()
+                            onClicked: {
+                                applicationWindow().fileDialog.importPlaylist()
+                                addDrawer.close()
+                            }
                         }
                         Item{
                             Layout.fillHeight: true
