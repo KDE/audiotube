@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-05 00:58+0000\n"
-"PO-Revision-Date: 2023-06-04 15:14+0200\n"
+"POT-Creation-Date: 2023-07-06 00:56+0000\n"
+"PO-Revision-Date: 2023-07-05 18:57+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.1\n"
+"X-Generator: Lokalize 23.04.2\n"
 
 #: asyncytmusic.cpp:65
 #, kde-format
@@ -242,7 +242,7 @@ msgstr "Borrar"
 #: contents/ui/LocalPlaylistsPage.qml:78
 #, kde-format
 msgid "Export"
-msgstr ""
+msgstr "Exportar"
 
 #: contents/ui/LocalPlaylistPage.qml:22
 #, kde-format
@@ -256,19 +256,17 @@ msgstr "Esta lista de reproducción está vacía"
 
 #: contents/ui/LocalPlaylistsPage.qml:126
 #: contents/ui/LocalPlaylistsPage.qml:157
-#: contents/ui/LocalPlaylistsPage.qml:177
-#, fuzzy, kde-format
-#| msgid "Import Playlist"
+#: contents/ui/LocalPlaylistsPage.qml:180
+#, kde-format
 msgid "Import Playlist from Url"
-msgstr "Importar lista de reproducción"
+msgstr "Importar lista de reproducción de URL"
 
 #: contents/ui/LocalPlaylistsPage.qml:134
 #: contents/ui/LocalPlaylistsPage.qml:162
-#: contents/ui/LocalPlaylistsPage.qml:182
-#, fuzzy, kde-format
-#| msgid "Import Playlist"
+#: contents/ui/LocalPlaylistsPage.qml:188
+#, kde-format
 msgid "Import Playlist from File"
-msgstr "Importar lista de reproducción"
+msgstr "Importar lista de reproducción de un archivo"
 
 #: contents/ui/main.qml:111 main.cpp:62
 #, kde-format
@@ -276,37 +274,35 @@ msgid "AudioTube"
 msgstr "AudioTube"
 
 #: contents/ui/main.qml:152
-#, fuzzy, kde-format
-#| msgid "Import Playlist"
+#, kde-format
 msgid "Export Playlist"
-msgstr "Importar lista de reproducción"
+msgstr "Exportar lista de reproducción"
 
 #: contents/ui/main.qml:153
 #, kde-format
 msgid "m3u, m3u8 Playlist File (*.m3u *.m3u8)"
-msgstr ""
+msgstr "Archivo de lista de reproducción m3u, m3u8 (*.m3u *.m3u8)"
 
 #: contents/ui/main.qml:162
-#, fuzzy, kde-format
-#| msgid "Import Playlist"
+#, kde-format
 msgid "Import Playlists"
-msgstr "Importar lista de reproducción"
+msgstr "Importar listas de reproducción"
 
 #: contents/ui/main.qml:163
 #, kde-format
 msgid "m3u, m3u8 Playlist Files (*.m3u *.m3u8)"
-msgstr ""
+msgstr "Archivos de lista de reproducción m3u, m3u8 (*.m3u *.m3u8)"
 
 #: contents/ui/main.qml:174
 #, kde-format
 msgid "Saving Failed"
-msgstr ""
+msgstr "No se ha podido guardar el archivo"
 
 #: contents/ui/main.qml:182
 #, kde-format
 msgctxt "%1 is the path to a playlist file."
 msgid "Failed to Import %1"
-msgstr ""
+msgstr "No se ha podido importar %1"
 
 #: contents/ui/main.qml:310
 #, kde-format

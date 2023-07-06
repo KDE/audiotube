@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-05 00:58+0000\n"
+"POT-Creation-Date: 2023-07-06 00:56+0000\n"
 "PO-Revision-Date: 2023-03-01 00:43+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -261,7 +261,7 @@ msgstr ""
 
 #: contents/ui/LocalPlaylistsPage.qml:126
 #: contents/ui/LocalPlaylistsPage.qml:157
-#: contents/ui/LocalPlaylistsPage.qml:177
+#: contents/ui/LocalPlaylistsPage.qml:180
 #, fuzzy, kde-format
 #| msgid "Playlist"
 msgid "Import Playlist from Url"
@@ -269,7 +269,7 @@ msgstr "재생 목록"
 
 #: contents/ui/LocalPlaylistsPage.qml:134
 #: contents/ui/LocalPlaylistsPage.qml:162
-#: contents/ui/LocalPlaylistsPage.qml:182
+#: contents/ui/LocalPlaylistsPage.qml:188
 #, fuzzy, kde-format
 #| msgid "Playlist"
 msgid "Import Playlist from File"

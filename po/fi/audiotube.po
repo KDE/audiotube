@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-05 00:58+0000\n"
+"POT-Creation-Date: 2023-07-06 00:56+0000\n"
 "PO-Revision-Date: 2023-05-28 16:32+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -253,7 +253,7 @@ msgstr "Soittolista on yhä tyhjä"
 
 #: contents/ui/LocalPlaylistsPage.qml:126
 #: contents/ui/LocalPlaylistsPage.qml:157
-#: contents/ui/LocalPlaylistsPage.qml:177
+#: contents/ui/LocalPlaylistsPage.qml:180
 #, fuzzy, kde-format
 #| msgid "Import Playlist"
 msgid "Import Playlist from Url"
@@ -261,7 +261,7 @@ msgstr "Tuo soittolista"
 
 #: contents/ui/LocalPlaylistsPage.qml:134
 #: contents/ui/LocalPlaylistsPage.qml:162
-#: contents/ui/LocalPlaylistsPage.qml:182
+#: contents/ui/LocalPlaylistsPage.qml:188
 #, fuzzy, kde-format
 #| msgid "Import Playlist"
 msgid "Import Playlist from File"

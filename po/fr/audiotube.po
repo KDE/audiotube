@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-05 00:58+0000\n"
+"POT-Creation-Date: 2023-07-06 00:56+0000\n"
 "PO-Revision-Date: 2023-05-10 11:55+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
@@ -252,7 +252,7 @@ msgstr "La liste de lecture est vide pour l'instant."
 
 #: contents/ui/LocalPlaylistsPage.qml:126
 #: contents/ui/LocalPlaylistsPage.qml:157
-#: contents/ui/LocalPlaylistsPage.qml:177
+#: contents/ui/LocalPlaylistsPage.qml:180
 #, fuzzy, kde-format
 #| msgid "Import Playlist"
 msgid "Import Playlist from Url"
@@ -260,7 +260,7 @@ msgstr "Importer une liste de lecture"
 
 #: contents/ui/LocalPlaylistsPage.qml:134
 #: contents/ui/LocalPlaylistsPage.qml:162
-#: contents/ui/LocalPlaylistsPage.qml:182
+#: contents/ui/LocalPlaylistsPage.qml:188
 #, fuzzy, kde-format
 #| msgid "Import Playlist"
 msgid "Import Playlist from File"
