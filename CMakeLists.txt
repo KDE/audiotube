@@ -15,12 +15,12 @@ project(audiotube VERSION ${RELEASE_SERVICE_VERSION})
 include(FeatureSummary)
 
 set(QT5_MIN_VERSION 5.15)
-set(KF5_MIN_VERSION 5.81)
+set(KF_MIN_VERSION 5.81)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
+find_package(ECM ${KF_MIN_VERSION} REQUIRED NO_MODULE)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH} ${CMAKE_SOURCE_DIR}/cmake)
 
@@ -44,7 +44,7 @@ find_package(KF6 REQUIRED COMPONENTS Kirigami2 I18n CoreAddons Crash WindowSyste
 find_package(pybind11 REQUIRED)
 find_package(Ytdlp REQUIRED RUNTIME)
 find_package(YTMusicAPI 0.24.0 REQUIRED RUNTIME)
-find_package(KF5KirigamiAddons 0.6.0 REQUIRED)
+find_package(KF6KirigamiAddons 0.6.0 REQUIRED)
 find_package(FutureSQL${QT_MAJOR_VERSION} REQUIRED)
 
 ki18n_install(po)
