@@ -5,7 +5,6 @@
 #pragma once
 
 #include <QAbstractListModel>
-#include <QFile>
 
 #include <vector>
 
@@ -45,7 +44,6 @@ public:
     void setPlaylistId(const QString &playlistId);
     Q_SIGNAL void playlistIdChanged();
     Q_INVOKABLE void removeSong(QString videoId, qint64 playlistId);
-    Q_INVOKABLE bool exportPlaylist(QUrl const& filePath);
 
     void refreshModel();
     const std::vector<PlaylistEntry> &entries() const;

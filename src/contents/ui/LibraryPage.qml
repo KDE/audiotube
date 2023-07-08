@@ -463,14 +463,6 @@ Kirigami.ScrollablePage {
                         playlistDrawer.close()
                     }
                 }
-                Kirigami.BasicListItem{
-                    label: i18n("Export")
-                    icon: "document-save"
-                    onClicked: {
-                        applicationWindow().localPlaylistModel.playlistId = playlistDrawer.modelData.playlistId
-                        applicationWindow().fileDialog.exportPlaylist()
-                    }
-                }
             }
         }
         Controls.Menu {
@@ -489,14 +481,6 @@ Kirigami.ScrollablePage {
                 icon.name: "delete"
                 onTriggered:{
                     localPlaylistsModel.deletePlaylist(playlistMenu.modelData.playlistId)
-                }
-            }
-            Controls.MenuItem {
-                text: i18n("Export")
-                icon.name: "document-save"
-                onTriggered: {
-                    applicationWindow().localPlaylistModel.playlistId = playlistMenu.modelData.playlistId
-                    applicationWindow().fileDialog.exportPlaylist()
                 }
             }
         }

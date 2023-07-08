@@ -13,7 +13,6 @@ import "components"
 
 Kirigami.ScrollablePage {
     id: root
-    readonly property bool isWidescreen: width >= Kirigami.Units.gridUnit * 30
     property alias playlistId: playlistModel.playlistId
     SongMenu {
         id:menu
@@ -87,8 +86,6 @@ Kirigami.ScrollablePage {
         }
 
         header: RowLayout{
-            anchors.right: parent.right
-            anchors.left: parent.left
             spacing: Kirigami.Units.MediumSpacing
 
             Controls.ToolButton {
@@ -107,76 +104,11 @@ Kirigami.ScrollablePage {
             Controls.ToolButton {
                 text: i18n("Append to queue")
                 icon.name: "media-playlist-append"
-                visible: isWidescreen
                 onClicked:  UserPlaylistModel.appendLocalPlaylist(playlistModel, false)
-            }
-            Controls.ToolButton {
-                text: i18n("Export")
-                icon.name: "document-save"
-                visible: isWidescreen
-                onClicked: {
-                    applicationWindow().localPlaylistModel.playlistId = playlistId
-                    applicationWindow().fileDialog.exportPlaylist()
-                }
+
             }
             Item {
                 Layout.fillWidth: true
-                visible: !isWidescreen
-            }
-            Controls.ToolButton {
-                Layout.fillHeight: true
-                Layout.rightMargin: 0.73*Kirigami.Units.gridUnit
-                icon.name: "view-more-symbolic"
-                visible:!isWidescreen
-                onPressed: Kirigami.Settings.isMobile? drawer.open() : menu.popup()
-                Controls.Menu {
-                    id: menu
-                    Controls.MenuItem {
-                        text: i18n("Append to queue")
-                        icon.name: "media-playlist-append"
-                        onTriggered: UserPlaylistModel.appendLocalPlaylist(playlistModel, false)
-                    }
-                    Controls.MenuItem {
-                        text: i18n("Export")
-                        icon.name: "document-save"
-                        onTriggered: {
-                            applicationWindow().localPlaylistModel.playlistId = playlistId
-                            applicationWindow().fileDialog.exportPlaylist()
-                        }
-                    }
-                }
-
-                BottomDrawer{
-                    id: drawer
-                    drawerContentItem: ColumnLayout {
-                        Kirigami.BasicListItem {
-                            label: i18n("Append to queue")
-                            icon: "media-playlist-append"
-                            onClicked: {
-                                UserPlaylistModel.appendLocalPlaylist(playlistModel, false)
-                                favDrawer.close()
-                            }
-                        }
-                        Kirigami.BasicListItem {
-                            label: i18n("Export")
-                            icon: "document-save"
-                            onClicked: {
-                                applicationWindow().localPlaylistModel.playlistId = playlistId
-                                applicationWindow().fileDialog.exportPlaylist()
-                                favDrawer.close()
-                            }
-                        }
-                        Item{
-                            Layout.fillHeight: true
-                        }
-                    }
-                }
-
-            }
-
-            Item {
-                Layout.fillWidth: true
-                visible: isWidescreen
             }
         }
 

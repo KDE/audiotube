@@ -46,14 +46,6 @@ Kirigami.ScrollablePage {
                     drawer.close()
                 }
             }
-            Kirigami.BasicListItem{
-                label: i18n("Export")
-                icon: "document-save"
-                onClicked: {
-                    applicationWindow().localPlaylistModel.playlistId = drawer.modelData.playlistId
-                    applicationWindow().fileDialog.exportPlaylist()
-                }
-            }
         }
     }
     Controls.Menu {
@@ -74,14 +66,6 @@ Kirigami.ScrollablePage {
                 localPlaylistsModel.deletePlaylist(menu.modelData.playlistId)
             }
         }
-        Controls.MenuItem {
-            text: i18n("Export")
-            icon.name: "document-save"
-            onTriggered: {
-                applicationWindow().localPlaylistModel.playlistId = menu.modelData.playlistId
-                applicationWindow().fileDialog.exportPlaylist()
-            }
-        }
     }
 
     GridView {
@@ -89,7 +73,7 @@ Kirigami.ScrollablePage {
         header: RowLayout {
             width: parent.width
             spacing: Kirigami.Units.mediumSpacing
-            readonly property bool isWidescreen: width >= Kirigami.Units.gridUnit * 35
+            readonly property bool isWidescreen: width >= Kirigami.Units.gridUnit * 25
             Kirigami.Heading {
                 Layout.topMargin: 20
                 text: i18n("Playlists")
@@ -123,18 +107,10 @@ Kirigami.ScrollablePage {
             Controls.ToolButton {
                 visible: isWidescreen
                 Layout.topMargin: 20
-                text: i18n("Import Playlist from Url")
+                text: i18n("Import Playlist")
                 Layout.alignment: Qt.AlignRight
                 icon.name: "download"
                 onClicked: importPlaylistDialog.open()
-            }
-            Controls.ToolButton {
-                visible: isWidescreen
-                Layout.topMargin: 20
-                text: i18n("Import Playlist from File")
-                Layout.alignment: Qt.AlignRight
-                icon.name: "folder"
-                onClicked: applicationWindow().fileDialog.importPlaylist()
             }
 
             // Compact layout
@@ -154,14 +130,9 @@ Kirigami.ScrollablePage {
                         onTriggered: addPlaylistDialog.open()
                     }
                     Controls.MenuItem {
-                        text: i18n("Import Playlist from Url")
+                        text: i18n("Import Playlist")
                         icon.name: "download"
                         onTriggered: importPlaylistDialog.open()
-                    }
-                    Controls.MenuItem {
-                        text: i18n("Import Playlist from File")
-                        icon.name: "folder"
-                        onTriggered: applicationWindow().fileDialog.importPlaylist()
                     }
                 }
 
@@ -174,14 +145,9 @@ Kirigami.ScrollablePage {
                             onClicked: addPlaylistDialog.open()
                         }
                         Kirigami.BasicListItem{
-                            label: i18n("Import Playlist from Url")
+                            label: i18n("Import Playlist")
                             icon: "download"
-                            onClicked: importDrawer.open()
-                        }
-                        Kirigami.BasicListItem {
-                            label: i18n("Import Playlist from File")
-                            icon: "folder"
-                            onClicked: applicationWindow().fileDialog.importPlaylist()
+                            onClicked: importPlaylistDialog.open()
                         }
                         Item{
                             Layout.fillHeight: true

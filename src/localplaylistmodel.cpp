@@ -87,21 +87,3 @@ void LocalPlaylistModel::removeSong(QString videoId, qint64 playlistId)
 {
     QCoro::connect(Library::instance().database().execute("delete from playlist_entries where playlist_id = ? and video_id = ?", playlistId, videoId), this, &LocalPlaylistModel::refreshModel);
 }
-
-bool LocalPlaylistModel::exportPlaylist(QUrl const& filePath)
-{
-    if(!filePath.isLocalFile()) {
-        return false;
-    }
-    QFile file(filePath.path(), this);
-    if(!file.open(QIODevice::WriteOnly | QIODevice::Truncate | QIODevice::Text)) {
-        return false;
-    }
-
-    QTextStream out(&file);
-    for(size_t i = 0; i<m_entries.size(); ++i) {
-        out << "https://music.youtube.com/watch?v=" << m_entries[i].videoId << '\n';
-    }
-
-    return true;
-}
