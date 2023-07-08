@@ -144,10 +144,10 @@ Kirigami.ScrollablePage {
                 icon.name: "list-add"
                 Layout.topMargin: 20
                 Layout.alignment: Qt.AlignRight
-                onPressed: Kirigami.Settings.isMobile? addDrawer.open() : addMenu.popup()
+                onPressed: Kirigami.Settings.isMobile? favDrawer.open() : favMenu.popup()
 
                 Controls.Menu {
-                    id: addMenu
+                    id: favMenu
                     Controls.MenuItem {
                         text: i18n("New Playlist")
                         icon.name: "list-add"
@@ -166,31 +166,22 @@ Kirigami.ScrollablePage {
                 }
 
                 BottomDrawer { 
-                    id: addDrawer
+                    id: favDrawer
                     drawerContentItem: ColumnLayout {
                         Kirigami.BasicListItem{
                             label: i18n("New Playlist")
                             icon: "list-add"
-                            onClicked: {
-                                addPlaylistDialog.open()
-                                addDrawer.close()
-                            }
+                            onClicked: addPlaylistDialog.open()
                         }
                         Kirigami.BasicListItem{
                             label: i18n("Import Playlist from Url")
                             icon: "download"
-                            onClicked: {
-                                importPlaylistDialog.open()
-                                addDrawer.close()
-                            }
+                            onClicked: importDrawer.open()
                         }
                         Kirigami.BasicListItem {
                             label: i18n("Import Playlist from File")
                             icon: "folder"
-                            onClicked: {
-                                applicationWindow().fileDialog.importPlaylist()
-                                addDrawer.close()
-                            }
+                            onClicked: applicationWindow().fileDialog.importPlaylist()
                         }
                         Item{
                             Layout.fillHeight: true
