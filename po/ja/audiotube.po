@@ -1,3 +1,4 @@
+# maboroshini <pc.genkaku.in>, 2023.
 # Fumiaki Okushi <fumiaki.okushi@gmail.com>, 2023.
 msgid ""
 msgstr ""
@@ -21,7 +22,7 @@ msgid ""
 "Running with untested version of ytmusicapi %1. If you experience errors, "
 "please report them to your distribution."
 msgstr ""
-"未テストのバージョンの ymusicapi %1 で実行中です。エラーが発生時には、お使い"
+"未テストのバージョンの ymusicapi %1 で実行中です。エラーの発生時には、お使い"
 "のディストリビューションに報告してください。"
 
 #: contents/ui/AlbumPage.qml:75 contents/ui/LibraryPage.qml:37
@@ -332,7 +333,7 @@ msgstr "再生キューを表示"
 #: contents/ui/MaximizedPlayerPage.qml:1198
 #, kde-format
 msgid "Remove Track"
-msgstr ""
+msgstr "曲の除去"
 
 #: contents/ui/MaximizedPlayerPage.qml:995
 #, kde-format
@@ -367,7 +368,7 @@ msgstr ""
 #: contents/ui/PlaybackHistory.qml:135
 #, kde-format
 msgid "No songs here yet"
-msgstr "ここにはまだ曲なし"
+msgstr "まだここに曲はなし"
 
 #: contents/ui/PlaylistPage.qml:110
 #, kde-format
@@ -397,7 +398,7 @@ msgstr "アーティスト"
 #: contents/ui/SearchPage.qml:36
 #, kde-format
 msgid "Top Results"
-msgstr ""
+msgstr "検索上位"
 
 #: contents/ui/SearchPage.qml:39 playlistimporter.cpp:23
 #, kde-format
@@ -407,7 +408,7 @@ msgstr "不明"
 #: contents/ui/SearchWithDropdown.qml:343
 #, kde-format
 msgid "No matching previous searches"
-msgstr ""
+msgstr "以前の検索には一致しません"
 
 #: contents/ui/ShareMenu.qml:39
 #, kde-format
@@ -525,23 +526,3 @@ msgstr "タイトルなし"
 #, kde-format
 msgid "No album"
 msgstr "アルバムなし"
-
-#, fuzzy
-#~| msgid "Import Playlist"
-#~ msgid "Import Playlist from Url"
-#~ msgstr "再生リストのインポート"
-
-#, fuzzy
-#~| msgid "Import Playlist"
-#~ msgid "Import Playlist from File"
-#~ msgstr "再生リストのインポート"
-
-#, fuzzy
-#~| msgid "Import Playlist"
-#~ msgid "Export Playlist"
-#~ msgstr "再生リストのインポート"
-
-#, fuzzy
-#~| msgid "Import Playlist"
-#~ msgid "Import Playlists"
-#~ msgstr "再生リストのインポート"
