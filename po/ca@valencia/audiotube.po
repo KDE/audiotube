@@ -532,31 +532,3 @@ msgstr "Sense títol"
 #, kde-format
 msgid "No album"
 msgstr "Sense àlbum"
-
-#~ msgid "Export"
-#~ msgstr "Exporta"
-
-#~ msgid "Import Playlist from Url"
-#~ msgstr "Importa una llista de reproducció des d'un URL"
-
-#~ msgid "Import Playlist from File"
-#~ msgstr "Importa una llista de reproducció des d'un fitxer"
-
-#~ msgid "Export Playlist"
-#~ msgstr "Exporta una llista de reproducció"
-
-#~ msgid "m3u, m3u8 Playlist File (*.m3u *.m3u8)"
-#~ msgstr "Fitxer de llista de reproducció m3u, m3u8 (*.m3u *.m3u8)"
-
-#~ msgid "Import Playlists"
-#~ msgstr "Importa llistes de reproducció"
-
-#~ msgid "m3u, m3u8 Playlist Files (*.m3u *.m3u8)"
-#~ msgstr "Fitxers de llista de reproducció m3u, m3u8 (*.m3u *.m3u8)"
-
-#~ msgid "Saving Failed"
-#~ msgstr "No s'ha pogut guardar"
-
-#~ msgctxt "%1 is the path to a playlist file."
-#~ msgid "Failed to Import %1"
-#~ msgstr "No s'ha pogut importar %1"

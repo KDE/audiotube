@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-09 00:59+0000\n"
-"PO-Revision-Date: 2023-07-03 11:39\n"
+"PO-Revision-Date: 2023-07-18 11:15\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -14,8 +14,8 @@ msgstr ""
 "X-Crowdin-Project: kdeorg\n"
 "X-Crowdin-Project-ID: 269464\n"
 "X-Crowdin-Language: zh-CN\n"
-"X-Crowdin-File: /kf5-trunk/messages/audiotube/audiotube.pot\n"
-"X-Crowdin-File-ID: 25474\n"
+"X-Crowdin-File: /kf5-stable/messages/audiotube/audiotube.pot\n"
+"X-Crowdin-File-ID: 41997\n"
 
 #: asyncytmusic.cpp:65
 #, kde-format
@@ -525,18 +525,3 @@ msgstr ""
 #, kde-format
 msgid "No album"
 msgstr ""
-
-#, fuzzy
-#~| msgid "Playlist Title"
-#~ msgid "Import Playlist from File"
-#~ msgstr "播放列表标题"
-
-#, fuzzy
-#~| msgid "Playlist"
-#~ msgid "Export Playlist"
-#~ msgstr "播放列表"
-
-#, fuzzy
-#~| msgid "Playlists"
-#~ msgid "Import Playlists"
-#~ msgstr "播放列表"
