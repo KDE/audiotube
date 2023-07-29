@@ -529,23 +529,3 @@ msgstr "Bez názvu"
 #, kde-format
 msgid "No album"
 msgstr "Žádné album"
-
-#, fuzzy
-#~| msgid "Import Playlist"
-#~ msgid "Import Playlist from Url"
-#~ msgstr "Importovat seznam skladeb"
-
-#, fuzzy
-#~| msgid "Import Playlist"
-#~ msgid "Import Playlist from File"
-#~ msgstr "Importovat seznam skladeb"
-
-#, fuzzy
-#~| msgid "Import Playlist"
-#~ msgid "Export Playlist"
-#~ msgstr "Importovat seznam skladeb"
-
-#, fuzzy
-#~| msgid "Import Playlist"
-#~ msgid "Import Playlists"
-#~ msgstr "Importovat seznam skladeb"
