@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the audiotube package.
 #
-# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2021, 2022.
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2021, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-09 00:59+0000\n"
-"PO-Revision-Date: 2022-09-24 14:57+0200\n"
+"PO-Revision-Date: 2023-07-26 20:15+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -23,6 +23,8 @@ msgid ""
 "Running with untested version of ytmusicapi %1. If you experience errors, "
 "please report them to your distribution."
 msgstr ""
+"Kör med en oprövad version av ytmusicapi %1. Om du råkar ut för fel, "
+"rapportera dem till din distribution."
 
 #: contents/ui/AlbumPage.qml:75 contents/ui/LibraryPage.qml:37
 #: contents/ui/LibraryPage.qml:63 contents/ui/LibraryPage.qml:84
@@ -52,7 +54,7 @@ msgstr "Blanda"
 #: contents/ui/PlaybackHistory.qml:114 contents/ui/PlaylistPage.qml:99
 #, kde-format
 msgid "Append to queue"
-msgstr ""
+msgstr "Lägg till i kö"
 
 #: contents/ui/AlbumPage.qml:95 contents/ui/ArtistPage.qml:95
 #: contents/ui/PlaylistPage.qml:115
@@ -64,19 +66,19 @@ msgstr "Öppna i webbläsare"
 #: contents/ui/PlaylistPage.qml:120
 #, kde-format
 msgid "Share"
-msgstr ""
+msgstr "Dela"
 
 #: contents/ui/AlbumPage.qml:110
 #, kde-format
 msgid "Album • %1"
-msgstr ""
+msgstr "Album • %1"
 
 #: contents/ui/AlbumPage.qml:162 contents/ui/ArtistPage.qml:199
 #: contents/ui/LocalPlaylistPage.qml:170 contents/ui/PlaybackHistory.qml:194
 #: contents/ui/PlaylistPage.qml:190 contents/ui/SearchPage.qml:144
 #, kde-format
 msgid "More"
-msgstr ""
+msgstr "Mer"
 
 #: contents/ui/ArtistPage.qml:81
 #, kde-format
@@ -84,10 +86,9 @@ msgid "Radio"
 msgstr "Radio"
 
 #: contents/ui/ArtistPage.qml:109
-#, fuzzy, kde-format
-#| msgid "Artists"
+#, kde-format
 msgid "Artist"
-msgstr "Artister"
+msgstr "Artist"
 
 #: contents/ui/ArtistPage.qml:131 contents/ui/SearchPage.qml:72
 #, kde-format
@@ -127,57 +128,49 @@ msgid "Cancel"
 msgstr "Avbryt"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:17
-#, fuzzy, kde-format
-#| msgid "Add to Playlist"
+#, kde-format
 msgid "Add playlist"
-msgstr "Lägg till i spellista"
+msgstr "Lägg till spellista"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:23
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:24
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "Playlist Title"
-msgstr "Spellistor"
+msgstr "Spellistans titel"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:28
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:30
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "Playlist Description"
-msgstr "Spellistor"
+msgstr "Spellistans beskrivning"
 
 #: contents/ui/dialogs/ImportPlaylistDialog.qml:17
-#, fuzzy, kde-format
-#| msgid "Add to Playlist"
+#, kde-format
 msgid "Import playlist"
-msgstr "Lägg till i spellista"
+msgstr "Importera spellista"
 
 #: contents/ui/dialogs/ImportPlaylistDialog.qml:23
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "Playlist URL (Youtube)"
-msgstr "Spellistor"
+msgstr "Spellistans webbadress (YouTube)"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:20
-#, fuzzy, kde-format
-#| msgid "Add to Playlist"
+#, kde-format
 msgid "Add Song to Playlist"
-msgstr "Lägg till i spellista"
+msgstr "Lägg till låt i spellista"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:29
 #: contents/ui/LocalPlaylistsPage.qml:102
 #: contents/ui/LocalPlaylistsPage.qml:128
 #: contents/ui/LocalPlaylistsPage.qml:143
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "New Playlist"
-msgstr "Spellistor"
+msgstr "Ny spellista"
 
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:18
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "Rename playlist"
-msgstr "Spellistor"
+msgstr "Byt namn på spellista"
 
 #: contents/ui/LibraryPage.qml:30 contents/ui/LibraryPage.qml:123
 #: contents/ui/NavigationBar.qml:48 contents/ui/NavigationBar.qml:54
@@ -193,10 +186,9 @@ msgid "Show All"
 msgstr "Visa alla"
 
 #: contents/ui/LibraryPage.qml:147
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "No Favourites Yet"
-msgstr "Favoriter"
+msgstr "Inga favoriter nu"
 
 #: contents/ui/LibraryPage.qml:215
 #, kde-format
@@ -211,10 +203,9 @@ msgid "Played Songs"
 msgstr "Spelade låtar"
 
 #: contents/ui/LibraryPage.qml:334
-#, fuzzy, kde-format
-#| msgid "No songs here yet"
+#, kde-format
 msgid "No Songs Played Yet"
-msgstr "Inga låtar här ännu"
+msgstr "Inga låtar spelade ännu"
 
 #: contents/ui/LibraryPage.qml:391 contents/ui/LocalPlaylistsPage.qml:18
 #: contents/ui/LocalPlaylistsPage.qml:79 contents/ui/NavigationBar.qml:75
@@ -224,41 +215,38 @@ msgid "Playlists"
 msgstr "Spellistor"
 
 #: contents/ui/LibraryPage.qml:430
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "No Playlists Yet"
-msgstr "Spellistor"
+msgstr "Inga spellistor ännu"
 
 #: contents/ui/LibraryPage.qml:450 contents/ui/LibraryPage.qml:472
 #: contents/ui/LocalPlaylistsPage.qml:33 contents/ui/LocalPlaylistsPage.qml:55
 #, kde-format
 msgid "Rename"
-msgstr ""
+msgstr "Byt namn"
 
 #: contents/ui/LibraryPage.qml:459 contents/ui/LibraryPage.qml:480
 #: contents/ui/LocalPlaylistsPage.qml:42 contents/ui/LocalPlaylistsPage.qml:63
 #, kde-format
 msgid "Delete"
-msgstr ""
+msgstr "Ta bort"
 
 #: contents/ui/LocalPlaylistPage.qml:21
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "Remove from Playlist"
-msgstr "Spellistor"
+msgstr "Ta bort från spellista"
 
 #: contents/ui/LocalPlaylistPage.qml:79
 #, kde-format
 msgid "This playlist is still empty"
-msgstr ""
+msgstr "Spellistan är fortfarande tom"
 
 #: contents/ui/LocalPlaylistsPage.qml:110
 #: contents/ui/LocalPlaylistsPage.qml:133
 #: contents/ui/LocalPlaylistsPage.qml:148 contents/ui/PlaylistPage.qml:104
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "Import Playlist"
-msgstr "Spellistor"
+msgstr "Importera spellista"
 
 #: contents/ui/main.qml:110 main.cpp:62
 #, kde-format
@@ -266,15 +254,14 @@ msgid "AudioTube"
 msgstr "AudioTube"
 
 #: contents/ui/main.qml:260
-#, fuzzy, kde-format
-#| msgid "No media playing"
+#, kde-format
 msgid "No song playing"
-msgstr "Inga media spelar"
+msgstr "Ingen låt spelas"
 
 #: contents/ui/MaximizedPlayerPage.qml:99
 #, kde-format
 msgid "Close Maximized Player"
-msgstr ""
+msgstr "Stäng maximerad spelare"
 
 #: contents/ui/MaximizedPlayerPage.qml:203
 #: contents/ui/MinimizedPlayerControls.qml:94
@@ -283,72 +270,65 @@ msgid "No media playing"
 msgstr "Inga media spelar"
 
 #: contents/ui/MaximizedPlayerPage.qml:426
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "Remove from Favourites"
-msgstr "Favoriter"
+msgstr "Ta bort från favoriter"
 
 #: contents/ui/MaximizedPlayerPage.qml:426
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "Add to Favourites"
-msgstr "Favoriter"
+msgstr "Lägg till i favoriter"
 
 #: contents/ui/MaximizedPlayerPage.qml:451
-#, fuzzy, kde-format
-#| msgid "Open in Browser"
+#, kde-format
 msgid "Open Volume Drawer"
-msgstr "Öppna i webbläsare"
+msgstr "Öppna volymlåda"
 
 #: contents/ui/MaximizedPlayerPage.qml:559
 #, kde-format
 msgid "Unmute Audio"
-msgstr ""
+msgstr "Ljud på"
 
 #: contents/ui/MaximizedPlayerPage.qml:559
 #, kde-format
 msgid "Mute Audio"
-msgstr ""
+msgstr "Tysta ljud"
 
 #: contents/ui/MaximizedPlayerPage.qml:602
 #, kde-format
 msgid "%1%"
-msgstr ""
+msgstr "%1 %"
 
 #: contents/ui/MaximizedPlayerPage.qml:633
 #, kde-format
 msgid "Hide Lyrics"
-msgstr ""
+msgstr "Dölj Sångtext"
 
 #: contents/ui/MaximizedPlayerPage.qml:633
 #, kde-format
 msgid "Show Lyrics"
-msgstr ""
+msgstr "Visa sångtext"
 
 #: contents/ui/MaximizedPlayerPage.qml:653 contents/ui/SongMenu.qml:183
 #: contents/ui/SongMenu.qml:269
-#, fuzzy, kde-format
-#| msgid "Favourite Songs"
+#, kde-format
 msgid "Share Song"
-msgstr "Favoritlåtar"
+msgstr "Dela låt"
 
 #: contents/ui/MaximizedPlayerPage.qml:699
-#, fuzzy, kde-format
-#| msgid "Add to Playlist"
+#, kde-format
 msgid "Add to a local playlist"
-msgstr "Lägg till i spellista"
+msgstr "Lägg till i lokal spellista"
 
 #: contents/ui/MaximizedPlayerPage.qml:736
-#, fuzzy, kde-format
-#| msgid "Queue"
+#, kde-format
 msgid "Hide Queue"
-msgstr "Köa"
+msgstr "Dölj kö"
 
 #: contents/ui/MaximizedPlayerPage.qml:736
-#, fuzzy, kde-format
-#| msgid "Queue"
+#, kde-format
 msgid "Show Queue"
-msgstr "Köa"
+msgstr "Visa kö"
 
 #: contents/ui/MaximizedPlayerPage.qml:956
 #: contents/ui/MaximizedPlayerPage.qml:1198
@@ -357,26 +337,24 @@ msgid "Remove Track"
 msgstr "Ta bort spår"
 
 #: contents/ui/MaximizedPlayerPage.qml:995
-#, fuzzy, kde-format
-#| msgid "Queue"
+#, kde-format
 msgid "Clear Queue"
-msgstr "Köa"
+msgstr "Rensa kö"
 
 #: contents/ui/MaximizedPlayerPage.qml:1020
-#, fuzzy, kde-format
-#| msgid "Shuffle"
+#, kde-format
 msgid "Shuffle Queue"
-msgstr "Blanda"
+msgstr "Blanda kö"
 
 #: contents/ui/MaximizedPlayerPage.qml:1050
 #, kde-format
 msgid "Upcoming Songs"
-msgstr ""
+msgstr "Kommande låtar"
 
 #: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:100
 #, kde-format
 msgid "Library"
-msgstr ""
+msgstr "Bibliotek"
 
 #: contents/ui/NavigationBar.qml:36 contents/ui/Sidebar.qml:116
 #, kde-format
@@ -396,23 +374,22 @@ msgstr "Inga låtar här ännu"
 #: contents/ui/PlaylistPage.qml:110
 #, kde-format
 msgid "Playlist successfully imported"
-msgstr ""
+msgstr "Spellista importerad med lyckat resultat"
 
 #: contents/ui/PlaylistPage.qml:131
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "Playlist"
-msgstr "Spellistor"
+msgstr "Spellista"
 
 #: contents/ui/SearchHistoryPage.qml:86 contents/ui/SearchWithDropdown.qml:397
 #, kde-format
 msgid "remove from search history"
-msgstr ""
+msgstr "ta bort från sökhistorik"
 
 #: contents/ui/SearchPage.qml:16
 #, kde-format
 msgid "Previous Searches:"
-msgstr ""
+msgstr "Föregående sökningar:"
 
 #: contents/ui/SearchPage.qml:28
 #, kde-format
@@ -422,7 +399,7 @@ msgstr "Artister"
 #: contents/ui/SearchPage.qml:36
 #, kde-format
 msgid "Top Results"
-msgstr ""
+msgstr "Toppresultat"
 
 #: contents/ui/SearchPage.qml:39 playlistimporter.cpp:23
 #, kde-format
@@ -432,32 +409,32 @@ msgstr "Okänd"
 #: contents/ui/SearchWithDropdown.qml:343
 #, kde-format
 msgid "No matching previous searches"
-msgstr ""
+msgstr "Inga matchande tidigare sökningar"
 
 #: contents/ui/ShareMenu.qml:39
 #, kde-format
 msgid "Share to"
-msgstr ""
+msgstr "Dela med"
 
 #: contents/ui/ShareMenu.qml:49 contents/ui/ShareMenu.qml:99
 #, kde-format
 msgid "Copy Link"
-msgstr ""
+msgstr "Kopiera länk"
 
 #: contents/ui/ShareMenu.qml:54 contents/ui/ShareMenu.qml:104
 #, kde-format
 msgid "Link copied to clipboard"
-msgstr ""
+msgstr "Länk kopierad till klippbordet"
 
 #: contents/ui/Sidebar.qml:189
 #, kde-format
 msgid "About"
-msgstr ""
+msgstr "Om"
 
 #: contents/ui/Sidebar.qml:203
 #, kde-format
 msgid "Collapse Sidebar"
-msgstr ""
+msgstr "Dra ihop sidorad"
 
 #: contents/ui/SongMenu.qml:107 contents/ui/SongMenu.qml:205
 #, kde-format
@@ -467,60 +444,57 @@ msgstr "Spela nästa"
 #: contents/ui/SongMenu.qml:116 contents/ui/SongMenu.qml:211
 #, kde-format
 msgid "Add to queue"
-msgstr ""
+msgstr "Lägg till i kö"
 
 #: contents/ui/SongMenu.qml:126 contents/ui/SongMenu.qml:221
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "Remove Favourite"
-msgstr "Favoriter"
+msgstr "Ta bort favorit"
 
 #: contents/ui/SongMenu.qml:126 contents/ui/SongMenu.qml:221
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "Add Favourite"
-msgstr "Favoriter"
+msgstr "Lägg till favorit"
 
 #: contents/ui/SongMenu.qml:143 contents/ui/SongMenu.qml:235
 #, kde-format
 msgid "Remove from History"
-msgstr ""
+msgstr "Ta bort från historik"
 
 #: contents/ui/SongMenu.qml:156 contents/ui/SongMenu.qml:244
-#, fuzzy, kde-format
-#| msgid "Add to Playlist"
+#, kde-format
 msgid "Add to playlist"
 msgstr "Lägg till i spellista"
 
 #: main.cpp:64
 #, kde-format
 msgid "YouTube Music Player"
-msgstr ""
+msgstr "YouTube musikspelare"
 
 #: main.cpp:66
 #, kde-format
 msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
-msgstr ""
+msgstr "© 2021-2023 Jonah Brüchert, 2021-2023 KDE-gemenskapen"
 
 #: main.cpp:67
 #, kde-format
 msgid "Jonah Brüchert"
-msgstr ""
+msgstr "Jonah Brüchert"
 
 #: main.cpp:67
 #, kde-format
 msgid "Maintainer"
-msgstr ""
+msgstr "Underhåll"
 
 #: main.cpp:68
 #, kde-format
 msgid "Mathis Brüchert"
-msgstr ""
+msgstr "Mathis Brüchert"
 
 #: main.cpp:68
 #, kde-format
 msgid "Designer"
-msgstr ""
+msgstr "Designer"
 
 #: main.cpp:69
 #, kde-format
@@ -535,26 +509,24 @@ msgid "Your emails"
 msgstr "stefan.asserhall@bredband.net"
 
 #: main.cpp:74
-#, fuzzy, kde-format
-#| msgid "Find music on YouTube Music"
+#, kde-format
 msgid "Unofficial API for YouTube Music"
-msgstr "Sök efter musik på YouTube musik"
+msgstr "Inofficiellt programmeringsgränssnitt för YouTube musik"
 
 #: playlistimporter.cpp:23
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "No description"
-msgstr "Spellistor"
+msgstr "Ingen beskrivning"
 
 #: playlistimporter.cpp:57
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "Namnlös"
 
 #: playlistimporter.cpp:59
 #, kde-format
 msgid "No album"
-msgstr ""
+msgstr "Inget album"
 
 #, fuzzy
 #~| msgid "Playlists"
