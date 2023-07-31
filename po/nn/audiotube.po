@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-09 00:59+0000\n"
-"PO-Revision-Date: 2023-02-23 19:21+0100\n"
+"PO-Revision-Date: 2023-07-30 22:10+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 23.04.3\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -67,7 +67,7 @@ msgstr "Opna i nettlesar"
 #: contents/ui/PlaylistPage.qml:120
 #, kde-format
 msgid "Share"
-msgstr ""
+msgstr "Del"
 
 #: contents/ui/AlbumPage.qml:110
 #, kde-format
@@ -131,24 +131,24 @@ msgstr "Avbryt"
 #: contents/ui/dialogs/AddPlaylistDialog.qml:17
 #, kde-format
 msgid "Add playlist"
-msgstr ""
+msgstr "Legg til i speleliste"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:23
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:24
 #, kde-format
 msgid "Playlist Title"
-msgstr ""
+msgstr "Namn på speleliste"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:28
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:30
 #, kde-format
 msgid "Playlist Description"
-msgstr ""
+msgstr "Skildring av speleliste"
 
 #: contents/ui/dialogs/ImportPlaylistDialog.qml:17
 #, kde-format
 msgid "Import playlist"
-msgstr ""
+msgstr "Importer speleliste"
 
 #: contents/ui/dialogs/ImportPlaylistDialog.qml:23
 #, kde-format
@@ -158,7 +158,7 @@ msgstr ""
 #: contents/ui/dialogs/PlaylistDialog.qml:20
 #, kde-format
 msgid "Add Song to Playlist"
-msgstr ""
+msgstr "Legg song til speleliste"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:29
 #: contents/ui/LocalPlaylistsPage.qml:102
@@ -166,7 +166,7 @@ msgstr ""
 #: contents/ui/LocalPlaylistsPage.qml:143
 #, kde-format
 msgid "New Playlist"
-msgstr ""
+msgstr "Ny speleliste"
 
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:18
 #, kde-format
