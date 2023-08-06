@@ -91,6 +91,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlRegisterUncreatableType<PlaybackHistoryModel>(URI, 1, 0, "PlaybackHistoryModel","");
     qmlRegisterType<QSortFilterProxyModel>(URI, 1, 0, "SortFilterModel");
     qmlRegisterType<Blur>(URI, 1, 0, "Blur");
+    qmlRegisterType<LocalSearchModel>(URI, 1, 0, "LocalSearchModel");
     qmlRegisterType<LocalPlaylistModel>(URI, 1, 0, "LocalPlaylistModel");
     qmlRegisterType<LocalPlaylistsModel>(URI, 1, 0, "LocalPlaylistsModel");
     qmlRegisterType<PlaylistImporter>(URI, 1, 0, "PlaylistImporter");

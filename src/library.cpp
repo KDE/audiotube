@@ -164,6 +164,11 @@ PlaybackHistoryModel::PlaybackHistoryModel(QFuture<std::vector<PlayedSong>> &&so
     });
 }
 
+PlaybackHistoryModel::PlaybackHistoryModel(QObject *parent)
+    : QAbstractListModel(parent)
+{
+}
+
 QHash<int, QByteArray> PlaybackHistoryModel::roleNames() const {
     return {
         {Roles::VideoId, "videoId"},
@@ -390,4 +395,19 @@ void WasPlayedWatcher::update(std::optional<SingleValue<bool> > result)
         m_wasPlayed = result->value;
         Q_EMIT wasPlayedChanged();
     }
+}
+
+LocalSearchModel::LocalSearchModel(QObject *parent) : PlaybackHistoryModel()
+{
+    connect(this, &LocalSearchModel::searchQueryChanged, this, [this]() {
+        auto resultFuture = Library::instance().database()
+                                .getResults<PlayedSong>("select * from played_songs natural join songs "
+                                                        "where title like '%" % m_searchQuery % "%' "
+                                                        "order by plays desc limit 10");
+        QCoro::connect(std::move(resultFuture), this, [this](auto results) {
+               beginResetModel();
+               m_playedSongs = results;
+               endResetModel();
+           });
+    });
 }

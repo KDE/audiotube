@@ -84,14 +84,28 @@ public:
     Q_ENUM(Roles);
 
     PlaybackHistoryModel(QFuture<std::vector<PlayedSong>> &&songs, QObject *parent = nullptr);
+    PlaybackHistoryModel(QObject *parent = nullptr);
 
     QHash<int, QByteArray> roleNames() const override;
     int rowCount(const QModelIndex &parent) const override;
     QVariant data(const QModelIndex &index, int role) const override;
     std::vector<PlayedSong> getPlayedSong() const;
 
-private:
+protected:
     std::vector<PlayedSong> m_playedSongs;
+};
+
+class LocalSearchModel : public PlaybackHistoryModel {
+    Q_OBJECT
+
+    Q_PROPERTY(QString searchQuery MEMBER m_searchQuery NOTIFY searchQueryChanged)
+
+    Q_SIGNAL void searchQueryChanged();
+
+public:
+    LocalSearchModel(QObject *parent = nullptr);
+
+    QString m_searchQuery;
 };
 
 class SearchHistoryModel : public QAbstractListModel {
