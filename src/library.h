@@ -150,7 +150,7 @@ public:
 
     FavouritesModel *favourites();
     Q_SIGNAL void favouritesChanged();
-    Q_SIGNAL void changeFavourites();
+    void refreshFavourites();
     Q_INVOKABLE void addFavourite(const QString &videoId, const QString &title, const QString &artist, const QString &album);
     Q_INVOKABLE void removeFavourite(const QString &videoId);
     Q_INVOKABLE FavouriteWatcher *favouriteWatcher(const QString &videoId);
@@ -165,7 +165,7 @@ public:
 
     PlaybackHistoryModel *playbackHistory();
     Q_SIGNAL void playbackHistoryChanged();
-    Q_SIGNAL void changePlaybackHistory();
+    void refreshPlaybackHistory();
     Q_INVOKABLE void addPlaybackHistoryItem(const QString &videoId, const QString &title, const QString &artist, const QString &album);
     Q_INVOKABLE void removePlaybackHistoryItem(const QString &videoId);
     Q_INVOKABLE WasPlayedWatcher *wasPlayedWatcher(const QString &videoId);
