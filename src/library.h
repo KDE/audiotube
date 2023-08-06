@@ -108,11 +108,15 @@ public:
     QString m_searchQuery;
 };
 
+class Library;
+
 class SearchHistoryModel : public QAbstractListModel {
     Q_OBJECT
 
+    Q_PROPERTY(QString filter MEMBER m_filter NOTIFY filterChanged)
+
 public:
-    SearchHistoryModel(QFuture<std::vector<SingleValue<QString>>> &&historyFuture, QObject *parent = nullptr);
+    SearchHistoryModel(Library *library);
     int rowCount(const QModelIndex &parent) const override;
     void removeSearch(const QString &search);
     QVariant data(const QModelIndex &index, int role) const override;
@@ -120,10 +124,13 @@ public:
     const QString & temporarySearch() const;
     void setTemporarySearch(QString const& text);
 
+    Q_SIGNAL void filterChanged();
+
 private:
     size_t getRow(QString const &search) const;
     std::vector<SingleValue<QString>> m_history;
     QString m_temporarySearch;
+    QString m_filter;
 };
 
 class Library : public QObject

@@ -40,6 +40,7 @@ Item {
 
         onTextEdited: {
             filterText = text
+            Library.searches.filter = text
             if(completionList.count === 0) {
                 //no matching search -> message should display
                 Library.temporarySearch = ""
@@ -354,10 +355,7 @@ Item {
                         property int empiricDelegateHeight: recentsRepeater.visible ? (mainScrollView.contentHeight - recentsRepeater.height) / count : (mainScrollView.contentHeight + mainScrollViewLayout.spacing) / (count)
 
                         id: completionList
-                        model: SortFilterModel {
-                            sourceModel: Library.searches
-                            filterRegularExpression: searchField.filterExpression
-                        }
+                        model: Library.searches
 
                         function isSelectedDelegateVisible() {
                             if(!recentsRepeater.visible) {
