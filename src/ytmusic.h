@@ -293,7 +293,7 @@ public:
     std::vector<search::SearchResultItem> search(const std::string &query,
                                                  const std::optional<std::string> &filter = std::nullopt,
                                                  const std::optional<std::string> &scope = std::nullopt,
-                                                 const int limit = 20,
+                                                 const int limit = 100,
                                                  const bool ignore_spelling = false) const;
 
     /// https://ytmusicapi.readthedocs.io/en/latest/reference.html#ytmusicapi.YTMusic.get_artist
