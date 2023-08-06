@@ -28,24 +28,9 @@ Library::Library(QObject *parent)
 {
     m_database->runMigrations(":/migrations/");
     m_searches = new SearchHistoryModel(m_database->getResults<SingleValue<QString>>("select distinct (search_query) from searches order by search_id desc"), this);
-    connect(this, &Library::changeFavourites, [this]() {
-        auto future = m_database->getResults<Song>("select * from favourites natural join songs order by favourites.rowid desc");
-        m_favourites= new FavouritesModel(std::move(future), this);
-        Q_EMIT favouritesChanged();
-    });
-    Q_EMIT changeFavourites();
 
-    connect(this, &Library::changePlaybackHistory, [this]() {
-        //playbackHistory
-        auto future = m_database->getResults<PlayedSong>("select * from played_songs natural join songs");
-        m_playbackHistory = new PlaybackHistoryModel(std::move(future), this);
-
-        //mostPlayed
-        auto future2 = m_database->getResults<PlayedSong>("select * from played_songs natural join songs order by plays desc limit 10");
-        m_mostPlayed = new PlaybackHistoryModel(std::move(future2), this);
-        Q_EMIT playbackHistoryChanged();
-    });
-    Q_EMIT changePlaybackHistory();
+    refreshFavourites();
+    refreshPlaybackHistory();
 }
 
 Library::~Library() = default;
@@ -64,13 +49,15 @@ FavouritesModel *Library::favourites()
 void Library::addFavourite(const QString &videoId, const QString &title, const QString &artist, const QString &album)
 {
     QCoro::connect(addSong(videoId, title, artist, album), this, [=, this] {
-        QCoro::connect(m_database->execute("insert or ignore into favourites (video_id) values (?)", videoId), this, &Library::changeFavourites);
+        QCoro::connect(m_database->execute("insert or ignore into favourites (video_id) values (?)", videoId),
+                       this, &Library::refreshFavourites);
     });
 }
 
 void Library::removeFavourite(const QString &videoId)
 {
-    QCoro::connect(m_database->execute("delete from favourites where video_id = ?", videoId), this, &Library::changeFavourites);
+    QCoro::connect(m_database->execute("delete from favourites where video_id = ?", videoId),
+                   this, &Library::refreshFavourites);
 }
 
 FavouriteWatcher *Library::favouriteWatcher(const QString &videoId)
@@ -114,17 +101,41 @@ PlaybackHistoryModel *Library::playbackHistory()
     return m_playbackHistory;
 }
 
+void Library::refreshPlaybackHistory()
+{
+    // playbackHistory
+    auto future = m_database->getResults<PlayedSong>(
+        "select * from played_songs natural join songs");
+    m_playbackHistory = new PlaybackHistoryModel(std::move(future), this);
+
+    // mostPlayed
+    auto future2 = m_database->getResults<PlayedSong>(
+        "select * from played_songs natural join songs order by plays desc limit 10");
+    m_mostPlayed = new PlaybackHistoryModel(std::move(future2), this);
+    Q_EMIT playbackHistoryChanged();
+}
+
+void Library::refreshFavourites()
+{
+    auto future = m_database->getResults<Song>(
+        "select * from favourites natural join songs order by favourites.rowid desc");
+    m_favourites = new FavouritesModel(std::move(future), this);
+    Q_EMIT favouritesChanged();
+}
+
 void Library::addPlaybackHistoryItem(const QString &videoId, const QString &title, const QString &artist, const QString &album)
 {
     QCoro::connect(addSong(videoId, title, artist, album), this, [=, this] {
         QCoro::connect(m_database->execute("insert or ignore into played_songs (video_id, plays) values (?, ?)", videoId, 0), this, [=, this] {
-            QCoro::connect(m_database->execute("update played_songs set plays = plays + 1 where video_id = ? ", videoId), this, &Library::changePlaybackHistory);
+            QCoro::connect(m_database->execute("update played_songs set plays = plays + 1 where video_id = ? ", videoId),
+                           this, &Library::refreshPlaybackHistory);
         });
     });
 }
 void Library::removePlaybackHistoryItem(const QString &videoId)
 {
-    QCoro::connect(m_database->execute("delete from played_songs where video_id = ?", videoId), this, &Library::changePlaybackHistory);
+    QCoro::connect(m_database->execute("delete from played_songs where video_id = ?", videoId),
+                   this, &Library::refreshPlaybackHistory);
 }
 
 WasPlayedWatcher *Library::wasPlayedWatcher(const QString& videoId)
