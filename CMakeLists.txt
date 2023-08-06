@@ -14,13 +14,18 @@ project(audiotube VERSION ${RELEASE_SERVICE_VERSION})
 
 include(FeatureSummary)
 
-set(QT5_MIN_VERSION 5.15)
-set(KF5_MIN_VERSION 5.81)
+if (QT_MAJOR_VERSION_STREQUAL "6")
+	set(QT_MIN_VERSION "6.4.0")
+	set(KF_MIN_VERSION "5.240.0")
+else()
+	set(QT_MIN_VERSION "5.15")
+	set(KF_MIN_VERSION "5.81.0")
+endif()
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(ECM ${KF5_MIN_VERSION} REQUIRED NO_MODULE)
+find_package(ECM ${KF_MIN_VERSION} REQUIRED NO_MODULE)
 
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${ECM_MODULE_PATH} ${CMAKE_SOURCE_DIR}/cmake)
 
@@ -39,8 +44,8 @@ ecm_setup_version(${PROJECT_VERSION}
 
 kde_enable_exceptions()
 
-find_package(Qt${QT_MAJOR_VERSION} ${QT5_MIN_VERSION} REQUIRED COMPONENTS Core Gui Qml QuickControls2 Svg Sql Widgets Concurrent DBus)
-find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS Kirigami2 I18n CoreAddons Crash WindowSystem)
+find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED COMPONENTS Core Gui Qml QuickControls2 Svg Sql Widgets Concurrent DBus)
+find_package(KF5 ${KF_MIN_VERSION} REQUIRED COMPONENTS Kirigami2 I18n CoreAddons Crash WindowSystem)
 find_package(pybind11 REQUIRED)
 find_package(Ytdlp REQUIRED RUNTIME)
 find_package(YTMusicAPI 1.0.2 REQUIRED RUNTIME)
