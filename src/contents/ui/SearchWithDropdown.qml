@@ -316,11 +316,10 @@ Item {
 
                         visible: searchField.filterText && recentsRepeater.count > 0 //if changed, adjust playOpenHeight
 
-                        model: SortFilterModel {
-                            filterRole: PlaybackHistoryModel.Title
-                            filterRegularExpression: searchField.filterExpression
-                            sourceModel: Library.playbackHistory
+                        model: LocalSearchModel {
+                            searchQuery: searchField.text
                         }
+
                         delegate: searchAlbum
                     }
                     Kirigami.Separator {
