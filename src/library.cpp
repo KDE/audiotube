@@ -27,10 +27,10 @@ Library::Library(QObject *parent)
     }()))
 {
     m_database->runMigrations(":/migrations/");
-    m_searches = new SearchHistoryModel(m_database->getResults<SingleValue<QString>>("select distinct (search_query) from searches order by search_id desc"), this);
+    m_searches = new SearchHistoryModel(this);
     connect(this, &Library::changeFavourites, [this]() {
         auto future = m_database->getResults<Song>("select * from favourites natural join songs order by favourites.rowid desc");
-        m_favourites= new FavouritesModel(std::move(future), this);
+        m_favourites = new FavouritesModel(std::move(future), this);
         Q_EMIT favouritesChanged();
     });
     Q_EMIT changeFavourites();
@@ -277,9 +277,25 @@ bool FavouriteWatcher::isFavourite() const {
     return m_isFavourite;
 }
 
-SearchHistoryModel::SearchHistoryModel(QFuture<std::vector<SingleValue<QString>>> &&historyFuture, QObject *parent)
-    : QAbstractListModel(parent)
+SearchHistoryModel::SearchHistoryModel(Library *library)
+    : QAbstractListModel(library)
 {
+    auto historyFuture = library->database()
+                            .getResults<SingleValue<QString>>("select distinct (search_query) from searches order by search_id desc limit 20");
+
+    connect(this, &SearchHistoryModel::filterChanged, this, [library, this]() {
+        auto future = library->database()
+            .getResults<SingleValue<QString>>("select distinct (search_query) from searches "
+                                              "where search_query like '%" % m_filter % "%'"
+                                              "order by search_id desc limit 20");
+
+        QCoro::connect(std::move(future), this, [this](auto history) {
+            beginResetModel();
+            m_history = history;
+            endResetModel();
+        });
+    });
+
     QCoro::connect(std::move(historyFuture), this, [this](const auto history) {
         beginResetModel();
         m_history = history;
@@ -397,7 +413,7 @@ void WasPlayedWatcher::update(std::optional<SingleValue<bool> > result)
     }
 }
 
-LocalSearchModel::LocalSearchModel(QObject *parent) : PlaybackHistoryModel()
+LocalSearchModel::LocalSearchModel(QObject *parent) : PlaybackHistoryModel(parent)
 {
     connect(this, &LocalSearchModel::searchQueryChanged, this, [this]() {
         auto resultFuture = Library::instance().database()
