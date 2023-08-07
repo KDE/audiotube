@@ -338,6 +338,9 @@ size_t SearchHistoryModel::getRow(const QString &search) const {
         return checkedValue.value == search;
     });
     size_t i = std::distance(m_history.begin(), itr);
+    if(m_temporarySearch != "") {
+        ++i;
+    }
     Q_ASSERT(i < m_history.size());
     return i;
 }
