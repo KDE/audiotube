@@ -26,20 +26,17 @@ Item {
     }
     Kirigami.SearchField {
         property var filterExpression: new RegExp(`.*${filterText}.*`, "i")
-        property string filterText: ""
 
         id: searchField
         autoAccept: false
         width: root.width
         selectByMouse: true
         onFocusChanged: {
-            filterText = text
             if (wideScreen && focus)
                 popup.open()
         }
 
         onTextEdited: {
-            filterText = text
             Library.searches.filter = text
             if(completionList.count === 0) {
                 //no matching search -> message should display
@@ -203,7 +200,7 @@ Item {
             from: searchField.height
             duration: 200
             to: completionList
-                ? (searchField.filterText && recentsRepeater.count > 0 //can't use recentsRepeater.visible directly, because it always returns false at this stage
+                ? (Library.searches.filter && recentsRepeater.count > 0 //can't use recentsRepeater.visible directly, because it always returns false at this stage
                     ? (Math.min(fieldContainer.height+ (completionList.count) * (completionList.delegateHeight + completionList.delegatePadding) + Kirigami.Separator.implicitHeight + recentsRepeater.implicitHeight, Kirigami.Units.gridUnit * 20))+2*(popup.shadowSize+popup.expansion)
                     : (completionList.count === 0
                         ?(Math.min(fieldContainer.height+ noMatchingSearchLabel.height + 2*noMatchingSearchLabel.Layout.margins, Kirigami.Units.gridUnit * 20))+2*(popup.shadowSize+popup.expansion)
@@ -315,7 +312,7 @@ Item {
 
                         Layout.fillWidth: true
 
-                        visible: searchField.filterText && recentsRepeater.count > 0 //if changed, adjust playOpenHeight
+                        visible: Library.searches.filter && recentsRepeater.count > 0 //if changed, adjust playOpenHeight
 
                         model: LocalSearchModel {
                             searchQuery: searchField.text
