@@ -38,11 +38,10 @@ Kirigami.ScrollablePage {
                 Repeater {
                     id: recentsRepeater
                     Layout.fillWidth: true
-                    model: SortFilterModel {
-                        filterRole: PlaybackHistoryModel.Title
-                        filterRegularExpression: searchLoader.filterExpression
-                        sourceModel: Library.playbackHistory
+                    model: LocalSearchModel {
+                        searchQuery: searchLoader.text
                     }
+
                     delegate: Kirigami.DelegateRecycler {
                         Layout.alignment: Qt.AlignTop
                         sourceComponent: searchAlbum
@@ -61,10 +60,7 @@ Kirigami.ScrollablePage {
         Repeater {
             Layout.fillHeight: true
             Layout.fillWidth: true
-            model: SortFilterModel {
-                sourceModel: Library.searches
-                filterRegularExpression: searchLoader.filterExpression
-            }
+            model: Library.searches
 
             delegate: Kirigami.AbstractListItem {
                 implicitHeight: Kirigami.Units.gridUnit * 2
@@ -98,5 +94,4 @@ Kirigami.ScrollablePage {
             }
         }
     }
-
 }
