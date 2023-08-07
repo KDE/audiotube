@@ -13,7 +13,6 @@ import org.kde.ytmusic 1.0
 Item {
     function forceFocus(){searchField.forceActiveFocus()}
     function accepted(){searchField.accepted()}
-    property alias filterExpression: searchField.filterExpression
     property alias text: searchField.text
 
     id: root
@@ -25,21 +24,17 @@ Item {
         readOnly: true
     }
     Kirigami.SearchField {
-        property var filterExpression: new RegExp(`.*${filterText}.*`, "i")
-        property string filterText: ""
-
         id: searchField
         autoAccept: false
         width: root.width
         selectByMouse: true
         onFocusChanged: {
-            filterText = text
             if (wideScreen && focus)
                 popup.open()
         }
 
         onTextEdited: {
-            filterText = text
+            Library.searches.filter = text
             if(completionList.count === 0) {
                 //no matching search -> message should display
                 Library.temporarySearch = ""
@@ -202,7 +197,7 @@ Item {
             from: searchField.height
             duration: 200
             to: completionList
-                ? (searchField.filterText && recentsRepeater.count > 0 //can't use recentsRepeater.visible directly, because it always returns false at this stage
+                ? (Library.searches.filter && recentsRepeater.count > 0 //can't use recentsRepeater.visible directly, because it always returns false at this stage
                     ? (Math.min(fieldContainer.height+ (completionList.count) * (completionList.delegateHeight + completionList.delegatePadding) + Kirigami.Separator.implicitHeight + recentsRepeater.implicitHeight, Kirigami.Units.gridUnit * 20))+2*(popup.shadowSize+popup.expansion)
                     : (completionList.count === 0
                         ?(Math.min(fieldContainer.height+ noMatchingSearchLabel.height + 2*noMatchingSearchLabel.Layout.margins, Kirigami.Units.gridUnit * 20))+2*(popup.shadowSize+popup.expansion)
@@ -314,13 +309,12 @@ Item {
 
                         Layout.fillWidth: true
 
-                        visible: searchField.filterText && recentsRepeater.count > 0 //if changed, adjust playOpenHeight
+                        visible: Library.searches.filter && recentsRepeater.count > 0 //if changed, adjust playOpenHeight
 
-                        model: SortFilterModel {
-                            filterRole: PlaybackHistoryModel.Title
-                            filterRegularExpression: searchField.filterExpression
-                            sourceModel: Library.playbackHistory
+                        model: LocalSearchModel {
+                            searchQuery: Library.searches.filter
                         }
+
                         delegate: searchAlbum
                     }
                     Kirigami.Separator {
@@ -355,10 +349,7 @@ Item {
                         property int empiricDelegateHeight: recentsRepeater.visible ? (mainScrollView.contentHeight - recentsRepeater.height) / count : (mainScrollView.contentHeight + mainScrollViewLayout.spacing) / (count)
 
                         id: completionList
-                        model: SortFilterModel {
-                            sourceModel: Library.searches
-                            filterRegularExpression: searchField.filterExpression
-                        }
+                        model: Library.searches
 
                         function isSelectedDelegateVisible() {
                             if(!recentsRepeater.visible) {

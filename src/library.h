@@ -84,21 +84,42 @@ public:
     Q_ENUM(Roles);
 
     PlaybackHistoryModel(QFuture<std::vector<PlayedSong>> &&songs, QObject *parent = nullptr);
+    PlaybackHistoryModel(QObject *parent = nullptr);
 
     QHash<int, QByteArray> roleNames() const override;
     int rowCount(const QModelIndex &parent) const override;
     QVariant data(const QModelIndex &index, int role) const override;
     std::vector<PlayedSong> getPlayedSong() const;
 
-private:
+protected:
     std::vector<PlayedSong> m_playedSongs;
 };
+
+///
+/// Provides a list of recently played songs matching a search query.
+///
+class LocalSearchModel : public PlaybackHistoryModel {
+    Q_OBJECT
+
+    Q_PROPERTY(QString searchQuery MEMBER m_searchQuery NOTIFY searchQueryChanged)
+
+    Q_SIGNAL void searchQueryChanged();
+
+public:
+    LocalSearchModel(QObject *parent = nullptr);
+
+    QString m_searchQuery;
+};
+
+class Library;
 
 class SearchHistoryModel : public QAbstractListModel {
     Q_OBJECT
 
+    Q_PROPERTY(QString filter MEMBER m_filter NOTIFY filterChanged)
+
 public:
-    SearchHistoryModel(QFuture<std::vector<SingleValue<QString>>> &&historyFuture, QObject *parent = nullptr);
+    SearchHistoryModel(Library *library);
     int rowCount(const QModelIndex &parent) const override;
     void removeSearch(const QString &search);
     QVariant data(const QModelIndex &index, int role) const override;
@@ -106,10 +127,13 @@ public:
     const QString & temporarySearch() const;
     void setTemporarySearch(QString const& text);
 
+    Q_SIGNAL void filterChanged();
+
 private:
     size_t getRow(QString const &search) const;
     std::vector<SingleValue<QString>> m_history;
     QString m_temporarySearch;
+    QString m_filter;
 };
 
 class Library : public QObject
