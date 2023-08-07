@@ -95,6 +95,9 @@ protected:
     std::vector<PlayedSong> m_playedSongs;
 };
 
+///
+/// Provides a list of recently played songs matching a search query.
+///
 class LocalSearchModel : public PlaybackHistoryModel {
     Q_OBJECT
 

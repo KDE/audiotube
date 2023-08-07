@@ -13,7 +13,6 @@ import org.kde.ytmusic 1.0
 Item {
     function forceFocus(){searchField.forceActiveFocus()}
     function accepted(){searchField.accepted()}
-    property alias filterExpression: searchField.filterExpression
     property alias text: searchField.text
 
     id: root
@@ -25,8 +24,6 @@ Item {
         readOnly: true
     }
     Kirigami.SearchField {
-        property var filterExpression: new RegExp(`.*${filterText}.*`, "i")
-
         id: searchField
         autoAccept: false
         width: root.width
@@ -315,7 +312,7 @@ Item {
                         visible: Library.searches.filter && recentsRepeater.count > 0 //if changed, adjust playOpenHeight
 
                         model: LocalSearchModel {
-                            searchQuery: searchField.text
+                            searchQuery: Library.searches.filter
                         }
 
                         delegate: searchAlbum
