@@ -29,6 +29,7 @@ Item {
         width: root.width
         selectByMouse: true
         onFocusChanged: {
+            Library.searches.filter = text
             if (wideScreen && focus)
                 popup.open()
         }
