@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-09 00:59+0000\n"
+"POT-Creation-Date: 2023-08-08 00:45+0000\n"
 "PO-Revision-Date: 2023-07-01 15:47-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -380,7 +380,7 @@ msgstr "再生リストのインポートに成功"
 msgid "Playlist"
 msgstr "再生リスト"
 
-#: contents/ui/SearchHistoryPage.qml:86 contents/ui/SearchWithDropdown.qml:397
+#: contents/ui/SearchHistoryPage.qml:82 contents/ui/SearchWithDropdown.qml:389
 #, kde-format
 msgid "remove from search history"
 msgstr "検索履歴から除去"
@@ -405,7 +405,7 @@ msgstr "検索上位"
 msgid "Unknown"
 msgstr "不明"
 
-#: contents/ui/SearchWithDropdown.qml:343
+#: contents/ui/SearchWithDropdown.qml:338
 #, kde-format
 msgid "No matching previous searches"
 msgstr "以前の検索には一致しません"

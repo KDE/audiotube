@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-09 00:59+0000\n"
+"POT-Creation-Date: 2023-08-08 00:45+0000\n"
 "PO-Revision-Date: 2023-06-27 18:07+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -382,7 +382,7 @@ msgstr "Soittolistan tuonti onnistui"
 msgid "Playlist"
 msgstr "Soittolista"
 
-#: contents/ui/SearchHistoryPage.qml:86 contents/ui/SearchWithDropdown.qml:397
+#: contents/ui/SearchHistoryPage.qml:82 contents/ui/SearchWithDropdown.qml:389
 #, kde-format
 msgid "remove from search history"
 msgstr "poista hakuhistoriasta"
@@ -407,7 +407,7 @@ msgstr "Parhaat tulokset"
 msgid "Unknown"
 msgstr "Tuntematon"
 
-#: contents/ui/SearchWithDropdown.qml:343
+#: contents/ui/SearchWithDropdown.qml:338
 #, kde-format
 msgid "No matching previous searches"
 msgstr "Ei osumia aiemmista hauista"

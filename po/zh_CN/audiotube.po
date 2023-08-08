@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-09 00:59+0000\n"
+"POT-Creation-Date: 2023-08-08 00:45+0000\n"
 "PO-Revision-Date: 2023-08-02 12:41\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -379,7 +379,7 @@ msgstr ""
 msgid "Playlist"
 msgstr "播放列表"
 
-#: contents/ui/SearchHistoryPage.qml:86 contents/ui/SearchWithDropdown.qml:397
+#: contents/ui/SearchHistoryPage.qml:82 contents/ui/SearchWithDropdown.qml:389
 #, kde-format
 msgid "remove from search history"
 msgstr "从搜索历史中移除"
@@ -404,7 +404,7 @@ msgstr ""
 msgid "Unknown"
 msgstr "未知"
 
-#: contents/ui/SearchWithDropdown.qml:343
+#: contents/ui/SearchWithDropdown.qml:338
 #, kde-format
 msgid "No matching previous searches"
 msgstr "没有匹配的历史搜索"
