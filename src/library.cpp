@@ -328,7 +328,12 @@ int SearchHistoryModel::rowCount(const QModelIndex &parent) const {
 
 void SearchHistoryModel::removeSearch(const QString &search) {
     int row = getRow(search);
-    beginRemoveRows({}, row, row);
+    if(m_temporarySearch != "") {
+        beginRemoveRows({}, row+1, row+1);
+    }
+    else {
+        beginRemoveRows({}, row, row);
+    }
     m_history.erase(m_history.begin() + row);
     endRemoveRows();
 }
@@ -338,9 +343,6 @@ size_t SearchHistoryModel::getRow(const QString &search) const {
         return checkedValue.value == search;
     });
     size_t i = std::distance(m_history.begin(), itr);
-    if(m_temporarySearch != "") {
-        ++i;
-    }
     Q_ASSERT(i < m_history.size());
     return i;
 }
