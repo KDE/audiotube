@@ -23,6 +23,7 @@ void ThumbnailSource::setVideoId(const QString &id) {
 
     m_videoId = id;
     Q_EMIT videoIdChanged();
+    setCachedPath({});
 
     const QString cacheDir = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) % QDir::separator() % "thumbnails";
     QDir(cacheDir).mkpath(QStringLiteral("."));
@@ -68,11 +69,14 @@ void ThumbnailSource::setVideoId(const QString &id) {
 
     auto *reply = Library::instance().nam().get(QNetworkRequest(QUrl("https://i.ytimg.com/vi_webp/" % m_videoId % "/maxresdefault.webp")));
 
-    auto storeResult = [this, cacheLocation](QNetworkReply *reply) {
+    auto storeResult = [this, cacheLocation, id](QNetworkReply *reply) {
+        if (reply->error() != QNetworkReply::NoError) {
+            return;
+        }
         auto data = reply->readAll();
         reply->deleteLater();
         auto future = QtConcurrent::run([data = std::move(data), cacheLocation]() {
-            // Scale cover down to save qmemory
+            // Scale cover down to save memory
             int targetHeight = 200 * qGuiApp->devicePixelRatio();
             auto scaled = QImage::fromData(data)
                 .scaledToHeight(targetHeight);
@@ -84,8 +88,11 @@ void ThumbnailSource::setVideoId(const QString &id) {
             cropped.save(cacheLocation);
         });
 
-        QCoro::connect(std::move(future), this, [this, cacheLocation]() {
-            setCachedPath(QUrl::fromLocalFile(cacheLocation));
+        QCoro::connect(std::move(future), this, [this, cacheLocation, id]() {
+            // Check if video id was changed since we started fetching
+            if (id == m_videoId) {
+                setCachedPath(QUrl::fromLocalFile(cacheLocation));
+            }
         });
     };
 
