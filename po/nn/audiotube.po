@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-07-09 00:59+0000\n"
-"PO-Revision-Date: 2023-07-30 22:10+0200\n"
+"POT-Creation-Date: 2023-08-08 00:45+0000\n"
+"PO-Revision-Date: 2023-08-10 18:56+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -55,7 +55,7 @@ msgstr "Stokk om"
 #: contents/ui/PlaybackHistory.qml:114 contents/ui/PlaylistPage.qml:99
 #, kde-format
 msgid "Append to queue"
-msgstr ""
+msgstr "Legg i avspelingskøen"
 
 #: contents/ui/AlbumPage.qml:95 contents/ui/ArtistPage.qml:95
 #: contents/ui/PlaylistPage.qml:115
@@ -153,7 +153,7 @@ msgstr "Importer speleliste"
 #: contents/ui/dialogs/ImportPlaylistDialog.qml:23
 #, kde-format
 msgid "Playlist URL (Youtube)"
-msgstr ""
+msgstr "Speleliste-URL (YouTube)"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:20
 #, kde-format
@@ -171,7 +171,7 @@ msgstr "Ny speleliste"
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:18
 #, kde-format
 msgid "Rename playlist"
-msgstr ""
+msgstr "Endra namn på speleliste"
 
 #: contents/ui/LibraryPage.qml:30 contents/ui/LibraryPage.qml:123
 #: contents/ui/NavigationBar.qml:48 contents/ui/NavigationBar.qml:54
@@ -189,7 +189,7 @@ msgstr "Vis alle"
 #: contents/ui/LibraryPage.qml:147
 #, kde-format
 msgid "No Favourites Yet"
-msgstr ""
+msgstr "Ingen favorittar enno"
 
 #: contents/ui/LibraryPage.qml:215
 #, kde-format
@@ -206,7 +206,7 @@ msgstr "Avspela songar"
 #: contents/ui/LibraryPage.qml:334
 #, kde-format
 msgid "No Songs Played Yet"
-msgstr ""
+msgstr "Ingen avspela songar enno"
 
 #: contents/ui/LibraryPage.qml:391 contents/ui/LocalPlaylistsPage.qml:18
 #: contents/ui/LocalPlaylistsPage.qml:79 contents/ui/NavigationBar.qml:75
@@ -218,36 +218,36 @@ msgstr "Spelelister"
 #: contents/ui/LibraryPage.qml:430
 #, kde-format
 msgid "No Playlists Yet"
-msgstr ""
+msgstr "Ingen spelelister enno"
 
 #: contents/ui/LibraryPage.qml:450 contents/ui/LibraryPage.qml:472
 #: contents/ui/LocalPlaylistsPage.qml:33 contents/ui/LocalPlaylistsPage.qml:55
 #, kde-format
 msgid "Rename"
-msgstr ""
+msgstr "Endra namn"
 
 #: contents/ui/LibraryPage.qml:459 contents/ui/LibraryPage.qml:480
 #: contents/ui/LocalPlaylistsPage.qml:42 contents/ui/LocalPlaylistsPage.qml:63
 #, kde-format
 msgid "Delete"
-msgstr ""
+msgstr "Slett"
 
 #: contents/ui/LocalPlaylistPage.qml:21
 #, kde-format
 msgid "Remove from Playlist"
-msgstr ""
+msgstr "Fjern frå speleliste"
 
 #: contents/ui/LocalPlaylistPage.qml:79
 #, kde-format
 msgid "This playlist is still empty"
-msgstr ""
+msgstr "Spelelista er framleis tom"
 
 #: contents/ui/LocalPlaylistsPage.qml:110
 #: contents/ui/LocalPlaylistsPage.qml:133
 #: contents/ui/LocalPlaylistsPage.qml:148 contents/ui/PlaylistPage.qml:104
 #, kde-format
 msgid "Import Playlist"
-msgstr ""
+msgstr "Importer speleliste"
 
 #: contents/ui/main.qml:110 main.cpp:62
 #, kde-format
@@ -257,12 +257,12 @@ msgstr "AudioTube"
 #: contents/ui/main.qml:260
 #, kde-format
 msgid "No song playing"
-msgstr ""
+msgstr "Ingen song vert spela av"
 
 #: contents/ui/MaximizedPlayerPage.qml:99
 #, kde-format
 msgid "Close Maximized Player"
-msgstr ""
+msgstr "Lukk maksimert spelar"
 
 #: contents/ui/MaximizedPlayerPage.qml:203
 #: contents/ui/MinimizedPlayerControls.qml:94
@@ -273,12 +273,12 @@ msgstr "Inkje medium vert spela av"
 #: contents/ui/MaximizedPlayerPage.qml:426
 #, kde-format
 msgid "Remove from Favourites"
-msgstr ""
+msgstr "Fjern frå favorittar"
 
 #: contents/ui/MaximizedPlayerPage.qml:426
 #, kde-format
 msgid "Add to Favourites"
-msgstr ""
+msgstr "Merk som favoritt"
 
 #: contents/ui/MaximizedPlayerPage.qml:451
 #, kde-format
@@ -382,7 +382,7 @@ msgstr ""
 msgid "Playlist"
 msgstr "Speleliste"
 
-#: contents/ui/SearchHistoryPage.qml:86 contents/ui/SearchWithDropdown.qml:397
+#: contents/ui/SearchHistoryPage.qml:82 contents/ui/SearchWithDropdown.qml:389
 #, kde-format
 msgid "remove from search history"
 msgstr "Fjern frå søkjeloggen"
@@ -407,7 +407,7 @@ msgstr ""
 msgid "Unknown"
 msgstr "Ukjend"
 
-#: contents/ui/SearchWithDropdown.qml:343
+#: contents/ui/SearchWithDropdown.qml:338
 #, kde-format
 msgid "No matching previous searches"
 msgstr "Ingen samsvarande tidlegare søk"
