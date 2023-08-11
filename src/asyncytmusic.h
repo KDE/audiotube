@@ -14,6 +14,7 @@
 
 #include <iostream>
 #include <vector>
+#include <span>
 
 #include <ytmusic.h>
 
@@ -124,3 +125,5 @@ private:
 
     AsyncYTMusic *m_ytm;
 };
+
+QUrl pickAudioUrl(const std::span<const video_info::Format> formats);

@@ -105,12 +105,12 @@ void Library::refreshPlaybackHistory()
 {
     // playbackHistory
     auto future = m_database->getResults<PlayedSong>(
-        "select * from played_songs natural join songs");
+        "select * from played_songs natural join songs left join downloaded_songs on songs.video_id = downloaded_songs.video_id");
     m_playbackHistory = new PlaybackHistoryModel(std::move(future), this);
 
     // mostPlayed
     auto future2 = m_database->getResults<PlayedSong>(
-        "select * from played_songs natural join songs order by plays desc limit 10");
+        "select * from played_songs natural join songs left join downloaded_songs on songs.video_id = downloaded_songs.video_id order by plays desc limit 10");
     m_mostPlayed = new PlaybackHistoryModel(std::move(future2), this);
     Q_EMIT playbackHistoryChanged();
 }
@@ -163,6 +163,17 @@ QFuture<void> Library::addSong(const QString &videoId, const QString &title, con
 {
     // replace is used here to update songs from times when we didn't store artist and album
     return m_database->execute("insert or replace into songs (video_id, title, artist, album) values (?, ?, ?, ?)", videoId, title, artist, album);
+}
+
+QFuture<void> Library::markSongDownloaded(const QString &videoId, bool downloaded)
+{
+    if (downloaded) {
+        return m_database->execute(
+            "insert or replace into downloaded_songs values (?)", videoId);
+    } else {
+        return m_database->execute(
+            "delete from downloaded_songs where video_id = ?", videoId);
+    }
 }
 
 PlaybackHistoryModel::PlaybackHistoryModel(QFuture<std::vector<PlayedSong>> &&songs, QObject *parent)
@@ -441,9 +452,10 @@ LocalSearchModel::LocalSearchModel(QObject *parent) : PlaybackHistoryModel(paren
     connect(this, &LocalSearchModel::searchQueryChanged, this, [this]() {
         auto resultFuture = Library::instance().database()
                                 .getResults<PlayedSong>("select * from played_songs natural join songs "
+                                                        "left join downloaded_songs on songs.video_id = downloaded_songs.video_id "
                                                         "where title like '%" % m_searchQuery % "%' "
                                                         "order by plays desc limit 10");
-        QCoro::connect(std::move(resultFuture), this, [this](auto results) {
+        QCoro::connect(std::move(resultFuture), this, [this](auto &&results) {
                beginResetModel();
                m_playedSongs = results;
                endResetModel();

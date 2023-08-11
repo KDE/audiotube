@@ -35,6 +35,7 @@ add_executable(audiotube
     resources.qrc
     blur.cpp
     clipboard.cpp
+    downloadmanager.cpp
 )
 
 target_link_libraries(audiotube
@@ -54,6 +55,8 @@ target_link_libraries(audiotube
     FutureSQL${QT_MAJOR_VERSION}::FutureSQL
     QCoro${QT_MAJOR_VERSION}::Core
     qtmprisdeclarative
+    QCoro${QT_MAJOR_VERSION}::Network
+    QCoro${QT_MAJOR_VERSION}::Qml
     ytm
 )
 

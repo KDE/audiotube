@@ -56,18 +56,14 @@ private:
 };
 
 struct PlayedSong {
-    using ColumnTypes = std::tuple<QString, int, QString, QString, QString>;
-
-    static PlayedSong fromSql(ColumnTypes tuple) {
-        auto [videoId, plays, title, artist, album] = tuple;
-        return PlayedSong {videoId, title, artist, album, plays};
-    }
+    using ColumnTypes = std::tuple<QString, int, QString, QString, QString, bool>;
 
     QString videoId;
+    int plays;
     QString title;
     QString artist;
     QString album;
-    int plays;
+    bool downloaded;
 };
 
 class PlaybackHistoryModel : public QAbstractListModel {
@@ -183,6 +179,10 @@ public:
         return *m_database;
     }
     QFuture<void> addSong(const QString &videoId, const QString &title, const QString &artist, const QString &album);
+
+    QFuture<void> markSongDownloaded(const QString &videoId, bool downloaded);
+
+    Q_SIGNAL void downloadedChanged(const QString &videoId);
 
 private:
 

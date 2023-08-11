@@ -17,6 +17,8 @@
 #include <KCrash>
 #include <KAboutData>
 
+#include <QCoroQml>
+
 #include <mprisplugin.h>
 
 #include "clipboard.h"
@@ -34,6 +36,7 @@
 #include "localplaylistmodel.h"
 #include "localplaylistsmodel.h"
 #include "playlistimporter.h"
+#include "downloadmanager.h"
 
 #include <ThreadedDatabase>
 
@@ -95,6 +98,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     QQmlApplicationEngine engine;
 
     MprisPlugin(&engine).registerTypes("org.nemomobile.qtmpris");
+    QCoro::Qml::registerTypes();
 
     qmlRegisterType<SearchModel>(URI, 1, 0, "SearchModel");
     qmlRegisterType<AlbumModel>(URI, 1, 0, "AlbumModel");
@@ -125,9 +129,13 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlRegisterSingletonType<Clipboard>(URI, 1, 0, "Clipboard", [](QQmlEngine *, QJSEngine *) {
         return new Clipboard();
     });
+    qmlRegisterSingletonType<DownloadManager>(URI, 1, 0, "DownloadManager", [](QQmlEngine *, QJSEngine *) {
+        return new DownloadManager();
+    });
 
     qmlRegisterSingletonInstance<Library>(URI, 1, 0, "Library", &Library::instance());
     qmlRegisterType<ThumbnailSource>(URI, 1, 0, "ThumbnailSource");
+    qmlRegisterType<DownloadedWatcher>(URI, 1, 0, "DownloadedWatcher");
     qmlRegisterAnonymousType<FavouriteWatcher>(URI, 1);
     qmlRegisterAnonymousType<WasPlayedWatcher>(URI, 1);
 

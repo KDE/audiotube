@@ -47,5 +47,7 @@ SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted
         <file alias="AlbumCoverItem.qml">contents/ui/AlbumCoverItem.qml</file>
         <file alias="components/ActionButton.qml">contents/ui/components/ActionButton.qml</file>
         <file alias="components/DoubleActionButton.qml">contents/ui/components/DoubleActionButton.qml</file>
+        <file>migrations/2023-08-10-212523_downloads/down.sql</file>
+        <file>migrations/2023-08-10-212523_downloads/up.sql</file>
     </qresource>
 </RCC>

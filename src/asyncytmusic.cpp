@@ -201,3 +201,29 @@ YTMusicThread::YTMusicThread()
     m_ytm->moveToThread(this);
     start();
 }
+
+QUrl pickAudioUrl(const std::span<const video_info::Format> formats)
+{
+    if (formats.empty()) {
+        return {};
+    }
+
+    std::vector<video_info::Format> audioFormats;
+
+    // filter audio only formats
+    std::copy_if(formats.begin(), formats.end(), std::back_inserter(audioFormats),
+                 [](const video_info::Format &format) {
+                     return format.acodec != "none" && format.vcodec == "none";
+                 });
+
+    if (audioFormats.empty()) {
+        return {};
+    }
+
+    std::sort(audioFormats.begin(), audioFormats.end(),
+              [](const video_info::Format &a, const video_info::Format &b) {
+                  return a.quality > b.quality;
+              });
+
+    return QUrl(QString::fromStdString(audioFormats.front().url));
+}

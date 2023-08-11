@@ -29,28 +29,7 @@ VideoInfoExtractor::VideoInfoExtractor(QObject *parent)
 
 QUrl VideoInfoExtractor::audioUrl() const
 {
-    if (m_videoInfo.formats.empty()) {
-        return {};
-    }
-
-    std::vector<video_info::Format> audioFormats;
-
-    // filter audio only formats
-    std::copy_if(m_videoInfo.formats.begin(), m_videoInfo.formats.end(), std::back_inserter(audioFormats),
-        [](const video_info::Format &format) {
-        return format.acodec != "none" && format.vcodec == "none";
-    });
-
-    if (audioFormats.empty()) {
-        return {};
-    }
-
-    std::sort(audioFormats.begin(), audioFormats.end(),
-              [](const video_info::Format &a, const video_info::Format &b) {
-        return a.quality > b.quality;
-    });
-
-    return QUrl(QString::fromStdString(audioFormats.front().url));
+    return pickAudioUrl(m_videoInfo.formats);
 }
 
 QString VideoInfoExtractor::videoId() const

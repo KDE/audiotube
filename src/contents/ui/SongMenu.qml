@@ -208,7 +208,6 @@ Item {
             onTriggered: UserPlaylistModel.append(menu.videoId, menu.songTitle, menu.artists)
         }
 
-
         Controls.MenuSeparator{}
 
         Controls.MenuItem {
@@ -239,6 +238,23 @@ Item {
             text: i18n("Add to playlist")
             icon.name: "media-playlist-append"
             onTriggered: playlistDialog.open()
+        }
+
+        Controls.MenuItem {
+            DownloadedWatcher {
+                id: downloadedWatcher
+                videoId: root.videoId
+            }
+
+            text: downloadedWatcher.downloaded ? i18n("Delete download") : i18n("Download")
+            icon.name: downloadedWatcher.downloaded ? "delete" : "download"
+            onTriggered: {
+                if (downloadedWatcher.downloaded) {
+                    DownloadManager.deleteDownload(root.videoId)
+                } else {
+                    DownloadManager.downloadSong(videoId).then(() => showPassiveNotification("Download finished"))
+                }
+            }
         }
         // Page specific actions //
 
