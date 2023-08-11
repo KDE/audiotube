@@ -56,6 +56,10 @@ VideoInfoExtractor::VideoInfoExtractor(QObject *parent)
 
 QUrl VideoInfoExtractor::audioUrl() const
 {
+    if (m_videoId.isEmpty()) {
+        return {};
+    }
+
     if (!m_videoInfo) {
         return QUrl::fromLocalFile(DownloadManager::localPathOf(m_videoId));
     } else {
