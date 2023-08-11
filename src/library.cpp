@@ -176,6 +176,18 @@ QFuture<void> Library::markSongDownloaded(const QString &videoId, bool downloade
     }
 }
 
+QCoro::Task<bool> Library::songDownloaded(const QString &videoId)
+{
+    auto downloaded = co_await Library::instance().database().getResult<SingleValue<bool>>(
+        "select count(*) > 0 from downloaded_songs where video_id = ?", videoId);
+
+    if (downloaded) {
+        co_return downloaded->value;
+    } else {
+        co_return false;
+    }
+}
+
 PlaybackHistoryModel::PlaybackHistoryModel(QFuture<std::vector<PlayedSong>> &&songs, QObject *parent)
     : QAbstractListModel(parent)
 {

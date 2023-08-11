@@ -31,13 +31,18 @@ QCoro::QmlTask DownloadManager::downloadSong(const QString &videoId)
 
 void DownloadManager::deleteDownload(const QString &videoId)
 {
-    QString directory = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) % "/downloads/";
+    QString directory = downloadDirectory();
     QFile::remove(directory % videoId);
 
     auto future = Library::instance().markSongDownloaded(videoId, false);
     QCoro::connect(std::move(future), &Library::instance(), [videoId]() {
         Q_EMIT Library::instance().downloadedChanged(videoId);
     });
+}
+
+QString DownloadManager::localPathOf(const QString &videoId)
+{
+    return downloadDirectory() % "/" % videoId;
 }
 
 QCoro::Task<> DownloadManager::download(const QString videoId)
@@ -47,7 +52,7 @@ QCoro::Task<> DownloadManager::download(const QString videoId)
 
     auto *reply = Library::instance().nam().get(QNetworkRequest(url));
 
-    QString directory = QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) % "/downloads";
+    QString directory = downloadDirectory();
     QDir(directory).mkpath(".");
 
     QString location = directory % "/" % videoId;
@@ -77,20 +82,22 @@ QCoro::Task<> DownloadManager::download(const QString videoId)
     Q_EMIT Library::instance().downloadedChanged(videoId);
 }
 
+QString DownloadManager::downloadDirectory()
+{
+    return QStandardPaths::writableLocation(QStandardPaths::AppDataLocation) % "/downloads/";
+}
+
 DownloadedWatcher::DownloadedWatcher(QObject *parent)
     : QObject(parent)
 {
     auto update = [this]() {
         qDebug() << "checking downloaded";
-        auto future = Library::instance().database().getResult<SingleValue<bool>>(
-            "select count(*) > 0 from downloaded_songs where video_id = ?", m_videoId);
+        auto future = Library::instance().songDownloaded(m_videoId);
 
         QCoro::connect(std::move(future), this, [this](auto downloaded) {
-            if (downloaded) {
-                m_downloaded = downloaded->value;
-                qDebug() << "downloaded" << m_downloaded;
-                Q_EMIT downloadedChanged();
-            }
+            m_downloaded = downloaded;
+            qDebug() << "downloaded" << m_downloaded;
+            Q_EMIT downloadedChanged();
         });
     };
 

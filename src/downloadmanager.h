@@ -18,8 +18,12 @@ public:
     Q_INVOKABLE QCoro::QmlTask downloadSong(const QString &videoId);
     Q_INVOKABLE void deleteDownload(const QString &videoId);
 
+    static QString localPathOf(const QString &videoId);
+
 private:
     QCoro::Task<> download(const QString videoId);
+
+    static QString downloadDirectory();
 };
 
 class DownloadedWatcher : public QObject

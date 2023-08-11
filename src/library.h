@@ -181,6 +181,7 @@ public:
     QFuture<void> addSong(const QString &videoId, const QString &title, const QString &artist, const QString &album);
 
     QFuture<void> markSongDownloaded(const QString &videoId, bool downloaded);
+    QCoro::Task<bool> songDownloaded(const QString &videoId);
 
     Q_SIGNAL void downloadedChanged(const QString &videoId);
 

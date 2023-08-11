@@ -5,6 +5,8 @@
 #include "videoinfoextractor.h"
 
 #include "asyncytmusic.h"
+#include "library.h"
+#include "downloadmanager.h"
 
 VideoInfoExtractor::VideoInfoExtractor(QObject *parent)
     : QObject(parent)
@@ -18,18 +20,31 @@ VideoInfoExtractor::VideoInfoExtractor(QObject *parent)
 
         setLoading(true);
 
-        auto future = YTMusicThread::instance()->extractVideoInfo(QString::fromStdString(m_videoId.toStdString()));
-        QCoro::connect(std::move(future), this, [this](const video_info::VideoInfo &videoInfo) {
-            m_videoInfo = videoInfo;
-            setLoading(false);
-            Q_EMIT songChanged();
+        QCoro::connect(Library::instance().songDownloaded(m_videoId), this, [this](bool downloaded) {
+            m_downloaded = downloaded;
+            if (downloaded) {
+                Q_EMIT songChanged();
+            }
+
+            auto future = YTMusicThread::instance()->extractVideoInfo(QString::fromStdString(m_videoId.toStdString()));
+            QCoro::connect(std::move(future), this, [this, downloaded](const video_info::VideoInfo &videoInfo) {
+                m_videoInfo = videoInfo;
+                setLoading(false);
+                if (!downloaded) {
+                    Q_EMIT songChanged();
+                }
+            });
         });
     });
 }
 
 QUrl VideoInfoExtractor::audioUrl() const
 {
-    return pickAudioUrl(m_videoInfo.formats);
+    if (m_downloaded) {
+        return QUrl::fromLocalFile(DownloadManager::localPathOf(m_videoId));
+    } else {
+        return pickAudioUrl(m_videoInfo.formats);
+    }
 }
 
 QString VideoInfoExtractor::videoId() const

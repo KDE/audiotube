@@ -47,6 +47,7 @@ public:
 
 private:
     bool m_loading = false;
+    bool m_downloaded = false;
     QString m_videoId;
     video_info::VideoInfo m_videoInfo;
 };
