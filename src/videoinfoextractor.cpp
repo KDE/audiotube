@@ -39,24 +39,27 @@ VideoInfoExtractor::VideoInfoExtractor(QObject *parent)
                         Q_EMIT songChanged();
                     }
                 });
-            } else {
-                auto future = YTMusicThread::instance()->extractVideoInfo(QString::fromStdString(m_videoId.toStdString()));
-                QCoro::connect(std::move(future), this, [this](video_info::VideoInfo &&videoInfo) {
-                    m_videoInfo = std::move(videoInfo);
-                    setLoading(false);
-                    Q_EMIT songChanged();
-                });
             }
+
+            auto future = YTMusicThread::instance()->extractVideoInfo(QString::fromStdString(m_videoId.toStdString()));
+            QCoro::connect(std::move(future), this, [this](video_info::VideoInfo &&videoInfo) {
+                if (videoInfo.id.empty()) {
+                    return;
+                }
+                m_videoInfo = std::move(videoInfo);
+                setLoading(false);
+                Q_EMIT songChanged();
+            });
         });
     });
 }
 
 QUrl VideoInfoExtractor::audioUrl() const
 {
-    if (m_downloaded) {
+    if (!m_videoInfo) {
         return QUrl::fromLocalFile(DownloadManager::localPathOf(m_videoId));
     } else {
-        return pickAudioUrl(m_videoInfo.formats);
+        return pickAudioUrl(m_videoInfo->formats);
     }
 }
 
@@ -76,26 +79,26 @@ void VideoInfoExtractor::setVideoId(const QString &videoId)
 
 QString VideoInfoExtractor::title() const
 {
-    if (m_downloaded) {
+    if (!m_videoInfo) {
         return m_localInfo.title;
     }
-    return QString::fromStdString(m_videoInfo.title);
+    return QString::fromStdString(m_videoInfo->title);
 }
 
 QString VideoInfoExtractor::artist() const
 {
-    if (m_downloaded) {
+    if (!m_videoInfo) {
         return m_localInfo.artist;
     }
-    return QString::fromStdString(m_videoInfo.artist);
+    return QString::fromStdString(m_videoInfo->artist);
 }
 
 QUrl VideoInfoExtractor::thumbnail() const
 {
-    if (m_downloaded) {
+    if (!m_videoInfo) {
         return m_thumbnailSource.cachedPath();
     }
-    return QUrl(QString::fromStdString(m_videoInfo.thumbnail));
+    return QUrl(QString::fromStdString(m_videoInfo->thumbnail));
 }
 
 bool VideoInfoExtractor::loading() const

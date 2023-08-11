@@ -48,6 +48,15 @@ QString DownloadManager::localPathOf(const QString &videoId)
 QCoro::Task<> DownloadManager::download(const QString videoId)
 {
     auto info = co_await YTMusicThread::instance()->extractVideoInfo(videoId);
+
+    // If we don't know anything about the song yet, save what we know
+    // This allows searching for the song if it was just downloaded
+    QCoro::connect(Library::instance().getSong(videoId), this, [=](auto &&song) {
+        if (!song) {
+            Library::instance().addSong(videoId, QString::fromStdString(info.title), QString::fromStdString(info.artist), {});
+        }
+    });
+
     QUrl url = pickAudioUrl(info.formats);
 
     auto *reply = Library::instance().nam().get(QNetworkRequest(url));
@@ -55,11 +64,11 @@ QCoro::Task<> DownloadManager::download(const QString videoId)
     QString directory = downloadDirectory();
     QDir(directory).mkpath(".");
 
-    QString location = directory % "/" % videoId;
+    QString downloadLocation = directory % "/" % videoId % ".part";
 
-    auto *file = new QFile(location);
+    auto *file = new QFile(downloadLocation);
     if (!file->open(QFile::WriteOnly | QFile::Truncate)) {
-        qDebug() << "Failed to open" << location << "for writing";
+        qDebug() << "Failed to open" << downloadLocation << "for writing";
         co_return;
     }
 
@@ -77,6 +86,9 @@ QCoro::Task<> DownloadManager::download(const QString videoId)
 
     file->close();
     file->deleteLater();
+
+    QString location = directory % "/" % videoId;
+    QFile::rename(downloadLocation, location);
 
     Library::instance().markSongDownloaded(videoId, true);
     Q_EMIT Library::instance().downloadedChanged(videoId);

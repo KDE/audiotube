@@ -50,7 +50,7 @@ public:
 private:
     bool m_loading = false;
     QString m_videoId;
-    video_info::VideoInfo m_videoInfo;
+    std::optional<video_info::VideoInfo> m_videoInfo;
 
     // Fallback data used when offline
     bool m_downloaded = false;
