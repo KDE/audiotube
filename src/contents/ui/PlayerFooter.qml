@@ -98,7 +98,7 @@ Flickable {
         id: info
 
         videoId: UserPlaylistModel.currentVideoId
-        onTitleChanged: {
+        onAudioUrlChanged: {
             let index = UserPlaylistModel.index(UserPlaylistModel.currentIndex, 0)
             let videoId = UserPlaylistModel.data(index, UserPlaylistModel.VideoId)
             let title = UserPlaylistModel.data(index, UserPlaylistModel.Title)

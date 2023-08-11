@@ -161,8 +161,16 @@ QNetworkAccessManager &Library::nam()
 
 QFuture<void> Library::addSong(const QString &videoId, const QString &title, const QString &artist, const QString &album)
 {
-    // replace is used here to update songs from times when we didn't store artist and album
-    return m_database->execute("insert or replace into songs (video_id, title, artist, album) values (?, ?, ?, ?)", videoId, title, artist, album);
+    if (!videoId.isEmpty() && !title.isEmpty()) {
+        // replace is used here to update songs from times when we didn't store artist and album
+        return m_database->execute("insert or replace into songs (video_id, title, artist, album) values (?, ?, ?, ?)", videoId, title, artist, album);
+    }
+    return {};
+}
+
+QFuture<std::optional<Song>> Library::getSong(const QString &videoId)
+{
+    return m_database->getResult<Song>("select * from songs where video_id = ?", videoId);
 }
 
 QFuture<void> Library::markSongDownloaded(const QString &videoId, bool downloaded)

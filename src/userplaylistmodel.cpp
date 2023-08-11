@@ -31,13 +31,29 @@ UserPlaylistModel::UserPlaylistModel(QObject *parent)
         m_playlist = std::move(playlist);
         endResetModel();
         setCurrentVideoId({});
-        if (m_shuffle) {
-            shufflePlaylist();
 
-            // reset shuffle
-            setShuffle(false);
-        }
-        if (!m_playlist.tracks.empty()) {
+        if (m_playlist.tracks.empty()) {
+            // offline mode
+            QCoro::connect(Library::instance().getSong(m_initialVideoId), this, [this](auto song) {
+                if (song) {
+                    watch::Playlist::Track track;
+                    track.video_id = m_initialVideoId.toStdString();
+                    track.title = song->title.toStdString();
+                    track.artists = {meta::Artist {song->artist.toStdString(), {}}};
+
+                    beginResetModel();
+                    m_playlist.tracks.push_back(std::move(track));
+                    endResetModel();
+                    setCurrentVideoId(QString::fromStdString(m_playlist.tracks.front().video_id));
+                }
+            });
+        } else {
+            if (m_shuffle) {
+                shufflePlaylist();
+
+                // reset shuffle
+                setShuffle(false);
+            }
             setCurrentVideoId(QString::fromStdString(m_playlist.tracks.front().video_id));
         }
     };

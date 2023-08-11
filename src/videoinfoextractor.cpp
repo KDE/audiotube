@@ -11,7 +11,10 @@
 VideoInfoExtractor::VideoInfoExtractor(QObject *parent)
     : QObject(parent)
 {
+    connect(&m_thumbnailSource, &ThumbnailSource::cachedPathChanged, this, &VideoInfoExtractor::songChanged);
+
     connect(this, &VideoInfoExtractor::videoIdChanged, this, [this] {
+        qDebug() << "video id changed to" << m_videoId;
         if (m_videoId.isEmpty()) {
             m_videoInfo = {};
             Q_EMIT songChanged();
@@ -26,14 +29,24 @@ VideoInfoExtractor::VideoInfoExtractor(QObject *parent)
                 Q_EMIT songChanged();
             }
 
-            auto future = YTMusicThread::instance()->extractVideoInfo(QString::fromStdString(m_videoId.toStdString()));
-            QCoro::connect(std::move(future), this, [this, downloaded](const video_info::VideoInfo &videoInfo) {
-                m_videoInfo = videoInfo;
-                setLoading(false);
-                if (!downloaded) {
+            if (downloaded) {
+                m_thumbnailSource.setVideoId(m_videoId);
+
+                QCoro::connect(Library::instance().getSong(m_videoId), this, [this](auto &&song) {
+                    if (song) {
+                        m_localInfo = std::move(*song);
+                        setLoading(false);
+                        Q_EMIT songChanged();
+                    }
+                });
+            } else {
+                auto future = YTMusicThread::instance()->extractVideoInfo(QString::fromStdString(m_videoId.toStdString()));
+                QCoro::connect(std::move(future), this, [this](video_info::VideoInfo &&videoInfo) {
+                    m_videoInfo = std::move(videoInfo);
+                    setLoading(false);
                     Q_EMIT songChanged();
-                }
-            });
+                });
+            }
         });
     });
 }
@@ -63,22 +76,26 @@ void VideoInfoExtractor::setVideoId(const QString &videoId)
 
 QString VideoInfoExtractor::title() const
 {
+    if (m_downloaded) {
+        return m_localInfo.title;
+    }
     return QString::fromStdString(m_videoInfo.title);
 }
 
 QString VideoInfoExtractor::artist() const
 {
+    if (m_downloaded) {
+        return m_localInfo.artist;
+    }
     return QString::fromStdString(m_videoInfo.artist);
 }
 
-QString VideoInfoExtractor::channel() const
+QUrl VideoInfoExtractor::thumbnail() const
 {
-    return QString::fromStdString(m_videoInfo.channel);
-}
-
-QString VideoInfoExtractor::thumbnail() const
-{
-    return QString::fromStdString(m_videoInfo.thumbnail);
+    if (m_downloaded) {
+        return m_thumbnailSource.cachedPath();
+    }
+    return QUrl(QString::fromStdString(m_videoInfo.thumbnail));
 }
 
 bool VideoInfoExtractor::loading() const

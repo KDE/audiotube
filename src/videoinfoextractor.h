@@ -8,6 +8,8 @@
 #include <QUrl>
 
 #include <ytmusic.h>
+#include "library.h"
+#include "thumbnailsource.h"
 
 class VideoInfoExtractor : public QObject
 {
@@ -19,7 +21,7 @@ class VideoInfoExtractor : public QObject
     Q_PROPERTY(QString title READ title NOTIFY songChanged)
     Q_PROPERTY(QString artist READ artist NOTIFY songChanged) // may be empty if it is a video
     Q_PROPERTY(QString channel READ channel NOTIFY songChanged)
-    Q_PROPERTY(QString thumbnail READ thumbnail NOTIFY songChanged)
+    Q_PROPERTY(QUrl thumbnail READ thumbnail NOTIFY songChanged)
     Q_PROPERTY(bool loading READ loading WRITE setLoading NOTIFY songChanged)
 
 public:
@@ -37,7 +39,7 @@ public:
 
     QString channel() const;
 
-    QString thumbnail() const;
+    QUrl thumbnail() const;
 
     bool loading() const;
     void setLoading(bool loading);
@@ -47,7 +49,11 @@ public:
 
 private:
     bool m_loading = false;
-    bool m_downloaded = false;
     QString m_videoId;
     video_info::VideoInfo m_videoInfo;
+
+    // Fallback data used when offline
+    bool m_downloaded = false;
+    Song m_localInfo;
+    ThumbnailSource m_thumbnailSource;
 };

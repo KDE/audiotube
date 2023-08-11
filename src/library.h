@@ -22,11 +22,6 @@ class WasPlayedWatcher;
 struct Song {
     using ColumnTypes = std::tuple<QString, QString, QString, QString>;
 
-    static Song fromSql(ColumnTypes tuple) {
-        auto [videoId, title, artist, album] = tuple;
-        return Song {videoId, title, artist, album};
-    }
-
     QString videoId;
     QString title;
     QString artist;
@@ -179,6 +174,7 @@ public:
         return *m_database;
     }
     QFuture<void> addSong(const QString &videoId, const QString &title, const QString &artist, const QString &album);
+    QFuture<std::optional<Song>> getSong(const QString &videoId);
 
     QFuture<void> markSongDownloaded(const QString &videoId, bool downloaded);
     QCoro::Task<bool> songDownloaded(const QString &videoId);
