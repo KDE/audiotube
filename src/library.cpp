@@ -471,7 +471,8 @@ LocalSearchModel::LocalSearchModel(QObject *parent) : PlaybackHistoryModel(paren
 {
     connect(this, &LocalSearchModel::searchQueryChanged, this, [this]() {
         auto resultFuture = Library::instance().database()
-                                .getResults<PlayedSong>("select * from played_songs natural join songs "
+                                .getResults<PlayedSong>("select songs.video_id, plays, title, artist, album, not downloaded_songs.video_id is null "
+                                                        "from songs left join played_songs on songs.video_id = played_songs.video_id "
                                                         "left join downloaded_songs on songs.video_id = downloaded_songs.video_id "
                                                         "where title like '%" % m_searchQuery % "%' "
                                                         "order by plays desc limit 10");
