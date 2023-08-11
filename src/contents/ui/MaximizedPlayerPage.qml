@@ -17,7 +17,7 @@ import "dialogs"
 Item {
     id: root
 
-    required property var info // VideoInfoExtractor object
+    required property VideoInfoExtractor info // VideoInfoExtractor object
     required property var audio // Audio object
     required property string thumbnail
     readonly property bool isWidescreen: width >= Kirigami.Units.gridUnit * 50
@@ -428,6 +428,38 @@ Item {
                         text: favouriteWatcher ? (favouriteWatcher.isFavourite ? i18n("Remove from Favourites") : i18n("Add to Favourites")) : i18n("Add to Favourites")
                         icon.name: favouriteWatcher ? (favouriteWatcher.isFavourite ? "starred-symbolic" : "non-starred-symbolic") : "non-starred-symbolic"
                         enabled: favouriteWatcher
+                        icon.color: "white"
+                        display: AbstractButton.IconOnly
+
+                        ToolTip.text: text
+                        ToolTip.delay: Kirigami.Units.toolTipDelay
+                        ToolTip.visible: Kirigami.Settings.isMobile ? pressed : hovered
+
+                        Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
+                        Kirigami.Theme.inherit: false
+                    }
+
+                    ToolButton {
+                        id: downloadButton
+
+                        DownloadedWatcher {
+                            id: downloadedWatcher
+                            videoId: info.videoId
+                        }
+
+                        Layout.alignment: Qt.AlignRight | Qt.AlignVCenter
+                        Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
+                        Layout.maximumWidth: height
+                        Layout.preferredWidth: height
+                        onClicked: {
+                            if (downloadedWatcher.downloaded) {
+                                DownloadManager.deleteDownload(info.videoId)
+                            } else {
+                                DownloadManager.downloadSong(info.videoId)
+                            }
+                        }
+                        text: downloadedWatcher.downloaded ? i18n("Delete Download") : i18n("Download")
+                        icon.name: downloadedWatcher.downloaded ? "delete" : "download"
                         icon.color: "white"
                         display: AbstractButton.IconOnly
 
