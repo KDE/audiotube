@@ -98,7 +98,7 @@ Flickable {
         id: info
 
         videoId: UserPlaylistModel.currentVideoId
-        onAudioUrlChanged: {
+        onTitleChanged: {
             let index = UserPlaylistModel.index(UserPlaylistModel.currentIndex, 0)
             let videoId = UserPlaylistModel.data(index, UserPlaylistModel.VideoId)
             let title = UserPlaylistModel.data(index, UserPlaylistModel.Title)
@@ -122,6 +122,9 @@ Flickable {
         asynchronous: true
         sourceComponent: MediaPlayer {
             id: audio
+
+            autoPlay: true
+            autoLoad: true
 
             source: info.audioUrl
             onSourceChanged: play()
