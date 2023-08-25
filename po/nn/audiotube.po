@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-07-09 00:59+0000\n"
-"PO-Revision-Date: 2023-08-10 18:56+0200\n"
+"PO-Revision-Date: 2023-08-24 21:35+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -283,17 +283,17 @@ msgstr "Merk som favoritt"
 #: contents/ui/MaximizedPlayerPage.qml:451
 #, kde-format
 msgid "Open Volume Drawer"
-msgstr ""
+msgstr "Opna lydstyrke-skuff"
 
 #: contents/ui/MaximizedPlayerPage.qml:559
 #, kde-format
 msgid "Unmute Audio"
-msgstr ""
+msgstr "Slå av lyddemping"
 
 #: contents/ui/MaximizedPlayerPage.qml:559
 #, kde-format
 msgid "Mute Audio"
-msgstr ""
+msgstr "Demp lyd"
 
 #: contents/ui/MaximizedPlayerPage.qml:602
 #, kde-format
@@ -303,33 +303,33 @@ msgstr "%1 %"
 #: contents/ui/MaximizedPlayerPage.qml:633
 #, kde-format
 msgid "Hide Lyrics"
-msgstr ""
+msgstr "Gøym songtekst"
 
 #: contents/ui/MaximizedPlayerPage.qml:633
 #, kde-format
 msgid "Show Lyrics"
-msgstr ""
+msgstr "Vis songtekst"
 
 #: contents/ui/MaximizedPlayerPage.qml:653 contents/ui/SongMenu.qml:183
 #: contents/ui/SongMenu.qml:269
 #, kde-format
 msgid "Share Song"
-msgstr ""
+msgstr "Del song"
 
 #: contents/ui/MaximizedPlayerPage.qml:699
 #, kde-format
 msgid "Add to a local playlist"
-msgstr ""
+msgstr "Legg til i lokal speleliste"
 
 #: contents/ui/MaximizedPlayerPage.qml:736
 #, kde-format
 msgid "Hide Queue"
-msgstr ""
+msgstr "Gøym avspelingskøen"
 
 #: contents/ui/MaximizedPlayerPage.qml:736
 #, kde-format
 msgid "Show Queue"
-msgstr ""
+msgstr "Vis avspelingskøen"
 
 #: contents/ui/MaximizedPlayerPage.qml:956
 #: contents/ui/MaximizedPlayerPage.qml:1198
@@ -340,17 +340,17 @@ msgstr "Fjern spor"
 #: contents/ui/MaximizedPlayerPage.qml:995
 #, kde-format
 msgid "Clear Queue"
-msgstr ""
+msgstr "Tøm avspelingskøen"
 
 #: contents/ui/MaximizedPlayerPage.qml:1020
 #, kde-format
 msgid "Shuffle Queue"
-msgstr ""
+msgstr "Stokk om på avspelingskøen"
 
 #: contents/ui/MaximizedPlayerPage.qml:1050
 #, kde-format
 msgid "Upcoming Songs"
-msgstr ""
+msgstr "Framtidige songar"
 
 #: contents/ui/NavigationBar.qml:24 contents/ui/Sidebar.qml:100
 #, kde-format
@@ -375,7 +375,7 @@ msgstr "Ingen songar enno"
 #: contents/ui/PlaylistPage.qml:110
 #, kde-format
 msgid "Playlist successfully imported"
-msgstr ""
+msgstr "Spelelista vart importert"
 
 #: contents/ui/PlaylistPage.qml:131
 #, kde-format
@@ -400,7 +400,7 @@ msgstr "Artistar"
 #: contents/ui/SearchPage.qml:36
 #, kde-format
 msgid "Top Results"
-msgstr ""
+msgstr "Toppresultat"
 
 #: contents/ui/SearchPage.qml:39 playlistimporter.cpp:23
 #, kde-format
@@ -415,22 +415,22 @@ msgstr "Ingen samsvarande tidlegare søk"
 #: contents/ui/ShareMenu.qml:39
 #, kde-format
 msgid "Share to"
-msgstr ""
+msgstr "Del til"
 
 #: contents/ui/ShareMenu.qml:49 contents/ui/ShareMenu.qml:99
 #, kde-format
 msgid "Copy Link"
-msgstr ""
+msgstr "Kopier lenkje"
 
 #: contents/ui/ShareMenu.qml:54 contents/ui/ShareMenu.qml:104
 #, kde-format
 msgid "Link copied to clipboard"
-msgstr ""
+msgstr "Lenkje kopiert til utklippstavla"
 
 #: contents/ui/Sidebar.qml:189
 #, kde-format
 msgid "About"
-msgstr ""
+msgstr "Om"
 
 #: contents/ui/Sidebar.qml:203
 #, kde-format
@@ -465,66 +465,66 @@ msgstr "Fjern frå loggen"
 #: contents/ui/SongMenu.qml:156 contents/ui/SongMenu.qml:244
 #, kde-format
 msgid "Add to playlist"
-msgstr ""
+msgstr "Legg til i speleliste"
 
 #: main.cpp:64
 #, kde-format
 msgid "YouTube Music Player"
-msgstr ""
+msgstr "YouTube Music-spelar"
 
 #: main.cpp:66
 #, kde-format
 msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
-msgstr ""
+msgstr "© 2021–2023 Jonah Brüchert, 2021–2023 KDE-fellesskapet"
 
 #: main.cpp:67
 #, kde-format
 msgid "Jonah Brüchert"
-msgstr ""
+msgstr "Jonah Brüchert"
 
 #: main.cpp:67
 #, kde-format
 msgid "Maintainer"
-msgstr ""
+msgstr "Vedlikehaldar"
 
 #: main.cpp:68
 #, kde-format
 msgid "Mathis Brüchert"
-msgstr ""
+msgstr "Mathis Brüchert"
 
 #: main.cpp:68
 #, kde-format
 msgid "Designer"
-msgstr ""
+msgstr "Designar"
 
 #: main.cpp:69
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Øystein Steffensen-Alværvik"
+msgstr "Øystein Steffensen-Alværvik,Karl Ove Hufthammer"
 
 #: main.cpp:69
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "oysteins.omsetting@protonmail.com"
+msgstr "oysteins.omsetting@protonmail.com,karl@huftis.org"
 
 #: main.cpp:74
 #, kde-format
 msgid "Unofficial API for YouTube Music"
-msgstr ""
+msgstr "Uoffisielt API for YouTube Music"
 
 #: playlistimporter.cpp:23
 #, kde-format
 msgid "No description"
-msgstr ""
+msgstr "Inga skildring"
 
 #: playlistimporter.cpp:57
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "Utan tittel"
 
 #: playlistimporter.cpp:59
 #, kde-format
 msgid "No album"
-msgstr ""
+msgstr "Ingen album"
