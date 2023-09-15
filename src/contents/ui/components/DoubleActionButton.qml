@@ -128,6 +128,6 @@ Kirigami.ShadowedRectangle{
         anchors.left: root.left
         height: 55
         width: 55
-        display: Controls.AbstractButton.IconOnl
+        display: Controls.AbstractButton.IconOnly
     }
 }

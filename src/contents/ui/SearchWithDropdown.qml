@@ -369,7 +369,7 @@ Item {
 
                             id: completionDelegate
                             highlighted: focus || (completionList.selectedDelegate == index)
-                            Kirigami.Theme.colorSet: Kirigami.Theme.Window
+                            Kirigami.Theme.colorSet: Kirigami.Theme.View
                             Kirigami.Theme.inherit: false
                             Layout.fillWidth: true
                             height: completionList.delegateHeight

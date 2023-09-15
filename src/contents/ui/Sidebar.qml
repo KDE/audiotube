@@ -12,6 +12,7 @@ Rectangle {
     property int sidebarWidth: 230
     property int sidebarWidthCollapsed: 60
     property bool collapsed: false
+
     id: sidebar
     width: sidebarWidth
     clip:true
@@ -97,14 +98,12 @@ Rectangle {
                     width: column.width - column.Layout.leftMargin - column.Layout.rightMargin
                     implicitHeight: 50
                     display: Controls.AbstractButton.TextBesideIcon
-                    text: collapsed? "" : i18n("Library")
+                    text: collapsed ? "" : i18n("Library")
                     icon.name: "file-library-symbolic"
                     checked: pageStack.currentItem && pageStack.currentItem.objectName == "libraryPage"
                     onClicked: {
                         pageStack.clear()
                         pageStack.push("qrc:/LibraryPage.qml")
-
-
                     }
                 }
                 Kirigami.NavigationTabButton {
