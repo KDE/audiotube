@@ -99,6 +99,7 @@ private:
                 interface->reportResult(val);
                 interface->reportFinished();
             } catch (const std::exception &err) {
+                interface->reportResult({});
                 interface->reportFinished();
                 Q_EMIT errorOccurred(QString::fromLocal8Bit(err.what()));
             }
