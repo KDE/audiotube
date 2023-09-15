@@ -13,7 +13,7 @@ import org.kde.ytmusic 1.0
 
 Kirigami.ScrollablePage {
     id: root
-    property alias channelId: artistModel.channelId
+    property string channelId
     property string radioId
     property string shuffleId
     title: artistModel.title
@@ -116,6 +116,8 @@ Kirigami.ScrollablePage {
 
         model: ArtistModel {
             id: artistModel
+
+            channelId: root.channelId
 
             onOpenAlbum: (browseId) => {
                 pageStack.push("qrc:/AlbumPage.qml", {
