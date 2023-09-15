@@ -269,6 +269,8 @@ Item {
             to: -0
         }
 
+        property alias fieldContainer: fieldContainer
+
         contentItem: ColumnLayout{
             id: content
             width: parent.width
@@ -280,13 +282,13 @@ Item {
                     y:-popup.expansion
                     id: fieldContainer
                     height:searchField.height
-
                 }
                 implicitHeight: fieldContainer.height
             }
 
             Controls.ScrollView {
                 id: mainScrollView
+                implicitHeight: mainScrollViewLayout.implicitHeight
 
                 clip: true
                 

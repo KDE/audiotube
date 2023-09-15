@@ -280,8 +280,8 @@ Kirigami.ApplicationWindow {
         canControl: true
         canGoNext: UserPlaylistModel.canSkip
         canGoPrevious: UserPlaylistModel.canSkipBack
-        canPause: playerFooter.audioPlayer.status !== Audio.NoMedia
-        canPlay: playerFooter.audioPlayer.status !== Audio.NoMedia
+        canPause: playerFooter.audioPlayer.status !== MediaPlayer.NoMedia
+        canPlay: playerFooter.audioPlayer.status !== MediaPlayer.NoMedia
         canSeek: false
 
         playbackStatus: playerFooter.audioPlayer.playbackState === MediaPlayer.PlayingState ? Mpris.Playing : (playerFooter.audioPlayer.playbackState == MediaPlayer.PausedState ? Mpris.Paused : Mpris.Stopped)
@@ -292,10 +292,10 @@ Kirigami.ApplicationWindow {
         onPauseRequested: playerFooter.audioPlayer.pause()
         onPlayRequested: playerFooter.audioPlayer.play()
         onPlayPauseRequested: {
-            if(playerFooter.audioPlayer.playbackStatus === PlayingState) {
+            if(playerFooter.audioPlayer.playbackStatus === MediaPlayer.PlayingState) {
                 playerFooter.audioPlayer.pause()
             }
-            else if(playerFooter.PlayingState === PausedState) {
+            else if(playerFooter.PlayingState === MediaPlayer.PausedState) {
                 PlayerFooter.audioPlayer.play()
             }
         }
