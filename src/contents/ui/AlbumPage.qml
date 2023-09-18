@@ -13,7 +13,7 @@ import "components"
 
 Kirigami.ScrollablePage {
     id: root
-    property alias browseId: albumModel.browseId
+    property string browseId
     title: albumModel.title
     ShareMenu {
         id: shareMenu
@@ -116,6 +116,8 @@ Kirigami.ScrollablePage {
 
         model: AlbumModel {
             id: albumModel
+
+            browseId: root.browseId
         }
         SongMenu {
             id: menu

@@ -370,7 +370,7 @@ Item {
                         enabled: audio.seekable
                         onMoved: {
                             console.log("Value:", value);
-                            audio.seek(Math.floor(value));
+                            audio.position = Math.floor(value);
                         }
 
                         Behavior on value {
@@ -523,12 +523,12 @@ Item {
                         id: muteButton
 
                         function muteAudio() {
-                            audio.muted = true
+                            audioOutput.muted = true
                             volumeSlider.opacity = 0.5
                             checked = true
                         }
                         function unmuteAudio() {
-                            audio.muted = false
+                            audioOutput.muted = false
                             volumeSlider.opacity = 1
                             checked = false
                         }
@@ -539,7 +539,7 @@ Item {
                         Layout.preferredWidth: height
 
                         onClicked: {
-                            if(audio.muted) {
+                            if(audioOutput.muted) {
                                 unmuteAudio()
                             }
                             else {
@@ -547,7 +547,7 @@ Item {
                             }
                         }
 
-                        icon.name: audio.muted ? "audio-volume-muted" : (volumeSlider.value < .33 ? "audio-volume-low" : (volumeSlider.value < .66 ? "audio-volume-medium" : "audio-volume-high"))
+                        icon.name: audioOutput.muted ? "audio-volume-muted" : (volumeSlider.value < .33 ? "audio-volume-low" : (volumeSlider.value < .66 ? "audio-volume-medium" : "audio-volume-high"))
                         icon.color: "white"
                         
                         Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
@@ -556,7 +556,7 @@ Item {
                         checkable: true
                         visible: isWidescreen
                         enabled: isWidescreen
-                        text: audio.muted ? i18n("Unmute Audio") : i18n("Mute Audio")
+                        text: audioOutput.muted ? i18n("Unmute Audio") : i18n("Mute Audio")
                         display: AbstractButton.IconOnly
 
                         ToolTip.text: text

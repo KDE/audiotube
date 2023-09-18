@@ -119,10 +119,12 @@ Kirigami.ScrollablePage {
                 text: i18n("Show All")
                 Layout.alignment: Qt.AlignRight
                 icon.name: "arrow-right"
-                onClicked: {pageStack.push("qrc:/PlaybackHistory.qml", {
-                      "title": i18n("Favourites"),
-                      "objectName": "favourites"
-                  })}
+                onClicked: {
+                    pageStack.push(pool.loadPageWithProperties("qrc:/PlaybackHistory.qml#favourites", {
+                        "title": i18n("Favourites"),
+                        "objectName": "favourites"
+                    }))
+                }
             }
         }
 
@@ -306,10 +308,12 @@ Kirigami.ScrollablePage {
                 text: i18n("Show All")
                 Layout.alignment: Qt.AlignRight
                 icon.name: "arrow-right"
-                onClicked: {pageStack.push("qrc:/PlaybackHistory.qml", {
-                      "title": i18n("Played Songs"),
-                      "objectName": "history"
-                  })}
+                onClicked: {
+                    pageStack.push(pool.loadPageWithProperties("qrc:/PlaybackHistory.qml#history", {
+                        "title": i18n("Played Songs"),
+                        "objectName": "history"
+                    }))
+                }
             }
         }
         Kirigami.Icon {

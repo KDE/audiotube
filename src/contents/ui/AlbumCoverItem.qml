@@ -27,11 +27,13 @@ Item {
         id: coverArea
         acceptedButtons: Qt.LeftButton | Qt.RightButton
         anchors.fill: parent
-        onClicked: if (mouse.button === Qt.RightButton) {
-                       root.optionsClicked()
-                   } else if (mouse.button === Qt.LeftButton) {
-                       root.clicked()
-                   }
+        onClicked: (mouse) => {
+           if (mouse.button === Qt.RightButton) {
+                root.optionsClicked()
+            } else if (mouse.button === Qt.LeftButton) {
+                root.clicked()
+            }
+        }
 
         hoverEnabled: !Kirigami.Settings.hasTransientTouchInput
         onEntered: {

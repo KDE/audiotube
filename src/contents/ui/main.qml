@@ -39,6 +39,10 @@ Kirigami.ApplicationWindow {
         visible: wideScreen
     }
 
+    Kirigami.PagePool {
+        id: pool
+    }
+
     Sidebar {
         id:sidebar
         visible: wideScreen
@@ -113,7 +117,7 @@ Kirigami.ApplicationWindow {
         id: contextDrawer
     }
 
-    pageStack.initialPage: "qrc:/LibraryPage.qml"
+    pageStack.initialPage: pool.loadPage(Qt.resolvedUrl("qrc:/LibraryPage.qml"))
     pageStack.clip: true
 
     function play(videoId) {
