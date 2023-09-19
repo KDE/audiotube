@@ -144,7 +144,7 @@ Item {
                             delegate: Kirigami.BasicListItem{
                                 required property var modelData
                                 label: modelData.text
-                                icon: modelData.icon.name
+                                icon.name: modelData.icon.name
                                 onClicked: {
                                     modelData.triggered()
                                     overflowDrawer.close()
