@@ -66,8 +66,9 @@ Item{
 
                     required property string iconName
                     required property int index
+                    required property string actionDisplay
 
-                    label: shareDelegate.display
+                    label: shareDelegate.actionDisplay
                     onClicked: view.createJob (shareDelegate.index)
                     Keys.onReturnPressed: view.createJob (shareDelegate.index)
                     Keys.onEnterPressed: view.createJob (shareDelegate.index)
