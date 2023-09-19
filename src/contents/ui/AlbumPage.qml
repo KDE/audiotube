@@ -15,11 +15,7 @@ Kirigami.ScrollablePage {
     id: root
     property string browseId
     title: albumModel.title
-    ShareMenu {
-        id: shareMenu
-        inputTitle: albumModel.title
-        url: albumModel.webUrl
-    }
+
     DoubleActionButton {
         id: action
         visible: false
@@ -100,7 +96,7 @@ Kirigami.ScrollablePage {
                     text: i18n("Share")
                     icon.name: "emblem-shared-symbolic"
                     onTriggered:{
-                        shareMenu.open()
+                        openShareMenu(albumModel.title, albumModel.webUrl)
                     }
                 }
 

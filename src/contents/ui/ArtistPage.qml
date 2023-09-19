@@ -17,11 +17,7 @@ Kirigami.ScrollablePage {
     property string radioId
     property string shuffleId
     title: artistModel.title
-    ShareMenu {
-        id: shareMenu
-        inputTitle: artistModel.title
-        url: artistModel.webUrl
-    }
+
     SongMenu {
         id: menu
     }
@@ -100,7 +96,7 @@ Kirigami.ScrollablePage {
                     text: i18n("Share")
                     icon.name: "emblem-shared-symbolic"
                     onTriggered: {
-                        shareMenu.open()
+                        openShareMenu(artistModel.title, artistModel.webUrl)
                     }
                 }
             ]

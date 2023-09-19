@@ -125,12 +125,12 @@ Item {
                     id: overflowMenu
                     Instantiator {
                         model: root.overflowActions
-                        onObjectAdded: (index) => overflowMenu.insertItem(index, object)
-                        onObjectRemoved: (index) => overflowMenu.removeItem(object)
+                        onObjectAdded: (index, object) => overflowMenu.insertItem(index, object)
+                        onObjectRemoved: (index, object) => overflowMenu.removeItem(object)
                         delegate: Controls.MenuItem {
                             required property var modelData
                             icon.name: modelData.icon.name
-                            text:modelData.text
+                            text: modelData.text
                             onTriggered: modelData.triggered()
                         }
                     }

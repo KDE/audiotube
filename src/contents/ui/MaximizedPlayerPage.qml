@@ -644,7 +644,7 @@ Item {
                         Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
                         Layout.maximumWidth: height
                         Layout.preferredWidth: height
-                        onClicked: shareMenu.open()
+                        onClicked: openShareMenu(info.title, UserPlaylistModel.webUrl)
 
                         text: i18n("Share Song")
                         icon.name: "emblem-shared-symbolic"
@@ -659,11 +659,6 @@ Item {
 
                         Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
                         Kirigami.Theme.inherit: false
-                        ShareMenu {
-                            id: shareMenu
-                            url: UserPlaylistModel.webUrl
-                            inputTitle: info.title
-                        }
                     }
 
                     PlaylistDialog{

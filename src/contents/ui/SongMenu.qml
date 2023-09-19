@@ -15,16 +15,10 @@ Item {
     property string videoId
     property list<Kirigami.Action> pageSpecificActions
 
-    ShareMenu {
-        id: shareMenu
-    }
     PlaylistDialog{
         id: playlistDialog
     }
     function openForSong(videoId, songTitle, artists, artistsDisplayString) {
-        shareMenu.url = "https://music.youtube.com/watch?v=" + videoId
-        shareMenu.inputTitle= songTitle
-
         menu.videoId = videoId
         drawer.videoId = videoId
         playlistDialog.videoId = videoId
@@ -183,7 +177,7 @@ Item {
                 label: i18n("Share Song")
                 icon.name: "emblem-shared-symbolic"
                 onClicked: {
-                    shareMenu.open()
+                    openShareMenu(drawer.songTitle, "https://music.youtube.com/watch?v=" + drawer.videoId)
                     drawer.close()
                 }
             }
@@ -268,7 +262,7 @@ Item {
         Controls.MenuItem {
             text: i18n("Share Song")
             icon.name: "emblem-shared-symbolic"
-            onTriggered: shareMenu.open()
+            onTriggered: openShareMenu(menu.songTitle, "https://music.youtube.com/watch?v=" + menu.videoId)
         }
     }
 }

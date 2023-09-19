@@ -43,6 +43,19 @@ Kirigami.ApplicationWindow {
         id: pool
     }
 
+    Loader {
+        id: shareMenu
+        active: false
+        sourceComponent: ShareMenu {}
+    }
+
+    function openShareMenu(inputTitle: string, url: string) {
+        shareMenu.active = true
+        shareMenu.item.inputTitle = inputTitle
+        shareMenu.item.url = url
+        shareMenu.item.open()
+    }
+
     Sidebar {
         id:sidebar
         visible: wideScreen

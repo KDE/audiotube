@@ -19,11 +19,6 @@ Kirigami.ScrollablePage {
     SongMenu {
         id: menu
     }
-    ShareMenu {
-        id: shareMenu
-        inputTitle: playlistModel.title
-        url: playlistModel.webUrl
-    }
     DoubleActionButton {
         id: action
         visible: false
@@ -120,7 +115,7 @@ Kirigami.ScrollablePage {
                     text: i18n("Share")
                     icon.name: "emblem-shared-symbolic"
                     onTriggered:{
-                        shareMenu.open()
+                        openShareMenu(playlistModel.title, playlistModel.webUrl)
                     }
                 }
 
