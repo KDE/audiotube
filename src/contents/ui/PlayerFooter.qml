@@ -114,14 +114,22 @@ Flickable {
         videoId: UserPlaylistModel.currentVideoId
     }
     
-    property var audioPlayer: Audio {
-        id: audio
+    property var audioPlayer: audioLoader.item
 
-        source: info.audioUrl
-        onStatusChanged: {
-            if (status === Audio.EndOfMedia) {
-                console.log("Song ended");
-                UserPlaylistModel.next();
+    Loader {
+        id: audioLoader
+        active: true
+        asynchronous: true
+        sourceComponent: Audio {
+            id: audio
+
+            autoPlay: true
+            source: info.audioUrl
+            onStatusChanged: {
+                if (status === Audio.EndOfMedia) {
+                    console.log("Song ended");
+                    UserPlaylistModel.next();
+                }
             }
         }
     }
