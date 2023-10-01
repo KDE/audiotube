@@ -23,7 +23,7 @@ msgid ""
 "Running with untested version of ytmusicapi %1. If you experience errors, "
 "please report them to your distribution."
 msgstr ""
-"Estase a usar unha versión non probada de ytmusicapi, a %1. Informe á súa "
+"Usando unha versión non probada de ytmusicapi, a %1. Informe á súa "
 "distribución de detecta algún erro."
 
 #: contents/ui/AlbumPage.qml:75 contents/ui/LibraryPage.qml:37
@@ -95,7 +95,7 @@ msgstr "Intérprete"
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
 "\"%1\"?"
-msgstr "Non se pode reproducir vídeo. Quere reproducir o son de «%1»?"
+msgstr "Non é posíbel reproducir vídeo. Quere reproducir o son de «%1»?"
 
 #: contents/ui/ArtistPage.qml:148 contents/ui/SearchPage.qml:26
 #, kde-format
