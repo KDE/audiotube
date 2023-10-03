@@ -24,6 +24,7 @@ apps:
         - unity7
         - network
         - network-bind
+        - network-observe
         - browser-support
         command-chain:
         - snap/command-chain/desktop-launch
@@ -152,12 +153,14 @@ parts:
         - libpython3.10
         - python3-pybind11
         - libqcoro5core0
+        - libsqlite3-0
         - yt-dlp
         - ytmusicapi
         - qml-module-org-kde-kirigami-addons-datetime
         - qml-module-org-kde-kirigami-addons-labs-mobileform
         - qml-module-org-kde-kirigami-addons-sounds
         - qml-module-org-kde-kirigami-addons-treeview
+        - qml-module-org-kde-purpose
         source: .
         source-type: local
         cmake-parameters:
