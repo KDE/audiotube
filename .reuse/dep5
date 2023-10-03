@@ -21,5 +21,8 @@ License: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
 Files: logo.png
        org.kde.audiotube.svg
+       snap/gui/logo.png
+       snapcraft.yaml
 Copyright: 2021 Mathis Brüchert <mbblp@protonmail.ch>
+           2023 Scarlett Moore <sgmoore@kde.org>
 License: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
