@@ -55,6 +55,7 @@ environment:
     PIP_USER: 1
     PYTHONPATH: "$PYTHONUSERBASE/lib/python3.10/site-packages:$SNAP/lib/python3.10/site-packages:$SNAP/usr/lib/python3/dist-packages"
     QT_PLUGIN_PATH: "$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/qt5/plugins:$SNAP/kf5/usr/lib/$CRAFT_ARCH_TRIPLET/qt5/plugins/kf5:$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/qt5/qml/org/kde/kirigami.2"
+    QT_QUICK_CONTROLS_STYLE: org.kde.desktop
 hooks:
     configure:
         plugs:
@@ -125,7 +126,7 @@ parts:
         - "-usr/bin/X11"
         - "-usr/lib/gcc/$CRAFT_ARCH_TRIPLET/6.0.0"
         - "-usr/lib/aspell/*"
-        - "-usr/share/lintain"
+        - "-usr/share/lintian"
         build-environment: &id005
         - *id001
         - *id002
@@ -161,6 +162,7 @@ parts:
         - qml-module-org-kde-kirigami-addons-sounds
         - qml-module-org-kde-kirigami-addons-treeview
         - qml-module-org-kde-purpose
+        - qml-module-org-kde-qqc2desktopstyle
         source: .
         source-type: local
         cmake-parameters:
