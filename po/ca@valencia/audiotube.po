@@ -429,7 +429,7 @@ msgstr "Copia l'enllaç"
 #: contents/ui/ShareMenu.qml:54 contents/ui/ShareMenu.qml:104
 #, kde-format
 msgid "Link copied to clipboard"
-msgstr "L'enllaç s'ha copiat al porta-retalls"
+msgstr "L'enllaç s'ha copiat a dins del porta-retalls"
 
 #: contents/ui/Sidebar.qml:189
 #, kde-format
