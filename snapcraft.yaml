@@ -10,7 +10,7 @@ apps:
     audiotube:
         # extensions:
         # - kde-neon
-        common-id: org.kde.audiotube.desktop
+        common-id: org.kde.audiotube
         desktop: usr/share/applications/org.kde.audiotube.desktop
         command: usr/bin/audiotube
         plugs:
@@ -27,6 +27,10 @@ apps:
         - network-observe
         - browser-support
         - network-manager-observe
+        - network-manager
+        - hardware-observe
+        - process-control
+        - alsa
         command-chain:
         - snap/command-chain/desktop-launch
 assumes:
@@ -50,13 +54,20 @@ plugs:
         target: $SNAP/kf5
 environment:
     SNAP_DESKTOP_RUNTIME: $SNAP/kf5
-    QML2_IMPORT_PATH: "$QML2_IMPORT_PATH:$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/qml:$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/qt5/qml:$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/qt5/qml/org/kde/kirigami.2:$SNAP/kf5/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/qt5/qml"
+    QML2_IMPORT_PATH: "$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/qt5/qml:$SNAP/kf5/usr/lib/$CRAFT_ARCH_TRIPLET/qt5/qml:$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/qml"
     PYTHONPYCACHEPREFIX: "$SNAP_USER_COMMON/.pycache"
     PYTHONUSERBASE: $SNAP_USER_COMMON/.local
     PIP_USER: 1
     PYTHONPATH: "$PYTHONUSERBASE/lib/python3.10/site-packages:$SNAP/lib/python3.10/site-packages:$SNAP/usr/lib/python3/dist-packages"
-    QT_PLUGIN_PATH: "$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/qt5/plugins:$SNAP/kf5/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/qt5/plugins/kf5:$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/qt5/qml/org/kde/kirigami.2"
+    QT_PLUGIN_PATH: "$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/qt5/plugins:$SNAP/kf5/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/qt5/plugins/kf5"
     QT_QUICK_CONTROLS_STYLE: org.kde.desktop
+    XDG_DATA_DIRS: $SNAP/usr/share:$SNAP/kf5/usr/share:$XDG_DATA_DIRS
+    XDG_CONFIG_HOME: $SNAP/etc/xdg:$SNAP/kf5/etc/xdg:/etc/xdg:$XDG_CONFIG_HOME
+    GST_PLUGIN_PATH: "$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/gstreamer-1.0"
+    GST_PLUGIN_SYSTEM_PATH: "$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/gstreamer-1.0"
+    GST_PLUGIN_SCANNER: "$SNAP/kf5/usr/lib/$CRAFT_ARCH_TRIPLET/gstreamer1.0/gstreamer-1.0/gst-plugin-scanner"
+    LD_LIBRARY_PATH: $SNAP/lib:$SNAP/usr/lib:$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET:/snap/ffmpeg-2204/current/usr/lib:$SNAP/kf5/lib/$CRAFT_ARCH_TRIPLET:$SNAP/kf5/usr/lib/$CRAFT_ARCH_TRIPLET:$SNAP/kf5/usr/lib:$SNAP/kf5/usr/lib/vala-current:$SNAP/kf5/usr/lib/$CRAFT_ARCH_TRIPLET/pulseaudio:$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/blas"
+
 hooks:
     configure:
         plugs:
@@ -66,10 +77,12 @@ hooks:
 layout:
     /usr/share/X11:
         symlink: $SNAP/kf5/usr/share/X11
-    "/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/alsa-lib":
-        bind: "$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/alsa-lib"
+    "/usr/lib/$CRAFT_ARCH_TRIPLET/alsa-lib":
+        bind: "$SNAP/usr/lib/$CRAFT_ARCH_TRIPLET/alsa-lib"
     "/usr/share/alsa":
         bind: "$SNAP/usr/share/alsa"
+    "/etc/alsa/conf.d":
+        bind: "$SNAP/etc/alsa/conf.d"
 slots:
     session-dbus-interface:
         interface: dbus
@@ -102,36 +115,109 @@ parts:
             XDG_CONFIG_HOME: $CRAFT_STAGE/etc/xdg:/snap/kf5-5-110-qt-5-15-10-core22-sdk/current/etc/xdg:/etc/xdg${XDG_CONFIG_HOME:+:$XDG_CONFIG_HOME}
         - &id004
             CRAFT_CMAKE_ARGS: -DCMAKE_FIND_ROOT_PATH=/snap/kf5-5-110-qt-5-15-10-core22-sdk/current${CRAFT_CMAKE_ARGS:+:$CRAFT_CMAKE_ARGS}
+    yt-dlp:
+        plugin: python
+        source: https://github.com/yt-dlp/yt-dlp.git
+        python-packages:
+        - mutagen
+        - pycryptodomex
+        - websockets
+        - brotli; platform_python_implementation=='CPython'
+        - brotlicffi; platform_python_implementation!='CPython'
+        - certifi
+        build-packages:
+        - python3
+        - flake8
+        - pandoc
+        - zip
+        build-snaps:
+        - ffmpeg-2204
+        build-environment:
+        - LD_LIBRARY_PATH: /snap/ffmpeg-2204/current/usr/lib:/snap/ffmpeg-2204/current/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:$CRAFT_STAGE/usr/lib:$CRAFT_STAGE/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:/snap/kf5-5-110-qt-5-15-10-core22-sdk/current/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:/snap/kf5-5-110-qt-5-15-10-core22-sdk/current/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:/snap/kf5-5-110-qt-5-15-10-core22-sdk/current/usr/lib:/snap/kf5-5-110-qt-5-15-10-core22-sdk/current/usr/lib/vala-current:/snap/kf5-5-110-qt-5-15-10-core22-sdk/current/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/pulseaudio
+        stage-packages:
+        - python3-pkg-resources
+        - curl
+        - ca-certificates
+        - python3-pyxattr
+        - rtmpdump
+        - libfribidi-bin
+        stage:
+        - "bin/yt-dlp"
+        - "lib/python3.10/site-packages/mutagen"
+        - "lib/python3.10/site-packages/Cryptodome"
+        - "lib/python3.10/site-packages/brotli.py"
+        - "lib/python3.10/site-packages/_brotli*"
+        - "lib/python3.10/site-packages/certifi"
+        - "lib/python3.10/site-packages/websockets"
+        - "-lib/python3.10/site-packages/*/__pycache__"
+        - "lib/python3.10/site-packages/yt_dlp*"
+        - "usr/bin/curl"
+        - "usr/lib/*/libcurl.*"
+        - "usr/lib/*/libfribidi*"
+        - "usr/bin/rtmpdump"
+        - "usr/bin/mutagen*"
+        - "usr/lib/sasl2"
+    ytmusicapi:
+        after:
+        - yt-dlp
+        plugin: python
+        source: https://github.com/sigma67/ytmusicapi.git
+        source-tag: 1.1.0
+        python-packages:
+        - requests >= 2.22
+        - "setuptools>=65"
+        - "setuptools_scm[toml]>=7"
+        build-packages:
+        - python3
+        - gettext
+        build-environment:
+        - LD_LIBRARY_PATH: $CRAFT_STAGE/usr/lib:$CRAFT_STAGE/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:/snap/kf5-5-110-qt-5-15-10-core22-sdk/current/lib/$CRAFT_ARCH_TRIPLET:/snap/kf5-5-110-qt-5-15-10-core22-sdk/current/usr/lib/$CRAFT_ARCH_TRIPLET:/snap/kf5-5-110-qt-5-15-10-core22-sdk/current/usr/lib:/snap/kf5-5-110-qt-5-15-10-core22-sdk/current/usr/lib/vala-current:/snap/kf5-5-110-qt-5-15-8-core22-sdk/current/usr/lib/$CRAFT_ARCH_TRIPLET/pulseaudio
+        stage:
+        - "lib/python3.10/site-packages/ytmusicapi"
+        - "lib/python3.10/site-packages/ytmusicapi-1.1.0.dist-info/"
+        - "lib/python3.10/site-packages/requests"
+        - "lib/python3.10/site-packages/urllib3"
+        - "lib/python3.10/site-packages/charset_normalizer"
+        - "lib/python3.10/site-packages/idna"
+        - "lib/python3.10/site-packages/certifi"
+        - "-lib/python3.10/site-packages/*/__pycache__"
+        - "bin/ytmusicapi"
     audiotube:
         after:
         - kde-neon
+        - yt-dlp
+        - ytmusicapi
         parse-info:
         - usr/share/metainfo/org.kde.audiotube.appdata.xml
         plugin: cmake
         build-packages:
-        - kirigami2-dev
         - libfuturesql-dev
+        - libkf5purpose-dev
         - libpython3.10-dev
-        - kirigami-addons-dev
         - pybind11-dev
-        - qcoro-qt5-dev
-        - yt-dlp
-        - ytmusicapi
         stage-packages:
-        - libkf5kirigami2-5
+        - gstreamer1.0-alsa
+        - libasound2
+        - libasound2-data
+        - libasound2-plugins
+        - libasound2-plugins-extra
         - libfuturesql
         - libpython3.10
+        - python3
         - python3-pybind11
-        - libqcoro5core0
-        - libsqlite3-0
-        - yt-dlp
-        - ytmusicapi
-        - qml-module-org-kde-kirigami-addons-datetime
+        - python3-m3u8
         - qml-module-org-kde-kirigami-addons-labs-mobileform
-        - qml-module-org-kde-kirigami-addons-sounds
-        - qml-module-org-kde-kirigami-addons-treeview
         - qml-module-org-kde-purpose
         - qml-module-org-kde-qqc2desktopstyle
+        - qt5-image-formats-plugins
+        - gstreamer1.0-plugins-base
+        - gstreamer1.0-plugins-bad
+        - gstreamer1.0-plugins-good
+        - gstreamer1.0-plugins-ugly
+        - gstreamer1.0-libav
+        - libblas3
+        stage-snaps:
+        - ffmpeg-2204
         source: .
         source-type: local
         cmake-parameters:
@@ -141,8 +227,27 @@ parts:
         - "-DBUILD_TESTING=OFF"
         - "-DKDE_SKIP_TEST_SETTINGS=ON"
         - "-DPYBIND11_FINDPYTHON=ON"
-        - "-DCMAKE_FIND_ROOT_PATH=/snap/kf5-5-110-qt-5-15-10-core22-sdk/current\\;$CRAFT_STAGE\\;/usr"
+        - "-DCMAKE_FIND_ROOT_PATH=/snap/kf5-5-110-qt-5-15-10-core22-sdk/current\\;$CRAFT_STAGE"
         - "-DKDE_INSTALL_PLUGINDIR=/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/qt5/plugins/"
+        stage:
+        - "-usr/lib/${CRAFT_ARCH_TRIPLET}/libEGL_mesa.so.0.0.0"
+        - "-usr/lib/${CRAFT_ARCH_TRIPLET}/libGLX_mesa.so.0.0.0"
+        - "-usr/lib/${CRAFT_ARCH_TRIPLET}/libLLVM-15.so.1"
+        - "-usr/lib/${CRAFT_ARCH_TRIPLET}/libdrm*"
+        - "-usr/lib/${CRAFT_ARCH_TRIPLET}/libgamin-1.so.0.1.10"
+        - "-usr/lib/${CRAFT_ARCH_TRIPLET}/libicuio.so.70.1"
+        - "-usr/lib/${CRAFT_ARCH_TRIPLET}/libicutest.so.70.1"
+        - "-usr/lib/${CRAFT_ARCH_TRIPLET}/libpolkit-qt5-agent-1.so.1.114.0"
+        - "-usr/lib/${CRAFT_ARCH_TRIPLET}/libpolkit-qt5-gui-1.so.1.114.0"
+        - "-usr/lib/${CRAFT_ARCH_TRIPLET}/libpulse-simple.so.0.1.1"
+        - "-usr/lib/${CRAFT_ARCH_TRIPLET}/libsensors.so.5.0.0"
+        - "-usr/lib/${CRAFT_ARCH_TRIPLET}/libxcb*"
+        - "-usr/lib/${CRAFT_ARCH_TRIPLET}/libX*"
+        - "-usr/lib/x86_64-linux-gnu/libglapi.so*"
+        - "-usr/lib/x86_64-linux-gnu/libicutu.so*"
+        - "-usr/lib/x86_64-linux-gnu/libpciaccess.so*"
+        - "-usr/lib/x86_64-linux-gnu/libpolkit-agent-1.so*"
+        - "-usr/lib/x86_64-linux-gnu/libxshmfence.so*"
         prime:
         - "-usr/lib/*/cmake/*"
         - "-usr/include/*"
@@ -151,17 +256,19 @@ parts:
         - "-usr/share/man/*"
         - "-usr/share/icons/breeze-dark*"
         - "-usr/bin/X11"
-        - "-usr/lib/gcc/$CRAFT_ARCH_TRIPLET_BUILD_FOR/6.0.0"
+        - "-usr/lib/gcc/${CRAFT_ARCH_TRIPLET}/6.0.0"
         - "-usr/lib/aspell/*"
         - "-usr/share/lintian"
         - "-run/pulseaudio-enable-autospawn"
         - "-etc/pulse/client.conf.d/01-enable-autospawn.conf"
+        - "-usr/lib/${CRAFT_ARCH_TRIPLET}/dri"
         build-environment:
         - *id001
         - *id002
         - *id003
         - *id004
-        - PYTHONPATH: "$CRAFT_STAGE/lib/python3.10/site-packages:$CRAFT_STAGE/usr/lib/python3/dist-packages"
+        - PYTHONPATH: "$CRAFT_STAGE/lib/python3.10/site-packages:$CRAFT_STAGE/usr/lib/python3.10/dist-packages"
+        - LD_LIBRARY_PATH: $CRAFT_STAGE/usr/lib:$CRAFT_STAGE/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:/snap/kf5-5-110-qt-5-15-10-core22-sdk/current/lib/$CRAFT_ARCH_TRIPLET:/snap/kf5-5-110-qt-5-15-10-core22-sdk/current/usr/lib/$CRAFT_ARCH_TRIPLET:/snap/kf5-5-110-qt-5-15-10-core22-sdk/current/usr/lib:/snap/kf5-5-110-qt-5-15-10-core22-sdk/current/usr/lib/vala-current:/snap/kf5-5-110-qt-5-15-8-core22-sdk/current/usr/lib/$CRAFT_ARCH_TRIPLET/pulseaudio
     cleanup:
         after:
         - kde-neon
