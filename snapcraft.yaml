@@ -195,6 +195,7 @@ parts:
         - libkf5purpose-dev
         - libpython3.10-dev
         - pybind11-dev
+        - kirigami-addons-dev
         stage-packages:
         - gstreamer1.0-alsa
         - libasound2
