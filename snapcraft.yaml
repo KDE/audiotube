@@ -47,10 +47,10 @@ plugs:
         interface: content
         target: $SNAP/data-dir/sounds
         default-provider: gtk-common-themes
-    kf5-5-110-qt-5-15-10-core22:
-        content: kf5-5-110-qt-5-15-10-core22-all
+    kf5-5-110-qt-5-15-11-core22:
+        content: kf5-5-110-qt-5-15-11-core22-all
         interface: content
-        default-provider: kf5-5-110-qt-5-15-10-core22
+        default-provider: kf5-5-110-qt-5-15-11-core22
         target: $SNAP/kf5
 environment:
     SNAP_DESKTOP_RUNTIME: $SNAP/kf5
@@ -103,18 +103,18 @@ parts:
         source-type: local
         plugin: make
         make-parameters:
-        - PLATFORM_PLUG=kf5-5-110-qt-5-15-10-core22
+        - PLATFORM_PLUG=kf5-5-110-qt-5-15-11-core22
         build-snaps:
-        - kf5-5-110-qt-5-15-10-core22-sdk
+        - kf5-5-110-qt-5-15-11-core22-sdk
         build-environment:
         - &id001
-            PATH: /snap/kf5-5-110-qt-5-15-10-core22-sdk/current/usr/bin${PATH:+:$PATH}
+            PATH: /snap/kf5-5-110-qt-5-15-11-core22-sdk/current/usr/bin${PATH:+:$PATH}
         - &id002
-            XDG_DATA_DIRS: $CRAFT_STAGE/usr/share:/snap/kf5-5-110-qt-5-15-10-core22-sdk/current/usr/share:/usr/share${XDG_DATA_DIRS:+:$XDG_DATA_DIRS}
+            XDG_DATA_DIRS: $CRAFT_STAGE/usr/share:/snap/kf5-5-110-qt-5-15-11-core22-sdk/current/usr/share:/usr/share${XDG_DATA_DIRS:+:$XDG_DATA_DIRS}
         - &id003
-            XDG_CONFIG_HOME: $CRAFT_STAGE/etc/xdg:/snap/kf5-5-110-qt-5-15-10-core22-sdk/current/etc/xdg:/etc/xdg${XDG_CONFIG_HOME:+:$XDG_CONFIG_HOME}
+            XDG_CONFIG_HOME: $CRAFT_STAGE/etc/xdg:/snap/kf5-5-110-qt-5-15-11-core22-sdk/current/etc/xdg:/etc/xdg${XDG_CONFIG_HOME:+:$XDG_CONFIG_HOME}
         - &id004
-            CRAFT_CMAKE_ARGS: -DCMAKE_FIND_ROOT_PATH=/snap/kf5-5-110-qt-5-15-10-core22-sdk/current${CRAFT_CMAKE_ARGS:+:$CRAFT_CMAKE_ARGS}
+            CRAFT_CMAKE_ARGS: -DCMAKE_FIND_ROOT_PATH=/snap/kf5-5-110-qt-5-15-11-core22-sdk/current${CRAFT_CMAKE_ARGS:+:$CRAFT_CMAKE_ARGS}
     yt-dlp:
         plugin: python
         source: https://github.com/yt-dlp/yt-dlp.git
@@ -133,7 +133,7 @@ parts:
         build-snaps:
         - ffmpeg-2204
         build-environment:
-        - LD_LIBRARY_PATH: /snap/ffmpeg-2204/current/usr/lib:/snap/ffmpeg-2204/current/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:$CRAFT_STAGE/usr/lib:$CRAFT_STAGE/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:/snap/kf5-5-110-qt-5-15-10-core22-sdk/current/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:/snap/kf5-5-110-qt-5-15-10-core22-sdk/current/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:/snap/kf5-5-110-qt-5-15-10-core22-sdk/current/usr/lib:/snap/kf5-5-110-qt-5-15-10-core22-sdk/current/usr/lib/vala-current:/snap/kf5-5-110-qt-5-15-10-core22-sdk/current/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/pulseaudio
+        - LD_LIBRARY_PATH: /snap/ffmpeg-2204/current/usr/lib:/snap/ffmpeg-2204/current/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:$CRAFT_STAGE/usr/lib:$CRAFT_STAGE/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:/snap/kf5-5-110-qt-5-15-11-core22-sdk/current/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:/snap/kf5-5-110-qt-5-15-11-core22-sdk/current/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:/snap/kf5-5-110-qt-5-15-11-core22-sdk/current/usr/lib:/snap/kf5-5-110-qt-5-15-11-core22-sdk/current/usr/lib/vala-current:/snap/kf5-5-110-qt-5-15-11-core22-sdk/current/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/pulseaudio
         stage-packages:
         - python3-pkg-resources
         - curl
@@ -171,7 +171,7 @@ parts:
         - python3
         - gettext
         build-environment:
-        - LD_LIBRARY_PATH: $CRAFT_STAGE/usr/lib:$CRAFT_STAGE/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:/snap/kf5-5-110-qt-5-15-10-core22-sdk/current/lib/$CRAFT_ARCH_TRIPLET:/snap/kf5-5-110-qt-5-15-10-core22-sdk/current/usr/lib/$CRAFT_ARCH_TRIPLET:/snap/kf5-5-110-qt-5-15-10-core22-sdk/current/usr/lib:/snap/kf5-5-110-qt-5-15-10-core22-sdk/current/usr/lib/vala-current:/snap/kf5-5-110-qt-5-15-8-core22-sdk/current/usr/lib/$CRAFT_ARCH_TRIPLET/pulseaudio
+        - LD_LIBRARY_PATH: $CRAFT_STAGE/usr/lib:$CRAFT_STAGE/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:/snap/kf5-5-110-qt-5-15-11-core22-sdk/current/lib/$CRAFT_ARCH_TRIPLET:/snap/kf5-5-110-qt-5-15-11-core22-sdk/current/usr/lib/$CRAFT_ARCH_TRIPLET:/snap/kf5-5-110-qt-5-15-11-core22-sdk/current/usr/lib:/snap/kf5-5-110-qt-5-15-11-core22-sdk/current/usr/lib/vala-current:/snap/kf5-5-110-qt-5-15-11-core22-sdk/current/usr/lib/$CRAFT_ARCH_TRIPLET/pulseaudio
         stage:
         - "lib/python3.10/site-packages/ytmusicapi"
         - "lib/python3.10/site-packages/ytmusicapi-1.1.0.dist-info/"
@@ -227,7 +227,7 @@ parts:
         - "-DBUILD_TESTING=OFF"
         - "-DKDE_SKIP_TEST_SETTINGS=ON"
         - "-DPYBIND11_FINDPYTHON=ON"
-        - "-DCMAKE_FIND_ROOT_PATH=/snap/kf5-5-110-qt-5-15-10-core22-sdk/current\\;$CRAFT_STAGE"
+        - "-DCMAKE_FIND_ROOT_PATH=/snap/kf5-5-110-qt-5-15-11-core22-sdk/current\\;$CRAFT_STAGE"
         - "-DKDE_INSTALL_PLUGINDIR=/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/qt5/plugins/"
         stage:
         - "-usr/lib/${CRAFT_ARCH_TRIPLET}/libEGL_mesa.so.0.0.0"
@@ -268,7 +268,7 @@ parts:
         - *id003
         - *id004
         - PYTHONPATH: "$CRAFT_STAGE/lib/python3.10/site-packages:$CRAFT_STAGE/usr/lib/python3.10/dist-packages"
-        - LD_LIBRARY_PATH: $CRAFT_STAGE/usr/lib:$CRAFT_STAGE/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:/snap/kf5-5-110-qt-5-15-10-core22-sdk/current/lib/$CRAFT_ARCH_TRIPLET:/snap/kf5-5-110-qt-5-15-10-core22-sdk/current/usr/lib/$CRAFT_ARCH_TRIPLET:/snap/kf5-5-110-qt-5-15-10-core22-sdk/current/usr/lib:/snap/kf5-5-110-qt-5-15-10-core22-sdk/current/usr/lib/vala-current:/snap/kf5-5-110-qt-5-15-8-core22-sdk/current/usr/lib/$CRAFT_ARCH_TRIPLET/pulseaudio
+        - LD_LIBRARY_PATH: $CRAFT_STAGE/usr/lib:$CRAFT_STAGE/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:/snap/kf5-5-110-qt-5-15-11-core22-sdk/current/lib/$CRAFT_ARCH_TRIPLET:/snap/kf5-5-110-qt-5-15-11-core22-sdk/current/usr/lib/$CRAFT_ARCH_TRIPLET:/snap/kf5-5-110-qt-5-15-11-core22-sdk/current/usr/lib:/snap/kf5-5-110-qt-5-15-11-core22-sdk/current/usr/lib/vala-current:/snap/kf5-5-110-qt-5-15-11-core22-sdk/current/usr/lib/$CRAFT_ARCH_TRIPLET/pulseaudio
     cleanup:
         after:
         - kde-neon
