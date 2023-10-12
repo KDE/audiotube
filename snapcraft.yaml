@@ -196,6 +196,7 @@ parts:
         - libpython3.10-dev
         - pybind11-dev
         - kirigami-addons-dev
+        - qcoro-qt5-dev
         stage-packages:
         - gstreamer1.0-alsa
         - libasound2
@@ -211,6 +212,7 @@ parts:
         - qml-module-org-kde-purpose
         - qml-module-org-kde-qqc2desktopstyle
         - qt5-image-formats-plugins
+        - libqcoro5core0
         - gstreamer1.0-plugins-base
         - gstreamer1.0-plugins-bad
         - gstreamer1.0-plugins-good
