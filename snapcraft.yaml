@@ -1,7 +1,7 @@
 # Trigger rebuild
 ---
 name: audiotube
-confinement: strict
+confinement: devmode
 grade: stable
 base: core22
 adopt-info: audiotube
