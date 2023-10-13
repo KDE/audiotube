@@ -1,11 +1,11 @@
-# Xavier Besnard <xavier.besnard@neuf.fr>, 2021, 2022.
+# SPDX-FileCopyrightText: 2021, 2022, 2023 Xavier Besnard <xavier.besnard@neuf.fr>
 # Xavier BESNARD <xavier.besnard@neuf.fr>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-08-08 00:45+0000\n"
-"PO-Revision-Date: 2023-07-06 20:41+0200\n"
+"PO-Revision-Date: 2023-10-11 18:48+0200\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: asyncytmusic.cpp:65
 #, kde-format
@@ -177,7 +177,7 @@ msgstr "Renommer une liste de lecture"
 #: contents/ui/Sidebar.qml:131 contents/ui/Sidebar.qml:138
 #, kde-format
 msgid "Favourites"
-msgstr "Favoris"
+msgstr "Signets"
 
 #: contents/ui/LibraryPage.qml:119 contents/ui/LibraryPage.qml:306
 #: contents/ui/LibraryPage.qml:403
@@ -188,7 +188,7 @@ msgstr "Tout afficher"
 #: contents/ui/LibraryPage.qml:147
 #, kde-format
 msgid "No Favourites Yet"
-msgstr "Encore aucun favori"
+msgstr "Encore aucun signet"
 
 #: contents/ui/LibraryPage.qml:215
 #, kde-format
@@ -272,12 +272,12 @@ msgstr "Aucun média en lecture"
 #: contents/ui/MaximizedPlayerPage.qml:426
 #, kde-format
 msgid "Remove from Favourites"
-msgstr "Supprimer des favoris"
+msgstr "Supprimer des signets"
 
 #: contents/ui/MaximizedPlayerPage.qml:426
 #, kde-format
 msgid "Add to Favourites"
-msgstr "Ajouter aux favoris"
+msgstr "Ajouter aux signets"
 
 #: contents/ui/MaximizedPlayerPage.qml:451
 #, kde-format
@@ -449,12 +449,12 @@ msgstr "Ajouter à la file de lecture"
 #: contents/ui/SongMenu.qml:126 contents/ui/SongMenu.qml:221
 #, kde-format
 msgid "Remove Favourite"
-msgstr "Supprimer un favori"
+msgstr "Supprimer un signet"
 
 #: contents/ui/SongMenu.qml:126 contents/ui/SongMenu.qml:221
 #, kde-format
 msgid "Add Favourite"
-msgstr "Ajouter un favori"
+msgstr "Ajouter un signet"
 
 #: contents/ui/SongMenu.qml:143 contents/ui/SongMenu.qml:235
 #, kde-format
@@ -511,7 +511,7 @@ msgstr "xavier.besnard@neuf.fr"
 #: main.cpp:74
 #, kde-format
 msgid "Unofficial API for YouTube Music"
-msgstr "API non officiel pour la musique sur « YouTube Music »"
+msgstr "API non officiel pour la musique sur « YouTube Musique »"
 
 #: playlistimporter.cpp:23
 #, kde-format
