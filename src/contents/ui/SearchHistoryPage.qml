@@ -43,10 +43,7 @@ Kirigami.ScrollablePage {
                         filterRegularExpression: searchLoader.filterExpression
                         sourceModel: Library.playbackHistory
                     }
-                    delegate: Kirigami.DelegateRecycler {
-                        Layout.alignment: Qt.AlignTop
-                        sourceComponent: searchAlbum
-                    }
+                    delegate: searchAlbum
                 }
             }
         }
