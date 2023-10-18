@@ -1,7 +1,25 @@
-# SPDX-FileCopyrightText: 2021 Jonah Brüchert <jbb@kaidan.im>
+# SPDX-FileCopyrightText: 2021-2023 Jonah Brüchert <jbb@kaidan.im>
 #
 # SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
 include:
  - https://invent.kde.org/sysadmin/ci-utilities/raw/master/gitlab-templates/reuse-lint.yml
  - https://invent.kde.org/sysadmin/ci-utilities/raw/master/gitlab-templates/flatpak.yml
+
+external-data-checker:
+  image: ghcr.io/flathub/flatpak-external-data-checker:latest
+  variables:
+    GIT_AUTHOR_NAME: Flatpak External Data Checker
+    GIT_COMMITTER_NAME: Flatpak External Data Checker
+    GIT_AUTHOR_EMAIL: scripty@kde.org
+    GIT_COMMITTER_EMAIL: scripty@kde.org
+    EMAIL: scripty@kde.org
+  script:
+    - export BRANCH_NAME="$(git rev-parse --abbrev-ref HEAD)"
+    - /app/flatpak-external-data-checker --update --commit-only .flatpak-manifest.json
+    - export MR_BRANCH_NAME="$(git rev-parse --abbrev-ref HEAD)"
+    - git checkout -b "${MR_BRANCH_NAME}"
+    - pip3 install --break-system-packages git+https://invent.kde.org/sdk/git-lab
+    - git lab workflow --workbranch
+    - git lab login --host invent.kde.org --token "${TOKEN}"
+    - git lab mr --noninteractive --target-branch "${BRANCH_NAME}"
