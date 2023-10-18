@@ -4,7 +4,9 @@
     "runtime-version": "5.15-22.08",
     "sdk": "org.kde.Sdk",
     "command": "audiotube",
-    "tags": ["nightly"],
+    "tags": [
+        "nightly"
+    ],
     "desktop-file-name-suffix": " (Nightly)",
     "finish-args": [
         "--share=ipc",
@@ -20,7 +22,6 @@
         "/include/",
         "/share/cmake/"
     ],
-
     "modules": [
         "flatpak/python3-yt-dlp.json",
         "flatpak/python3-ytmusicapi.json",
@@ -28,41 +29,82 @@
         {
             "name": "qcoro",
             "buildsystem": "cmake-ninja",
-            "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_BUILD_TYPE=Release"],
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=Release"
+            ],
             "sources": [
                 {
                     "type": "archive",
                     "url": "https://github.com/danvratil/qcoro/archive/refs/tags/v0.9.0.tar.gz",
-                    "sha256": "cfaf6b778450f06adac4ce5e353eb6eae213a3b62b8c8740520d58cf9fe3ec1a"
+                    "sha256": "cfaf6b778450f06adac4ce5e353eb6eae213a3b62b8c8740520d58cf9fe3ec1a",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 236236,
+                        "stable-only": true,
+                        "url-template": "https://github.com/danvratil/qcoro/archive/refs/tags/v$version.tar.gz"
+                    }
                 }
             ]
         },
         {
             "name": "futuresql",
             "buildsystem": "cmake-ninja",
-            "config-opts": ["-DBUILD_TESTING=OFF", "-DCMAKE_BUILD_TYPE=Release"],
+            "config-opts": [
+                "-DBUILD_TESTING=OFF",
+                "-DCMAKE_BUILD_TYPE=Release"
+            ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://download.kde.org/stable/futuresql/futuresql-0.1.0.tar.xz",
-                    "sha256": "ecd354c26c48a67795b0004e701066f6176d25d39adda1b8a1bf9c07fa48ba6a"
+                    "url": "https://download.kde.org/stable/futuresql/futuresql-0.1.1.tar.xz",
+                    "sha256": "e44ed8d5a9618b3ca7ba2983ed9c5f7572e6e0a5b199f94868834b71ccbebd43",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 368957,
+                        "stable-only": true,
+                        "url-template": "https://download.kde.org/stable/futuresql/futuresql-$version.tar.xz"
+                    }
                 }
             ]
         },
         {
             "name": "pybind11",
-            "config-opts": ["-DPYBIND11_FINDPYTHON=ON", "-DPYBIND11_TEST=OFF"],
+            "config-opts": [
+                "-DPYBIND11_FINDPYTHON=ON",
+                "-DPYBIND11_TEST=OFF"
+            ],
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "git", "url": "https://github.com/pybind/pybind11", "tag": "v2.10.3" } ]
+            "sources": [
+                {
+                    "type": "archive",
+                    "url": "https://github.com/pybind/pybind11/archive/refs/tags/v2.11.1.tar.gz",
+                    "sha256": "d475978da0cdc2d43b73f30910786759d593a9d8ee05b1b6846d1eb16c6d2e0c",
+                    "x-checker-data": {
+                        "type": "anitya",
+                        "project-id": 13384,
+                        "url-template": "https://github.com/pybind/pybind11/archive/refs/tags/v$version.tar.gz"
+                    }
+                }
+            ]
         },
         {
             "name": "org.kde.audiotube",
-            "config-opts": ["-DPYBIND11_FINDPYTHON=ON"],
+            "config-opts": [
+                "-DPYBIND11_FINDPYTHON=ON"
+            ],
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "dir", "path": ".", "skip": [".git"] } ]
+            "sources": [
+                {
+                    "type": "dir",
+                    "path": ".",
+                    "skip": [
+                        ".git"
+                    ]
+                }
+            ]
         }
     ]
 }
-
