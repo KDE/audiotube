@@ -19,7 +19,7 @@ external-data-checker:
   script:
     - export BRANCH_NAME="$(git rev-parse --abbrev-ref HEAD)"
     - /app/flatpak-external-data-checker --update --commit-only .flatpak-manifest.json
-    - export MR_BRANCH_NAME="$(git rev-parse --abbrev-ref HEAD)"
+    - export MR_BRANCH_NAME="work/fedc/$(git rev-parse --abbrev-ref HEAD)"
     - git checkout -b "${MR_BRANCH_NAME}"
     - pip3 install --break-system-packages git+https://invent.kde.org/sdk/git-lab
     - git lab workflow --workbranch
