@@ -21,7 +21,7 @@ external-data-checker:
     - /app/flatpak-external-data-checker --update --commit-only .flatpak-manifest.json
     - export MR_BRANCH_NAME="work/fedc/$(git rev-parse --abbrev-ref HEAD)"
     - git checkout -b "${MR_BRANCH_NAME}"
-    - pip3 install --break-system-packages git+https://invent.kde.org/sdk/git-lab
+    - pip3 install git+https://invent.kde.org/sdk/git-lab
     - git lab workflow --workbranch
     - git lab login --host invent.kde.org --token "${TOKEN}"
     - git lab mr --noninteractive --target-branch "${BRANCH_NAME}"
