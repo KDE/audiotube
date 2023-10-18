@@ -176,6 +176,8 @@ public:
     QFuture<void> addSong(const QString &videoId, const QString &title, const QString &artist, const QString &album);
     QFuture<std::optional<Song>> getSong(const QString &videoId);
 
+    QFuture<std::vector<Song>> downloadedSongs();
+
     QFuture<void> markSongDownloaded(const QString &videoId, bool downloaded);
     QCoro::Task<bool> songDownloaded(const QString &videoId);
 

@@ -58,6 +58,7 @@ QCoro::Task<> DownloadManager::download(const QString videoId)
     });
 
     QUrl url = pickAudioUrl(info.formats);
+    qDebug() << url;
 
     auto *reply = Library::instance().nam().get(QNetworkRequest(url));
 

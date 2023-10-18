@@ -36,6 +36,7 @@ add_executable(audiotube
     blur.cpp
     clipboard.cpp
     downloadmanager.cpp
+    downloadedsongsmodel.cpp
 )
 
 target_link_libraries(audiotube

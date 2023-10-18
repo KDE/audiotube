@@ -173,6 +173,12 @@ QFuture<std::optional<Song>> Library::getSong(const QString &videoId)
     return m_database->getResult<Song>("select * from songs where video_id = ?", videoId);
 }
 
+QFuture<std::vector<Song> > Library::downloadedSongs()
+{
+    return m_database->getResults<Song>(
+        "select * from downloaded_songs natural join songs");
+}
+
 QFuture<void> Library::markSongDownloaded(const QString &videoId, bool downloaded)
 {
     if (downloaded) {

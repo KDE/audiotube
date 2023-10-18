@@ -19,11 +19,11 @@ public:
     Q_INVOKABLE void deleteDownload(const QString &videoId);
 
     static QString localPathOf(const QString &videoId);
+    static QString downloadDirectory();
 
 private:
     QCoro::Task<> download(const QString videoId);
 
-    static QString downloadDirectory();
 };
 
 class DownloadedWatcher : public QObject
