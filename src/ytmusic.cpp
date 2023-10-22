@@ -20,7 +20,11 @@ void pyPrintPretty(py::handle obj) {
     py::print(json.attr("dumps")(obj, "indent"_a=py::int_(4)));
 }
 
+#if Q_OS_WINDOWS
 #define UNEXPORT __attribute__ ((visibility("hidden")))
+#else
+#define UNEXPORT
+#endif
 
 struct UNEXPORT YTMusicPrivate {
     py::scoped_interpreter guard {};
@@ -35,9 +39,6 @@ struct UNEXPORT YTMusicPrivate {
         if (ytmusic.is_none()) {
             ytmusicapi_module = py::module::import("ytmusicapi");
             ytmusic = ytmusicapi_module.attr("YTMusic")(auth, user, requests_session, proxies, language);
-
-            // Some of the called python code randomly fails if the encoding is not utf8
-            setenv("LC_ALL", "en_US.utf8", true);
 
             auto oldVersion = ytmusicapi_module.attr("__dict__").contains("_version");
             if (oldVersion) {

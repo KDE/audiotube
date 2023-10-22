@@ -12,7 +12,7 @@
 #include <QtCore/QObject>
 #include <QtCore/QString>
 
-class MPRIS_QT_EXPORT Mpris : public QObject
+class  Mpris : public QObject
 {
     Q_OBJECT
 

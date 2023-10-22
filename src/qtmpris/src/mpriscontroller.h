@@ -25,7 +25,7 @@
 class MprisRootInterface;
 class MprisPlayerInterface;
 class QDBusPendingCallWatcher;
-class MPRIS_QT_EXPORT MprisController : public QObject
+class  MprisController : public QObject
 {
     Q_OBJECT
 
