@@ -17,7 +17,7 @@
 
 class MprisRootAdaptor;
 class MprisPlayerAdaptor;
-class MPRIS_QT_EXPORT MprisPlayer : public QObject,
+class MprisPlayer : public QObject,
                                     protected QDBusContext
 {
     Q_OBJECT

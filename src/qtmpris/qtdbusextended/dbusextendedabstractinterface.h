@@ -15,7 +15,7 @@
 class QDBusPendingCallWatcher;
 class DBusExtendedPendingCallWatcher;
 
-class QT_DBUS_EXTENDED_EXPORT DBusExtendedAbstractInterface: public QDBusAbstractInterface
+class DBusExtendedAbstractInterface: public QDBusAbstractInterface
 {
     Q_OBJECT
 

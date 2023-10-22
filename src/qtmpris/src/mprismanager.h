@@ -24,7 +24,7 @@
 #include <QtCore/QVariant>
 
 class QSignalMapper;
-class MPRIS_QT_EXPORT MprisManager : public QObject
+class MprisManager : public QObject
 {
     Q_OBJECT
 
