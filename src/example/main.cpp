@@ -8,7 +8,7 @@
 
 int main() {
     const auto ytm = YTMusic();
-    const auto results = ytm.search("grüne augen lügen nich");
+    const auto results = ytm.search("Mädchen auf dem Pferd");
 
     std::cout << "Found " << results.size() << " results." << std::endl;
 
@@ -17,10 +17,12 @@ int main() {
             using T = std::decay_t<decltype(arg)>;
             if constexpr (std::is_same_v<T, search::Album>) {
                 std::cout << arg.title << std::endl;
-                const album::Album album = ytm.get_album(arg.browse_id);
-                for (const auto &track : album.tracks) {
-                    if (track.video_id.has_value()) {
-                        ytm.extract_video_info(*track.video_id);
+                if (arg.browse_id) {
+                    const album::Album album = ytm.get_album(*arg.browse_id);
+                    for (const auto &track : album.tracks) {
+                        if (track.video_id.has_value()) {
+                            ytm.extract_video_info(*track.video_id);
+                        }
                     }
                 }
             } else if constexpr (std::is_same_v<T, search::Artist>) {

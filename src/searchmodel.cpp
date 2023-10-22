@@ -197,7 +197,9 @@ void SearchModel::triggerItem(int row)
     std::visit([&](auto&& arg) {
         using T = std::decay_t<decltype(arg)>;
         if constexpr (std::is_same_v<T, search::Album>) {
-            Q_EMIT openAlbum(QString::fromStdString(arg.browse_id));
+            if (arg.browse_id) {
+                Q_EMIT openAlbum(QString::fromStdString(*arg.browse_id));
+            }
         } else if constexpr (std::is_same_v<T, search::Artist>) {
             Q_EMIT openArtist(QString::fromStdString(arg.browse_id), QString::fromStdString(arg.radio_id.value_or("")), QString::fromStdString(arg.shuffle_id.value_or("")));
         } else if constexpr (std::is_same_v<T, search::Playlist>) {

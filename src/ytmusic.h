@@ -67,7 +67,7 @@ struct Song : public Media {
 };
 
 struct Album {
-    std::string browse_id;
+    std::optional<std::string> browse_id;
     std::string title;
     std::string type;
     std::vector<meta::Artist> artists;

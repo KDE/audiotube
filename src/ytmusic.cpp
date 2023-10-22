@@ -20,7 +20,7 @@ void pyPrintPretty(py::handle obj) {
     py::print(json.attr("dumps")(obj, "indent"_a=py::int_(4)));
 }
 
-#if Q_OS_WINDOWS
+#ifdef WIN32
 #define UNEXPORT __attribute__ ((visibility("hidden")))
 #else
 #define UNEXPORT
@@ -312,7 +312,7 @@ std::optional<search::SearchResultItem> extract_search_result(py::handle result)
         };
     } else if (resultType == "album") {
         return search::Album {
-            result["browseId"].cast<std::string>(),
+            result["browseId"].cast<std::optional<std::string>>(),
             result["title"].cast<std::string>(),
             result["type"].cast<std::string>(),
             extract_py_list<meta::Artist>(result["artists"]),
