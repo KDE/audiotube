@@ -27,13 +27,13 @@
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/d8/3b/2ed38e52eed4cf277f9df5f0463a99199a04d9e29c9e227cfafa57bd3993/websockets-11.0.3.tar.gz",
-            "sha256": "88fc51d9a26b10fc331be344f1781224a375b78488fc343620184e95a4b27016"
+            "url": "https://files.pythonhosted.org/packages/2e/62/7a7874b7285413c954a4cca3c11fd851f11b2fe5b4ae2d9bee4f6d9bdb10/websockets-12.0.tar.gz",
+            "sha256": "81df9cbcbb6c260de1e007e58c011bfebe2dafc8435107b0537f393dd38c8b1b"
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/70/b4/94e72fd0e1541ab50f8efe224ead550a367da3df1b8aa733bd2d9bde9aed/yt_dlp-2023.9.24-py2.py3-none-any.whl",
-            "sha256": "61792482647faac6207b1795b52d73714803414d8c090cd9721dfe8b16b12605"
+            "url": "https://files.pythonhosted.org/packages/3f/b0/75194851f0b86dd6c207d8e1cb5625b62ae5ec254edda42bc2cb86306ba7/yt_dlp-2023.10.13-py2.py3-none-any.whl",
+            "sha256": "2b069f22675532eebacdfd6372b1825651a751fef848de9ae6efe6491b2dc38a"
         }
     ]
 }
