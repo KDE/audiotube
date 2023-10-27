@@ -131,7 +131,7 @@ parts:
         - pandoc
         - zip
         build-snaps:
-        - ffmpeg-2204
+        - ffmpeg-2204-sdk
         build-environment:
         - LD_LIBRARY_PATH: /snap/ffmpeg-2204/current/usr/lib:/snap/ffmpeg-2204/current/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:$CRAFT_STAGE/usr/lib:$CRAFT_STAGE/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:/snap/kf5-5-110-qt-5-15-11-core22-sdk/current/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:/snap/kf5-5-110-qt-5-15-11-core22-sdk/current/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR:/snap/kf5-5-110-qt-5-15-11-core22-sdk/current/usr/lib:/snap/kf5-5-110-qt-5-15-11-core22-sdk/current/usr/lib/vala-current:/snap/kf5-5-110-qt-5-15-11-core22-sdk/current/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/pulseaudio
         stage-packages:
@@ -164,7 +164,7 @@ parts:
         source: https://github.com/sigma67/ytmusicapi.git
         source-tag: 1.1.0
         python-packages:
-        - requests >= 2.22
+        - "requests>=2.22"
         - "setuptools>=65"
         - "setuptools_scm[toml]>=7"
         build-packages:
@@ -199,6 +199,11 @@ parts:
         - qcoro-qt5-dev
         stage-packages:
         - gstreamer1.0-alsa
+        - gstreamer1.0-plugins-base
+        - gstreamer1.0-plugins-bad
+        - gstreamer1.0-plugins-good
+        - gstreamer1.0-plugins-ugly
+        - gstreamer1.0-libav
         - libasound2
         - libasound2-data
         - libasound2-plugins
@@ -213,11 +218,6 @@ parts:
         - qml-module-org-kde-qqc2desktopstyle
         - qt5-image-formats-plugins
         - libqcoro5core0
-        - gstreamer1.0-plugins-base
-        - gstreamer1.0-plugins-bad
-        - gstreamer1.0-plugins-good
-        - gstreamer1.0-plugins-ugly
-        - gstreamer1.0-libav
         - libblas3
         stage-snaps:
         - ffmpeg-2204
