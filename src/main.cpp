@@ -61,7 +61,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     KAboutData about(QStringLiteral("audiotube"),
                      i18n("AudioTube"),
                      QStringLiteral(AUDIOTUBE_VERSION_STRING),
-                     i18n("YouTube Music Player"),
+                     i18nc("Stream music from YouTube Music", "YouTube Music is a music streaming service by Google"),
                      KAboutLicense::GPL_V3,
                      i18n("© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"));
     about.addAuthor(i18n("Jonah Brüchert"), i18n("Maintainer"), QStringLiteral("jbb@kaidan.im"));
@@ -71,7 +71,10 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     about.setBugAddress("https://bugs.kde.org/describecomponents.cgi?product=audiotube");
     auto future = YTMusicThread::instance()->version();
     QCoro::connect(std::move(future), &app, [&about](const auto &version) {
-        about.addComponent(QStringLiteral("ytmusicapi"), i18n("Unofficial API for YouTube Music"), version);
+        about.addComponent(QStringLiteral("ytmusicapi"),
+                           i18nc("Unofficial API for YouTube Music",
+                                 "YouTube Music is a music streaming service by Google"),
+                           version);
         KAboutData::setApplicationData(about);
     });
 
