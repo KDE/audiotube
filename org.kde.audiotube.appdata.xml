@@ -41,38 +41,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="uk">AudioTube</name>
   <name xml:lang="x-test">xxAudioTubexx</name>
   <name xml:lang="zh-CN">AudioTube</name>
-  <summary>Convergent YouTube Music client</summary>
-  <summary xml:lang="ar">عميل موسيقى يوتيوب متعدد المنصات</summary>
-  <summary xml:lang="az">Birləşmiş YouTube Musiqi müştərisi</summary>
-  <summary xml:lang="ca">Client convergent de música de YouTube</summary>
-  <summary xml:lang="ca-valencia">Client convergent de música de YouTube</summary>
-  <summary xml:lang="de">Konvergentes YouTube-Musikprogramm</summary>
-  <summary xml:lang="en-GB">Convergent YouTube Music client</summary>
-  <summary xml:lang="eo">Konverĝa kliento por YouTube Music</summary>
-  <summary xml:lang="es">Cliente de música de YouTube convergente</summary>
-  <summary xml:lang="eu">YouTube Music bezero konbergentea</summary>
-  <summary xml:lang="fi">Mukautuva YouTube Music -asiakas</summary>
-  <summary xml:lang="fr">Client convergent pour musique sur YouTube</summary>
-  <summary xml:lang="gl">Cliente converxente de música de YouTube.</summary>
-  <summary xml:lang="hi">अभिसृत यूट्यूब संगीत क्लाएंट</summary>
-  <summary xml:lang="ia">Cliente de musica de YouTube convergente</summary>
-  <summary xml:lang="id">Klien YouTube Music konvergen</summary>
-  <summary xml:lang="it">Client YouTube Music convergente</summary>
-  <summary xml:lang="ka">YouTube Music -ის კონვერგენტული კლიენტი</summary>
-  <summary xml:lang="ko">올인원 YouTube Music 클라이언트</summary>
-  <summary xml:lang="nl">Convergente muziekclient van YouTube</summary>
-  <summary xml:lang="nn">YouTube Music-klient, tilpassa ulike brukarflater</summary>
-  <summary xml:lang="pl">Adaptacyjny program do YouTube Music</summary>
-  <summary xml:lang="pt">Cliente de música do YouTube convergente</summary>
-  <summary xml:lang="pt-BR">Um cliente convergente para o YouTube Music</summary>
-  <summary xml:lang="ro">Client convergent de muzică pentru YouTube</summary>
-  <summary xml:lang="ru">Клиент для YouTube Music</summary>
-  <summary xml:lang="sl">Konvergentni odjemalec glasbe YouTube</summary>
-  <summary xml:lang="sv">Konvergent YouTube-musikprogram</summary>
-  <summary xml:lang="tr">Yakınsak YouTube Müzik İstemcisi</summary>
-  <summary xml:lang="uk">Зручний музичний клієнт YouTube</summary>
-  <summary xml:lang="x-test">xxConvergent YouTube Music clientxx</summary>
-  <summary xml:lang="zh-CN">桌面和移动设备通用 YouTube Music 客户端</summary>
+  <summary>YouTube Music App for phones and desktop computers</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <developer_name>KDE Community</developer_name>
