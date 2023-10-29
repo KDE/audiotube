@@ -275,7 +275,7 @@ struct Playlist {
 }
 
 struct Lyrics {
-    std::string source;
+    std::optional<std::string> source;
     std::string lyrics;
 };
 

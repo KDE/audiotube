@@ -8,7 +8,7 @@
 
 int main() {
     const auto ytm = YTMusic();
-    const auto results = ytm.search("Giant rooks");
+    const auto results = ytm.search("y2ECgOhoDGs");
 
     std::cout << "Found " << results.size() << " results." << std::endl;
 
@@ -45,6 +45,17 @@ int main() {
                 std::cout << arg.title << std::endl;
             } else if constexpr (std::is_same_v<T, search::Video>) {
                 std::cout << arg.title << std::endl;
+            } else if constexpr (std::is_same_v<T, search::TopResult>) {
+                if (arg.title) {
+                    std::cout << *arg.title << std::endl;
+                }
+                if (arg.video_id) {
+                    ytm.extract_video_info(*arg.video_id);
+                    auto playlist = ytm.get_watch_playlist(*arg.video_id);
+                    if (playlist.lyrics) {
+                        ytm.get_lyrics(*playlist.lyrics);
+                    }
+                }
             } else {
                 std::cout << "non exaustive visitor" << std::endl;
             }

@@ -522,7 +522,7 @@ Lyrics YTMusic::get_lyrics(const std::string &browse_id) const
     auto lyrics = d->get_ytmusic().attr("get_lyrics")(browse_id);
 
     return {
-        lyrics["source"].cast<std::string>(),
+        lyrics["source"].cast<std::optional<std::string>>(),
         lyrics["lyrics"].cast<std::string>()
     };
 }
