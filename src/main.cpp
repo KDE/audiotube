@@ -50,6 +50,17 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
         QApplication::setStyle(QStyleFactory::create(QStringLiteral("Breeze")));
     }
 
+    // WORKAROUND: Force QtMultimedia gstreamer backend
+    /*
+      ffmpeg unfortunately loses the connection to youtube's servers with the following error message after ~2 minutes
+      at the time of writing (2023-10-29 with ffmpeg 6.0 and Qt 6.6.1)
+        [tls @ 0x561f31d3d500] Error in the pull function.
+        [tls @ 0x561f31d3d500] IO error: Connection reset by peer
+        [mov,mp4,m4a,3gp,3g2,mj2 @ 0x561f3225e000] Packet corrupt (stream = 0, dts = 4590016).
+        [mov,mp4,m4a,3gp,3g2,mj2 @ 0x561f3225e000] stream 0, offset 0x19c06c: partial file
+        [aac @ 0x561f3244bc00] Input buffer exhausted before END element found
+    */
+    qputenv("QT_MEDIA_BACKEND", "gstreamer");
 
     QCoreApplication::setOrganizationName(QStringLiteral("KDE"));
     QCoreApplication::setOrganizationDomain(QStringLiteral("kde.org"));
