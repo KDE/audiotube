@@ -174,6 +174,7 @@ Item {
                     ScrollView {
                         Layout.maximumWidth: 900
                         contentWidth: -1
+                        contentHeight: lyrics.implicitHeight
                         Layout.fillWidth: true
                         Layout.fillHeight: true
                         Layout.alignment: Qt.AlignHCenter
@@ -182,6 +183,7 @@ Item {
                         //contentY: audio.position / audio.duration
 
                         Label {
+                            id: lyrics
                             padding: 20
                             text: UserPlaylistModel.lyrics
                             color: "white"
