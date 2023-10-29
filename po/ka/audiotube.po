@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-08 00:45+0000\n"
+"POT-Creation-Date: 2023-10-29 00:42+0000\n"
 "PO-Revision-Date: 2023-07-06 08:29+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -469,9 +469,11 @@ msgid "Add to playlist"
 msgstr "დასაკრავ სიაში დამატება"
 
 #: main.cpp:64
-#, kde-format
-msgid "YouTube Music Player"
-msgstr "YouTube-ის მუსიკის დამკვრელი"
+#, fuzzy, kde-format
+#| msgid "Unofficial API for YouTube Music"
+msgctxt "YouTube Music is a music streaming service by Google"
+msgid "Stream music from YouTube Music"
+msgstr "YouTube Music-ის არაოფიციალური API"
 
 #: main.cpp:66
 #, kde-format
@@ -510,8 +512,10 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "Temuri.doghonadze@gmail.com"
 
-#: main.cpp:74
-#, kde-format
+#: main.cpp:76
+#, fuzzy, kde-format
+#| msgid "Unofficial API for YouTube Music"
+msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Unofficial API for YouTube Music"
 msgstr "YouTube Music-ის არაოფიციალური API"
 
@@ -529,6 +533,9 @@ msgstr "სათაურის გარეშე"
 #, kde-format
 msgid "No album"
 msgstr "ალბომის გარეშე"
+
+#~ msgid "YouTube Music Player"
+#~ msgstr "YouTube-ის მუსიკის დამკვრელი"
 
 #~ msgid "Export"
 #~ msgstr "გატანა"

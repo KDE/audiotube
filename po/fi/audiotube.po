@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-08 00:45+0000\n"
+"POT-Creation-Date: 2023-10-29 00:42+0000\n"
 "PO-Revision-Date: 2023-06-27 18:07+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -468,9 +468,11 @@ msgid "Add to playlist"
 msgstr "Lisää soittolistaan"
 
 #: main.cpp:64
-#, kde-format
-msgid "YouTube Music Player"
-msgstr "YouTube-musiikkisoitin"
+#, fuzzy, kde-format
+#| msgid "Unofficial API for YouTube Music"
+msgctxt "YouTube Music is a music streaming service by Google"
+msgid "Stream music from YouTube Music"
+msgstr "Epävirallinen YouTube Music -API"
 
 #: main.cpp:66
 #, kde-format
@@ -509,8 +511,10 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "translator@legisign.org"
 
-#: main.cpp:74
-#, kde-format
+#: main.cpp:76
+#, fuzzy, kde-format
+#| msgid "Unofficial API for YouTube Music"
+msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Unofficial API for YouTube Music"
 msgstr "Epävirallinen YouTube Music -API"
 
@@ -528,6 +532,9 @@ msgstr "Ei otsikkoa"
 #, kde-format
 msgid "No album"
 msgstr "Ei albumia"
+
+#~ msgid "YouTube Music Player"
+#~ msgstr "YouTube-musiikkisoitin"
 
 #, fuzzy
 #~| msgid "Import Playlist"

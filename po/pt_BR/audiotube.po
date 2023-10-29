@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-08 00:45+0000\n"
+"POT-Creation-Date: 2023-10-29 00:42+0000\n"
 "PO-Revision-Date: 2023-07-05 17:10-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -470,9 +470,11 @@ msgid "Add to playlist"
 msgstr "Adicionar à lista de músicas"
 
 #: main.cpp:64
-#, kde-format
-msgid "YouTube Music Player"
-msgstr "Reprodutor de músicas do Youtube"
+#, fuzzy, kde-format
+#| msgid "Unofficial API for YouTube Music"
+msgctxt "YouTube Music is a music streaming service by Google"
+msgid "Stream music from YouTube Music"
+msgstr "API não oficial do YouTube Music"
 
 #: main.cpp:66
 #, kde-format
@@ -511,8 +513,10 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "elchevive@opensuse.org"
 
-#: main.cpp:74
-#, kde-format
+#: main.cpp:76
+#, fuzzy, kde-format
+#| msgid "Unofficial API for YouTube Music"
+msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Unofficial API for YouTube Music"
 msgstr "API não oficial do YouTube Music"
 
@@ -530,6 +534,9 @@ msgstr "Nenhuma música"
 #, kde-format
 msgid "No album"
 msgstr "Nenhum álbum"
+
+#~ msgid "YouTube Music Player"
+#~ msgstr "Reprodutor de músicas do Youtube"
 
 #~ msgid "Export"
 #~ msgstr "Exportar"

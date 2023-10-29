@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-08 00:45+0000\n"
+"POT-Creation-Date: 2023-10-29 00:42+0000\n"
 "PO-Revision-Date: 2023-04-30 14:45+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -481,9 +481,11 @@ msgid "Add to playlist"
 msgstr "Добавить в список воспроизведения"
 
 #: main.cpp:64
-#, kde-format
-msgid "YouTube Music Player"
-msgstr "Музыкальный проигрыватель YouTube"
+#, fuzzy, kde-format
+#| msgid "Unofficial API for YouTube Music"
+msgctxt "YouTube Music is a music streaming service by Google"
+msgid "Stream music from YouTube Music"
+msgstr "Неофициальный API для YouTube Music"
 
 #: main.cpp:66
 #, kde-format
@@ -522,8 +524,10 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kekcuha@gmail.com, farline99@yandex.ru, translation-team@basealt.ru"
 
-#: main.cpp:74
-#, kde-format
+#: main.cpp:76
+#, fuzzy, kde-format
+#| msgid "Unofficial API for YouTube Music"
+msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Unofficial API for YouTube Music"
 msgstr "Неофициальный API для YouTube Music"
 
@@ -542,6 +546,9 @@ msgstr ""
 #, kde-format
 msgid "No album"
 msgstr ""
+
+#~ msgid "YouTube Music Player"
+#~ msgstr "Музыкальный проигрыватель YouTube"
 
 #, fuzzy
 #~| msgid "Playlist"

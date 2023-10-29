@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-08 00:45+0000\n"
+"POT-Creation-Date: 2023-10-29 00:42+0000\n"
 "PO-Revision-Date: 2023-07-18 13:25+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -467,9 +467,11 @@ msgid "Add to playlist"
 msgstr "재생 목록에 추가"
 
 #: main.cpp:64
-#, kde-format
-msgid "YouTube Music Player"
-msgstr "YouTube Music 재생기"
+#, fuzzy, kde-format
+#| msgid "Unofficial API for YouTube Music"
+msgctxt "YouTube Music is a music streaming service by Google"
+msgid "Stream music from YouTube Music"
+msgstr "YouTube Music 비공식 API"
 
 #: main.cpp:66
 #, kde-format
@@ -508,8 +510,10 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "kde@peremen.name"
 
-#: main.cpp:74
-#, kde-format
+#: main.cpp:76
+#, fuzzy, kde-format
+#| msgid "Unofficial API for YouTube Music"
+msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Unofficial API for YouTube Music"
 msgstr "YouTube Music 비공식 API"
 
@@ -527,6 +531,9 @@ msgstr "제목 없음"
 #, kde-format
 msgid "No album"
 msgstr "앨범 없음"
+
+#~ msgid "YouTube Music Player"
+#~ msgstr "YouTube Music 재생기"
 
 #, fuzzy
 #~| msgid "Playlist"

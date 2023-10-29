@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-08 00:45+0000\n"
+"POT-Creation-Date: 2023-10-29 00:42+0000\n"
 "PO-Revision-Date: 2021-09-17 20:09+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -486,9 +486,11 @@ msgid "Add to playlist"
 msgstr "गीत-सूची में जोड़ें"
 
 #: main.cpp:64
-#, kde-format
-msgid "YouTube Music Player"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Find music on YouTube Music"
+msgctxt "YouTube Music is a music streaming service by Google"
+msgid "Stream music from YouTube Music"
+msgstr "यूट्यूब संगीत पर संगीत ढूंढें"
 
 #: main.cpp:66
 #, kde-format
@@ -527,9 +529,10 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "raghu@raghukamath.com"
 
-#: main.cpp:74
+#: main.cpp:76
 #, fuzzy, kde-format
 #| msgid "Find music on YouTube Music"
+msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Unofficial API for YouTube Music"
 msgstr "यूट्यूब संगीत पर संगीत ढूंढें"
 

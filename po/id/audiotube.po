@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-08 00:45+0000\n"
+"POT-Creation-Date: 2023-10-29 00:42+0000\n"
 "PO-Revision-Date: 2023-06-16 19:34+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -483,9 +483,11 @@ msgid "Add to playlist"
 msgstr "Tambahkan ke daftar putar"
 
 #: main.cpp:64
-#, kde-format
-msgid "YouTube Music Player"
-msgstr "Pemutar YouTube Music"
+#, fuzzy, kde-format
+#| msgid "Unofficial API for YouTube Music"
+msgctxt "YouTube Music is a music streaming service by Google"
+msgid "Stream music from YouTube Music"
+msgstr "API tidak resmi untuk YouTube Music"
 
 #: main.cpp:66
 #, kde-format
@@ -524,8 +526,10 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "linerly@protonmail.com"
 
-#: main.cpp:74
-#, kde-format
+#: main.cpp:76
+#, fuzzy, kde-format
+#| msgid "Unofficial API for YouTube Music"
+msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Unofficial API for YouTube Music"
 msgstr "API tidak resmi untuk YouTube Music"
 
@@ -544,6 +548,9 @@ msgstr "Tidak ada judul"
 #, kde-format
 msgid "No album"
 msgstr "Tidak ada album"
+
+#~ msgid "YouTube Music Player"
+#~ msgstr "Pemutar YouTube Music"
 
 #, fuzzy
 #~| msgid "Playlist"

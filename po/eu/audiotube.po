@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-08 00:45+0000\n"
+"POT-Creation-Date: 2023-10-29 00:42+0000\n"
 "PO-Revision-Date: 2023-07-30 22:49+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -472,9 +472,11 @@ msgid "Add to playlist"
 msgstr "Gehitu jotze-zerrendara"
 
 #: main.cpp:64
-#, kde-format
-msgid "YouTube Music Player"
-msgstr "YouTube musika jotzailea"
+#, fuzzy, kde-format
+#| msgid "Unofficial API for YouTube Music"
+msgctxt "YouTube Music is a music streaming service by Google"
+msgid "Stream music from YouTube Music"
+msgstr "«YouTube Music»erako API ez-ofiziala"
 
 #: main.cpp:66
 #, kde-format
@@ -513,8 +515,10 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "xalba@ni.eus"
 
-#: main.cpp:74
-#, kde-format
+#: main.cpp:76
+#, fuzzy, kde-format
+#| msgid "Unofficial API for YouTube Music"
+msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Unofficial API for YouTube Music"
 msgstr "«YouTube Music»erako API ez-ofiziala"
 
@@ -532,6 +536,9 @@ msgstr "Titulurik ez"
 #, kde-format
 msgid "No album"
 msgstr "Albumik ez"
+
+#~ msgid "YouTube Music Player"
+#~ msgstr "YouTube musika jotzailea"
 
 #, fuzzy
 #~| msgid "Playlist"
