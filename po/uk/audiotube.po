@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-29 00:42+0000\n"
-"PO-Revision-Date: 2023-07-05 15:10+0300\n"
+"PO-Revision-Date: 2023-10-29 08:31+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
 "Language: uk\n"
@@ -470,11 +470,10 @@ msgid "Add to playlist"
 msgstr "Додати до списку відтворення"
 
 #: main.cpp:64
-#, fuzzy, kde-format
-#| msgid "Unofficial API for YouTube Music"
+#, kde-format
 msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Stream music from YouTube Music"
-msgstr "Неофіційний програмний інтерфейс до YouTube Music"
+msgstr "Трансляція музики з YouTube Music"
 
 #: main.cpp:66
 #, kde-format
@@ -514,8 +513,7 @@ msgid "Your emails"
 msgstr "yurchor@ukr.net"
 
 #: main.cpp:76
-#, fuzzy, kde-format
-#| msgid "Unofficial API for YouTube Music"
+#, kde-format
 msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Unofficial API for YouTube Music"
 msgstr "Неофіційний програмний інтерфейс до YouTube Music"

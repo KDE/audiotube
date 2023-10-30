@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the audiotube package.
 #
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2021, 2022, 2023.
+# SPDX-FileCopyrightText: 2021, 2022, 2023 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-29 00:42+0000\n"
-"PO-Revision-Date: 2023-07-05 23:07+0200\n"
+"PO-Revision-Date: 2023-10-29 23:15+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 23.04.2\n"
+"X-Generator: Lokalize 23.08.2\n"
 
 #: asyncytmusic.cpp:65
 #, kde-format
@@ -469,11 +469,10 @@ msgid "Add to playlist"
 msgstr "Aan afspeellijst toevoegen"
 
 #: main.cpp:64
-#, fuzzy, kde-format
-#| msgid "Unofficial API for YouTube Music"
+#, kde-format
 msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Stream music from YouTube Music"
-msgstr "Niet officiële API voor YouTube Music"
+msgstr "Muziek streamen van YouTube Music"
 
 #: main.cpp:66
 #, kde-format
@@ -513,8 +512,7 @@ msgid "Your emails"
 msgstr "freekdekruijf@kde.nl"
 
 #: main.cpp:76
-#, fuzzy, kde-format
-#| msgid "Unofficial API for YouTube Music"
+#, kde-format
 msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Unofficial API for YouTube Music"
 msgstr "Niet officiële API voor YouTube Music"

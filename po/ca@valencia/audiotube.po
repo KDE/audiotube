@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-29 00:42+0000\n"
-"PO-Revision-Date: 2023-07-05 14:48+0200\n"
+"PO-Revision-Date: 2023-10-29 09:12+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -472,11 +472,10 @@ msgid "Add to playlist"
 msgstr "Afig a la llista de reproducció"
 
 #: main.cpp:64
-#, fuzzy, kde-format
-#| msgid "Unofficial API for YouTube Music"
+#, kde-format
 msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Stream music from YouTube Music"
-msgstr "API no oficial per a YouTube Music"
+msgstr "Flux de música des de YouTube Music"
 
 #: main.cpp:66
 #, kde-format
@@ -516,8 +515,7 @@ msgid "Your emails"
 msgstr "antonibella5@yahoo.com"
 
 #: main.cpp:76
-#, fuzzy, kde-format
-#| msgid "Unofficial API for YouTube Music"
+#, kde-format
 msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Unofficial API for YouTube Music"
 msgstr "API no oficial per a YouTube Music"
@@ -536,6 +534,3 @@ msgstr "Sense títol"
 #, kde-format
 msgid "No album"
 msgstr "Sense àlbum"
-
-#~ msgid "YouTube Music Player"
-#~ msgstr "Reproductor musical de YouTube"

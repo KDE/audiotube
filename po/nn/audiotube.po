@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-08-08 00:45+0000\n"
+"POT-Creation-Date: 2023-10-29 00:42+0000\n"
 "PO-Revision-Date: 2023-08-24 21:35+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -469,8 +469,9 @@ msgstr "Legg til i speleliste"
 
 #: main.cpp:64
 #, kde-format
-msgid "YouTube Music Player"
-msgstr "YouTube Music-spelar"
+msgctxt "YouTube Music is a music streaming service by Google"
+msgid "Stream music from YouTube Music"
+msgstr ""
 
 #: main.cpp:66
 #, kde-format
@@ -509,10 +510,11 @@ msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "oysteins.omsetting@protonmail.com,karl@huftis.org"
 
-#: main.cpp:74
+#: main.cpp:76
 #, kde-format
+msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Unofficial API for YouTube Music"
-msgstr "Uoffisielt API for YouTube Music"
+msgstr ""
 
 #: playlistimporter.cpp:23
 #, kde-format
