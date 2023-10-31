@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-10-29 00:42+0000\n"
-"PO-Revision-Date: 2023-07-05 09:15+0200\n"
+"PO-Revision-Date: 2023-10-30 06:36+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.3.1\n"
+"X-Generator: Poedit 3.4\n"
 
 #: asyncytmusic.cpp:65
 #, kde-format
@@ -468,11 +468,10 @@ msgid "Add to playlist"
 msgstr "Dodaj v seznam predvajanja"
 
 #: main.cpp:64
-#, fuzzy, kde-format
-#| msgid "Unofficial API for YouTube Music"
+#, kde-format
 msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Stream music from YouTube Music"
-msgstr "Neuradni programski vmesnik za Youtube Music"
+msgstr "Pretočna glasba iz storitve YouTube Music"
 
 #: main.cpp:66
 #, kde-format
@@ -512,11 +511,10 @@ msgid "Your emails"
 msgstr "matjaz.jeran@amis.net"
 
 #: main.cpp:76
-#, fuzzy, kde-format
-#| msgid "Unofficial API for YouTube Music"
+#, kde-format
 msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Unofficial API for YouTube Music"
-msgstr "Neuradni programski vmesnik za Youtube Music"
+msgstr "Neuradni API za Youtube Music"
 
 #: playlistimporter.cpp:23
 #, kde-format
