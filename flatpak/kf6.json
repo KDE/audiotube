@@ -1,5 +1,11 @@
 {
    "name" : "kf6",
+   "cleanup": [
+      "/include",
+      "*.a",
+      "/share/wallpapers",
+      "/bin"
+   ],
    "modules" : [
       {
          "buildsystem" : "cmake-ninja",
