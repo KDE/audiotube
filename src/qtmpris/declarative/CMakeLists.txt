@@ -2,11 +2,11 @@
 #
 #SPDX-License-Identifier: BSD-2-Clause
 
-add_library(declarative STATIC
+add_library(qtmprisdeclarative STATIC
     mprisplugin.cpp
 )
 
-target_link_libraries(declarative
+target_link_libraries(qtmprisdeclarative
     Qt::Qml
     Qt::Core
     Qt::DBus

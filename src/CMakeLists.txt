@@ -53,7 +53,7 @@ target_link_libraries(audiotube
     KF6::WindowSystem
     FutureSQL${QT_MAJOR_VERSION}::FutureSQL
     QCoro${QT_MAJOR_VERSION}::Core
-    declarative
+    qtmprisdeclarative
     ytm
 )
 
