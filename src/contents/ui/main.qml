@@ -170,6 +170,9 @@ Kirigami.ApplicationWindow {
         ColumnLayout {
             id: mpdelegateItem
 
+            required property string videoId
+            required property string title
+
             width: 90
             Layout.maximumWidth: 70
 
@@ -178,7 +181,7 @@ Kirigami.ApplicationWindow {
                 MouseArea {
                     id: recArea
                     anchors.fill: parent
-                    onClicked: play(model.videoId)
+                    onClicked: play(mpdelegateItem.videoId)
                     hoverEnabled: !Kirigami.Settings.hasTransientTouchInput
                     onEntered: {
                         if (!Kirigami.Settings.hasTransientTouchInput) {
@@ -210,7 +213,7 @@ Kirigami.ApplicationWindow {
 
                     ThumbnailSource {
                         id: thumbnailSource
-                        videoId: model ? model.videoId : ""
+                        videoId: mpdelegateItem.videoId
                     }
                     RoundedImage {
                         source: thumbnailSource.cachedPath
@@ -243,7 +246,7 @@ Kirigami.ApplicationWindow {
                 id: searchTitle
                 leftPadding:5
                 Layout.maximumWidth: 70
-                text: model ? model.title : ""
+                text: mpdelegateItem.title
                 elide: Qt.ElideRight
                 wrapMode: Text.WordWrap
                 Layout.maximumHeight: 40

@@ -6,6 +6,8 @@ import QtQuick 2.15
 import QtQuick.Controls as Controls
 import org.kde.ytmusic 1.0
 import org.kde.kirigami 2.19 as Kirigami
+import org.kde.kirigami.delegates as KirigamiDelegates
+
 import QtQuick.Layouts 1.15
 
 import "dialogs"
@@ -96,28 +98,27 @@ Item {
                 videoId: drawer.videoId
             }
 
-            Kirigami.BasicListItem{
+            KirigamiDelegates.SubtitleDelegate{
                 Layout.topMargin: 10
-                label: i18n("Play Next")
+                text: i18n("Play Next")
                 icon.name: "go-next"
                 onClicked: {
                     UserPlaylistModel.playNext(drawer.videoId, drawer.songTitle, drawer.artists)
                     drawer.close()
                 }
             }
-            Kirigami.BasicListItem{
-
-                label: i18n("Add to queue")
+            KirigamiDelegates.SubtitleDelegate{
+                text: i18n("Add to queue")
                 icon.name: "media-playlist-append"
                 onClicked: {
                     UserPlaylistModel.append(drawer.videoId, drawer.songTitle, drawer.artists)
                     drawer.close()
                 }
             }
-            Kirigami.BasicListItem{
+            KirigamiDelegates.SubtitleDelegate{
                 readonly property QtObject favouriteWatcher: Library.favouriteWatcher(drawer.videoId)
 
-                label: favouriteWatcher ? (favouriteWatcher.isFavourite ? i18n("Remove Favourite"): i18n("Add Favourite")): ""
+                text: favouriteWatcher ? (favouriteWatcher.isFavourite ? i18n("Remove Favourite"): i18n("Add Favourite")): ""
                 icon.name: favouriteWatcher ? (favouriteWatcher.isFavourite ? "starred-symbolic" : "non-starred-symbolic") : ""
                 onClicked: {
                     if (favouriteWatcher) {
@@ -131,10 +132,10 @@ Item {
                 }
             }
 
-            Kirigami.BasicListItem{
+            KirigamiDelegates.SubtitleDelegate{
                 readonly property QtObject wasPlayedWatcher: Library.wasPlayedWatcher(drawer.videoId)
                 
-                label: i18n("Remove from History")
+                text: i18n("Remove from History")
                 icon.name: "list-remove"
                 onClicked: {
                     Library.removePlaybackHistoryItem(drawer.videoId)
@@ -144,10 +145,10 @@ Item {
                 enabled: wasPlayedWatcher ? wasPlayedWatcher.wasPlayed : false
             }
 
-            Kirigami.BasicListItem{
+            KirigamiDelegates.SubtitleDelegate{
                 readonly property QtObject wasPlayedWatcher: Library.wasPlayedWatcher(drawer.videoId)
 
-                label: i18n("Add to playlist")
+                text: i18n("Add to playlist")
                 icon.name: "media-playlist-append"
                 onClicked: {
                     playlistDialog.open()
@@ -159,9 +160,9 @@ Item {
 
             Repeater {
                 model: root.pageSpecificActions
-                delegate: Kirigami.BasicListItem{
+                delegate: KirigamiDelegates.SubtitleDelegate{
                     required property var modelData
-                    label: modelData.text
+                    text: modelData.text
                     icon: modelData.icon.name
                     onClicked: {
                         modelData.triggered()
@@ -171,10 +172,10 @@ Item {
             }
 
 
-            Kirigami.BasicListItem{
+            KirigamiDelegates.SubtitleDelegate{
                 readonly property QtObject wasPlayedWatcher: Library.wasPlayedWatcher(drawer.videoId)
 
-                label: i18n("Share Song")
+                text: i18n("Share Song")
                 icon.name: "emblem-shared-symbolic"
                 onClicked: {
                     openShareMenu(drawer.songTitle, "https://music.youtube.com/watch?v=" + drawer.videoId)

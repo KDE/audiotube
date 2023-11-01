@@ -7,6 +7,7 @@ import QtQuick.Window 2.15
 import QtQuick.Controls 2.12 as Controls
 import QtQuick.Layouts 1.3
 import org.kde.kirigami 2.19 as Kirigami
+import org.kde.kirigami.delegates as KirigamiDelegates
 
 import org.kde.ytmusic 1.0
 import "dialogs"
@@ -80,24 +81,24 @@ Kirigami.ScrollablePage {
                 BottomDrawer{
                     id: favDrawer
                     drawerContentItem: ColumnLayout {
-                        Kirigami.BasicListItem{
-                            label: i18n("Play")
+                        KirigamiDelegates.SubtitleDelegate{
+                            text: i18n("Play")
                             icon.name: "media-playback-start"
                             onClicked: {
                                 UserPlaylistModel.playFavourites(Library.favourites, false)
                                 favDrawer.close()
                             }
                         }
-                        Kirigami.BasicListItem{
-                            label: i18n("Shuffle")
+                        KirigamiDelegates.SubtitleDelegate{
+                            text: i18n("Shuffle")
                             icon.name: "shuffle"
                             onClicked: {
                                 UserPlaylistModel.playFavourites(Library.favourites, true)
                                 favDrawer.close()
                             }
                         }
-                        Kirigami.BasicListItem{
-                            label: i18n("Append to queue")
+                        KirigamiDelegates.SubtitleDelegate{
+                            text: i18n("Append to queue")
                             icon.name: "media-playlist-append"
                             onClicked: {
                                 UserPlaylistModel.appendFavourites(Library.favourites,false)
@@ -267,8 +268,8 @@ Kirigami.ScrollablePage {
                 BottomDrawer{
                     id: recDrawer
                     drawerContentItem: ColumnLayout {
-                        Kirigami.BasicListItem{
-                            label: i18n("Play")
+                        KirigamiDelegates.SubtitleDelegate{
+                            text: i18n("Play")
                             icon.name: "media-playback-start"
                             onClicked: {
                                 UserPlaylistModel.playPlaybackHistory(Library.mostPlayed, false)
@@ -276,16 +277,16 @@ Kirigami.ScrollablePage {
                             }
 
                         }
-                        Kirigami.BasicListItem{
-                            label: i18n("Shuffle")
+                        KirigamiDelegates.SubtitleDelegate{
+                            text: i18n("Shuffle")
                             icon.name: "shuffle"
                             onClicked: {
                                 UserPlaylistModel.playPlaybackHistory(Library.mostPlayed, true)
                                 recDrawer.close()
                             }
                         }
-                        Kirigami.BasicListItem{
-                            label: i18n("Append to queue")
+                        KirigamiDelegates.SubtitleDelegate{
+                            text: i18n("Append to queue")
                             icon.name: "media-playlist-append"
                             onClicked: {
                                 UserPlaylistModel.appendPlaybackHistory(Library.mostPlayed, false)
@@ -450,8 +451,8 @@ Kirigami.ScrollablePage {
             id: playlistDrawer
             property var modelData
             drawerContentItem: ColumnLayout {
-                Kirigami.BasicListItem{
-                    label: i18n("Rename")
+                KirigamiDelegates.SubtitleDelegate{
+                    text: i18n("Rename")
                     icon.name: "edit-entry"
                     onClicked: {
                         renamePlaylistDialog.modelData = playlistDrawer.modelData
@@ -459,8 +460,8 @@ Kirigami.ScrollablePage {
                         playlistDrawer.close()
                     }
                 }
-                Kirigami.BasicListItem{
-                    label: i18n("Delete")
+                KirigamiDelegates.SubtitleDelegate{
+                    text: i18n("Delete")
                     icon.name: "delete"
                     onClicked: {
                         localPlaylistsModel.deletePlaylist(playlistDrawer.modelData.playlistId)

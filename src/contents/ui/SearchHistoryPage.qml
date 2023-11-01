@@ -42,10 +42,7 @@ Kirigami.ScrollablePage {
                         searchQuery: searchLoader.text
                     }
 
-                    delegate: Kirigami.DelegateRecycler {
-                        Layout.alignment: Qt.AlignTop
-                        sourceComponent: searchAlbum
-                    }
+                    delegate: searchAlbum
                 }
             }
         }
@@ -62,10 +59,13 @@ Kirigami.ScrollablePage {
             Layout.fillWidth: true
             model: Library.searches
 
-            delegate: Kirigami.AbstractListItem {
+            delegate: Controls.ItemDelegate {
                 implicitHeight: Kirigami.Units.gridUnit * 2
                 Layout.fillWidth: true
-                RowLayout {
+
+                required property string searchQuery
+
+                contentItem: RowLayout {
                     Kirigami.Icon {
                         source: "search"
                         implicitHeight: Kirigami.Units.gridUnit
@@ -73,7 +73,7 @@ Kirigami.ScrollablePage {
                         color: Kirigami.Theme.disabledTextColor
                     }
                     Controls.Label {
-                        text: model.display
+                        text: searchQuery
                         Layout.fillWidth: true
                         elide: Text.ElideRight
                     }

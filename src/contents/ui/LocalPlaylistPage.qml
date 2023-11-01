@@ -7,6 +7,7 @@ import QtQuick 2.15
 import QtQuick.Controls 2.12 as Controls
 import QtQuick.Layouts 1.3
 import org.kde.kirigami 2.14 as Kirigami
+import org.kde.kirigami.delegates as KirigamiDelegates
 import org.kde.ytmusic 1.0
 
 import "components"

@@ -141,7 +141,7 @@ Item {
                     drawerContentItem: ColumnLayout {
                         Repeater {
                             model: root.overflowActions
-                            delegate: Kirigami.BasicListItem{
+                            delegate: KirigamiDelegates.SubtitleDelegate{
                                 required property var modelData
                                 label: modelData.text
                                 icon.name: modelData.icon.name

@@ -363,7 +363,7 @@ Item {
                             }
                         }
 
-                        delegate: Kirigami.AbstractListItem {
+                        delegate: Controls.ItemDelegate {
                             required property string searchQuery
                             required property int index
 

@@ -2,12 +2,13 @@
 // SPDX-FileCopyrightText: 2023 Mathis Brüchert <mbb@kaidan.im>
 // SPDX-License-Identifier: GPL-2.0-or-later
 
-import QtQuick.Controls 2.1 as Controls
+import QtQuick.Controls as Controls
 import QtQuick.Layouts 1.7
 import QtQuick 2.7
 import QtQuick.Window 2.15
 
 import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kirigami.delegates as KirigamiDelegates
 import org.kde.purpose 1.0 as Purpose
 
 import org.kde.ytmusic 1.0
@@ -41,12 +42,10 @@ Item{
         standardButtons: Kirigami.Dialog.NoButton
         ColumnLayout {
             spacing:0
-            Kirigami.BasicListItem {
+            KirigamiDelegates.SubtitleDelegate {
                 Layout.fillWidth: true
-                leading: Kirigami.Icon {
-                    source: "edit-copy"
-                }
-                label: i18n("Copy Link")
+                icon.name: "edit-copy"
+                text: i18n("Copy Link")
                 visible: view.depth === 1
                 onClicked: {
                     Clipboard.text = root.url
@@ -61,24 +60,26 @@ Item{
                 pluginType: "ShareUrl"
                 clip: true
 
-                delegate: Kirigami.BasicListItem {
-                    id: shareDelegate
-
-                    required property string iconName
-                    required property int index
-                    required property string actionDisplay
-
-                    label: shareDelegate.actionDisplay
+                delegate: Controls.ItemDelegate {
                     onClicked: view.createJob (shareDelegate.index)
-                    Keys.onReturnPressed: view.createJob (shareDelegate.index)
-                    Keys.onEnterPressed: view.createJob (shareDelegate.index)
-                    leading: Kirigami.Icon {
-                        source: shareDelegate.iconName
-                    }
-                    trailing: Kirigami.Icon {
-                        implicitWidth: Kirigami.Units.iconSizes.small
-                        implicitHeight: Kirigami.Units.iconSizes.small
-                        source: "arrow-right"
+
+                    contentItem: KirigamiDelegates.IconTitleSubtitle {
+                        id: shareDelegate
+
+                        required property string iconName
+                        required property int index
+                        required property string actionDisplay
+
+                        title: shareDelegate.actionDisplay
+                        Keys.onReturnPressed: view.createJob (shareDelegate.index)
+                        Keys.onEnterPressed: view.createJob (shareDelegate.index)
+                        icon.name: shareDelegate.iconName
+
+                        Kirigami.Icon {
+                            implicitWidth: Kirigami.Units.iconSizes.small
+                            implicitHeight: Kirigami.Units.iconSizes.small
+                            source: "arrow-right"
+                        }
                     }
                 }
 
@@ -91,12 +92,10 @@ Item{
         id: inputDrawer
         drawerContentItem: ColumnLayout {
             spacing:0
-            Kirigami.BasicListItem {
+            KirigamiDelegates.SubtitleDelegate {
                 Layout.fillWidth: true
-                leading: Kirigami.Icon {
-                    source: "edit-copy"
-                }
-                label: i18n("Copy Link")
+                icon.name: "edit-copy"
+                text: i18n("Copy Link")
                 visible: drawerView.depth === 1
                 onClicked: {
                     Clipboard.text = root.url
@@ -110,20 +109,19 @@ Item{
                 clip: true
                 Layout.fillHeight: true
                 Layout.fillWidth: true
-                delegate: Kirigami.BasicListItem {
+                delegate: KirigamiDelegates.SubtitleDelegate {
                     id: shareDrawerDelegate
 
                     required property string iconName
                     required property int index
 
-                    label: shareDrawerDelegate.display
+                    text: shareDrawerDelegate.display
                     onClicked: drawerView.createJob (shareDrawerDelegate.index)
                     Keys.onReturnPressed: view.createJob (shareDrawerDelegate.index)
                     Keys.onEnterPressed: view.createJob (shareDrawerDelegate.index)
-                    leading: Kirigami.Icon {
-                        source: shareDrawerDelegate.iconName
-                    }
-                    trailing: Kirigami.Icon {
+                    icon.name: shareDrawerDelegate.iconName
+
+                    Kirigami.Icon {
                         implicitWidth: Kirigami.Units.iconSizes.small
                         implicitHeight: Kirigami.Units.iconSizes.small
                         source: "arrow-right"

@@ -52,15 +52,14 @@ Kirigami.PromptDialog {
         model: LocalPlaylistsModel {
             id: localPlaylistsModel
         }
-        delegate: Kirigami.AbstractListItem {
+        delegate: Controls.ItemDelegate {
             required property string title
             required property string description
             required property int playlistId
             required property var thumbnailIds
             required property int index
 
-
-            RowLayout {
+            contentItem: RowLayout {
                 Layout.fillHeight: true
                 LocalPlaylistModel{id:localPlaylistModel}
                 ThumbnailSource {

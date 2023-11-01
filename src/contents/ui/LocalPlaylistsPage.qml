@@ -8,6 +8,7 @@ import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.15 as Controls
 
 import org.kde.kirigami 2.15 as Kirigami
+import org.kde.kirigami.delegates as KirigamiDelegates
 
 import org.kde.ytmusic 1.0
 
@@ -29,8 +30,8 @@ Kirigami.ScrollablePage {
         id: drawer
         property var modelData
         drawerContentItem: ColumnLayout {
-            Kirigami.BasicListItem{
-                label: i18n("Rename")
+            KirigamiDelegates.SubtitleDelegate{
+                text: i18n("Rename")
                 icon.name: "edit-entry"
                 onClicked: {
                     renamePlaylistDialog.modelData = drawer.modelData
@@ -38,8 +39,8 @@ Kirigami.ScrollablePage {
                     drawer.close()
                 }
             }
-            Kirigami.BasicListItem{
-                label: i18n("Delete")
+            KirigamiDelegates.SubtitleDelegate{
+                text: i18n("Delete")
                 icon.name: "delete"
                 onClicked: {
                     localPlaylistsModel.deletePlaylist(drawer.modelData.playlistId)
@@ -139,13 +140,13 @@ Kirigami.ScrollablePage {
                 BottomDrawer { 
                     id: favDrawer
                     drawerContentItem: ColumnLayout {
-                        Kirigami.BasicListItem{
-                            label: i18n("New Playlist")
+                        KirigamiDelegates.SubtitleDelegate{
+                            text: i18n("New Playlist")
                             icon.name: "list-add"
                             onClicked: addPlaylistDialog.open()
                         }
-                        Kirigami.BasicListItem{
-                            label: i18n("Import Playlist")
+                        KirigamiDelegates.SubtitleDelegate{
+                            text: i18n("Import Playlist")
                             icon.name: "download"
                             onClicked: importPlaylistDialog.open()
                         }
