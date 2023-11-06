@@ -4,6 +4,7 @@
 
 import QtQuick 2.15
 import org.kde.kirigami 2.14 as Kirigami
+import org.kde.kirigami.delegates as KirigamiDelegates
 import QtQuick.Controls 2.14 as Controls
 import QtQuick.Layouts 1.3
 import Qt5Compat.GraphicalEffects
@@ -143,7 +144,7 @@ Item {
                             model: root.overflowActions
                             delegate: KirigamiDelegates.SubtitleDelegate{
                                 required property var modelData
-                                label: modelData.text
+                                text: modelData.text
                                 icon.name: modelData.icon.name
                                 onClicked: {
                                     modelData.triggered()
