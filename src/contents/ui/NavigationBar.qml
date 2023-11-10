@@ -16,7 +16,6 @@ Kirigami.NavigationTabBar {
     backgroundColor: "transparent"
     foregroundColor: "white"
     highlightForegroundColor: "white"
-    shadow: false
 
     actions: [
         Kirigami.Action {
