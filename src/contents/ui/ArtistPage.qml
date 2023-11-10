@@ -164,7 +164,7 @@ Kirigami.ScrollablePage {
             required property var artists
             required property string videoId
             required property string thumbnailUrl
-            MouseArea {
+            contentItem: MouseArea {
                 implicitHeight: content.implicitHeight
                 acceptedButtons: Qt.LeftButton | Qt.RightButton
                 onClicked: if (mouse.button === Qt.RightButton) {

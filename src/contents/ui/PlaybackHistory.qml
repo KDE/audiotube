@@ -148,7 +148,7 @@ Kirigami.ScrollablePage {
             required property string artistsDisplayString
             required property int index
 
-            MouseArea {
+            contentItem: MouseArea {
                 implicitHeight: content.implicitHeight
                 acceptedButtons: Qt.LeftButton | Qt.RightButton
                 onClicked: if (mouse.button === Qt.RightButton) {
