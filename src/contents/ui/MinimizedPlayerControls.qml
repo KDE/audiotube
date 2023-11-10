@@ -15,14 +15,14 @@ import org.kde.ytmusic 1.0
 Item {
     id: root
     z: 2000
-    
+
     required property int progressBarHeight
     required property int minimizedPlayerContentHeight
-    
+
     required property var info // VideoInfoExtractor object
     required property var audio // Audio object
     required property string thumbnail
-    
+
     readonly property bool isWidescreen: width >= Kirigami.Units.gridUnit * 50
     signal requestOpen()
     Shortcut {
@@ -38,12 +38,12 @@ Item {
         color: Kirigami.Theme.highlightColor
         width: parent.width * (audio.position / audio.duration)
     }
-    
+
     RowLayout {
         width: !isWidescreen ? root.width - controlButtonBox.width: root.width
         anchors.fill: parent
         spacing: 0
-        
+
         Rectangle {
             Layout.fillHeight: true
             Layout.fillWidth: true
@@ -54,11 +54,11 @@ Item {
                 anchors.fill: parent
                 anchors.leftMargin: Kirigami.Units.largeSpacing
                 spacing: Kirigami.Units.largeSpacing
-                
+
                 // track image
                 Item {
                     property double imageSize: root.height - Kirigami.Units.largeSpacing * 2
-                    
+
                     Layout.alignment: Qt.AlignVCenter
                     Layout.maximumWidth: imageSize
                     Layout.preferredWidth: imageSize
@@ -72,7 +72,7 @@ Item {
                         source: root.thumbnail
                         radius: 5
                     }
-                    
+
                     BusyIndicator {
                         id: loadingIndicator
                         anchors.centerIn: parent
@@ -82,13 +82,13 @@ Item {
                     }
 
                 }
-                
+
                 // track information
                 ColumnLayout {
                     Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
                     Layout.fillWidth: true
                     Layout.fillHeight: true
-                    
+
                     Label {
                         id: mainLabel
                         text: info.title ? info.title : i18n("No media playing")
@@ -106,7 +106,7 @@ Item {
                         color: Kirigami.Theme.textColor
                         font.weight: Font.Bold
                     }
-                    
+
                     Label {
                         id: authorLabel
                         text: info.artist ? info.artist : info.channel
@@ -150,7 +150,7 @@ Item {
             text: PlayerUtils.formatTimestamp(audio.position)
             Layout.rightMargin: 20
         }
-        
+
         Button {
             id: skipBackwardButton
             implicitHeight: 40
@@ -162,7 +162,7 @@ Item {
 
             enabled: UserPlaylistModel.canSkipBack
             onClicked: UserPlaylistModel.previous()
-            
+
             contentItem: Item {
                 Kirigami.Icon {
                     anchors.centerIn: parent
@@ -172,7 +172,7 @@ Item {
                     height: Kirigami.Units.gridUnit
                 }
             }
-            
+
             background: Kirigami.ShadowedRectangle {
                 corners.topLeftRadius: isWidescreen ? 7 : 0
                 corners.bottomLeftRadius: isWidescreen ? 7 : 0
@@ -202,7 +202,7 @@ Item {
             implicitHeight: 40
             implicitWidth: 60
             Layout.fillHeight: !isWidescreen
-            
+
             onClicked: audio.playbackState === MediaPlayer.PlayingState ? audio.pause() : audio.play()
             contentItem: Item {
                 Kirigami.Icon {
@@ -213,7 +213,7 @@ Item {
                     height: Kirigami.Units.gridUnit
                 }
             }
-            
+
             background: Kirigami.ShadowedRectangle {
                 color: if (isWidescreen) {
                     if (parent.down) {

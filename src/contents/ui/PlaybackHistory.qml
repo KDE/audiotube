@@ -78,25 +78,25 @@ Kirigami.ScrollablePage {
     }
 
     SongMenu {
-        id:menu
+        id: menu
     }
     ListView {
         footer: Item { height: 60 }
-        header: RowLayout{
-                spacing: Kirigami.Units.MediumSpacing
+        header: RowLayout {
+            spacing: Kirigami.Units.MediumSpacing
 
-                Controls.ToolButton {
-                    text: i18n("Play")
-                    icon.name: "media-playback-start"
-                    onClicked: {
-                        if(playbackHistoryPage.objectName == "favourites") {
-                            UserPlaylistModel.playFavourites(Library.favourites, false)
-                        }
-                        else if(playbackHistoryPage.objectName == "history") {
-                            onClicked: UserPlaylistModel.playPlaybackHistory(playbackHistoryPage.dataModel, false)
-                        }
+            Controls.ToolButton {
+                text: i18n("Play")
+                icon.name: "media-playback-start"
+                onClicked: {
+                    if(playbackHistoryPage.objectName == "favourites") {
+                        UserPlaylistModel.playFavourites(Library.favourites, false)
+                    }
+                    else if(playbackHistoryPage.objectName == "history") {
+                        onClicked: UserPlaylistModel.playPlaybackHistory(playbackHistoryPage.dataModel, false)
                     }
                 }
+            }
 
             Controls.ToolButton {
                 text: i18n("Shuffle")

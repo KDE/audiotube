@@ -291,7 +291,7 @@ Item {
                 implicitHeight: mainScrollViewLayout.implicitHeight
 
                 clip: true
-                
+
                 Layout.fillHeight: true
                 Layout.fillWidth: true
 
@@ -302,7 +302,7 @@ Item {
                     id: mainScrollViewLayout
 
                     width: mainScrollView.contentWidth
-                    
+
                     HorizontalCoverView {
                         id: recentsRepeater
                         Controls.ScrollBar.horizontal.policy: Controls.ScrollBar.AlwaysOff

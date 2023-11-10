@@ -134,7 +134,7 @@ Item {
 
             KirigamiDelegates.SubtitleDelegate{
                 readonly property QtObject wasPlayedWatcher: Library.wasPlayedWatcher(drawer.videoId)
-                
+
                 text: i18n("Remove from History")
                 icon.name: "list-remove"
                 onClicked: {

@@ -137,7 +137,7 @@ Kirigami.ScrollablePage {
                     }
                 }
 
-                BottomDrawer { 
+                BottomDrawer {
                     id: favDrawer
                     drawerContentItem: ColumnLayout {
                         KirigamiDelegates.SubtitleDelegate{

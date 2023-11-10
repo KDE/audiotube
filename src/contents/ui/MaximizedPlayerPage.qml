@@ -76,7 +76,7 @@ Item {
     // content
     RowLayout {
         anchors.fill: parent
-        
+
         ColumnLayout {
             id: mainContent
             Layout.fillWidth: true
@@ -468,7 +468,7 @@ Item {
                             id: volumeDrawer
                             drawerContentItem: ColumnLayout {
                                 RowLayout {
-                                    ToolButton{
+                                    ToolButton {
                                         Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
                                         Layout.maximumWidth: height
                                         Layout.preferredWidth: height
@@ -551,10 +551,10 @@ Item {
 
                         icon.name: audioOutput.muted ? "audio-volume-muted" : (volumeSlider.value < .33 ? "audio-volume-low" : (volumeSlider.value < .66 ? "audio-volume-medium" : "audio-volume-high"))
                         icon.color: "white"
-                        
+
                         Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
                         Kirigami.Theme.inherit: false
-                        
+
                         checkable: true
                         visible: isWidescreen
                         enabled: isWidescreen
@@ -663,7 +663,7 @@ Item {
                         Kirigami.Theme.inherit: false
                     }
 
-                    PlaylistDialog{
+                    PlaylistDialog {
                         id: playlistsDialog
                     }
                     ToolButton {
@@ -714,7 +714,7 @@ Item {
                         enabled: playListView.count != 0 || !sideDrawer.collapsed
 
                         onClicked: {
-                            if (wideScreen){
+                            if (wideScreen) {
                                 if (!sideDrawer.collapsed)
                                     collapse.running = true
                                 else{
@@ -803,7 +803,7 @@ Item {
             }
 
             ColumnLayout {
-                spacing: 0  
+                spacing: 0
                 anchors.fill: parent
                 ScrollView {
                     id: playListScrollView
@@ -884,7 +884,7 @@ Item {
                                 }
                                 highlighted: isCurrent
                                 onClicked: UserPlaylistModel.skipTo(videoId)
-                                contentItem: RowLayout{
+                                contentItem: RowLayout {
                                     Item {
                                         width: handle.width
                                         height: handle.height
@@ -960,14 +960,14 @@ Item {
                     }
                 }
 
-                
+
                 Kirigami.Separator {
                     color: "white"
                     opacity: 0.3
                     Layout.fillWidth: true
                 }
-                
-                RowLayout{
+
+                RowLayout {
                     id: queueFooter
 
                     Layout.margins: Kirigami.Units.gridUnit * 0.5
@@ -975,14 +975,14 @@ Item {
                     Item {
                         Layout.fillWidth: true
                     }
-                    
+
                     ToolButton {
                         id: clearPlaylistButton
 
                         Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
                         Layout.maximumWidth: height
                         Layout.preferredWidth: height
-                        
+
                         text: i18n("Clear Queue")
                         icon {
                             name: "edit-clear-all"
@@ -993,21 +993,21 @@ Item {
                         ToolTip.text: text
                         ToolTip.delay: Kirigami.Units.toolTipDelay
                         ToolTip.visible: Kirigami.Settings.isMobile ? pressed : hovered
-                        
+
                         onClicked: UserPlaylistModel.clearExceptCurrent()
-                        
+
                         Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
                         Kirigami.Theme.inherit: false
                     }
-                    
+
                     ToolButton {
                         id: shuffleButton
                         Layout.preferredHeight: Math.round(Kirigami.Units.gridUnit * 2.5)
                         Layout.maximumWidth: height
                         Layout.preferredWidth: height
-                        
+
                         onClicked: UserPlaylistModel.shufflePlaylist()
-                        
+
                         text: i18n("Shuffle Queue")
 
                         ToolTip.text: text
@@ -1022,7 +1022,7 @@ Item {
                         Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
                         Kirigami.Theme.inherit: false
                     }
-                    
+
                     Item {
                         Layout.fillWidth: true
                     }
@@ -1037,7 +1037,7 @@ Item {
             interactive: true
 
             headerContentItem: RowLayout {
-                Kirigami.Heading{
+                Kirigami.Heading {
                     text: i18n("Upcoming Songs")
                     elide: Qt.ElideRight
                     Layout.margins: 0
@@ -1106,7 +1106,7 @@ Item {
                         }
                     }
 
-                    delegate: Item{
+                    delegate: Item {
                         id: drawerDelegateItem
                         required property string title
                         required property string videoId
@@ -1126,7 +1126,7 @@ Item {
                                 queueDrawer.close()
                                 UserPlaylistModel.skipTo(drawerDelegateItem.videoId)
                             }
-                            contentItem: RowLayout{
+                            contentItem: RowLayout {
                                 Layout.fillWidth: true
                                 Item {
                                     width: handle.width

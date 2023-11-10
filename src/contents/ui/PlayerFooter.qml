@@ -16,10 +16,10 @@ import org.kde.ytmusic 1.0
 
 Flickable {
     id: footerItem
-    
+
     property int footerSpacing: 0
     property bool maximized: false
-    
+
     readonly property int progressBarHeight: Kirigami.Units.gridUnit / 4
     readonly property int minimizedPlayerContentHeight: Math.round(Kirigami.Units.gridUnit * 3.5)
     readonly property int minimizedPlayerHeight: minimizedPlayerContentHeight + progressBarHeight
@@ -27,7 +27,7 @@ Flickable {
     readonly property string thumbnail: thumbnailSource.cachedPath
 
     boundsBehavior: Flickable.StopAtBounds
-    
+
     function close() {
         toClose.restart();
     }
@@ -55,7 +55,7 @@ Flickable {
             contentY = 0;
         }
     }
-    
+
     NumberAnimation on contentY {
         id: toOpen
         from: contentY
@@ -64,7 +64,7 @@ Flickable {
         easing.type: Easing.OutCubic
         running: false
     }
-    
+
     NumberAnimation on contentY {
         id: toClose
         from: contentY
@@ -112,7 +112,7 @@ Flickable {
         id: thumbnailSource
         videoId: UserPlaylistModel.currentVideoId
     }
-    
+
     property var audioPlayer: audioLoader.item
     property var audioOutput: audioLoader.item.audioOutput
 
@@ -137,9 +137,9 @@ Flickable {
             }
         }
     }
-    
+
     contentHeight: height * 2
-    
+
     ColumnLayout {
         id: footerLayout
         y:-footerSpacing
@@ -151,28 +151,28 @@ Flickable {
         Item {
             Layout.minimumHeight: footerItem.height - footerItem.minimizedPlayerHeight
         }
-        
+
         Controls.Control {
             Layout.fillWidth: true
             padding: 0
             implicitHeight: footerItem.minimizedPlayerHeight+footerSpacing
-            
+
             // minimized player background
             background: Item {
                 Rectangle {
                     anchors.fill: parent
                     color: Qt.rgba(25, 25, 30, 1)
                 }
-                
+
                 Image {
                     opacity: 0.2
                     source: thumbnailSource.cachedPath
                     asynchronous: true
-                    
+
                     anchors.fill: parent
                     fillMode: Image.PreserveAspectCrop
                 }
-                
+
                 layer.enabled: true
                 layer.effect: HueSaturation {
                     cached: true
@@ -188,21 +188,21 @@ Flickable {
                     }
                 }
             }
-            
+
             MinimizedPlayerControls {
                 progressBarHeight: footerItem.progressBarHeight
                 minimizedPlayerContentHeight: footerItem.minimizedPlayerContentHeight
                 height: minimizedPlayerHeight
-                
+
                 focus: true
                 anchors.left: parent.left
                 anchors.right: parent.right
                 anchors.top: parent.top
-                
+
                 thumbnail: thumbnailSource.cachedPath
                 info: footerItem.videoInfoExtractor
                 audio: footerItem.audioPlayer
-                
+
                 onRequestOpen: toOpen.start();
             }
         }
@@ -212,11 +212,11 @@ Flickable {
             Layout.fillWidth: true
             Layout.fillHeight: true
             implicitHeight: footerItem.height
-            
+
             thumbnail: footerItem.videoInfoExtractor.thumbnail
             info: footerItem.videoInfoExtractor
             audio: footerItem.audioPlayer
-                
+
             onRequestClose: toClose.start();
         }
     }

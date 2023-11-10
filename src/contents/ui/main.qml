@@ -257,7 +257,7 @@ Kirigami.ApplicationWindow {
         }
     }
 
-    
+
     pageStack.anchors.bottomMargin: wideScreen ? playerFooter.minimizedPlayerHeight: playerFooter.minimizedPlayerHeight+bottombar.height
     pageStack.anchors.leftMargin: wideScreen ? sidebar.width:0
 
