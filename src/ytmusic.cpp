@@ -375,8 +375,13 @@ std::vector<search::SearchResultItem> YTMusic::search(
         if (result.is_none()) {
             continue;
         }
-        if (const auto opt = extract_search_result(result); opt.has_value()) {
-            output.push_back(opt.value());
+
+        try {
+            if (const auto opt = extract_search_result(result); opt.has_value()) {
+                output.push_back(opt.value());
+            }
+        } catch (const std::exception &e) {
+            std::cerr << "Failed to parse search result because:" << e.what();
         }
     };
 
