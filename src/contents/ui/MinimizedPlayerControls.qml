@@ -39,109 +39,123 @@ Item {
         width: parent.width * (audio.position / audio.duration)
     }
 
-    RowLayout {
-        width: !isWidescreen ? root.width - controlButtonBox.width: root.width
-        anchors.fill: parent
-        spacing: 0
+    states: [
+        State {
+            when: root.isWidescreen
+            AnchorChanges {
+                target: controlButtonBox
+                anchors.horizontalCenter: root.horizontalCenter
+            }
+        },
+        State {
+            when: true // default (fallback) state
+            AnchorChanges {
+                target: controlButtonBox
+                anchors.right: root.right
+            }
+        }
+    ]
 
-        Rectangle {
-            Layout.fillHeight: true
-            Layout.fillWidth: true
+    Rectangle {
+        id: trackInfoLayout
 
-            color: Qt.rgba(0, 0, 0, trackClick.containsMouse ? 0.1 : trackClick.pressed ? 0.3 : 0)
+        anchors {
+            top: parent.top
+            left: parent.left
+            bottom: parent.bottom
 
-            RowLayout {
-                anchors.fill: parent
-                anchors.leftMargin: Kirigami.Units.largeSpacing
-                spacing: Kirigami.Units.largeSpacing
+            right: controlButtonBox.left
+            rightMargin: Kirigami.Units.largeSpacing
+        }
 
-                // track image
-                Item {
-                    property double imageSize: root.height - Kirigami.Units.largeSpacing * 2
+        color: Qt.rgba(0, 0, 0, trackClick.containsMouse ? 0.1 : trackClick.pressed ? 0.3 : 0)
 
-                    Layout.alignment: Qt.AlignVCenter
-                    Layout.maximumWidth: imageSize
-                    Layout.preferredWidth: imageSize
-                    Layout.maximumHeight: imageSize
-                    Layout.minimumHeight: imageSize
+        RowLayout {
+            anchors.fill: parent
+            anchors.leftMargin: Kirigami.Units.largeSpacing
+            spacing: Kirigami.Units.largeSpacing
 
-                    RoundedImage {
-                        id: mainIcon
-                        anchors.fill: parent
-                        visible: !loadingIndicator.visible
-                        source: root.thumbnail
-                        radius: 5
-                    }
+            // track image
+            Item {
+                property double imageSize: root.height - Kirigami.Units.largeSpacing * 2
 
-                    BusyIndicator {
-                        id: loadingIndicator
-                        anchors.centerIn: parent
-                        visible: UserPlaylistModel.loading
-                        Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
-                        Kirigami.Theme.inherit: false
-                    }
+                Layout.alignment: Qt.AlignVCenter
+                Layout.maximumWidth: imageSize
+                Layout.preferredWidth: imageSize
+                Layout.maximumHeight: imageSize
+                Layout.minimumHeight: imageSize
 
+                RoundedImage {
+                    id: mainIcon
+                    anchors.fill: parent
+                    visible: !loadingIndicator.visible
+                    source: root.thumbnail
+                    radius: 5
                 }
 
-                // track information
-                ColumnLayout {
+                BusyIndicator {
+                    id: loadingIndicator
+                    anchors.centerIn: parent
+                    visible: UserPlaylistModel.loading
                     Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-
-                    Label {
-                        id: mainLabel
-                        text: info.title ? info.title : i18n("No media playing")
-                        textFormat: Text.PlainText
-                        wrapMode: Text.Wrap
-                        Layout.alignment: Qt.AlignVCenter | Qt.AlignLeft
-                        Layout.fillWidth: true
-                        Layout.maximumWidth: Kirigami.Units.gridUnit * 15
-                        horizontalAlignment: Text.AlignLeft
-                        elide: Text.ElideRight
-                        maximumLineCount: 1
-                        // Hardcoded because the footerbar blur always makes a dark-ish
-                        // background, so we don't want to use a color scheme color that
-                        // might also be dark
-                        color: Kirigami.Theme.textColor
-                        font.weight: Font.Bold
-                    }
-
-                    Label {
-                        id: authorLabel
-                        text: info.artist ? info.artist : info.channel
-                        textFormat: Text.PlainText
-                        wrapMode: Text.Wrap
-                        Layout.alignment: Qt.AlignVCenter | Qt.AlignLeft
-                        Layout.fillWidth: true
-                        horizontalAlignment: Text.AlignLeft
-                        elide: Text.ElideRight
-                        maximumLineCount: 1
-                        Layout.maximumWidth: Kirigami.Units.gridUnit * 15
-                        // Hardcoded because the footerbar blur always makes a dark-ish
-                        // background, so we don't want to use a color scheme color that
-                        // might also be dark
-                        color: Kirigami.Theme.disabledTextColor
-                    }
+                    Kirigami.Theme.inherit: false
                 }
-                Item{Layout.fillWidth: true}
+            }
 
+            // track information
+            ColumnLayout {
+                Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+
+                Label {
+                    id: mainLabel
+                    text: info.title ? info.title : i18n("No media playing")
+                    textFormat: Text.PlainText
+                    wrapMode: Text.Wrap
+                    Layout.fillWidth: true
+                    horizontalAlignment: Text.AlignLeft
+                    elide: Text.ElideRight
+                    maximumLineCount: 1
+                    // Hardcoded because the footerbar blur always makes a dark-ish
+                    // background, so we don't want to use a color scheme color that
+                    // might also be dark
+                    color: Kirigami.Theme.textColor
+                    font.weight: Font.Bold
+                }
+
+                Label {
+                    id: authorLabel
+                    text: info.artist ? info.artist : info.channel
+                    textFormat: Text.PlainText
+                    wrapMode: Text.Wrap
+                    Layout.fillWidth: true
+                    horizontalAlignment: Text.AlignLeft
+                    elide: Text.ElideRight
+                    maximumLineCount: 1
+                    // Hardcoded because the footerbar blur always makes a dark-ish
+                    // background, so we don't want to use a color scheme color that
+                    // might also be dark
+                    color: Kirigami.Theme.disabledTextColor
+                }
             }
-            MouseArea {
-                id: trackClick
-                anchors.fill: parent
-                hoverEnabled: true
-                onClicked: root.requestOpen()
-            }
+        }
+        MouseArea {
+            id: trackClick
+            anchors.fill: parent
+            hoverEnabled: true
+            onClicked: root.requestOpen()
         }
     }
 
     RowLayout {
         id: controlButtonBox
-        anchors.centerIn: isWidescreen ? parent : undefined
-        anchors.right: !isWidescreen ? parent.right : undefined
+
         anchors.top: parent.top
         anchors.bottom: parent.bottom
+        // horizontal anchors (center or right) are managed by state
+        // transitions at the root component
+
         spacing: 2
 
         Label {
