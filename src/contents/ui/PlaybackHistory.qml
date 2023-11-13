@@ -151,11 +151,13 @@ Kirigami.ScrollablePage {
             contentItem: MouseArea {
                 implicitHeight: content.implicitHeight
                 acceptedButtons: Qt.LeftButton | Qt.RightButton
-                onClicked: if (mouse.button === Qt.RightButton) {
-                               menu.openForSong(delegateItem.videoId, delegateItem.title, delegateItem.artists, delegateItem.artistsDisplayString)
-                          } else if (mouse.button === Qt.LeftButton) {
-                               play(videoId)
-                          }
+                onClicked: mouse => {
+                    if (mouse.button === Qt.RightButton) {
+                        menu.openForSong(delegateItem.videoId, delegateItem.title, delegateItem.artists, delegateItem.artistsDisplayString)
+                    } else if (mouse.button === Qt.LeftButton) {
+                        play(videoId)
+                    }
+                }
                 RowLayout {
                     id: content
                     anchors.fill: parent
