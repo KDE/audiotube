@@ -138,8 +138,8 @@ Item {
 
     RowLayout {
         id: controlButtonBox
-        anchors.centerIn: isWidescreen ? parent : null
-        anchors.right: !isWidescreen ? parent.right : null
+        anchors.centerIn: isWidescreen ? parent : undefined
+        anchors.right: !isWidescreen ? parent.right : undefined
         anchors.top: parent.top
         anchors.bottom: parent.bottom
         spacing: 2
