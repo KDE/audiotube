@@ -947,9 +947,6 @@ Item {
                                 actions: [
                                     Kirigami.Action {
                                         text: i18n("Remove Track")
-                                        ToolTip.text: parent ? parent.text : ""
-                                        ToolTip.delay: Kirigami.Units.toolTipDelay
-                                        ToolTip.visible: parent ?  (Kirigami.Settings.isMobile ? parent.pressed : parent.hovered) : false
                                         icon.name: "list-remove"
                                         icon.color: "white"
                                         onTriggered: UserPlaylistModel.remove(delegateItem.videoId)
@@ -1187,9 +1184,6 @@ Item {
                             actions: [
                                 Kirigami.Action {
                                     text: i18n("Remove Track")
-                                    ToolTip.text: parent ? parent.text : ""
-                                    ToolTip.delay: Kirigami.Units.toolTipDelay
-                                    ToolTip.visible: parent ?  (Kirigami.Settings.isMobile ? parent.pressed : parent.hovered) : false
                                     icon.name: "list-remove"
                                     icon.color: "white"
                                     onTriggered: UserPlaylistModel.remove(drawerDelegateItem.videoId)
