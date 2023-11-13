@@ -394,7 +394,7 @@ Item {
                                     text: i18n("remove from search history")
                                     display: Controls.AbstractButton.IconOnly
                                     onClicked: {
-                                        Library.removeSearch(model.display)
+                                        Library.removeSearch(completionDelegate.searchQuery)
                                     }
                                     implicitHeight: completionList.delegateHeight
                                     visible: Library.temporarySearch == "" || index != 0
