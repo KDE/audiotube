@@ -56,7 +56,7 @@ AsyncYTMusic::AsyncYTMusic(QObject *parent)
     qRegisterMetaType<meta::Artist>();
 
     connect(this, &AsyncYTMusic::errorOccurred, this, [](const QString &err) {
-        std::cerr << qPrintable(err);
+        std::cerr << qPrintable(err) << std::endl;
     });
 
     QTimer::singleShot(0, this, [this]() {
