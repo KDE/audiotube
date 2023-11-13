@@ -66,7 +66,13 @@ Kirigami.ScrollablePage {
                 applicationWindow().playPlaylist(playlistModel.playlistId)
             }
         }
+    }
 
+    PlaylistImporter {
+        id: localPlaylistsModel
+        onImportFinished: {
+            applicationWindow().showPassiveNotification(i18n("Playlist successfully imported"))
+        }
     }
 
     ListView {
@@ -99,12 +105,6 @@ Kirigami.ScrollablePage {
                     text: i18n("Import Playlist")
                     icon.name: "document-save"
                     onTriggered: localPlaylistsModel.importPlaylist(playlistModel.webUrl)
-                    PlaylistImporter{
-                        id: localPlaylistsModel
-                        onImportFinished: {
-                            applicationWindow().showPassiveNotification(i18n("Playlist successfully imported"))
-                        }
-                    }
                 },
                 Kirigami.Action {
                     text: i18n("Open in Browser")
