@@ -13,7 +13,9 @@ import "components"
 
 Kirigami.ScrollablePage {
     id: root
-    property alias playlistId: playlistModel.playlistId
+
+    required property string playlistId
+
     title: playlistModel.title
 
     SongMenu {
@@ -126,8 +128,11 @@ Kirigami.ScrollablePage {
             subtitle: i18n("Playlist")
 
         }
+
         model: PlaylistModel {
             id: playlistModel
+
+            playlistId: root.playlistId
         }
 
         reuseItems: true
