@@ -59,6 +59,8 @@ Kirigami.PromptDialog {
             required property var thumbnailIds
             required property int index
 
+            width: parent.width
+
             contentItem: RowLayout {
                 Layout.fillHeight: true
                 LocalPlaylistModel{id:localPlaylistModel}
