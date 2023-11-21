@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-15 00:42+0000\n"
+"POT-Creation-Date: 2023-11-21 00:41+0000\n"
 "PO-Revision-Date: 2023-10-30 15:15+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
 "Language-Team: fr\n"
@@ -264,7 +264,7 @@ msgid "Close Maximized Player"
 msgstr "Fermer le lecteur en mode maximisé"
 
 #: contents/ui/MaximizedPlayerPage.qml:205
-#: contents/ui/MinimizedPlayerControls.qml:94
+#: contents/ui/MinimizedPlayerControls.qml:113
 #, kde-format
 msgid "No media playing"
 msgstr "Aucun média en lecture"

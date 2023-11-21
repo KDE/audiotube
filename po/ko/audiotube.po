@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-15 00:42+0000\n"
+"POT-Creation-Date: 2023-11-21 00:41+0000\n"
 "PO-Revision-Date: 2023-07-18 13:25+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -264,7 +264,7 @@ msgid "Close Maximized Player"
 msgstr "최대화된 재생기 닫기"
 
 #: contents/ui/MaximizedPlayerPage.qml:205
-#: contents/ui/MinimizedPlayerControls.qml:94
+#: contents/ui/MinimizedPlayerControls.qml:113
 #, kde-format
 msgid "No media playing"
 msgstr "재생 중인 미디어 없음"
