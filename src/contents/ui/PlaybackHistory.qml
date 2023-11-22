@@ -138,15 +138,16 @@ Kirigami.ScrollablePage {
 
         model: playbackHistoryPage.dataModel
 
-        delegate: Kirigami.SwipeListItem {
+        delegate: Controls.ItemDelegate {
             id: delegateItem
-            alwaysVisibleActions:true
 
             required property string title
             required property string videoId
             required property var artists
             required property string artistsDisplayString
             required property int index
+
+            width: parent.width
 
             contentItem: MouseArea {
                 implicitHeight: content.implicitHeight
@@ -188,15 +189,15 @@ Kirigami.ScrollablePage {
 
                         }
                     }
+
+                    Controls.ToolButton {
+                        icon.name: "overflow-menu"
+                        text: i18n("More")
+                        display: Controls.AbstractButton.IconOnly
+                        onClicked: menu.openForSong(delegateItem.videoId, delegateItem.title, delegateItem.artists, delegateItem.artistsDisplayString)
+                    }
                 }
             }
-            actions: [
-                Kirigami.Action {
-                    icon.name: "overflow-menu"
-                    text: i18n("More")
-                    onTriggered: menu.openForSong(delegateItem.videoId, delegateItem.title, delegateItem.artists, delegateItem.artistsDisplayString)
-                }
-            ]
         }
     }
 }

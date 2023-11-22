@@ -118,9 +118,8 @@ Kirigami.ScrollablePage {
         SongMenu {
             id: menu
         }
-        delegate: Kirigami.SwipeListItem {
+        delegate: Controls.ItemDelegate {
             id: delegateItem
-            alwaysVisibleActions:true
 
             required property string title
             required property string videoId
@@ -128,6 +127,9 @@ Kirigami.ScrollablePage {
             required property string thumbnailUrl
             required property string artistsDisplayString
             required property int index
+
+            width: parent.width
+
             contentItem: MouseArea {
                 implicitHeight: content.implicitHeight
                 acceptedButtons: Qt.LeftButton | Qt.RightButton
@@ -140,7 +142,7 @@ Kirigami.ScrollablePage {
                     id: content
                     anchors.fill: parent
                     Controls.Label {
-                        text: (index + 1)
+                        text: (delegateItem.index + 1)
                         font.bold: true
                         leftPadding: 5
                         color: Kirigami.Theme.disabledTextColor
@@ -149,18 +151,18 @@ Kirigami.ScrollablePage {
 
                     Controls.Label {
                         Layout.fillWidth: true
-                        text: title
+                        text: delegateItem.title
                         elide: Qt.ElideRight
+                    }
+
+                    Controls.ToolButton {
+                        icon.name: "overflow-menu"
+                        text: i18n("More")
+                        display: Controls.AbstractButton.IconOnly
+                        onClicked: menu.openForSong(delegateItem.videoId, delegateItem.title, delegateItem.artists, delegateItem.artistsDisplayString)
                     }
                 }
             }
-            actions: [
-                Kirigami.Action {
-                    icon.name: "overflow-menu"
-                    text: i18n("More")
-                    onTriggered: menu.openForSong(delegateItem.videoId, delegateItem.title, delegateItem.artists, delegateItem.artistsDisplayString)
-                }
-            ]
         }
 
         Controls.BusyIndicator {

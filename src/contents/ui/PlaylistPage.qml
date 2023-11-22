@@ -137,9 +137,8 @@ Kirigami.ScrollablePage {
 
         reuseItems: true
 
-        delegate: Kirigami.SwipeListItem {
+        delegate: Controls.ItemDelegate {
             id: delegateItem
-            alwaysVisibleActions:true
 
             required property string title
             required property string videoId
@@ -147,6 +146,8 @@ Kirigami.ScrollablePage {
             required property string thumbnailUrl
             required property string artistsDisplayString
             required property int index
+
+            width: parent.width
 
             contentItem: MouseArea {
                 implicitHeight: content.implicitHeight
@@ -159,6 +160,7 @@ Kirigami.ScrollablePage {
                 RowLayout {
                     id: content
                     anchors.fill: parent
+
                     RoundedImage {
                         source: delegateItem.thumbnailUrl
                         height: 35
@@ -181,16 +183,15 @@ Kirigami.ScrollablePage {
                             elide: Qt.ElideRight
                         }
                     }
+
+                    Controls.ToolButton {
+                        icon.name: "overflow-menu"
+                        text: i18n("More")
+                        display: Controls.AbstractButton.IconOnly
+                        onClicked: menu.openForSong(delegateItem.videoId, delegateItem.title, delegateItem.artists, delegateItem.artistsDisplayString)
+                    }
                 }
             }
-
-            actions: [
-                Kirigami.Action {
-                    icon.name: "overflow-menu"
-                    text: i18n("More")
-                    onTriggered: menu.openForSong(delegateItem.videoId, delegateItem.title, delegateItem.artists, delegateItem.artistsDisplayString)
-                }
-            ]
         }
 
         Controls.BusyIndicator {

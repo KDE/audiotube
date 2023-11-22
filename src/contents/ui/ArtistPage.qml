@@ -154,9 +154,8 @@ Kirigami.ScrollablePage {
             }
         }
 
-        delegate: Kirigami.SwipeListItem {
+        delegate: Controls.ItemDelegate {
             id: delegateItem
-            alwaysVisibleActions:true
 
             required property string title
             required property int type
@@ -164,6 +163,9 @@ Kirigami.ScrollablePage {
             required property var artists
             required property string videoId
             required property string thumbnailUrl
+
+            width: parent.width
+
             contentItem: MouseArea {
                 implicitHeight: content.implicitHeight
                 acceptedButtons: Qt.LeftButton | Qt.RightButton
@@ -181,24 +183,24 @@ Kirigami.ScrollablePage {
                         source: delegateItem.thumbnailUrl
                         height: 35
                         width: height
-                        radius:5
+                        radius: 5
                     }
 
                     Controls.Label {
                         Layout.fillWidth: true
-                        text: title
+                        text: delegateItem.title
                         elide: Qt.ElideRight
+                    }
+
+                    Controls.ToolButton {
+                        icon.name: "overflow-menu"
+                        text: i18n("More")
+                        display: Controls.AbstractButton.IconOnly
+                        visible: type === ArtistModel.Song
+                        onClicked: menu.openForSong(delegateItem.videoId, delegateItem.title, delegateItem.artists, artistModel.title)
                     }
                 }
             }
-            actions: [
-                Kirigami.Action {
-                    icon.name: "overflow-menu"
-                    text: i18n("More")
-                    visible: type === ArtistModel.Song
-                    onTriggered: menu.openForSong(delegateItem.videoId, delegateItem.title, delegateItem.artists, artistModel.title)
-                }
-            ]
         }
 
         Controls.BusyIndicator {

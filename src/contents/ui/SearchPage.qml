@@ -85,10 +85,8 @@ Kirigami.ScrollablePage {
             id: menu
         }
 
-        delegate: Kirigami.SwipeListItem {
-
+        delegate: Controls.ItemDelegate {
             id: delegateItem
-            alwaysVisibleActions:true
 
             required property int index
             required property string title
@@ -98,6 +96,9 @@ Kirigami.ScrollablePage {
             required property string artistsDisplayString
             required property string radioPlaylistId
             required property string thumbnailUrl
+
+            width: parent.width
+
             contentItem: MouseArea {
                 implicitHeight: content.implicitHeight
                 acceptedButtons: Qt.LeftButton | Qt.RightButton
@@ -117,10 +118,12 @@ Kirigami.ScrollablePage {
                         source: delegateItem.thumbnailUrl
                         height: 35
                         width: height
-                        radius: delegateItem.type === SearchModel.Artist?height/2:5
+                        radius: delegateItem.type === SearchModel.Artist ? height / 2 : 5
                     }
 
                     ColumnLayout {
+                        Layout.fillWidth: true
+
                         Controls.Label {
                             Layout.fillWidth: true
                             text: title
@@ -136,22 +139,18 @@ Kirigami.ScrollablePage {
 
                         }
                     }
-                }
 
+                    Controls.ToolButton {
+                        icon.name: "overflow-menu"
+                        display: Controls.AbstractButton.IconOnly
+                        text: i18n("More")
+                        visible: delegateItem.type === SearchModel.Song || delegateItem.type === SearchModel.Video
+                        onClicked: menu.openForSong(delegateItem.videoId, delegateItem.title, delegateItem.artists, delegateItem.artistsDisplayString)
+                    }
+                }
             }
-
-            actions: [
-                Kirigami.Action {
-                    icon.name: "overflow-menu"
-                    text: i18n("More")
-                    visible: delegateItem.type === SearchModel.Song || delegateItem.type === SearchModel.Video
-                    onTriggered: menu.openForSong(delegateItem.videoId, delegateItem.title, delegateItem.artists, delegateItem.artistsDisplayString)
-                }
-            ]
-
-
-
         }
+
         Controls.BusyIndicator {
             anchors.centerIn: parent
             visible: searchModel.loading

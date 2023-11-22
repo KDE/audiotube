@@ -845,18 +845,19 @@ Item {
                         delegate: Item{
                             //listItemDragHandle requires queueEntry to be a child of the delegate, and not the delegate itself
                             id: delegateItem
+
                             required property string title
                             required property string videoId
                             required property string artists
                             required property bool isCurrent
                             required property int index
-                            width: queueEntry.width
-                            height: queueEntry.height
-                            Kirigami.SwipeListItem {
+                            width: queueEntry.implicitWidth
+                            height: queueEntry.implicitHeight
+
+                            ItemDelegate {
                                 id: queueEntry
 
                                 width: playListView.contentWidth
-                                alwaysVisibleActions: true
 
                                 background: Rectangle{
                                     radius: 7
@@ -885,6 +886,8 @@ Item {
                                 highlighted: isCurrent
                                 onClicked: UserPlaylistModel.skipTo(videoId)
                                 contentItem: RowLayout {
+                                    id: contentLayout
+
                                     Item {
                                         width: handle.width
                                         height: handle.height
@@ -894,7 +897,6 @@ Item {
                                             listItem: queueEntry
                                             listView: playListView
                                             onMoveRequested: UserPlaylistModel.moveRow(oldIndex, newIndex)
-
                                         }
                                         Rectangle {
                                             anchors.fill: handle
@@ -911,15 +913,18 @@ Item {
                                     RoundedImage {
                                         source: delegateThumbnailSource.cachedPath
                                         Layout.margins: 2.5
-                                        height: delegateItem.height
-                                        width: height
+                                        height: column.implicitHeight
+                                        width: column.implicitHeight
                                         radius: 5
                                     }
 
                                     ColumnLayout {
+                                        id: column
                                         Layout.margins: 5
 
                                         Layout.fillWidth: true
+                                        Layout.fillHeight: true
+
                                         Kirigami.Heading {
                                             elide: Text.ElideRight
                                             Layout.fillWidth: true
@@ -936,22 +941,21 @@ Item {
                                         }
 
                                         Label {
-
                                             elide: Text.ElideRight
                                             Layout.fillWidth: true
                                             color: Kirigami.Theme.disabledTextColor
                                             text: artists
                                         }
+
                                     }
-                                }
-                                actions: [
-                                    Kirigami.Action {
+                                    ToolButton {
                                         text: i18n("Remove Track")
                                         icon.name: "list-remove"
                                         icon.color: "white"
-                                        onTriggered: UserPlaylistModel.remove(delegateItem.videoId)
+                                        display: AbstractButton.IconOnly
+                                        onClicked: UserPlaylistModel.remove(delegateItem.videoId)
                                     }
-                                ]
+                                }
                             }
                         }
                     }
@@ -1083,7 +1087,6 @@ Item {
             }
 
             drawerContentItem: ScrollView {
-
                 ListView {
                     id: drawerListView
                     topMargin: 10
@@ -1114,10 +1117,11 @@ Item {
                         width: drawerListView.width
                         height: drawerQueueEntry.height
 
-                        Kirigami.SwipeListItem {
+                        ItemDelegate {
                             id: drawerQueueEntry
-                            alwaysVisibleActions:true
-                            backgroundColor:"transparent"
+
+                            width: parent.width
+
                             highlighted: drawerDelegateItem.isCurrent
                             onClicked: {
                                 queueDrawer.close()
@@ -1126,21 +1130,21 @@ Item {
                             contentItem: RowLayout {
                                 Layout.fillWidth: true
                                 Item {
-                                    width: handle.width
-                                    height: handle.height
+                                    width: drawerHandle.width
+                                    height: drawerHandle.height
                                     Kirigami.ListItemDragHandle {
-                                        id: handle
+                                        id: drawerHandle
                                         Layout.fillHeight: true
                                         listItem: drawerQueueEntry
                                         listView: drawerListView
                                         onMoveRequested: UserPlaylistModel.moveRow(oldIndex, newIndex)
-
                                     }
+
                                     Rectangle {
-                                        anchors.fill: handle
+                                        anchors.fill: drawerHandle
                                         layer.enabled: true
                                         layer.effect: OpacityMask {
-                                            maskSource: handle
+                                            maskSource: drawerHandle
                                         }
                                     }
                                 }
@@ -1180,15 +1184,14 @@ Item {
                                         text: drawerDelegateItem.artists
                                     }
                                 }
-                            }
-                            actions: [
-                                Kirigami.Action {
+
+                                ToolButton {
                                     text: i18n("Remove Track")
                                     icon.name: "list-remove"
-                                    icon.color: "white"
-                                    onTriggered: UserPlaylistModel.remove(drawerDelegateItem.videoId)
+                                    display: AbstractButton.IconOnly
+                                    onClicked: UserPlaylistModel.remove(drawerDelegateItem.videoId)
                                 }
-                            ]
+                            }
                         }
                     }
                 }
