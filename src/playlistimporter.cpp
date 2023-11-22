@@ -6,7 +6,6 @@
 #include "playlistutils.h"
 
 #include "library.h"
-#include <qfuture.h>
 #include <qglobal.h>
 #include <qsqldatabase.h>
 #include <threadeddatabase.h>

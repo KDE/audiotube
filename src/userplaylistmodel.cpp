@@ -9,7 +9,6 @@
 #include <random>
 
 #include <QRandomGenerator>
-#include <QFutureWatcher>
 
 #include <QStringBuilder>
 

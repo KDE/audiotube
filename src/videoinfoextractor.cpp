@@ -4,8 +4,6 @@
 
 #include "videoinfoextractor.h"
 
-#include <QFutureWatcher>
-
 #include "asyncytmusic.h"
 
 VideoInfoExtractor::VideoInfoExtractor(QObject *parent)
