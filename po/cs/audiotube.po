@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-21 00:41+0000\n"
+"POT-Creation-Date: 2023-11-23 00:41+0000\n"
 "PO-Revision-Date: 2023-10-31 16:27+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -74,8 +74,8 @@ msgid "Album • %1"
 msgstr "Album • %1"
 
 #: contents/ui/AlbumPage.qml:160 contents/ui/ArtistPage.qml:197
-#: contents/ui/LocalPlaylistPage.qml:171 contents/ui/PlaybackHistory.qml:196
-#: contents/ui/PlaylistPage.qml:190 contents/ui/SearchPage.qml:146
+#: contents/ui/LocalPlaylistPage.qml:171 contents/ui/PlaybackHistory.qml:195
+#: contents/ui/PlaylistPage.qml:189 contents/ui/SearchPage.qml:146
 #, kde-format
 msgid "More"
 msgstr "Více"
@@ -332,23 +332,23 @@ msgstr "Skrýt frontu"
 msgid "Show Queue"
 msgstr "Zobrazit frontu"
 
-#: contents/ui/MaximizedPlayerPage.qml:949
-#: contents/ui/MaximizedPlayerPage.qml:1186
+#: contents/ui/MaximizedPlayerPage.qml:952
+#: contents/ui/MaximizedPlayerPage.qml:1189
 #, kde-format
 msgid "Remove Track"
 msgstr "Odstranit skladbu"
 
-#: contents/ui/MaximizedPlayerPage.qml:983
+#: contents/ui/MaximizedPlayerPage.qml:987
 #, kde-format
 msgid "Clear Queue"
 msgstr "Vymazat frontu"
 
-#: contents/ui/MaximizedPlayerPage.qml:1008
+#: contents/ui/MaximizedPlayerPage.qml:1012
 #, kde-format
 msgid "Shuffle Queue"
 msgstr "Zamíchat frontu"
 
-#: contents/ui/MaximizedPlayerPage.qml:1038
+#: contents/ui/MaximizedPlayerPage.qml:1042
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "Nadcházející písně"
@@ -403,7 +403,7 @@ msgstr "Umělci"
 msgid "Top Results"
 msgstr "Nejlepší výsledky"
 
-#: contents/ui/SearchPage.qml:39 playlistimporter.cpp:23
+#: contents/ui/SearchPage.qml:39 playlistimporter.cpp:22
 #, kde-format
 msgid "Unknown"
 msgstr "Neznámý"
@@ -517,17 +517,17 @@ msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Unofficial API for YouTube Music"
 msgstr "Neoficiální API pro hudbu YouTube"
 
-#: playlistimporter.cpp:23
+#: playlistimporter.cpp:22
 #, kde-format
 msgid "No description"
 msgstr "Žádný popis"
 
-#: playlistimporter.cpp:57
+#: playlistimporter.cpp:56
 #, kde-format
 msgid "No title"
 msgstr "Bez názvu"
 
-#: playlistimporter.cpp:59
+#: playlistimporter.cpp:58
 #, kde-format
 msgid "No album"
 msgstr "Žádné album"

@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-21 00:41+0000\n"
+"POT-Creation-Date: 2023-11-23 00:41+0000\n"
 "PO-Revision-Date: 2023-07-01 15:47-0700\n"
 "Last-Translator: Fumiaki Okushi <fumiaki.okushi@gmail.com>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -73,8 +73,8 @@ msgid "Album • %1"
 msgstr "アルバム • %1"
 
 #: contents/ui/AlbumPage.qml:160 contents/ui/ArtistPage.qml:197
-#: contents/ui/LocalPlaylistPage.qml:171 contents/ui/PlaybackHistory.qml:196
-#: contents/ui/PlaylistPage.qml:190 contents/ui/SearchPage.qml:146
+#: contents/ui/LocalPlaylistPage.qml:171 contents/ui/PlaybackHistory.qml:195
+#: contents/ui/PlaylistPage.qml:189 contents/ui/SearchPage.qml:146
 #, kde-format
 msgid "More"
 msgstr "もっと"
@@ -329,23 +329,23 @@ msgstr "再生キューを隠す"
 msgid "Show Queue"
 msgstr "再生キューを表示"
 
-#: contents/ui/MaximizedPlayerPage.qml:949
-#: contents/ui/MaximizedPlayerPage.qml:1186
+#: contents/ui/MaximizedPlayerPage.qml:952
+#: contents/ui/MaximizedPlayerPage.qml:1189
 #, kde-format
 msgid "Remove Track"
 msgstr "曲の除去"
 
-#: contents/ui/MaximizedPlayerPage.qml:983
+#: contents/ui/MaximizedPlayerPage.qml:987
 #, kde-format
 msgid "Clear Queue"
 msgstr "キューを消去"
 
-#: contents/ui/MaximizedPlayerPage.qml:1008
+#: contents/ui/MaximizedPlayerPage.qml:1012
 #, kde-format
 msgid "Shuffle Queue"
 msgstr "キューをシャッフル"
 
-#: contents/ui/MaximizedPlayerPage.qml:1038
+#: contents/ui/MaximizedPlayerPage.qml:1042
 #, kde-format
 msgid "Upcoming Songs"
 msgstr ""
@@ -400,7 +400,7 @@ msgstr "アーティスト"
 msgid "Top Results"
 msgstr "検索上位"
 
-#: contents/ui/SearchPage.qml:39 playlistimporter.cpp:23
+#: contents/ui/SearchPage.qml:39 playlistimporter.cpp:22
 #, kde-format
 msgid "Unknown"
 msgstr "不明"
@@ -516,17 +516,17 @@ msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Unofficial API for YouTube Music"
 msgstr "YouTube Music 用の非公式 API"
 
-#: playlistimporter.cpp:23
+#: playlistimporter.cpp:22
 #, kde-format
 msgid "No description"
 msgstr "説明なし"
 
-#: playlistimporter.cpp:57
+#: playlistimporter.cpp:56
 #, kde-format
 msgid "No title"
 msgstr "タイトルなし"
 
-#: playlistimporter.cpp:59
+#: playlistimporter.cpp:58
 #, kde-format
 msgid "No album"
 msgstr "アルバムなし"

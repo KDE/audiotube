@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-21 00:41+0000\n"
+"POT-Creation-Date: 2023-11-23 00:41+0000\n"
 "PO-Revision-Date: 2023-10-29 23:13+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -77,8 +77,8 @@ msgid "Album • %1"
 msgstr "Albuma • %1"
 
 #: contents/ui/AlbumPage.qml:160 contents/ui/ArtistPage.qml:197
-#: contents/ui/LocalPlaylistPage.qml:171 contents/ui/PlaybackHistory.qml:196
-#: contents/ui/PlaylistPage.qml:190 contents/ui/SearchPage.qml:146
+#: contents/ui/LocalPlaylistPage.qml:171 contents/ui/PlaybackHistory.qml:195
+#: contents/ui/PlaylistPage.qml:189 contents/ui/SearchPage.qml:146
 #, kde-format
 msgid "More"
 msgstr "Gehiago"
@@ -335,23 +335,23 @@ msgstr "Ezkutatu ilara"
 msgid "Show Queue"
 msgstr "Erakutsi ilara"
 
-#: contents/ui/MaximizedPlayerPage.qml:949
-#: contents/ui/MaximizedPlayerPage.qml:1186
+#: contents/ui/MaximizedPlayerPage.qml:952
+#: contents/ui/MaximizedPlayerPage.qml:1189
 #, kde-format
 msgid "Remove Track"
 msgstr "Kendu pista"
 
-#: contents/ui/MaximizedPlayerPage.qml:983
+#: contents/ui/MaximizedPlayerPage.qml:987
 #, kde-format
 msgid "Clear Queue"
 msgstr "Hustu ilara"
 
-#: contents/ui/MaximizedPlayerPage.qml:1008
+#: contents/ui/MaximizedPlayerPage.qml:1012
 #, kde-format
 msgid "Shuffle Queue"
 msgstr "Nahastu ilara"
 
-#: contents/ui/MaximizedPlayerPage.qml:1038
+#: contents/ui/MaximizedPlayerPage.qml:1042
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "Hurrengo abestiak"
@@ -406,7 +406,7 @@ msgstr "Artistak"
 msgid "Top Results"
 msgstr "Emaitza nagusiak"
 
-#: contents/ui/SearchPage.qml:39 playlistimporter.cpp:23
+#: contents/ui/SearchPage.qml:39 playlistimporter.cpp:22
 #, kde-format
 msgid "Unknown"
 msgstr "Ezezaguna"
@@ -520,17 +520,17 @@ msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Unofficial API for YouTube Music"
 msgstr "«YouTube Music»erako API ez-ofiziala"
 
-#: playlistimporter.cpp:23
+#: playlistimporter.cpp:22
 #, kde-format
 msgid "No description"
 msgstr "Deskribapenik ez"
 
-#: playlistimporter.cpp:57
+#: playlistimporter.cpp:56
 #, kde-format
 msgid "No title"
 msgstr "Titulurik ez"
 
-#: playlistimporter.cpp:59
+#: playlistimporter.cpp:58
 #, kde-format
 msgid "No album"
 msgstr "Albumik ez"

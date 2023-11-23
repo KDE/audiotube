@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-21 00:41+0000\n"
+"POT-Creation-Date: 2023-11-23 00:41+0000\n"
 "PO-Revision-Date: 2023-06-16 19:34+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -74,8 +74,8 @@ msgid "Album • %1"
 msgstr "Album • %1"
 
 #: contents/ui/AlbumPage.qml:160 contents/ui/ArtistPage.qml:197
-#: contents/ui/LocalPlaylistPage.qml:171 contents/ui/PlaybackHistory.qml:196
-#: contents/ui/PlaylistPage.qml:190 contents/ui/SearchPage.qml:146
+#: contents/ui/LocalPlaylistPage.qml:171 contents/ui/PlaybackHistory.qml:195
+#: contents/ui/PlaylistPage.qml:189 contents/ui/SearchPage.qml:146
 #, kde-format
 msgid "More"
 msgstr "Lainnya"
@@ -344,25 +344,25 @@ msgstr "Antrean"
 msgid "Show Queue"
 msgstr "Antrean"
 
-#: contents/ui/MaximizedPlayerPage.qml:949
-#: contents/ui/MaximizedPlayerPage.qml:1186
+#: contents/ui/MaximizedPlayerPage.qml:952
+#: contents/ui/MaximizedPlayerPage.qml:1189
 #, kde-format
 msgid "Remove Track"
 msgstr "Hapus Trek"
 
-#: contents/ui/MaximizedPlayerPage.qml:983
+#: contents/ui/MaximizedPlayerPage.qml:987
 #, fuzzy, kde-format
 #| msgid "Queue"
 msgid "Clear Queue"
 msgstr "Antrean"
 
-#: contents/ui/MaximizedPlayerPage.qml:1008
+#: contents/ui/MaximizedPlayerPage.qml:1012
 #, fuzzy, kde-format
 #| msgid "Shuffle"
 msgid "Shuffle Queue"
 msgstr "Acak"
 
-#: contents/ui/MaximizedPlayerPage.qml:1038
+#: contents/ui/MaximizedPlayerPage.qml:1042
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "Lagu Berikutnya"
@@ -417,7 +417,7 @@ msgstr "Artis"
 msgid "Top Results"
 msgstr "Hasil Teratas"
 
-#: contents/ui/SearchPage.qml:39 playlistimporter.cpp:23
+#: contents/ui/SearchPage.qml:39 playlistimporter.cpp:22
 #, kde-format
 msgid "Unknown"
 msgstr "Tidak diketahui"
@@ -533,18 +533,18 @@ msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Unofficial API for YouTube Music"
 msgstr "API tidak resmi untuk YouTube Music"
 
-#: playlistimporter.cpp:23
+#: playlistimporter.cpp:22
 #, fuzzy, kde-format
 #| msgid "Playlist Description"
 msgid "No description"
 msgstr "Deskripsi Daftar Putar"
 
-#: playlistimporter.cpp:57
+#: playlistimporter.cpp:56
 #, kde-format
 msgid "No title"
 msgstr "Tidak ada judul"
 
-#: playlistimporter.cpp:59
+#: playlistimporter.cpp:58
 #, kde-format
 msgid "No album"
 msgstr "Tidak ada album"
