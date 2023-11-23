@@ -71,9 +71,9 @@ void LocalPlaylistModel::refreshModel()
                 "select video_id, title, artist, album from "
                 "playlist_entries natural join songs where playlist_id = ?", m_playlistId);
 
-    QCoro::connect(std::move(future), this, [this](auto entries) {
+    QCoro::connect(std::move(future), this, [this](auto &&entries) {
         beginResetModel();
-        m_entries = entries;
+        m_entries = std::move(entries);
         endResetModel();
     });
 }

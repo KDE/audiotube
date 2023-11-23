@@ -24,11 +24,11 @@ namespace ranges = std::ranges;
 UserPlaylistModel::UserPlaylistModel(QObject *parent)
     : AbstractYTMusicModel(parent)
 {
-    auto handleResult = [=, this](const watch::Playlist &playlist) {
+    auto handleResult = [=, this](watch::Playlist &&playlist) {
         setLoading(false);
 
         beginResetModel();
-        m_playlist = playlist;
+        m_playlist = std::move(playlist);
         endResetModel();
         setCurrentVideoId({});
         if (m_shuffle) {

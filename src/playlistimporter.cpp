@@ -21,11 +21,11 @@ void PlaylistImporter::importPlaylist(const QString &url)
 {
     const QString croppedURL = this->cropURL(url).toString(), title = i18n("Unknown"), description = i18n("No description");
     QCoro::connect(Library::instance().database().execute("insert into playlists (title, description) values (?, ?)", title, description), &Library::instance(), [this, croppedURL]() {
-        QCoro::connect(Library::instance().database().getResults<SingleValue<qint64>>("select * from playlists"), &Library::instance(), [this, croppedURL](const auto& playlists) {
+        QCoro::connect(Library::instance().database().getResults<SingleValue<qint64>>("select * from playlists"), &Library::instance(), [this, croppedURL](auto &&playlists) {
             const quint64 playlistId = playlists.back().value;
             Q_EMIT Library::instance().playlistsChanged();
 
-            QCoro::connect(YTMusicThread::instance()->fetchPlaylist(croppedURL), this, [this, playlistId](const auto& playlist) {
+            QCoro::connect(YTMusicThread::instance()->fetchPlaylist(croppedURL), this, [this, playlistId](auto &&playlist) {
                 this->renamePlaylist(playlistId, QString::fromStdString(playlist.title), QString::fromStdString(playlist.author.name));
 
                 for (const auto& track : playlist.tracks) {

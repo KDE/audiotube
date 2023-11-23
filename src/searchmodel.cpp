@@ -20,10 +20,10 @@ SearchModel::SearchModel(QObject *parent)
 
         setLoading(true);
         auto future = YTMusicThread::instance()->search(m_searchQuery);
-        QCoro::connect(std::move(future), this, [=, this](const std::vector<search::SearchResultItem> &results) {
+        QCoro::connect(std::move(future), this, [=, this](const std::vector<search::SearchResultItem> &&results) {
             beginResetModel();
             setLoading(false);
-            m_searchResults = results;
+            m_searchResults = std::move(results);
 
             endResetModel();
         });

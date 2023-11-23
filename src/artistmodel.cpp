@@ -20,11 +20,11 @@ ArtistModel::ArtistModel(QObject *parent)
         setLoading(true);
 
         auto future = YTMusicThread::instance()->fetchArtist(m_channelId);
-        QCoro::connect(std::move(future), this, [=, this](const artist::Artist &artist) {
+        QCoro::connect(std::move(future), this, [=, this](artist::Artist &&artist) {
             setLoading(false);
 
             beginResetModel();
-            m_artist = artist;
+            m_artist = std::move(artist);
             std::sort(m_artist.thumbnails.begin(), m_artist.thumbnails.end());
 
             albums = m_artist.albums ? m_artist.albums->results : std::vector<artist::Artist::Album>();
