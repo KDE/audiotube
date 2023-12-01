@@ -1,0 +1,534 @@
+# translation of audiotube.pot to esperanto
+# Copyright (C) 2023 Free Software Foundation, Inc.
+# This file is distributed under the same license as the audiotube package.
+# Oliver Kellogg <okellogg@users.sourceforge.net, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: audiotube\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2023-11-23 00:41+0000\n"
+"PO-Revision-Date: 2023-11-30 18:56+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
+"Language: eo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: asyncytmusic.cpp:65
+#, kde-format
+msgid ""
+"Running with untested version of ytmusicapi %1. If you experience errors, "
+"please report them to your distribution."
+msgstr ""
+"Funkcianta kun neprovita versio de ytmusicapi %1. Se vi spertas erarojn, "
+"bonvolu raporti ilin al via distribuo."
+
+#: contents/ui/AlbumPage.qml:71 contents/ui/LibraryPage.qml:38
+#: contents/ui/LibraryPage.qml:64 contents/ui/LibraryPage.qml:85
+#: contents/ui/LibraryPage.qml:225 contents/ui/LibraryPage.qml:251
+#: contents/ui/LibraryPage.qml:272 contents/ui/LocalPlaylistPage.qml:71
+#: contents/ui/LocalPlaylistPage.qml:93 contents/ui/PlaybackHistory.qml:67
+#: contents/ui/PlaybackHistory.qml:89 contents/ui/PlaylistPage.qml:66
+#: contents/ui/PlaylistPage.qml:87
+#, kde-format
+msgid "Play"
+msgstr "Ludi"
+
+#: contents/ui/AlbumPage.qml:78 contents/ui/ArtistPage.qml:83
+#: contents/ui/LibraryPage.qml:45 contents/ui/LibraryPage.qml:70
+#: contents/ui/LibraryPage.qml:93 contents/ui/LibraryPage.qml:232
+#: contents/ui/LibraryPage.qml:257 contents/ui/LibraryPage.qml:281
+#: contents/ui/LocalPlaylistPage.qml:66 contents/ui/LocalPlaylistPage.qml:100
+#: contents/ui/PlaybackHistory.qml:55 contents/ui/PlaybackHistory.qml:102
+#: contents/ui/PlaylistPage.qml:59 contents/ui/PlaylistPage.qml:94
+#, kde-format
+msgid "Shuffle"
+msgstr "Miksi"
+
+#: contents/ui/AlbumPage.qml:86 contents/ui/LibraryPage.qml:75
+#: contents/ui/LibraryPage.qml:101 contents/ui/LibraryPage.qml:262
+#: contents/ui/LibraryPage.qml:289 contents/ui/LocalPlaylistPage.qml:106
+#: contents/ui/PlaybackHistory.qml:114 contents/ui/PlaylistPage.qml:102
+#, kde-format
+msgid "Append to queue"
+msgstr "Aldoni al vico"
+
+#: contents/ui/AlbumPage.qml:91 contents/ui/ArtistPage.qml:91
+#: contents/ui/PlaylistPage.qml:112
+#, kde-format
+msgid "Open in Browser"
+msgstr "Malfermi en Retumilo"
+
+#: contents/ui/AlbumPage.qml:96 contents/ui/ArtistPage.qml:96
+#: contents/ui/PlaylistPage.qml:117
+#, kde-format
+msgid "Share"
+msgstr "Kunhavigi"
+
+#: contents/ui/AlbumPage.qml:106
+#, kde-format
+msgid "Album • %1"
+msgstr "Albumo • %1"
+
+#: contents/ui/AlbumPage.qml:160 contents/ui/ArtistPage.qml:197
+#: contents/ui/LocalPlaylistPage.qml:171 contents/ui/PlaybackHistory.qml:195
+#: contents/ui/PlaylistPage.qml:189 contents/ui/SearchPage.qml:146
+#, kde-format
+msgid "More"
+msgstr "Pli"
+
+#: contents/ui/ArtistPage.qml:77
+#, kde-format
+msgid "Radio"
+msgstr "Radio"
+
+#: contents/ui/ArtistPage.qml:105
+#, kde-format
+msgid "Artist"
+msgstr "Artisto"
+
+#: contents/ui/ArtistPage.qml:129 contents/ui/SearchPage.qml:72
+#, kde-format
+msgid ""
+"Video playback is not supported yet. Do you want to play only the audio of "
+"\"%1\"?"
+msgstr ""
+"Video-reproduktado ankoraŭ ne estas subtenata. Ĉu vi volas ludi nur la "
+"sonojn de \"%1\"?"
+
+#: contents/ui/ArtistPage.qml:146 contents/ui/SearchPage.qml:26
+#, kde-format
+msgid "Albums"
+msgstr "Albumoj"
+
+#: contents/ui/ArtistPage.qml:148
+#, kde-format
+msgid "Singles"
+msgstr "Unuopaĵoj"
+
+#: contents/ui/ArtistPage.qml:150 contents/ui/SearchPage.qml:32
+#, kde-format
+msgid "Songs"
+msgstr "Kantoj"
+
+#: contents/ui/ArtistPage.qml:152 contents/ui/SearchPage.qml:34
+#, kde-format
+msgid "Videos"
+msgstr "Videoj"
+
+#: contents/ui/ConfirmationMessage.qml:16
+#, kde-format
+msgid "OK"
+msgstr "bone"
+
+#: contents/ui/ConfirmationMessage.qml:21
+#, kde-format
+msgid "Cancel"
+msgstr "Nuligi"
+
+#: contents/ui/dialogs/AddPlaylistDialog.qml:17
+#, kde-format
+msgid "Add playlist"
+msgstr "Aldoni ludliston"
+
+#: contents/ui/dialogs/AddPlaylistDialog.qml:23
+#: contents/ui/dialogs/RenamePlaylistDialog.qml:24
+#, kde-format
+msgid "Playlist Title"
+msgstr "Ludlista Titolo"
+
+#: contents/ui/dialogs/AddPlaylistDialog.qml:28
+#: contents/ui/dialogs/RenamePlaylistDialog.qml:30
+#, kde-format
+msgid "Playlist Description"
+msgstr "Ludlisto Priskribo"
+
+#: contents/ui/dialogs/ImportPlaylistDialog.qml:17
+#, kde-format
+msgid "Import playlist"
+msgstr "Importi ludliston"
+
+#: contents/ui/dialogs/ImportPlaylistDialog.qml:23
+#, kde-format
+msgid "Playlist URL (Youtube)"
+msgstr "URL de Ludlisto (Youtube)"
+
+#: contents/ui/dialogs/PlaylistDialog.qml:20
+#, kde-format
+msgid "Add Song to Playlist"
+msgstr "Aldoni Kanton al Ludlisto"
+
+#: contents/ui/dialogs/PlaylistDialog.qml:29
+#: contents/ui/LocalPlaylistsPage.qml:103
+#: contents/ui/LocalPlaylistsPage.qml:129
+#: contents/ui/LocalPlaylistsPage.qml:144
+#, kde-format
+msgid "New Playlist"
+msgstr "Nova Ludlisto"
+
+#: contents/ui/dialogs/RenamePlaylistDialog.qml:18
+#, kde-format
+msgid "Rename playlist"
+msgstr "Alinomi ludliston"
+
+#: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:125
+#: contents/ui/NavigationBar.qml:47 contents/ui/NavigationBar.qml:53
+#: contents/ui/Sidebar.qml:138 contents/ui/Sidebar.qml:143
+#, kde-format
+msgid "Favourites"
+msgstr "Plej ŝatataj"
+
+#: contents/ui/LibraryPage.qml:120 contents/ui/LibraryPage.qml:309
+#: contents/ui/LibraryPage.qml:408
+#, kde-format
+msgid "Show All"
+msgstr "Montri Ĉion"
+
+#: contents/ui/LibraryPage.qml:150
+#, kde-format
+msgid "No Favourites Yet"
+msgstr "Neniuj Favoritoj Ankoraŭ"
+
+#: contents/ui/LibraryPage.qml:218
+#, kde-format
+msgid "Most played"
+msgstr "Plej ludis"
+
+#: contents/ui/LibraryPage.qml:314 contents/ui/NavigationBar.qml:60
+#: contents/ui/NavigationBar.qml:66 contents/ui/Sidebar.qml:159
+#: contents/ui/Sidebar.qml:164
+#, kde-format
+msgid "Played Songs"
+msgstr "Luditaj Kantoj"
+
+#: contents/ui/LibraryPage.qml:339
+#, kde-format
+msgid "No Songs Played Yet"
+msgstr "Ankoraŭ Neniuj Kantoj Luditaj"
+
+#: contents/ui/LibraryPage.qml:396 contents/ui/LocalPlaylistsPage.qml:19
+#: contents/ui/LocalPlaylistsPage.qml:80 contents/ui/NavigationBar.qml:74
+#: contents/ui/SearchPage.qml:30 contents/ui/Sidebar.qml:179
+#, kde-format
+msgid "Playlists"
+msgstr "Ludlistoj"
+
+#: contents/ui/LibraryPage.qml:435
+#, kde-format
+msgid "No Playlists Yet"
+msgstr "Neniuj Ludlistoj Ankoraŭ"
+
+#: contents/ui/LibraryPage.qml:455 contents/ui/LibraryPage.qml:477
+#: contents/ui/LocalPlaylistsPage.qml:34 contents/ui/LocalPlaylistsPage.qml:56
+#, kde-format
+msgid "Rename"
+msgstr "Alinomi"
+
+#: contents/ui/LibraryPage.qml:464 contents/ui/LibraryPage.qml:485
+#: contents/ui/LocalPlaylistsPage.qml:43 contents/ui/LocalPlaylistsPage.qml:64
+#, kde-format
+msgid "Delete"
+msgstr "Forigi"
+
+#: contents/ui/LocalPlaylistPage.qml:22
+#, kde-format
+msgid "Remove from Playlist"
+msgstr "Forigi el Ludlisto"
+
+#: contents/ui/LocalPlaylistPage.qml:80
+#, kde-format
+msgid "This playlist is still empty"
+msgstr "Ĉi tiu ludlisto ankoraŭ estas malplena"
+
+#: contents/ui/LocalPlaylistsPage.qml:111
+#: contents/ui/LocalPlaylistsPage.qml:134
+#: contents/ui/LocalPlaylistsPage.qml:149 contents/ui/PlaylistPage.qml:107
+#, kde-format
+msgid "Import Playlist"
+msgstr "Importi Ludliston"
+
+#: contents/ui/main.qml:127 main.cpp:72
+#, kde-format
+msgid "AudioTube"
+msgstr "AudioTube"
+
+#: contents/ui/main.qml:280
+#, kde-format
+msgid "No song playing"
+msgstr "Neniu kanto ludanta"
+
+#: contents/ui/MaximizedPlayerPage.qml:99
+#, kde-format
+msgid "Close Maximized Player"
+msgstr "Fermi Maksimumigitan Ludanton"
+
+#: contents/ui/MaximizedPlayerPage.qml:205
+#: contents/ui/MinimizedPlayerControls.qml:113
+#, kde-format
+msgid "No media playing"
+msgstr "Neniu aŭdvidaĵo ludanta"
+
+#: contents/ui/MaximizedPlayerPage.qml:428
+#, kde-format
+msgid "Remove from Favourites"
+msgstr "Forigi el Favoritoj"
+
+#: contents/ui/MaximizedPlayerPage.qml:428
+#, kde-format
+msgid "Add to Favourites"
+msgstr "Aldoni al Favoritoj"
+
+#: contents/ui/MaximizedPlayerPage.qml:453
+#, kde-format
+msgid "Open Volume Drawer"
+msgstr "Malfermi Voluman Keston"
+
+#: contents/ui/MaximizedPlayerPage.qml:561
+#, kde-format
+msgid "Unmute Audio"
+msgstr "Malŝalti Audio"
+
+#: contents/ui/MaximizedPlayerPage.qml:561
+#, kde-format
+msgid "Mute Audio"
+msgstr "Silentigi Audio"
+
+#: contents/ui/MaximizedPlayerPage.qml:600
+#, kde-format
+msgid "%1%"
+msgstr "%1%"
+
+#: contents/ui/MaximizedPlayerPage.qml:631
+#, kde-format
+msgid "Hide Lyrics"
+msgstr "Kaŝi Kantotekstojn"
+
+#: contents/ui/MaximizedPlayerPage.qml:631
+#, kde-format
+msgid "Show Lyrics"
+msgstr "Montri kantotekstojn"
+
+#: contents/ui/MaximizedPlayerPage.qml:651 contents/ui/SongMenu.qml:178
+#: contents/ui/SongMenu.qml:264
+#, kde-format
+msgid "Share Song"
+msgstr "Kunhavigi Kanton"
+
+#: contents/ui/MaximizedPlayerPage.qml:692
+#, kde-format
+msgid "Add to a local playlist"
+msgstr "Aldoni al loka ludlisto"
+
+#: contents/ui/MaximizedPlayerPage.qml:729
+#, kde-format
+msgid "Hide Queue"
+msgstr "Kaŝi Vicon"
+
+#: contents/ui/MaximizedPlayerPage.qml:729
+#, kde-format
+msgid "Show Queue"
+msgstr "Montri Vicon"
+
+#: contents/ui/MaximizedPlayerPage.qml:952
+#: contents/ui/MaximizedPlayerPage.qml:1189
+#, kde-format
+msgid "Remove Track"
+msgstr "Forigi Trakon"
+
+#: contents/ui/MaximizedPlayerPage.qml:987
+#, kde-format
+msgid "Clear Queue"
+msgstr "Viŝi Vicon"
+
+#: contents/ui/MaximizedPlayerPage.qml:1012
+#, kde-format
+msgid "Shuffle Queue"
+msgstr "Miksi Vicon"
+
+#: contents/ui/MaximizedPlayerPage.qml:1042
+#, kde-format
+msgid "Upcoming Songs"
+msgstr "Venontaj Kantoj"
+
+#: contents/ui/NavigationBar.qml:23 contents/ui/Sidebar.qml:108
+#, kde-format
+msgid "Library"
+msgstr "Biblioteko"
+
+#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:119
+#, kde-format
+msgid "Search"
+msgstr "Serĉi"
+
+#: contents/ui/PlaybackHistory.qml:17
+#, kde-format
+msgid "Unknown list of songs"
+msgstr "Nekonata listo de kantoj"
+
+#: contents/ui/PlaybackHistory.qml:135
+#, kde-format
+msgid "No songs here yet"
+msgstr "Ankoraŭ neniuj kantoj ĉi tie"
+
+#: contents/ui/PlaylistPage.qml:76
+#, kde-format
+msgid "Playlist successfully imported"
+msgstr "Ludlisto sukcese importita"
+
+#: contents/ui/PlaylistPage.qml:128
+#, kde-format
+msgid "Playlist"
+msgstr "Ludlisto"
+
+#: contents/ui/SearchHistoryPage.qml:82 contents/ui/SearchWithDropdown.qml:394
+#, kde-format
+msgid "remove from search history"
+msgstr "forigi el serĉhistorio"
+
+#: contents/ui/SearchPage.qml:16
+#, kde-format
+msgid "Previous Searches:"
+msgstr "Antaŭaj Serĉoj:"
+
+#: contents/ui/SearchPage.qml:28
+#, kde-format
+msgid "Artists"
+msgstr "Artistoj"
+
+#: contents/ui/SearchPage.qml:36
+#, kde-format
+msgid "Top Results"
+msgstr "Plej bonaj Rezultoj"
+
+#: contents/ui/SearchPage.qml:39 playlistimporter.cpp:22
+#, kde-format
+msgid "Unknown"
+msgstr "Nekonata"
+
+#: contents/ui/SearchWithDropdown.qml:340
+#, kde-format
+msgid "No matching previous searches"
+msgstr "Neniuj kongruaj antaŭaj serĉoj"
+
+#: contents/ui/ShareMenu.qml:40
+#, kde-format
+msgid "Share to"
+msgstr "Kunhavigi al"
+
+#: contents/ui/ShareMenu.qml:48 contents/ui/ShareMenu.qml:98
+#, kde-format
+msgid "Copy Link"
+msgstr "Kopii Ligilon"
+
+#: contents/ui/ShareMenu.qml:53 contents/ui/ShareMenu.qml:103
+#, kde-format
+msgid "Link copied to clipboard"
+msgstr "Ligilo kopiita al tondujo"
+
+#: contents/ui/Sidebar.qml:200
+#, kde-format
+msgid "About"
+msgstr "Pri"
+
+#: contents/ui/Sidebar.qml:214
+#, kde-format
+msgid "Collapse Sidebar"
+msgstr "Malvastigi Flankbreton"
+
+#: contents/ui/SongMenu.qml:103 contents/ui/SongMenu.qml:200
+#, kde-format
+msgid "Play Next"
+msgstr "Ludi Poste"
+
+#: contents/ui/SongMenu.qml:111 contents/ui/SongMenu.qml:206
+#, kde-format
+msgid "Add to queue"
+msgstr "Aldoni al vico"
+
+#: contents/ui/SongMenu.qml:121 contents/ui/SongMenu.qml:216
+#, kde-format
+msgid "Remove Favourite"
+msgstr "Forigi Favoriton"
+
+#: contents/ui/SongMenu.qml:121 contents/ui/SongMenu.qml:216
+#, kde-format
+msgid "Add Favourite"
+msgstr "Aldoni Favoriton"
+
+#: contents/ui/SongMenu.qml:138 contents/ui/SongMenu.qml:230
+#, kde-format
+msgid "Remove from History"
+msgstr "Forigi el Historio"
+
+#: contents/ui/SongMenu.qml:151 contents/ui/SongMenu.qml:239
+#, kde-format
+msgid "Add to playlist"
+msgstr "Aldoni al ludlisto"
+
+#: main.cpp:74
+#, kde-format
+msgctxt "YouTube Music is a music streaming service by Google"
+msgid "Stream music from YouTube Music"
+msgstr "Fluigi muzikon de YouTube Music"
+
+#: main.cpp:76
+#, kde-format
+msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
+msgstr "© 2021-2023 Jonah Brüchert, 2021-2023 KDE-Komunumo"
+
+#: main.cpp:77
+#, kde-format
+msgid "Jonah Brüchert"
+msgstr "Jonah Brüchert"
+
+#: main.cpp:77
+#, kde-format
+msgid "Maintainer"
+msgstr "Prizorganto"
+
+#: main.cpp:78
+#, kde-format
+msgid "Mathis Brüchert"
+msgstr "Mathis Brüchert"
+
+#: main.cpp:78
+#, kde-format
+msgid "Designer"
+msgstr "Dezajnisto"
+
+#: main.cpp:79
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Oliver Kellogg"
+
+#: main.cpp:79
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "okellogg@users.sourceforge.net"
+
+#: main.cpp:86
+#, kde-format
+msgctxt "YouTube Music is a music streaming service by Google"
+msgid "Unofficial API for YouTube Music"
+msgstr "Neoficiala API por YouTube Music"
+
+#: playlistimporter.cpp:22
+#, kde-format
+msgid "No description"
+msgstr "Neniu priskribo"
+
+#: playlistimporter.cpp:56
+#, kde-format
+msgid "No title"
+msgstr "Neniu titolo"
+
+#: playlistimporter.cpp:58
+#, kde-format
+msgid "No album"
+msgstr "Neniu albumo"
