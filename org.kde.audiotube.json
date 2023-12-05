@@ -4,7 +4,9 @@
     "runtime-version": "6.6",
     "sdk": "org.kde.Sdk",
     "command": "audiotube",
-    "tags": ["nightly"],
+    "tags": [
+        "nightly"
+    ],
     "desktop-file-name-suffix": " (Nightly)",
     "finish-args": [
         "--share=ipc",
@@ -20,7 +22,6 @@
         "/include/",
         "/share/cmake/"
     ],
-
     "modules": [
         "flatpak/python3-yt-dlp.json",
         "flatpak/python3-ytmusicapi.json",
@@ -35,9 +36,9 @@
             ],
             "sources": [
                 {
-                    "type": "git",
-                    "url": "https://github.com/danvratil/qcoro",
-                    "branch": "main",
+                    "type": "archive",
+                    "url": "https://github.com/danvratil/qcoro/archive/refs/tags/v0.10.0.tar.gz",
+                    "sha256": "b7c8f00273ad27d85814bf4ec93eb6922c75656800a61d11854d36355a4a1aec",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 236236,
@@ -92,11 +93,21 @@
         },
         {
             "name": "org.kde.audiotube",
-            "config-opts": ["-DPYBIND11_FINDPYTHON=ON", "-DQT_MAJOR_VERSION=6"],
+            "config-opts": [
+                "-DPYBIND11_FINDPYTHON=ON",
+                "-DQT_MAJOR_VERSION=6"
+            ],
             "buildsystem": "cmake-ninja",
             "builddir": true,
-            "sources": [ { "type": "dir", "path": ".", "skip": [".git"] } ]
+            "sources": [
+                {
+                    "type": "dir",
+                    "path": ".",
+                    "skip": [
+                        ".git"
+                    ]
+                }
+            ]
         }
     ]
 }
-
