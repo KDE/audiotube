@@ -41,6 +41,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="uk">AudioTube</name>
   <name xml:lang="x-test">xxAudioTubexx</name>
   <name xml:lang="zh-CN">AudioTube</name>
+  <name xml:lang="zh-TW">AudioTube</name>
   <summary>YouTube Music App for phones and desktop computers</summary>
   <summary xml:lang="ca">Aplicació de YouTube Music per a telèfons i ordinadors d'escriptori</summary>
   <summary xml:lang="ca-valencia">Aplicació de YouTube Music per a telèfons i ordinadors d'escriptori</summary>
@@ -60,6 +61,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="tr">Telefonlar ve masaüstü bilgisayarlar için YouTube Müzik uygulaması</summary>
   <summary xml:lang="uk">Додаток YouTube Music для телефонів та робочих станцій</summary>
   <summary xml:lang="x-test">xxYouTube Music App for phones and desktop computersxx</summary>
+  <summary xml:lang="zh-TW">手機和電腦用的 YouTube Music 應用程式</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <developer_name>KDE Community</developer_name>
@@ -98,6 +100,7 @@ SPDX-License-Identifier: CC0-1.0
   <developer_name xml:lang="uk">Спільнота KDE</developer_name>
   <developer_name xml:lang="x-test">xxKDE Communityxx</developer_name>
   <developer_name xml:lang="zh-CN">KDE 社区</developer_name>
+  <developer_name xml:lang="zh-TW">KDE 社群</developer_name>
   <content_rating type="oars-1.0"/>
   <url type="homepage">https://apps.kde.org/en/audiotube</url>
   <releases>
@@ -209,5 +212,6 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="uk">AudioTube може виконувати пошук на YouTube Music, показувати списки альбомів та виконавців, відтворювати створені автоматично списки відтворення, альбоми та надає вам змогу створювати власні списки відворення.</p>
     <p xml:lang="x-test">xxAudioTube can search YouTube Music, list albums and artists, play automatically generated playlists, albums and allows to put your own playlist together.xx</p>
     <p xml:lang="zh-CN">AudioTube 可以搜索 YouTube Music 的内容，列出专辑和艺人，播放自动生成的播放列表，还可以自行制作播放列表。</p>
+    <p xml:lang="zh-TW">AudioTube 可以搜尋 YouTube Music、列出專輯與藝人、播放專輯或自動產生的播放清單，也讓您建立自己的播放清單。</p>
   </description>
 </component>
