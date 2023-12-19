@@ -94,15 +94,15 @@ private:
         using ReturnType = std::invoke_result_t<Func>;
         auto interface = std::make_shared<QFutureInterface<ReturnType>>();
         QMetaObject::invokeMethod(this, [=, this]() {
+            ReturnType val;
             try {
-                ReturnType val = fun();
-                interface->reportResult(val);
-                interface->reportFinished();
+                val = fun();
             } catch (const std::exception &err) {
-                interface->reportResult({});
-                interface->reportFinished();
                 Q_EMIT errorOccurred(QString::fromLocal8Bit(err.what()));
             }
+
+            interface->reportResult(val);
+            interface->reportFinished();
         });
         return interface->future();
     }
