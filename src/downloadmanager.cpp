@@ -58,7 +58,7 @@ QCoro::Task<> DownloadManager::download(const QString videoId)
     });
 
     QUrl url = pickAudioUrl(info.formats);
-    qDebug() << url;
+    //qDebug() << url;
 
     auto *reply = Library::instance().nam().get(QNetworkRequest(url));
 
@@ -77,7 +77,7 @@ QCoro::Task<> DownloadManager::download(const QString videoId)
         QByteArray buffer;
         buffer.reserve(BUFFER_SIZE);
 
-        int read;
+        int read = 0;
         do {
             read = reply->read(buffer.data(), BUFFER_SIZE);
             file->write(buffer.data(), read);
@@ -88,11 +88,13 @@ QCoro::Task<> DownloadManager::download(const QString videoId)
     file->close();
     file->deleteLater();
 
-    QString location = directory % "/" % videoId;
-    QFile::rename(downloadLocation, location);
+    if (reply->error() == QNetworkReply::NoError) {
+        QString location = directory % "/" % videoId;
+        QFile::rename(downloadLocation, location);
 
-    Library::instance().markSongDownloaded(videoId, true);
-    Q_EMIT Library::instance().downloadedChanged(videoId);
+        Library::instance().markSongDownloaded(videoId, true);
+        Q_EMIT Library::instance().downloadedChanged(videoId);
+    }
 }
 
 QString DownloadManager::downloadDirectory()

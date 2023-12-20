@@ -242,6 +242,8 @@ struct Format {
     std::string acodec;
 
     // More, but not interesting for us right now
+
+    // TODO parse downloader_options, http_headers
 };
 
 struct VideoInfo {

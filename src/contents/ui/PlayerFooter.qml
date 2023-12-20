@@ -123,9 +123,6 @@ Flickable {
         sourceComponent: MediaPlayer {
             id: audio
 
-            autoPlay: true
-            autoLoad: true
-
             source: info.audioUrl
             onSourceChanged: play()
             onMediaStatusChanged: {

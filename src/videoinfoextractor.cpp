@@ -26,10 +26,6 @@ VideoInfoExtractor::VideoInfoExtractor(QObject *parent)
         QCoro::connect(Library::instance().songDownloaded(m_videoId), this, [this](bool downloaded) {
             m_downloaded = downloaded;
             if (downloaded) {
-                Q_EMIT songChanged();
-            }
-
-            if (downloaded) {
                 m_thumbnailSource.setVideoId(m_videoId);
 
                 QCoro::connect(Library::instance().getSong(m_videoId), this, [this](auto &&song) {
@@ -95,6 +91,14 @@ QString VideoInfoExtractor::artist() const
         return m_localInfo.artist;
     }
     return QString::fromStdString(m_videoInfo->artist);
+}
+
+QString VideoInfoExtractor::channel() const
+{
+    if (!m_videoInfo) {
+        return {};
+    }
+    return QString::fromStdString(m_videoInfo->channel);
 }
 
 QUrl VideoInfoExtractor::thumbnail() const
