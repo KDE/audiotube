@@ -19,6 +19,8 @@ Kirigami.ScrollablePage {
         reuseItems: true
 
         section.delegate: Kirigami.ListSectionHeader {
+            width: parent.width
+
             required property string section
             text: {
                 switch (parseInt(section)) {

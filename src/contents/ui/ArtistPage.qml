@@ -140,6 +140,8 @@ Kirigami.ScrollablePage {
 
         section.property: "type"
         section.delegate: Kirigami.ListSectionHeader {
+            width: parent.width
+
             text: {
                 switch(parseInt(section)) {
                 case ArtistModel.Album:
