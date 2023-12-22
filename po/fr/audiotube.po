@@ -1,12 +1,12 @@
-# SPDX-FileCopyrightText: 2021, 2022, 2023 Xavier Besnard <xavier.besnard@neuf.fr>
-# Xavier BESNARD <xavier.besnard@neuf.fr>, 2022, 2023.
+# SPDX-FileCopyrightText: 2021, 2022, 2023 Xavier Besnard <xavier.besnard@kde.org>
+# Xavier Besnard <xavier.besnard@kde.org>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-23 00:41+0000\n"
+"POT-Creation-Date: 2023-12-22 01:38+0000\n"
 "PO-Revision-Date: 2023-10-30 15:15+0100\n"
-"Last-Translator: Xavier BESNARD <xavier.besnard@neuf.fr>\n"
+"Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
@@ -71,9 +71,9 @@ msgstr "Partager"
 msgid "Album • %1"
 msgstr "Album • %1"
 
-#: contents/ui/AlbumPage.qml:160 contents/ui/ArtistPage.qml:197
+#: contents/ui/AlbumPage.qml:160 contents/ui/ArtistPage.qml:199
 #: contents/ui/LocalPlaylistPage.qml:171 contents/ui/PlaybackHistory.qml:195
-#: contents/ui/PlaylistPage.qml:189 contents/ui/SearchPage.qml:146
+#: contents/ui/PlaylistPage.qml:189 contents/ui/SearchPage.qml:148
 #, kde-format
 msgid "More"
 msgstr "Et plus encore"
@@ -88,7 +88,7 @@ msgstr "Radio"
 msgid "Artist"
 msgstr "Artiste"
 
-#: contents/ui/ArtistPage.qml:129 contents/ui/SearchPage.qml:72
+#: contents/ui/ArtistPage.qml:129 contents/ui/SearchPage.qml:74
 #, kde-format
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
@@ -97,22 +97,22 @@ msgstr ""
 "La lecture de vidéos n'est pas encore prise en charge. Voulez-vous vraiment "
 "lire uniquement l'audio de « %1 » ?"
 
-#: contents/ui/ArtistPage.qml:146 contents/ui/SearchPage.qml:26
+#: contents/ui/ArtistPage.qml:148 contents/ui/SearchPage.qml:28
 #, kde-format
 msgid "Albums"
 msgstr "Albums"
 
-#: contents/ui/ArtistPage.qml:148
+#: contents/ui/ArtistPage.qml:150
 #, kde-format
 msgid "Singles"
 msgstr "Titres uniques"
 
-#: contents/ui/ArtistPage.qml:150 contents/ui/SearchPage.qml:32
+#: contents/ui/ArtistPage.qml:152 contents/ui/SearchPage.qml:34
 #, kde-format
 msgid "Songs"
 msgstr "Chansons"
 
-#: contents/ui/ArtistPage.qml:152 contents/ui/SearchPage.qml:34
+#: contents/ui/ArtistPage.qml:154 contents/ui/SearchPage.qml:36
 #, kde-format
 msgid "Videos"
 msgstr "Vidéos"
@@ -209,7 +209,7 @@ msgstr "Encore aucune chanson jouée"
 
 #: contents/ui/LibraryPage.qml:396 contents/ui/LocalPlaylistsPage.qml:19
 #: contents/ui/LocalPlaylistsPage.qml:80 contents/ui/NavigationBar.qml:74
-#: contents/ui/SearchPage.qml:30 contents/ui/Sidebar.qml:179
+#: contents/ui/SearchPage.qml:32 contents/ui/Sidebar.qml:179
 #, kde-format
 msgid "Playlists"
 msgstr "Listes de lecture"
@@ -391,17 +391,17 @@ msgstr "supprimer de l'historique de recherche"
 msgid "Previous Searches:"
 msgstr "Recherches précédentes :"
 
-#: contents/ui/SearchPage.qml:28
+#: contents/ui/SearchPage.qml:30
 #, kde-format
 msgid "Artists"
 msgstr "Artistes"
 
-#: contents/ui/SearchPage.qml:36
+#: contents/ui/SearchPage.qml:38
 #, kde-format
 msgid "Top Results"
 msgstr "Principaux résultats"
 
-#: contents/ui/SearchPage.qml:39 playlistimporter.cpp:22
+#: contents/ui/SearchPage.qml:41 playlistimporter.cpp:22
 #, kde-format
 msgid "Unknown"
 msgstr "Inconnu"
@@ -507,7 +507,7 @@ msgstr "Xavier Besnard"
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "xavier.besnard@neuf.fr"
+msgstr "xavier.besnard@kde.org"
 
 #: main.cpp:86
 #, kde-format

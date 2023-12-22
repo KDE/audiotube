@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-23 00:41+0000\n"
+"POT-Creation-Date: 2023-12-22 01:38+0000\n"
 "PO-Revision-Date: 2023-11-13 14:53+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -73,9 +73,9 @@ msgstr "Comparti"
 msgid "Album • %1"
 msgstr "Album • %1"
 
-#: contents/ui/AlbumPage.qml:160 contents/ui/ArtistPage.qml:197
+#: contents/ui/AlbumPage.qml:160 contents/ui/ArtistPage.qml:199
 #: contents/ui/LocalPlaylistPage.qml:171 contents/ui/PlaybackHistory.qml:195
-#: contents/ui/PlaylistPage.qml:189 contents/ui/SearchPage.qml:146
+#: contents/ui/PlaylistPage.qml:189 contents/ui/SearchPage.qml:148
 #, kde-format
 msgid "More"
 msgstr "Altere"
@@ -90,7 +90,7 @@ msgstr "Radio"
 msgid "Artist"
 msgstr "Artista"
 
-#: contents/ui/ArtistPage.qml:129 contents/ui/SearchPage.qml:72
+#: contents/ui/ArtistPage.qml:129 contents/ui/SearchPage.qml:74
 #, kde-format
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
@@ -99,22 +99,22 @@ msgstr ""
 "Reproduction de video a retro (playback) non es ancora supportate. Tu vole "
 "solmente reproducer le audio de \"%1\"?"
 
-#: contents/ui/ArtistPage.qml:146 contents/ui/SearchPage.qml:26
+#: contents/ui/ArtistPage.qml:148 contents/ui/SearchPage.qml:28
 #, kde-format
 msgid "Albums"
 msgstr "Albumes"
 
-#: contents/ui/ArtistPage.qml:148
+#: contents/ui/ArtistPage.qml:150
 #, kde-format
 msgid "Singles"
 msgstr "Singules"
 
-#: contents/ui/ArtistPage.qml:150 contents/ui/SearchPage.qml:32
+#: contents/ui/ArtistPage.qml:152 contents/ui/SearchPage.qml:34
 #, kde-format
 msgid "Songs"
 msgstr "Cantos"
 
-#: contents/ui/ArtistPage.qml:152 contents/ui/SearchPage.qml:34
+#: contents/ui/ArtistPage.qml:154 contents/ui/SearchPage.qml:36
 #, kde-format
 msgid "Videos"
 msgstr "Videos"
@@ -211,7 +211,7 @@ msgstr "Nulle cantos ancora sonate"
 
 #: contents/ui/LibraryPage.qml:396 contents/ui/LocalPlaylistsPage.qml:19
 #: contents/ui/LocalPlaylistsPage.qml:80 contents/ui/NavigationBar.qml:74
-#: contents/ui/SearchPage.qml:30 contents/ui/Sidebar.qml:179
+#: contents/ui/SearchPage.qml:32 contents/ui/Sidebar.qml:179
 #, kde-format
 msgid "Playlists"
 msgstr "Listas de reproduction"
@@ -393,17 +393,17 @@ msgstr "remove ex chronologia de cerca"
 msgid "Previous Searches:"
 msgstr "Previe cercas:"
 
-#: contents/ui/SearchPage.qml:28
+#: contents/ui/SearchPage.qml:30
 #, kde-format
 msgid "Artists"
 msgstr "Artistas"
 
-#: contents/ui/SearchPage.qml:36
+#: contents/ui/SearchPage.qml:38
 #, kde-format
 msgid "Top Results"
 msgstr "Exitos al culmine (Top)"
 
-#: contents/ui/SearchPage.qml:39 playlistimporter.cpp:22
+#: contents/ui/SearchPage.qml:41 playlistimporter.cpp:22
 #, kde-format
 msgid "Unknown"
 msgstr "Incognite"

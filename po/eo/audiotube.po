@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-23 00:41+0000\n"
+"POT-Creation-Date: 2023-12-22 01:38+0000\n"
 "PO-Revision-Date: 2023-11-30 18:56+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -74,9 +74,9 @@ msgstr "Kunhavigi"
 msgid "Album • %1"
 msgstr "Albumo • %1"
 
-#: contents/ui/AlbumPage.qml:160 contents/ui/ArtistPage.qml:197
+#: contents/ui/AlbumPage.qml:160 contents/ui/ArtistPage.qml:199
 #: contents/ui/LocalPlaylistPage.qml:171 contents/ui/PlaybackHistory.qml:195
-#: contents/ui/PlaylistPage.qml:189 contents/ui/SearchPage.qml:146
+#: contents/ui/PlaylistPage.qml:189 contents/ui/SearchPage.qml:148
 #, kde-format
 msgid "More"
 msgstr "Pli"
@@ -91,7 +91,7 @@ msgstr "Radio"
 msgid "Artist"
 msgstr "Artisto"
 
-#: contents/ui/ArtistPage.qml:129 contents/ui/SearchPage.qml:72
+#: contents/ui/ArtistPage.qml:129 contents/ui/SearchPage.qml:74
 #, kde-format
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
@@ -100,22 +100,22 @@ msgstr ""
 "Video-reproduktado ankoraŭ ne estas subtenata. Ĉu vi volas ludi nur la "
 "sonojn de \"%1\"?"
 
-#: contents/ui/ArtistPage.qml:146 contents/ui/SearchPage.qml:26
+#: contents/ui/ArtistPage.qml:148 contents/ui/SearchPage.qml:28
 #, kde-format
 msgid "Albums"
 msgstr "Albumoj"
 
-#: contents/ui/ArtistPage.qml:148
+#: contents/ui/ArtistPage.qml:150
 #, kde-format
 msgid "Singles"
 msgstr "Unuopaĵoj"
 
-#: contents/ui/ArtistPage.qml:150 contents/ui/SearchPage.qml:32
+#: contents/ui/ArtistPage.qml:152 contents/ui/SearchPage.qml:34
 #, kde-format
 msgid "Songs"
 msgstr "Kantoj"
 
-#: contents/ui/ArtistPage.qml:152 contents/ui/SearchPage.qml:34
+#: contents/ui/ArtistPage.qml:154 contents/ui/SearchPage.qml:36
 #, kde-format
 msgid "Videos"
 msgstr "Videoj"
@@ -212,7 +212,7 @@ msgstr "Ankoraŭ Neniuj Kantoj Luditaj"
 
 #: contents/ui/LibraryPage.qml:396 contents/ui/LocalPlaylistsPage.qml:19
 #: contents/ui/LocalPlaylistsPage.qml:80 contents/ui/NavigationBar.qml:74
-#: contents/ui/SearchPage.qml:30 contents/ui/Sidebar.qml:179
+#: contents/ui/SearchPage.qml:32 contents/ui/Sidebar.qml:179
 #, kde-format
 msgid "Playlists"
 msgstr "Ludlistoj"
@@ -394,17 +394,17 @@ msgstr "forigi el serĉhistorio"
 msgid "Previous Searches:"
 msgstr "Antaŭaj Serĉoj:"
 
-#: contents/ui/SearchPage.qml:28
+#: contents/ui/SearchPage.qml:30
 #, kde-format
 msgid "Artists"
 msgstr "Artistoj"
 
-#: contents/ui/SearchPage.qml:36
+#: contents/ui/SearchPage.qml:38
 #, kde-format
 msgid "Top Results"
 msgstr "Plej bonaj Rezultoj"
 
-#: contents/ui/SearchPage.qml:39 playlistimporter.cpp:22
+#: contents/ui/SearchPage.qml:41 playlistimporter.cpp:22
 #, kde-format
 msgid "Unknown"
 msgstr "Nekonata"

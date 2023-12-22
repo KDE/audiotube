@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-11-23 00:41+0000\n"
+"POT-Creation-Date: 2023-12-22 01:38+0000\n"
 "PO-Revision-Date: 2023-12-15 20:37+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -75,9 +75,9 @@ msgstr "分享"
 msgid "Album • %1"
 msgstr "專輯 • %1"
 
-#: contents/ui/AlbumPage.qml:160 contents/ui/ArtistPage.qml:197
+#: contents/ui/AlbumPage.qml:160 contents/ui/ArtistPage.qml:199
 #: contents/ui/LocalPlaylistPage.qml:171 contents/ui/PlaybackHistory.qml:195
-#: contents/ui/PlaylistPage.qml:189 contents/ui/SearchPage.qml:146
+#: contents/ui/PlaylistPage.qml:189 contents/ui/SearchPage.qml:148
 #, kde-format
 msgid "More"
 msgstr "更多"
@@ -92,29 +92,29 @@ msgstr "廣播"
 msgid "Artist"
 msgstr "藝人"
 
-#: contents/ui/ArtistPage.qml:129 contents/ui/SearchPage.qml:72
+#: contents/ui/ArtistPage.qml:129 contents/ui/SearchPage.qml:74
 #, kde-format
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
 "\"%1\"?"
 msgstr "尚不支援影片播放。您是否要只播放 \"%1\" 的音效？"
 
-#: contents/ui/ArtistPage.qml:146 contents/ui/SearchPage.qml:26
+#: contents/ui/ArtistPage.qml:148 contents/ui/SearchPage.qml:28
 #, kde-format
 msgid "Albums"
 msgstr "專輯"
 
-#: contents/ui/ArtistPage.qml:148
+#: contents/ui/ArtistPage.qml:150
 #, kde-format
 msgid "Singles"
 msgstr "單曲"
 
-#: contents/ui/ArtistPage.qml:150 contents/ui/SearchPage.qml:32
+#: contents/ui/ArtistPage.qml:152 contents/ui/SearchPage.qml:34
 #, kde-format
 msgid "Songs"
 msgstr "歌曲"
 
-#: contents/ui/ArtistPage.qml:152 contents/ui/SearchPage.qml:34
+#: contents/ui/ArtistPage.qml:154 contents/ui/SearchPage.qml:36
 #, kde-format
 msgid "Videos"
 msgstr "影片"
@@ -211,7 +211,7 @@ msgstr "尚無播放過的歌曲"
 
 #: contents/ui/LibraryPage.qml:396 contents/ui/LocalPlaylistsPage.qml:19
 #: contents/ui/LocalPlaylistsPage.qml:80 contents/ui/NavigationBar.qml:74
-#: contents/ui/SearchPage.qml:30 contents/ui/Sidebar.qml:179
+#: contents/ui/SearchPage.qml:32 contents/ui/Sidebar.qml:179
 #, kde-format
 msgid "Playlists"
 msgstr "播放清單"
@@ -393,17 +393,17 @@ msgstr "從搜尋歷史中移除"
 msgid "Previous Searches:"
 msgstr "先前的搜尋："
 
-#: contents/ui/SearchPage.qml:28
+#: contents/ui/SearchPage.qml:30
 #, kde-format
 msgid "Artists"
 msgstr "藝人"
 
-#: contents/ui/SearchPage.qml:36
+#: contents/ui/SearchPage.qml:38
 #, kde-format
 msgid "Top Results"
 msgstr "熱門搜尋結果"
 
-#: contents/ui/SearchPage.qml:39 playlistimporter.cpp:22
+#: contents/ui/SearchPage.qml:41 playlistimporter.cpp:22
 #, kde-format
 msgid "Unknown"
 msgstr "未知"
