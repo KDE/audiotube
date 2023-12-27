@@ -1,7 +1,7 @@
 {
     "id": "org.kde.audiotube",
     "runtime": "org.kde.Platform",
-    "runtime-version": "6.6",
+    "runtime-version": "6.6-kf6preview",
     "sdk": "org.kde.Sdk",
     "command": "audiotube",
     "tags": [
@@ -25,7 +25,6 @@
     "modules": [
         "flatpak/python3-yt-dlp.json",
         "flatpak/python3-ytmusicapi.json",
-        "flatpak/kf6.json",
         "flatpak/kirigami-addons.json",
         {
             "name": "qcoro",
