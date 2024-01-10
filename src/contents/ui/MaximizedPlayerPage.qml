@@ -622,7 +622,7 @@ Item {
                             target: UserPlaylistModel
                             function onNoLyrics() {
                                 if(lyricsButton.lyricsShown) {
-                                    lyricsButton.onClicked()
+                                    lyricsButton.clicked()
                                 }
                             }
                         }
