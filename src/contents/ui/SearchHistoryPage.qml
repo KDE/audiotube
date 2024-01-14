@@ -88,7 +88,7 @@ Kirigami.ScrollablePage {
 
                 }
                 onClicked: {
-                    searchLoader.text = model.display
+                    searchLoader.text = searchQuery
                     searchLoader.accepted()
                 }
             }
