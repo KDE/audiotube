@@ -205,6 +205,9 @@ playlist::Track extract_playlist_track(py::handle track) {
 }
 
 artist::Artist::Song::Album extract_song_album(py::handle album) {
+    if (album["id"].is_none()) {
+        return {};
+    }
     return {
         album["name"].cast<std::string>(),
         album["id"].cast<std::string>()
