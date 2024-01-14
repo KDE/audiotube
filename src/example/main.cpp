@@ -8,7 +8,7 @@
 
 int main() {
     const auto ytm = YTMusic();
-    const auto results = ytm.search("y2ECgOhoDGs");
+    const auto results = ytm.search("Systemabsturz");
 
     std::cout << "Found " << results.size() << " results." << std::endl;
 
@@ -54,6 +54,12 @@ int main() {
                     auto playlist = ytm.get_watch_playlist(*arg.video_id);
                     if (playlist.lyrics) {
                         ytm.get_lyrics(*playlist.lyrics);
+                    }
+                } else if (!arg.artists.empty()) {
+                    for (const meta::Artist &artist : arg.artists) {
+                        if (artist.id) {
+                            ytm.get_artist(*artist.id);
+                        }
                     }
                 }
             } else {
