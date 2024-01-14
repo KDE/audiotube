@@ -584,7 +584,7 @@ Item {
 
                         onMoved: {
                             audioOutput.volume = volumeSlider.volume
-                            if (value==0) {
+                            if (volumeSlider.value === 0) {
                                 muteButton.muteAudio()
                             } else {
                                 muteButton.unmuteAudio()
@@ -600,7 +600,6 @@ Item {
                         text: i18n("%1%", Math.round(volumeSlider.value*100))
 
                         Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
-                        Layout.preferredHeight: volumeSlider.Layout.preferredHeight
                         Layout.preferredWidth: Kirigami.Units.gridUnit * 2.5
                     }
 
