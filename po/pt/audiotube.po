@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-22 01:38+0000\n"
+"POT-Creation-Date: 2024-01-15 00:37+0000\n"
 "PO-Revision-Date: 2023-07-08 12:56+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -304,54 +304,54 @@ msgstr "Silenciar o Áudio"
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/ui/MaximizedPlayerPage.qml:631
+#: contents/ui/MaximizedPlayerPage.qml:630
 #, kde-format
 msgid "Hide Lyrics"
 msgstr "Esconder as Letras Musicais"
 
-#: contents/ui/MaximizedPlayerPage.qml:631
+#: contents/ui/MaximizedPlayerPage.qml:630
 #, kde-format
 msgid "Show Lyrics"
 msgstr "Mostrar as Letras Musicais"
 
-#: contents/ui/MaximizedPlayerPage.qml:651 contents/ui/SongMenu.qml:178
+#: contents/ui/MaximizedPlayerPage.qml:650 contents/ui/SongMenu.qml:178
 #: contents/ui/SongMenu.qml:264
 #, kde-format
 msgid "Share Song"
 msgstr "Partilhar a Música"
 
-#: contents/ui/MaximizedPlayerPage.qml:692
+#: contents/ui/MaximizedPlayerPage.qml:691
 #, kde-format
 msgid "Add to a local playlist"
 msgstr "Adicionar a uma lista de reprodução local"
 
-#: contents/ui/MaximizedPlayerPage.qml:729
+#: contents/ui/MaximizedPlayerPage.qml:728
 #, kde-format
 msgid "Hide Queue"
 msgstr "Esconder a Fila"
 
-#: contents/ui/MaximizedPlayerPage.qml:729
+#: contents/ui/MaximizedPlayerPage.qml:728
 #, kde-format
 msgid "Show Queue"
 msgstr "Mostrar a Fila"
 
-#: contents/ui/MaximizedPlayerPage.qml:952
-#: contents/ui/MaximizedPlayerPage.qml:1189
+#: contents/ui/MaximizedPlayerPage.qml:951
+#: contents/ui/MaximizedPlayerPage.qml:1188
 #, kde-format
 msgid "Remove Track"
 msgstr "Remover a Faixa"
 
-#: contents/ui/MaximizedPlayerPage.qml:987
+#: contents/ui/MaximizedPlayerPage.qml:986
 #, kde-format
 msgid "Clear Queue"
 msgstr "Limpar a Fila"
 
-#: contents/ui/MaximizedPlayerPage.qml:1012
+#: contents/ui/MaximizedPlayerPage.qml:1011
 #, kde-format
 msgid "Shuffle Queue"
 msgstr "Baralhar a Fila"
 
-#: contents/ui/MaximizedPlayerPage.qml:1042
+#: contents/ui/MaximizedPlayerPage.qml:1041
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "Próximas Músicas"

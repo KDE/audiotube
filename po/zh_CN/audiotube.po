@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-22 01:38+0000\n"
+"POT-Creation-Date: 2024-01-15 00:37+0000\n"
 "PO-Revision-Date: 2024-01-13 06:00\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -297,54 +297,54 @@ msgstr "静音"
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/ui/MaximizedPlayerPage.qml:631
+#: contents/ui/MaximizedPlayerPage.qml:630
 #, kde-format
 msgid "Hide Lyrics"
 msgstr "隐藏歌词"
 
-#: contents/ui/MaximizedPlayerPage.qml:631
+#: contents/ui/MaximizedPlayerPage.qml:630
 #, kde-format
 msgid "Show Lyrics"
 msgstr "显示歌词"
 
-#: contents/ui/MaximizedPlayerPage.qml:651 contents/ui/SongMenu.qml:178
+#: contents/ui/MaximizedPlayerPage.qml:650 contents/ui/SongMenu.qml:178
 #: contents/ui/SongMenu.qml:264
 #, kde-format
 msgid "Share Song"
 msgstr "分享歌曲"
 
-#: contents/ui/MaximizedPlayerPage.qml:692
+#: contents/ui/MaximizedPlayerPage.qml:691
 #, kde-format
 msgid "Add to a local playlist"
 msgstr "添加到本地播放列表"
 
-#: contents/ui/MaximizedPlayerPage.qml:729
+#: contents/ui/MaximizedPlayerPage.qml:728
 #, kde-format
 msgid "Hide Queue"
 msgstr "隐藏队列"
 
-#: contents/ui/MaximizedPlayerPage.qml:729
+#: contents/ui/MaximizedPlayerPage.qml:728
 #, kde-format
 msgid "Show Queue"
 msgstr "显示队列"
 
-#: contents/ui/MaximizedPlayerPage.qml:952
-#: contents/ui/MaximizedPlayerPage.qml:1189
+#: contents/ui/MaximizedPlayerPage.qml:951
+#: contents/ui/MaximizedPlayerPage.qml:1188
 #, kde-format
 msgid "Remove Track"
 msgstr "移除曲目"
 
-#: contents/ui/MaximizedPlayerPage.qml:987
+#: contents/ui/MaximizedPlayerPage.qml:986
 #, kde-format
 msgid "Clear Queue"
 msgstr "清空队列"
 
-#: contents/ui/MaximizedPlayerPage.qml:1012
+#: contents/ui/MaximizedPlayerPage.qml:1011
 #, kde-format
 msgid "Shuffle Queue"
 msgstr "随机队列"
 
-#: contents/ui/MaximizedPlayerPage.qml:1042
+#: contents/ui/MaximizedPlayerPage.qml:1041
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "即将播放的歌曲"
