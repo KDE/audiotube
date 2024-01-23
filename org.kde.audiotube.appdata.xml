@@ -21,6 +21,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="fr">AudioTube</name>
   <name xml:lang="gl">AudioTube</name>
   <name xml:lang="hi">ओडियो-ट्यूब</name>
+  <name xml:lang="hu">AudioTube</name>
   <name xml:lang="ia">AudioTube</name>
   <name xml:lang="id">AudioTube</name>
   <name xml:lang="it">AudioTube</name>
@@ -49,6 +50,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="es">Aplicación de YouTube Music para teléfonos y equipos de escritorio</summary>
   <summary xml:lang="eu">«YouTube Music» aplikazioa telefonoetarako eta mahaigaineko ordenagailuetarako</summary>
   <summary xml:lang="fr">Application « Musique YouTube » pour téléphones et ordinateurs de bureau</summary>
+  <summary xml:lang="hu">YouTube Music alkalmazás telefonokra és asztali számítógépekre</summary>
   <summary xml:lang="ia">App de YouTube Music per telephonos e computatores de scriptorio</summary>
   <summary xml:lang="it">Applicazione YouTube Music per telefoni e computer desktop</summary>
   <summary xml:lang="ja">スマホやデスクトップ PC 用の YouTube Music アプリ</summary>
@@ -79,6 +81,7 @@ SPDX-License-Identifier: CC0-1.0
   <developer_name xml:lang="fr">Communauté de KDE</developer_name>
   <developer_name xml:lang="gl">Comunidade KDE</developer_name>
   <developer_name xml:lang="hi">केडीई समुदाय</developer_name>
+  <developer_name xml:lang="hu">A KDE Közösség</developer_name>
   <developer_name xml:lang="ia">Communitate de KDE</developer_name>
   <developer_name xml:lang="id">Komunitas KDE</developer_name>
   <developer_name xml:lang="it">Comunità KDE</developer_name>
@@ -194,6 +197,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="fr">AudioTube peut effectuer des recherches de musiques sur la partie « Musique » de YouTube, établir une liste d'albums et d'artistes, lire des listes de lecture générées automatiquement, des albums et permet de composer sa propre liste de lecture.</p>
     <p xml:lang="gl">AudioTube pode buscar en YouTube Music, listar álbums e intérpretes, reproducir listas xeradas automaticamente e álbums, e permítelle confeccionar listas.</p>
     <p xml:lang="hi">ऑडियोट्यूब यूट्यूब संगीत खोज सकता है, एल्बम और कलाकारों की सूची बना सकता है, स्वचालित रूप से उत्पन्न की गई गीतसूची, एल्बम बजा सकता है और आपकी अपनी खुद की प्लेलिस्ट को एक साथ रखने में मदद करता है।</p>
+    <p xml:lang="hu">Az AudioTube képes a YouTube Music keresésére, albumok és előadók listázására, automatikusan generált lejátszási listák és albumok lejátszására, valamint lehetővé teszi saját lejátszási lista összeállítását.</p>
     <p xml:lang="ia">AudioTube pote cercar in YouTube Music, listar albums e artistas, reproducer listas de reproduction generate automaticamente, albums e te permitte poner  tu proprie lista de reproduction insimul.</p>
     <p xml:lang="id">AudioTube dapat menelusuri YouTube Music, mendaftarkan album dan artis, putar daftar putar dan yang dibuat secara otomatis dan album, dan memungkinkan Anda untuk membuat daftar putar Anda sendiri.</p>
     <p xml:lang="it">AudioTube può eseguire ricerche su YouTube Music, elencare album e artisti, riprodurre scalette e album generati automaticamente e ti consente di creare la tua scaletta.</p>
