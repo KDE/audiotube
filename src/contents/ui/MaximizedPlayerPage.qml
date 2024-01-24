@@ -1091,6 +1091,8 @@ Item {
                     topMargin: 10
                     clip: true
 
+                    reuseItems: true
+
                     BusyIndicator {
                         anchors.centerIn: parent
                         visible: UserPlaylistModel.loading || UserPlaylistModel.loading

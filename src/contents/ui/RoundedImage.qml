@@ -4,30 +4,31 @@
 
 import QtQuick 2.15
 import QtQuick.Window 2.15
-import Qt5Compat.GraphicalEffects
+
+import org.kde.kirigami as Kirigami
 
 Item {
-    property alias radius: mask.radius
-    property alias source: image.source
     id: icon
 
+    property int radius
+    property alias source: image.source
+
     Image {
-        id:image
+        id: image
+
         source: source
         anchors.fill: parent
         fillMode: Image.PreserveAspectCrop
         asynchronous: true
         sourceSize.width: parent.implicitWidth * Screen.devicePixelRatio
-        layer.enabled: true
-        layer.effect: OpacityMask {
-            maskSource: mask
-        }
-    }
 
-    Rectangle {
-        id: mask
-        anchors.fill: parent
-        visible: false
+        layer {
+            enabled: true
+            effect: Kirigami.ShadowedTexture {
+                id: mask
+                radius: icon.radius
+            }
+        }
     }
 }
 
