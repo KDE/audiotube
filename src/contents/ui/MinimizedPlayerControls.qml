@@ -88,7 +88,7 @@ Item {
                 RoundedImage {
                     id: mainIcon
                     anchors.fill: parent
-                    visible: !loadingIndicator.visible
+                    visible: !loadingIndicator.visible && source.toString() !== ""
                     source: root.thumbnail
                     radius: 5
                 }

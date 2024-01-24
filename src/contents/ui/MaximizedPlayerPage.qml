@@ -125,7 +125,7 @@ Item {
                 // music art
                 Flickable {
                     flickableDirection: Flickable.HorizontalFlick
-                    clip:true
+                    clip: true
                     contentWidth: coverArt.width
                     contentHeight: coverArt.height
                     height: swipeView.height
@@ -141,16 +141,17 @@ Item {
                             }
                         }
                     }
-                    Item{
-                        height:swipeView.height
-                        width:applicationWindow().width-sideDrawer.width
+                    Item {
+                        height: swipeView.height
+                        width: applicationWindow().width-sideDrawer.width
                         Kirigami.ShadowedRectangle {
-                           id:coverArt
+                           id: coverArt
                            x: 4
                            anchors.centerIn: parent
                            width: swipeView.specWidth
                            height: swipeView.specWidth
 
+                           visible: root.thumbnail.toString() !== ""
 
                             color: "transparent"
                             radius: 10
@@ -168,7 +169,7 @@ Item {
                     }
                 }
 
-                ColumnLayout{
+                ColumnLayout {
                     width: swipeView.width
                     height: swipeView.height
                     ScrollView {
@@ -1155,6 +1156,7 @@ Item {
                                 }
                                 RoundedImage {
                                     source: drawerDelegateThumbnailSource.cachedPath
+
                                     height: 50
                                     width: height
                                     radius: 5
