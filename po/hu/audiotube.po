@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-15 00:37+0000\n"
+"POT-Creation-Date: 2024-01-25 00:36+0000\n"
 "PO-Revision-Date: 2024-01-23 21:49+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -26,10 +26,10 @@ msgstr ""
 "A ytmusicapi %1 nem tesztelt verziójával fut. Ha hibákat tapasztal, jelentse "
 "azokat a disztribúciójának."
 
-#: contents/ui/AlbumPage.qml:71 contents/ui/LibraryPage.qml:38
-#: contents/ui/LibraryPage.qml:64 contents/ui/LibraryPage.qml:85
-#: contents/ui/LibraryPage.qml:225 contents/ui/LibraryPage.qml:251
-#: contents/ui/LibraryPage.qml:272 contents/ui/LocalPlaylistPage.qml:71
+#: contents/ui/AlbumPage.qml:71 contents/ui/LibraryPage.qml:39
+#: contents/ui/LibraryPage.qml:65 contents/ui/LibraryPage.qml:91
+#: contents/ui/LibraryPage.qml:235 contents/ui/LibraryPage.qml:261
+#: contents/ui/LibraryPage.qml:285 contents/ui/LocalPlaylistPage.qml:71
 #: contents/ui/LocalPlaylistPage.qml:93 contents/ui/PlaybackHistory.qml:67
 #: contents/ui/PlaybackHistory.qml:89 contents/ui/PlaylistPage.qml:66
 #: contents/ui/PlaylistPage.qml:87
@@ -38,9 +38,9 @@ msgid "Play"
 msgstr "Lejátszás"
 
 #: contents/ui/AlbumPage.qml:78 contents/ui/ArtistPage.qml:83
-#: contents/ui/LibraryPage.qml:45 contents/ui/LibraryPage.qml:70
-#: contents/ui/LibraryPage.qml:93 contents/ui/LibraryPage.qml:232
-#: contents/ui/LibraryPage.qml:257 contents/ui/LibraryPage.qml:281
+#: contents/ui/LibraryPage.qml:46 contents/ui/LibraryPage.qml:71
+#: contents/ui/LibraryPage.qml:101 contents/ui/LibraryPage.qml:242
+#: contents/ui/LibraryPage.qml:267 contents/ui/LibraryPage.qml:294
 #: contents/ui/LocalPlaylistPage.qml:66 contents/ui/LocalPlaylistPage.qml:100
 #: contents/ui/PlaybackHistory.qml:55 contents/ui/PlaybackHistory.qml:102
 #: contents/ui/PlaylistPage.qml:59 contents/ui/PlaylistPage.qml:94
@@ -48,9 +48,9 @@ msgstr "Lejátszás"
 msgid "Shuffle"
 msgstr "Keverés"
 
-#: contents/ui/AlbumPage.qml:86 contents/ui/LibraryPage.qml:75
-#: contents/ui/LibraryPage.qml:101 contents/ui/LibraryPage.qml:262
-#: contents/ui/LibraryPage.qml:289 contents/ui/LocalPlaylistPage.qml:106
+#: contents/ui/AlbumPage.qml:86 contents/ui/LibraryPage.qml:76
+#: contents/ui/LibraryPage.qml:111 contents/ui/LibraryPage.qml:272
+#: contents/ui/LibraryPage.qml:302 contents/ui/LocalPlaylistPage.qml:106
 #: contents/ui/PlaybackHistory.qml:114 contents/ui/PlaylistPage.qml:102
 #, kde-format
 msgid "Append to queue"
@@ -162,9 +162,9 @@ msgid "Add Song to Playlist"
 msgstr "Dal hozzáadása a lejátszólistához"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:29
-#: contents/ui/LocalPlaylistsPage.qml:103
-#: contents/ui/LocalPlaylistsPage.qml:129
-#: contents/ui/LocalPlaylistsPage.qml:144
+#: contents/ui/LocalPlaylistsPage.qml:107
+#: contents/ui/LocalPlaylistsPage.qml:133
+#: contents/ui/LocalPlaylistsPage.qml:151
 #, kde-format
 msgid "New Playlist"
 msgstr "Új lejátszólista"
@@ -174,61 +174,61 @@ msgstr "Új lejátszólista"
 msgid "Rename playlist"
 msgstr "Lejátszólista átnevezése"
 
-#: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:125
+#: contents/ui/LibraryPage.qml:32 contents/ui/LibraryPage.qml:135
 #: contents/ui/NavigationBar.qml:47 contents/ui/NavigationBar.qml:53
 #: contents/ui/Sidebar.qml:138 contents/ui/Sidebar.qml:143
 #, kde-format
 msgid "Favourites"
 msgstr "Kedvencek"
 
-#: contents/ui/LibraryPage.qml:120 contents/ui/LibraryPage.qml:309
-#: contents/ui/LibraryPage.qml:408
+#: contents/ui/LibraryPage.qml:130 contents/ui/LibraryPage.qml:322
+#: contents/ui/LibraryPage.qml:421
 #, kde-format
 msgid "Show All"
 msgstr "Összes megjelenítése"
 
-#: contents/ui/LibraryPage.qml:150
+#: contents/ui/LibraryPage.qml:160
 #, kde-format
 msgid "No Favourites Yet"
 msgstr "Még nincsenek kedvencek"
 
-#: contents/ui/LibraryPage.qml:218
+#: contents/ui/LibraryPage.qml:228
 #, kde-format
 msgid "Most played"
 msgstr "Legtöbbször lejátszott"
 
-#: contents/ui/LibraryPage.qml:314 contents/ui/NavigationBar.qml:60
+#: contents/ui/LibraryPage.qml:327 contents/ui/NavigationBar.qml:60
 #: contents/ui/NavigationBar.qml:66 contents/ui/Sidebar.qml:159
 #: contents/ui/Sidebar.qml:164
 #, kde-format
 msgid "Played Songs"
 msgstr "Lejátszott dalok"
 
-#: contents/ui/LibraryPage.qml:339
+#: contents/ui/LibraryPage.qml:352
 #, kde-format
 msgid "No Songs Played Yet"
 msgstr "Még nincs lejátszott dal"
 
-#: contents/ui/LibraryPage.qml:396 contents/ui/LocalPlaylistsPage.qml:19
-#: contents/ui/LocalPlaylistsPage.qml:80 contents/ui/NavigationBar.qml:74
+#: contents/ui/LibraryPage.qml:409 contents/ui/LocalPlaylistsPage.qml:20
+#: contents/ui/LocalPlaylistsPage.qml:84 contents/ui/NavigationBar.qml:74
 #: contents/ui/SearchPage.qml:32 contents/ui/Sidebar.qml:179
 #, kde-format
 msgid "Playlists"
 msgstr "Lejátszólisták"
 
-#: contents/ui/LibraryPage.qml:435
+#: contents/ui/LibraryPage.qml:448
 #, kde-format
 msgid "No Playlists Yet"
 msgstr "Még nincsenek lejátszólisták"
 
-#: contents/ui/LibraryPage.qml:455 contents/ui/LibraryPage.qml:477
-#: contents/ui/LocalPlaylistsPage.qml:34 contents/ui/LocalPlaylistsPage.qml:56
+#: contents/ui/LibraryPage.qml:471 contents/ui/LibraryPage.qml:493
+#: contents/ui/LocalPlaylistsPage.qml:38 contents/ui/LocalPlaylistsPage.qml:60
 #, kde-format
 msgid "Rename"
 msgstr "Átnevezés"
 
-#: contents/ui/LibraryPage.qml:464 contents/ui/LibraryPage.qml:485
-#: contents/ui/LocalPlaylistsPage.qml:43 contents/ui/LocalPlaylistsPage.qml:64
+#: contents/ui/LibraryPage.qml:480 contents/ui/LibraryPage.qml:501
+#: contents/ui/LocalPlaylistsPage.qml:47 contents/ui/LocalPlaylistsPage.qml:68
 #, kde-format
 msgid "Delete"
 msgstr "Törlés"
@@ -243,9 +243,9 @@ msgstr "Eltávolítás a lejátszólistáról"
 msgid "This playlist is still empty"
 msgstr "Ez a lejátszólista még mindig üres"
 
-#: contents/ui/LocalPlaylistsPage.qml:111
-#: contents/ui/LocalPlaylistsPage.qml:134
-#: contents/ui/LocalPlaylistsPage.qml:149 contents/ui/PlaylistPage.qml:107
+#: contents/ui/LocalPlaylistsPage.qml:115
+#: contents/ui/LocalPlaylistsPage.qml:138
+#: contents/ui/LocalPlaylistsPage.qml:156 contents/ui/PlaylistPage.qml:107
 #, kde-format
 msgid "Import Playlist"
 msgstr "Lejátszólista importálása"
@@ -260,95 +260,95 @@ msgstr "AudioTube"
 msgid "No song playing"
 msgstr "Nincs dallejátszát"
 
-#: contents/ui/MaximizedPlayerPage.qml:99
+#: contents/ui/MaximizedPlayerPage.qml:100
 #, kde-format
 msgid "Close Maximized Player"
 msgstr "Maximalizált lejátszó bezárása"
 
-#: contents/ui/MaximizedPlayerPage.qml:205
+#: contents/ui/MaximizedPlayerPage.qml:207
 #: contents/ui/MinimizedPlayerControls.qml:113
 #, kde-format
 msgid "No media playing"
 msgstr "Nincs médialejátszás"
 
-#: contents/ui/MaximizedPlayerPage.qml:428
+#: contents/ui/MaximizedPlayerPage.qml:430
 #, kde-format
 msgid "Remove from Favourites"
 msgstr "Eltávolítás a kedvencekből"
 
-#: contents/ui/MaximizedPlayerPage.qml:428
+#: contents/ui/MaximizedPlayerPage.qml:430
 #, kde-format
 msgid "Add to Favourites"
 msgstr "Hozzáadás a kedvencekhez"
 
-#: contents/ui/MaximizedPlayerPage.qml:453
+#: contents/ui/MaximizedPlayerPage.qml:455
 #, kde-format
 msgid "Open Volume Drawer"
 msgstr "Hangerőcsúszka megnyitása"
 
-#: contents/ui/MaximizedPlayerPage.qml:561
+#: contents/ui/MaximizedPlayerPage.qml:564
 #, kde-format
 msgid "Unmute Audio"
 msgstr "Visszahangosítás"
 
-#: contents/ui/MaximizedPlayerPage.qml:561
+#: contents/ui/MaximizedPlayerPage.qml:564
 #, kde-format
 msgid "Mute Audio"
 msgstr "Némítás"
 
-#: contents/ui/MaximizedPlayerPage.qml:600
+#: contents/ui/MaximizedPlayerPage.qml:603
 #, kde-format
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/ui/MaximizedPlayerPage.qml:630
+#: contents/ui/MaximizedPlayerPage.qml:633
 #, kde-format
 msgid "Hide Lyrics"
 msgstr "Dalszöveg elrejtése"
 
-#: contents/ui/MaximizedPlayerPage.qml:630
+#: contents/ui/MaximizedPlayerPage.qml:633
 #, kde-format
 msgid "Show Lyrics"
 msgstr "Dalszöveg megjelenítése"
 
-#: contents/ui/MaximizedPlayerPage.qml:650 contents/ui/SongMenu.qml:178
-#: contents/ui/SongMenu.qml:264
+#: contents/ui/MaximizedPlayerPage.qml:653 contents/ui/SongMenu.qml:195
+#: contents/ui/SongMenu.qml:281
 #, kde-format
 msgid "Share Song"
 msgstr "Dal megosztása"
 
-#: contents/ui/MaximizedPlayerPage.qml:691
+#: contents/ui/MaximizedPlayerPage.qml:694
 #, kde-format
 msgid "Add to a local playlist"
 msgstr "Hozzáadás helyi lejátszólistához"
 
-#: contents/ui/MaximizedPlayerPage.qml:728
+#: contents/ui/MaximizedPlayerPage.qml:731
 #, kde-format
 msgid "Hide Queue"
 msgstr "Sor elrejtése"
 
-#: contents/ui/MaximizedPlayerPage.qml:728
+#: contents/ui/MaximizedPlayerPage.qml:731
 #, kde-format
 msgid "Show Queue"
 msgstr "Sor megjelenítése"
 
-#: contents/ui/MaximizedPlayerPage.qml:951
-#: contents/ui/MaximizedPlayerPage.qml:1188
+#: contents/ui/MaximizedPlayerPage.qml:954
+#: contents/ui/MaximizedPlayerPage.qml:1197
 #, kde-format
 msgid "Remove Track"
 msgstr "Szám eltávolítása"
 
-#: contents/ui/MaximizedPlayerPage.qml:986
+#: contents/ui/MaximizedPlayerPage.qml:989
 #, kde-format
 msgid "Clear Queue"
 msgstr "Sor kiürítése"
 
-#: contents/ui/MaximizedPlayerPage.qml:1011
+#: contents/ui/MaximizedPlayerPage.qml:1014
 #, kde-format
 msgid "Shuffle Queue"
 msgstr "Sor keverése"
 
-#: contents/ui/MaximizedPlayerPage.qml:1041
+#: contents/ui/MaximizedPlayerPage.qml:1047
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "Következő dalok"
@@ -413,17 +413,17 @@ msgstr "Ismeretlen"
 msgid "No matching previous searches"
 msgstr "Nincsenek egyező korábbi keresések"
 
-#: contents/ui/ShareMenu.qml:40
+#: contents/ui/ShareMenu.qml:41
 #, kde-format
 msgid "Share to"
 msgstr "Megosztás itt:"
 
-#: contents/ui/ShareMenu.qml:48 contents/ui/ShareMenu.qml:98
+#: contents/ui/ShareMenu.qml:49 contents/ui/ShareMenu.qml:102
 #, kde-format
 msgid "Copy Link"
 msgstr "Hivatkozás másolása"
 
-#: contents/ui/ShareMenu.qml:53 contents/ui/ShareMenu.qml:103
+#: contents/ui/ShareMenu.qml:54 contents/ui/ShareMenu.qml:107
 #, kde-format
 msgid "Link copied to clipboard"
 msgstr "Hivatkozás másolva a vágólapra"
@@ -438,32 +438,32 @@ msgstr "Névjegy"
 msgid "Collapse Sidebar"
 msgstr "Oldalsáv összecsukása"
 
-#: contents/ui/SongMenu.qml:103 contents/ui/SongMenu.qml:200
+#: contents/ui/SongMenu.qml:108 contents/ui/SongMenu.qml:217
 #, kde-format
 msgid "Play Next"
 msgstr "Következő lejátszása"
 
-#: contents/ui/SongMenu.qml:111 contents/ui/SongMenu.qml:206
+#: contents/ui/SongMenu.qml:118 contents/ui/SongMenu.qml:223
 #, kde-format
 msgid "Add to queue"
 msgstr "Hozzáadás a sorhoz"
 
-#: contents/ui/SongMenu.qml:121 contents/ui/SongMenu.qml:216
+#: contents/ui/SongMenu.qml:130 contents/ui/SongMenu.qml:233
 #, kde-format
 msgid "Remove Favourite"
 msgstr "Kedvenc eltávolítása"
 
-#: contents/ui/SongMenu.qml:121 contents/ui/SongMenu.qml:216
+#: contents/ui/SongMenu.qml:130 contents/ui/SongMenu.qml:233
 #, kde-format
 msgid "Add Favourite"
 msgstr "Kedvenc hozzáadása"
 
-#: contents/ui/SongMenu.qml:138 contents/ui/SongMenu.qml:230
+#: contents/ui/SongMenu.qml:149 contents/ui/SongMenu.qml:247
 #, kde-format
 msgid "Remove from History"
 msgstr "Eltávolítás az előzményekből"
 
-#: contents/ui/SongMenu.qml:151 contents/ui/SongMenu.qml:239
+#: contents/ui/SongMenu.qml:164 contents/ui/SongMenu.qml:256
 #, kde-format
 msgid "Add to playlist"
 msgstr "Hozzáadás a lejátszólistához"
