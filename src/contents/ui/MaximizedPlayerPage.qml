@@ -467,56 +467,54 @@ Item {
                         }
                         BottomDrawer {
                             id: volumeDrawer
-                            drawerContentItem: ColumnLayout {
-                                RowLayout {
-                                    ToolButton {
-                                        Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
-                                        Layout.maximumWidth: height
-                                        Layout.preferredWidth: height
+                            drawerContentItem: RowLayout {
+                                ToolButton {
+                                    Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
+                                    Layout.maximumWidth: height
+                                    Layout.preferredWidth: height
 
-                                        icon.name: muteButton.icon.name
-                                        checkable: true
-                                        checked: muteButton.checked
-                                        text: muteButton.text
-                                        display: muteButton.display
+                                    icon.name: muteButton.icon.name
+                                    checkable: true
+                                    checked: muteButton.checked
+                                    text: muteButton.text
+                                    display: muteButton.display
 
-                                        ToolTip.text: text
-                                        ToolTip.delay: Kirigami.Units.toolTipDelay
-                                        ToolTip.visible: Kirigami.Settings.isMobile ? pressed : hovered
+                                    ToolTip.text: text
+                                    ToolTip.delay: Kirigami.Units.toolTipDelay
+                                    ToolTip.visible: Kirigami.Settings.isMobile ? pressed : hovered
 
-                                        onClicked: {
-                                            if(audio.muted)
-                                            {
-                                                muteButton.unmuteAudio()
-                                            }
-                                            else
-                                            {
-                                                muteButton.muteAudio()
-                                            }
+                                    onClicked: {
+                                        if(audio.muted)
+                                        {
+                                            muteButton.unmuteAudio()
+                                        }
+                                        else
+                                        {
+                                            muteButton.muteAudio()
                                         }
                                     }
+                                }
 
-                                    Slider {
-                                        id: slider
-                                        value: volumeSlider.value
-                                        opacity: volumeSlider.opacity
-                                        wheelEnabled: true
+                                Slider {
+                                    id: slider
+                                    value: volumeSlider.value
+                                    opacity: volumeSlider.opacity
+                                    wheelEnabled: true
 
-                                        Layout.fillWidth: true
-                                        Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
+                                    Layout.fillWidth: true
+                                    Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
 
-                                        onMoved: {
-                                            volumeSlider.value = value
-                                            volumeSlider.valueChanged()
-                                        }
+                                    onMoved: {
+                                        volumeSlider.value = value
+                                        volumeSlider.valueChanged()
                                     }
+                                }
 
-                                    Label {
-                                        Layout.preferredHeight: slider.height
-                                        Layout.preferredWidth: Kirigami.Units.gridUnit * 2.5
+                                Label {
+                                    Layout.preferredHeight: slider.height
+                                    Layout.preferredWidth: Kirigami.Units.gridUnit * 2.5
 
-                                        text: volumeLabel.text
-                                    }
+                                    text: volumeLabel.text
                                 }
                             }
                         }

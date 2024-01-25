@@ -306,7 +306,7 @@ Kirigami.ApplicationWindow {
 
         playbackStatus: playerFooter.audioPlayer.playbackState === MediaPlayer.PlayingState ? Mpris.Playing : (playerFooter.audioPlayer.playbackState == MediaPlayer.PausedState ? Mpris.Paused : Mpris.Stopped)
         shuffle: false
-        volume: playerFooter.audioPlayer.muted ? 0.0 : playerFooter.audioPlayer.volume
+        volume: playerFooter.audioOutput.muted ? 0.0 : playerFooter.audioOutput.volume
         position: playerFooter.audioPlayer.position * 1000
 
         onPauseRequested: playerFooter.audioPlayer.pause()
