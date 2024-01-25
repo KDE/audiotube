@@ -9,6 +9,7 @@ import QtQuick.Window 2.15
 
 import org.kde.kirigami 2.20 as Kirigami
 import org.kde.kirigami.delegates as KirigamiDelegates
+import org.kde.kirigamiaddons.components 1.0 as Components
 import org.kde.purpose 1.0 as Purpose
 
 import org.kde.ytmusic 1.0
@@ -88,8 +89,11 @@ Item{
         }
     }
 
-    BottomDrawer {
+    Components.BottomDrawer {
         id: inputDrawer
+
+        parent: applicationWindow().overlay
+
         drawerContentItem: ColumnLayout {
             spacing:0
             KirigamiDelegates.SubtitleDelegate {
