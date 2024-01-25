@@ -7,6 +7,7 @@ import QtQuick.Controls as Controls
 import org.kde.ytmusic 1.0
 import org.kde.kirigami 2.19 as Kirigami
 import org.kde.kirigami.delegates as KirigamiDelegates
+import org.kde.kirigamiaddons.components 1.0 as Components
 
 import QtQuick.Layouts 1.15
 
@@ -45,8 +46,12 @@ Item {
             menu.popup()
         }
     }
-    BottomDrawer {
+
+    Components.BottomDrawer {
         id: drawer
+
+        parent: applicationWindow().overlay
+
         property string videoId
         property string songTitle
         property var artists
@@ -81,25 +86,25 @@ Item {
                     elide: Text.ElideRight
                     Layout.fillWidth: true
                 }
-                Controls.Label{
+                Controls.Label {
                     text: drawer.artistsDisplayString
                     color: Kirigami.Theme.disabledTextColor
                     elide: Text.ElideRight
                     Layout.fillWidth: true
-
                 }
             }
         }
 
         drawerContentItem: ColumnLayout {
-
             ThumbnailSource {
                 id: thumbnailSource
                 videoId: drawer.videoId
             }
 
-            KirigamiDelegates.SubtitleDelegate{
+            KirigamiDelegates.SubtitleDelegate {
                 Layout.topMargin: 10
+                Layout.fillWidth: true
+
                 text: i18n("Play Next")
                 icon.name: "go-next"
                 onClicked: {
@@ -107,7 +112,9 @@ Item {
                     drawer.close()
                 }
             }
-            KirigamiDelegates.SubtitleDelegate{
+            KirigamiDelegates.SubtitleDelegate {
+                Layout.fillWidth: true
+
                 text: i18n("Add to queue")
                 icon.name: "media-playlist-append"
                 onClicked: {
@@ -115,7 +122,9 @@ Item {
                     drawer.close()
                 }
             }
-            KirigamiDelegates.SubtitleDelegate{
+            KirigamiDelegates.SubtitleDelegate {
+                Layout.fillWidth: true
+
                 readonly property QtObject favouriteWatcher: Library.favouriteWatcher(drawer.videoId)
 
                 text: favouriteWatcher ? (favouriteWatcher.isFavourite ? i18n("Remove Favourite"): i18n("Add Favourite")): ""
@@ -132,7 +141,9 @@ Item {
                 }
             }
 
-            KirigamiDelegates.SubtitleDelegate{
+            KirigamiDelegates.SubtitleDelegate {
+                Layout.fillWidth: true
+
                 readonly property QtObject wasPlayedWatcher: Library.wasPlayedWatcher(drawer.videoId)
 
                 text: i18n("Remove from History")
@@ -145,7 +156,9 @@ Item {
                 enabled: wasPlayedWatcher ? wasPlayedWatcher.wasPlayed : false
             }
 
-            KirigamiDelegates.SubtitleDelegate{
+            KirigamiDelegates.SubtitleDelegate {
+                Layout.fillWidth: true
+
                 readonly property QtObject wasPlayedWatcher: Library.wasPlayedWatcher(drawer.videoId)
 
                 text: i18n("Add to playlist")
@@ -160,7 +173,9 @@ Item {
 
             Repeater {
                 model: root.pageSpecificActions
-                delegate: KirigamiDelegates.SubtitleDelegate{
+                delegate: KirigamiDelegates.SubtitleDelegate {
+                    Layout.fillWidth: true
+
                     required property var modelData
                     text: modelData.text
                     icon: modelData.icon.name
@@ -172,7 +187,9 @@ Item {
             }
 
 
-            KirigamiDelegates.SubtitleDelegate{
+            KirigamiDelegates.SubtitleDelegate {
+                Layout.fillWidth: true
+
                 readonly property QtObject wasPlayedWatcher: Library.wasPlayedWatcher(drawer.videoId)
 
                 text: i18n("Share Song")
@@ -182,7 +199,7 @@ Item {
                     drawer.close()
                 }
             }
-            Item{
+            Item {
                 Layout.fillHeight: true
             }
 

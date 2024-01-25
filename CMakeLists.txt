@@ -44,7 +44,7 @@ find_package(KF6 REQUIRED COMPONENTS Kirigami2 I18n CoreAddons Crash WindowSyste
 find_package(pybind11 REQUIRED)
 find_package(Ytdlp REQUIRED RUNTIME)
 find_package(YTMusicAPI 1.0.2 REQUIRED RUNTIME)
-find_package(KF6KirigamiAddons 0.6.0 REQUIRED)
+find_package(KF6KirigamiAddons 0.11.0 REQUIRED)
 find_package(FutureSQL${QT_MAJOR_VERSION} REQUIRED)
 find_package(QCoro${QT_MAJOR_VERSION} 0.10.0 REQUIRED COMPONENTS Core)
 

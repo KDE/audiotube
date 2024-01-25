@@ -9,6 +9,7 @@ import QtQuick.Controls 2.15 as Controls
 
 import org.kde.kirigami 2.15 as Kirigami
 import org.kde.kirigami.delegates as KirigamiDelegates
+import org.kde.kirigamiaddons.components 1.0 as Components
 
 import org.kde.ytmusic 1.0
 
@@ -26,8 +27,11 @@ Kirigami.ScrollablePage {
         id: renamePlaylistDialog
         playlistsModel: localPlaylistsModel
     }
-    BottomDrawer{
+    Components.BottomDrawer{
         id: drawer
+
+        parent: applicationWindow().overlay
+
         property var modelData
         drawerContentItem: ColumnLayout {
             KirigamiDelegates.SubtitleDelegate{
@@ -137,8 +141,11 @@ Kirigami.ScrollablePage {
                     }
                 }
 
-                BottomDrawer {
+                Components.BottomDrawer {
                     id: favDrawer
+
+                    parent: applicationWindow().overlay
+
                     drawerContentItem: ColumnLayout {
                         KirigamiDelegates.SubtitleDelegate{
                             text: i18n("New Playlist")

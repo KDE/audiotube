@@ -10,6 +10,7 @@ import Qt5Compat.GraphicalEffects
 import QtMultimedia
 
 import org.kde.kirigami 2.19 as Kirigami
+import org.kde.kirigamiaddons.components 1.0 as Components
 import org.kde.ytmusic 1.0
 
 import "dialogs"
@@ -465,8 +466,11 @@ Item {
                                 volumeDrawer.close()
                             }
                         }
-                        BottomDrawer {
+                        Components.BottomDrawer {
                             id: volumeDrawer
+
+                            parent: applicationWindow().overlay
+
                             drawerContentItem: RowLayout {
                                 ToolButton {
                                     Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
@@ -1029,8 +1033,11 @@ Item {
             }
         }
 
-        BottomDrawer {
+        Components.BottomDrawer {
             id: queueDrawer
+
+            parent: applicationWindow().overlay
+
             onClosed:{sideDrawer.collapsed=true}
             height: applicationWindow().height-50
             interactive: true

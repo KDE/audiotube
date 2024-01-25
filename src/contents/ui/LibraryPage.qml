@@ -8,6 +8,7 @@ import QtQuick.Controls 2.12 as Controls
 import QtQuick.Layouts 1.3
 import org.kde.kirigami 2.19 as Kirigami
 import org.kde.kirigami.delegates as KirigamiDelegates
+import org.kde.kirigamiaddons.components 1.0 as Components
 
 import org.kde.ytmusic 1.0
 import "dialogs"
@@ -78,10 +79,15 @@ Kirigami.ScrollablePage {
                     }
                 }
 
-                BottomDrawer{
+                Components.BottomDrawer {
                     id: favDrawer
+
+                    parent: applicationWindow().overlay
+
                     drawerContentItem: ColumnLayout {
-                        KirigamiDelegates.SubtitleDelegate{
+                        KirigamiDelegates.SubtitleDelegate {
+                            Layout.fillWidth: true
+
                             text: i18n("Play")
                             icon.name: "media-playback-start"
                             onClicked: {
@@ -89,7 +95,9 @@ Kirigami.ScrollablePage {
                                 favDrawer.close()
                             }
                         }
-                        KirigamiDelegates.SubtitleDelegate{
+                        KirigamiDelegates.SubtitleDelegate {
+                            Layout.fillWidth: true
+
                             text: i18n("Shuffle")
                             icon.name: "shuffle"
                             onClicked: {
@@ -97,7 +105,9 @@ Kirigami.ScrollablePage {
                                 favDrawer.close()
                             }
                         }
-                        KirigamiDelegates.SubtitleDelegate{
+                        KirigamiDelegates.SubtitleDelegate {
+                            Layout.fillWidth: true
+
                             text: i18n("Append to queue")
                             icon.name: "media-playlist-append"
                             onClicked: {
@@ -105,7 +115,7 @@ Kirigami.ScrollablePage {
                                 favDrawer.close()
                             }
                         }
-                        Item{
+                        Item {
                             Layout.fillHeight: true
                         }
                     }
@@ -265,8 +275,11 @@ Kirigami.ScrollablePage {
                     }
                 }
 
-                BottomDrawer{
+                Components.BottomDrawer{
                     id: recDrawer
+
+                    parent: applicationWindow().overlay
+
                     drawerContentItem: ColumnLayout {
                         KirigamiDelegates.SubtitleDelegate{
                             text: i18n("Play")
@@ -447,8 +460,11 @@ Kirigami.ScrollablePage {
             id: renamePlaylistDialog
             playlistsModel: localPlaylistsModel
         }
-        BottomDrawer{
+        Components.BottomDrawer{
             id: playlistDrawer
+
+            parent: applicationWindow().overlay
+
             property var modelData
             drawerContentItem: ColumnLayout {
                 KirigamiDelegates.SubtitleDelegate{
