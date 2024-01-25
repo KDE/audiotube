@@ -113,8 +113,8 @@ Flickable {
         videoId: UserPlaylistModel.currentVideoId
     }
 
-    property var audioPlayer: audioLoader.item
-    property var audioOutput: audioLoader.item.audioOutput
+    property MediaPlayer audioPlayer: audioLoader.item
+    property AudioOutput audioOutput: audioLoader.item.audioOutput
 
     Loader {
         id: audioLoader

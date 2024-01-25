@@ -19,8 +19,8 @@ Item {
     required property int progressBarHeight
     required property int minimizedPlayerContentHeight
 
-    required property var info // VideoInfoExtractor object
-    required property var audio // Audio object
+    required property VideoInfoExtractor info
+    required property MediaPlayer audio
     required property string thumbnail
 
     readonly property bool isWidescreen: width >= Kirigami.Units.gridUnit * 50
@@ -36,7 +36,7 @@ Item {
         anchors.left: parent.left
         height: root.progressBarHeight
         color: Kirigami.Theme.highlightColor
-        width: parent.width * (audio.position / audio.duration)
+        width: parent.width * (audio?.position / audio?.duration)
     }
 
     states: [

@@ -66,19 +66,19 @@ Kirigami.PromptDialog {
                 LocalPlaylistModel{id:localPlaylistModel}
                 ThumbnailSource {
                     id: thumbnailSource1
-                    videoId: thumbnailIds[0]
+                    videoId: thumbnailIds[0] ?? ""
                 }
                 ThumbnailSource {
                     id: thumbnailSource2
-                    videoId: thumbnailIds[1] ?? thumbnailIds[0]
+                    videoId: thumbnailIds[1] ?? thumbnailIds[0] ?? ""
                 }
                 ThumbnailSource {
                     id: thumbnailSource3
-                    videoId: thumbnailIds[2] ?? thumbnailIds[0]
+                    videoId: thumbnailIds[2] ?? thumbnailIds[0] ?? ""
                 }
                 ThumbnailSource {
                     id: thumbnailSource4
-                    videoId: thumbnailIds[3] ?? thumbnailIds[0]
+                    videoId: thumbnailIds[3] ?? thumbnailIds[0] ?? ""
                 }
                 PlaylistCover {
                     source1: thumbnailSource1.cachedPath
