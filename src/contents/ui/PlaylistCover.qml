@@ -4,11 +4,12 @@
 
 import QtQuick 2.15
 import QtQuick.Window 2.15
-import Qt5Compat.GraphicalEffects
 import QtQuick.Controls 2.15 as Controls
 
+import org.kde.kirigami as Kirigami
+
 Item {
-    property alias radius: mask.radius
+    property int radius
     property alias source1: image1.source
     property alias source2: image2.source
     property alias source3: image3.source
@@ -16,10 +17,15 @@ Item {
     property string title
 
     id: icon
-    layer.enabled: true
-    layer.effect: OpacityMask {
-        maskSource: mask
+
+    layer {
+        enabled: true
+        effect: Kirigami.ShadowedTexture {
+            id: mask
+            radius: icon.radius
+        }
     }
+
     Rectangle{
         anchors.fill: parent
         color: Qt.rgba(Math.random(),Math.random(),Math.random(),0.4);

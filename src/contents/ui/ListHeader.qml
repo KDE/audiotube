@@ -29,7 +29,6 @@ Item {
     Item {
         anchors.fill: parent
 
-
         Image {
             scale: 1.8
             anchors.fill: parent

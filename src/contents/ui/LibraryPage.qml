@@ -203,12 +203,10 @@ Kirigami.ScrollablePage {
                     title: delegateItem.title
                     subtitle: delegateItem.artistsDisplayString
 
-                    contentItem: Image {
+                    contentItem: RoundedImage {
                         source: thumbnailSource.cachedPath
                         anchors.fill: parent
-                        fillMode: Image.PreserveAspectCrop
-                        asynchronous: true
-                        sourceSize.width: parent.implicitWidth * Screen.devicePixelRatio
+                        radius: 10
                     }
                 }
 
@@ -386,12 +384,10 @@ Kirigami.ScrollablePage {
                     title: mpdelegateItem.title
                     subtitle: mpdelegateItem.artistsDisplayString
 
-                    contentItem: Image {
+                    contentItem: RoundedImage {
                         source: mpthumbnailSource.cachedPath
                         anchors.fill: parent
-                        fillMode: Image.PreserveAspectCrop
-                        asynchronous: true
-                        sourceSize.width: parent.implicitWidth * Screen.devicePixelRatio
+                        radius: 10
                     }
                 }
 

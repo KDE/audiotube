@@ -4,7 +4,6 @@
 // SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
 import QtQuick 2.15
-import Qt5Compat.GraphicalEffects
 import QtQuick.Controls 2.15 as Controls
 import QtQuick.Layouts 1.15
 
@@ -73,25 +72,8 @@ Item {
             shadow.color: Qt.rgba(0, 0, 0, 0.2)
 
             Item {
-                id: icon
+                id: content
                 anchors.fill: parent
-
-                Item {
-                    id: content
-                    anchors.fill: parent
-
-                    layer.enabled: true
-                    layer.effect: OpacityMask {
-                        maskSource: mask
-                    }
-                }
-
-                Rectangle {
-                    id: mask
-                    anchors.fill: content
-                    visible: false
-                    radius: 10
-                }
             }
 
             Rectangle {

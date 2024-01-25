@@ -7,7 +7,6 @@ import QtQuick.Controls 2.12 as Controls
 import QtQuick.Layouts 1.3
 import org.kde.kirigami as Kirigami
 import QtMultimedia
-import Qt5Compat.GraphicalEffects
 
 import org.kde.ytmusic 1.0
 
