@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-12-22 01:38+0000\n"
+"POT-Creation-Date: 2024-01-27 02:25+0000\n"
 "PO-Revision-Date: 2023-10-30 05:19+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -27,10 +27,10 @@ msgstr ""
 "გაშვებულია ytmusicapi %1-ის დაუტესტავი ვერსიით. თუ შეცდომებს გადააწყდებით, "
 "მიწერეთ თქვენი დისტრიბუტივის მომწოდებელ კომპანიას."
 
-#: contents/ui/AlbumPage.qml:71 contents/ui/LibraryPage.qml:38
-#: contents/ui/LibraryPage.qml:64 contents/ui/LibraryPage.qml:85
-#: contents/ui/LibraryPage.qml:225 contents/ui/LibraryPage.qml:251
-#: contents/ui/LibraryPage.qml:272 contents/ui/LocalPlaylistPage.qml:71
+#: contents/ui/AlbumPage.qml:71 contents/ui/LibraryPage.qml:39
+#: contents/ui/LibraryPage.qml:65 contents/ui/LibraryPage.qml:91
+#: contents/ui/LibraryPage.qml:235 contents/ui/LibraryPage.qml:261
+#: contents/ui/LibraryPage.qml:285 contents/ui/LocalPlaylistPage.qml:71
 #: contents/ui/LocalPlaylistPage.qml:93 contents/ui/PlaybackHistory.qml:67
 #: contents/ui/PlaybackHistory.qml:89 contents/ui/PlaylistPage.qml:66
 #: contents/ui/PlaylistPage.qml:87
@@ -39,9 +39,9 @@ msgid "Play"
 msgstr "დაკვრა"
 
 #: contents/ui/AlbumPage.qml:78 contents/ui/ArtistPage.qml:83
-#: contents/ui/LibraryPage.qml:45 contents/ui/LibraryPage.qml:70
-#: contents/ui/LibraryPage.qml:93 contents/ui/LibraryPage.qml:232
-#: contents/ui/LibraryPage.qml:257 contents/ui/LibraryPage.qml:281
+#: contents/ui/LibraryPage.qml:46 contents/ui/LibraryPage.qml:71
+#: contents/ui/LibraryPage.qml:101 contents/ui/LibraryPage.qml:242
+#: contents/ui/LibraryPage.qml:267 contents/ui/LibraryPage.qml:294
 #: contents/ui/LocalPlaylistPage.qml:66 contents/ui/LocalPlaylistPage.qml:100
 #: contents/ui/PlaybackHistory.qml:55 contents/ui/PlaybackHistory.qml:102
 #: contents/ui/PlaylistPage.qml:59 contents/ui/PlaylistPage.qml:94
@@ -49,9 +49,9 @@ msgstr "დაკვრა"
 msgid "Shuffle"
 msgstr "შემთხვევით"
 
-#: contents/ui/AlbumPage.qml:86 contents/ui/LibraryPage.qml:75
-#: contents/ui/LibraryPage.qml:101 contents/ui/LibraryPage.qml:262
-#: contents/ui/LibraryPage.qml:289 contents/ui/LocalPlaylistPage.qml:106
+#: contents/ui/AlbumPage.qml:86 contents/ui/LibraryPage.qml:76
+#: contents/ui/LibraryPage.qml:111 contents/ui/LibraryPage.qml:272
+#: contents/ui/LibraryPage.qml:302 contents/ui/LocalPlaylistPage.qml:106
 #: contents/ui/PlaybackHistory.qml:114 contents/ui/PlaylistPage.qml:102
 #, kde-format
 msgid "Append to queue"
@@ -162,9 +162,9 @@ msgid "Add Song to Playlist"
 msgstr "სიმღერის დასაკრავ სიაში ჩამატება"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:29
-#: contents/ui/LocalPlaylistsPage.qml:103
-#: contents/ui/LocalPlaylistsPage.qml:129
-#: contents/ui/LocalPlaylistsPage.qml:144
+#: contents/ui/LocalPlaylistsPage.qml:107
+#: contents/ui/LocalPlaylistsPage.qml:133
+#: contents/ui/LocalPlaylistsPage.qml:151
 #, kde-format
 msgid "New Playlist"
 msgstr "ახალი დასაკრავი სია"
@@ -174,61 +174,61 @@ msgstr "ახალი დასაკრავი სია"
 msgid "Rename playlist"
 msgstr "დასაკრავი სიის სახელის გადარქმევა"
 
-#: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:125
+#: contents/ui/LibraryPage.qml:32 contents/ui/LibraryPage.qml:135
 #: contents/ui/NavigationBar.qml:47 contents/ui/NavigationBar.qml:53
 #: contents/ui/Sidebar.qml:138 contents/ui/Sidebar.qml:143
 #, kde-format
 msgid "Favourites"
 msgstr "რჩეულები"
 
-#: contents/ui/LibraryPage.qml:120 contents/ui/LibraryPage.qml:309
-#: contents/ui/LibraryPage.qml:408
+#: contents/ui/LibraryPage.qml:130 contents/ui/LibraryPage.qml:322
+#: contents/ui/LibraryPage.qml:421
 #, kde-format
 msgid "Show All"
 msgstr "ყველას ჩვენება"
 
-#: contents/ui/LibraryPage.qml:150
+#: contents/ui/LibraryPage.qml:160
 #, kde-format
 msgid "No Favourites Yet"
 msgstr "რჩეულების გარეშე"
 
-#: contents/ui/LibraryPage.qml:218
+#: contents/ui/LibraryPage.qml:228
 #, kde-format
 msgid "Most played"
 msgstr "ხშირად დაკრულები"
 
-#: contents/ui/LibraryPage.qml:314 contents/ui/NavigationBar.qml:60
+#: contents/ui/LibraryPage.qml:327 contents/ui/NavigationBar.qml:60
 #: contents/ui/NavigationBar.qml:66 contents/ui/Sidebar.qml:159
 #: contents/ui/Sidebar.qml:164
 #, kde-format
 msgid "Played Songs"
 msgstr "დაკრული სიმღერები"
 
-#: contents/ui/LibraryPage.qml:339
+#: contents/ui/LibraryPage.qml:352
 #, kde-format
 msgid "No Songs Played Yet"
 msgstr "სიმღერები ჯერ არ დაგიკრავთ"
 
-#: contents/ui/LibraryPage.qml:396 contents/ui/LocalPlaylistsPage.qml:19
-#: contents/ui/LocalPlaylistsPage.qml:80 contents/ui/NavigationBar.qml:74
+#: contents/ui/LibraryPage.qml:409 contents/ui/LocalPlaylistsPage.qml:20
+#: contents/ui/LocalPlaylistsPage.qml:84 contents/ui/NavigationBar.qml:74
 #: contents/ui/SearchPage.qml:32 contents/ui/Sidebar.qml:179
 #, kde-format
 msgid "Playlists"
 msgstr "დასაკრავი სიები"
 
-#: contents/ui/LibraryPage.qml:435
+#: contents/ui/LibraryPage.qml:448
 #, kde-format
 msgid "No Playlists Yet"
 msgstr "დასაკრავი სიების გარეშე"
 
-#: contents/ui/LibraryPage.qml:455 contents/ui/LibraryPage.qml:477
-#: contents/ui/LocalPlaylistsPage.qml:34 contents/ui/LocalPlaylistsPage.qml:56
+#: contents/ui/LibraryPage.qml:471 contents/ui/LibraryPage.qml:493
+#: contents/ui/LocalPlaylistsPage.qml:38 contents/ui/LocalPlaylistsPage.qml:60
 #, kde-format
 msgid "Rename"
 msgstr "გადარქმევა"
 
-#: contents/ui/LibraryPage.qml:464 contents/ui/LibraryPage.qml:485
-#: contents/ui/LocalPlaylistsPage.qml:43 contents/ui/LocalPlaylistsPage.qml:64
+#: contents/ui/LibraryPage.qml:480 contents/ui/LibraryPage.qml:501
+#: contents/ui/LocalPlaylistsPage.qml:47 contents/ui/LocalPlaylistsPage.qml:68
 #, kde-format
 msgid "Delete"
 msgstr "წაშლა"
@@ -243,9 +243,9 @@ msgstr "დასაკრავი სიიდან წაშლა"
 msgid "This playlist is still empty"
 msgstr "ეს დასაკრავი სია ჯერ კიდევ ცარიელია"
 
-#: contents/ui/LocalPlaylistsPage.qml:111
-#: contents/ui/LocalPlaylistsPage.qml:134
-#: contents/ui/LocalPlaylistsPage.qml:149 contents/ui/PlaylistPage.qml:107
+#: contents/ui/LocalPlaylistsPage.qml:115
+#: contents/ui/LocalPlaylistsPage.qml:138
+#: contents/ui/LocalPlaylistsPage.qml:156 contents/ui/PlaylistPage.qml:107
 #, kde-format
 msgid "Import Playlist"
 msgstr "დასაკრავი სიის შემოტანა"
@@ -260,95 +260,95 @@ msgstr "AudioTube"
 msgid "No song playing"
 msgstr "არაფერს ვუკრავ"
 
-#: contents/ui/MaximizedPlayerPage.qml:99
+#: contents/ui/MaximizedPlayerPage.qml:100
 #, kde-format
 msgid "Close Maximized Player"
 msgstr "მთელ ეკრანზე გაშლილი დამკვრელის დახურვა"
 
-#: contents/ui/MaximizedPlayerPage.qml:205
+#: contents/ui/MaximizedPlayerPage.qml:206
 #: contents/ui/MinimizedPlayerControls.qml:113
 #, kde-format
 msgid "No media playing"
 msgstr "არაფერს ვუკრავ"
 
-#: contents/ui/MaximizedPlayerPage.qml:428
+#: contents/ui/MaximizedPlayerPage.qml:429
 #, kde-format
 msgid "Remove from Favourites"
 msgstr "რჩეულებიდან წაშლა"
 
-#: contents/ui/MaximizedPlayerPage.qml:428
+#: contents/ui/MaximizedPlayerPage.qml:429
 #, kde-format
 msgid "Add to Favourites"
 msgstr "რჩეულებში ჩამატება"
 
-#: contents/ui/MaximizedPlayerPage.qml:453
+#: contents/ui/MaximizedPlayerPage.qml:454
 #, kde-format
 msgid "Open Volume Drawer"
 msgstr "ხმის დახატვის გახსნა"
 
-#: contents/ui/MaximizedPlayerPage.qml:561
+#: contents/ui/MaximizedPlayerPage.qml:563
 #, kde-format
 msgid "Unmute Audio"
 msgstr "ხმის ჩართვა"
 
-#: contents/ui/MaximizedPlayerPage.qml:561
+#: contents/ui/MaximizedPlayerPage.qml:563
 #, kde-format
 msgid "Mute Audio"
 msgstr "ხმის დადუმება"
 
-#: contents/ui/MaximizedPlayerPage.qml:600
+#: contents/ui/MaximizedPlayerPage.qml:602
 #, kde-format
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/ui/MaximizedPlayerPage.qml:631
+#: contents/ui/MaximizedPlayerPage.qml:632
 #, kde-format
 msgid "Hide Lyrics"
 msgstr "ლირიკის დამალვა"
 
-#: contents/ui/MaximizedPlayerPage.qml:631
+#: contents/ui/MaximizedPlayerPage.qml:632
 #, kde-format
 msgid "Show Lyrics"
 msgstr "ლირიკის ჩვენება"
 
-#: contents/ui/MaximizedPlayerPage.qml:651 contents/ui/SongMenu.qml:178
-#: contents/ui/SongMenu.qml:264
+#: contents/ui/MaximizedPlayerPage.qml:652 contents/ui/SongMenu.qml:195
+#: contents/ui/SongMenu.qml:281
 #, kde-format
 msgid "Share Song"
 msgstr "სიმღერის გაზიარება"
 
-#: contents/ui/MaximizedPlayerPage.qml:692
+#: contents/ui/MaximizedPlayerPage.qml:693
 #, kde-format
 msgid "Add to a local playlist"
 msgstr "ლოკალურ დასაკრავ სიაში ჩამატება"
 
-#: contents/ui/MaximizedPlayerPage.qml:729
+#: contents/ui/MaximizedPlayerPage.qml:730
 #, kde-format
 msgid "Hide Queue"
 msgstr "რიგის დამალვა"
 
-#: contents/ui/MaximizedPlayerPage.qml:729
+#: contents/ui/MaximizedPlayerPage.qml:730
 #, kde-format
 msgid "Show Queue"
 msgstr "რიგის ჩვენება"
 
-#: contents/ui/MaximizedPlayerPage.qml:952
-#: contents/ui/MaximizedPlayerPage.qml:1189
+#: contents/ui/MaximizedPlayerPage.qml:953
+#: contents/ui/MaximizedPlayerPage.qml:1193
 #, kde-format
 msgid "Remove Track"
 msgstr "აუდიობილიკის წაშლა"
 
-#: contents/ui/MaximizedPlayerPage.qml:987
+#: contents/ui/MaximizedPlayerPage.qml:988
 #, kde-format
 msgid "Clear Queue"
 msgstr "რიგის გასუფთავება"
 
-#: contents/ui/MaximizedPlayerPage.qml:1012
+#: contents/ui/MaximizedPlayerPage.qml:1013
 #, kde-format
 msgid "Shuffle Queue"
 msgstr "შემთხვევით"
 
-#: contents/ui/MaximizedPlayerPage.qml:1042
+#: contents/ui/MaximizedPlayerPage.qml:1046
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "მომავალი სიმღერები"
@@ -413,17 +413,17 @@ msgstr "უცნობი"
 msgid "No matching previous searches"
 msgstr "წინა ძებნებს არ ემთხვევა"
 
-#: contents/ui/ShareMenu.qml:40
+#: contents/ui/ShareMenu.qml:41
 #, kde-format
 msgid "Share to"
 msgstr "გაზიარება"
 
-#: contents/ui/ShareMenu.qml:48 contents/ui/ShareMenu.qml:98
+#: contents/ui/ShareMenu.qml:49 contents/ui/ShareMenu.qml:102
 #, kde-format
 msgid "Copy Link"
 msgstr "ბმულის კოპირება"
 
-#: contents/ui/ShareMenu.qml:53 contents/ui/ShareMenu.qml:103
+#: contents/ui/ShareMenu.qml:54 contents/ui/ShareMenu.qml:107
 #, kde-format
 msgid "Link copied to clipboard"
 msgstr "ბმული დაკოპირებულია"
@@ -438,32 +438,32 @@ msgstr "შესახებ"
 msgid "Collapse Sidebar"
 msgstr "გვერდითი ზოლის ჩაკეცვა"
 
-#: contents/ui/SongMenu.qml:103 contents/ui/SongMenu.qml:200
+#: contents/ui/SongMenu.qml:108 contents/ui/SongMenu.qml:217
 #, kde-format
 msgid "Play Next"
 msgstr "შემდეგის დაკვრა"
 
-#: contents/ui/SongMenu.qml:111 contents/ui/SongMenu.qml:206
+#: contents/ui/SongMenu.qml:118 contents/ui/SongMenu.qml:223
 #, kde-format
 msgid "Add to queue"
 msgstr "რიგში ჩამატება"
 
-#: contents/ui/SongMenu.qml:121 contents/ui/SongMenu.qml:216
+#: contents/ui/SongMenu.qml:130 contents/ui/SongMenu.qml:233
 #, kde-format
 msgid "Remove Favourite"
 msgstr "რჩეულის წაშლა"
 
-#: contents/ui/SongMenu.qml:121 contents/ui/SongMenu.qml:216
+#: contents/ui/SongMenu.qml:130 contents/ui/SongMenu.qml:233
 #, kde-format
 msgid "Add Favourite"
 msgstr "რჩეულის დამატება"
 
-#: contents/ui/SongMenu.qml:138 contents/ui/SongMenu.qml:230
+#: contents/ui/SongMenu.qml:149 contents/ui/SongMenu.qml:247
 #, kde-format
 msgid "Remove from History"
 msgstr "ისტორიიდან წაშლა"
 
-#: contents/ui/SongMenu.qml:151 contents/ui/SongMenu.qml:239
+#: contents/ui/SongMenu.qml:164 contents/ui/SongMenu.qml:256
 #, kde-format
 msgid "Add to playlist"
 msgstr "დასაკრავ სიაში დამატება"
