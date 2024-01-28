@@ -6,10 +6,10 @@
 
 import QtQuick 2.7
 import QtQuick.Layouts 1.3
+import QtQuick.Effects
 import QtQuick.Controls 2.12 as Controls
 
 import QtMultimedia
-import Qt5Compat.GraphicalEffects
 
 import org.kde.kirigami 2.12 as Kirigami
 import org.kde.ytmusic 1.0
@@ -174,18 +174,14 @@ Flickable {
                 }
 
                 layer.enabled: true
-                layer.effect: HueSaturation {
-                    cached: true
+                layer.effect: MultiEffect {
+                    brightness: -0.7
+                    saturation: 1
 
-                    lightness: -0.7
-                    saturation: 3
-
-                    layer.enabled: true
-                    layer.effect: FastBlur {
-                        cached: true
-                        radius: 64
-                        transparentBorder: false
-                    }
+                    blur: 1.0
+                    blurMultiplier: 3.0
+                    blurEnabled: true
+                    autoPaddingEnabled: false
                 }
             }
 

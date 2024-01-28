@@ -3,10 +3,10 @@
 // SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
 import QtQuick 2.15
+import QtQuick.Effects
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 
-import Qt5Compat.GraphicalEffects
 import QtMultimedia
 
 import org.kde.kirigami 2.19 as Kirigami
@@ -29,10 +29,10 @@ Item {
 
     // background image
 
-
     Item {
-        id:bg
+        id: bg
         anchors.fill: parent
+        clip: true
 
         Rectangle {
             anchors.fill: parent
@@ -50,20 +50,19 @@ Item {
             sourceSize.width: 512
             sourceSize.height: 512
         }
+    }
+    MultiEffect {
+        source: bg
+        anchors.fill: bg
 
-        layer.enabled: true
-        layer.effect: HueSaturation {
-            cached: true
+        brightness: -0.25
+        saturation: 0.5
 
-            lightness: -0.5
-            saturation: 1.9
-
-            layer.enabled: true
-            layer.effect: FastBlur {
-                cached: true
-                radius: 100
-            }
-        }
+        blurEnabled: true
+        autoPaddingEnabled: false
+        blur: 1.0
+        blurMax: 40
+        blurMultiplier: 3.0
     }
 
     Rectangle {
@@ -903,8 +902,9 @@ Item {
                                         Rectangle {
                                             anchors.fill: handle
                                             layer.enabled: true
-                                            layer.effect: OpacityMask {
+                                            layer.effect: MultiEffect {
                                                 maskSource: handle
+                                                maskEnabled: true
                                             }
                                         }
                                     }
@@ -1150,8 +1150,9 @@ Item {
                                     Rectangle {
                                         anchors.fill: drawerHandle
                                         layer.enabled: true
-                                        layer.effect: OpacityMask {
+                                        layer.effect: MultiEffect {
                                             maskSource: drawerHandle
+                                            maskEnabled: true
                                         }
                                     }
                                 }

@@ -3,6 +3,7 @@
 // SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
 import QtQuick 2.15
+import QtQuick.Effects
 
 import org.kde.kirigami 2.14 as Kirigami
 import org.kde.kirigami.delegates as KirigamiDelegates
@@ -10,7 +11,6 @@ import org.kde.kirigamiaddons.components 1.0 as Components
 
 import QtQuick.Controls 2.14 as Controls
 import QtQuick.Layouts 1.3
-import Qt5Compat.GraphicalEffects
 
 import org.kde.ytmusic 1.0
 
@@ -42,16 +42,15 @@ Item {
         }
 
         layer.enabled: true
-        layer.effect: HueSaturation {
-            cached: true
+        layer.effect: MultiEffect {
+            brightness: -0.25
+            saturation: 0.5
 
-            saturation: 1.9
-
-            layer.enabled: true
-            layer.effect: FastBlur {
-                cached: true
-                radius: 100
-            }
+            blurEnabled: true
+            autoPaddingEnabled: false
+            blur: 1.0
+            blurMax: 40
+            blurMultiplier: 3.0
         }
     }
     Rectangle {
