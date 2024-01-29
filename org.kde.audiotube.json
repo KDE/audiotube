@@ -94,7 +94,8 @@
             "name": "org.kde.audiotube",
             "config-opts": [
                 "-DPYBIND11_FINDPYTHON=ON",
-                "-DQT_MAJOR_VERSION=6"
+                "-DQT_MAJOR_VERSION=6",
+                "-DCMAKE_BUILD_TYPE=Release"
             ],
             "buildsystem": "cmake-ninja",
             "builddir": true,
