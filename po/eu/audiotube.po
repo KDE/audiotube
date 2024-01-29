@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-26 00:37+0000\n"
+"POT-Creation-Date: 2024-01-29 00:37+0000\n"
 "PO-Revision-Date: 2023-10-29 23:13+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -76,7 +76,7 @@ msgstr "Partekatu"
 msgid "Album • %1"
 msgstr "Albuma • %1"
 
-#: contents/ui/AlbumPage.qml:160 contents/ui/ArtistPage.qml:199
+#: contents/ui/AlbumPage.qml:160 contents/ui/ArtistPage.qml:201
 #: contents/ui/LocalPlaylistPage.qml:171 contents/ui/PlaybackHistory.qml:195
 #: contents/ui/PlaylistPage.qml:189 contents/ui/SearchPage.qml:148
 #, kde-format
@@ -263,80 +263,80 @@ msgstr "AudioTube"
 msgid "No song playing"
 msgstr "Ez da abestirik jotzen ari"
 
-#: contents/ui/MaximizedPlayerPage.qml:100
+#: contents/ui/MaximizedPlayerPage.qml:99
 #, kde-format
 msgid "Close Maximized Player"
 msgstr "Itxi maximizatutako jotzailea"
 
-#: contents/ui/MaximizedPlayerPage.qml:207
-#: contents/ui/MinimizedPlayerControls.qml:113
+#: contents/ui/MaximizedPlayerPage.qml:206
+#: contents/ui/MinimizedPlayerControls.qml:112
 #, kde-format
 msgid "No media playing"
 msgstr "Ez da euskarririk jotzen ari"
 
-#: contents/ui/MaximizedPlayerPage.qml:430
+#: contents/ui/MaximizedPlayerPage.qml:429
 #, kde-format
 msgid "Remove from Favourites"
 msgstr "Kendu gogokoetatik"
 
-#: contents/ui/MaximizedPlayerPage.qml:430
+#: contents/ui/MaximizedPlayerPage.qml:429
 #, kde-format
 msgid "Add to Favourites"
 msgstr "Gehitu gogokoetara"
 
-#: contents/ui/MaximizedPlayerPage.qml:455
+#: contents/ui/MaximizedPlayerPage.qml:454
 #, kde-format
 msgid "Open Volume Drawer"
 msgstr "Ireki bolumenaren tiradera"
 
-#: contents/ui/MaximizedPlayerPage.qml:564
+#: contents/ui/MaximizedPlayerPage.qml:563
 #, kde-format
 msgid "Unmute Audio"
 msgstr "Ozendu audioa"
 
-#: contents/ui/MaximizedPlayerPage.qml:564
+#: contents/ui/MaximizedPlayerPage.qml:563
 #, kde-format
 msgid "Mute Audio"
 msgstr "Isilarazi audioa"
 
-#: contents/ui/MaximizedPlayerPage.qml:603
+#: contents/ui/MaximizedPlayerPage.qml:602
 #, kde-format
 msgid "%1%"
 msgstr "%%1"
 
-#: contents/ui/MaximizedPlayerPage.qml:633
+#: contents/ui/MaximizedPlayerPage.qml:632
 #, kde-format
 msgid "Hide Lyrics"
 msgstr "Ezkutatu hitzak"
 
-#: contents/ui/MaximizedPlayerPage.qml:633
+#: contents/ui/MaximizedPlayerPage.qml:632
 #, kde-format
 msgid "Show Lyrics"
 msgstr "Erakutsi hitzak"
 
-#: contents/ui/MaximizedPlayerPage.qml:653 contents/ui/SongMenu.qml:195
+#: contents/ui/MaximizedPlayerPage.qml:652 contents/ui/SongMenu.qml:195
 #: contents/ui/SongMenu.qml:281
 #, kde-format
 msgid "Share Song"
 msgstr "Partekatu abestia"
 
-#: contents/ui/MaximizedPlayerPage.qml:694
+#: contents/ui/MaximizedPlayerPage.qml:693
 #, kde-format
 msgid "Add to a local playlist"
 msgstr "Gehitu bertako jotze-zerrenda batera."
 
-#: contents/ui/MaximizedPlayerPage.qml:731
+#: contents/ui/MaximizedPlayerPage.qml:730
 #, kde-format
 msgid "Hide Queue"
 msgstr "Ezkutatu ilara"
 
-#: contents/ui/MaximizedPlayerPage.qml:731
+#: contents/ui/MaximizedPlayerPage.qml:730
 #, kde-format
 msgid "Show Queue"
 msgstr "Erakutsi ilara"
 
 #: contents/ui/MaximizedPlayerPage.qml:954
-#: contents/ui/MaximizedPlayerPage.qml:1197
+#: contents/ui/MaximizedPlayerPage.qml:1198
 #, kde-format
 msgid "Remove Track"
 msgstr "Kendu pista"
@@ -386,7 +386,7 @@ msgstr "Jotze-zerrenda ondo inportatu da"
 msgid "Playlist"
 msgstr "Jotze-zerrenda"
 
-#: contents/ui/SearchHistoryPage.qml:82 contents/ui/SearchWithDropdown.qml:394
+#: contents/ui/SearchHistoryPage.qml:82 contents/ui/SearchWithDropdown.qml:393
 #, kde-format
 msgid "remove from search history"
 msgstr "Kendu bilaketa-historiatik"
@@ -411,7 +411,7 @@ msgstr "Emaitza nagusiak"
 msgid "Unknown"
 msgstr "Ezezaguna"
 
-#: contents/ui/SearchWithDropdown.qml:340
+#: contents/ui/SearchWithDropdown.qml:339
 #, kde-format
 msgid "No matching previous searches"
 msgstr "Ez dago bat datorren aurreko bilaketarik"

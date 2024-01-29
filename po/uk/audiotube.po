@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-26 00:37+0000\n"
+"POT-Creation-Date: 2024-01-29 00:37+0000\n"
 "PO-Revision-Date: 2023-10-29 08:31+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -74,7 +74,7 @@ msgstr "Оприлюднити"
 msgid "Album • %1"
 msgstr "Альбом • %1"
 
-#: contents/ui/AlbumPage.qml:160 contents/ui/ArtistPage.qml:199
+#: contents/ui/AlbumPage.qml:160 contents/ui/ArtistPage.qml:201
 #: contents/ui/LocalPlaylistPage.qml:171 contents/ui/PlaybackHistory.qml:195
 #: contents/ui/PlaylistPage.qml:189 contents/ui/SearchPage.qml:148
 #, kde-format
@@ -261,80 +261,80 @@ msgstr "AudioTube"
 msgid "No song playing"
 msgstr "Відтворення не відбувається"
 
-#: contents/ui/MaximizedPlayerPage.qml:100
+#: contents/ui/MaximizedPlayerPage.qml:99
 #, kde-format
 msgid "Close Maximized Player"
 msgstr "Закрити максимізований програвач"
 
-#: contents/ui/MaximizedPlayerPage.qml:207
-#: contents/ui/MinimizedPlayerControls.qml:113
+#: contents/ui/MaximizedPlayerPage.qml:206
+#: contents/ui/MinimizedPlayerControls.qml:112
 #, kde-format
 msgid "No media playing"
 msgstr "Відтворення не відбувається"
 
-#: contents/ui/MaximizedPlayerPage.qml:430
+#: contents/ui/MaximizedPlayerPage.qml:429
 #, kde-format
 msgid "Remove from Favourites"
 msgstr "Вилучити з улюблених"
 
-#: contents/ui/MaximizedPlayerPage.qml:430
+#: contents/ui/MaximizedPlayerPage.qml:429
 #, kde-format
 msgid "Add to Favourites"
 msgstr "Додати до улюбленого"
 
-#: contents/ui/MaximizedPlayerPage.qml:455
+#: contents/ui/MaximizedPlayerPage.qml:454
 #, kde-format
 msgid "Open Volume Drawer"
 msgstr "Відкрити висувну панель гучності"
 
-#: contents/ui/MaximizedPlayerPage.qml:564
+#: contents/ui/MaximizedPlayerPage.qml:563
 #, kde-format
 msgid "Unmute Audio"
 msgstr "Увімкнути звук"
 
-#: contents/ui/MaximizedPlayerPage.qml:564
+#: contents/ui/MaximizedPlayerPage.qml:563
 #, kde-format
 msgid "Mute Audio"
 msgstr "Вимкнути звук"
 
-#: contents/ui/MaximizedPlayerPage.qml:603
+#: contents/ui/MaximizedPlayerPage.qml:602
 #, kde-format
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/ui/MaximizedPlayerPage.qml:633
+#: contents/ui/MaximizedPlayerPage.qml:632
 #, kde-format
 msgid "Hide Lyrics"
 msgstr "Приховати текст"
 
-#: contents/ui/MaximizedPlayerPage.qml:633
+#: contents/ui/MaximizedPlayerPage.qml:632
 #, kde-format
 msgid "Show Lyrics"
 msgstr "Показати текст"
 
-#: contents/ui/MaximizedPlayerPage.qml:653 contents/ui/SongMenu.qml:195
+#: contents/ui/MaximizedPlayerPage.qml:652 contents/ui/SongMenu.qml:195
 #: contents/ui/SongMenu.qml:281
 #, kde-format
 msgid "Share Song"
 msgstr "Оприлюднити композицію"
 
-#: contents/ui/MaximizedPlayerPage.qml:694
+#: contents/ui/MaximizedPlayerPage.qml:693
 #, kde-format
 msgid "Add to a local playlist"
 msgstr "Додати до локального списку відтворення"
 
-#: contents/ui/MaximizedPlayerPage.qml:731
+#: contents/ui/MaximizedPlayerPage.qml:730
 #, kde-format
 msgid "Hide Queue"
 msgstr "Приховати чергу"
 
-#: contents/ui/MaximizedPlayerPage.qml:731
+#: contents/ui/MaximizedPlayerPage.qml:730
 #, kde-format
 msgid "Show Queue"
 msgstr "Показати чергу"
 
 #: contents/ui/MaximizedPlayerPage.qml:954
-#: contents/ui/MaximizedPlayerPage.qml:1197
+#: contents/ui/MaximizedPlayerPage.qml:1198
 #, kde-format
 msgid "Remove Track"
 msgstr "Вилучити композицію"
@@ -384,7 +384,7 @@ msgstr "Список відтворення успішно імпортован�
 msgid "Playlist"
 msgstr "Список відтворення"
 
-#: contents/ui/SearchHistoryPage.qml:82 contents/ui/SearchWithDropdown.qml:394
+#: contents/ui/SearchHistoryPage.qml:82 contents/ui/SearchWithDropdown.qml:393
 #, kde-format
 msgid "remove from search history"
 msgstr "вилучити з журналу пошуку"
@@ -409,7 +409,7 @@ msgstr "Найкращі результати"
 msgid "Unknown"
 msgstr "Невідомий"
 
-#: contents/ui/SearchWithDropdown.qml:340
+#: contents/ui/SearchWithDropdown.qml:339
 #, kde-format
 msgid "No matching previous searches"
 msgstr "Немає відповідних попередніх пошуків"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-26 00:37+0000\n"
+"POT-Creation-Date: 2024-01-29 00:37+0000\n"
 "PO-Revision-Date: 2023-11-13 14:53+0100\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -73,7 +73,7 @@ msgstr "Comparti"
 msgid "Album • %1"
 msgstr "Album • %1"
 
-#: contents/ui/AlbumPage.qml:160 contents/ui/ArtistPage.qml:199
+#: contents/ui/AlbumPage.qml:160 contents/ui/ArtistPage.qml:201
 #: contents/ui/LocalPlaylistPage.qml:171 contents/ui/PlaybackHistory.qml:195
 #: contents/ui/PlaylistPage.qml:189 contents/ui/SearchPage.qml:148
 #, kde-format
@@ -260,80 +260,80 @@ msgstr "AudioTube"
 msgid "No song playing"
 msgstr "Nulle canto reproducente"
 
-#: contents/ui/MaximizedPlayerPage.qml:100
+#: contents/ui/MaximizedPlayerPage.qml:99
 #, kde-format
 msgid "Close Maximized Player"
 msgstr "Claude reproductor de sono (player) maximizate"
 
-#: contents/ui/MaximizedPlayerPage.qml:207
-#: contents/ui/MinimizedPlayerControls.qml:113
+#: contents/ui/MaximizedPlayerPage.qml:206
+#: contents/ui/MinimizedPlayerControls.qml:112
 #, kde-format
 msgid "No media playing"
 msgstr "Necun media reproducente"
 
-#: contents/ui/MaximizedPlayerPage.qml:430
+#: contents/ui/MaximizedPlayerPage.qml:429
 #, kde-format
 msgid "Remove from Favourites"
 msgstr "Remove ex favoritos"
 
-#: contents/ui/MaximizedPlayerPage.qml:430
+#: contents/ui/MaximizedPlayerPage.qml:429
 #, kde-format
 msgid "Add to Favourites"
 msgstr "Adde a favoritos"
 
-#: contents/ui/MaximizedPlayerPage.qml:455
+#: contents/ui/MaximizedPlayerPage.qml:454
 #, kde-format
 msgid "Open Volume Drawer"
 msgstr "Aperi designator de volumine"
 
-#: contents/ui/MaximizedPlayerPage.qml:564
+#: contents/ui/MaximizedPlayerPage.qml:563
 #, kde-format
 msgid "Unmute Audio"
 msgstr "Audio Non silente"
 
-#: contents/ui/MaximizedPlayerPage.qml:564
+#: contents/ui/MaximizedPlayerPage.qml:563
 #, kde-format
 msgid "Mute Audio"
 msgstr "Audio Silente"
 
-#: contents/ui/MaximizedPlayerPage.qml:603
+#: contents/ui/MaximizedPlayerPage.qml:602
 #, kde-format
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/ui/MaximizedPlayerPage.qml:633
+#: contents/ui/MaximizedPlayerPage.qml:632
 #, kde-format
 msgid "Hide Lyrics"
 msgstr "Cela parolas de canto"
 
-#: contents/ui/MaximizedPlayerPage.qml:633
+#: contents/ui/MaximizedPlayerPage.qml:632
 #, kde-format
 msgid "Show Lyrics"
 msgstr "Monstra parolas"
 
-#: contents/ui/MaximizedPlayerPage.qml:653 contents/ui/SongMenu.qml:195
+#: contents/ui/MaximizedPlayerPage.qml:652 contents/ui/SongMenu.qml:195
 #: contents/ui/SongMenu.qml:281
 #, kde-format
 msgid "Share Song"
 msgstr "Comparti canto"
 
-#: contents/ui/MaximizedPlayerPage.qml:694
+#: contents/ui/MaximizedPlayerPage.qml:693
 #, kde-format
 msgid "Add to a local playlist"
 msgstr "Adde a un lista de reproduction local"
 
-#: contents/ui/MaximizedPlayerPage.qml:731
+#: contents/ui/MaximizedPlayerPage.qml:730
 #, kde-format
 msgid "Hide Queue"
 msgstr "Cela cauda"
 
-#: contents/ui/MaximizedPlayerPage.qml:731
+#: contents/ui/MaximizedPlayerPage.qml:730
 #, kde-format
 msgid "Show Queue"
 msgstr "Monstra cauda"
 
 #: contents/ui/MaximizedPlayerPage.qml:954
-#: contents/ui/MaximizedPlayerPage.qml:1197
+#: contents/ui/MaximizedPlayerPage.qml:1198
 #, kde-format
 msgid "Remove Track"
 msgstr "Remove tracia"
@@ -383,7 +383,7 @@ msgstr "Lista de reproduction importate con successo"
 msgid "Playlist"
 msgstr "Lista de reproduction"
 
-#: contents/ui/SearchHistoryPage.qml:82 contents/ui/SearchWithDropdown.qml:394
+#: contents/ui/SearchHistoryPage.qml:82 contents/ui/SearchWithDropdown.qml:393
 #, kde-format
 msgid "remove from search history"
 msgstr "remove ex chronologia de cerca"
@@ -408,7 +408,7 @@ msgstr "Exitos al culmine (Top)"
 msgid "Unknown"
 msgstr "Incognite"
 
-#: contents/ui/SearchWithDropdown.qml:340
+#: contents/ui/SearchWithDropdown.qml:339
 #, kde-format
 msgid "No matching previous searches"
 msgstr "Nulle previes cerca correspondente"
