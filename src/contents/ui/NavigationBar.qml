@@ -13,9 +13,9 @@ Kirigami.NavigationTabBar {
     id: root
     anchors.bottom: parent.bottom
     width:parent.width
-    backgroundColor: "transparent"
-    foregroundColor: "white"
-    highlightForegroundColor: "white"
+    Kirigami.Theme.backgroundColor: "transparent"
+    Kirigami.Theme.textColor: "white"
+    Kirigami.Theme.highlightedTextColor: "white"
 
     actions: [
         Kirigami.Action {
