@@ -51,8 +51,8 @@ target_link_libraries(audiotube
     KF6::CoreAddons
     KF6::Crash
     KF6::WindowSystem
-    FutureSQL${QT_MAJOR_VERSION}::FutureSQL
-    QCoro${QT_MAJOR_VERSION}::Core
+    FutureSQL6::FutureSQL
+    QCoro6::Core
     qtmprisdeclarative
     ytm
 )

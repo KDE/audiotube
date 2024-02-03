@@ -39,14 +39,14 @@ ecm_setup_version(${PROJECT_VERSION}
 
 kde_enable_exceptions()
 
-find_package(Qt${QT_MAJOR_VERSION} ${QT_MIN_VERSION} REQUIRED COMPONENTS Core Gui Qml QuickControls2 Svg Sql Widgets Multimedia Concurrent DBus)
+find_package(Qt6 ${QT_MIN_VERSION} REQUIRED COMPONENTS Core Gui Qml QuickControls2 Svg Sql Widgets Multimedia Concurrent DBus)
 find_package(KF6 REQUIRED COMPONENTS Kirigami2 I18n CoreAddons Crash WindowSystem)
 find_package(pybind11 REQUIRED)
 find_package(Ytdlp REQUIRED RUNTIME)
 find_package(YTMusicAPI 1.0.2 REQUIRED RUNTIME)
 find_package(KF6KirigamiAddons 0.11.0 REQUIRED)
-find_package(FutureSQL${QT_MAJOR_VERSION} REQUIRED)
-find_package(QCoro${QT_MAJOR_VERSION} 0.10.0 REQUIRED COMPONENTS Core)
+find_package(FutureSQL6 REQUIRED)
+find_package(QCoro6 0.10.0 REQUIRED COMPONENTS Core)
 
 ki18n_install(po)
 
