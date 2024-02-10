@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the audiotube package.
 #
-# SPDX-FileCopyrightText: 2022, 2023 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-29 00:37+0000\n"
-"PO-Revision-Date: 2023-10-29 14:02+0300\n"
+"PO-Revision-Date: 2024-02-09 17:45+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 23.08.2\n"
+"X-Generator: Lokalize 24.01.95\n"
 
 #: asyncytmusic.cpp:65
 #, kde-format
@@ -154,7 +154,7 @@ msgstr "Çalma listesi içe aktar"
 #: contents/ui/dialogs/ImportPlaylistDialog.qml:23
 #, kde-format
 msgid "Playlist URL (Youtube)"
-msgstr "Çalma Listesi URL'si (YouTube)"
+msgstr "Çalma Listesi URL’si (YouTube)"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:20
 #, kde-format
@@ -472,7 +472,7 @@ msgstr "Çalma listesine ekle"
 #, kde-format
 msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Stream music from YouTube Music"
-msgstr "YouTube Müzik'ten müzik çal"
+msgstr "YouTube Müzik’ten müzik çal"
 
 #: main.cpp:76
 #, kde-format
