@@ -1,13 +1,13 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the audiotube package.
 #
-# Zayed Al-Saidi <zayed.alsaidi@gmail.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-01-29 00:37+0000\n"
-"PO-Revision-Date: 2023-05-11 11:03+0400\n"
+"PO-Revision-Date: 2024-02-12 21:31+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.08.1\n"
 
 #: asyncytmusic.cpp:65
 #, kde-format
@@ -65,7 +65,7 @@ msgstr "افتح في المتصفّح"
 #: contents/ui/PlaylistPage.qml:117
 #, kde-format
 msgid "Share"
-msgstr ""
+msgstr "شارك"
 
 #: contents/ui/AlbumPage.qml:106
 #, kde-format
@@ -165,16 +165,14 @@ msgstr "أضف إلى قائمة التّشغيل"
 #: contents/ui/LocalPlaylistsPage.qml:107
 #: contents/ui/LocalPlaylistsPage.qml:133
 #: contents/ui/LocalPlaylistsPage.qml:151
-#, fuzzy, kde-format
-#| msgid "Playlist"
+#, kde-format
 msgid "New Playlist"
-msgstr "قائمة التشغيل"
+msgstr "قائمة تشغيل جديدة"
 
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:18
-#, fuzzy, kde-format
-#| msgid "Playlist"
+#, kde-format
 msgid "Rename playlist"
-msgstr "قائمة التشغيل"
+msgstr "أعد تسمية قائمة التّشغيل"
 
 #: contents/ui/LibraryPage.qml:32 contents/ui/LibraryPage.qml:135
 #: contents/ui/NavigationBar.qml:47 contents/ui/NavigationBar.qml:53
@@ -230,19 +228,18 @@ msgstr "قوائم التّشغيل"
 #: contents/ui/LocalPlaylistsPage.qml:38 contents/ui/LocalPlaylistsPage.qml:60
 #, kde-format
 msgid "Rename"
-msgstr ""
+msgstr "غيّر الاسم"
 
 #: contents/ui/LibraryPage.qml:476 contents/ui/LibraryPage.qml:497
 #: contents/ui/LocalPlaylistsPage.qml:47 contents/ui/LocalPlaylistsPage.qml:68
 #, kde-format
 msgid "Delete"
-msgstr ""
+msgstr "احذف"
 
 #: contents/ui/LocalPlaylistPage.qml:22
-#, fuzzy, kde-format
-#| msgid "Remove from History"
+#, kde-format
 msgid "Remove from Playlist"
-msgstr "أزل من التّاريخ"
+msgstr "أزل من قائمة التّشغيل"
 
 #: contents/ui/LocalPlaylistPage.qml:80
 #, kde-format
@@ -280,14 +277,12 @@ msgid "No media playing"
 msgstr "لا يوجد وسائط تعمل"
 
 #: contents/ui/MaximizedPlayerPage.qml:429
-#, fuzzy, kde-format
-#| msgid "Remove Favourite"
+#, kde-format
 msgid "Remove from Favourites"
-msgstr "أزل المفضلة"
+msgstr "أزل من المفضلة"
 
 #: contents/ui/MaximizedPlayerPage.qml:429
-#, fuzzy, kde-format
-#| msgid "Add Favourite"
+#, kde-format
 msgid "Add to Favourites"
 msgstr "أضف للمفضلة"
 
@@ -300,12 +295,12 @@ msgstr "افتح في المتصفّح"
 #: contents/ui/MaximizedPlayerPage.qml:563
 #, kde-format
 msgid "Unmute Audio"
-msgstr ""
+msgstr "ألغ كتم الصوت"
 
 #: contents/ui/MaximizedPlayerPage.qml:563
 #, kde-format
 msgid "Mute Audio"
-msgstr ""
+msgstr "كتم الصوت"
 
 #: contents/ui/MaximizedPlayerPage.qml:602
 #, kde-format
@@ -356,10 +351,9 @@ msgid "Remove Track"
 msgstr "أزل المسار"
 
 #: contents/ui/MaximizedPlayerPage.qml:989
-#, fuzzy, kde-format
-#| msgid "Queue"
+#, kde-format
 msgid "Clear Queue"
-msgstr "صُفّ"
+msgstr "امسح الطّابور"
 
 #: contents/ui/MaximizedPlayerPage.qml:1014
 #, fuzzy, kde-format
@@ -435,12 +429,12 @@ msgstr "لا يوجد تطابق من  البحوث الأخيرة"
 #: contents/ui/ShareMenu.qml:41
 #, kde-format
 msgid "Share to"
-msgstr ""
+msgstr "شارك مع"
 
 #: contents/ui/ShareMenu.qml:49 contents/ui/ShareMenu.qml:102
 #, kde-format
 msgid "Copy Link"
-msgstr ""
+msgstr "نسخ الرابط"
 
 #: contents/ui/ShareMenu.qml:54 contents/ui/ShareMenu.qml:107
 #, kde-format
@@ -448,9 +442,9 @@ msgid "Link copied to clipboard"
 msgstr ""
 
 #: contents/ui/Sidebar.qml:200
-#, kde-format
+#, fuzzy, kde-format
 msgid "About"
-msgstr ""
+msgstr "عن"
 
 #: contents/ui/Sidebar.qml:214
 #, kde-format
@@ -502,12 +496,12 @@ msgstr ""
 #: main.cpp:77
 #, kde-format
 msgid "Jonah Brüchert"
-msgstr ""
+msgstr "جوناه بروكيرت"
 
 #: main.cpp:77
 #, kde-format
 msgid "Maintainer"
-msgstr ""
+msgstr "المصين"
 
 #: main.cpp:78
 #, kde-format
@@ -517,7 +511,7 @@ msgstr ""
 #: main.cpp:78
 #, kde-format
 msgid "Designer"
-msgstr ""
+msgstr "المصمم"
 
 #: main.cpp:79
 #, kde-format
@@ -546,7 +540,7 @@ msgstr "لا يوجد وصف"
 #: playlistimporter.cpp:56
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "بدون عنوان"
 
 #: playlistimporter.cpp:58
 #, kde-format
