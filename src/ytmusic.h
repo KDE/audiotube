@@ -12,7 +12,7 @@
 #include <vector>
 #include <memory>
 
-constexpr auto TESTED_YTMUSICAPI_VERSION = "1.5.1";
+constexpr auto TESTED_YTMUSICAPI_VERSION = "1.5.4";
 
 struct YTMusicPrivate;
 

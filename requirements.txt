@@ -3,5 +3,5 @@
 #
 # SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
-ytmusicapi==1.5.1
+ytmusicapi==1.5.4
 yt-dlp

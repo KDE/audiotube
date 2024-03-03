@@ -7,8 +7,8 @@
     "sources": [
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/64/62/428ef076be88fa93716b576e4a01f919d25968913e817077a386fcbe4f42/certifi-2023.11.17-py3-none-any.whl",
-            "sha256": "e036ab49d5b79556f99cfc2d9320b34cfbe5be05c5871b51de9329f0603b0474"
+            "url": "https://files.pythonhosted.org/packages/ba/06/a07f096c664aeb9f01624f858c3add0a4e913d6c96257acb4fce61e7de14/certifi-2024.2.2-py3-none-any.whl",
+            "sha256": "dc383c07b76109f368f6106eee2b593b04a011ea4d55f652c6ca24a754d1cdd1"
         },
         {
             "type": "file",
@@ -27,13 +27,13 @@
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/96/94/c31f58c7a7f470d5665935262ebd7455c7e4c7782eb525658d3dbf4b9403/urllib3-2.1.0-py3-none-any.whl",
-            "sha256": "55901e917a5896a349ff771be919f8bd99aff50b79fe58fec595eb37bbc56bb3"
+            "url": "https://files.pythonhosted.org/packages/a2/73/a68704750a7679d0b6d3ad7aa8d4da8e14e151ae82e6fee774e6e0d05ec8/urllib3-2.2.1-py3-none-any.whl",
+            "sha256": "450b20ec296a467077128bff42b73080516e71b56ff59a60a02bef2232c4fa9d"
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/14/ee/05464febe488560f83720aec14c035792fee2fc833e7e0627241f652710b/ytmusicapi-1.5.1-py3-none-any.whl",
-            "sha256": "a288434292e5b98d84bf137ec9834d8e1367f712d741c2d2d3f29b373c7319f8"
+            "url": "https://files.pythonhosted.org/packages/4d/ed/8b2c79967cf1d4836c03f24dee659d3d97990cd1282723d93f07bff128f0/ytmusicapi-1.5.4-py3-none-any.whl",
+            "sha256": "96538551be12cb5525020028fce8adc9c6522d27a6989bee3f2e67844522603a"
         }
     ]
 }
