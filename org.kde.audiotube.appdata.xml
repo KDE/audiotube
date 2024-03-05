@@ -72,9 +72,7 @@ SPDX-License-Identifier: CC0-1.0
   <content_rating type="oars-1.0"/>
   <url type="homepage">https://apps.kde.org/en/audiotube</url>
   <developer id="kde.org">
-    <id>kde.org</id>
-    <name>The KDE Community</name>
-    <url>https://kde.org</url>
+    <name translate="no">KDE</name>
   </developer>
   <releases>
     <release version="24.02.0" date="2024-02-28"/>
