@@ -239,6 +239,7 @@ Item {
                     font.bold: true
                     Layout.bottomMargin: Kirigami.Units.gridUnit
                 }
+
                 RowLayout {
                     Layout.topMargin: Kirigami.Units.gridUnit
 
@@ -342,16 +343,19 @@ Item {
                             border.width: skipForwardButton.activeFocus? 1 :0
                             corners.topRightRadius: 7
                             corners.bottomRightRadius: 7
-                            color: if (parent.down){
+                            color: {
+                                if (parent.down) {
                                     Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.3)
-                                }else if(parent.hovered){
+                                } else if (parent.hovered) {
                                     Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.7)
-                                }else{
+                                } else {
                                     Qt.rgba(1, 1, 1, 0.2)
                                 }
+                            }
                         }
                     }
                 }
+
                 // slider row
                 RowLayout {
                     Layout.topMargin: Kirigami.Units.gridUnit
@@ -452,6 +456,7 @@ Item {
                         icon.name: muteButton.icon.name
 
                         text: i18n("Open Volume Drawer")
+                        icon.color: "white"
                         display: AbstractButton.IconOnly
                         ToolTip.text: text
                         ToolTip.delay: Kirigami.Units.toolTipDelay
@@ -751,7 +756,13 @@ Item {
         }
 
         Item {
-            onWidthChanged: if(!wideScreen) {collapse.running=true; collapsed=true; queueButton.checked=false}
+            onWidthChanged: {
+                if (!wideScreen) {
+                    collapse.running=true
+                    collapsed=true
+                    queueButton.checked=false
+                }
+            }
             property bool collapsed: true
             id: sideDrawer
             Layout.fillWidth: true
@@ -813,7 +824,8 @@ Item {
 
                     Layout.fillWidth: true
                     Layout.fillHeight: true
-                        Layout.leftMargin:10
+                    Layout.leftMargin:10
+
                     ListView {
                         id: playListView
 
