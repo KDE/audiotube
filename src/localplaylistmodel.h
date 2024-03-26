@@ -11,11 +11,6 @@
 struct PlaylistEntry {
     using ColumnTypes = std::tuple<QString, QString, QString, QString>;
 
-    static PlaylistEntry fromSql(ColumnTypes tuple) {
-        auto [videoId, title, artists, album] = tuple;
-        return PlaylistEntry { videoId, title, artists, album };
-    }
-
     QString videoId;
     QString title;
     QString artists;
