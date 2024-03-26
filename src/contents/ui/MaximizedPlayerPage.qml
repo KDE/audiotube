@@ -446,7 +446,7 @@ Item {
                         Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
                         Layout.maximumWidth: height
                         Layout.preferredWidth: height
-                        visible: !isWidescreen
+                        visible: !isWidescreen && !Kirigami.Settings.isMobile
                         enabled: !isWidescreen
 
                         icon.name: muteButton.icon.name
