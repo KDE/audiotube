@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-29 00:37+0000\n"
+"POT-Creation-Date: 2024-03-27 00:37+0000\n"
 "PO-Revision-Date: 2023-10-30 18:19+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -269,84 +269,84 @@ msgstr "Pechar o reprodutor maximizado"
 msgid "No media playing"
 msgstr "Non se está a reproducir nada."
 
-#: contents/ui/MaximizedPlayerPage.qml:429
+#: contents/ui/MaximizedPlayerPage.qml:433
 #, kde-format
 msgid "Remove from Favourites"
 msgstr "Retirar das favoritas"
 
-#: contents/ui/MaximizedPlayerPage.qml:429
+#: contents/ui/MaximizedPlayerPage.qml:433
 #, kde-format
 msgid "Add to Favourites"
 msgstr "Engadir ás favoritas"
 
-#: contents/ui/MaximizedPlayerPage.qml:454
+#: contents/ui/MaximizedPlayerPage.qml:458
 #, kde-format
 msgid "Open Volume Drawer"
 msgstr "Abrir o caixón do volume"
 
-#: contents/ui/MaximizedPlayerPage.qml:563
+#: contents/ui/MaximizedPlayerPage.qml:568
 #, kde-format
 msgid "Unmute Audio"
 msgstr "Activar o son"
 
-#: contents/ui/MaximizedPlayerPage.qml:563
+#: contents/ui/MaximizedPlayerPage.qml:568
 #, kde-format
 msgid "Mute Audio"
 msgstr "Silenciar"
 
-#: contents/ui/MaximizedPlayerPage.qml:602
+#: contents/ui/MaximizedPlayerPage.qml:607
 #, kde-format
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/ui/MaximizedPlayerPage.qml:632
+#: contents/ui/MaximizedPlayerPage.qml:637
 #, kde-format
 msgid "Hide Lyrics"
 msgstr "Agochar a letra"
 
-#: contents/ui/MaximizedPlayerPage.qml:632
+#: contents/ui/MaximizedPlayerPage.qml:637
 #, kde-format
 msgid "Show Lyrics"
 msgstr "Amosar a letra"
 
-#: contents/ui/MaximizedPlayerPage.qml:652 contents/ui/SongMenu.qml:195
+#: contents/ui/MaximizedPlayerPage.qml:657 contents/ui/SongMenu.qml:195
 #: contents/ui/SongMenu.qml:281
 #, kde-format
 msgid "Share Song"
 msgstr "Compartir a canción"
 
-#: contents/ui/MaximizedPlayerPage.qml:693
+#: contents/ui/MaximizedPlayerPage.qml:698
 #, kde-format
 msgid "Add to a local playlist"
 msgstr "Engadir a unha lista de reprodución local"
 
-#: contents/ui/MaximizedPlayerPage.qml:730
+#: contents/ui/MaximizedPlayerPage.qml:735
 #, kde-format
 msgid "Hide Queue"
 msgstr "Agochar a cola"
 
-#: contents/ui/MaximizedPlayerPage.qml:730
+#: contents/ui/MaximizedPlayerPage.qml:735
 #, kde-format
 msgid "Show Queue"
 msgstr "Amosar a cola"
 
-#: contents/ui/MaximizedPlayerPage.qml:954
-#: contents/ui/MaximizedPlayerPage.qml:1198
+#: contents/ui/MaximizedPlayerPage.qml:966
+#: contents/ui/MaximizedPlayerPage.qml:1210
 #, kde-format
 msgid "Remove Track"
 msgstr "Retirar a pista"
 
-#: contents/ui/MaximizedPlayerPage.qml:989
+#: contents/ui/MaximizedPlayerPage.qml:1001
 #, kde-format
 msgid "Clear Queue"
 msgstr "Borrar a cola"
 
-#: contents/ui/MaximizedPlayerPage.qml:1014
+#: contents/ui/MaximizedPlayerPage.qml:1026
 #, kde-format
 msgid "Shuffle Queue"
 msgstr "Desordenar a cola"
 
-#: contents/ui/MaximizedPlayerPage.qml:1047
+#: contents/ui/MaximizedPlayerPage.qml:1059
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "Vindeiras cancións"

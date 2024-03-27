@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-29 00:37+0000\n"
+"POT-Creation-Date: 2024-03-27 00:37+0000\n"
 "PO-Revision-Date: 2024-02-12 21:31+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -276,92 +276,92 @@ msgstr ""
 msgid "No media playing"
 msgstr "لا يوجد وسائط تعمل"
 
-#: contents/ui/MaximizedPlayerPage.qml:429
+#: contents/ui/MaximizedPlayerPage.qml:433
 #, kde-format
 msgid "Remove from Favourites"
 msgstr "أزل من المفضلة"
 
-#: contents/ui/MaximizedPlayerPage.qml:429
+#: contents/ui/MaximizedPlayerPage.qml:433
 #, kde-format
 msgid "Add to Favourites"
 msgstr "أضف للمفضلة"
 
-#: contents/ui/MaximizedPlayerPage.qml:454
+#: contents/ui/MaximizedPlayerPage.qml:458
 #, fuzzy, kde-format
 #| msgid "Open in Browser"
 msgid "Open Volume Drawer"
 msgstr "افتح في المتصفّح"
 
-#: contents/ui/MaximizedPlayerPage.qml:563
+#: contents/ui/MaximizedPlayerPage.qml:568
 #, kde-format
 msgid "Unmute Audio"
 msgstr "ألغ كتم الصوت"
 
-#: contents/ui/MaximizedPlayerPage.qml:563
+#: contents/ui/MaximizedPlayerPage.qml:568
 #, kde-format
 msgid "Mute Audio"
 msgstr "كتم الصوت"
 
-#: contents/ui/MaximizedPlayerPage.qml:602
+#: contents/ui/MaximizedPlayerPage.qml:607
 #, kde-format
 msgid "%1%"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:632
+#: contents/ui/MaximizedPlayerPage.qml:637
 #, fuzzy, kde-format
 #| msgid "Lyrics"
 msgid "Hide Lyrics"
 msgstr "الكلمات"
 
-#: contents/ui/MaximizedPlayerPage.qml:632
+#: contents/ui/MaximizedPlayerPage.qml:637
 #, fuzzy, kde-format
 #| msgid "Lyrics"
 msgid "Show Lyrics"
 msgstr "الكلمات"
 
-#: contents/ui/MaximizedPlayerPage.qml:652 contents/ui/SongMenu.qml:195
+#: contents/ui/MaximizedPlayerPage.qml:657 contents/ui/SongMenu.qml:195
 #: contents/ui/SongMenu.qml:281
 #, fuzzy, kde-format
 #| msgid "Favourite Songs"
 msgid "Share Song"
 msgstr "الأغاني المفضّلة"
 
-#: contents/ui/MaximizedPlayerPage.qml:693
+#: contents/ui/MaximizedPlayerPage.qml:698
 #, fuzzy, kde-format
 #| msgid "Add to Playlist"
 msgid "Add to a local playlist"
 msgstr "أضف إلى قائمة التّشغيل"
 
-#: contents/ui/MaximizedPlayerPage.qml:730
+#: contents/ui/MaximizedPlayerPage.qml:735
 #, fuzzy, kde-format
 #| msgid "Queue"
 msgid "Hide Queue"
 msgstr "صُفّ"
 
-#: contents/ui/MaximizedPlayerPage.qml:730
+#: contents/ui/MaximizedPlayerPage.qml:735
 #, fuzzy, kde-format
 #| msgid "Queue"
 msgid "Show Queue"
 msgstr "صُفّ"
 
-#: contents/ui/MaximizedPlayerPage.qml:954
-#: contents/ui/MaximizedPlayerPage.qml:1198
+#: contents/ui/MaximizedPlayerPage.qml:966
+#: contents/ui/MaximizedPlayerPage.qml:1210
 #, kde-format
 msgid "Remove Track"
 msgstr "أزل المسار"
 
-#: contents/ui/MaximizedPlayerPage.qml:989
+#: contents/ui/MaximizedPlayerPage.qml:1001
 #, kde-format
 msgid "Clear Queue"
 msgstr "امسح الطّابور"
 
-#: contents/ui/MaximizedPlayerPage.qml:1014
+#: contents/ui/MaximizedPlayerPage.qml:1026
 #, fuzzy, kde-format
 #| msgid "Shuffle"
 msgid "Shuffle Queue"
 msgstr "اخلط"
 
-#: contents/ui/MaximizedPlayerPage.qml:1047
+#: contents/ui/MaximizedPlayerPage.qml:1059
 #, kde-format
 msgid "Upcoming Songs"
 msgstr ""
