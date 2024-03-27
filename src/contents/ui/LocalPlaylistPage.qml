@@ -33,13 +33,14 @@ Kirigami.ScrollablePage {
         visible: false
         property bool shown
         shown: !root.flickable.atYBeginning
-        onShownChanged:
-            if(shown){
+        onShownChanged: {
+            if (shown) {
                 visible = true
                 appear.running = true
             } else {
                 disappear.running = true
             }
+        }
 
         parent: overlay
         x: root.width - width - margin
@@ -71,7 +72,6 @@ Kirigami.ScrollablePage {
             text: i18n("Play")
             onTriggered: UserPlaylistModel.playLocalPlaylist(playlistModel, false)
         }
-
     }
 
     ListView {
@@ -93,20 +93,17 @@ Kirigami.ScrollablePage {
                 text: i18n("Play")
                 icon.name: "media-playback-start"
                 onClicked:  UserPlaylistModel.playLocalPlaylist(playlistModel, false)
-
             }
 
             Controls.ToolButton {
                 text: i18n("Shuffle")
                 icon.name: "shuffle"
                 onClicked: UserPlaylistModel.playLocalPlaylist(playlistModel, true)
-
             }
             Controls.ToolButton {
                 text: i18n("Append to queue")
                 icon.name: "media-playlist-append"
                 onClicked:  UserPlaylistModel.appendLocalPlaylist(playlistModel, false)
-
             }
             Item {
                 Layout.fillWidth: true
@@ -129,11 +126,13 @@ Kirigami.ScrollablePage {
             contentItem: MouseArea {
                 implicitHeight: content.implicitHeight
                 acceptedButtons: Qt.LeftButton | Qt.RightButton
-                onClicked: if (mouse.button === Qt.RightButton) {
-                               menu.openForSong(delegateItem.videoId, delegateItem.title, delegateItem.artists, delegateItem.artistsDisplayString)
-                          } else if (mouse.button === Qt.LeftButton) {
-                               play(videoId)
-                          }
+                onClicked: {
+                    if (mouse.button === Qt.RightButton) {
+                       menu.openForSong(delegateItem.videoId, delegateItem.title, delegateItem.artists, delegateItem.artistsDisplayString)
+                    } else if (mouse.button === Qt.LeftButton) {
+                       play(videoId)
+                    }
+                }
                 RowLayout {
                     id: content
                     anchors.fill: parent
@@ -161,18 +160,19 @@ Kirigami.ScrollablePage {
                             color: Kirigami.Theme.disabledTextColor
                             text: delegateItem.artistsDisplayString
                             elide: Qt.ElideRight
-
                         }
+                    }
+
+                    Controls.ToolButton {
+                        icon.name: "overflow-menu"
+                        text: i18n("More")
+                        display: Controls.AbstractButton.IconOnly
+                        Layout.alignment: Qt.AlignRight
+                        Layout.rightMargin: 5
+                        onClicked: menu.openForSong(delegateItem.videoId, delegateItem.title, delegateItem.artists, delegateItem.artistsDisplayString)
                     }
                 }
             }
-                Controls.ToolButton {
-                    icon.name: "overflow-menu"
-                    text: i18n("More")
-                    display: Controls.AbstractButton.IconOnly
-                    onClicked: menu.openForSong(delegateItem.videoId, delegateItem.title, delegateItem.artists, delegateItem.artistsDisplayString)
-                }
         }
-
     }
 }
