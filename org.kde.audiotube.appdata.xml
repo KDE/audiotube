@@ -8,6 +8,7 @@ SPDX-License-Identifier: CC0-1.0
   <id>org.kde.audiotube</id>
   <name>AudioTube</name>
   <name xml:lang="ar">تيوب الصوتي</name>
+  <name xml:lang="ast">AudioTube</name>
   <name xml:lang="az">AudioTube</name>
   <name xml:lang="ca">AudioTube</name>
   <name xml:lang="ca-valencia">AudioTube</name>
