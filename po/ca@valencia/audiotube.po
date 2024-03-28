@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-01-27 02:25+0000\n"
+"POT-Creation-Date: 2024-03-28 02:53+0000\n"
 "PO-Revision-Date: 2023-10-29 09:12+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -32,7 +32,7 @@ msgstr ""
 #: contents/ui/AlbumPage.qml:71 contents/ui/LibraryPage.qml:39
 #: contents/ui/LibraryPage.qml:65 contents/ui/LibraryPage.qml:91
 #: contents/ui/LibraryPage.qml:235 contents/ui/LibraryPage.qml:261
-#: contents/ui/LibraryPage.qml:285 contents/ui/LocalPlaylistPage.qml:71
+#: contents/ui/LibraryPage.qml:285 contents/ui/LocalPlaylistPage.qml:72
 #: contents/ui/LocalPlaylistPage.qml:93 contents/ui/PlaybackHistory.qml:67
 #: contents/ui/PlaybackHistory.qml:89 contents/ui/PlaylistPage.qml:66
 #: contents/ui/PlaylistPage.qml:87
@@ -44,7 +44,7 @@ msgstr "Reproduïx"
 #: contents/ui/LibraryPage.qml:46 contents/ui/LibraryPage.qml:71
 #: contents/ui/LibraryPage.qml:101 contents/ui/LibraryPage.qml:242
 #: contents/ui/LibraryPage.qml:267 contents/ui/LibraryPage.qml:294
-#: contents/ui/LocalPlaylistPage.qml:66 contents/ui/LocalPlaylistPage.qml:100
+#: contents/ui/LocalPlaylistPage.qml:67 contents/ui/LocalPlaylistPage.qml:99
 #: contents/ui/PlaybackHistory.qml:55 contents/ui/PlaybackHistory.qml:102
 #: contents/ui/PlaylistPage.qml:59 contents/ui/PlaylistPage.qml:94
 #, kde-format
@@ -53,7 +53,7 @@ msgstr "Barreja"
 
 #: contents/ui/AlbumPage.qml:86 contents/ui/LibraryPage.qml:76
 #: contents/ui/LibraryPage.qml:111 contents/ui/LibraryPage.qml:272
-#: contents/ui/LibraryPage.qml:302 contents/ui/LocalPlaylistPage.qml:106
+#: contents/ui/LibraryPage.qml:302 contents/ui/LocalPlaylistPage.qml:104
 #: contents/ui/PlaybackHistory.qml:114 contents/ui/PlaylistPage.qml:102
 #, kde-format
 msgid "Append to queue"
@@ -77,7 +77,7 @@ msgid "Album • %1"
 msgstr "Àlbum • %1"
 
 #: contents/ui/AlbumPage.qml:160 contents/ui/ArtistPage.qml:199
-#: contents/ui/LocalPlaylistPage.qml:171 contents/ui/PlaybackHistory.qml:195
+#: contents/ui/LocalPlaylistPage.qml:168 contents/ui/PlaybackHistory.qml:195
 #: contents/ui/PlaylistPage.qml:189 contents/ui/SearchPage.qml:148
 #, kde-format
 msgid "More"
