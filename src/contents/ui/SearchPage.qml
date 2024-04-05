@@ -106,7 +106,7 @@ Kirigami.ScrollablePage {
                 acceptedButtons: Qt.LeftButton | Qt.RightButton
                 onClicked: (mouse) => {
                     if (mouse.button === Qt.RightButton) {
-                        if (delegateItem.type === SearchModel.Song || delegateItem.type === SearchModel.Video) {
+                        if (delegateItem.videoId && delegateItem.title && delegateItem.artists && delegateItem.artistsDisplayString) {
                             menu.openForSong(delegateItem.videoId, delegateItem.title, delegateItem.artists, delegateItem.artistsDisplayString)
                         }
                     } else if (mouse.button === Qt.LeftButton) {
@@ -146,7 +146,7 @@ Kirigami.ScrollablePage {
                         icon.name: "overflow-menu"
                         display: Controls.AbstractButton.IconOnly
                         text: i18n("More")
-                        visible: delegateItem.type === SearchModel.Song || delegateItem.type === SearchModel.Video
+                        visible: delegateItem.videoId && delegateItem.title && delegateItem.artists && delegateItem.artistsDisplayString
                         onClicked: menu.openForSong(delegateItem.videoId, delegateItem.title, delegateItem.artists, delegateItem.artistsDisplayString)
                     }
                 }
