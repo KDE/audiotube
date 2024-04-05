@@ -14,20 +14,20 @@ import org.kde.ytmusic 1.0
 import "dialogs"
 
 Kirigami.ScrollablePage {
+    id: libraryPage
     objectName: "libraryPage"
     Kirigami.Theme.colorSet: Kirigami.Theme.View
     title: "AudioTube"
     readonly property bool isWidescreen: width >= Kirigami.Units.gridUnit * 30
 
-    rightPadding: 0
     leftPadding: 0
+    rightPadding: 0
 
-    SongMenu {
-        id: menu
-    }
     ColumnLayout {
         RowLayout {
             Layout.fillWidth: true
+            Layout.maximumWidth: libraryPage.width
+
             Kirigami.Heading {
                 text: i18n("Favourites")
                 Layout.alignment: Qt.AlignLeft
@@ -145,7 +145,7 @@ Kirigami.ScrollablePage {
             visible: favouriteRepeater.count === 0
             Layout.margins: 20
             isMask: true
-            opacity:0.4
+            opacity: 0.4
             color: Kirigami.Theme.hoverColor
             Layout.alignment: Qt.AlignHCenter
             Layout.fillWidth: true
@@ -171,7 +171,8 @@ Kirigami.ScrollablePage {
         HorizontalCoverView {
             id: favouriteRepeater
 
-            Layout.fillWidth: true
+            Layout.fillWidth: false
+            Layout.maximumWidth: libraryPage.flickable.width
 
             model: Library.favourites
             delegate: ColumnLayout {
@@ -221,6 +222,7 @@ Kirigami.ScrollablePage {
 
         RowLayout {
             Layout.fillWidth: true
+            Layout.maximumWidth: libraryPage.flickable.width
 
             Kirigami.Heading {
                 text: i18n("Most played")
@@ -331,10 +333,11 @@ Kirigami.ScrollablePage {
         Kirigami.Icon {
             visible: mostPlayedRepeater.count === 0
             Layout.margins: 20
+            Layout.maximumWidth: libraryPage.flickable.width
             isMask: true
-            opacity:0.4
+            opacity: 0.4
             color: Kirigami.Theme.hoverColor
-            id:playedPlaceholder
+            id: playedPlaceholder
             Layout.alignment: Qt.AlignHCenter
             Layout.fillWidth: true
             implicitWidth: 190
@@ -344,7 +347,7 @@ Kirigami.ScrollablePage {
             Controls.Label {
                 visible: mostPlayedRepeater.count === 0
                 color: Kirigami.Theme.disabledTextColor
-                anchors.centerIn:playedPlaceholder
+                anchors.centerIn: playedPlaceholder
                 font.bold: true
                 font.pointSize: 15
                 text: i18n("No Songs Played Yet")
@@ -354,7 +357,9 @@ Kirigami.ScrollablePage {
         HorizontalCoverView {
             id: mostPlayedRepeater
 
-            Layout.fillWidth: true
+            Layout.fillWidth: false
+            Layout.maximumWidth: libraryPage.flickable.width
+
             model: Library.mostPlayed
             delegate: ColumnLayout {
                 id: mpdelegateItem
@@ -401,6 +406,8 @@ Kirigami.ScrollablePage {
         }
         RowLayout {
             Layout.fillWidth: true
+            Layout.maximumWidth: libraryPage.flickable.width
+
             Kirigami.Heading {
                 text: i18n("Playlists")
                 Layout.alignment: Qt.AlignLeft
@@ -504,7 +511,10 @@ Kirigami.ScrollablePage {
 
         HorizontalCoverView {
             id: playlistsRepeater
+
             Layout.fillWidth: true
+            Layout.maximumWidth: libraryPage.flickable.width
+
             model: LocalPlaylistsModel {
                 id: localPlaylistsModel
             }
@@ -571,5 +581,9 @@ Kirigami.ScrollablePage {
                 }
             }
         }
+    }
+
+    SongMenu {
+        id: menu
     }
 }
