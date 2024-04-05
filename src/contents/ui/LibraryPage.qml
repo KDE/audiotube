@@ -204,7 +204,7 @@ Kirigami.ScrollablePage {
                     title: delegateItem.title
                     subtitle: delegateItem.artistsDisplayString
 
-                    contentItem: RoundedImage {
+                    albumCover: RoundedImage {
                         source: thumbnailSource.cachedPath
                         anchors.fill: parent
                         radius: 10
@@ -389,7 +389,7 @@ Kirigami.ScrollablePage {
                     title: mpdelegateItem.title
                     subtitle: mpdelegateItem.artistsDisplayString
 
-                    contentItem: RoundedImage {
+                    albumCover: RoundedImage {
                         source: mpthumbnailSource.cachedPath
                         anchors.fill: parent
                         radius: 10
@@ -557,7 +557,7 @@ Kirigami.ScrollablePage {
                         id: thumbnailSource4
                         videoId: thumbnailIds[3] ?? thumbnailIds[0] ?? ""
                     }
-                    contentItem: PlaylistCover {
+                    albumCover: PlaylistCover {
                         source1: thumbnailSource1.cachedPath
                         source2: thumbnailSource2.cachedPath
                         source3: thumbnailSource3.cachedPath

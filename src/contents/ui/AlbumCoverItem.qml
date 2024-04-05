@@ -9,9 +9,9 @@ import QtQuick.Layouts 1.15
 
 import org.kde.kirigami 2.15 as Kirigami
 
-Item {
+Controls.ToolButton {
     id: root
-    property alias contentItem: content.children
+    property alias albumCover: content.children
     property alias title: favTitle.text
     property alias subtitle: favSubtitle.text
     property bool showIcon: true
@@ -21,6 +21,8 @@ Item {
 
     implicitWidth: mainLayout.implicitWidth
     implicitHeight: mainLayout.implicitHeight
+
+    background: Item {}
 
     MouseArea {
         id: coverArea
@@ -37,20 +39,9 @@ Item {
         hoverEnabled: !Kirigami.Settings.hasTransientTouchInput
         onEntered: {
             if (!Kirigami.Settings.hasTransientTouchInput) {
-                selection.visible = true
-                favTitle.color = Kirigami.Theme.hoverColor
-                favSubtitle.color = Kirigami.Theme.hoverColor
-                favTitle.font.bold = true
                 playAnimationPosition.running = true
                 playAnimationOpacity.running = true
             }
-        }
-
-        onExited: {
-            selection.visible = false
-            favTitle.color = Kirigami.Theme.textColor
-            favSubtitle.color = Kirigami.Theme.disabledTextColor
-            favTitle.font.bold = false
         }
     }
 
@@ -120,7 +111,7 @@ Item {
                         source: "media-playback-start"
                     }
                 }
-                visible: false
+                visible: coverArea.containsMouse || root.activeFocus
                 anchors.fill: parent
 
                 radius: 9
@@ -141,12 +132,18 @@ Item {
                     leftPadding: 5
                     elide: Text.ElideRight
                     enabled: false
+                    color: coverArea.containsMouse || root.activeFocus
+                                               ? Kirigami.Theme.hoverColor
+                                               : Kirigami.Theme.textColor
+                    font.bold: coverArea.containsMouse || root.activeFocus
                 }
                 Controls.Label {
                     id: favSubtitle
                     Layout.fillWidth: true
                     leftPadding: 5
-                    color: Kirigami.Theme.disabledTextColor
+                    color: coverArea.containsMouse || root.activeFocus
+                           ? Kirigami.Theme.hoverColor
+                           : Kirigami.Theme.disabledTextColor
                     elide: Text.ElideRight
                     enabled: false
 
