@@ -73,7 +73,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
                      QStringLiteral(AUDIOTUBE_VERSION_STRING),
                      i18nc("YouTube Music is a music streaming service by Google", "Stream music from YouTube Music"),
                      KAboutLicense::GPL_V3,
-                     i18n("© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"));
+                     i18n("© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"));
     about.addAuthor(i18n("Jonah Brüchert"), i18n("Maintainer"), QStringLiteral("jbb@kaidan.im"));
     about.addAuthor(i18n("Mathis Brüchert"), i18n("Designer"), QStringLiteral("mbb@kaidan.im"));
     about.setTranslator(i18nc("NAME OF TRANSLATORS", "Your names"), i18nc("EMAIL OF TRANSLATORS", "Your emails"));
