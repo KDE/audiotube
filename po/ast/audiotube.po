@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-28 00:37+0000\n"
+"POT-Creation-Date: 2024-04-06 00:37+0000\n"
 "PO-Revision-Date: 2024-03-27 21:55+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: Asturian <alministradores@softastur.org>\n"
@@ -26,8 +26,8 @@ msgstr ""
 
 #: contents/ui/AlbumPage.qml:71 contents/ui/LibraryPage.qml:39
 #: contents/ui/LibraryPage.qml:65 contents/ui/LibraryPage.qml:91
-#: contents/ui/LibraryPage.qml:233 contents/ui/LibraryPage.qml:259
-#: contents/ui/LibraryPage.qml:283 contents/ui/LocalPlaylistPage.qml:72
+#: contents/ui/LibraryPage.qml:235 contents/ui/LibraryPage.qml:261
+#: contents/ui/LibraryPage.qml:285 contents/ui/LocalPlaylistPage.qml:72
 #: contents/ui/LocalPlaylistPage.qml:93 contents/ui/PlaybackHistory.qml:67
 #: contents/ui/PlaybackHistory.qml:89 contents/ui/PlaylistPage.qml:66
 #: contents/ui/PlaylistPage.qml:87
@@ -37,8 +37,8 @@ msgstr ""
 
 #: contents/ui/AlbumPage.qml:78 contents/ui/ArtistPage.qml:83
 #: contents/ui/LibraryPage.qml:46 contents/ui/LibraryPage.qml:71
-#: contents/ui/LibraryPage.qml:101 contents/ui/LibraryPage.qml:240
-#: contents/ui/LibraryPage.qml:265 contents/ui/LibraryPage.qml:292
+#: contents/ui/LibraryPage.qml:101 contents/ui/LibraryPage.qml:242
+#: contents/ui/LibraryPage.qml:267 contents/ui/LibraryPage.qml:294
 #: contents/ui/LocalPlaylistPage.qml:67 contents/ui/LocalPlaylistPage.qml:99
 #: contents/ui/PlaybackHistory.qml:55 contents/ui/PlaybackHistory.qml:102
 #: contents/ui/PlaylistPage.qml:59 contents/ui/PlaylistPage.qml:94
@@ -47,8 +47,8 @@ msgid "Shuffle"
 msgstr ""
 
 #: contents/ui/AlbumPage.qml:86 contents/ui/LibraryPage.qml:76
-#: contents/ui/LibraryPage.qml:111 contents/ui/LibraryPage.qml:270
-#: contents/ui/LibraryPage.qml:300 contents/ui/LocalPlaylistPage.qml:104
+#: contents/ui/LibraryPage.qml:111 contents/ui/LibraryPage.qml:272
+#: contents/ui/LibraryPage.qml:302 contents/ui/LocalPlaylistPage.qml:104
 #: contents/ui/PlaybackHistory.qml:114 contents/ui/PlaylistPage.qml:102
 #, kde-format
 msgid "Append to queue"
@@ -177,8 +177,8 @@ msgstr ""
 msgid "Favourites"
 msgstr ""
 
-#: contents/ui/LibraryPage.qml:130 contents/ui/LibraryPage.qml:320
-#: contents/ui/LibraryPage.qml:417
+#: contents/ui/LibraryPage.qml:130 contents/ui/LibraryPage.qml:322
+#: contents/ui/LibraryPage.qml:424
 #, kde-format
 msgid "Show All"
 msgstr ""
@@ -188,42 +188,42 @@ msgstr ""
 msgid "No Favourites Yet"
 msgstr ""
 
-#: contents/ui/LibraryPage.qml:226
+#: contents/ui/LibraryPage.qml:228
 #, kde-format
 msgid "Most played"
 msgstr ""
 
-#: contents/ui/LibraryPage.qml:325 contents/ui/NavigationBar.qml:60
+#: contents/ui/LibraryPage.qml:327 contents/ui/NavigationBar.qml:60
 #: contents/ui/NavigationBar.qml:66 contents/ui/Sidebar.qml:159
 #: contents/ui/Sidebar.qml:164
 #, kde-format
 msgid "Played Songs"
 msgstr ""
 
-#: contents/ui/LibraryPage.qml:350
+#: contents/ui/LibraryPage.qml:353
 #, kde-format
 msgid "No Songs Played Yet"
 msgstr ""
 
-#: contents/ui/LibraryPage.qml:405 contents/ui/LocalPlaylistsPage.qml:20
+#: contents/ui/LibraryPage.qml:412 contents/ui/LocalPlaylistsPage.qml:20
 #: contents/ui/LocalPlaylistsPage.qml:84 contents/ui/NavigationBar.qml:74
 #: contents/ui/SearchPage.qml:32 contents/ui/Sidebar.qml:179
 #, kde-format
 msgid "Playlists"
 msgstr ""
 
-#: contents/ui/LibraryPage.qml:444
+#: contents/ui/LibraryPage.qml:451
 #, kde-format
 msgid "No Playlists Yet"
 msgstr ""
 
-#: contents/ui/LibraryPage.qml:467 contents/ui/LibraryPage.qml:489
+#: contents/ui/LibraryPage.qml:474 contents/ui/LibraryPage.qml:496
 #: contents/ui/LocalPlaylistsPage.qml:38 contents/ui/LocalPlaylistsPage.qml:60
 #, kde-format
 msgid "Rename"
 msgstr ""
 
-#: contents/ui/LibraryPage.qml:476 contents/ui/LibraryPage.qml:497
+#: contents/ui/LibraryPage.qml:483 contents/ui/LibraryPage.qml:504
 #: contents/ui/LocalPlaylistsPage.qml:47 contents/ui/LocalPlaylistsPage.qml:68
 #, kde-format
 msgid "Delete"
