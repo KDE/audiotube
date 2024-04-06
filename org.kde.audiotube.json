@@ -20,7 +20,8 @@
     "separate-locales": false,
     "cleanup": [
         "/include/",
-        "/share/cmake/"
+        "/share/cmake/",
+        "*.a"
     ],
     "modules": [
         "flatpak/python3-yt-dlp.json",
