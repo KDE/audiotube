@@ -224,7 +224,7 @@ Kirigami.ScrollablePage {
                     id: thumbnailSource4
                     videoId: thumbnailIds[3] ?? thumbnailIds[0]
                 }
-                contentItem: PlaylistCover {
+                albumCover: PlaylistCover {
                     source1: thumbnailSource1.cachedPath
                     source2: thumbnailSource2.cachedPath
                     source3: thumbnailSource3.cachedPath
