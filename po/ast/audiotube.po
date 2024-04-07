@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-06 00:37+0000\n"
+"POT-Creation-Date: 2024-04-07 00:38+0000\n"
 "PO-Revision-Date: 2024-03-27 21:55+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: Asturian <alministradores@softastur.org>\n"
@@ -472,7 +472,7 @@ msgstr ""
 
 #: main.cpp:76
 #, kde-format
-msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
+msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
 msgstr ""
 
 #: main.cpp:77

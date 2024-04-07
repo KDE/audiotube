@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-06 00:37+0000\n"
+"POT-Creation-Date: 2024-04-07 00:38+0000\n"
 "PO-Revision-Date: 2023-11-24 09:45+0900\n"
 "Last-Translator: maboroshin <pc.genkaku.in>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -474,7 +474,7 @@ msgstr "YouTube Music から音楽を配信"
 
 #: main.cpp:76
 #, kde-format
-msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
+msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
 msgstr ""
 
 #: main.cpp:77

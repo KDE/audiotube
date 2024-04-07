@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-06 00:37+0000\n"
+"POT-Creation-Date: 2024-04-07 00:38+0000\n"
 "PO-Revision-Date: 2023-10-29 08:31+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -476,8 +476,9 @@ msgid "Stream music from YouTube Music"
 msgstr "Трансляція музики з YouTube Music"
 
 #: main.cpp:76
-#, kde-format
-msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
+#, fuzzy, kde-format
+#| msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
+msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
 msgstr "© Jonah Brüchert, 2021-2023; KDE Community,2021-2023"
 
 #: main.cpp:77

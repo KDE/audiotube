@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-06 00:37+0000\n"
+"POT-Creation-Date: 2024-04-07 00:38+0000\n"
 "PO-Revision-Date: 2023-11-30 18:56+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -476,8 +476,9 @@ msgid "Stream music from YouTube Music"
 msgstr "Fluigi muzikon de YouTube Music"
 
 #: main.cpp:76
-#, kde-format
-msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
+#, fuzzy, kde-format
+#| msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
+msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
 msgstr "© 2021-2023 Jonah Brüchert, 2021-2023 KDE-Komunumo"
 
 #: main.cpp:77
