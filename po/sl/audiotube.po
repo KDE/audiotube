@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-07 00:38+0000\n"
-"PO-Revision-Date: 2023-10-30 06:36+0100\n"
+"PO-Revision-Date: 2024-04-07 07:20+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
-"X-Generator: Poedit 3.4\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: asyncytmusic.cpp:65
 #, kde-format
@@ -474,10 +474,9 @@ msgid "Stream music from YouTube Music"
 msgstr "Pretočna glasba iz storitve YouTube Music"
 
 #: main.cpp:76
-#, fuzzy, kde-format
-#| msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
+#, kde-format
 msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
-msgstr "© 2021-2023 Jonah Brüchert, 2021-2023 Skupnost KDE"
+msgstr "© 2021-2024 Jonah Brüchert, 2021-2024 Skupnost KDE"
 
 #: main.cpp:77
 #, kde-format

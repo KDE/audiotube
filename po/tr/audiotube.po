@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-07 00:38+0000\n"
-"PO-Revision-Date: 2024-02-29 17:29+0300\n"
+"PO-Revision-Date: 2024-04-07 12:38+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.04.70\n"
 
 #: asyncytmusic.cpp:65
 #, kde-format
@@ -96,7 +96,7 @@ msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
 "\"%1\"?"
 msgstr ""
-"Video oynatımı henüz desteklenmiyor. \"%1\" videosunun yalnızca sesinin "
+"Video oynatımı henüz desteklenmiyor. “%1” videosunun yalnızca sesinin "
 "çalınmasını ister misiniz?"
 
 #: contents/ui/ArtistPage.qml:148 contents/ui/SearchPage.qml:28
@@ -475,10 +475,9 @@ msgid "Stream music from YouTube Music"
 msgstr "YouTube Müzik’ten müzik çal"
 
 #: main.cpp:76
-#, fuzzy, kde-format
-#| msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
+#, kde-format
 msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
-msgstr "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Topluluğu"
+msgstr "© 2021–2024 Jonah Brüchert, 2021–2023 KDE Topluluğu"
 
 #: main.cpp:77
 #, kde-format
