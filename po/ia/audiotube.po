@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This file is copyright:
 # This file is distributed under the same license as the audiotube package.
 #
-# giovanni <g.sora@tiscali.it>, 2023.
+# giovanni <g.sora@tiscali.it>, 2023, 2024.
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-07 00:38+0000\n"
-"PO-Revision-Date: 2023-11-13 14:53+0100\n"
+"PO-Revision-Date: 2024-04-08 11:46+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -475,10 +475,9 @@ msgid "Stream music from YouTube Music"
 msgstr "Musica de stream (fluxo) ab YouTube Music"
 
 #: main.cpp:76
-#, fuzzy, kde-format
-#| msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
+#, kde-format
 msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
-msgstr "© 2021-2023 Jonah Brüchert, 2021-2023 Communitate de KDE"
+msgstr "© 2021-2024 Jonah Brüchert, 2021-2024 Communitate de KDE"
 
 #: main.cpp:77
 #, kde-format
