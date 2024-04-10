@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-28 02:53+0000\n"
-"PO-Revision-Date: 2023-02-23 00:57+0000\n"
+"PO-Revision-Date: 2024-04-09 12:08+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
+"X-Generator: Poedit 3.4.2\n"
 
 #: asyncytmusic.cpp:65
 #, kde-format
@@ -24,6 +25,8 @@ msgid ""
 "Running with untested version of ytmusicapi %1. If you experience errors, "
 "please report them to your distribution."
 msgstr ""
+"Paleista su neišbandyta ytmusicapi %1 versija. Jei patiriate klaidų, "
+"praneškite apie jas savo platinamajam paketui."
 
 #: contents/ui/AlbumPage.qml:71 contents/ui/LibraryPage.qml:39
 #: contents/ui/LibraryPage.qml:65 contents/ui/LibraryPage.qml:91
@@ -34,7 +37,7 @@ msgstr ""
 #: contents/ui/PlaylistPage.qml:87
 #, kde-format
 msgid "Play"
-msgstr ""
+msgstr "Atkurti"
 
 #: contents/ui/AlbumPage.qml:78 contents/ui/ArtistPage.qml:83
 #: contents/ui/LibraryPage.qml:46 contents/ui/LibraryPage.qml:71
@@ -45,7 +48,7 @@ msgstr ""
 #: contents/ui/PlaylistPage.qml:59 contents/ui/PlaylistPage.qml:94
 #, kde-format
 msgid "Shuffle"
-msgstr ""
+msgstr "Maišyti"
 
 #: contents/ui/AlbumPage.qml:86 contents/ui/LibraryPage.qml:76
 #: contents/ui/LibraryPage.qml:111 contents/ui/LibraryPage.qml:272
@@ -53,41 +56,41 @@ msgstr ""
 #: contents/ui/PlaybackHistory.qml:114 contents/ui/PlaylistPage.qml:102
 #, kde-format
 msgid "Append to queue"
-msgstr ""
+msgstr "Pridėti į eilę"
 
 #: contents/ui/AlbumPage.qml:91 contents/ui/ArtistPage.qml:91
 #: contents/ui/PlaylistPage.qml:112
 #, kde-format
 msgid "Open in Browser"
-msgstr ""
+msgstr "Atverti naršyklėje"
 
 #: contents/ui/AlbumPage.qml:96 contents/ui/ArtistPage.qml:96
 #: contents/ui/PlaylistPage.qml:117
 #, kde-format
 msgid "Share"
-msgstr ""
+msgstr "Bendrinti"
 
 #: contents/ui/AlbumPage.qml:106
 #, kde-format
 msgid "Album • %1"
-msgstr ""
+msgstr "Albumas • %1"
 
 #: contents/ui/AlbumPage.qml:160 contents/ui/ArtistPage.qml:199
 #: contents/ui/LocalPlaylistPage.qml:168 contents/ui/PlaybackHistory.qml:195
 #: contents/ui/PlaylistPage.qml:189 contents/ui/SearchPage.qml:148
 #, kde-format
 msgid "More"
-msgstr ""
+msgstr "Daugiau"
 
 #: contents/ui/ArtistPage.qml:77
 #, kde-format
 msgid "Radio"
-msgstr ""
+msgstr "Radijas"
 
 #: contents/ui/ArtistPage.qml:105
 #, kde-format
 msgid "Artist"
-msgstr ""
+msgstr "Atlikėjas"
 
 #: contents/ui/ArtistPage.qml:129 contents/ui/SearchPage.qml:74
 #, kde-format
@@ -95,68 +98,70 @@ msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
 "\"%1\"?"
 msgstr ""
+"Vaizdo įrašo atkūrimas kol kas nepalaikomas. Ar norite atkurti tik „%1“ "
+"garso įrašą?"
 
 #: contents/ui/ArtistPage.qml:148 contents/ui/SearchPage.qml:28
 #, kde-format
 msgid "Albums"
-msgstr ""
+msgstr "Albumai"
 
 #: contents/ui/ArtistPage.qml:150
 #, kde-format
 msgid "Singles"
-msgstr ""
+msgstr "Singlai"
 
 #: contents/ui/ArtistPage.qml:152 contents/ui/SearchPage.qml:34
 #, kde-format
 msgid "Songs"
-msgstr ""
+msgstr "Dainos"
 
 #: contents/ui/ArtistPage.qml:154 contents/ui/SearchPage.qml:36
 #, kde-format
 msgid "Videos"
-msgstr ""
+msgstr "Vaizdo įrašai"
 
 #: contents/ui/ConfirmationMessage.qml:16
 #, kde-format
 msgid "OK"
-msgstr ""
+msgstr "Gerai"
 
 #: contents/ui/ConfirmationMessage.qml:21
 #, kde-format
 msgid "Cancel"
-msgstr ""
+msgstr "Atsisakyti"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:17
 #, kde-format
 msgid "Add playlist"
-msgstr ""
+msgstr "Pridėti grojaraštį"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:23
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:24
 #, kde-format
 msgid "Playlist Title"
-msgstr ""
+msgstr "Grojaraščio pavadinimas"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:28
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:30
 #, kde-format
 msgid "Playlist Description"
-msgstr ""
+msgstr "Grojaraščio aprašas"
 
 #: contents/ui/dialogs/ImportPlaylistDialog.qml:17
 #, kde-format
 msgid "Import playlist"
-msgstr ""
+msgstr "Importuoti grojaraštį"
 
 #: contents/ui/dialogs/ImportPlaylistDialog.qml:23
 #, kde-format
 msgid "Playlist URL (Youtube)"
-msgstr ""
+msgstr "Grojaraščio URL („Youtube“)"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:20
 #, kde-format
 msgid "Add Song to Playlist"
-msgstr ""
+msgstr "Pridėti dainą į grojaraštį"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:29
 #: contents/ui/LocalPlaylistsPage.qml:107
@@ -164,367 +169,367 @@ msgstr ""
 #: contents/ui/LocalPlaylistsPage.qml:151
 #, kde-format
 msgid "New Playlist"
-msgstr ""
+msgstr "Naujas grojaraštis"
 
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:18
 #, kde-format
 msgid "Rename playlist"
-msgstr ""
+msgstr "Pervadinti grojaraštį"
 
 #: contents/ui/LibraryPage.qml:32 contents/ui/LibraryPage.qml:135
 #: contents/ui/NavigationBar.qml:47 contents/ui/NavigationBar.qml:53
 #: contents/ui/Sidebar.qml:138 contents/ui/Sidebar.qml:143
 #, kde-format
 msgid "Favourites"
-msgstr ""
+msgstr "Mėgstamos"
 
 #: contents/ui/LibraryPage.qml:130 contents/ui/LibraryPage.qml:322
 #: contents/ui/LibraryPage.qml:421
 #, kde-format
 msgid "Show All"
-msgstr ""
+msgstr "Rodyti visas"
 
 #: contents/ui/LibraryPage.qml:160
 #, kde-format
 msgid "No Favourites Yet"
-msgstr ""
+msgstr "Kol kas mėgstamų nėra"
 
 #: contents/ui/LibraryPage.qml:228
 #, kde-format
 msgid "Most played"
-msgstr ""
+msgstr "Dažniausiai atkurtos"
 
 #: contents/ui/LibraryPage.qml:327 contents/ui/NavigationBar.qml:60
 #: contents/ui/NavigationBar.qml:66 contents/ui/Sidebar.qml:159
 #: contents/ui/Sidebar.qml:164
 #, kde-format
 msgid "Played Songs"
-msgstr ""
+msgstr "Atkurtos dainos"
 
 #: contents/ui/LibraryPage.qml:352
 #, kde-format
 msgid "No Songs Played Yet"
-msgstr ""
+msgstr "Kol kas nėra atkurtų dainų"
 
 #: contents/ui/LibraryPage.qml:409 contents/ui/LocalPlaylistsPage.qml:20
 #: contents/ui/LocalPlaylistsPage.qml:84 contents/ui/NavigationBar.qml:74
 #: contents/ui/SearchPage.qml:32 contents/ui/Sidebar.qml:179
 #, kde-format
 msgid "Playlists"
-msgstr ""
+msgstr "Grojaraščiai"
 
 #: contents/ui/LibraryPage.qml:448
 #, kde-format
 msgid "No Playlists Yet"
-msgstr ""
+msgstr "Kol kas grojaraščių nėra"
 
 #: contents/ui/LibraryPage.qml:471 contents/ui/LibraryPage.qml:493
 #: contents/ui/LocalPlaylistsPage.qml:38 contents/ui/LocalPlaylistsPage.qml:60
 #, kde-format
 msgid "Rename"
-msgstr ""
+msgstr "Pervadinti"
 
 #: contents/ui/LibraryPage.qml:480 contents/ui/LibraryPage.qml:501
 #: contents/ui/LocalPlaylistsPage.qml:47 contents/ui/LocalPlaylistsPage.qml:68
 #, kde-format
 msgid "Delete"
-msgstr ""
+msgstr "Ištrinti"
 
 #: contents/ui/LocalPlaylistPage.qml:22
 #, kde-format
 msgid "Remove from Playlist"
-msgstr ""
+msgstr "Šalinti iš grojaraščio"
 
 #: contents/ui/LocalPlaylistPage.qml:80
 #, kde-format
 msgid "This playlist is still empty"
-msgstr ""
+msgstr "Šis grojaraštis yra vis dar tuščias"
 
 #: contents/ui/LocalPlaylistsPage.qml:115
 #: contents/ui/LocalPlaylistsPage.qml:138
 #: contents/ui/LocalPlaylistsPage.qml:156 contents/ui/PlaylistPage.qml:107
 #, kde-format
 msgid "Import Playlist"
-msgstr ""
+msgstr "Importuoti grojaraštį"
 
 #: contents/ui/main.qml:127 main.cpp:72
 #, kde-format
 msgid "AudioTube"
-msgstr ""
+msgstr "AudioTube"
 
 #: contents/ui/main.qml:280
 #, kde-format
 msgid "No song playing"
-msgstr ""
+msgstr "Neatkuriama jokia daina"
 
 #: contents/ui/MaximizedPlayerPage.qml:100
 #, kde-format
 msgid "Close Maximized Player"
-msgstr ""
+msgstr "Užverti išskleistą grotuvą"
 
 #: contents/ui/MaximizedPlayerPage.qml:206
 #: contents/ui/MinimizedPlayerControls.qml:113
 #, kde-format
 msgid "No media playing"
-msgstr ""
+msgstr "Neatkuriama jokia medija"
 
 #: contents/ui/MaximizedPlayerPage.qml:429
 #, kde-format
 msgid "Remove from Favourites"
-msgstr ""
+msgstr "Šalinti iš mėgstamų"
 
 #: contents/ui/MaximizedPlayerPage.qml:429
 #, kde-format
 msgid "Add to Favourites"
-msgstr ""
+msgstr "Pridėti į mėgstamas"
 
 #: contents/ui/MaximizedPlayerPage.qml:454
 #, kde-format
 msgid "Open Volume Drawer"
-msgstr ""
+msgstr "Atverti garsumo stalčių"
 
 #: contents/ui/MaximizedPlayerPage.qml:563
 #, kde-format
 msgid "Unmute Audio"
-msgstr ""
+msgstr "Įjungti garso įrašo garsą"
 
 #: contents/ui/MaximizedPlayerPage.qml:563
 #, kde-format
 msgid "Mute Audio"
-msgstr ""
+msgstr "Nutildyti garso įrašą"
 
 #: contents/ui/MaximizedPlayerPage.qml:602
 #, kde-format
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: contents/ui/MaximizedPlayerPage.qml:632
 #, kde-format
 msgid "Hide Lyrics"
-msgstr ""
+msgstr "Slėpti dainos žodžius"
 
 #: contents/ui/MaximizedPlayerPage.qml:632
 #, kde-format
 msgid "Show Lyrics"
-msgstr ""
+msgstr "Rodyti dainos žodžius"
 
 #: contents/ui/MaximizedPlayerPage.qml:652 contents/ui/SongMenu.qml:195
 #: contents/ui/SongMenu.qml:281
 #, kde-format
 msgid "Share Song"
-msgstr ""
+msgstr "Bendrinti dainą"
 
 #: contents/ui/MaximizedPlayerPage.qml:693
 #, kde-format
 msgid "Add to a local playlist"
-msgstr ""
+msgstr "Pridėti į vietinį grojaraštį"
 
 #: contents/ui/MaximizedPlayerPage.qml:730
 #, kde-format
 msgid "Hide Queue"
-msgstr ""
+msgstr "Slėpti eilę"
 
 #: contents/ui/MaximizedPlayerPage.qml:730
 #, kde-format
 msgid "Show Queue"
-msgstr ""
+msgstr "Rodyti eilę"
 
 #: contents/ui/MaximizedPlayerPage.qml:953
 #: contents/ui/MaximizedPlayerPage.qml:1193
 #, kde-format
 msgid "Remove Track"
-msgstr ""
+msgstr "Šalinti takelį"
 
 #: contents/ui/MaximizedPlayerPage.qml:988
 #, kde-format
 msgid "Clear Queue"
-msgstr ""
+msgstr "Išvalyti eilę"
 
 #: contents/ui/MaximizedPlayerPage.qml:1013
 #, kde-format
 msgid "Shuffle Queue"
-msgstr ""
+msgstr "Maišyti eilę"
 
 #: contents/ui/MaximizedPlayerPage.qml:1046
 #, kde-format
 msgid "Upcoming Songs"
-msgstr ""
+msgstr "Artėjančios dainos"
 
 #: contents/ui/NavigationBar.qml:23 contents/ui/Sidebar.qml:108
 #, kde-format
 msgid "Library"
-msgstr ""
+msgstr "Biblioteka"
 
 #: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:119
 #, kde-format
 msgid "Search"
-msgstr ""
+msgstr "Paieška"
 
 #: contents/ui/PlaybackHistory.qml:17
 #, kde-format
 msgid "Unknown list of songs"
-msgstr ""
+msgstr "Nežinomas dainų sąrašas"
 
 #: contents/ui/PlaybackHistory.qml:135
 #, kde-format
 msgid "No songs here yet"
-msgstr ""
+msgstr "Kol kas čia dainų nėra"
 
 #: contents/ui/PlaylistPage.qml:76
 #, kde-format
 msgid "Playlist successfully imported"
-msgstr ""
+msgstr "Grojaraštis sėkmingai importuotas"
 
 #: contents/ui/PlaylistPage.qml:128
 #, kde-format
 msgid "Playlist"
-msgstr ""
+msgstr "Grojaraštis"
 
 #: contents/ui/SearchHistoryPage.qml:82 contents/ui/SearchWithDropdown.qml:394
 #, kde-format
 msgid "remove from search history"
-msgstr ""
+msgstr "šalinti iš paieškos istorijos"
 
 #: contents/ui/SearchPage.qml:16
 #, kde-format
 msgid "Previous Searches:"
-msgstr ""
+msgstr "Ankstesnės paieškos:"
 
 #: contents/ui/SearchPage.qml:30
 #, kde-format
 msgid "Artists"
-msgstr ""
+msgstr "Atlikėjai"
 
 #: contents/ui/SearchPage.qml:38
 #, kde-format
 msgid "Top Results"
-msgstr ""
+msgstr "Populiariausi rezultatai"
 
 #: contents/ui/SearchPage.qml:41 playlistimporter.cpp:22
 #, kde-format
 msgid "Unknown"
-msgstr ""
+msgstr "Nežinoma"
 
 #: contents/ui/SearchWithDropdown.qml:340
 #, kde-format
 msgid "No matching previous searches"
-msgstr ""
+msgstr "Nėra atitinkančių ankstesnių paieškų"
 
 #: contents/ui/ShareMenu.qml:41
 #, kde-format
 msgid "Share to"
-msgstr ""
+msgstr "Bendrinti į"
 
 #: contents/ui/ShareMenu.qml:49 contents/ui/ShareMenu.qml:102
 #, kde-format
 msgid "Copy Link"
-msgstr ""
+msgstr "Kopijuoti nuorodą"
 
 #: contents/ui/ShareMenu.qml:54 contents/ui/ShareMenu.qml:107
 #, kde-format
 msgid "Link copied to clipboard"
-msgstr ""
+msgstr "Nuoroda nukopijuota į iškarpinę"
 
 #: contents/ui/Sidebar.qml:200
 #, kde-format
 msgid "About"
-msgstr ""
+msgstr "Apie"
 
 #: contents/ui/Sidebar.qml:214
 #, kde-format
 msgid "Collapse Sidebar"
-msgstr ""
+msgstr "Suskleisti šoninę juostą"
 
 #: contents/ui/SongMenu.qml:108 contents/ui/SongMenu.qml:217
 #, kde-format
 msgid "Play Next"
-msgstr ""
+msgstr "Atkurti kitą"
 
 #: contents/ui/SongMenu.qml:118 contents/ui/SongMenu.qml:223
 #, kde-format
 msgid "Add to queue"
-msgstr ""
+msgstr "Pridėti į eilę"
 
 #: contents/ui/SongMenu.qml:130 contents/ui/SongMenu.qml:233
 #, kde-format
 msgid "Remove Favourite"
-msgstr ""
+msgstr "Šalinti mėgstamą"
 
 #: contents/ui/SongMenu.qml:130 contents/ui/SongMenu.qml:233
 #, kde-format
 msgid "Add Favourite"
-msgstr ""
+msgstr "Pridėti mėgstamą"
 
 #: contents/ui/SongMenu.qml:149 contents/ui/SongMenu.qml:247
 #, kde-format
 msgid "Remove from History"
-msgstr ""
+msgstr "Šalinti iš istorijos"
 
 #: contents/ui/SongMenu.qml:164 contents/ui/SongMenu.qml:256
 #, kde-format
 msgid "Add to playlist"
-msgstr ""
+msgstr "Pridėti į grojaraštį"
 
 #: main.cpp:74
 #, kde-format
 msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Stream music from YouTube Music"
-msgstr ""
+msgstr "Transliuoti muziką iš „YouTube Music“"
 
 #: main.cpp:76
 #, kde-format
 msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
-msgstr ""
+msgstr "© 2021–2023 Jonah Brüchert, 2021–2023 KDE bendruomenė"
 
 #: main.cpp:77
 #, kde-format
 msgid "Jonah Brüchert"
-msgstr ""
+msgstr "Jonah Brüchert"
 
 #: main.cpp:77
 #, kde-format
 msgid "Maintainer"
-msgstr ""
+msgstr "Prižiūrėtojas"
 
 #: main.cpp:78
 #, kde-format
 msgid "Mathis Brüchert"
-msgstr ""
+msgstr "Mathis Brüchert"
 
 #: main.cpp:78
 #, kde-format
 msgid "Designer"
-msgstr ""
+msgstr "Dizaineris"
 
 #: main.cpp:79
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr ""
+msgstr "Moo"
 
 #: main.cpp:79
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr ""
+msgstr "<>"
 
 #: main.cpp:86
 #, kde-format
 msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Unofficial API for YouTube Music"
-msgstr ""
+msgstr "Neoficialus API, skirtas „YouTube Music“"
 
 #: playlistimporter.cpp:22
 #, kde-format
 msgid "No description"
-msgstr ""
+msgstr "Nėra aprašo"
 
 #: playlistimporter.cpp:56
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "Nėra pavadinimo"
 
 #: playlistimporter.cpp:58
 #, kde-format
 msgid "No album"
-msgstr ""
+msgstr "Nėra albumo"
