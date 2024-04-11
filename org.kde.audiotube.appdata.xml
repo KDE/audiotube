@@ -27,6 +27,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="it">AudioTube</name>
   <name xml:lang="ka">AudioTube</name>
   <name xml:lang="ko">AudioTube</name>
+  <name xml:lang="lt">AudioTube</name>
   <name xml:lang="nl">AudioTube</name>
   <name xml:lang="nn">AudioTube</name>
   <name xml:lang="pa">ਆਡੀਓ-ਟਿਊਬ</name>
@@ -57,6 +58,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="ja">スマホやデスクトップ PC 用の YouTube Music アプリ</summary>
   <summary xml:lang="ka">YouTube-ის მუსიკის აპი ტელეფონებისთვის და კომპიუტერებისთვის</summary>
   <summary xml:lang="ko">휴대폰과 컴퓨터용 YouTube Music 앱</summary>
+  <summary xml:lang="lt">„YouTube Music“ programa telefonams ir kompiuteriams</summary>
   <summary xml:lang="nl">Toepassing voor YouTube Music voor telefoons en bureaubladcomputers</summary>
   <summary xml:lang="pl">Aplikacja do Muzyki z YouTube dla telefonów i komputerów biurkowych</summary>
   <summary xml:lang="pt-BR">Aplicativo do YouTube Music para celulares e computadores</summary>
@@ -176,6 +178,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="ja">AudioTube は、YouTube Music を検索してアルバムやアーティストの一覧を表示、アルバムや自動生成された再生リストを再生したり独自の再生りストを作成できます。</p>
     <p xml:lang="ka">AudioTube -ს შეუძლია მოძებნოს მუსიკა YouTube-ზე, გაჩვენოთ ალბომებისა და შემსრულებლების სია, დაუკრას დაგენერირებული დასაკრავი სიები, ალბომები და საშუალებას გაძლევთ, თქვენი დასაკრავი სია შექმნათ.</p>
     <p xml:lang="ko">AudioTube는 YouTube Music을 검색하고, 앨범과 아티스트를 표시하고, 자동 생성된 재생 목록, 앨범을 재생하고, 사용자 정의 재생 목록을 만들 수 있습니다.</p>
+    <p xml:lang="lt">AudioTube gali atlikti paiešką „YouTube Music“, išvardyti albumus ir atlikėjus, atkurti automatiškai sugeneruotus grojaraščius, albumus ir leidžia sudaryti savo asmeninį grojaraštį.</p>
     <p xml:lang="nl">AudioTube kan in YouTube Music zoeken, een lijst maken van albums en artiesten, automatically gegenereerde afspeellijsten, albums afspelen en biedt u het samenstellen van uw eigen afspeellijst.</p>
     <p xml:lang="nn">Med AudioTube kan du søkja på YouTube Music, visa album og artistar, spela automatiske genererte spelelister og album samt laga eigne spelelister.</p>
     <p xml:lang="pl">AudioTube może przeszukiwać serwis YouTube Music, wypisać albumy i wykonawców, odtwarzać samoczynnie utworzone listy odtwarzania, albumy oraz umożliwia tworzenie własnych list odtwarzania.</p>
