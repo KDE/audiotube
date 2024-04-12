@@ -44,7 +44,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="x-test">xxAudioTubexx</name>
   <name xml:lang="zh-CN">AudioTube</name>
   <name xml:lang="zh-TW">AudioTube</name>
-  <summary>YouTube Music App for phones and desktop computers</summary>
+  <summary>YouTube Music App</summary>
   <summary xml:lang="ca">Aplicació de YouTube Music per a telèfons i ordinadors d'escriptori</summary>
   <summary xml:lang="ca-valencia">Aplicació de YouTube Music per a telèfons i ordinadors d'escriptori</summary>
   <summary xml:lang="eo">YouTube Muzik-Apo por aptelefonoj kaj komputiloj</summary>
@@ -157,7 +157,7 @@ SPDX-License-Identifier: CC0-1.0
     <control>touch</control>
   </recommends>
   <description>
-    <p>AudioTube can search YouTube Music, list albums and artists, play automatically generated playlists, albums and allows to put your own playlist together.</p>
+    <p>AudioTube can search YouTube Music, list albums and artists, play automatically generated playlists, albums and allows to put your own playlist together. It is adapted to mobile phones and desktop computers.</p>
     <p xml:lang="ar">يمكن لتيوب الصوتي البحث في موسيقى يوتيوب، وعرض الألبومات والفنانين، وتشغيل القوائم والألبومات المولدة تلقائيًا، ويسمح لك بوضع قائمة التشغيل الخاصة بك معًا.</p>
     <p xml:lang="az">AudioTube YouTube Musiqi, albomların və ifaçıların siyahısı üzrə axtarış etməyə, yaradılmış mahnı siyahısı və albomları avtomatik oxutmağa və öz mahnı siyahınızı yaratmağa imkan verir.</p>
     <p xml:lang="ca">L'AudioTube pot cercar música a YouTube, llistar àlbums i artistes, reproduir llistes de reproducció generades automàticament, àlbums i permet crear la vostra pròpia llista de reproducció.</p>
@@ -193,4 +193,8 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="zh-CN">AudioTube 可以搜索 YouTube Music 的内容，列出专辑和艺人，播放自动生成的播放列表，还可以自行制作播放列表。</p>
     <p xml:lang="zh-TW">AudioTube 可以搜尋 YouTube Music、列出專輯與藝人、播放專輯或自動產生的播放清單，也讓您建立自己的播放清單。</p>
   </description>
+  <branding>
+    <color type="primary" scheme_preference="light">#f19a9a</color>
+    <color type="primary" scheme_preference="dark">#5a0c0c</color>
+  </branding>
 </component>
