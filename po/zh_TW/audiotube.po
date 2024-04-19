@@ -4,13 +4,13 @@
 # This file is distributed under the same license as the audiotube package.
 #
 # Automatically generated, 2022.
-# Kisaragi Hiu <mail@kisaragi-hiu.com>, 2023.
+# SPDX-FileCopyrightText: 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-07 00:38+0000\n"
-"PO-Revision-Date: 2023-12-15 20:37+0900\n"
+"PO-Revision-Date: 2024-04-19 02:24+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.01.80\n"
+"X-Generator: Lokalize 24.04.70\n"
 
 #: asyncytmusic.cpp:65
 #, kde-format
@@ -475,10 +475,9 @@ msgid "Stream music from YouTube Music"
 msgstr "從 YouTube Music 串流播放音樂"
 
 #: main.cpp:76
-#, fuzzy, kde-format
-#| msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
+#, kde-format
 msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
-msgstr "© 2021-2023 Jonah Brüchert, 2021-2023 KDE 社群"
+msgstr "© 2021-2024 Jonah Brüchert, 2021-2024 KDE 社群"
 
 #: main.cpp:77
 #, kde-format
