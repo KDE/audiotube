@@ -8,7 +8,6 @@ SPDX-License-Identifier: CC0-1.0
   <id>org.kde.audiotube</id>
   <name>AudioTube</name>
   <name xml:lang="ar">تيوب الصوتي</name>
-  <name xml:lang="ast">AudioTube</name>
   <name xml:lang="az">AudioTube</name>
   <name xml:lang="ca">AudioTube</name>
   <name xml:lang="ca-valencia">AudioTube</name>
@@ -21,7 +20,6 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="fi">AudioTube</name>
   <name xml:lang="fr">AudioTube</name>
   <name xml:lang="gl">AudioTube</name>
-  <name xml:lang="he">AudioTube</name>
   <name xml:lang="hi">ओडियो-ट्यूब</name>
   <name xml:lang="hu">AudioTube</name>
   <name xml:lang="ia">AudioTube</name>
@@ -29,6 +27,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="it">AudioTube</name>
   <name xml:lang="ka">AudioTube</name>
   <name xml:lang="ko">AudioTube</name>
+  <name xml:lang="lt">AudioTube</name>
   <name xml:lang="nl">AudioTube</name>
   <name xml:lang="nn">AudioTube</name>
   <name xml:lang="pa">ਆਡੀਓ-ਟਿਊਬ</name>
@@ -48,19 +47,13 @@ SPDX-License-Identifier: CC0-1.0
   <summary>YouTube Music App</summary>
   <summary xml:lang="ca">Aplicació de música de YouTube</summary>
   <summary xml:lang="ca-valencia">Aplicació de música de YouTube</summary>
-  <summary xml:lang="eo">YouTube Muzik-Apo</summary>
   <summary xml:lang="es">Aplicación de música de YouTube</summary>
   <summary xml:lang="eu">YouTube Music aplikazioa</summary>
   <summary xml:lang="fr">Application de musique sur Youtube</summary>
-  <summary xml:lang="he">יישום YouTube Music</summary>
   <summary xml:lang="ia">App de Musica de YouTube (YouTube Music)</summary>
   <summary xml:lang="ka">YouTube-ის მუსიკის აპი</summary>
-  <summary xml:lang="nl">Muziektoepassing van YouTube</summary>
-  <summary xml:lang="pl">Aplikacja do Muzyki z YouTuba</summary>
-  <summary xml:lang="sl">Aplikacija za glasbo YouTube</summary>
-  <summary xml:lang="tr">YouTube Müzik Uygulaması</summary>
-  <summary xml:lang="uk">Музична програма для YouTube</summary>
-  <summary xml:lang="x-test">xxYouTube Music Appxx</summary>
+  <summary xml:lang="sk">Aplikácia YouTube Music</summary>
+  <summary xml:lang="sl">Glasbena aplikacija YouTube</summary>
   <summary xml:lang="zh-TW">YouTube Music 應用程式</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
@@ -153,19 +146,13 @@ SPDX-License-Identifier: CC0-1.0
     <p>AudioTube can search YouTube Music, list albums and artists, play automatically generated playlists, albums and allows to put your own playlist together. It is adapted to mobile phones and desktop computers.</p>
     <p xml:lang="ca">L'AudioTube pot cercar música a YouTube, llistar àlbums i artistes, reproduir llistes de reproducció generades automàticament, àlbums i permet crear la vostra pròpia llista de reproducció. Està adaptat als telèfons mòbils i els ordinadors de sobretaula.</p>
     <p xml:lang="ca-valencia">L'AudioTube pot buscar música a YouTube, llistar àlbums i artistes, reproduir llistes de reproducció generades automàticament, àlbums i permet crear la vostra pròpia llista de reproducció. Està adaptat als telèfons mòbils i els ordinadors de sobretaula.</p>
-    <p xml:lang="eo">AudioTube povas serĉi YouTube Music, listigi albumojn kaj artistojn, ludi aŭtomate generitajn ludlistojn, albumojn kaj permesas kunmeti vian propran ludliston. Ĝi estas adaptita al porteblaj telefonoj kaj labortablaj komputiloj.</p>
     <p xml:lang="es">AudioTube puede buscar música de YouTube, listar álbumes y artistas, reproducir las listas de reproducción generadas, álbumes y le permite crear su propia lista de reproducción. Está adaptada para teléfonos móviles y equipos de escritorio.</p>
     <p xml:lang="eu">«AudioTube»k «YouTube Music»en bilatu dezake, albumak eta artistak zerrendatu, automatikoki sortutako jotze-zerrendak eta albumak jo, eta zure jotze-zerrenda osatzeko aukera eskaintzen dizu. Telefono mugikorretarako eta mahaigaineko ordenagailuetarako moldatuta dago.</p>
     <p xml:lang="fr">L'application AudioTube peut rechercher des musiques, d'établir des listes d'albums et d'artistes, de lire des listes de lecture générées automatiquement. Elle permet aussi d'utiliser sa propre liste de lecture. Elle est adaptée aux téléphones mobiles et aux ordinateurs de bureau.</p>
-    <p xml:lang="he">AudioTube יכול לחפש ב־YouTube Music, להציג אלבומים ואומנים, לנגן רשימות נגינה ואלובומים שנוצרו אוטומטית, ומאפשר לך להרכיב רשימות נגינה משלך. הוא מותאם לטלפונים ניידים ולמחשבים.</p>
-    <p xml:lang="ia">AudioTube pote cercar in YouTube Music, listar albums e artistas, reproducer listas de reproduction generate automaticamente, albums e te permitte poner  tu proprie lista de reproduction insimul. Il es adaptate a telephonos mobile e computatiores de scriptorio.</p>
-    <p xml:lang="ka">AudioTube -ს შეუძლია მოძებნოს მუსიკა YouTube-ზე, გაჩვენოთ ალბომებისა და შემსრულებლების სია, დაუკრას დაგენერირებული დასაკრავი სიები, ალბომები და საშუალებას გაძლევთ, თქვენი დასაკრავი სია შექმნათ. ის მორგებულია მობილურ კომპიუტერებზე და ნოუთბუქებზე.</p>
-    <p xml:lang="nl">AudioTube kan in YouTube Music zoeken, een lijst maken van albums en artiesten, automatically gegenereerde afspeellijsten, albums afspelen en biedt u het samenstellen van uw eigen afspeellijst. Het is aangepast aan mobiele telefoons en bureaubladcomputers.</p>
-    <p xml:lang="pl">AudioTube może przeszukiwać serwis YouTube Music, wypisać albumy i wykonawców, odtwarzać samoczynnie utworzone listy odtwarzania, albumy oraz umożliwia tworzenie własnych list odtwarzania. Jest dostosowana do telefonów i komputerów.</p>
-    <p xml:lang="sl">AudioTube lahko išče YouTube Music, navaja albume in izvajalce, predvaja samodejno ustvarjene sezname predvajanja, albume in omogoča sestavljanje lastnega seznama predvajanja. Prilagojena je mobilnim telefonom in namiznim računalnikom.</p>
-    <p xml:lang="tr">AudioTube, YouTube Müzik’te arama yapabilir; albümleri, sanatçıları listeler; kendiliğinden oluşturulmuş çalma listelerini, albümleri çalar ve kendi çalma listenizi oluşturmanıza izin verir. Masaüstü bilgisayarlar ve cep telefonları için uyarlanmıştır.</p>
-    <p xml:lang="uk">AudioTube може виконувати пошук на YouTube Music, показувати списки альбомів та виконавців, відтворювати створені автоматично списки відтворення, альбоми та надає вам змогу створювати власні списки відтворення. Програму адаптовано до мобільних телефонів та робочих станцій.</p>
-    <p xml:lang="x-test">xxAudioTube can search YouTube Music, list albums and artists, play automatically generated playlists, albums and allows to put your own playlist together. It is adapted to mobile phones and desktop computers.xx</p>
+    <p xml:lang="ia">AudioTube pote cercar in YouTube Music, listar albums e artistas, reproducer listas de reproduction generate automaticamente, albums e te permitte poner  tu proprie lista de reproduction insimul. Il es adaptate a telephonos mobile e computatores de scriptorio.</p>
+    <p xml:lang="ka">AudioTube -ს შეუძლია მოძებნოს მუსიკა YouTube-ზე, გაჩვენოთ ალბომებისა და შემსრულებლების სია, დაუკრას დაგენერირებული დასაკრავი სიები, ალბომები და საშუალებას გაძლევთ, თქვენი დასაკრავი სია შექმნათ. ადაპტირებულია კომპიუტერებისა და მობილური ტელეფონებისათვის.</p>
+    <p xml:lang="sk">AudioTube dokáže vyhľadávať v službe YouTube Music, uvádzať albumy a interpretov, prehrávať automaticky generované zoznamy skladieb, albumy a umožňuje zostaviť vlastný zoznam skladieb. Je prispôsobený pre mobilné telefóny a stolové počítače.</p>
+    <p xml:lang="sl">AudioTube lahko išče po YouTube Music, izdela sezname albumov in avtorjev, samodejno predvaja generirane sezname predvajanja, albume in sestavlja vaše sezname predvajanja. Prilagojen je za mobilne telefone in namizne računalnike.</p>
     <p xml:lang="zh-TW">AudioTube 可以搜尋 YouTube Music、列出專輯與藝人、播放專輯或自動產生的播放清單，也讓您建立自己的播放清單。它同時設計給行動裝置與桌面電腦使用。</p>
   </description>
   <branding>
