@@ -17,8 +17,8 @@
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/c2/e7/a82b05cf63a603df6e68d59ae6a68bf5064484a0718ea5033660af4b54a9/idna-3.6-py3-none-any.whl",
-            "sha256": "c05567e9c24a6b9faaa835c4821bad0590fbb9d5779e7caa6e1cc4978e7eb24f"
+            "url": "https://files.pythonhosted.org/packages/e5/3e/741d8c82801c347547f8a2a06aa57dbb1992be9e948df2ea0eda2c8b79e8/idna-3.7-py3-none-any.whl",
+            "sha256": "82fee1fc78add43492d3a1898bfa6d8a904cc97d8427f683ed8e798d07761aa0"
         },
         {
             "type": "file",
@@ -32,8 +32,8 @@
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/95/17/8230747a92a678562e031c3512b33e8eb2a9b9b09dd5a77f34035226ff58/ytmusicapi-1.6.0-py3-none-any.whl",
-            "sha256": "0484bd491a8292d447636f88eb15460ac1b71d57b1c5b2ef5d0db99294598cd8"
+            "url": "https://files.pythonhosted.org/packages/48/cd/526b32387ed807ed088364a7a1e36815ace01f2b1f15fe3a33ef5b5c8d8f/ytmusicapi-1.7.0-py3-none-any.whl",
+            "sha256": "fbbd1f64e22c6466943b0fe8390766232c115f9e2a73a33a3a84251b0feaf49b"
         }
     ]
 }
