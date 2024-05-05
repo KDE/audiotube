@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-07 00:38+0000\n"
-"PO-Revision-Date: 2024-04-07 17:09+0100\n"
+"PO-Revision-Date: 2024-05-04 23:30+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -285,7 +285,7 @@ msgstr "Aldoni al Favoritoj"
 #: contents/ui/MaximizedPlayerPage.qml:458
 #, kde-format
 msgid "Open Volume Drawer"
-msgstr "Malfermi Voluman Keston"
+msgstr "Malfermi Laŭteckeston"
 
 #: contents/ui/MaximizedPlayerPage.qml:568
 #, kde-format
