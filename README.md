@@ -16,6 +16,9 @@ It depends on Qt, Kirigami, KI18n, KCoreAddons and KCrash in addition to a few p
 
 YouTube uses webp images for the cover art, so you will need to install qtimageformats.
 
+The default QtMultimedia ffmpeg backend is not able to continuously stream from YouTube,
+so AudioTube requires the gstreamer backend.
+
 # Troubleshooting
 
 AudioTube only needs Python 3. If cmake still selects Python 2, you can pass `-DPYTHON_EXECUTABLE=/usr/bin/python3` to correct that.
