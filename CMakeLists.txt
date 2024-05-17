@@ -48,6 +48,10 @@ find_package(KF6KirigamiAddons 0.11.0 REQUIRED)
 find_package(FutureSQL6 REQUIRED)
 find_package(QCoro6 0.10.0 REQUIRED COMPONENTS Core)
 
+if(NOT TARGET Qt6::QGstreamerMediaPlugin)
+  message(FATAL_ERROR "QtMultimedia gstreamer backend not found. AudioTube only works with the gstreamer backend.")
+endif()
+
 ki18n_install(po)
 
 add_subdirectory(src)
