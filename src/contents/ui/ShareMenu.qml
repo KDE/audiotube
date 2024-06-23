@@ -62,15 +62,16 @@ Item{
                 clip: true
 
                 delegate: Controls.ItemDelegate {
-                    onClicked: view.createJob (shareDelegate.index)
+                    id: shareDelegate
+
+                    required property string iconName
+                    required property int index
+                    required property string actionDisplay
+
+                    onClicked: view.createJob(shareDelegate.index)
+                    width: parent.width
 
                     contentItem: KirigamiDelegates.IconTitleSubtitle {
-                        id: shareDelegate
-
-                        required property string iconName
-                        required property int index
-                        required property string actionDisplay
-
                         title: shareDelegate.actionDisplay
                         Keys.onReturnPressed: view.createJob (shareDelegate.index)
                         Keys.onEnterPressed: view.createJob (shareDelegate.index)
@@ -113,25 +114,29 @@ Item{
                 clip: true
                 Layout.fillHeight: true
                 Layout.fillWidth: true
-                delegate: KirigamiDelegates.SubtitleDelegate {
+                delegate: Controls.ItemDelegate {
                     id: shareDrawerDelegate
 
                     required property string iconName
                     required property int index
+                    required property string actionDisplay
 
-                    text: shareDrawerDelegate.display
-                    onClicked: drawerView.createJob (shareDrawerDelegate.index)
-                    Keys.onReturnPressed: view.createJob (shareDrawerDelegate.index)
-                    Keys.onEnterPressed: view.createJob (shareDrawerDelegate.index)
-                    icon.name: shareDrawerDelegate.iconName
+                    onClicked: view.createJob(shareDelegate.index)
+                    width: parent.width
 
-                    Kirigami.Icon {
-                        implicitWidth: Kirigami.Units.iconSizes.small
-                        implicitHeight: Kirigami.Units.iconSizes.small
-                        source: "arrow-right"
+                    contentItem: KirigamiDelegates.IconTitleSubtitle {
+                        title: shareDrawerDelegate.actionDisplay
+                        Keys.onReturnPressed: view.createJob (shareDrawerDelegate.index)
+                        Keys.onEnterPressed: view.createJob (shareDrawerDelegate.index)
+                        icon.name: shareDrawerDelegate.iconName
+
+                        Kirigami.Icon {
+                            implicitWidth: Kirigami.Units.iconSizes.small
+                            implicitHeight: Kirigami.Units.iconSizes.small
+                            source: "arrow-right"
+                        }
                     }
                 }
-
                 onFinished: inputDrawer.close()
             }
 
