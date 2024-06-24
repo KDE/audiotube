@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-07 00:38+0000\n"
+"POT-Creation-Date: 2024-06-24 00:38+0000\n"
 "PO-Revision-Date: 2024-04-07 08:33+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian\n"
@@ -419,12 +419,12 @@ msgstr "Немає відповідних попередніх пошуків"
 msgid "Share to"
 msgstr "Оприлюднити"
 
-#: contents/ui/ShareMenu.qml:49 contents/ui/ShareMenu.qml:102
+#: contents/ui/ShareMenu.qml:49 contents/ui/ShareMenu.qml:103
 #, kde-format
 msgid "Copy Link"
 msgstr "Копіювати посилання"
 
-#: contents/ui/ShareMenu.qml:54 contents/ui/ShareMenu.qml:107
+#: contents/ui/ShareMenu.qml:54 contents/ui/ShareMenu.qml:108
 #, kde-format
 msgid "Link copied to clipboard"
 msgstr "Посилання скопійовано до буфера обміну"

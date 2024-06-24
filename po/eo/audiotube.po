@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-07 00:38+0000\n"
+"POT-Creation-Date: 2024-06-24 00:38+0000\n"
 "PO-Revision-Date: 2024-05-04 23:30+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -419,12 +419,12 @@ msgstr "Neniuj kongruaj antaŭaj serĉoj"
 msgid "Share to"
 msgstr "Kunhavigi al"
 
-#: contents/ui/ShareMenu.qml:49 contents/ui/ShareMenu.qml:102
+#: contents/ui/ShareMenu.qml:49 contents/ui/ShareMenu.qml:103
 #, kde-format
 msgid "Copy Link"
 msgstr "Kopii Ligilon"
 
-#: contents/ui/ShareMenu.qml:54 contents/ui/ShareMenu.qml:107
+#: contents/ui/ShareMenu.qml:54 contents/ui/ShareMenu.qml:108
 #, kde-format
 msgid "Link copied to clipboard"
 msgstr "Ligilo kopiita al tondujo"
