@@ -11,18 +11,18 @@ import org.kde.ytmusic 1.0
 import ".."
 
 
-Kirigami.PromptDialog {
+Kirigami.Dialog {
     id: playlistsDialog
-    contentLeftPadding:0
-    contentRightPadding:0
-    contentTopPadding:0
-    contentBottomPadding:0
-    title:i18n("Add Song to Playlist")
+
+    title: i18n("Add Song to Playlist")
+
+    preferredWidth: Kirigami.Units.gridUnit * 16
 
     property string videoId
     property string songTitle
     property string artists
     property string album: ""
+
     standardButtons: Kirigami.Dialog.NoButton
     customFooterActions: [
         Kirigami.Action {
@@ -34,18 +34,15 @@ Kirigami.PromptDialog {
         }
     ]
 
-    Item {
-        AddPlaylistDialog {
-            id: addPlaylistDialog
-            model: localPlaylistsModel
-        }
-        ImportPlaylistDialog {
-            id: importPlaylistDialog
-            model: localPlaylistsModel
-        }
-    }
+    ListView {
 
-    mainItem: ListView {
+        Item {
+            AddPlaylistDialog {
+                id: addPlaylistDialog
+                model: localPlaylistsModel
+            }
+        }
+
         reuseItems: true
 
         implicitHeight: 200
