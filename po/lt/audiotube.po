@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-24 00:38+0000\n"
+"POT-Creation-Date: 2024-06-26 00:38+0000\n"
 "PO-Revision-Date: 2024-04-09 12:04+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -158,7 +158,7 @@ msgstr "Importuoti grojaraštį"
 msgid "Playlist URL (Youtube)"
 msgstr "Grojaraščio URL („Youtube“)"
 
-#: contents/ui/dialogs/PlaylistDialog.qml:20
+#: contents/ui/dialogs/PlaylistDialog.qml:17
 #, kde-format
 msgid "Add Song to Playlist"
 msgstr "Pridėti dainą į grojaraštį"

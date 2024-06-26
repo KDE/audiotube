@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-24 00:38+0000\n"
+"POT-Creation-Date: 2024-06-26 00:38+0000\n"
 "PO-Revision-Date: 2023-11-22 18:45+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -155,7 +155,7 @@ msgstr "Tuo soittolista"
 msgid "Playlist URL (Youtube)"
 msgstr "Soittolistan verkko-osoite (Youtube)"
 
-#: contents/ui/dialogs/PlaylistDialog.qml:20
+#: contents/ui/dialogs/PlaylistDialog.qml:17
 #, kde-format
 msgid "Add Song to Playlist"
 msgstr "Lisää kappale soittolistaan"

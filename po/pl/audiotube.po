@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-24 00:38+0000\n"
+"POT-Creation-Date: 2024-06-26 00:38+0000\n"
 "PO-Revision-Date: 2024-04-13 18:52+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -157,7 +157,7 @@ msgstr "Zaimportuj listę odtwarzania"
 msgid "Playlist URL (Youtube)"
 msgstr "Adres URL listy odtwarzania (Youtube)"
 
-#: contents/ui/dialogs/PlaylistDialog.qml:20
+#: contents/ui/dialogs/PlaylistDialog.qml:17
 #, kde-format
 msgid "Add Song to Playlist"
 msgstr "Usuń do listy odtwarzania"
