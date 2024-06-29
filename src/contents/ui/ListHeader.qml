@@ -16,9 +16,10 @@ import org.kde.ytmusic 1.0
 
 
 Item {
-    id:root
+    id: root
+
     required property string imageSourceURL
-    property bool rounded : false
+    property bool rounded: false
     required property string title
     property string subtitle
     property list<Kirigami.Action> visibleActions
@@ -89,7 +90,6 @@ Item {
             Layout.rightMargin: 30
             Layout.fillWidth: true
 
-
             Controls.Label {
                 horizontalAlignment:  (root.width <= 500)? Qt.AlignHCenter: Qt.AlignLeft
                 Layout.fillWidth: true
@@ -97,14 +97,12 @@ Item {
                 font.bold: true
                 font.pixelSize: 22
                 elide: Qt.ElideRight
-
             }
             Controls.Label {
                 horizontalAlignment:  (root.width <= 500)? Qt.AlignHCenter: Qt.AlignLeft
                 Layout.fillWidth: true
                 text: subtitle
                 elide: Qt.ElideRight
-
             }
             RowLayout {
                 visible: root.visibleActions.length>0
@@ -146,31 +144,34 @@ Item {
                     drawerContentItem: ColumnLayout {
                         Repeater {
                             model: root.overflowActions
-                            delegate: KirigamiDelegates.SubtitleDelegate{
+
+                            delegate: Controls.ItemDelegate {
                                 required property var modelData
+
+                                Layout.fillWidth: true
                                 text: modelData.text
                                 icon.name: modelData.icon.name
                                 onClicked: {
                                     modelData.triggered()
                                     overflowDrawer.close()
                                     overflowDrawer.interactive = false
-
                                 }
                             }
                         }
-                        Item{
+                        Item {
                             Layout.fillHeight: true
                         }
-
                     }
                 }
                 Controls.RoundButton {
-                    onClicked: if (Kirigami.Settings.isMobile) {
-                                    overflowDrawer.open()
-                                    overflowDrawer.interactive = true
-                               } else {
-                                    overflowMenu.popup()
-                               }
+                    onClicked: {
+                        if (Kirigami.Settings.isMobile) {
+                            overflowDrawer.open()
+                            overflowDrawer.interactive = true
+                        } else {
+                            overflowMenu.popup()
+                        }
+                    }
                     visible: root.overflowActions.length > 0
                     icon.name: "overflow-menu"
                 }
