@@ -45,10 +45,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 
     // set default style and icon theme
     QIcon::setFallbackThemeName(QStringLiteral("breeze"));
-    if (qEnvironmentVariableIsEmpty("QT_QUICK_CONTROLS_STYLE") && QQuickStyle::name().isEmpty()) {
-        QQuickStyle::setStyle(QStringLiteral("org.kde.desktop"));
-        QApplication::setStyle(QStyleFactory::create(QStringLiteral("Breeze")));
-    }
+    QQuickStyle::setFallbackStyle("org.kde.desktop");
 
     // WORKAROUND: Force QtMultimedia gstreamer backend
     /*
