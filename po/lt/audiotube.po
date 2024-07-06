@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-26 00:38+0000\n"
+"POT-Creation-Date: 2024-07-06 00:38+0000\n"
 "PO-Revision-Date: 2024-04-09 12:04+0300\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -524,12 +524,12 @@ msgstr "Neoficialus API, skirtas „YouTube Music“"
 msgid "No description"
 msgstr "Nėra aprašo"
 
-#: playlistimporter.cpp:56
+#: playlistimporter.cpp:60
 #, kde-format
 msgid "No title"
 msgstr "Nėra pavadinimo"
 
-#: playlistimporter.cpp:58
+#: playlistimporter.cpp:62
 #, kde-format
 msgid "No album"
 msgstr "Nėra albumo"

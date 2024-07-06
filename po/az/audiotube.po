@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-06-26 00:38+0000\n"
+"POT-Creation-Date: 2024-07-06 00:38+0000\n"
 "PO-Revision-Date: 2022-06-19 12:16+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -550,12 +550,12 @@ msgstr "Musiqini YouTube Musiqi-də tapın"
 msgid "No description"
 msgstr "Mahnı siyahıları"
 
-#: playlistimporter.cpp:56
+#: playlistimporter.cpp:60
 #, kde-format
 msgid "No title"
 msgstr ""
 
-#: playlistimporter.cpp:58
+#: playlistimporter.cpp:62
 #, kde-format
 msgid "No album"
 msgstr ""
