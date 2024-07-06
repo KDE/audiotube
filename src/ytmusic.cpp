@@ -17,7 +17,8 @@ using namespace py::literals;
 /// Useful for debugging
 void pyPrintPretty(py::handle obj) {
     auto json = py::module::import("json");
-    py::print(json.attr("dumps")(obj, "indent"_a=py::int_(4)));
+    std::cerr << json.attr("dumps")(obj, "indent"_a=py::int_(4)).cast<std::string>() << std::endl;
+    std::flush(std::cerr);
 }
 
 #ifdef WIN32
@@ -185,6 +186,7 @@ watch::Playlist::Track extract_watch_track(py::handle track) {
 
 
 playlist::Track extract_playlist_track(py::handle track) {
+    pyPrintPretty(track);
     return {
         track["videoId"].cast<std::optional<std::string>>(),
         track["title"].cast<std::string>(),
@@ -462,13 +464,26 @@ std::optional<song::Song> YTMusic::get_song(const std::string &video_id) const
 playlist::Playlist YTMusic::get_playlist(const std::string &playlist_id, int limit) const
 {
     const auto playlist = d->get_ytmusic().attr("get_playlist")(playlist_id, limit);
+    pyPrintPretty(playlist);
 
     return {
         playlist["id"].cast<std::string>(),
         playlist["privacy"].cast<std::string>(),
         playlist["title"].cast<std::string>(),
-        extract_py_list<meta::Thumbnail>(playlist["thumbnails"]),
-        extract_meta_artist(playlist["author"]),
+        [&]() -> std::vector<meta::Thumbnail> {
+            if (playlist.contains("thumbnails")) {
+                return extract_py_list<meta::Thumbnail>(playlist["thumbnails"]);
+            } else {
+                return {};
+            }
+        }(),
+        [&]() -> std::optional<meta::Artist> {
+            if (playlist.contains("author")) {
+                return extract_meta_artist(playlist["author"]);
+            } else {
+                return {};
+            }
+        }(),
         optional_key<std::string>(playlist, "year"),
         playlist["duration"].cast<std::string>(),
         playlist["trackCount"].cast<int>(),

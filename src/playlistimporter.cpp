@@ -26,7 +26,11 @@ void PlaylistImporter::importPlaylist(const QString &url)
             Q_EMIT Library::instance().playlistsChanged();
 
             QCoro::connect(YTMusicThread::instance()->fetchPlaylist(croppedURL), this, [this, playlistId](auto &&playlist) {
-                this->renamePlaylist(playlistId, QString::fromStdString(playlist.title), QString::fromStdString(playlist.author.name));
+                QString author;
+                if (playlist.author) {
+                    author = QString::fromStdString(playlist.author->name);
+                }
+                this->renamePlaylist(playlistId, QString::fromStdString(playlist.title), author);
 
                 for (const auto& track : playlist.tracks) {
                     if (track.is_available && track.video_id) {

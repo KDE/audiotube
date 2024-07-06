@@ -226,7 +226,7 @@ struct Playlist {
     std::string privacy;
     std::string title;
     std::vector<meta::Thumbnail> thumbnails;
-    meta::Artist author;
+    std::optional<meta::Artist> author;
     std::optional<std::string> year;
     std::string duration;
     int track_count;
