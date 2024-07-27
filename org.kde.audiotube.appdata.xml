@@ -47,28 +47,6 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="zh-CN">AudioTube</name>
   <name xml:lang="zh-TW">AudioTube</name>
   <summary>YouTube Music app</summary>
-  <summary xml:lang="ca">Aplicació de música de YouTube</summary>
-  <summary xml:lang="ca-valencia">Aplicació de música de YouTube</summary>
-  <summary xml:lang="cs">Přehrávač hudby YouTube</summary>
-  <summary xml:lang="en-GB">YouTube Music App</summary>
-  <summary xml:lang="eo">YouTube Muzik-Apo</summary>
-  <summary xml:lang="es">Aplicación de música de YouTube</summary>
-  <summary xml:lang="eu">YouTube Music aplikazioa</summary>
-  <summary xml:lang="fr">Application de musique sur YouTube</summary>
-  <summary xml:lang="he">יישום YouTube Music</summary>
-  <summary xml:lang="hu">YouTube Music alkalmazás</summary>
-  <summary xml:lang="ia">App de Musica de YouTube (YouTube Music)</summary>
-  <summary xml:lang="it">Applicazione YouTube Music</summary>
-  <summary xml:lang="ka">YouTube-ის მუსიკის აპი</summary>
-  <summary xml:lang="lt">„YouTube Music“ programa</summary>
-  <summary xml:lang="nl">Muziektoepassing van YouTube</summary>
-  <summary xml:lang="pl">Aplikacja do Muzyki z YouTuba</summary>
-  <summary xml:lang="sl">Aplikacija za glasbo YouTube</summary>
-  <summary xml:lang="sv">YouTube musikprogram</summary>
-  <summary xml:lang="tr">YouTube Müzik Uygulaması</summary>
-  <summary xml:lang="uk">Музична програма для YouTube</summary>
-  <summary xml:lang="x-test">xxYouTube Music Appxx</summary>
-  <summary xml:lang="zh-TW">YouTube Music 應用程式</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <content_rating type="oars-1.0"/>
