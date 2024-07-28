@@ -47,6 +47,11 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="zh-CN">AudioTube</name>
   <name xml:lang="zh-TW">AudioTube</name>
   <summary>YouTube Music app</summary>
+  <summary xml:lang="ca">Aplicació de YouTube Music</summary>
+  <summary xml:lang="es">Aplicación de música de YouTube</summary>
+  <summary xml:lang="sl">Aplikacija za glasbo YouTube</summary>
+  <summary xml:lang="sv">YouTube musikprogram</summary>
+  <summary xml:lang="uk">Музична програма для YouTube</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <content_rating type="oars-1.0"/>
@@ -139,7 +144,7 @@ SPDX-License-Identifier: CC0-1.0
   </recommends>
   <description>
     <p>AudioTube can search YouTube Music, list albums and artists, play automatically generated playlists, albums and allows to put your own playlist together. It is adapted to mobile phones and desktop computers.</p>
-    <p xml:lang="ca">L'AudioTube pot cercar música a YouTube, llistar àlbums i artistes, reproduir llistes de reproducció generades automàticament, àlbums i permet crear la vostra pròpia llista de reproducció. Està adaptat als telèfons mòbils i els ordinadors de sobretaula.</p>
+    <p xml:lang="ca">L'AudioTube pot cercar a YouTube Music, llistar àlbums i artistes, reproduir llistes de reproducció generades automàticament, àlbums i permet crear la vostra pròpia llista de reproducció. Està adaptat als telèfons mòbils i els ordinadors de sobretaula.</p>
     <p xml:lang="ca-valencia">L'AudioTube pot buscar música a YouTube, llistar àlbums i artistes, reproduir llistes de reproducció generades automàticament, àlbums i permet crear la vostra pròpia llista de reproducció. Està adaptat als telèfons mòbils i els ordinadors de sobretaula.</p>
     <p xml:lang="en-GB">AudioTube can search YouTube Music, list albums and artists, play automatically generated playlists, albums and allows to put your own playlist together. It is adapted to mobile phones and desktop computers.</p>
     <p xml:lang="eo">AudioTube povas serĉi YouTube Music, listigi albumojn kaj artistojn, ludi aŭtomate generitajn ludlistojn, albumojn kaj permesas kunmeti vian propran ludliston. Ĝi estas adaptita al porteblaj telefonoj kaj labortablaj komputiloj.</p>
@@ -153,6 +158,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="ka">AudioTube -ს შეუძლია მოძებნოს მუსიკა YouTube-ზე, გაჩვენოთ ალბომებისა და შემსრულებლების სია, დაუკრას დაგენერირებული დასაკრავი სიები, ალბომები და საშუალებას გაძლევთ, თქვენი დასაკრავი სია შექმნათ. ის მორგებულია მობილურ კომპიუტერებზე და ნოუთბუქებზე.</p>
     <p xml:lang="lt">AudioTube gali atlikti paiešką „YouTube Music“, išvardyti albumus ir atlikėjus, atkurti automatiškai sugeneruotus grojaraščius, albumus ir leidžia sudaryti savo asmeninį grojaraštį. AudioTube yra pritaikyta kompiuteriams bei mobiliesiems telefonams.</p>
     <p xml:lang="nl">AudioTube kan in YouTube Music zoeken, een lijst maken van albums en artiesten, automatically gegenereerde afspeellijsten, albums afspelen en biedt u het samenstellen van uw eigen afspeellijst. Het is aangepast aan mobiele telefoons en bureaubladcomputers.</p>
+    <p xml:lang="nn">Med AudioTube kan du søkja på YouTube Music, visa album og artistar, spela automatiske genererte spelelister og album samt laga eigne spelelister. Programmet er tilpassa både mobiltelefonar og datamaskiner.</p>
     <p xml:lang="pl">AudioTube może przeszukiwać serwis YouTube Music, wypisać albumy i wykonawców, odtwarzać samoczynnie utworzone listy odtwarzania, albumy oraz umożliwia tworzenie własnych list odtwarzania. Jest dostosowana do telefonów i komputerów.</p>
     <p xml:lang="sl">AudioTube lahko išče YouTube Music, navaja albume in izvajalce, predvaja samodejno ustvarjene sezname predvajanja, albume in omogoča sestavljanje lastnega seznama predvajanja. Prilagojena je mobilnim telefonom in namiznim računalnikom.</p>
     <p xml:lang="sv">AudioTube kan söka på YouTube Music, lista album och artister, spela upp automatiskt genererade spellistor, album och låter dig sammanställa egna spellistor. Det är anpassat för mobiltelefoner och skrivbordsdatorer.</p>
