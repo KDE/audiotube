@@ -48,12 +48,16 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="zh-TW">AudioTube</name>
   <summary>YouTube Music app</summary>
   <summary xml:lang="ca">Aplicació de YouTube Music</summary>
+  <summary xml:lang="ca-valencia">Aplicació de YouTube Music</summary>
   <summary xml:lang="eo">YouTube Music-apo</summary>
   <summary xml:lang="es">Aplicación de música de YouTube</summary>
   <summary xml:lang="he">יישום YouTube Music</summary>
   <summary xml:lang="hu">YouTube Music alkalmazás</summary>
   <summary xml:lang="ka">YouTube Music-ის აპი</summary>
+  <summary xml:lang="lt">„YouTube Music“ programa</summary>
   <summary xml:lang="nl">Muziektoepassing van YouTube</summary>
+  <summary xml:lang="nn">YouTube Music-app</summary>
+  <summary xml:lang="pl">Aplikacja do muzyki z YouTuba</summary>
   <summary xml:lang="sl">Aplikacija za glasbo YouTube</summary>
   <summary xml:lang="sv">YouTube musikprogram</summary>
   <summary xml:lang="tr">YouTube Müzik Uygulaması</summary>
@@ -152,7 +156,7 @@ SPDX-License-Identifier: CC0-1.0
   <description>
     <p>AudioTube can search YouTube Music, list albums and artists, play automatically generated playlists, albums and allows to put your own playlist together. It is adapted to mobile phones and desktop computers.</p>
     <p xml:lang="ca">L'AudioTube pot cercar a YouTube Music, llistar àlbums i artistes, reproduir llistes de reproducció generades automàticament, àlbums i permet crear la vostra pròpia llista de reproducció. Està adaptat als telèfons mòbils i els ordinadors de sobretaula.</p>
-    <p xml:lang="ca-valencia">L'AudioTube pot buscar música a YouTube, llistar àlbums i artistes, reproduir llistes de reproducció generades automàticament, àlbums i permet crear la vostra pròpia llista de reproducció. Està adaptat als telèfons mòbils i els ordinadors de sobretaula.</p>
+    <p xml:lang="ca-valencia">AudioTube pot buscar a YouTube Music, llistar àlbums i artistes, reproduir llistes de reproducció generades automàticament, àlbums i permet crear la vostra pròpia llista de reproducció. Està adaptat als telèfons mòbils i els ordinadors de sobretaula.</p>
     <p xml:lang="en-GB">AudioTube can search YouTube Music, list albums and artists, play automatically generated playlists, albums and allows to put your own playlist together. It is adapted to mobile phones and desktop computers.</p>
     <p xml:lang="eo">AudioTube povas serĉi YouTube Music, listigi albumojn kaj artistojn, ludi aŭtomate generitajn ludlistojn, albumojn kaj permesas kunmeti vian propran ludliston. Ĝi estas adaptita al porteblaj telefonoj kaj labortablaj komputiloj.</p>
     <p xml:lang="es">AudioTube puede buscar música de YouTube, listar álbumes y artistas, reproducir las listas de reproducción generadas, álbumes y le permite crear su propia lista de reproducción. Está adaptada para teléfonos móviles y equipos de escritorio.</p>
