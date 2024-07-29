@@ -49,8 +49,10 @@ SPDX-License-Identifier: CC0-1.0
   <summary>YouTube Music app</summary>
   <summary xml:lang="ca">Aplicació de YouTube Music</summary>
   <summary xml:lang="es">Aplicación de música de YouTube</summary>
+  <summary xml:lang="hu">YouTube Music alkalmazás</summary>
   <summary xml:lang="sl">Aplikacija za glasbo YouTube</summary>
   <summary xml:lang="sv">YouTube musikprogram</summary>
+  <summary xml:lang="tr">YouTube Müzik Uygulaması</summary>
   <summary xml:lang="uk">Музична програма для YouTube</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
