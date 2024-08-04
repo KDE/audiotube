@@ -49,9 +49,13 @@ SPDX-License-Identifier: CC0-1.0
   <summary>YouTube Music app</summary>
   <summary xml:lang="ca">Aplicació de YouTube Music</summary>
   <summary xml:lang="ca-valencia">Aplicació de YouTube Music</summary>
+  <summary xml:lang="en-GB">YouTube Music app</summary>
   <summary xml:lang="es">Aplicación de música de YouTube</summary>
+  <summary xml:lang="eu">YouTube Music aplikazioa</summary>
+  <summary xml:lang="he">יישום YouTube Music</summary>
   <summary xml:lang="hu">YouTube Music alkalmazás</summary>
   <summary xml:lang="ia">App de Musica de YouTube (YouTube Music)</summary>
+  <summary xml:lang="it">Applicazione YouTube Music</summary>
   <summary xml:lang="ka">YouTube Music-ის აპი</summary>
   <summary xml:lang="lt">„YouTube Music“ programa</summary>
   <summary xml:lang="nn">YouTube Music-app</summary>
@@ -60,6 +64,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="sv">YouTube musikprogram</summary>
   <summary xml:lang="tr">YouTube Müzik Uygulaması</summary>
   <summary xml:lang="uk">Музична програма для YouTube</summary>
+  <summary xml:lang="zh-TW">YouTube Music 應用程式</summary>
   <metadata_license>CC0-1.0</metadata_license>
   <project_license>GPL-2.0+</project_license>
   <content_rating type="oars-1.0"/>
