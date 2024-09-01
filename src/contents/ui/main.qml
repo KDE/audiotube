@@ -9,6 +9,7 @@ import org.kde.kirigami as Kirigami
 import QtMultimedia
 
 import org.kde.ytmusic 1.0
+import org.kde.config as KConfig
 
 import org.nemomobile.qtmpris 1.0
 
@@ -29,6 +30,10 @@ Kirigami.ApplicationWindow {
     property alias searchField: searchLoader // TODO
     property bool wideScreen: width >= 600
     property bool showSearch: false // only applicable if not widescreen
+
+    KConfig.WindowStateSaver {
+        configGroupName: "Window"
+    }
 
     // so that there is still a separator, since the header style is none
     Kirigami.Separator {
