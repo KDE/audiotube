@@ -202,7 +202,7 @@ Rectangle {
             icon.name: "help-about-symbolic"
 
             onClicked: {
-                pageStack.pushDialogLayer("qrc:/AboutAudiotube.qml")
+                pageStack.pushDialogLayer(Qt.createComponent("org.kde.kirigamiaddons.formcard", "AboutPage").url)
             }
         }
 
