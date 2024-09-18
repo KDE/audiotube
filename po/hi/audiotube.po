@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-06 00:38+0000\n"
+"POT-Creation-Date: 2024-09-18 00:39+0000\n"
 "PO-Revision-Date: 2021-09-17 20:09+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -259,12 +259,12 @@ msgstr ""
 msgid "Import Playlist"
 msgstr "गीत-सूचीयाँ"
 
-#: contents/ui/main.qml:126 main.cpp:72
+#: contents/ui/main.qml:131 main.cpp:72
 #, kde-format
 msgid "AudioTube"
 msgstr "ओडियो-ट्यूब"
 
-#: contents/ui/main.qml:279
+#: contents/ui/main.qml:284
 #, fuzzy, kde-format
 #| msgid "No media playing"
 msgid "No song playing"

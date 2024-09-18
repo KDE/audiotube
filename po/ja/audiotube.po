@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-07-06 00:38+0000\n"
+"POT-Creation-Date: 2024-09-18 00:39+0000\n"
 "PO-Revision-Date: 2023-11-24 09:45+0900\n"
 "Last-Translator: maboroshin <pc.genkaku.in>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -248,12 +248,12 @@ msgstr "この再生リストはまだ曲が未登録"
 msgid "Import Playlist"
 msgstr "再生リストのインポート"
 
-#: contents/ui/main.qml:126 main.cpp:72
+#: contents/ui/main.qml:131 main.cpp:72
 #, kde-format
 msgid "AudioTube"
 msgstr ""
 
-#: contents/ui/main.qml:279
+#: contents/ui/main.qml:284
 #, kde-format
 msgid "No song playing"
 msgstr "再生中の曲なし"
