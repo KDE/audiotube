@@ -32,7 +32,7 @@ Kirigami.ApplicationWindow {
     property bool showSearch: false // only applicable if not widescreen
 
     KConfig.WindowStateSaver {
-        configGroupName: "Window"
+        configGroupName: "MainWindow"
     }
 
     // so that there is still a separator, since the header style is none
