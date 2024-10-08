@@ -1,23 +1,23 @@
-# Copyright (C) YEAR This file is copyright:
+# Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the audiotube package.
 # Burkhard Lück <lueck@hube-lueck.de>, 2021.
 # Frederik Schwarzer <schwarzer@kde.org>, 2021, 2022, 2023.
 # Frank Steinmetzger <dev-kde@felsenfleischer.de>, 2022.
-#
+# SPDX-FileCopyrightText: 2024 Johannes Obermayr <johannesobermayr@gmx.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-18 00:39+0000\n"
-"PO-Revision-Date: 2023-07-09 01:01+0200\n"
-"Last-Translator: Frederik Schwarzer <schwarzer@kde.org>\n"
+"PO-Revision-Date: 2024-10-06 13:11+0200\n"
+"Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 23.07.70\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #: asyncytmusic.cpp:65
 #, kde-format
@@ -25,6 +25,8 @@ msgid ""
 "Running with untested version of ytmusicapi %1. If you experience errors, "
 "please report them to your distribution."
 msgstr ""
+"Die nicht getestete Version %1 von ytmusicapi wird verwendet. Auftretende "
+"Fehler sind an die Distribution zu melden."
 
 #: contents/ui/AlbumPage.qml:71 contents/ui/LibraryPage.qml:39
 #: contents/ui/LibraryPage.qml:65 contents/ui/LibraryPage.qml:91
@@ -263,7 +265,7 @@ msgstr "Es wird kein Lied wiedergegeben"
 #: contents/ui/MaximizedPlayerPage.qml:99
 #, kde-format
 msgid "Close Maximized Player"
-msgstr ""
+msgstr "Maximierte Wiedergabe beenden"
 
 #: contents/ui/MaximizedPlayerPage.qml:206
 #: contents/ui/MinimizedPlayerControls.qml:112
@@ -469,17 +471,15 @@ msgid "Add to playlist"
 msgstr "Zur Wiedergabeliste hinzufügen"
 
 #: main.cpp:74
-#, fuzzy, kde-format
-#| msgid "Unofficial API for YouTube Music"
+#, kde-format
 msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Stream music from YouTube Music"
-msgstr "Inoffizielle API für Musik auf YouTube"
+msgstr "Musik von YouTube Music streamen"
 
 #: main.cpp:76
-#, fuzzy, kde-format
-#| msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
+#, kde-format
 msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
-msgstr "Copyright © 2021-2023 Jonah Brüchert, 2021-2023 KDE-Gemeinschaft"
+msgstr "© 2021-2024 Jonah Brüchert, 2021-2024 KDE-Gemeinschaft"
 
 #: main.cpp:77
 #, kde-format
@@ -514,11 +514,10 @@ msgid "Your emails"
 msgstr "kde-i18n-de@kde.org"
 
 #: main.cpp:86
-#, fuzzy, kde-format
-#| msgid "Unofficial API for YouTube Music"
+#, kde-format
 msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Unofficial API for YouTube Music"
-msgstr "Inoffizielle API für Musik auf YouTube"
+msgstr "Inoffizielle API für YouTube Music"
 
 #: playlistimporter.cpp:22
 #, kde-format
