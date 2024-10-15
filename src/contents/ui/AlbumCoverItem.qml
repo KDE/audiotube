@@ -131,7 +131,6 @@ Controls.ToolButton {
                     Layout.fillWidth: true
                     leftPadding: 5
                     elide: Text.ElideRight
-                    enabled: false
                     color: coverArea.containsMouse || root.activeFocus
                                                ? Kirigami.Theme.hoverColor
                                                : Kirigami.Theme.textColor
@@ -145,8 +144,6 @@ Controls.ToolButton {
                            ? Kirigami.Theme.hoverColor
                            : Kirigami.Theme.disabledTextColor
                     elide: Text.ElideRight
-                    enabled: false
-
                 }
             }
             Controls.ToolButton {
