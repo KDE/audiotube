@@ -7,23 +7,18 @@
     "sources": [
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/2f/c2/f9e977608bdf958650638c3f1e28f85a1b075f075ebbe77db8555463787b/Brotli-1.1.0.tar.gz",
-            "sha256": "81de08ac11bcb85841e440c13611c00b67d3bf82698314928d0b676362546724"
+            "url": "https://files.pythonhosted.org/packages/12/90/3c9ff0512038035f59d279fddeb79f5f1eccd8859f06d6163c58798b9487/certifi-2024.8.30-py3-none-any.whl",
+            "sha256": "922820b53db7a7257ffbda3f597266d435245903d80737e34f8a45ff3e3230d8"
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/1c/d5/c84e1a17bf61d4df64ca866a1c9a913874b4e9bdc131ec689a0ad013fb36/certifi-2024.7.4-py3-none-any.whl",
-            "sha256": "c198e21b1289c2ab85ee4e67bb4b4ef3ead0892059901a8d5b622f24a1101e90"
+            "url": "https://files.pythonhosted.org/packages/f2/4f/e1808dc01273379acc506d18f1504eb2d299bd4131743b9fc54d7be4df1e/charset_normalizer-3.4.0.tar.gz",
+            "sha256": "223217c3d4f82c3ac5e29032b3f1c2eb0fb591b72161f86d93f5719079dae93e"
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/63/09/c1bc53dab74b1816a00d8d030de5bf98f724c52c1635e07681d312f20be8/charset-normalizer-3.3.2.tar.gz",
-            "sha256": "f30c3cb33b24454a82faecaf01b19c18562b1e89558fb6c56de4d9118a032fd5"
-        },
-        {
-            "type": "file",
-            "url": "https://files.pythonhosted.org/packages/e5/3e/741d8c82801c347547f8a2a06aa57dbb1992be9e948df2ea0eda2c8b79e8/idna-3.7-py3-none-any.whl",
-            "sha256": "82fee1fc78add43492d3a1898bfa6d8a904cc97d8427f683ed8e798d07761aa0"
+            "url": "https://files.pythonhosted.org/packages/76/c6/c88e154df9c4e1a2a66ccf0005a88dfb2650c1dffb6f5ce603dfbd452ce3/idna-3.10-py3-none-any.whl",
+            "sha256": "946d195a0d259cbba61165e88e65941f16e9b36ea6ddb97f00452bae8b1287d3"
         },
         {
             "type": "file",
@@ -32,8 +27,8 @@
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/31/a4/b03a16637574312c1b54c55aedeed8a4cb7d101d44058d46a0e5706c63e1/pycryptodomex-3.20.0.tar.gz",
-            "sha256": "7a710b79baddd65b806402e14766c721aee8fb83381769c27920f26476276c1e"
+            "url": "https://files.pythonhosted.org/packages/11/dc/e66551683ade663b5f07d7b3bc46434bf703491dbd22ee12d1f979ca828f/pycryptodomex-3.21.0.tar.gz",
+            "sha256": "222d0bd05381dd25c32dd6065c071ebf084212ab79bab4599ba9e6a3e0009e6c"
         },
         {
             "type": "file",
@@ -42,18 +37,18 @@
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/ca/1c/89ffc63a9605b583d5df2be791a27bc1a42b7c32bab68d3c8f2f73a98cd4/urllib3-2.2.2-py3-none-any.whl",
-            "sha256": "a448b2f64d686155468037e1ace9f2d2199776e17f0a46610480d311f73e3472"
+            "url": "https://files.pythonhosted.org/packages/ce/d9/5f4c13cecde62396b0d3fe530a50ccea91e7dfc1ccf0e09c228841bb5ba8/urllib3-2.2.3-py3-none-any.whl",
+            "sha256": "ca899ca043dcb1bafa3e262d73aa25c465bfb49e0bd9dd5d59f1d0acba2f8fac"
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/2e/62/7a7874b7285413c954a4cca3c11fd851f11b2fe5b4ae2d9bee4f6d9bdb10/websockets-12.0.tar.gz",
-            "sha256": "81df9cbcbb6c260de1e007e58c011bfebe2dafc8435107b0537f393dd38c8b1b"
+            "url": "https://files.pythonhosted.org/packages/e2/73/9223dbc7be3dcaf2a7bbf756c351ec8da04b1fa573edaf545b95f6b0c7fd/websockets-13.1.tar.gz",
+            "sha256": "a3b3366087c1bc0a2795111edcadddb8b3b59509d5db5d7ea3fdd69f954a8878"
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/23/74/e564c05aacf9c9ca421ea39b11374f37d4071cca9b2d0a3a81a0360b262d/yt_dlp-2024.7.16-py3-none-any.whl",
-            "sha256": "424805a112e757b141e767bc938d49db56d13d6415a92fa4cd8acadd55790be0"
+            "url": "https://files.pythonhosted.org/packages/6e/91/ecb07d66110334cdb01e94b187577af3b041897090203c9957728825d46f/yt_dlp-2024.10.7-py3-none-any.whl",
+            "sha256": "9e336ae663bfd7ad3ea1c02e722747388172719efc0fc39a807dace3073aa704"
         }
     ]
 }
