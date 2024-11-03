@@ -81,7 +81,7 @@ SPDX-License-Identifier: CC0-1.0
   <project_license>GPL-2.0+</project_license>
   <content_rating type="oars-1.0"/>
   <url type="homepage">https://apps.kde.org/en/audiotube</url>
-  <developer id="kde.org">
+  <developer id="org.kde">
     <name translate="no">KDE</name>
   </developer>
   <releases>
