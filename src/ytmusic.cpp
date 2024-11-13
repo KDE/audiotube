@@ -83,6 +83,15 @@ std::optional<T> optional_key(py::handle obj, const char *name) {
     return obj[name].cast<std::optional<T>>();
 }
 
+std::string ensure_string(py::handle obj) {
+    auto variant = obj.cast<std::variant<std::string, int>>();
+    if (std::holds_alternative<std::string>(variant)) {
+        return std::get<std::string>(variant);
+    }
+
+    return std::to_string(std::get<int>(variant));
+}
+
 meta::Thumbnail extract_thumbnail(py::handle thumbnail) {
     return {
         thumbnail["url"].cast<std::string>(),
@@ -330,7 +339,7 @@ std::optional<search::SearchResultItem> extract_search_result(py::handle result)
             result["browseId"].cast<std::string>(),
             result["title"].cast<std::string>(),
             result["author"].cast<std::optional<std::string>>(),
-            result["itemCount"].cast<std::string>(),
+            ensure_string(result["itemCount"]),
             extract_py_list<meta::Thumbnail>(result["thumbnails"])
         };
     } else if (resultType == "artist") {
