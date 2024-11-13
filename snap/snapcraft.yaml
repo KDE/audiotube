@@ -1,0 +1,115 @@
+# SPDX-FileCopyrightText: 2024 Soumyadeep Ghosh <soumyadghosh@ubuntu.com>
+# SPDX-FileCopyrightText: 2023 Scarlett Moore <sgmoore@kde.org>
+# SPDX-License-Identifier: CC0-1.0
+name: audiotube
+confinement: strict
+grade: stable
+base: core22
+adopt-info: audiotube
+compression: lzo
+
+apps:
+  audiotube:
+    extensions:
+      - kde-neon-6
+    common-id: org.kde.audiotube.desktop
+    desktop: usr/share/applications/org.kde.audiotube.desktop
+    command: usr/bin/audiotube
+    environment:
+      PYTHONPATH: ${SNAP}/usr/lib/python3/dist-packages:${PYTHONPATH}
+    plugs:
+      - home
+      - audio-playback
+      - unity7
+      - network
+      - network-status
+      - network-observe
+    slots:
+      - audiotube-mpris
+
+slots:
+  audiotube-mpris:
+    interface: mpris
+    name: AudioTube
+
+parts:
+  futuresql:
+    source: https://download.kde.org/stable/futuresql/futuresql-0.1.1.tar.xz
+    plugin: cmake
+    cmake-parameters:
+      - -DCMAKE_INSTALL_PREFIX=/usr
+      - -DBUILD_TESTING=OFF
+      - -DCMAKE_BUILD_TYPE=Release
+      - -DQT_MAJOR_VERSION=6
+    prime:
+      - -usr/include
+      - -usr/lib/*/cmake
+
+  python-deps:
+    source: .
+    plugin: python
+    python-requirements:
+      - requirements.txt
+    prime:
+      - -usr/bin/activate
+      - -usr/bin/activate.csh
+      - -usr/bin/activate.fish
+      - -usr/bin/Activate.ps1
+      - -usr/bin/python
+      - -usr/bin/python3
+      - -usr/bin/python3.10
+      - -usr/bin/pip
+      - -usr/bin/pip3
+      - -usr/bin/pip3.10
+      - -usr/bin/wheel
+      - -usr/lib/python3.10/dist-packages/pip*
+      - -usr/lib/python3.10/dist-packages/pkg_resources
+      - -usr/lib/python3.10/dist-packages/setuptools*
+      - -pyvenv.cfg
+      - -lib
+      - -lib64
+      - -include
+      - -share
+    organize:
+      bin: usr/bin
+      lib/python3.10/site-packages: usr/lib/python3/dist-packages
+
+  audiotube:
+    after:
+      - python-deps
+      - futuresql
+    parse-info:
+      - usr/share/metainfo/org.kde.audiotube.appdata.xml
+    plugin: cmake
+    build-snaps:
+      - cmake
+    build-packages:
+      - docbook
+      - docbook-xsl
+      - docbook-xml
+      - libpulse0
+      - libxkbcommon-dev
+      - libvulkan-dev
+      - pybind11-dev
+    stage-packages:
+      - libsqlite3-0
+      - libwebp7
+    source: .
+    cmake-parameters:
+      - -DCMAKE_INSTALL_PREFIX=/usr
+      - -DCMAKE_BUILD_TYPE=Release
+      - -DKDE_SKIP_TEST_SETTINGS=ON
+      - -DPYBIND11_FINDPYTHON=ON
+    prime:
+      - -usr/lib/*/cmake/*
+      - -usr/include/*
+      - -usr/share/ECM/*
+      - -usr/share/doc/*
+      - -usr/share/man/*
+      - -usr/share/icons/breeze-dark*
+      - -usr/bin/X11
+      - -usr/lib/gcc/$CRAFT_ARCH_TRIPLET_BUILD_FOR/6.0.0
+      - -usr/lib/aspell/*
+      - -usr/share/lintian
+    build-environment:
+      - PYTHONPATH: ${CRAFT_STAGE}/lib/python3.10/site-packages:${CRAFT_STAGE}/usr/lib/python3/dist-packages
