@@ -77,6 +77,11 @@ QString VideoInfoExtractor::artist() const
     return QString::fromStdString(m_videoInfo.artist);
 }
 
+QString VideoInfoExtractor::album() const
+{
+    return QString::fromStdString(m_videoInfo.album);
+}
+
 QString VideoInfoExtractor::channel() const
 {
     return QString::fromStdString(m_videoInfo.channel);

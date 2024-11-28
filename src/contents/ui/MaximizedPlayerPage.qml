@@ -219,6 +219,37 @@ Item {
                     font.bold: true
                 }
 
+                // song album
+                Kirigami.Heading {
+                    id: albumLabel
+                    text: info.album
+                    visible: info.album != ""
+                    color: Kirigami.Theme.disabledTextColor
+
+                    Layout.maximumWidth: 600
+                    Layout.alignment: Qt.AlignHCenter
+                    horizontalAlignment: Text.AlignHCenter
+                    elide: Text.ElideRight
+                    maximumLineCount: 1
+
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            let index = UserPlaylistModel.index(UserPlaylistModel.currentIndex, 0)
+                            let albumId = UserPlaylistModel.data(index, UserPlaylistModel.AlbumId)
+                            pageStack.push("qrc:/AlbumPage.qml", {
+                                "browseId": albumId
+                            })
+                            root.requestClose()
+                        }
+                    }
+
+                    opacity: 0.9
+                    font.pointSize: Kirigami.Theme.defaultFont.pointSize * 1.3
+                    font.bold: true
+                    Layout.bottomMargin: Kirigami.Units.smallSpacing
+                }
+
                 // song artist
                 Kirigami.Heading {
                     id: authorLabel
@@ -235,10 +266,11 @@ Item {
                     // background, so we don't want to use a color scheme color that
                     // might also be dark
                     opacity: 0.9
-                    font.pointSize: Kirigami.Theme.defaultFont.pointSize * 1.3
+                    font.pointSize: Kirigami.Theme.defaultFont.pointSize
                     font.bold: true
                     Layout.bottomMargin: Kirigami.Units.gridUnit
                 }
+
 
                 RowLayout {
                     Layout.topMargin: Kirigami.Units.gridUnit

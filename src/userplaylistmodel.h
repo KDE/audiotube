@@ -36,6 +36,7 @@ public:
         VideoId,
         Artists,
         Album,
+        AlbumId,
         IsCurrent,
     };
     Q_ENUM(Role);
