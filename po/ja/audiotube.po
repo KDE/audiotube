@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-18 00:39+0000\n"
+"POT-Creation-Date: 2024-12-05 00:39+0000\n"
 "PO-Revision-Date: 2023-11-24 09:45+0900\n"
 "Last-Translator: maboroshin <pc.genkaku.in>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -269,84 +269,84 @@ msgstr "最大化したプレーヤーを閉じる"
 msgid "No media playing"
 msgstr "再生中のメディアなし"
 
-#: contents/ui/MaximizedPlayerPage.qml:433
+#: contents/ui/MaximizedPlayerPage.qml:465
 #, kde-format
 msgid "Remove from Favourites"
 msgstr "お気に入りから削除"
 
-#: contents/ui/MaximizedPlayerPage.qml:433
+#: contents/ui/MaximizedPlayerPage.qml:465
 #, kde-format
 msgid "Add to Favourites"
 msgstr "お気に入りに追加"
 
-#: contents/ui/MaximizedPlayerPage.qml:458
+#: contents/ui/MaximizedPlayerPage.qml:490
 #, kde-format
 msgid "Open Volume Drawer"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:568
+#: contents/ui/MaximizedPlayerPage.qml:600
 #, kde-format
 msgid "Unmute Audio"
 msgstr "音声のミュート解除"
 
-#: contents/ui/MaximizedPlayerPage.qml:568
+#: contents/ui/MaximizedPlayerPage.qml:600
 #, kde-format
 msgid "Mute Audio"
 msgstr "音声をミュート"
 
-#: contents/ui/MaximizedPlayerPage.qml:607
+#: contents/ui/MaximizedPlayerPage.qml:639
 #, kde-format
 msgid "%1%"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:637
+#: contents/ui/MaximizedPlayerPage.qml:669
 #, kde-format
 msgid "Hide Lyrics"
 msgstr "歌詞を隠す"
 
-#: contents/ui/MaximizedPlayerPage.qml:637
+#: contents/ui/MaximizedPlayerPage.qml:669
 #, kde-format
 msgid "Show Lyrics"
 msgstr "歌詞を表示"
 
-#: contents/ui/MaximizedPlayerPage.qml:657 contents/ui/SongMenu.qml:195
+#: contents/ui/MaximizedPlayerPage.qml:689 contents/ui/SongMenu.qml:195
 #: contents/ui/SongMenu.qml:281
 #, kde-format
 msgid "Share Song"
 msgstr "曲を共有"
 
-#: contents/ui/MaximizedPlayerPage.qml:698
+#: contents/ui/MaximizedPlayerPage.qml:730
 #, kde-format
 msgid "Add to a local playlist"
 msgstr "端末内の再生リストに曲を追加"
 
-#: contents/ui/MaximizedPlayerPage.qml:735
+#: contents/ui/MaximizedPlayerPage.qml:767
 #, kde-format
 msgid "Hide Queue"
 msgstr "再生キューを隠す"
 
-#: contents/ui/MaximizedPlayerPage.qml:735
+#: contents/ui/MaximizedPlayerPage.qml:767
 #, kde-format
 msgid "Show Queue"
 msgstr "再生キューを表示"
 
-#: contents/ui/MaximizedPlayerPage.qml:966
-#: contents/ui/MaximizedPlayerPage.qml:1210
+#: contents/ui/MaximizedPlayerPage.qml:998
+#: contents/ui/MaximizedPlayerPage.qml:1242
 #, kde-format
 msgid "Remove Track"
 msgstr "曲の除去"
 
-#: contents/ui/MaximizedPlayerPage.qml:1001
+#: contents/ui/MaximizedPlayerPage.qml:1033
 #, kde-format
 msgid "Clear Queue"
 msgstr "キューを消去"
 
-#: contents/ui/MaximizedPlayerPage.qml:1026
+#: contents/ui/MaximizedPlayerPage.qml:1058
 #, kde-format
 msgid "Shuffle Queue"
 msgstr "キューをシャッフル"
 
-#: contents/ui/MaximizedPlayerPage.qml:1059
+#: contents/ui/MaximizedPlayerPage.qml:1091
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "次の曲"
