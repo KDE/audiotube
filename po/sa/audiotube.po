@@ -1,0 +1,532 @@
+# Sanskrit translations for audiotube package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the audiotube package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: audiotube\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-12-05 00:39+0000\n"
+"PO-Revision-Date: 2024-12-13 19:49+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Sanskrit\n"
+"Language: sa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.5\n"
+
+#: asyncytmusic.cpp:65
+#, kde-format
+msgid ""
+"Running with untested version of ytmusicapi %1. If you experience errors, "
+"please report them to your distribution."
+msgstr ""
+"ytmusicapi %1 इत्यस्य अपरीक्षितसंस्करणेन सह चालितम् । यदि भवन्तः दोषान् अनुभवन्ति तर्हि "
+"कृपया तान् स्ववितरणं प्रति निवेदयन्तु ।"
+
+#: contents/ui/AlbumPage.qml:71 contents/ui/LibraryPage.qml:39
+#: contents/ui/LibraryPage.qml:65 contents/ui/LibraryPage.qml:91
+#: contents/ui/LibraryPage.qml:235 contents/ui/LibraryPage.qml:261
+#: contents/ui/LibraryPage.qml:285 contents/ui/LocalPlaylistPage.qml:72
+#: contents/ui/LocalPlaylistPage.qml:93 contents/ui/PlaybackHistory.qml:67
+#: contents/ui/PlaybackHistory.qml:89 contents/ui/PlaylistPage.qml:66
+#: contents/ui/PlaylistPage.qml:87
+#, kde-format
+msgid "Play"
+msgstr "क्रीडतु"
+
+#: contents/ui/AlbumPage.qml:78 contents/ui/ArtistPage.qml:83
+#: contents/ui/LibraryPage.qml:46 contents/ui/LibraryPage.qml:71
+#: contents/ui/LibraryPage.qml:101 contents/ui/LibraryPage.qml:242
+#: contents/ui/LibraryPage.qml:267 contents/ui/LibraryPage.qml:294
+#: contents/ui/LocalPlaylistPage.qml:67 contents/ui/LocalPlaylistPage.qml:99
+#: contents/ui/PlaybackHistory.qml:55 contents/ui/PlaybackHistory.qml:102
+#: contents/ui/PlaylistPage.qml:59 contents/ui/PlaylistPage.qml:94
+#, kde-format
+msgid "Shuffle"
+msgstr "शफल"
+
+#: contents/ui/AlbumPage.qml:86 contents/ui/LibraryPage.qml:76
+#: contents/ui/LibraryPage.qml:111 contents/ui/LibraryPage.qml:272
+#: contents/ui/LibraryPage.qml:302 contents/ui/LocalPlaylistPage.qml:104
+#: contents/ui/PlaybackHistory.qml:114 contents/ui/PlaylistPage.qml:102
+#, kde-format
+msgid "Append to queue"
+msgstr "कतारं योजयन्तु"
+
+#: contents/ui/AlbumPage.qml:91 contents/ui/ArtistPage.qml:91
+#: contents/ui/PlaylistPage.qml:112
+#, kde-format
+msgid "Open in Browser"
+msgstr "ब्राउजर् मध्ये उद्घाटयन्तु"
+
+#: contents/ui/AlbumPage.qml:96 contents/ui/ArtistPage.qml:96
+#: contents/ui/PlaylistPage.qml:117
+#, kde-format
+msgid "Share"
+msgstr "संविभागः"
+
+#: contents/ui/AlbumPage.qml:106
+#, kde-format
+msgid "Album • %1"
+msgstr "एल्बम • %1"
+
+#: contents/ui/AlbumPage.qml:160 contents/ui/ArtistPage.qml:201
+#: contents/ui/LocalPlaylistPage.qml:168 contents/ui/PlaybackHistory.qml:195
+#: contents/ui/PlaylistPage.qml:189 contents/ui/SearchPage.qml:148
+#, kde-format
+msgid "More"
+msgstr "अधिकः"
+
+#: contents/ui/ArtistPage.qml:77
+#, kde-format
+msgid "Radio"
+msgstr "रेडियो"
+
+#: contents/ui/ArtistPage.qml:105
+#, kde-format
+msgid "Artist"
+msgstr "कलाकार"
+
+#: contents/ui/ArtistPage.qml:129 contents/ui/SearchPage.qml:74
+#, kde-format
+msgid ""
+"Video playback is not supported yet. Do you want to play only the audio of "
+"\"%1\"?"
+msgstr ""
+"अद्यापि विडियो प्लेबैक् समर्थितं नास्ति। किं भवान् केवलं \"%1\" इत्यस्य श्रव्यं वादयितुम् इच्छति?"
+
+#: contents/ui/ArtistPage.qml:148 contents/ui/SearchPage.qml:28
+#, kde-format
+msgid "Albums"
+msgstr "एल्बम"
+
+#: contents/ui/ArtistPage.qml:150
+#, kde-format
+msgid "Singles"
+msgstr "एकलः"
+
+#: contents/ui/ArtistPage.qml:152 contents/ui/SearchPage.qml:34
+#, kde-format
+msgid "Songs"
+msgstr "गीतानि"
+
+#: contents/ui/ArtistPage.qml:154 contents/ui/SearchPage.qml:36
+#, kde-format
+msgid "Videos"
+msgstr "विडियो"
+
+#: contents/ui/ConfirmationMessage.qml:16
+#, kde-format
+msgid "OK"
+msgstr "अस्तु"
+
+#: contents/ui/ConfirmationMessage.qml:21
+#, kde-format
+msgid "Cancel"
+msgstr "निरसयतु"
+
+#: contents/ui/dialogs/AddPlaylistDialog.qml:17
+#, kde-format
+msgid "Add playlist"
+msgstr "प्लेलिस्ट् योजयन्तु"
+
+#: contents/ui/dialogs/AddPlaylistDialog.qml:23
+#: contents/ui/dialogs/RenamePlaylistDialog.qml:24
+#, kde-format
+msgid "Playlist Title"
+msgstr "प्लेलिस्ट शीर्षक"
+
+#: contents/ui/dialogs/AddPlaylistDialog.qml:28
+#: contents/ui/dialogs/RenamePlaylistDialog.qml:30
+#, kde-format
+msgid "Playlist Description"
+msgstr "प्लेलिस्ट विवरण"
+
+#: contents/ui/dialogs/ImportPlaylistDialog.qml:17
+#, kde-format
+msgid "Import playlist"
+msgstr "प्लेलिस्ट आयात करें"
+
+#: contents/ui/dialogs/ImportPlaylistDialog.qml:23
+#, kde-format
+msgid "Playlist URL (Youtube)"
+msgstr "प्लेलिस्ट् URL (Youtube) 1.1."
+
+#: contents/ui/dialogs/PlaylistDialog.qml:17
+#, kde-format
+msgid "Add Song to Playlist"
+msgstr "गीतं प्लेलिस्ट् मध्ये योजयन्तु"
+
+#: contents/ui/dialogs/PlaylistDialog.qml:29
+#: contents/ui/LocalPlaylistsPage.qml:107
+#: contents/ui/LocalPlaylistsPage.qml:133
+#: contents/ui/LocalPlaylistsPage.qml:151
+#, kde-format
+msgid "New Playlist"
+msgstr "नवीनं प्लेलिस्ट्"
+
+#: contents/ui/dialogs/RenamePlaylistDialog.qml:18
+#, kde-format
+msgid "Rename playlist"
+msgstr "प्लेलिस्ट् इत्यस्य नामकरणं कुर्वन्तु"
+
+#: contents/ui/LibraryPage.qml:32 contents/ui/LibraryPage.qml:135
+#: contents/ui/NavigationBar.qml:47 contents/ui/NavigationBar.qml:53
+#: contents/ui/Sidebar.qml:138 contents/ui/Sidebar.qml:143
+#, kde-format
+msgid "Favourites"
+msgstr "प्रियाः"
+
+#: contents/ui/LibraryPage.qml:130 contents/ui/LibraryPage.qml:322
+#: contents/ui/LibraryPage.qml:424
+#, kde-format
+msgid "Show All"
+msgstr "सर्वाणि दर्शयतु"
+
+#: contents/ui/LibraryPage.qml:160
+#, kde-format
+msgid "No Favourites Yet"
+msgstr "अद्यापि कोऽपि प्रियः नास्ति"
+
+#: contents/ui/LibraryPage.qml:228
+#, kde-format
+msgid "Most played"
+msgstr "अधिकांशः क्रीडितः"
+
+#: contents/ui/LibraryPage.qml:327 contents/ui/NavigationBar.qml:60
+#: contents/ui/NavigationBar.qml:66 contents/ui/Sidebar.qml:159
+#: contents/ui/Sidebar.qml:164
+#, kde-format
+msgid "Played Songs"
+msgstr "गीतानि वादयन्ति"
+
+#: contents/ui/LibraryPage.qml:353
+#, kde-format
+msgid "No Songs Played Yet"
+msgstr "अद्यापि गीतं न वाद्यते"
+
+#: contents/ui/LibraryPage.qml:412 contents/ui/LocalPlaylistsPage.qml:20
+#: contents/ui/LocalPlaylistsPage.qml:84 contents/ui/NavigationBar.qml:74
+#: contents/ui/SearchPage.qml:32 contents/ui/Sidebar.qml:179
+#, kde-format
+msgid "Playlists"
+msgstr "प्लेलिस्ट्"
+
+#: contents/ui/LibraryPage.qml:451
+#, kde-format
+msgid "No Playlists Yet"
+msgstr "अद्यापि कोऽपि प्लेलिस्ट् नास्ति"
+
+#: contents/ui/LibraryPage.qml:474 contents/ui/LibraryPage.qml:496
+#: contents/ui/LocalPlaylistsPage.qml:38 contents/ui/LocalPlaylistsPage.qml:60
+#, kde-format
+msgid "Rename"
+msgstr "पुनर्नाम"
+
+#: contents/ui/LibraryPage.qml:483 contents/ui/LibraryPage.qml:504
+#: contents/ui/LocalPlaylistsPage.qml:47 contents/ui/LocalPlaylistsPage.qml:68
+#, kde-format
+msgid "Delete"
+msgstr "लुप्"
+
+#: contents/ui/LocalPlaylistPage.qml:22
+#, kde-format
+msgid "Remove from Playlist"
+msgstr "Playlist तः निष्कासयन्तु"
+
+#: contents/ui/LocalPlaylistPage.qml:80
+#, kde-format
+msgid "This playlist is still empty"
+msgstr "इयं प्लेलिस्ट् अद्यापि रिक्तम् अस्ति"
+
+#: contents/ui/LocalPlaylistsPage.qml:115
+#: contents/ui/LocalPlaylistsPage.qml:138
+#: contents/ui/LocalPlaylistsPage.qml:156 contents/ui/PlaylistPage.qml:107
+#, kde-format
+msgid "Import Playlist"
+msgstr "प्लेलिस्ट आयात करें"
+
+#: contents/ui/main.qml:131 main.cpp:72
+#, kde-format
+msgid "AudioTube"
+msgstr "ऑडियोट्यूब"
+
+#: contents/ui/main.qml:284
+#, kde-format
+msgid "No song playing"
+msgstr "न गीतं वाद्यते"
+
+#: contents/ui/MaximizedPlayerPage.qml:99
+#, kde-format
+msgid "Close Maximized Player"
+msgstr "अधिकतमं खिलाडी बन्दं कुर्वन्तु"
+
+#: contents/ui/MaximizedPlayerPage.qml:206
+#: contents/ui/MinimizedPlayerControls.qml:112
+#, kde-format
+msgid "No media playing"
+msgstr "न मीडिया वाद्यते"
+
+#: contents/ui/MaximizedPlayerPage.qml:465
+#, kde-format
+msgid "Remove from Favourites"
+msgstr "प्रियतः निष्कासयन्तु"
+
+#: contents/ui/MaximizedPlayerPage.qml:465
+#, kde-format
+msgid "Add to Favourites"
+msgstr "प्रियं योजयतु"
+
+#: contents/ui/MaximizedPlayerPage.qml:490
+#, kde-format
+msgid "Open Volume Drawer"
+msgstr "ओपन वॉल्यूम दराज"
+
+#: contents/ui/MaximizedPlayerPage.qml:600
+#, kde-format
+msgid "Unmute Audio"
+msgstr "असन्तुष्टि श्रव्य"
+
+#: contents/ui/MaximizedPlayerPage.qml:600
+#, kde-format
+msgid "Mute Audio"
+msgstr "म्यूट ऑडियो"
+
+#: contents/ui/MaximizedPlayerPage.qml:639
+#, kde-format
+msgid "%1%"
+msgstr "%1% "
+
+#: contents/ui/MaximizedPlayerPage.qml:669
+#, kde-format
+msgid "Hide Lyrics"
+msgstr "गीतं गोपयतु"
+
+#: contents/ui/MaximizedPlayerPage.qml:669
+#, kde-format
+msgid "Show Lyrics"
+msgstr "गीतं दर्शयतु"
+
+#: contents/ui/MaximizedPlayerPage.qml:689 contents/ui/SongMenu.qml:195
+#: contents/ui/SongMenu.qml:281
+#, kde-format
+msgid "Share Song"
+msgstr "शेयर गीत"
+
+#: contents/ui/MaximizedPlayerPage.qml:730
+#, kde-format
+msgid "Add to a local playlist"
+msgstr "स्थानीयप्लेलिस्ट् मध्ये योजयन्तु"
+
+#: contents/ui/MaximizedPlayerPage.qml:767
+#, kde-format
+msgid "Hide Queue"
+msgstr "कतारं गोपयतु"
+
+#: contents/ui/MaximizedPlayerPage.qml:767
+#, kde-format
+msgid "Show Queue"
+msgstr "कतारं दर्शयतु"
+
+#: contents/ui/MaximizedPlayerPage.qml:998
+#: contents/ui/MaximizedPlayerPage.qml:1242
+#, kde-format
+msgid "Remove Track"
+msgstr "Track इत्येतत् निष्कासयन्तु"
+
+#: contents/ui/MaximizedPlayerPage.qml:1033
+#, kde-format
+msgid "Clear Queue"
+msgstr "कतारं स्वच्छं कुर्वन्तु"
+
+#: contents/ui/MaximizedPlayerPage.qml:1058
+#, kde-format
+msgid "Shuffle Queue"
+msgstr "शफल कतार"
+
+#: contents/ui/MaximizedPlayerPage.qml:1091
+#, kde-format
+msgid "Upcoming Songs"
+msgstr "आगामी गीत"
+
+#: contents/ui/NavigationBar.qml:23 contents/ui/Sidebar.qml:108
+#, kde-format
+msgid "Library"
+msgstr "पुस्तकालय"
+
+#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:119
+#, kde-format
+msgid "Search"
+msgstr "अन्वेषण"
+
+#: contents/ui/PlaybackHistory.qml:17
+#, kde-format
+msgid "Unknown list of songs"
+msgstr "गीतानां अज्ञातसूची"
+
+#: contents/ui/PlaybackHistory.qml:135
+#, kde-format
+msgid "No songs here yet"
+msgstr "अत्र अद्यापि गीतानि नास्ति"
+
+#: contents/ui/PlaylistPage.qml:76
+#, kde-format
+msgid "Playlist successfully imported"
+msgstr "प्लेलिस्ट् सफलतया आयातम्"
+
+#: contents/ui/PlaylistPage.qml:128
+#, kde-format
+msgid "Playlist"
+msgstr "प्लेलिस्ट्"
+
+#: contents/ui/SearchHistoryPage.qml:82 contents/ui/SearchWithDropdown.qml:393
+#, kde-format
+msgid "remove from search history"
+msgstr "अन्वेषण-इतिहासात् निष्कासयन्तु"
+
+#: contents/ui/SearchPage.qml:16
+#, kde-format
+msgid "Previous Searches:"
+msgstr "पूर्व अन्वेषणम् : १."
+
+#: contents/ui/SearchPage.qml:30
+#, kde-format
+msgid "Artists"
+msgstr "कलाकाराः"
+
+#: contents/ui/SearchPage.qml:38
+#, kde-format
+msgid "Top Results"
+msgstr "शीर्ष परिणाम"
+
+#: contents/ui/SearchPage.qml:41 playlistimporter.cpp:22
+#, kde-format
+msgid "Unknown"
+msgstr "अज्ञात"
+
+#: contents/ui/SearchWithDropdown.qml:339
+#, kde-format
+msgid "No matching previous searches"
+msgstr "पूर्वसन्धानस्य मेलनं नास्ति"
+
+#: contents/ui/ShareMenu.qml:41
+#, kde-format
+msgid "Share to"
+msgstr "Share to"
+
+#: contents/ui/ShareMenu.qml:49 contents/ui/ShareMenu.qml:103
+#, kde-format
+msgid "Copy Link"
+msgstr "प्रतिलिपि लिङ्क"
+
+#: contents/ui/ShareMenu.qml:54 contents/ui/ShareMenu.qml:108
+#, kde-format
+msgid "Link copied to clipboard"
+msgstr "लिङ्क् क्लिप्बोर्ड् प्रति प्रतिलिपितः"
+
+#: contents/ui/Sidebar.qml:200
+#, kde-format
+msgid "About"
+msgstr "विषये"
+
+#: contents/ui/Sidebar.qml:214
+#, kde-format
+msgid "Collapse Sidebar"
+msgstr "Collapse पार्श्वपट्टिका"
+
+#: contents/ui/SongMenu.qml:108 contents/ui/SongMenu.qml:217
+#, kde-format
+msgid "Play Next"
+msgstr "अग्रिमम् क्रीडतु"
+
+#: contents/ui/SongMenu.qml:118 contents/ui/SongMenu.qml:223
+#, kde-format
+msgid "Add to queue"
+msgstr "पङ्क्तौ योजयतु"
+
+#: contents/ui/SongMenu.qml:130 contents/ui/SongMenu.qml:233
+#, kde-format
+msgid "Remove Favourite"
+msgstr "प्रियं निष्कासयन्तु"
+
+#: contents/ui/SongMenu.qml:130 contents/ui/SongMenu.qml:233
+#, kde-format
+msgid "Add Favourite"
+msgstr "प्रियं योजयतु"
+
+#: contents/ui/SongMenu.qml:149 contents/ui/SongMenu.qml:247
+#, kde-format
+msgid "Remove from History"
+msgstr "इतिहासात् निष्कासयन्तु"
+
+#: contents/ui/SongMenu.qml:164 contents/ui/SongMenu.qml:256
+#, kde-format
+msgid "Add to playlist"
+msgstr "प्लेलिस्ट् मध्ये योजयन्तु"
+
+#: main.cpp:74
+#, kde-format
+msgctxt "YouTube Music is a music streaming service by Google"
+msgid "Stream music from YouTube Music"
+msgstr "YouTube Music इत्यस्मात् संगीतं प्रवाहयन्तु"
+
+#: main.cpp:76
+#, kde-format
+msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
+msgstr "© 2021-2024 जोनाह ब्रुचेर्ट, 2021-2024 केडीई समुदाय"
+
+#: main.cpp:77
+#, kde-format
+msgid "Jonah Brüchert"
+msgstr "जोनाह ब्रुचेर्ट"
+
+#: main.cpp:77
+#, kde-format
+msgid "Maintainer"
+msgstr "परिपालकः"
+
+#: main.cpp:78
+#, kde-format
+msgid "Mathis Brüchert"
+msgstr "माथिस ब्रुचेर्ट"
+
+#: main.cpp:78
+#, kde-format
+msgid "Designer"
+msgstr "डिजाइनर"
+
+#: main.cpp:79
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "भवतः नामानि"
+
+#: main.cpp:79
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "भवतः ईमेलपत्राणि"
+
+#: main.cpp:86
+#, kde-format
+msgctxt "YouTube Music is a music streaming service by Google"
+msgid "Unofficial API for YouTube Music"
+msgstr "YouTube Music कृते अनधिकृतः एपिआइ"
+
+#: playlistimporter.cpp:22
+#, kde-format
+msgid "No description"
+msgstr "न वर्णनम्"
+
+#: playlistimporter.cpp:60
+#, kde-format
+msgid "No title"
+msgstr "न उपाधिः"
+
+#: playlistimporter.cpp:62
+#, kde-format
+msgid "No album"
+msgstr "एल्बम् नास्ति"
