@@ -18,9 +18,9 @@ import "dialogs"
 Item {
     id: root
 
-    required property var info // VideoInfoExtractor object
-    required property var audio // Audio object
-    required property var syncedLyrics // LyricsModel
+    required property VideoInfoExtractor info
+    required property MediaPlayer audio
+    required property LyricsModel syncedLyrics
     required property string thumbnail
     readonly property bool isWidescreen: width >= Kirigami.Units.gridUnit * 50
 
@@ -278,8 +278,8 @@ Item {
                 // song album
                 Kirigami.Heading {
                     id: albumLabel
-                    text: info.album
-                    visible: info.album != ""
+                    text: root.info.album
+                    visible: root.info.album != ""
                     color: Kirigami.Theme.disabledTextColor
 
                     Layout.maximumWidth: 600
@@ -309,7 +309,7 @@ Item {
                 // song artist
                 Kirigami.Heading {
                     id: authorLabel
-                    text: info.artist ? info.artist : info.channel
+                    text: root.info.artist ? info.artist : info.channel
                     color: Kirigami.Theme.disabledTextColor
 
                     Layout.fillWidth: true
@@ -452,7 +452,7 @@ Item {
                     Label {
                         Layout.alignment: Qt.AlignVCenter
                         color: "white"
-                        visible: info.title
+                        visible: root.info.title
                         text: PlayerUtils.formatTimestamp(audio.position)
                     }
 
@@ -460,9 +460,9 @@ Item {
                         Layout.alignment: Qt.AlignVCenter
                         Layout.fillWidth: true
                         from: 0
-                        to: audio.duration
-                        value: audio.position
-                        enabled: audio.seekable
+                        to: root.audio.duration
+                        value: root.audio.position
+                        enabled: root.audio.seekable
                         onMoved: {
                             console.log("Value:", value);
                             audio.position = Math.floor(value);
@@ -478,7 +478,7 @@ Item {
                     Label {
                         Layout.alignment: Qt.AlignVCenter
                         color: "white"
-                        visible: info.title
+                        visible: root.info.title
                         text: PlayerUtils.formatTimestamp(audio.duration)
                     }
                 }
@@ -580,12 +580,9 @@ Item {
                                     ToolTip.visible: Kirigami.Settings.isMobile ? pressed : hovered
 
                                     onClicked: {
-                                        if(audio.muted)
-                                        {
+                                        if (root.audio.muted) {
                                             muteButton.unmuteAudio()
-                                        }
-                                        else
-                                        {
+                                        } else {
                                             muteButton.muteAudio()
                                         }
                                     }
@@ -620,12 +617,12 @@ Item {
                         id: muteButton
 
                         function muteAudio() {
-                            audioOutput.muted = true
+                            root.audio.audioOutput.muted = true
                             volumeSlider.opacity = 0.5
                             checked = true
                         }
                         function unmuteAudio() {
-                            audioOutput.muted = false
+                            root.audio.audioOutput.muted = false
                             volumeSlider.opacity = 1
                             checked = false
                         }
@@ -636,7 +633,7 @@ Item {
                         Layout.preferredWidth: height
 
                         onClicked: {
-                            if(audioOutput.muted) {
+                            if(root.audio.audioOutput.muted) {
                                 unmuteAudio()
                             }
                             else {
@@ -644,7 +641,7 @@ Item {
                             }
                         }
 
-                        icon.name: audioOutput.muted ? "audio-volume-muted" : (volumeSlider.value < .33 ? "audio-volume-low" : (volumeSlider.value < .66 ? "audio-volume-medium" : "audio-volume-high"))
+                        icon.name: root.audio.audioOutput.muted ? "audio-volume-muted" : (volumeSlider.value < .33 ? "audio-volume-low" : (volumeSlider.value < .66 ? "audio-volume-medium" : "audio-volume-high"))
                         icon.color: "white"
 
                         Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
@@ -653,7 +650,7 @@ Item {
                         checkable: true
                         visible: isWidescreen
                         enabled: isWidescreen
-                        text: audioOutput.muted ? i18n("Unmute Audio") : i18n("Mute Audio")
+                        text: root.audio.audioOutput.muted ? i18n("Unmute Audio") : i18n("Mute Audio")
                         display: AbstractButton.IconOnly
 
                         ToolTip.text: text
@@ -678,7 +675,7 @@ Item {
                         wheelEnabled: true
 
                         onMoved: {
-                            audioOutput.volume = volumeSlider.volume
+                            root.audio.audioOutput.volume = volumeSlider.volume
                             if (volumeSlider.value === 0) {
                                 muteButton.muteAudio()
                             } else {
@@ -740,7 +737,7 @@ Item {
                         Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
                         Layout.maximumWidth: height
                         Layout.preferredWidth: height
-                        onClicked: openShareMenu(info.title, UserPlaylistModel.webUrl)
+                        onClicked: openShareMenu(root.info.title, UserPlaylistModel.webUrl)
 
                         text: i18n("Share Song")
                         icon.name: "emblem-shared-symbolic"
@@ -751,7 +748,7 @@ Item {
                         ToolTip.delay: Kirigami.Units.toolTipDelay
                         ToolTip.visible: Kirigami.Settings.isMobile ? pressed : hovered
 
-                        enabled: info.title
+                        enabled: root.info.title
 
                         Kirigami.Theme.colorSet: Kirigami.Theme.Complementary
                         Kirigami.Theme.inherit: false
@@ -765,7 +762,7 @@ Item {
                         Layout.preferredHeight: Kirigami.Units.gridUnit * 2.5
                         Layout.maximumWidth: height
                         Layout.preferredWidth: height
-                        enabled: info.videoId
+                        enabled: root.info.videoId
 
                         onClicked: {
                             let index = UserPlaylistModel.index(UserPlaylistModel.currentIndex, 0)
@@ -895,7 +892,7 @@ Item {
                 width: Kirigami.Units.gridUnit
 
                 cursorShape: Qt.SplitHCursor
-                onPositionChanged: {
+                onPositionChanged: (mouse) => {
                     if(Math.max(sideDrawer.width - (mouse.x - width/2), queueFooter.Layout.minimumWidth) + mainContent.Layout.minimumWidth < root.width){
                         sideDrawer.Layout.preferredWidth = sideDrawer.Layout.minimumWidth = sideDrawer.Layout.maximumWidth = Math.max(sideDrawer.width - (mouse.x - width/2), queueFooter.Layout.minimumWidth)
                     }
@@ -963,22 +960,22 @@ Item {
                                 background: Rectangle{
                                     radius: 7
                                     color:
-                                    if (parent.down){
+                                    if (parent.down) {
                                         Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.3)
-                                    }else if(parent.hovered){
+                                    } else if (parent.hovered) {
                                         Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.7)
-                                    }else if(parent.highlighted){
+                                    } else if (parent.highlighted) {
                                         Kirigami.ColorUtils.linearInterpolation(Kirigami.Theme.hoverColor, "transparent", 0.7)
-                                    }else{
+                                    } else {
                                         Qt.rgba(0, 0, 0, 0.4)
                                     }
 
                                     border.color:
                                     if (parent.down){
                                         Kirigami.Theme.hoverColor
-                                    }else if(parent.hovered){
+                                    } else if (parent.hovered) {
                                         Kirigami.Theme.hoverColor
-                                    }else{
+                                    } else {
                                         Qt.rgba(1, 1, 1, 0)
                                     }
 
@@ -1031,7 +1028,7 @@ Item {
                                             elide: Text.ElideRight
                                             Layout.fillWidth: true
                                             level: 2
-                                            text: title
+                                            text: delegateItem.title
 
                                             MouseArea {
                                                 anchors.fill: parent
@@ -1046,7 +1043,7 @@ Item {
                                             elide: Text.ElideRight
                                             Layout.fillWidth: true
                                             color: Kirigami.Theme.disabledTextColor
-                                            text: artists
+                                            text: delegateItem.artists
                                         }
 
                                     }
@@ -1139,7 +1136,7 @@ Item {
             parent: applicationWindow().overlay
 
             onClosed:{sideDrawer.collapsed=true}
-            height: applicationWindow().height-50
+            height: applicationWindow().height - 50
             interactive: true
 
             headerContentItem: RowLayout {
