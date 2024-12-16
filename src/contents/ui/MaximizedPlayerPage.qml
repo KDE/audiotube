@@ -131,13 +131,11 @@ Item {
                     contentHeight: coverArt.height
                     height: swipeView.height
                     width: applicationWindow().width-sideDrawer.width
-                    onFlickEnded:{
-
-                        if(horizontalVelocity<0){
+                    onFlickEnded: {
+                        if (horizontalVelocity < 0) {
                             UserPlaylistModel.next()
-                        }
-                        else{
-                            if(UserPlaylistModel.canSkipBack){
+                        } else {
+                            if (UserPlaylistModel.canSkipBack) {
                                 UserPlaylistModel.previous()
                             }
                         }
@@ -243,6 +241,7 @@ Item {
                         Label {
                             id: lyrics
                             padding: 20
+                            font.pointSize: Kirigami.Theme.defaultFont.pointSize * 1.5
                             text: UserPlaylistModel.lyrics
                             color: "white"
                         }
