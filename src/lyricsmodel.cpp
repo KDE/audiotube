@@ -62,7 +62,7 @@ void LyricsModel::fetchLyrics() {
     connect(reply, &QNetworkReply::finished, this, [=, this] {
         setLyrics(reply);
     });
-    connect(reply, &QNetworkReply::error, this, [=, this] {
+    connect(reply, &QNetworkReply::errorOccurred, this, [=, this] {
         setLyrics(reply);
     });
 }
