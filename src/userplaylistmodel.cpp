@@ -6,13 +6,11 @@
 
 #include <asyncytmusic.h>
 #include <algorithm>
-#include <random>
 
+#include <QRegularExpression>
 #include <QRandomGenerator>
 
 #include <QStringBuilder>
-
-#include <iostream>
 
 #include "albummodel.h"
 #include "localplaylistmodel.h"
@@ -93,6 +91,14 @@ QVariant UserPlaylistModel::data(const QModelIndex &index, int role) const
     case AlbumId:
         return
         QString::fromStdString(m_playlist.tracks[index.row()].album.value_or(meta::Album()).id.value_or(""));
+    case Duration:
+    {
+        auto length = QString::fromStdString(m_playlist.tracks[index.row()].length.value_or(""));
+        QRegularExpression time{R"((\d{1,2}):(\d{2}))"};
+        auto match = time.match(length);
+        int duration = match.captured(1).toInt() * 60 + match.captured(2).toInt();
+        return duration;
+    }
     case IsCurrent:
         return m_playlist.tracks[index.row()].video_id == m_currentVideoId.toStdString();
     }

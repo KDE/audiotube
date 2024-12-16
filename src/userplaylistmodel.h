@@ -38,6 +38,7 @@ public:
         Album,
         AlbumId,
         IsCurrent,
+        Duration
     };
     Q_ENUM(Role);
 

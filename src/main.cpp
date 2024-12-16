@@ -19,6 +19,7 @@
 
 #include <mprisplugin.h>
 
+#include "lyricsmodel.h"
 #include "clipboard.h"
 #include "searchmodel.h"
 #include "albummodel.h"
@@ -108,6 +109,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     qmlRegisterType<LocalPlaylistModel>(URI, 1, 0, "LocalPlaylistModel");
     qmlRegisterType<LocalPlaylistsModel>(URI, 1, 0, "LocalPlaylistsModel");
     qmlRegisterType<PlaylistImporter>(URI, 1, 0, "PlaylistImporter");
+    qmlRegisterType<LyricsModel>(URI, 1, 0, "LyricsModel");
     qmlRegisterSingletonType(URI, 1, 0, "About", [](QQmlEngine *engine, QJSEngine *) -> QJSValue {
         return engine->toScriptValue(KAboutData::applicationData());
     });

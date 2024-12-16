@@ -20,6 +20,7 @@ Item {
 
     required property var info // VideoInfoExtractor object
     required property var audio // Audio object
+    required property var syncedLyrics // LyricsModel
     required property string thumbnail
     readonly property bool isWidescreen: width >= Kirigami.Units.gridUnit * 50
 
@@ -172,7 +173,63 @@ Item {
                 ColumnLayout {
                     width: swipeView.width
                     height: swipeView.height
+
+                    ListView {
+                        id: syncedView
+
+                        NumberAnimation {
+                            id: smoothScroll
+                            target: syncedView
+                            property: "contentY"
+                            duration: 250
+                        }
+
+                        ScrollBar.vertical: ScrollBar {}
+
+                        visible: root.syncedLyrics.count > 0
+                        Layout.margins: 20
+                        Layout.alignment: Qt.AlignHCenter
+                        Layout.maximumWidth: 900
+                        Layout.fillWidth: true
+                        Layout.fillHeight: true
+                        model: root.syncedLyrics
+                        delegate: Label {
+                            property bool active: (model.start < audio.position / 1000 && model.end > audio.position / 1000) // Lyrics model timestamps are in seconds
+
+                            color: "white"
+                            text: model.line
+
+                            font.pointSize: Kirigami.Theme.defaultFont.pointSize * 1.5
+                            font.weight:  active ? Font.Bold : Font.Normal
+
+                            Layout.margins: Kirigami.Theme.defaultFont.pointSize
+                            width: parent.width
+                            wrapMode: Text.Wrap
+
+                            onActiveChanged: {
+                                if (active) {
+                                    var pos = syncedView.contentY;
+                                    syncedView.positionViewAtIndex(model.index - 3, ListView.Beginning);
+                                    var destPos;
+                                    destPos = syncedView.contentY;
+
+                                    smoothScroll.from = pos;
+                                    smoothScroll.to = destPos;
+                                    smoothScroll.running = true;
+                                }
+                            }
+
+                            MouseArea {
+                                anchors.fill: parent
+                                onClicked: {
+                                    audio.position = model.start * 1000;
+                                }
+                            }
+                        }
+                    }
+
                     ScrollView {
+                        visible: root.syncedLyrics.count == 0
                         Layout.maximumWidth: 900
                         contentWidth: -1
                         contentHeight: lyrics.implicitHeight
@@ -660,12 +717,12 @@ Item {
                         Connections {
                             target: UserPlaylistModel
                             function onNoLyrics() {
-                                if(lyricsButton.lyricsShown) {
+                                if(lyricsButton.lyricsShown && root.syncedLyrics.count == 0) {
                                     lyricsButton.clicked()
                                 }
                             }
                         }
-                        enabled: UserPlaylistModel.lyrics
+                        enabled: UserPlaylistModel.lyrics || root.syncedLyrics.count > 0
                         text: lyricsShown ? i18n("Hide Lyrics") : i18n("Show Lyrics")
                         icon.name: "view-media-lyrics"
                         icon.color: "white"

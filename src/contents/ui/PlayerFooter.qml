@@ -94,6 +94,10 @@ Flickable {
     onMovementEnded: resetToBoundsOnFlick()
     onHeightChanged: resetToBoundsOnResize()
 
+    property var syncedLyricsModel: LyricsModel {
+        id: syncedLyrics
+    }
+
     property var videoInfoExtractor: VideoInfoExtractor {
         id: info
 
@@ -104,6 +108,14 @@ Flickable {
             let title = UserPlaylistModel.data(index, UserPlaylistModel.Title)
             let artist = UserPlaylistModel.data(index, UserPlaylistModel.Artists)
             let album = UserPlaylistModel.data(index, UserPlaylistModel.Album)
+            let duration = UserPlaylistModel.data(index, UserPlaylistModel.Duration)
+
+            syncedLyrics.song = title
+            syncedLyrics.artist = artist
+            syncedLyrics.album = album
+            syncedLyrics.duration = duration
+            syncedLyrics.fetchLyrics()
+
             Library.addPlaybackHistoryItem(videoId, title, artist, album)
         }
     }
@@ -212,6 +224,7 @@ Flickable {
             thumbnail: footerItem.videoInfoExtractor.thumbnail
             info: footerItem.videoInfoExtractor
             audio: footerItem.audioPlayer
+            syncedLyrics: footerItem.syncedLyricsModel
 
             onRequestClose: toClose.start();
         }

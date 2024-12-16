@@ -35,6 +35,7 @@ add_executable(audiotube
     resources.qrc
     blur.cpp
     clipboard.cpp
+    lyricsmodel.cpp
 )
 
 target_link_libraries(audiotube
