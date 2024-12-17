@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-05 00:39+0000\n"
+"POT-Creation-Date: 2024-12-17 00:39+0000\n"
 "PO-Revision-Date: 2024-04-17 09:37+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -250,7 +250,7 @@ msgstr "Tento seznam skladeb je prázdný"
 msgid "Import Playlist"
 msgstr "Importovat seznam skladeb"
 
-#: contents/ui/main.qml:131 main.cpp:72
+#: contents/ui/main.qml:131 main.cpp:73
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
@@ -260,95 +260,95 @@ msgstr "AudioTube"
 msgid "No song playing"
 msgstr "Nepřehrává se žádná hudba"
 
-#: contents/ui/MaximizedPlayerPage.qml:99
+#: contents/ui/MaximizedPlayerPage.qml:100
 #, kde-format
 msgid "Close Maximized Player"
 msgstr "Zavřít minimalizovaný přehrávač"
 
-#: contents/ui/MaximizedPlayerPage.qml:206
+#: contents/ui/MaximizedPlayerPage.qml:262
 #: contents/ui/MinimizedPlayerControls.qml:112
 #, kde-format
 msgid "No media playing"
 msgstr "Nepřehrává se žádné médium"
 
-#: contents/ui/MaximizedPlayerPage.qml:465
+#: contents/ui/MaximizedPlayerPage.qml:521
 #, kde-format
 msgid "Remove from Favourites"
 msgstr "Odstranit z oblíbených"
 
-#: contents/ui/MaximizedPlayerPage.qml:465
+#: contents/ui/MaximizedPlayerPage.qml:521
 #, kde-format
 msgid "Add to Favourites"
 msgstr "Přidat k oblíbeným"
 
-#: contents/ui/MaximizedPlayerPage.qml:490
+#: contents/ui/MaximizedPlayerPage.qml:546
 #, kde-format
 msgid "Open Volume Drawer"
 msgstr "Otevřít šuplík hlasitosti"
 
-#: contents/ui/MaximizedPlayerPage.qml:600
+#: contents/ui/MaximizedPlayerPage.qml:653
 #, kde-format
 msgid "Unmute Audio"
 msgstr "Povolit zvuk"
 
-#: contents/ui/MaximizedPlayerPage.qml:600
+#: contents/ui/MaximizedPlayerPage.qml:653
 #, kde-format
 msgid "Mute Audio"
 msgstr "Ztlumit zvuk"
 
-#: contents/ui/MaximizedPlayerPage.qml:639
+#: contents/ui/MaximizedPlayerPage.qml:692
 #, kde-format
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/ui/MaximizedPlayerPage.qml:669
+#: contents/ui/MaximizedPlayerPage.qml:722
 #, kde-format
 msgid "Hide Lyrics"
 msgstr "Skrýt text písně"
 
-#: contents/ui/MaximizedPlayerPage.qml:669
+#: contents/ui/MaximizedPlayerPage.qml:722
 #, kde-format
 msgid "Show Lyrics"
 msgstr "Zobrazit text písně"
 
-#: contents/ui/MaximizedPlayerPage.qml:689 contents/ui/SongMenu.qml:195
+#: contents/ui/MaximizedPlayerPage.qml:742 contents/ui/SongMenu.qml:195
 #: contents/ui/SongMenu.qml:281
 #, kde-format
 msgid "Share Song"
 msgstr "Sdílet píseň"
 
-#: contents/ui/MaximizedPlayerPage.qml:730
+#: contents/ui/MaximizedPlayerPage.qml:783
 #, kde-format
 msgid "Add to a local playlist"
 msgstr "Přidat do místního seznamu stop"
 
-#: contents/ui/MaximizedPlayerPage.qml:767
+#: contents/ui/MaximizedPlayerPage.qml:820
 #, kde-format
 msgid "Hide Queue"
 msgstr "Skrýt frontu"
 
-#: contents/ui/MaximizedPlayerPage.qml:767
+#: contents/ui/MaximizedPlayerPage.qml:820
 #, kde-format
 msgid "Show Queue"
 msgstr "Zobrazit frontu"
 
-#: contents/ui/MaximizedPlayerPage.qml:998
-#: contents/ui/MaximizedPlayerPage.qml:1242
+#: contents/ui/MaximizedPlayerPage.qml:1051
+#: contents/ui/MaximizedPlayerPage.qml:1295
 #, kde-format
 msgid "Remove Track"
 msgstr "Odstranit skladbu"
 
-#: contents/ui/MaximizedPlayerPage.qml:1033
+#: contents/ui/MaximizedPlayerPage.qml:1086
 #, kde-format
 msgid "Clear Queue"
 msgstr "Vymazat frontu"
 
-#: contents/ui/MaximizedPlayerPage.qml:1058
+#: contents/ui/MaximizedPlayerPage.qml:1111
 #, kde-format
 msgid "Shuffle Queue"
 msgstr "Zamíchat frontu"
 
-#: contents/ui/MaximizedPlayerPage.qml:1091
+#: contents/ui/MaximizedPlayerPage.qml:1144
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "Nadcházející písně"
@@ -468,50 +468,50 @@ msgstr "Odstranit z historie"
 msgid "Add to playlist"
 msgstr "Přidat do seznamu stop"
 
-#: main.cpp:74
+#: main.cpp:75
 #, kde-format
 msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Stream music from YouTube Music"
 msgstr "Přehrávejte hudbu z Hudba YouTube"
 
-#: main.cpp:76
+#: main.cpp:77
 #, kde-format
 msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
 msgstr "© 2021-2024 Jonah Brüchert, 2021-2024 Komunita KDE"
 
-#: main.cpp:77
+#: main.cpp:78
 #, kde-format
 msgid "Jonah Brüchert"
 msgstr "Jonah Brüchert"
 
-#: main.cpp:77
+#: main.cpp:78
 #, kde-format
 msgid "Maintainer"
 msgstr "Správce"
 
-#: main.cpp:78
+#: main.cpp:79
 #, kde-format
 msgid "Mathis Brüchert"
 msgstr "Mathis Brüchert"
 
-#: main.cpp:78
+#: main.cpp:79
 #, kde-format
 msgid "Designer"
 msgstr "Návrhář"
 
-#: main.cpp:79
+#: main.cpp:80
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Vít Pelčák"
 
-#: main.cpp:79
+#: main.cpp:80
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "vit@pelcak.org"
 
-#: main.cpp:86
+#: main.cpp:87
 #, kde-format
 msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Unofficial API for YouTube Music"

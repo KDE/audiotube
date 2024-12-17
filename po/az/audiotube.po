@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-05 00:39+0000\n"
+"POT-Creation-Date: 2024-12-17 00:39+0000\n"
 "PO-Revision-Date: 2022-06-19 12:16+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -262,7 +262,7 @@ msgstr ""
 msgid "Import Playlist"
 msgstr "Mahnı siyahıları"
 
-#: contents/ui/main.qml:131 main.cpp:72
+#: contents/ui/main.qml:131 main.cpp:73
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
@@ -273,103 +273,103 @@ msgstr "AudioTube"
 msgid "No song playing"
 msgstr "Media faylı oynadılmır"
 
-#: contents/ui/MaximizedPlayerPage.qml:99
+#: contents/ui/MaximizedPlayerPage.qml:100
 #, kde-format
 msgid "Close Maximized Player"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:206
+#: contents/ui/MaximizedPlayerPage.qml:262
 #: contents/ui/MinimizedPlayerControls.qml:112
 #, kde-format
 msgid "No media playing"
 msgstr "Media faylı oynadılmır"
 
-#: contents/ui/MaximizedPlayerPage.qml:465
+#: contents/ui/MaximizedPlayerPage.qml:521
 #, fuzzy, kde-format
 #| msgid "Favourites"
 msgid "Remove from Favourites"
 msgstr "Süçilmişlər"
 
-#: contents/ui/MaximizedPlayerPage.qml:465
+#: contents/ui/MaximizedPlayerPage.qml:521
 #, fuzzy, kde-format
 #| msgid "Favourites"
 msgid "Add to Favourites"
 msgstr "Süçilmişlər"
 
-#: contents/ui/MaximizedPlayerPage.qml:490
+#: contents/ui/MaximizedPlayerPage.qml:546
 #, kde-format
 msgid "Open Volume Drawer"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:600
+#: contents/ui/MaximizedPlayerPage.qml:653
 #, kde-format
 msgid "Unmute Audio"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:600
+#: contents/ui/MaximizedPlayerPage.qml:653
 #, kde-format
 msgid "Mute Audio"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:639
+#: contents/ui/MaximizedPlayerPage.qml:692
 #, kde-format
 msgid "%1%"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:669
+#: contents/ui/MaximizedPlayerPage.qml:722
 #, kde-format
 msgid "Hide Lyrics"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:669
+#: contents/ui/MaximizedPlayerPage.qml:722
 #, kde-format
 msgid "Show Lyrics"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:689 contents/ui/SongMenu.qml:195
+#: contents/ui/MaximizedPlayerPage.qml:742 contents/ui/SongMenu.qml:195
 #: contents/ui/SongMenu.qml:281
 #, fuzzy, kde-format
 #| msgid "Favourite Songs"
 msgid "Share Song"
 msgstr "Seçilmiş mahnılar"
 
-#: contents/ui/MaximizedPlayerPage.qml:730
+#: contents/ui/MaximizedPlayerPage.qml:783
 #, fuzzy, kde-format
 #| msgid "Add to Playlist"
 msgid "Add to a local playlist"
 msgstr "Mahnı siyahısına əlavə edin"
 
-#: contents/ui/MaximizedPlayerPage.qml:767
+#: contents/ui/MaximizedPlayerPage.qml:820
 #, fuzzy, kde-format
 #| msgid "Queue"
 msgid "Hide Queue"
 msgstr "Növbə"
 
-#: contents/ui/MaximizedPlayerPage.qml:767
+#: contents/ui/MaximizedPlayerPage.qml:820
 #, fuzzy, kde-format
 #| msgid "Queue"
 msgid "Show Queue"
 msgstr "Növbə"
 
-#: contents/ui/MaximizedPlayerPage.qml:998
-#: contents/ui/MaximizedPlayerPage.qml:1242
+#: contents/ui/MaximizedPlayerPage.qml:1051
+#: contents/ui/MaximizedPlayerPage.qml:1295
 #, kde-format
 msgid "Remove Track"
 msgstr "Mahnını silin"
 
-#: contents/ui/MaximizedPlayerPage.qml:1033
+#: contents/ui/MaximizedPlayerPage.qml:1086
 #, fuzzy, kde-format
 #| msgid "Queue"
 msgid "Clear Queue"
 msgstr "Növbə"
 
-#: contents/ui/MaximizedPlayerPage.qml:1058
+#: contents/ui/MaximizedPlayerPage.qml:1111
 #, fuzzy, kde-format
 #| msgid "Shuffle"
 msgid "Shuffle Queue"
 msgstr "Qarışıq"
 
-#: contents/ui/MaximizedPlayerPage.qml:1091
+#: contents/ui/MaximizedPlayerPage.qml:1144
 #, kde-format
 msgid "Upcoming Songs"
 msgstr ""
@@ -493,51 +493,51 @@ msgstr ""
 msgid "Add to playlist"
 msgstr "Mahnı siyahısına əlavə edin"
 
-#: main.cpp:74
+#: main.cpp:75
 #, fuzzy, kde-format
 #| msgid "Find music on YouTube Music"
 msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Stream music from YouTube Music"
 msgstr "Musiqini YouTube Musiqi-də tapın"
 
-#: main.cpp:76
+#: main.cpp:77
 #, kde-format
 msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
 msgstr ""
 
-#: main.cpp:77
+#: main.cpp:78
 #, kde-format
 msgid "Jonah Brüchert"
 msgstr ""
 
-#: main.cpp:77
+#: main.cpp:78
 #, kde-format
 msgid "Maintainer"
 msgstr ""
 
-#: main.cpp:78
+#: main.cpp:79
 #, kde-format
 msgid "Mathis Brüchert"
 msgstr ""
 
-#: main.cpp:78
+#: main.cpp:79
 #, kde-format
 msgid "Designer"
 msgstr ""
 
-#: main.cpp:79
+#: main.cpp:80
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Xəyyam Qocayev"
 
-#: main.cpp:79
+#: main.cpp:80
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "xxmn77@gmail.com"
 
-#: main.cpp:86
+#: main.cpp:87
 #, fuzzy, kde-format
 #| msgid "Find music on YouTube Music"
 msgctxt "YouTube Music is a music streaming service by Google"

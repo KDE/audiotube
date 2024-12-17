@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-05 00:39+0000\n"
+"POT-Creation-Date: 2024-12-17 00:39+0000\n"
 "PO-Revision-Date: 2024-04-07 13:25+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -250,7 +250,7 @@ msgstr "Deze afspeellijst is nog leeg"
 msgid "Import Playlist"
 msgstr "Afspeellijst importeren"
 
-#: contents/ui/main.qml:131 main.cpp:72
+#: contents/ui/main.qml:131 main.cpp:73
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
@@ -260,95 +260,95 @@ msgstr "AudioTube"
 msgid "No song playing"
 msgstr "Er speelt geen song"
 
-#: contents/ui/MaximizedPlayerPage.qml:99
+#: contents/ui/MaximizedPlayerPage.qml:100
 #, kde-format
 msgid "Close Maximized Player"
 msgstr "Gemaximaliseerde speler sluiten"
 
-#: contents/ui/MaximizedPlayerPage.qml:206
+#: contents/ui/MaximizedPlayerPage.qml:262
 #: contents/ui/MinimizedPlayerControls.qml:112
 #, kde-format
 msgid "No media playing"
 msgstr "Er speelt geen medium"
 
-#: contents/ui/MaximizedPlayerPage.qml:465
+#: contents/ui/MaximizedPlayerPage.qml:521
 #, kde-format
 msgid "Remove from Favourites"
 msgstr "Uit favorieten verwijderen"
 
-#: contents/ui/MaximizedPlayerPage.qml:465
+#: contents/ui/MaximizedPlayerPage.qml:521
 #, kde-format
 msgid "Add to Favourites"
 msgstr "Aan favorieten toevoegen"
 
-#: contents/ui/MaximizedPlayerPage.qml:490
+#: contents/ui/MaximizedPlayerPage.qml:546
 #, kde-format
 msgid "Open Volume Drawer"
 msgstr "Volume lader openen"
 
-#: contents/ui/MaximizedPlayerPage.qml:600
+#: contents/ui/MaximizedPlayerPage.qml:653
 #, kde-format
 msgid "Unmute Audio"
 msgstr "Dempen van geluid opheffen"
 
-#: contents/ui/MaximizedPlayerPage.qml:600
+#: contents/ui/MaximizedPlayerPage.qml:653
 #, kde-format
 msgid "Mute Audio"
 msgstr "Geluid dempen"
 
-#: contents/ui/MaximizedPlayerPage.qml:639
+#: contents/ui/MaximizedPlayerPage.qml:692
 #, kde-format
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/ui/MaximizedPlayerPage.qml:669
+#: contents/ui/MaximizedPlayerPage.qml:722
 #, kde-format
 msgid "Hide Lyrics"
 msgstr "Liedteksten verbergen"
 
-#: contents/ui/MaximizedPlayerPage.qml:669
+#: contents/ui/MaximizedPlayerPage.qml:722
 #, kde-format
 msgid "Show Lyrics"
 msgstr "Liedteksten tonen"
 
-#: contents/ui/MaximizedPlayerPage.qml:689 contents/ui/SongMenu.qml:195
+#: contents/ui/MaximizedPlayerPage.qml:742 contents/ui/SongMenu.qml:195
 #: contents/ui/SongMenu.qml:281
 #, kde-format
 msgid "Share Song"
 msgstr "Songs delen"
 
-#: contents/ui/MaximizedPlayerPage.qml:730
+#: contents/ui/MaximizedPlayerPage.qml:783
 #, kde-format
 msgid "Add to a local playlist"
 msgstr "Aan een lokale afspeellijst toevoegen"
 
-#: contents/ui/MaximizedPlayerPage.qml:767
+#: contents/ui/MaximizedPlayerPage.qml:820
 #, kde-format
 msgid "Hide Queue"
 msgstr "Wachtrij verbergen"
 
-#: contents/ui/MaximizedPlayerPage.qml:767
+#: contents/ui/MaximizedPlayerPage.qml:820
 #, kde-format
 msgid "Show Queue"
 msgstr "Wachtrij tonen"
 
-#: contents/ui/MaximizedPlayerPage.qml:998
-#: contents/ui/MaximizedPlayerPage.qml:1242
+#: contents/ui/MaximizedPlayerPage.qml:1051
+#: contents/ui/MaximizedPlayerPage.qml:1295
 #, kde-format
 msgid "Remove Track"
 msgstr "Track verwijderen"
 
-#: contents/ui/MaximizedPlayerPage.qml:1033
+#: contents/ui/MaximizedPlayerPage.qml:1086
 #, kde-format
 msgid "Clear Queue"
 msgstr "Wachtrij wissen"
 
-#: contents/ui/MaximizedPlayerPage.qml:1058
+#: contents/ui/MaximizedPlayerPage.qml:1111
 #, kde-format
 msgid "Shuffle Queue"
 msgstr "Wachtrij voor willekeurig afspelen"
 
-#: contents/ui/MaximizedPlayerPage.qml:1091
+#: contents/ui/MaximizedPlayerPage.qml:1144
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "Aankomende songs"
@@ -468,50 +468,50 @@ msgstr "Uit geschiedenis verwijderen"
 msgid "Add to playlist"
 msgstr "Aan afspeellijst toevoegen"
 
-#: main.cpp:74
+#: main.cpp:75
 #, kde-format
 msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Stream music from YouTube Music"
 msgstr "Muziek streamen van YouTube Music"
 
-#: main.cpp:76
+#: main.cpp:77
 #, kde-format
 msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
 msgstr "© 2021-2024 Jonah Brüchert, 2021-2024 KDE-gemeenschap"
 
-#: main.cpp:77
+#: main.cpp:78
 #, kde-format
 msgid "Jonah Brüchert"
 msgstr "Jonah Brüchert"
 
-#: main.cpp:77
+#: main.cpp:78
 #, kde-format
 msgid "Maintainer"
 msgstr "Onderhouder"
 
-#: main.cpp:78
+#: main.cpp:79
 #, kde-format
 msgid "Mathis Brüchert"
 msgstr "Mathis Brüchert"
 
-#: main.cpp:78
+#: main.cpp:79
 #, kde-format
 msgid "Designer"
 msgstr "Ontwerper"
 
-#: main.cpp:79
+#: main.cpp:80
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Freek de Kruijf - 2021 t/m 2023"
 
-#: main.cpp:79
+#: main.cpp:80
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "freekdekruijf@kde.nl"
 
-#: main.cpp:86
+#: main.cpp:87
 #, kde-format
 msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Unofficial API for YouTube Music"

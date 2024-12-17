@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-05 00:39+0000\n"
+"POT-Creation-Date: 2024-12-17 00:39+0000\n"
 "PO-Revision-Date: 2024-04-19 02:24+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -250,7 +250,7 @@ msgstr "尚未加入歌曲到此播放清單"
 msgid "Import Playlist"
 msgstr "匯入播放清單"
 
-#: contents/ui/main.qml:131 main.cpp:72
+#: contents/ui/main.qml:131 main.cpp:73
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
@@ -260,95 +260,95 @@ msgstr "AudioTube"
 msgid "No song playing"
 msgstr "沒有播放歌曲"
 
-#: contents/ui/MaximizedPlayerPage.qml:99
+#: contents/ui/MaximizedPlayerPage.qml:100
 #, kde-format
 msgid "Close Maximized Player"
 msgstr "關閉最大化播放器"
 
-#: contents/ui/MaximizedPlayerPage.qml:206
+#: contents/ui/MaximizedPlayerPage.qml:262
 #: contents/ui/MinimizedPlayerControls.qml:112
 #, kde-format
 msgid "No media playing"
 msgstr "沒有播放任何媒體"
 
-#: contents/ui/MaximizedPlayerPage.qml:465
+#: contents/ui/MaximizedPlayerPage.qml:521
 #, kde-format
 msgid "Remove from Favourites"
 msgstr "從最愛中移除"
 
-#: contents/ui/MaximizedPlayerPage.qml:465
+#: contents/ui/MaximizedPlayerPage.qml:521
 #, kde-format
 msgid "Add to Favourites"
 msgstr "加入最愛"
 
-#: contents/ui/MaximizedPlayerPage.qml:490
+#: contents/ui/MaximizedPlayerPage.qml:546
 #, kde-format
 msgid "Open Volume Drawer"
 msgstr "開啟音量側邊欄"
 
-#: contents/ui/MaximizedPlayerPage.qml:600
+#: contents/ui/MaximizedPlayerPage.qml:653
 #, kde-format
 msgid "Unmute Audio"
 msgstr "取消靜音"
 
-#: contents/ui/MaximizedPlayerPage.qml:600
+#: contents/ui/MaximizedPlayerPage.qml:653
 #, kde-format
 msgid "Mute Audio"
 msgstr "靜音"
 
-#: contents/ui/MaximizedPlayerPage.qml:639
+#: contents/ui/MaximizedPlayerPage.qml:692
 #, kde-format
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/ui/MaximizedPlayerPage.qml:669
+#: contents/ui/MaximizedPlayerPage.qml:722
 #, kde-format
 msgid "Hide Lyrics"
 msgstr "隱藏歌詞"
 
-#: contents/ui/MaximizedPlayerPage.qml:669
+#: contents/ui/MaximizedPlayerPage.qml:722
 #, kde-format
 msgid "Show Lyrics"
 msgstr "顯示歌詞"
 
-#: contents/ui/MaximizedPlayerPage.qml:689 contents/ui/SongMenu.qml:195
+#: contents/ui/MaximizedPlayerPage.qml:742 contents/ui/SongMenu.qml:195
 #: contents/ui/SongMenu.qml:281
 #, kde-format
 msgid "Share Song"
 msgstr "分享歌曲"
 
-#: contents/ui/MaximizedPlayerPage.qml:730
+#: contents/ui/MaximizedPlayerPage.qml:783
 #, kde-format
 msgid "Add to a local playlist"
 msgstr "加入至本地播放清單"
 
-#: contents/ui/MaximizedPlayerPage.qml:767
+#: contents/ui/MaximizedPlayerPage.qml:820
 #, kde-format
 msgid "Hide Queue"
 msgstr "隱藏待播清單"
 
-#: contents/ui/MaximizedPlayerPage.qml:767
+#: contents/ui/MaximizedPlayerPage.qml:820
 #, kde-format
 msgid "Show Queue"
 msgstr "顯示待播清單"
 
-#: contents/ui/MaximizedPlayerPage.qml:998
-#: contents/ui/MaximizedPlayerPage.qml:1242
+#: contents/ui/MaximizedPlayerPage.qml:1051
+#: contents/ui/MaximizedPlayerPage.qml:1295
 #, kde-format
 msgid "Remove Track"
 msgstr "移除音軌"
 
-#: contents/ui/MaximizedPlayerPage.qml:1033
+#: contents/ui/MaximizedPlayerPage.qml:1086
 #, kde-format
 msgid "Clear Queue"
 msgstr "清除待播清單"
 
-#: contents/ui/MaximizedPlayerPage.qml:1058
+#: contents/ui/MaximizedPlayerPage.qml:1111
 #, kde-format
 msgid "Shuffle Queue"
 msgstr "隨機排序待播清單"
 
-#: contents/ui/MaximizedPlayerPage.qml:1091
+#: contents/ui/MaximizedPlayerPage.qml:1144
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "接下來的歌曲"
@@ -468,50 +468,50 @@ msgstr "從履歷中移除"
 msgid "Add to playlist"
 msgstr "加入至播放清單"
 
-#: main.cpp:74
+#: main.cpp:75
 #, kde-format
 msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Stream music from YouTube Music"
 msgstr "從 YouTube Music 串流播放音樂"
 
-#: main.cpp:76
+#: main.cpp:77
 #, kde-format
 msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
 msgstr "© 2021-2024 Jonah Brüchert, 2021-2024 KDE 社群"
 
-#: main.cpp:77
+#: main.cpp:78
 #, kde-format
 msgid "Jonah Brüchert"
 msgstr "Jonah Brüchert"
 
-#: main.cpp:77
+#: main.cpp:78
 #, kde-format
 msgid "Maintainer"
 msgstr "維護者"
 
-#: main.cpp:78
+#: main.cpp:79
 #, kde-format
 msgid "Mathis Brüchert"
 msgstr "Mathis Brüchert"
 
-#: main.cpp:78
+#: main.cpp:79
 #, kde-format
 msgid "Designer"
 msgstr "設計師"
 
-#: main.cpp:79
+#: main.cpp:80
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "Kisaragi Hiu"
 
-#: main.cpp:79
+#: main.cpp:80
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "mail@kisaragi-hiu.com"
 
-#: main.cpp:86
+#: main.cpp:87
 #, kde-format
 msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Unofficial API for YouTube Music"
