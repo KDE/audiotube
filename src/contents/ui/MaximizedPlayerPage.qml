@@ -194,6 +194,8 @@ Item {
                             model: root.syncedLyrics
 
                             delegate: Label {
+                                id: lineLabel
+
                                 required property string line
                                 required property int index
                                 required property int start
@@ -227,7 +229,7 @@ Item {
                                 MouseArea {
                                     anchors.fill: parent
                                     onClicked: {
-                                        audio.position = model.start * 1000;
+                                        root.audio.position = lineLabel.start * 1000;
                                     }
                                 }
                             }
