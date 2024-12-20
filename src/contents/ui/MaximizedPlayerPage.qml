@@ -172,55 +172,63 @@ Item {
                     width: swipeView.width
                     height: swipeView.height
 
-                    ListView {
-                        id: syncedView
-
-                        NumberAnimation {
-                            id: smoothScroll
-                            target: syncedView
-                            property: "contentY"
-                            duration: 250
-                        }
-
-                        ScrollBar.vertical: ScrollBar {}
-
+                    ScrollView {
                         visible: root.syncedLyrics.count > 0
-                        Layout.margins: 20
-                        Layout.alignment: Qt.AlignHCenter
-                        Layout.maximumWidth: 900
                         Layout.fillWidth: true
                         Layout.fillHeight: true
-                        model: root.syncedLyrics
-                        delegate: Label {
-                            property bool active: (model.start < audio.position / 1000 && model.end > audio.position / 1000) // Lyrics model timestamps are in seconds
+                        Layout.maximumWidth: 900
+                        Layout.alignment: Qt.AlignHCenter
+                        Layout.margins: 20
+                        clip: true
 
-                            color: "white"
-                            text: model.line
+                        ListView {
+                            id: syncedView
 
-                            font.pointSize: Kirigami.Theme.defaultFont.pointSize * 1.5
-                            font.weight:  active ? Font.Bold : Font.Normal
-
-                            Layout.margins: Kirigami.Theme.defaultFont.pointSize
-                            width: parent.width
-                            wrapMode: Text.Wrap
-
-                            onActiveChanged: {
-                                if (active) {
-                                    var pos = syncedView.contentY;
-                                    syncedView.positionViewAtIndex(model.index - 3, ListView.Beginning);
-                                    var destPos;
-                                    destPos = syncedView.contentY;
-
-                                    smoothScroll.from = pos;
-                                    smoothScroll.to = destPos;
-                                    smoothScroll.running = true;
-                                }
+                            NumberAnimation {
+                                id: smoothScroll
+                                target: syncedView
+                                property: "contentY"
+                                duration: 250
                             }
 
-                            MouseArea {
-                                anchors.fill: parent
-                                onClicked: {
-                                    audio.position = model.start * 1000;
+                            model: root.syncedLyrics
+
+                            delegate: Label {
+                                required property string line
+                                required property int index
+                                required property int start
+                                required property int end
+
+                                property bool active: (start < audio.position / 1000 && end > audio.position / 1000) // Lyrics model timestamps are in seconds
+
+                                color: "white"
+                                text: line
+
+                                font.pointSize: Kirigami.Theme.defaultFont.pointSize * 1.5
+                                font.weight:  active ? Font.Bold : Font.Normal
+                                horizontalAlignment: Text.AlignHCenter
+
+                                width: parent ? parent.width : 0
+                                wrapMode: Text.Wrap
+
+                                onActiveChanged: {
+                                    if (active) {
+                                        var pos = syncedView.contentY;
+                                        syncedView.positionViewAtIndex(index - 3, ListView.Beginning);
+                                        var destPos;
+                                        destPos = syncedView.contentY;
+
+                                        smoothScroll.from = pos;
+                                        smoothScroll.to = destPos;
+                                        smoothScroll.running = true;
+                                    }
+                                }
+
+                                MouseArea {
+                                    anchors.fill: parent
+                                    onClicked: {
+                                        audio.position = model.start * 1000;
+                                    }
                                 }
                             }
                         }
@@ -241,9 +249,11 @@ Item {
                         Label {
                             id: lyrics
                             padding: 20
+                            width: parent ? parent.width : 0
                             font.pointSize: Kirigami.Theme.defaultFont.pointSize * 1.5
                             text: UserPlaylistModel.lyrics
                             color: "white"
+                            horizontalAlignment: Text.AlignHCenter
                         }
                     }
                 }
