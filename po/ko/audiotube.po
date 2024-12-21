@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-17 00:39+0000\n"
+"POT-Creation-Date: 2024-12-21 00:40+0000\n"
 "PO-Revision-Date: 2024-08-19 22:06+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -263,90 +263,90 @@ msgstr "재생 중인 곡 없음"
 msgid "Close Maximized Player"
 msgstr "최대화된 재생기 닫기"
 
-#: contents/ui/MaximizedPlayerPage.qml:262
+#: contents/ui/MaximizedPlayerPage.qml:274
 #: contents/ui/MinimizedPlayerControls.qml:112
 #, kde-format
 msgid "No media playing"
 msgstr "재생 중인 미디어 없음"
 
-#: contents/ui/MaximizedPlayerPage.qml:521
+#: contents/ui/MaximizedPlayerPage.qml:533
 #, kde-format
 msgid "Remove from Favourites"
 msgstr "책갈피에서 삭제"
 
-#: contents/ui/MaximizedPlayerPage.qml:521
+#: contents/ui/MaximizedPlayerPage.qml:533
 #, kde-format
 msgid "Add to Favourites"
 msgstr "책갈피에 추가"
 
-#: contents/ui/MaximizedPlayerPage.qml:546
+#: contents/ui/MaximizedPlayerPage.qml:558
 #, kde-format
 msgid "Open Volume Drawer"
 msgstr "음량 서랍 열기"
 
-#: contents/ui/MaximizedPlayerPage.qml:653
+#: contents/ui/MaximizedPlayerPage.qml:665
 #, kde-format
 msgid "Unmute Audio"
 msgstr "오디오 음소거 해제"
 
-#: contents/ui/MaximizedPlayerPage.qml:653
+#: contents/ui/MaximizedPlayerPage.qml:665
 #, kde-format
 msgid "Mute Audio"
 msgstr "오디오 음소거"
 
-#: contents/ui/MaximizedPlayerPage.qml:692
+#: contents/ui/MaximizedPlayerPage.qml:704
 #, kde-format
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/ui/MaximizedPlayerPage.qml:722
+#: contents/ui/MaximizedPlayerPage.qml:734
 #, kde-format
 msgid "Hide Lyrics"
 msgstr "가사 숨기기"
 
-#: contents/ui/MaximizedPlayerPage.qml:722
+#: contents/ui/MaximizedPlayerPage.qml:734
 #, kde-format
 msgid "Show Lyrics"
 msgstr "가사 표시"
 
-#: contents/ui/MaximizedPlayerPage.qml:742 contents/ui/SongMenu.qml:195
+#: contents/ui/MaximizedPlayerPage.qml:754 contents/ui/SongMenu.qml:195
 #: contents/ui/SongMenu.qml:281
 #, kde-format
 msgid "Share Song"
 msgstr "노래 공유"
 
-#: contents/ui/MaximizedPlayerPage.qml:783
+#: contents/ui/MaximizedPlayerPage.qml:795
 #, kde-format
 msgid "Add to a local playlist"
 msgstr "로컬 재생 목록에 추가"
 
-#: contents/ui/MaximizedPlayerPage.qml:820
+#: contents/ui/MaximizedPlayerPage.qml:832
 #, kde-format
 msgid "Hide Queue"
 msgstr "대기열 숨기기"
 
-#: contents/ui/MaximizedPlayerPage.qml:820
+#: contents/ui/MaximizedPlayerPage.qml:832
 #, kde-format
 msgid "Show Queue"
 msgstr "대기열 표시"
 
-#: contents/ui/MaximizedPlayerPage.qml:1051
-#: contents/ui/MaximizedPlayerPage.qml:1295
+#: contents/ui/MaximizedPlayerPage.qml:1063
+#: contents/ui/MaximizedPlayerPage.qml:1307
 #, kde-format
 msgid "Remove Track"
 msgstr "트랙 삭제"
 
-#: contents/ui/MaximizedPlayerPage.qml:1086
+#: contents/ui/MaximizedPlayerPage.qml:1098
 #, kde-format
 msgid "Clear Queue"
 msgstr "대기열 비우기"
 
-#: contents/ui/MaximizedPlayerPage.qml:1111
+#: contents/ui/MaximizedPlayerPage.qml:1123
 #, kde-format
 msgid "Shuffle Queue"
 msgstr "대기열 무순서 재생"
 
-#: contents/ui/MaximizedPlayerPage.qml:1144
+#: contents/ui/MaximizedPlayerPage.qml:1156
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "다음에 재생될 곡"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-12-17 00:39+0000\n"
+"POT-Creation-Date: 2024-12-21 00:40+0000\n"
 "PO-Revision-Date: 2024-10-17 18:08+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -264,90 +264,90 @@ msgstr "Mitään ei soiteta"
 msgid "Close Maximized Player"
 msgstr "Sulje suurennettu soitin"
 
-#: contents/ui/MaximizedPlayerPage.qml:262
+#: contents/ui/MaximizedPlayerPage.qml:274
 #: contents/ui/MinimizedPlayerControls.qml:112
 #, kde-format
 msgid "No media playing"
 msgstr "Mitään ei toisteta"
 
-#: contents/ui/MaximizedPlayerPage.qml:521
+#: contents/ui/MaximizedPlayerPage.qml:533
 #, kde-format
 msgid "Remove from Favourites"
 msgstr "Poista suosikeista"
 
-#: contents/ui/MaximizedPlayerPage.qml:521
+#: contents/ui/MaximizedPlayerPage.qml:533
 #, kde-format
 msgid "Add to Favourites"
 msgstr "Lisää suosikkeihin"
 
-#: contents/ui/MaximizedPlayerPage.qml:546
+#: contents/ui/MaximizedPlayerPage.qml:558
 #, kde-format
 msgid "Open Volume Drawer"
 msgstr "Avaa äänenvoimakkuus"
 
-#: contents/ui/MaximizedPlayerPage.qml:653
+#: contents/ui/MaximizedPlayerPage.qml:665
 #, kde-format
 msgid "Unmute Audio"
 msgstr "Poista äänen vaimennus"
 
-#: contents/ui/MaximizedPlayerPage.qml:653
+#: contents/ui/MaximizedPlayerPage.qml:665
 #, kde-format
 msgid "Mute Audio"
 msgstr "Vaimenna ääni"
 
-#: contents/ui/MaximizedPlayerPage.qml:692
+#: contents/ui/MaximizedPlayerPage.qml:704
 #, kde-format
 msgid "%1%"
 msgstr "%1 %"
 
-#: contents/ui/MaximizedPlayerPage.qml:722
+#: contents/ui/MaximizedPlayerPage.qml:734
 #, kde-format
 msgid "Hide Lyrics"
 msgstr "Piilota sanat"
 
-#: contents/ui/MaximizedPlayerPage.qml:722
+#: contents/ui/MaximizedPlayerPage.qml:734
 #, kde-format
 msgid "Show Lyrics"
 msgstr "Näytä sanoitukset"
 
-#: contents/ui/MaximizedPlayerPage.qml:742 contents/ui/SongMenu.qml:195
+#: contents/ui/MaximizedPlayerPage.qml:754 contents/ui/SongMenu.qml:195
 #: contents/ui/SongMenu.qml:281
 #, kde-format
 msgid "Share Song"
 msgstr "Jaa kappale"
 
-#: contents/ui/MaximizedPlayerPage.qml:783
+#: contents/ui/MaximizedPlayerPage.qml:795
 #, kde-format
 msgid "Add to a local playlist"
 msgstr "Lisää paikalliseen soittolistaan"
 
-#: contents/ui/MaximizedPlayerPage.qml:820
+#: contents/ui/MaximizedPlayerPage.qml:832
 #, kde-format
 msgid "Hide Queue"
 msgstr "Piilota jono"
 
-#: contents/ui/MaximizedPlayerPage.qml:820
+#: contents/ui/MaximizedPlayerPage.qml:832
 #, kde-format
 msgid "Show Queue"
 msgstr "Näytä jono"
 
-#: contents/ui/MaximizedPlayerPage.qml:1051
-#: contents/ui/MaximizedPlayerPage.qml:1295
+#: contents/ui/MaximizedPlayerPage.qml:1063
+#: contents/ui/MaximizedPlayerPage.qml:1307
 #, kde-format
 msgid "Remove Track"
 msgstr "Poista raita"
 
-#: contents/ui/MaximizedPlayerPage.qml:1086
+#: contents/ui/MaximizedPlayerPage.qml:1098
 #, kde-format
 msgid "Clear Queue"
 msgstr "Tyhjennä jono"
 
-#: contents/ui/MaximizedPlayerPage.qml:1111
+#: contents/ui/MaximizedPlayerPage.qml:1123
 #, kde-format
 msgid "Shuffle Queue"
 msgstr "Sekoita jono"
 
-#: contents/ui/MaximizedPlayerPage.qml:1144
+#: contents/ui/MaximizedPlayerPage.qml:1156
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "Tulossa olevat kappaleet"
