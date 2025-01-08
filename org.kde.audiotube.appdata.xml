@@ -49,6 +49,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="zh-CN">AudioTube</name>
   <name xml:lang="zh-TW">AudioTube</name>
   <summary>YouTube Music app</summary>
+  <summary xml:lang="ar">تطبيق يوتيوب ميوزيك</summary>
   <summary xml:lang="ca">Aplicació de YouTube Music</summary>
   <summary xml:lang="ca-valencia">Aplicació de YouTube Music</summary>
   <summary xml:lang="cs">Přehrávač hudby YouTube</summary>
@@ -180,6 +181,7 @@ SPDX-License-Identifier: CC0-1.0
   </recommends>
   <description>
     <p>AudioTube can search YouTube Music, list albums and artists, play automatically generated playlists, albums and allows to put your own playlist together. It is adapted to mobile phones and desktop computers.</p>
+    <p xml:lang="ar">يمكن لتيوب الصوتي البحث في موسيقى يوتيوب، وعرض الألبومات والفنانين، وتشغيل القوائم والألبومات المولدة تلقائيًا، ويسمح لك بوضع قائمة التشغيل الخاصة بك معًا. هو ملائم للهواتف المحمولة وأجهزة الحاسوب المكتبية.</p>
     <p xml:lang="ca">L'AudioTube pot cercar a YouTube Music, llistar àlbums i artistes, reproduir llistes de reproducció generades automàticament, àlbums i permet crear la vostra pròpia llista de reproducció. Està adaptat als telèfons mòbils i els ordinadors de sobretaula.</p>
     <p xml:lang="ca-valencia">AudioTube pot buscar a YouTube Music, llistar àlbums i artistes, reproduir llistes de reproducció generades automàticament, àlbums i permet crear la vostra pròpia llista de reproducció. Està adaptat als telèfons mòbils i els ordinadors de sobretaula.</p>
     <p xml:lang="de">AudioTube kann Musik auf YouTube durchsuchen, Alben und Interpreten auflisten, automatisch generierte Wiedergabelisten und Alben abspielen und erlaubt es, eine eigene Wiedergabeliste zusammenzustellen. Mobiltelefone und Desktoprechner werden unterstützt.</p>
