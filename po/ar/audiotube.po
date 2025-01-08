@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the audiotube package.
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 #
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Zayed Al-Saidi <zayed.alsaidi@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-12-21 00:40+0000\n"
-"PO-Revision-Date: 2024-06-26 22:46+0400\n"
+"PO-Revision-Date: 2025-01-07 17:34+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -24,6 +24,8 @@ msgid ""
 "Running with untested version of ytmusicapi %1. If you experience errors, "
 "please report them to your distribution."
 msgstr ""
+"التشغيل بنسخة غير مختبرة من ytmusicapi %1. إذا واجهت أخطاء، يرجى الإبلاغ "
+"عنها إلى توزيعتك."
 
 #: contents/ui/AlbumPage.qml:71 contents/ui/LibraryPage.qml:39
 #: contents/ui/LibraryPage.qml:65 contents/ui/LibraryPage.qml:91
@@ -144,22 +146,19 @@ msgid "Playlist Description"
 msgstr "وصف قوائم التّشغيل"
 
 #: contents/ui/dialogs/ImportPlaylistDialog.qml:17
-#, fuzzy, kde-format
-#| msgid "Add to Playlist"
+#, kde-format
 msgid "Import playlist"
-msgstr "أضف إلى قائمة التّشغيل"
+msgstr "استورد قائمة التّشغيل"
 
 #: contents/ui/dialogs/ImportPlaylistDialog.qml:23
-#, fuzzy, kde-format
-#| msgid "Playlist"
+#, kde-format
 msgid "Playlist URL (Youtube)"
-msgstr "قائمة التشغيل"
+msgstr "عنوان URL لقائمة التشغيل (يوتيوب)"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:17
-#, fuzzy, kde-format
-#| msgid "Add to Playlist"
+#, kde-format
 msgid "Add Song to Playlist"
-msgstr "أضف إلى قائمة التّشغيل"
+msgstr "أضف مقطوعة إلى قائمة التّشغيل"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:29
 #: contents/ui/LocalPlaylistsPage.qml:107
@@ -188,10 +187,9 @@ msgid "Show All"
 msgstr "أظهر الكلّ"
 
 #: contents/ui/LibraryPage.qml:160
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "No Favourites Yet"
-msgstr "المفضلة"
+msgstr "لا توجد مفضلة بعد"
 
 #: contents/ui/LibraryPage.qml:228
 #, kde-format
@@ -206,10 +204,9 @@ msgid "Played Songs"
 msgstr "الأغاني المشغلة"
 
 #: contents/ui/LibraryPage.qml:353
-#, fuzzy, kde-format
-#| msgid "No songs here yet"
+#, kde-format
 msgid "No Songs Played Yet"
-msgstr "لا يوجد أي أغنية بعد"
+msgstr "لم يشغل أي أغاني بعد"
 
 #: contents/ui/LibraryPage.qml:412 contents/ui/LocalPlaylistsPage.qml:20
 #: contents/ui/LocalPlaylistsPage.qml:84 contents/ui/NavigationBar.qml:74
@@ -219,10 +216,9 @@ msgid "Playlists"
 msgstr "قوائم التّشغيل"
 
 #: contents/ui/LibraryPage.qml:451
-#, fuzzy, kde-format
-#| msgid "Playlists"
+#, kde-format
 msgid "No Playlists Yet"
-msgstr "قوائم التّشغيل"
+msgstr "لا توجد قوائم تشغيل حتى الآن"
 
 #: contents/ui/LibraryPage.qml:474 contents/ui/LibraryPage.qml:496
 #: contents/ui/LocalPlaylistsPage.qml:38 contents/ui/LocalPlaylistsPage.qml:60
@@ -244,15 +240,14 @@ msgstr "أزل من قائمة التّشغيل"
 #: contents/ui/LocalPlaylistPage.qml:80
 #, kde-format
 msgid "This playlist is still empty"
-msgstr ""
+msgstr "قائمة التشغيل هذه لا تزال فارغة"
 
 #: contents/ui/LocalPlaylistsPage.qml:115
 #: contents/ui/LocalPlaylistsPage.qml:138
 #: contents/ui/LocalPlaylistsPage.qml:156 contents/ui/PlaylistPage.qml:107
-#, fuzzy, kde-format
-#| msgid "Playlist"
+#, kde-format
 msgid "Import Playlist"
-msgstr "قائمة التشغيل"
+msgstr "استورد قائمة التّشغيل"
 
 #: contents/ui/main.qml:131 main.cpp:73
 #, kde-format
@@ -260,15 +255,14 @@ msgid "AudioTube"
 msgstr "تيوب الصوتي"
 
 #: contents/ui/main.qml:284
-#, fuzzy, kde-format
-#| msgid "No media playing"
+#, kde-format
 msgid "No song playing"
-msgstr "لا يوجد وسائط تعمل"
+msgstr "لا يُشغل أي أغنية"
 
 #: contents/ui/MaximizedPlayerPage.qml:100
 #, kde-format
 msgid "Close Maximized Player"
-msgstr ""
+msgstr "أغلق المشغل المكبّر"
 
 #: contents/ui/MaximizedPlayerPage.qml:274
 #: contents/ui/MinimizedPlayerControls.qml:112
@@ -287,10 +281,9 @@ msgid "Add to Favourites"
 msgstr "أضف للمفضلة"
 
 #: contents/ui/MaximizedPlayerPage.qml:558
-#, fuzzy, kde-format
-#| msgid "Open in Browser"
+#, kde-format
 msgid "Open Volume Drawer"
-msgstr "افتح في المتصفّح"
+msgstr "افتح درج الصوت"
 
 #: contents/ui/MaximizedPlayerPage.qml:665
 #, kde-format
@@ -303,16 +296,14 @@ msgid "Mute Audio"
 msgstr "كتم الصوت"
 
 #: contents/ui/MaximizedPlayerPage.qml:704
-#, fuzzy, kde-format
-#| msgid "%1%"
+#, kde-format
 msgid "%1%"
 msgstr "%1٪"
 
 #: contents/ui/MaximizedPlayerPage.qml:734
-#, fuzzy, kde-format
-#| msgid "Lyrics"
+#, kde-format
 msgid "Hide Lyrics"
-msgstr "الكلمات"
+msgstr "أخف الكلمات"
 
 #: contents/ui/MaximizedPlayerPage.qml:734
 #, kde-format
@@ -321,28 +312,24 @@ msgstr "اعرض كلمات الأغاني"
 
 #: contents/ui/MaximizedPlayerPage.qml:754 contents/ui/SongMenu.qml:195
 #: contents/ui/SongMenu.qml:281
-#, fuzzy, kde-format
-#| msgid "Favourite Songs"
+#, kde-format
 msgid "Share Song"
-msgstr "الأغاني المفضّلة"
+msgstr "شارك الأغنية"
 
 #: contents/ui/MaximizedPlayerPage.qml:795
-#, fuzzy, kde-format
-#| msgid "Add to Playlist"
+#, kde-format
 msgid "Add to a local playlist"
-msgstr "أضف إلى قائمة التّشغيل"
+msgstr "أضف إلى قائمة التّشغيل المحلية"
 
 #: contents/ui/MaximizedPlayerPage.qml:832
-#, fuzzy, kde-format
-#| msgid "Queue"
+#, kde-format
 msgid "Hide Queue"
-msgstr "صُفّ"
+msgstr "أخف قائمة الانتظار"
 
 #: contents/ui/MaximizedPlayerPage.qml:832
-#, fuzzy, kde-format
-#| msgid "Queue"
+#, kde-format
 msgid "Show Queue"
-msgstr "صُفّ"
+msgstr "أظهر قائمة الانتظار"
 
 #: contents/ui/MaximizedPlayerPage.qml:1063
 #: contents/ui/MaximizedPlayerPage.qml:1307
@@ -356,15 +343,14 @@ msgid "Clear Queue"
 msgstr "امسح الطّابور"
 
 #: contents/ui/MaximizedPlayerPage.qml:1123
-#, fuzzy, kde-format
-#| msgid "Shuffle"
+#, kde-format
 msgid "Shuffle Queue"
-msgstr "اخلط"
+msgstr "اخلط قائمة الانتظار"
 
 #: contents/ui/MaximizedPlayerPage.qml:1156
 #, kde-format
 msgid "Upcoming Songs"
-msgstr ""
+msgstr "الأغاني القادمة"
 
 #: contents/ui/NavigationBar.qml:23 contents/ui/Sidebar.qml:108
 #, kde-format
@@ -389,7 +375,7 @@ msgstr "لا يوجد أي أغنية بعد"
 #: contents/ui/PlaylistPage.qml:76
 #, kde-format
 msgid "Playlist successfully imported"
-msgstr ""
+msgstr "استوردت قائمة التّشغيل بنجاح"
 
 #: contents/ui/PlaylistPage.qml:128
 #, kde-format
@@ -414,7 +400,7 @@ msgstr "الفنّانون"
 #: contents/ui/SearchPage.qml:38
 #, kde-format
 msgid "Top Results"
-msgstr ""
+msgstr "أهم النتائج"
 
 #: contents/ui/SearchPage.qml:41 playlistimporter.cpp:22
 #, kde-format
@@ -439,7 +425,7 @@ msgstr "نسخ الرابط"
 #: contents/ui/ShareMenu.qml:54 contents/ui/ShareMenu.qml:108
 #, kde-format
 msgid "Link copied to clipboard"
-msgstr ""
+msgstr "نُسخ الرابط إلى الحافظة"
 
 #: contents/ui/Sidebar.qml:200
 #, kde-format
@@ -482,16 +468,15 @@ msgid "Add to playlist"
 msgstr "أضف إلى قائمة التّشغيل"
 
 #: main.cpp:75
-#, fuzzy, kde-format
-#| msgid "Find music on YouTube Music"
+#, kde-format
 msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Stream music from YouTube Music"
-msgstr "اعثر على موسيقى على موسيقى يوتيوب"
+msgstr "بث الموسيقى من YouTube Music"
 
 #: main.cpp:77
 #, kde-format
 msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
-msgstr ""
+msgstr "© 2021-2024 جونا بروشيرت، 2021-2024 مجتمع كيدي"
 
 #: main.cpp:78
 #, kde-format
@@ -506,7 +491,7 @@ msgstr "المصين"
 #: main.cpp:79
 #, kde-format
 msgid "Mathis Brüchert"
-msgstr ""
+msgstr "ماتيس بروشيرت"
 
 #: main.cpp:79
 #, kde-format
@@ -526,11 +511,10 @@ msgid "Your emails"
 msgstr "zayed.alsaidi@gmail.com"
 
 #: main.cpp:87
-#, fuzzy, kde-format
-#| msgid "Find music on YouTube Music"
+#, kde-format
 msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Unofficial API for YouTube Music"
-msgstr "اعثر على موسيقى على موسيقى يوتيوب"
+msgstr "واجهة برمجة التطبيقات غير الرسمية لموسيقى YouTube"
 
 #: playlistimporter.cpp:22
 #, kde-format
@@ -545,7 +529,7 @@ msgstr "بدون عنوان"
 #: playlistimporter.cpp:62
 #, kde-format
 msgid "No album"
-msgstr ""
+msgstr "لا يوجد ألبوم"
 
 #~ msgid "YouTube Music Player"
 #~ msgstr "مشغل يوتيوب ميوزيك"
