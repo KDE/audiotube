@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the audiotube package.
-# SPDX-FileCopyrightText: 2023, 2024 Adrián Chaves (Gallaecio)
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Adrián Chaves (Gallaecio)
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-18 00:39+0000\n"
-"PO-Revision-Date: 2024-04-14 15:13+0200\n"
+"PO-Revision-Date: 2025-01-12 16:48+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.12.0\n"
 
 #: asyncytmusic.cpp:65
 #, kde-format
@@ -95,7 +95,7 @@ msgstr "Intérprete"
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
 "\"%1\"?"
-msgstr "Non é posíbel reproducir vídeo. Quere reproducir o son de «%1»?"
+msgstr "Aínda non se permite reproducir vídeo. Quere reproducir o son de «%1»?"
 
 #: contents/ui/ArtistPage.qml:148 contents/ui/SearchPage.qml:28
 #, kde-format
