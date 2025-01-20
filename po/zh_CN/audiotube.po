@@ -473,7 +473,7 @@ msgstr ""
 #: main.cpp:76
 #, kde-format
 msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
-msgstr ""
+msgstr "© 2021-2024 Jonah Brücher, 2021-2024 KDE Community"
 
 #: main.cpp:77
 #, kde-format
