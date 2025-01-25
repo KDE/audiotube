@@ -178,6 +178,9 @@ SPDX-License-Identifier: CC0-1.0
     <control>keyboard</control>
     <control>touch</control>
   </recommends>
+  <requires>
+    <display_length compare="ge">360</display_length>
+  </requires>
   <description>
     <p>AudioTube can search YouTube Music, list albums and artists, play automatically generated playlists, albums and allows to put your own playlist together. It is adapted to mobile phones and desktop computers.</p>
     <p xml:lang="ar">يمكن لتيوب الصوتي البحث في موسيقى يوتيوب، وعرض الألبومات والفنانين، وتشغيل القوائم والألبومات المولدة تلقائيًا، ويسمح لك بوضع قائمة التشغيل الخاصة بك معًا. هو ملائم للهواتف المحمولة وأجهزة الحاسوب المكتبية.</p>
