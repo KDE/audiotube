@@ -157,7 +157,7 @@ msgstr "Importa una llista de reproducció"
 #: contents/ui/dialogs/ImportPlaylistDialog.qml:23
 #, kde-format
 msgid "Playlist URL (Youtube)"
-msgstr "URL de la llista de reproducció (Youtube)"
+msgstr "URL de la llista de reproducció (YouTube)"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:17
 #, kde-format
