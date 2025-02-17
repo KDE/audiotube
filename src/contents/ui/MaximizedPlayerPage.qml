@@ -51,6 +51,13 @@ Item {
             sourceSize.width: 512
             sourceSize.height: 512
         }
+
+        Rectangle {
+            visible: GraphicsInfo.api === GraphicsInfo.Software
+            anchors.fill: parent
+            color: "black"
+            opacity: 0.8
+        }
     }
     MultiEffect {
         source: bg
@@ -1009,6 +1016,7 @@ Item {
                                             onMoveRequested: UserPlaylistModel.moveRow(oldIndex, newIndex)
                                         }
                                         Rectangle {
+                                            visible: GraphicsInfo.api !== GraphicsInfo.Software
                                             anchors.fill: handle
                                             layer.enabled: true
                                             layer.effect: MultiEffect {
@@ -1257,6 +1265,7 @@ Item {
                                     }
 
                                     Rectangle {
+                                        visible: GraphicsInfo.api !== GraphicsInfo.Software
                                         anchors.fill: drawerHandle
                                         layer.enabled: true
                                         layer.effect: MultiEffect {

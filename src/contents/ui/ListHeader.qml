@@ -29,6 +29,7 @@ Item {
 
     Item {
         anchors.fill: parent
+        clip: true
 
         Image {
             scale: 1.8
@@ -42,7 +43,7 @@ Item {
             sourceSize.height: 512
         }
 
-        layer.enabled: true
+        layer.enabled: GraphicsInfo.api !== GraphicsInfo.Software
         layer.effect: MultiEffect {
             brightness: -0.25
             saturation: 0.5

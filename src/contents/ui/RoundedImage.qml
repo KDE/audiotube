@@ -23,7 +23,7 @@ Item {
         sourceSize.width: parent.implicitWidth * Screen.devicePixelRatio
 
         layer {
-            enabled: true
+            enabled: GraphicsInfo.api !== GraphicsInfo.Software
             effect: Kirigami.ShadowedTexture {
                 id: mask
                 radius: icon.radius

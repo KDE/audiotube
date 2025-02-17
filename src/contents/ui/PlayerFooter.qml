@@ -4,7 +4,7 @@
 //
 // SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
-import QtQuick 2.7
+import QtQuick 2.15
 import QtQuick.Layouts 1.3
 import QtQuick.Effects
 import QtQuick.Controls 2.12 as Controls
@@ -185,7 +185,7 @@ Flickable {
                     fillMode: Image.PreserveAspectCrop
                 }
 
-                layer.enabled: true
+                layer.enabled: GraphicsInfo.api !== GraphicsInfo.Software
                 layer.effect: MultiEffect {
                     brightness: -0.7
                     saturation: 1
@@ -194,6 +194,13 @@ Flickable {
                     blurMultiplier: 3.0
                     blurEnabled: true
                     autoPaddingEnabled: false
+                }
+
+                Rectangle {
+                    visible: GraphicsInfo.api === GraphicsInfo.Software
+                    anchors.fill: parent
+                    color: "black"
+                    opacity: 0.8
                 }
             }
 
