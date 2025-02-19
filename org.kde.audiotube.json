@@ -17,7 +17,6 @@
         "--device=dri",
         "--own-name=org.mpris.MediaPlayer2.AudioTube"
     ],
-    "separate-locales": false,
     "cleanup": [
         "/include/",
         "/share/cmake/",
