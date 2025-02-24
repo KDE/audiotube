@@ -131,6 +131,7 @@ Item {
                             required property var modelData
                             icon.name: modelData.icon.name
                             text: modelData.text
+                            visible: modelData.visible
                             onTriggered: modelData.triggered()
                         }
                     }
@@ -151,6 +152,7 @@ Item {
                                 Layout.fillWidth: true
                                 text: modelData.text
                                 icon.name: modelData.icon.name
+                                visible: modelData.visible
                                 onClicked: {
                                     modelData.triggered()
                                     overflowDrawer.close()

@@ -106,12 +106,16 @@ QUrl AlbumModel::thumbnailUrl() const
 
 QString AlbumModel::playlistId() const
 {
-    return QString::fromStdString(m_album.audio_playlist_id);
+    return QString::fromStdString(m_album.audio_playlist_id.value_or(std::string()));
 }
 
 QUrl AlbumModel::webUrl() const
 {
-    return QUrl(YTMUSIC_WEB_BASE_URL % "/playlist?list=" % QString::fromStdString(m_album.audio_playlist_id));
+    if (m_album.audio_playlist_id) {
+        return QUrl(YTMUSIC_WEB_BASE_URL % "/playlist?list=" % QString::fromStdString(*m_album.audio_playlist_id));
+    }
+
+    return {};
 }
 
 const album::Album &AlbumModel::album() const
