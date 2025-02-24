@@ -509,7 +509,7 @@ std::vector<artist::Artist::Album> YTMusic::get_artist_albums(const std::string 
         return artist::Artist::Album {
             album["title"].cast<std::string>(),
             extract_py_list<meta::Thumbnail>(album["thumbnails"]),
-            album["year"].cast<std::string>(),
+            optional_key<std::string>(album, "year"),
             album["browseId"].cast<std::string>(),
             album["type"].cast<std::string>()
         };
