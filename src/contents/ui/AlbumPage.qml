@@ -20,7 +20,7 @@ Kirigami.ScrollablePage {
         id: action
         visible: false
         property bool shown
-        shown: !root.flickable.atYBeginning
+        shown: !root.flickable.atYBeginning && albumModel.playlistId
         onShownChanged:
             if(shown){
                 visible = true
@@ -69,6 +69,7 @@ Kirigami.ScrollablePage {
                 Kirigami.Action {
                     icon.name: "media-playback-start"
                     text: i18n("Play")
+                    visible: albumModel.playlistId
                     onTriggered: {
                         applicationWindow().playPlaylist(albumModel.playlistId)
                     }
@@ -76,6 +77,7 @@ Kirigami.ScrollablePage {
                 Kirigami.Action {
                     icon.name: "media-playlist-shuffle"
                     text: i18n("Shuffle")
+                    visible: albumModel.playlistId
                     onTriggered: {
                         applicationWindow().playShufflePlaylist(albumModel.playlistId)
                     }
@@ -86,17 +88,20 @@ Kirigami.ScrollablePage {
                     text: i18n("Append to queue")
                     icon.name: "media-playlist-append"
                     onTriggered: UserPlaylistModel.appendAlbum(albumModel)
+                    visible: albumModel.playlistId
                 },
                 Kirigami.Action {
                     text: i18n("Open in Browser")
                     icon.name: "internet-services"
                     onTriggered: Qt.openUrlExternally(albumModel.webUrl)
+                    visible: albumModel.playlistId
                 },
                 Kirigami.Action {
                     text: i18n("Share")
                     icon.name: "emblem-shared-symbolic"
                     onTriggered:{
                         openShareMenu(albumModel.title, albumModel.webUrl)
+                        visible: albumModel.playlistId
                     }
                 }
 
