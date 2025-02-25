@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-18 00:39+0000\n"
+"POT-Creation-Date: 2025-02-25 02:33+0000\n"
 "PO-Revision-Date: 2022-01-01 09:11-0800\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -35,7 +35,7 @@ msgstr ""
 msgid "Play"
 msgstr "ਚਲਾਓ"
 
-#: contents/ui/AlbumPage.qml:78 contents/ui/ArtistPage.qml:83
+#: contents/ui/AlbumPage.qml:79 contents/ui/ArtistPage.qml:83
 #: contents/ui/LibraryPage.qml:46 contents/ui/LibraryPage.qml:71
 #: contents/ui/LibraryPage.qml:101 contents/ui/LibraryPage.qml:242
 #: contents/ui/LibraryPage.qml:267 contents/ui/LibraryPage.qml:294
@@ -46,7 +46,7 @@ msgstr "ਚਲਾਓ"
 msgid "Shuffle"
 msgstr "ਰਲਵੇਂ"
 
-#: contents/ui/AlbumPage.qml:86 contents/ui/LibraryPage.qml:76
+#: contents/ui/AlbumPage.qml:88 contents/ui/LibraryPage.qml:76
 #: contents/ui/LibraryPage.qml:111 contents/ui/LibraryPage.qml:272
 #: contents/ui/LibraryPage.qml:302 contents/ui/LocalPlaylistPage.qml:104
 #: contents/ui/PlaybackHistory.qml:114 contents/ui/PlaylistPage.qml:102
@@ -54,24 +54,24 @@ msgstr "ਰਲਵੇਂ"
 msgid "Append to queue"
 msgstr ""
 
-#: contents/ui/AlbumPage.qml:91 contents/ui/ArtistPage.qml:91
+#: contents/ui/AlbumPage.qml:94 contents/ui/ArtistPage.qml:91
 #: contents/ui/PlaylistPage.qml:112
 #, kde-format
 msgid "Open in Browser"
 msgstr ""
 
-#: contents/ui/AlbumPage.qml:96 contents/ui/ArtistPage.qml:96
+#: contents/ui/AlbumPage.qml:100 contents/ui/ArtistPage.qml:96
 #: contents/ui/PlaylistPage.qml:117
 #, kde-format
 msgid "Share"
 msgstr ""
 
-#: contents/ui/AlbumPage.qml:106
+#: contents/ui/AlbumPage.qml:111
 #, kde-format
 msgid "Album • %1"
 msgstr ""
 
-#: contents/ui/AlbumPage.qml:160 contents/ui/ArtistPage.qml:201
+#: contents/ui/AlbumPage.qml:165 contents/ui/ArtistPage.qml:201
 #: contents/ui/LocalPlaylistPage.qml:168 contents/ui/PlaybackHistory.qml:195
 #: contents/ui/PlaylistPage.qml:189 contents/ui/SearchPage.qml:148
 #, kde-format
