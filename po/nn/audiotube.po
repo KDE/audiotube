@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-25 00:40+0000\n"
+"POT-Creation-Date: 2025-02-26 00:41+0000\n"
 "PO-Revision-Date: 2024-07-26 14:37+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -260,95 +260,95 @@ msgstr "AudioTube"
 msgid "No song playing"
 msgstr "Ingen song vert spela av"
 
-#: contents/ui/MaximizedPlayerPage.qml:100
+#: contents/ui/MaximizedPlayerPage.qml:107
 #, kde-format
 msgid "Close Maximized Player"
 msgstr "Lukk maksimert spelar"
 
-#: contents/ui/MaximizedPlayerPage.qml:274
+#: contents/ui/MaximizedPlayerPage.qml:281
 #: contents/ui/MinimizedPlayerControls.qml:112
 #, kde-format
 msgid "No media playing"
 msgstr "Inkje medium vert spela av"
 
-#: contents/ui/MaximizedPlayerPage.qml:533
+#: contents/ui/MaximizedPlayerPage.qml:540
 #, kde-format
 msgid "Remove from Favourites"
 msgstr "Fjern frå favorittar"
 
-#: contents/ui/MaximizedPlayerPage.qml:533
+#: contents/ui/MaximizedPlayerPage.qml:540
 #, kde-format
 msgid "Add to Favourites"
 msgstr "Merk som favoritt"
 
-#: contents/ui/MaximizedPlayerPage.qml:558
+#: contents/ui/MaximizedPlayerPage.qml:565
 #, kde-format
 msgid "Open Volume Drawer"
 msgstr "Opna lydstyrke-skuff"
 
-#: contents/ui/MaximizedPlayerPage.qml:665
+#: contents/ui/MaximizedPlayerPage.qml:672
 #, kde-format
 msgid "Unmute Audio"
 msgstr "Slå av lyddemping"
 
-#: contents/ui/MaximizedPlayerPage.qml:665
+#: contents/ui/MaximizedPlayerPage.qml:672
 #, kde-format
 msgid "Mute Audio"
 msgstr "Demp lyd"
 
-#: contents/ui/MaximizedPlayerPage.qml:704
+#: contents/ui/MaximizedPlayerPage.qml:711
 #, kde-format
 msgid "%1%"
 msgstr "%1 %"
 
-#: contents/ui/MaximizedPlayerPage.qml:734
+#: contents/ui/MaximizedPlayerPage.qml:741
 #, kde-format
 msgid "Hide Lyrics"
 msgstr "Gøym songtekst"
 
-#: contents/ui/MaximizedPlayerPage.qml:734
+#: contents/ui/MaximizedPlayerPage.qml:741
 #, kde-format
 msgid "Show Lyrics"
 msgstr "Vis songtekst"
 
-#: contents/ui/MaximizedPlayerPage.qml:754 contents/ui/SongMenu.qml:195
+#: contents/ui/MaximizedPlayerPage.qml:761 contents/ui/SongMenu.qml:195
 #: contents/ui/SongMenu.qml:281
 #, kde-format
 msgid "Share Song"
 msgstr "Del song"
 
-#: contents/ui/MaximizedPlayerPage.qml:795
+#: contents/ui/MaximizedPlayerPage.qml:802
 #, kde-format
 msgid "Add to a local playlist"
 msgstr "Legg til i lokal speleliste"
 
-#: contents/ui/MaximizedPlayerPage.qml:832
+#: contents/ui/MaximizedPlayerPage.qml:839
 #, kde-format
 msgid "Hide Queue"
 msgstr "Gøym avspelingskøen"
 
-#: contents/ui/MaximizedPlayerPage.qml:832
+#: contents/ui/MaximizedPlayerPage.qml:839
 #, kde-format
 msgid "Show Queue"
 msgstr "Vis avspelingskøen"
 
-#: contents/ui/MaximizedPlayerPage.qml:1063
-#: contents/ui/MaximizedPlayerPage.qml:1307
+#: contents/ui/MaximizedPlayerPage.qml:1071
+#: contents/ui/MaximizedPlayerPage.qml:1316
 #, kde-format
 msgid "Remove Track"
 msgstr "Fjern spor"
 
-#: contents/ui/MaximizedPlayerPage.qml:1098
+#: contents/ui/MaximizedPlayerPage.qml:1106
 #, kde-format
 msgid "Clear Queue"
 msgstr "Tøm avspelingskøen"
 
-#: contents/ui/MaximizedPlayerPage.qml:1123
+#: contents/ui/MaximizedPlayerPage.qml:1131
 #, kde-format
 msgid "Shuffle Queue"
 msgstr "Stokk om på avspelingskøen"
 
-#: contents/ui/MaximizedPlayerPage.qml:1156
+#: contents/ui/MaximizedPlayerPage.qml:1164
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "Framtidige songar"

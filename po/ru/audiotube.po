@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-25 00:40+0000\n"
+"POT-Creation-Date: 2025-02-26 00:41+0000\n"
 "PO-Revision-Date: 2024-10-18 17:06+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
@@ -261,95 +261,95 @@ msgstr "AudioTube"
 msgid "No song playing"
 msgstr "Ничего не воспроизводится"
 
-#: contents/ui/MaximizedPlayerPage.qml:100
+#: contents/ui/MaximizedPlayerPage.qml:107
 #, kde-format
 msgid "Close Maximized Player"
 msgstr "Закрыть развёрнутый проигрыватель"
 
-#: contents/ui/MaximizedPlayerPage.qml:274
+#: contents/ui/MaximizedPlayerPage.qml:281
 #: contents/ui/MinimizedPlayerControls.qml:112
 #, kde-format
 msgid "No media playing"
 msgstr "Ничего не воспроизводится"
 
-#: contents/ui/MaximizedPlayerPage.qml:533
+#: contents/ui/MaximizedPlayerPage.qml:540
 #, kde-format
 msgid "Remove from Favourites"
 msgstr "Убрать из избранного"
 
-#: contents/ui/MaximizedPlayerPage.qml:533
+#: contents/ui/MaximizedPlayerPage.qml:540
 #, kde-format
 msgid "Add to Favourites"
 msgstr "Добавить в избранное"
 
-#: contents/ui/MaximizedPlayerPage.qml:558
+#: contents/ui/MaximizedPlayerPage.qml:565
 #, kde-format
 msgid "Open Volume Drawer"
 msgstr "Открыть выдвижную панель громкости"
 
-#: contents/ui/MaximizedPlayerPage.qml:665
+#: contents/ui/MaximizedPlayerPage.qml:672
 #, kde-format
 msgid "Unmute Audio"
 msgstr "Включить звук"
 
-#: contents/ui/MaximizedPlayerPage.qml:665
+#: contents/ui/MaximizedPlayerPage.qml:672
 #, kde-format
 msgid "Mute Audio"
 msgstr "Отключить звук"
 
-#: contents/ui/MaximizedPlayerPage.qml:704
+#: contents/ui/MaximizedPlayerPage.qml:711
 #, kde-format
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/ui/MaximizedPlayerPage.qml:734
+#: contents/ui/MaximizedPlayerPage.qml:741
 #, kde-format
 msgid "Hide Lyrics"
 msgstr "Скрыть текст"
 
-#: contents/ui/MaximizedPlayerPage.qml:734
+#: contents/ui/MaximizedPlayerPage.qml:741
 #, kde-format
 msgid "Show Lyrics"
 msgstr "Показать текст"
 
-#: contents/ui/MaximizedPlayerPage.qml:754 contents/ui/SongMenu.qml:195
+#: contents/ui/MaximizedPlayerPage.qml:761 contents/ui/SongMenu.qml:195
 #: contents/ui/SongMenu.qml:281
 #, kde-format
 msgid "Share Song"
 msgstr "Опубликовать трек"
 
-#: contents/ui/MaximizedPlayerPage.qml:795
+#: contents/ui/MaximizedPlayerPage.qml:802
 #, kde-format
 msgid "Add to a local playlist"
 msgstr "Добавить в локальный список воспроизведения"
 
-#: contents/ui/MaximizedPlayerPage.qml:832
+#: contents/ui/MaximizedPlayerPage.qml:839
 #, kde-format
 msgid "Hide Queue"
 msgstr "Скрыть очередь воспроизведения"
 
-#: contents/ui/MaximizedPlayerPage.qml:832
+#: contents/ui/MaximizedPlayerPage.qml:839
 #, kde-format
 msgid "Show Queue"
 msgstr "Показать очередь воспроизведения"
 
-#: contents/ui/MaximizedPlayerPage.qml:1063
-#: contents/ui/MaximizedPlayerPage.qml:1307
+#: contents/ui/MaximizedPlayerPage.qml:1071
+#: contents/ui/MaximizedPlayerPage.qml:1316
 #, kde-format
 msgid "Remove Track"
 msgstr "Удалить дорожку"
 
-#: contents/ui/MaximizedPlayerPage.qml:1098
+#: contents/ui/MaximizedPlayerPage.qml:1106
 #, kde-format
 msgid "Clear Queue"
 msgstr "Очистить очередь воспроизведения"
 
-#: contents/ui/MaximizedPlayerPage.qml:1123
+#: contents/ui/MaximizedPlayerPage.qml:1131
 #, kde-format
 msgid "Shuffle Queue"
 msgstr "Перемешать очередь воспроизведения"
 
-#: contents/ui/MaximizedPlayerPage.qml:1156
+#: contents/ui/MaximizedPlayerPage.qml:1164
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "Следующие треки"

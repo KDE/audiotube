@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-25 00:40+0000\n"
+"POT-Creation-Date: 2025-02-26 00:41+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -261,95 +261,95 @@ msgstr "ऑडियोट्यूब"
 msgid "No song playing"
 msgstr "न गीतं वाद्यते"
 
-#: contents/ui/MaximizedPlayerPage.qml:100
+#: contents/ui/MaximizedPlayerPage.qml:107
 #, kde-format
 msgid "Close Maximized Player"
 msgstr "अधिकतमं खिलाडी बन्दं कुर्वन्तु"
 
-#: contents/ui/MaximizedPlayerPage.qml:274
+#: contents/ui/MaximizedPlayerPage.qml:281
 #: contents/ui/MinimizedPlayerControls.qml:112
 #, kde-format
 msgid "No media playing"
 msgstr "न मीडिया वाद्यते"
 
-#: contents/ui/MaximizedPlayerPage.qml:533
+#: contents/ui/MaximizedPlayerPage.qml:540
 #, kde-format
 msgid "Remove from Favourites"
 msgstr "प्रियतः निष्कासयन्तु"
 
-#: contents/ui/MaximizedPlayerPage.qml:533
+#: contents/ui/MaximizedPlayerPage.qml:540
 #, kde-format
 msgid "Add to Favourites"
 msgstr "प्रियं योजयतु"
 
-#: contents/ui/MaximizedPlayerPage.qml:558
+#: contents/ui/MaximizedPlayerPage.qml:565
 #, kde-format
 msgid "Open Volume Drawer"
 msgstr "ओपन वॉल्यूम दराज"
 
-#: contents/ui/MaximizedPlayerPage.qml:665
+#: contents/ui/MaximizedPlayerPage.qml:672
 #, kde-format
 msgid "Unmute Audio"
 msgstr "असन्तुष्टि श्रव्य"
 
-#: contents/ui/MaximizedPlayerPage.qml:665
+#: contents/ui/MaximizedPlayerPage.qml:672
 #, kde-format
 msgid "Mute Audio"
 msgstr "म्यूट ऑडियो"
 
-#: contents/ui/MaximizedPlayerPage.qml:704
+#: contents/ui/MaximizedPlayerPage.qml:711
 #, kde-format
 msgid "%1%"
 msgstr "%1% "
 
-#: contents/ui/MaximizedPlayerPage.qml:734
+#: contents/ui/MaximizedPlayerPage.qml:741
 #, kde-format
 msgid "Hide Lyrics"
 msgstr "गीतं गोपयतु"
 
-#: contents/ui/MaximizedPlayerPage.qml:734
+#: contents/ui/MaximizedPlayerPage.qml:741
 #, kde-format
 msgid "Show Lyrics"
 msgstr "गीतं दर्शयतु"
 
-#: contents/ui/MaximizedPlayerPage.qml:754 contents/ui/SongMenu.qml:195
+#: contents/ui/MaximizedPlayerPage.qml:761 contents/ui/SongMenu.qml:195
 #: contents/ui/SongMenu.qml:281
 #, kde-format
 msgid "Share Song"
 msgstr "शेयर गीत"
 
-#: contents/ui/MaximizedPlayerPage.qml:795
+#: contents/ui/MaximizedPlayerPage.qml:802
 #, kde-format
 msgid "Add to a local playlist"
 msgstr "स्थानीयप्लेलिस्ट् मध्ये योजयन्तु"
 
-#: contents/ui/MaximizedPlayerPage.qml:832
+#: contents/ui/MaximizedPlayerPage.qml:839
 #, kde-format
 msgid "Hide Queue"
 msgstr "कतारं गोपयतु"
 
-#: contents/ui/MaximizedPlayerPage.qml:832
+#: contents/ui/MaximizedPlayerPage.qml:839
 #, kde-format
 msgid "Show Queue"
 msgstr "कतारं दर्शयतु"
 
-#: contents/ui/MaximizedPlayerPage.qml:1063
-#: contents/ui/MaximizedPlayerPage.qml:1307
+#: contents/ui/MaximizedPlayerPage.qml:1071
+#: contents/ui/MaximizedPlayerPage.qml:1316
 #, kde-format
 msgid "Remove Track"
 msgstr "Track इत्येतत् निष्कासयन्तु"
 
-#: contents/ui/MaximizedPlayerPage.qml:1098
+#: contents/ui/MaximizedPlayerPage.qml:1106
 #, kde-format
 msgid "Clear Queue"
 msgstr "कतारं स्वच्छं कुर्वन्तु"
 
-#: contents/ui/MaximizedPlayerPage.qml:1123
+#: contents/ui/MaximizedPlayerPage.qml:1131
 #, kde-format
 msgid "Shuffle Queue"
 msgstr "शफल कतार"
 
-#: contents/ui/MaximizedPlayerPage.qml:1156
+#: contents/ui/MaximizedPlayerPage.qml:1164
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "आगामी गीत"
