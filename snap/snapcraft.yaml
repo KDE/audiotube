@@ -5,7 +5,7 @@
 name: audiotube
 confinement: strict
 grade: stable
-base: core22
+base: core24
 adopt-info: audiotube
 compression: lzo
 
@@ -13,7 +13,7 @@ apps:
   audiotube:
     extensions:
       - kde-neon-6
-    common-id: org.kde.audiotube.desktop
+    common-id: org.kde.audiotube
     desktop: usr/share/applications/org.kde.audiotube.desktop
     command: usr/bin/audiotube
     environment:
@@ -73,7 +73,7 @@ parts:
       - -share
     organize:
       bin: usr/bin
-      lib/python3.10/site-packages: usr/lib/python3/dist-packages
+      lib/python3.12/site-packages: usr/lib/python3/dist-packages
 
   audiotube:
     after:
@@ -113,4 +113,4 @@ parts:
       - -usr/lib/aspell/*
       - -usr/share/lintian
     build-environment:
-      - PYTHONPATH: ${CRAFT_STAGE}/lib/python3.10/site-packages:${CRAFT_STAGE}/usr/lib/python3/dist-packages
+      - PYTHONPATH: ${CRAFT_STAGE}/lib/python3.12/site-packages:${CRAFT_STAGE}/usr/lib/python3/dist-packages
