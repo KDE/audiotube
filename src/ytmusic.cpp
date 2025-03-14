@@ -246,7 +246,7 @@ auto extract_artist_section_results(py::handle section) {
             return artist::Artist::Album {
                 result["title"].cast<std::string>(),
                 extract_py_list<meta::Thumbnail>(result["thumbnails"]),
-                result["year"].cast<std::optional<std::string>>(),
+                optional_key<std::string>(result, "year"),
                 result["browseId"].cast<std::string>(),
                 std::nullopt
             };
@@ -254,7 +254,7 @@ auto extract_artist_section_results(py::handle section) {
             return artist::Artist::Single {
                 result["title"].cast<std::string>(),
                 extract_py_list<meta::Thumbnail>(result["thumbnails"]),
-                result["year"].cast<std::string>(),
+                optional_key<std::string>(result, "year"),
                 result["browseId"].cast<std::string>()
             };
         } else if constexpr(std::is_same_v<T, artist::Artist::Video>) {
