@@ -3,13 +3,13 @@
 # This file is distributed under the same license as the audiotube package.
 #
 # Automatically generated, 2021.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-02-26 00:41+0000\n"
-"PO-Revision-Date: 2024-04-07 22:47+0200\n"
+"PO-Revision-Date: 2025-03-19 14:19+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.12.3\n"
 
 #: asyncytmusic.cpp:65
 #, kde-format
@@ -301,7 +301,7 @@ msgstr "Silenciar el sonido"
 #: contents/ui/MaximizedPlayerPage.qml:711
 #, kde-format
 msgid "%1%"
-msgstr "%1%"
+msgstr "%1 %"
 
 #: contents/ui/MaximizedPlayerPage.qml:741
 #, kde-format
@@ -533,64 +533,3 @@ msgstr "Sin título"
 #, kde-format
 msgid "No album"
 msgstr "Sin álbumes"
-
-#~ msgid "YouTube Music Player"
-#~ msgstr "Reproductor de música de YouTube"
-
-#~ msgid "Export"
-#~ msgstr "Exportar"
-
-#~ msgid "Import Playlist from Url"
-#~ msgstr "Importar lista de reproducción de URL"
-
-#~ msgid "Import Playlist from File"
-#~ msgstr "Importar lista de reproducción de un archivo"
-
-#~ msgid "Export Playlist"
-#~ msgstr "Exportar lista de reproducción"
-
-#~ msgid "m3u, m3u8 Playlist File (*.m3u *.m3u8)"
-#~ msgstr "Archivo de lista de reproducción m3u, m3u8 (*.m3u *.m3u8)"
-
-#~ msgid "Import Playlists"
-#~ msgstr "Importar listas de reproducción"
-
-#~ msgid "m3u, m3u8 Playlist Files (*.m3u *.m3u8)"
-#~ msgstr "Archivos de lista de reproducción m3u, m3u8 (*.m3u *.m3u8)"
-
-#~ msgid "Saving Failed"
-#~ msgstr "No se ha podido guardar el archivo"
-
-#~ msgctxt "%1 is the path to a playlist file."
-#~ msgid "Failed to Import %1"
-#~ msgstr "No se ha podido importar %1"
-
-#~ msgid "Clear Playlist"
-#~ msgstr "Borrar la lista de reproducción"
-
-#~ msgid "played Songs"
-#~ msgstr "canciones reproducidas"
-
-#~ msgid "%"
-#~ msgstr "%"
-
-#~ msgid "Now Playing"
-#~ msgstr "Reproduciendo"
-
-#~ msgid "Back"
-#~ msgstr "Volver"
-
-#~ msgid "Play next"
-#~ msgstr "Reproducir siguiente"
-
-#~ msgid "Clear"
-#~ msgstr "Borrar todo"
-
-#~ msgid "Pause"
-#~ msgstr "Pausar"
-
-#~ msgid "Expand"
-#~ msgstr "Expandir"
-
-#~ msgid "Play only Audio"
-#~ msgstr "Reproducir solo el sonido"
