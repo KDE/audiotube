@@ -25,6 +25,8 @@ Kirigami.ApplicationWindow {
         blur.setBlur(sidebar, true);
     }
 
+    contentItem.parent.z: 2 // HACK: So contents can cover the header. This is only necessary since Qt 6.9.
+
     pageStack.columnView.columnResizeMode: Kirigami.ColumnView.SingleColumn
 
     property alias searchField: searchLoader // TODO
