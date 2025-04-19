@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:41+0000\n"
+"POT-Creation-Date: 2025-04-19 02:33+0000\n"
 "PO-Revision-Date: 2024-12-02 23:42-0300\n"
 "Last-Translator: Geraldo Simiao <geraldosimiao@fedoraproject.org>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -252,12 +252,12 @@ msgstr "Esta lista de música está vazia"
 msgid "Import Playlist"
 msgstr "Importar lista de músicas"
 
-#: contents/ui/main.qml:131 main.cpp:73
+#: contents/ui/main.qml:133 main.cpp:73
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
 
-#: contents/ui/main.qml:284
+#: contents/ui/main.qml:286
 #, kde-format
 msgid "No song playing"
 msgstr "Nenhuma música em reprodução"

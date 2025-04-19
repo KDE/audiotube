@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:41+0000\n"
+"POT-Creation-Date: 2025-04-19 02:33+0000\n"
 "PO-Revision-Date: 2024-04-17 09:37+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -250,12 +250,12 @@ msgstr "Tento seznam skladeb je prázdný"
 msgid "Import Playlist"
 msgstr "Importovat seznam skladeb"
 
-#: contents/ui/main.qml:131 main.cpp:73
+#: contents/ui/main.qml:133 main.cpp:73
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
 
-#: contents/ui/main.qml:284
+#: contents/ui/main.qml:286
 #, kde-format
 msgid "No song playing"
 msgstr "Nepřehrává se žádná hudba"

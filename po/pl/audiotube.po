@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:41+0000\n"
+"POT-Creation-Date: 2025-04-19 02:33+0000\n"
 "PO-Revision-Date: 2024-04-13 18:52+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -251,12 +251,12 @@ msgstr "Lista odtwarzania nadal jest pusta"
 msgid "Import Playlist"
 msgstr "Zaimportuj listę odtwarzania"
 
-#: contents/ui/main.qml:131 main.cpp:73
+#: contents/ui/main.qml:133 main.cpp:73
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
 
-#: contents/ui/main.qml:284
+#: contents/ui/main.qml:286
 #, kde-format
 msgid "No song playing"
 msgstr "Nie jest odtwarzana żadna piosenka"
