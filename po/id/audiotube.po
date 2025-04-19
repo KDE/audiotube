@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:41+0000\n"
+"POT-Creation-Date: 2025-04-19 00:41+0000\n"
 "PO-Revision-Date: 2023-06-16 19:34+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -253,12 +253,12 @@ msgstr "Daftar putar ini masih kosong"
 msgid "Import Playlist"
 msgstr "Daftar Putar"
 
-#: contents/ui/main.qml:131 main.cpp:73
+#: contents/ui/main.qml:133 main.cpp:73
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
 
-#: contents/ui/main.qml:284
+#: contents/ui/main.qml:286
 #, fuzzy, kde-format
 #| msgid "No media playing"
 msgid "No song playing"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-02-26 00:41+0000\n"
+"POT-Creation-Date: 2025-04-19 00:41+0000\n"
 "PO-Revision-Date: 2024-10-17 18:08+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -249,12 +249,12 @@ msgstr "Soittolista on yhä tyhjä"
 msgid "Import Playlist"
 msgstr "Tuo soittolista"
 
-#: contents/ui/main.qml:131 main.cpp:73
+#: contents/ui/main.qml:133 main.cpp:73
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
 
-#: contents/ui/main.qml:284
+#: contents/ui/main.qml:286
 #, kde-format
 msgid "No song playing"
 msgstr "Mitään ei soiteta"
