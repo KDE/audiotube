@@ -25,7 +25,7 @@ Kirigami.ApplicationWindow {
         blur.setBlur(sidebar, true);
     }
 
-    contentItem.parent.z: 2 // HACK: So contents can cover the header. This is only necessary since Qt 6.9.
+    contentItem.parent.z: (playerFooter.contentY === 0) ? 0 : 2 // HACK: So contents can cover the header. This is only necessary since Qt 6.9.
 
     pageStack.columnView.columnResizeMode: Kirigami.ColumnView.SingleColumn
 
@@ -262,7 +262,6 @@ Kirigami.ApplicationWindow {
             }
         }
     }
-
 
     pageStack.anchors.bottomMargin: wideScreen ? playerFooter.minimizedPlayerHeight: playerFooter.minimizedPlayerHeight+bottombar.height
     pageStack.anchors.leftMargin: wideScreen ? sidebar.width:0
