@@ -12,6 +12,7 @@ add_library(qt-mpris STATIC
     mprisplayerinterface.cpp
     mprisrootinterface.cpp
 )
+
 target_link_libraries(qt-mpris
     Qt::Core
     Qt::DBus

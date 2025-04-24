@@ -5,6 +5,7 @@
 #pragma once
 
 #include <QAbstractListModel>
+#include <qqmlintegration.h>
 
 #include <vector>
 
@@ -20,6 +21,8 @@ struct PlaylistEntry {
 class LocalPlaylistModel : public QAbstractListModel
 {
     Q_OBJECT
+    QML_ELEMENT
+
     Q_PROPERTY(QString playlistId READ playlistId WRITE setPlaylistId NOTIFY playlistIdChanged)
 
     enum Roles {

@@ -12,7 +12,7 @@
 #include <QtCore/QObject>
 #include <QtCore/QString>
 
-class  Mpris : public QObject
+class Mpris : public QObject
 {
     Q_OBJECT
 
@@ -60,7 +60,7 @@ public:
         UserRating
     };
 
-    Mpris(QObject *parent = 0);
+    Mpris(QObject *parent = nullptr);
     ~Mpris();
 
     Q_INVOKABLE static QString metadataToString(Metadata metadata);

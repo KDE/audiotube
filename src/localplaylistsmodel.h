@@ -8,6 +8,7 @@
 #include "playlistimporter.h"
 #include <QAbstractListModel>
 #include <QDateTime>
+#include <qqmlintegration.h>
 
 #include <ThreadedDatabase>
 
@@ -29,6 +30,7 @@ struct Playlist {
 class LocalPlaylistsModel : public QAbstractListModel
 {
     Q_OBJECT
+    QML_ELEMENT
 
     enum Roles {
         PlaylistId,

@@ -6,9 +6,11 @@
 
 #include <QObject>
 #include <QUrl>
+#include <qqmlintegration.h>
 
 class ThumbnailSource : public QObject {
     Q_OBJECT
+    QML_ELEMENT
 
     Q_PROPERTY(QString videoId READ videoId WRITE setVideoId NOTIFY videoIdChanged)
     Q_PROPERTY(QUrl cachedPath READ cachedPath NOTIFY cachedPathChanged)

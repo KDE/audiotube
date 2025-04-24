@@ -4,15 +4,15 @@
 //
 // SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
-import QtQuick 2.15
-import QtQuick.Layouts 1.3
+import QtQuick
+import QtQuick.Layouts
 import QtQuick.Effects
-import QtQuick.Controls 2.12 as Controls
+import QtQuick.Controls as Controls
 
 import QtMultimedia
 
-import org.kde.kirigami 2.12 as Kirigami
-import org.kde.ytmusic 1.0
+import org.kde.kirigami as Kirigami
+import org.kde.audiotube
 
 Flickable {
     id: footerItem

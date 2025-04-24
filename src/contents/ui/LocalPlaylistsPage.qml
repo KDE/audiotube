@@ -3,17 +3,15 @@
 // SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
 
-import QtQuick 2.15
-import QtQuick.Layouts 1.15
-import QtQuick.Controls 2.15 as Controls
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as Controls
 
-import org.kde.kirigami 2.15 as Kirigami
+import org.kde.kirigami as Kirigami
 import org.kde.kirigami.delegates as KirigamiDelegates
-import org.kde.kirigamiaddons.components 1.0 as Components
+import org.kde.kirigamiaddons.components as Components
 
-import org.kde.ytmusic 1.0
-
-import "dialogs"
+import org.kde.audiotube
 
 Kirigami.ScrollablePage {
     id: root
@@ -191,7 +189,7 @@ Kirigami.ScrollablePage {
                 Layout.margins: 5
                 Layout.alignment: Qt.AlignHCenter
 
-                onClicked: pageStack.push("qrc:/LocalPlaylistPage.qml", {
+                onClicked: pageStack.push("qrc:/qt/qml/org/kde/audiotube/contents/ui/LocalPlaylistPage.qml", {
                     "playlistId": playlistDelegate.playlistId,
                     "title": playlistDelegate.title
                 })

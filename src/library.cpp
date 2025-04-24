@@ -26,7 +26,7 @@ Library::Library(QObject *parent)
         return config;
     }()))
 {
-    m_database->runMigrations(":/migrations/");
+    m_database->runMigrations(":/qt/qml/org/kde/audiotube/migrations/");
     m_searches = new SearchHistoryModel(this);
 
     refreshFavourites();
@@ -449,4 +449,11 @@ LocalSearchModel::LocalSearchModel(QObject *parent) : PlaybackHistoryModel(paren
                endResetModel();
            });
     });
+}
+
+
+Library *Library::create(QQmlEngine *, QJSEngine *)
+{
+    QQmlEngine::setObjectOwnership(&instance(), QQmlEngine::CppOwnership);
+    return &instance();
 }

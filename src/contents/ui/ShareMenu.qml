@@ -3,16 +3,16 @@
 // SPDX-License-Identifier: GPL-2.0-or-later
 
 import QtQuick.Controls as Controls
-import QtQuick.Layouts 1.7
-import QtQuick 2.7
-import QtQuick.Window 2.15
+import QtQuick.Layouts
+import QtQuick
+import QtQuick.Window
 
-import org.kde.kirigami 2.20 as Kirigami
+import org.kde.kirigami as Kirigami
 import org.kde.kirigami.delegates as KirigamiDelegates
-import org.kde.kirigamiaddons.components 1.0 as Components
-import org.kde.purpose 1.0 as Purpose
+import org.kde.kirigamiaddons.components as Components
+import org.kde.purpose as Purpose
 
-import org.kde.ytmusic 1.0
+import org.kde.audiotube
 
 Item{
     id:root

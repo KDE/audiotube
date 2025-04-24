@@ -5,6 +5,7 @@
 #pragma once
 
 #include <QAbstractListModel>
+#include <qqmlintegration.h>
 #include <ytmusic.h>
 
 #include "abstractytmusicmodel.h"
@@ -12,6 +13,7 @@
 class PlaylistModel : public AbstractYTMusicModel
 {
     Q_OBJECT
+    QML_ELEMENT
 
     // input
     Q_PROPERTY(QString playlistId READ playlistId WRITE setPlaylistId NOTIFY playlistIdChanged REQUIRED)

@@ -7,10 +7,12 @@
 #include "ytmusic.h"
 #include <QObject>
 #include <ThreadedDatabase>
+#include <qqmlintegration.h>
 
 class PlaylistImporter : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
 
 public:
     PlaylistImporter(QObject *parent = nullptr);

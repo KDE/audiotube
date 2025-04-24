@@ -3,6 +3,8 @@
 // SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 #pragma once
 
+#include <qqmlintegration.h>
+
 #include <ytmusic.h>
 
 #include "abstractytmusicmodel.h"
@@ -15,6 +17,8 @@ class LocalPlaylistModel;
 class UserPlaylistModel : public AbstractYTMusicModel
 {
     Q_OBJECT
+    QML_ELEMENT
+    QML_SINGLETON
 
     // input
     Q_PROPERTY(QString initialVideoId READ initialVideoId WRITE setInitialVideoId NOTIFY initialVideoIdChanged)

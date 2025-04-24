@@ -6,6 +6,7 @@
 
 #include <QAbstractListModel>
 #include <QUrl>
+#include <qqmlintegration.h>
 
 #include <optional>
 
@@ -18,6 +19,7 @@
 class ArtistModel : public AbstractYTMusicModel
 {
     Q_OBJECT
+    QML_ELEMENT
 
     Q_PROPERTY(QString channelId READ channelId WRITE setChannelId NOTIFY channelIdChanged REQUIRED)
 

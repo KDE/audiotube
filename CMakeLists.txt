@@ -31,6 +31,7 @@ include(ECMSetupVersion)
 include(ECMGenerateHeaders)
 include(ECMPoQmTools)
 include(ECMAddTests)
+include(ECMQmlModule)
 
 ecm_setup_version(${PROJECT_VERSION}
     VARIABLE_PREFIX AUDIOTUBE

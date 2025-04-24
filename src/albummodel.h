@@ -6,6 +6,7 @@
 
 #include <QAbstractListModel>
 #include <QUrl>
+#include <qqmlintegration.h>
 
 #include "asyncytmusic.h"
 #include "abstractytmusicmodel.h"
@@ -13,6 +14,8 @@
 class AlbumModel : public AbstractYTMusicModel
 {
     Q_OBJECT
+    QML_ELEMENT
+
     Q_PROPERTY(QString browseId READ browseId WRITE setBrowseId NOTIFY browseIdChanged REQUIRED)
 
     Q_PROPERTY(QString title READ title NOTIFY titleChanged)

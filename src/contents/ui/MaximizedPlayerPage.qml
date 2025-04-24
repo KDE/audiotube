@@ -2,18 +2,16 @@
 //
 // SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
-import QtQuick 2.15
+import QtQuick
 import QtQuick.Effects
-import QtQuick.Controls 2.15
-import QtQuick.Layouts 1.15
+import QtQuick.Controls
+import QtQuick.Layouts
 
 import QtMultimedia
 
-import org.kde.kirigami 2.19 as Kirigami
-import org.kde.kirigamiaddons.components 1.0 as Components
-import org.kde.ytmusic 1.0
-
-import "dialogs"
+import org.kde.kirigami as Kirigami
+import org.kde.kirigamiaddons.components as Components
+import org.kde.audiotube
 
 Item {
     id: root
@@ -312,7 +310,7 @@ Item {
                         onClicked: {
                             let index = UserPlaylistModel.index(UserPlaylistModel.currentIndex, 0)
                             let albumId = UserPlaylistModel.data(index, UserPlaylistModel.AlbumId)
-                            pageStack.push("qrc:/AlbumPage.qml", {
+                            pageStack.push("qrc:/qt/qml/org/kde/audiotube/contents/ui/AlbumPage.qml", {
                                 "browseId": albumId
                             })
                             root.requestClose()

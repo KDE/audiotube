@@ -2,11 +2,11 @@
 //
 // SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
-import QtQuick 2.15
-import QtQuick.Layouts 1.3
-import QtQuick.Controls 2.15 as Controls
-import org.kde.kirigami 2.20 as Kirigami
-import org.kde.ytmusic 1.0
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as Controls
+import org.kde.kirigami as Kirigami
+import org.kde.audiotube
 
 Rectangle {
     property int sidebarWidth: 230
@@ -107,7 +107,7 @@ Rectangle {
                         pagePool: pool
                         text: i18n("Library")
                         icon.name: "file-library-symbolic"
-                        page: Qt.resolvedUrl("qrc:/LibraryPage.qml")
+                        page: Qt.resolvedUrl("qrc:/qt/qml/org/kde/audiotube/contents/ui/LibraryPage.qml")
                     }
                 }
                 Kirigami.NavigationTabButton {
@@ -137,7 +137,7 @@ Rectangle {
                         pagePool: pool
                         text: i18n("Favourites")
                         icon.name: "non-starred-symbolic"
-                        page: Qt.resolvedUrl("qrc:/PlaybackHistory.qml#favourites")
+                        page: Qt.resolvedUrl("qrc:/qt/qml/org/kde/audiotube/contents/ui/PlaybackHistory.qml#favourites")
                         initialProperties: {
                             "dataModel": Library.favourites,
                             "title": i18n("Favourites"),
@@ -158,7 +158,7 @@ Rectangle {
                         pagePool: pool
                         text: i18n("Played Songs")
                         icon.name: "edit-undo-history"
-                        page: Qt.resolvedUrl("qrc:/PlaybackHistory.qml#history")
+                        page: Qt.resolvedUrl("qrc:/qt/qml/org/kde/audiotube/contents/ui/PlaybackHistory.qml#history")
                         initialProperties: {
                             "dataModel": Library.playbackHistory,
                             "title": i18n("Played Songs"),
@@ -178,7 +178,7 @@ Rectangle {
                         pagePool: pool
                         text: i18n("Playlists")
                         icon.name: "amarok_playlist"
-                        page: Qt.resolvedUrl("qrc:/LocalPlaylistsPage.qml")
+                        page: Qt.resolvedUrl("qrc:/qt/qml/org/kde/audiotube/contents/ui/LocalPlaylistsPage.qml")
                         initialProperties: {
                             "objectName": "playlists"
                         }

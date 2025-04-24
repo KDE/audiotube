@@ -5,12 +5,15 @@
 #pragma once
 
 #include <QObject>
+#include <qqmlintegration.h>
 
 #include "asyncytmusic.h"
 
 class ErrorHandler : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
+    QML_SINGLETON
 
 public:
     explicit ErrorHandler(QObject *parent = nullptr);

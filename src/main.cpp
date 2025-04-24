@@ -17,28 +17,9 @@
 #include <KCrash>
 #include <KAboutData>
 
-#include <mprisplugin.h>
-
-#include "lyricsmodel.h"
-#include "clipboard.h"
-#include "searchmodel.h"
-#include "albummodel.h"
-#include "videoinfoextractor.h"
-#include "artistmodel.h"
-#include "userplaylistmodel.h"
-#include "errorhandler.h"
-#include "playlistmodel.h"
-#include "playerutils.h"
-#include "library.h"
-#include "thumbnailsource.h"
-#include "blur.h"
-#include "localplaylistmodel.h"
-#include "localplaylistsmodel.h"
-#include "playlistimporter.h"
-
 #include <ThreadedDatabase>
 
-constexpr auto URI = "org.kde.ytmusic";
+#include "asyncytmusic.h"
 
 Q_DECL_EXPORT int main(int argc, char *argv[])
 {
@@ -95,46 +76,8 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 
     QQmlApplicationEngine engine;
 
-    MprisPlugin(&engine).registerTypes("org.nemomobile.qtmpris");
-
-    qmlRegisterType<SearchModel>(URI, 1, 0, "SearchModel");
-    qmlRegisterType<AlbumModel>(URI, 1, 0, "AlbumModel");
-    qmlRegisterType<VideoInfoExtractor>(URI, 1, 0, "VideoInfoExtractor");
-    qmlRegisterType<ArtistModel>(URI, 1, 0, "ArtistModel");
-    qmlRegisterType<PlaylistModel>(URI, 1, 0, "PlaylistModel");
-    qmlRegisterUncreatableType<PlaybackHistoryModel>(URI, 1, 0, "PlaybackHistoryModel","");
-    qmlRegisterType<QSortFilterProxyModel>(URI, 1, 0, "SortFilterModel");
-    qmlRegisterType<Blur>(URI, 1, 0, "Blur");
-    qmlRegisterType<LocalSearchModel>(URI, 1, 0, "LocalSearchModel");
-    qmlRegisterType<LocalPlaylistModel>(URI, 1, 0, "LocalPlaylistModel");
-    qmlRegisterType<LocalPlaylistsModel>(URI, 1, 0, "LocalPlaylistsModel");
-    qmlRegisterType<PlaylistImporter>(URI, 1, 0, "PlaylistImporter");
-    qmlRegisterType<LyricsModel>(URI, 1, 0, "LyricsModel");
-    qmlRegisterSingletonType(URI, 1, 0, "About", [](QQmlEngine *engine, QJSEngine *) -> QJSValue {
-        return engine->toScriptValue(KAboutData::applicationData());
-    });
-
-    qmlRegisterSingletonType<UserPlaylistModel>(URI, 1, 0, "UserPlaylistModel", [](QQmlEngine *, QJSEngine *) {
-        return new UserPlaylistModel();
-    });
-    qmlRegisterSingletonType<ErrorHandler>(URI, 1, 0, "ErrorHandler", [](QQmlEngine *, QJSEngine *) {
-        return new ErrorHandler();
-    });
-
-    qmlRegisterSingletonType<PlayerUtils>(URI, 1, 0, "PlayerUtils", [](QQmlEngine *, QJSEngine *) {
-        return new PlayerUtils();
-    });
-    qmlRegisterSingletonType<Clipboard>(URI, 1, 0, "Clipboard", [](QQmlEngine *, QJSEngine *) {
-        return new Clipboard();
-    });
-
-    qmlRegisterSingletonInstance<Library>(URI, 1, 0, "Library", &Library::instance());
-    qmlRegisterType<ThumbnailSource>(URI, 1, 0, "ThumbnailSource");
-    qmlRegisterAnonymousType<FavouriteWatcher>(URI, 1);
-    qmlRegisterAnonymousType<WasPlayedWatcher>(URI, 1);
-
     engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
-    engine.load(QUrl(QStringLiteral("qrc:///main.qml")));
+    engine.loadFromModule("org.kde.audiotube", "Main");
 
     if (engine.rootObjects().isEmpty()) {
         return -1;

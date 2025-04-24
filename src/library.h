@@ -9,6 +9,7 @@
 #include <QNetworkAccessManager>
 #include <QAbstractListModel>
 #include <QSortFilterProxyModel>
+#include <qqmlintegration.h>
 
 #include <ThreadedDatabase>
 
@@ -72,6 +73,7 @@ struct PlayedSong {
 
 class PlaybackHistoryModel : public QAbstractListModel {
     Q_OBJECT
+    QML_ELEMENT
 
 public:
     enum Roles {
@@ -100,6 +102,7 @@ protected:
 ///
 class LocalSearchModel : public PlaybackHistoryModel {
     Q_OBJECT
+    QML_ELEMENT
 
     Q_PROPERTY(QString searchQuery MEMBER m_searchQuery NOTIFY searchQueryChanged)
 
@@ -140,6 +143,9 @@ private:
 class Library : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
+    QML_SINGLETON
+
     Q_PROPERTY(QAbstractListModel *favourites READ favourites NOTIFY favouritesChanged)
     Q_PROPERTY(QAbstractListModel *searches READ searches CONSTANT)
     Q_PROPERTY(QAbstractListModel *playbackHistory READ playbackHistory NOTIFY playbackHistoryChanged)
@@ -147,10 +153,10 @@ class Library : public QObject
     Q_PROPERTY(QString temporarySearch READ temporarySearch WRITE setTemporarySearch NOTIFY temporarySearchChanged)
 
 public:
-    explicit Library(QObject *parent = nullptr);
     ~Library();
 
     static Library &instance();
+    static Library *create(QQmlEngine *, QJSEngine *);
 
     FavouritesModel *favourites();
     Q_SIGNAL void favouritesChanged();
@@ -185,6 +191,7 @@ public:
     QFuture<void> addSong(const QString &videoId, const QString &title, const QString &artist, const QString &album);
 
 private:
+    explicit Library(QObject *parent = nullptr);
 
     QNetworkAccessManager m_networkImageCacher;
     std::unique_ptr<ThreadedDatabase> m_database;
@@ -196,6 +203,7 @@ private:
 
 class FavouriteWatcher : public QObject {
     Q_OBJECT
+    QML_ANONYMOUS
 
     Q_PROPERTY(bool isFavourite READ isFavourite NOTIFY isFavouriteChanged)
 
@@ -215,6 +223,7 @@ private:
 
 class WasPlayedWatcher : public QObject {
     Q_OBJECT
+    QML_ANONYMOUS
     
     Q_PROPERTY(bool wasPlayed READ wasPlayed NOTIFY wasPlayedChanged)
     

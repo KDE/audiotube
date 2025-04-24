@@ -4,4 +4,3 @@
 
 add_subdirectory(qtdbusextended)
 add_subdirectory(src)
-add_subdirectory(declarative)

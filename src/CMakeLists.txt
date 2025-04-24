@@ -32,13 +32,55 @@ add_executable(audiotube
     localplaylistmodel.cpp
     localplaylistsmodel.cpp
     playlistimporter.cpp
-    resources.qrc
     blur.cpp
     clipboard.cpp
     lyricsmodel.cpp
+    foreigntypes.h
 )
 
-target_link_libraries(audiotube
+ecm_add_qml_module(audiotube URI org.kde.audiotube
+    QML_FILES
+        contents/ui/Main.qml
+        contents/ui/AlbumPage.qml
+        contents/ui/ArtistPage.qml
+        contents/ui/PlayerFooter.qml
+        contents/ui/SearchPage.qml
+        contents/ui/PlaylistPage.qml
+        contents/ui/ConfirmationMessage.qml
+        contents/ui/LibraryPage.qml
+        contents/ui/MinimizedPlayerControls.qml
+        contents/ui/MaximizedPlayerPage.qml
+        contents/ui/PlaybackHistory.qml
+        contents/ui/SongMenu.qml
+        contents/ui/ListHeader.qml
+        contents/ui/RoundedImage.qml
+        contents/ui/Sidebar.qml
+        contents/ui/NavigationBar.qml
+        contents/ui/SearchHistoryPage.qml
+        contents/ui/SearchWithDropdown.qml
+        contents/ui/ShareMenu.qml
+        contents/ui/LocalPlaylistPage.qml
+        contents/ui/LocalPlaylistsPage.qml
+        contents/ui/PlaylistCover.qml
+        contents/ui/dialogs/PlaylistDialog.qml
+        contents/ui/dialogs/AddPlaylistDialog.qml
+        contents/ui/dialogs/ImportPlaylistDialog.qml
+        contents/ui/dialogs/RenamePlaylistDialog.qml
+        contents/ui/HorizontalCoverView.qml
+        contents/ui/AlbumCoverItem.qml
+        contents/ui/components/ActionButton.qml
+        contents/ui/components/DoubleActionButton.qml
+    RESOURCES
+        migrations/2022-05-20-194850_init/down.sql
+        migrations/2022-05-20-194850_init/up.sql
+        migrations/2022-05-25-212054_playlists/down.sql
+        migrations/2022-05-25-212054_playlists/up.sql
+        resources/favourites_placeholder.svg
+        resources/played_placeholder.svg
+        resources/playlist_placeholder.svg
+)
+
+target_link_libraries(audiotube PRIVATE
     Qt::Core
     Qt::Gui
     Qt::Qml
@@ -54,7 +96,7 @@ target_link_libraries(audiotube
     KF6::WindowSystem
     FutureSQL6::FutureSQL
     QCoro6::Core
-    qtmprisdeclarative
+    qt-mpris
     ytm
 )
 

@@ -2,16 +2,15 @@
 //
 // SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
-import QtQuick 2.15
-import QtQuick.Window 2.15
-import QtQuick.Controls 2.12 as Controls
-import QtQuick.Layouts 1.3
-import org.kde.kirigami 2.19 as Kirigami
+import QtQuick
+import QtQuick.Window
+import QtQuick.Controls as Controls
+import QtQuick.Layouts
+import org.kde.kirigami as Kirigami
 import org.kde.kirigami.delegates as KirigamiDelegates
-import org.kde.kirigamiaddons.components 1.0 as Components
+import org.kde.kirigamiaddons.components as Components
 
-import org.kde.ytmusic 1.0
-import "dialogs"
+import org.kde.audiotube
 
 Kirigami.ScrollablePage {
     id: libraryPage
@@ -131,7 +130,7 @@ Kirigami.ScrollablePage {
                 Layout.alignment: Qt.AlignRight
                 icon.name: "arrow-right"
                 onClicked: {
-                    pageStack.push(pool.loadPageWithProperties("qrc:/PlaybackHistory.qml#favourites", {
+                    pageStack.push(pool.loadPageWithProperties("qrc:/qt/qml/org/kde/audiotube/contents/ui/PlaybackHistory.qml#favourites", {
                         "title": i18n("Favourites"),
                         "objectName": "favourites"
                     }))
@@ -152,7 +151,7 @@ Kirigami.ScrollablePage {
             implicitWidth: 190
             implicitHeight: 190
 
-            source: "qrc:/resources/favourites_placeholder.svg"
+            source: "qrc:/qt/qml/org/kde/audiotube/resources/favourites_placeholder.svg"
 
             Controls.Label {
                 visible: favouriteRepeater.count === 0
@@ -323,7 +322,7 @@ Kirigami.ScrollablePage {
                 Layout.alignment: Qt.AlignRight
                 icon.name: "arrow-right"
                 onClicked: {
-                    pageStack.push(pool.loadPageWithProperties("qrc:/PlaybackHistory.qml#history", {
+                    pageStack.push(pool.loadPageWithProperties("qrc:/qt/qml/org/kde/audiotube/contents/ui/PlaybackHistory.qml#history", {
                         "title": i18n("Played Songs"),
                         "objectName": "history"
                     }))
@@ -342,7 +341,7 @@ Kirigami.ScrollablePage {
             Layout.fillWidth: true
             implicitWidth: 190
             implicitHeight: 190
-            source: "qrc:/resources/played_placeholder.svg"
+            source: "qrc:/qt/qml/org/kde/audiotube/resources/played_placeholder.svg"
 
             Controls.Label {
                 visible: mostPlayedRepeater.count === 0
@@ -424,7 +423,7 @@ Kirigami.ScrollablePage {
                 text: i18n("Show All")
                 Layout.alignment: Qt.AlignRight
                 icon.name: "arrow-right"
-                onClicked: {pageStack.push("qrc:/LocalPlaylistsPage.qml", {
+                onClicked: {pageStack.push("qrc:/qt/qml/org/kde/audiotube/contents/ui/LocalPlaylistsPage.qml", {
                       "objectName": "playlists"
                   })}
             }
@@ -443,7 +442,7 @@ Kirigami.ScrollablePage {
             implicitWidth: 190
             implicitHeight: 190
 
-            source: "qrc:/resources/playlist_placeholder.svg"
+            source: "qrc:/qt/qml/org/kde/audiotube/resources/playlist_placeholder.svg"
 
             Controls.Label {
                 visible: favouriteRepeater.count === 0
@@ -568,7 +567,7 @@ Kirigami.ScrollablePage {
                         radius: 10
                     }
 
-                    onClicked: pageStack.push("qrc:/LocalPlaylistPage.qml", {
+                    onClicked: pageStack.push("qrc:/qt/qml/org/kde/audiotube/contents/ui/LocalPlaylistPage.qml", {
                         "playlistId": playlistDelegate.playlistId,
                         "title": playlistDelegate.title
                     })

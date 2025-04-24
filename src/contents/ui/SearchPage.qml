@@ -2,12 +2,12 @@
 //
 // SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
-import QtQuick 2.15
-import QtQuick.Layouts 1.3
-import QtQuick.Controls 2.14 as Controls
-import org.kde.kirigami 2.14 as Kirigami
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as Controls
+import org.kde.kirigami as Kirigami
 
-import org.kde.ytmusic 1.0
+import org.kde.audiotube
 
 Kirigami.ScrollablePage {
     id: searchPage
@@ -47,13 +47,13 @@ Kirigami.ScrollablePage {
             id: searchModel
 
             onOpenAlbum: (browseId) => {
-                pageStack.push("qrc:/AlbumPage.qml", {
+                pageStack.push("qrc:/qt/qml/org/kde/audiotube/contents/ui/AlbumPage.qml", {
                     "browseId": browseId
                 })
             }
 
             onOpenArtist: (channelId, radioId, shuffleId) => {
-                pageStack.push("qrc:/ArtistPage.qml", {
+                pageStack.push("qrc:/qt/qml/org/kde/audiotube/contents/ui/ArtistPage.qml", {
                     "channelId": channelId,
                     "radioId": radioId,
                     "shuffleId": shuffleId
@@ -61,7 +61,7 @@ Kirigami.ScrollablePage {
             }
 
             onOpenPlaylist: (browseId) => {
-                pageStack.push("qrc:/PlaylistPage.qml", {
+                pageStack.push("qrc:/qt/qml/org/kde/audiotube/contents/ui/PlaylistPage.qml", {
                     "playlistId": browseId
                 })
             }

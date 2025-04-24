@@ -5,12 +5,15 @@
 #pragma once
 
 #include <QObject>
+#include <qqmlintegration.h>
 
 #include <KFormat>
 
 class PlayerUtils : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
+    QML_SINGLETON
 
 public:
     explicit PlayerUtils(QObject *parent = nullptr);

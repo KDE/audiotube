@@ -6,6 +6,7 @@
 
 #include <QAbstractListModel>
 #include <QThread>
+#include <qqmlregistration.h>
 
 #include "asyncytmusic.h"
 #include "abstractytmusicmodel.h"
@@ -13,6 +14,7 @@
 class SearchModel : public AbstractYTMusicModel
 {
     Q_OBJECT
+    QML_ELEMENT
 
     Q_PROPERTY(QString searchQuery READ searchQuery WRITE setSearchQuery NOTIFY searchQueryChanged)
 

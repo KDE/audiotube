@@ -7,12 +7,13 @@
 #pragma once
 
 #include <QObject>
-
-class QQuickItem;
+#include <QQuickItem>
+#include <qqmlintegration.h>
 
 class Blur : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
 
 public:
     Blur(QObject *parent = 0);

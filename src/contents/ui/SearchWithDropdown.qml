@@ -3,11 +3,11 @@
 //
 // SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
-import QtQuick 2.1
-import QtQuick.Controls 2.12 as Controls
-import QtQuick.Layouts 1.3
-import org.kde.kirigami 2.14 as Kirigami
-import org.kde.ytmusic 1.0
+import QtQuick
+import QtQuick.Controls as Controls
+import QtQuick.Layouts
+import org.kde.kirigami as Kirigami
+import org.kde.audiotube
 
 Item {
     function forceFocus(){searchField.forceActiveFocus()}
@@ -105,14 +105,14 @@ Item {
 
             if (text) {
                 Library.addSearch(text)
-                pageStack.push("qrc:/SearchPage.qml", {
+                pageStack.push("qrc:/qt/qml/org/kde/audiotube/contents/ui/SearchPage.qml", {
                             "searchQuery": text,
                             objectName: "searchPage"
                                })
             } else {
                 wideScreen
-                        ? pageStack.push("qrc:/LibraryPage.qml")
-                        : pageStack.push("qrc:/SearchHistoryPage.qml")
+                        ? pageStack.push("qrc:/qt/qml/org/kde/audiotube/contents/ui/LibraryPage.qml")
+                        : pageStack.push("qrc:/qt/qml/org/kde/audiotube/contents/ui/SearchHistoryPage.qml")
             }
             searchField.focus = false
 

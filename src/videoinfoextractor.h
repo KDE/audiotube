@@ -6,12 +6,14 @@
 
 #include <QObject>
 #include <QUrl>
+#include <qqmlregistration.h>
 
 #include <ytmusic.h>
 
 class VideoInfoExtractor : public QObject
 {
     Q_OBJECT
+    QML_ELEMENT
 
     Q_PROPERTY(QString videoId READ videoId WRITE setVideoId NOTIFY videoIdChanged)
 

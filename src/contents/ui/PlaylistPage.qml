@@ -2,14 +2,12 @@
 //
 // SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 
-import QtQuick 2.15
-import QtQuick.Layouts 1.12
-import QtQuick.Controls 2.12 as Controls
-import org.kde.kirigami 2.12 as Kirigami
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Controls as Controls
+import org.kde.kirigami as Kirigami
 
-import org.kde.ytmusic 1.0
-
-import "components"
+import org.kde.audiotube
 
 Kirigami.ScrollablePage {
     id: root
