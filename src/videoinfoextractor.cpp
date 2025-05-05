@@ -30,6 +30,7 @@ VideoInfoExtractor::VideoInfoExtractor(QObject *parent)
 QUrl VideoInfoExtractor::audioUrl() const
 {
     if (m_videoInfo.formats.empty()) {
+        qWarning() << "No formats found";
         return {};
     }
 
@@ -38,10 +39,11 @@ QUrl VideoInfoExtractor::audioUrl() const
     // filter audio only formats
     std::copy_if(m_videoInfo.formats.begin(), m_videoInfo.formats.end(), std::back_inserter(audioFormats),
         [](const video_info::Format &format) {
-        return format.acodec != "none" && format.vcodec == "none";
+        return (!format.acodec.has_value() || format.acodec != "none") && format.vcodec == "none";
     });
 
     if (audioFormats.empty()) {
+        qWarning() << "No audio track found";
         return {};
     }
 

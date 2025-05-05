@@ -156,10 +156,11 @@ album::Track extract_album_track(py::handle track) {
 
 video_info::Format extract_format(py::handle format) {
     return {
+        format["format_id"].cast<std::string>(),
         optional_key<float>(format, "quality"),
         format["url"].cast<std::string>(),
         format["vcodec"].cast<std::string>(),
-        optional_key<std::string>(format, "acodec").value_or("none") // returned inconsistently by yt-dlp
+        optional_key<std::string>(format, "acodec")
     };
 }
 
