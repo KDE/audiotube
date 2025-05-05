@@ -105,7 +105,7 @@ QString PlaylistModel::title() const
 
 QUrl PlaylistModel::webUrl() const
 {
-    return QUrl(YTMUSIC_WEB_BASE_URL % "playlist?list=" % playlistId());
+    return QUrl(YTMUSIC_WEB_BASE_URL % u"playlist?list=" % playlistId());
 }
 
 playlist::Playlist PlaylistModel::playlist() const

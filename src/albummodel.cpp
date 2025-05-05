@@ -112,7 +112,7 @@ QString AlbumModel::playlistId() const
 QUrl AlbumModel::webUrl() const
 {
     if (m_album.audio_playlist_id) {
-        return QUrl(YTMUSIC_WEB_BASE_URL % "/playlist?list=" % QString::fromStdString(*m_album.audio_playlist_id));
+        return QUrl(YTMUSIC_WEB_BASE_URL % u"/playlist?list=" % QString::fromStdString(*m_album.audio_playlist_id));
     }
 
     return {};

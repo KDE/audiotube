@@ -82,7 +82,7 @@ void LyricsModel::setLyrics(QNetworkReply *reply) {
 QList<SyncLine> LyricsModel::parseSyncedLyrics(const QString &synclrc) {
     QRegularExpression regex{uR"(\[(\d{2}):(\d{2})\.(\d{2})\]\s*(.*))"_s};
     QList<SyncLine> lyrics;
-    QStringList lines = synclrc.split("\n", Qt::KeepEmptyParts);
+    QStringList lines = synclrc.split(u'\n', Qt::KeepEmptyParts);
     for (int i = 0; i < lines.count(); i++) {
         auto match = regex.match(lines[i]);
 

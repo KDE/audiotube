@@ -18,6 +18,7 @@
 #include "playlistmodel.h"
 
 namespace ranges = std::ranges;
+using namespace Qt::Literals::StringLiterals;
 
 UserPlaylistModel::UserPlaylistModel(QObject *parent)
     : AbstractYTMusicModel(parent)
@@ -94,7 +95,7 @@ QVariant UserPlaylistModel::data(const QModelIndex &index, int role) const
     case Duration:
     {
         auto length = QString::fromStdString(m_playlist.tracks[index.row()].length.value_or(""));
-        QRegularExpression time{R"((\d{1,2}):(\d{2}))"};
+        QRegularExpression time{uR"((\d{1,2}):(\d{2}))"_s};
         auto match = time.match(length);
         int duration = match.captured(1).toInt() * 60 + match.captured(2).toInt();
         return duration;
@@ -522,6 +523,6 @@ void UserPlaylistModel::setPlaylistId(const QString &playlistId)
 
 QUrl UserPlaylistModel::webUrl() const
 {
-    return QUrl(YTMUSIC_WEB_BASE_URL % "watch?v=" % m_currentVideoId);
+    return QUrl(YTMUSIC_WEB_BASE_URL % u"watch?v=" % m_currentVideoId);
 }
 

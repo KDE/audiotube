@@ -12,6 +12,7 @@
 #include <ThreadedDatabase>
 
 namespace ranges = std::ranges;
+using namespace Qt::Literals::StringLiterals;
 
 Library::Library(QObject *parent)
     : QObject{parent}
@@ -21,12 +22,12 @@ Library::Library(QObject *parent)
         QDir(databaseDirectory).mkpath(QStringLiteral("."));
 
         DatabaseConfiguration config;
-        config.setDatabaseName(databaseDirectory % QDir::separator() % "library.sqlite");
+        config.setDatabaseName(databaseDirectory % QDir::separator() % u"library.sqlite");
         config.setType(DatabaseType::SQLite);
         return config;
     }()))
 {
-    m_database->runMigrations(":/qt/qml/org/kde/audiotube/migrations/");
+    m_database->runMigrations(u":/qt/qml/org/kde/audiotube/migrations/"_s);
     m_searches = new SearchHistoryModel(this);
 
     refreshFavourites();
@@ -49,14 +50,14 @@ FavouritesModel *Library::favourites()
 void Library::addFavourite(const QString &videoId, const QString &title, const QString &artist, const QString &album)
 {
     QCoro::connect(addSong(videoId, title, artist, album), this, [=, this] {
-        QCoro::connect(m_database->execute("insert or ignore into favourites (video_id) values (?)", videoId),
+        QCoro::connect(m_database->execute(u"insert or ignore into favourites (video_id) values (?)"_s, videoId),
                        this, &Library::refreshFavourites);
     });
 }
 
 void Library::removeFavourite(const QString &videoId)
 {
-    QCoro::connect(m_database->execute("delete from favourites where video_id = ?", videoId),
+    QCoro::connect(m_database->execute(u"delete from favourites where video_id = ?"_s, videoId),
                    this, &Library::refreshFavourites);
 }
 
@@ -76,12 +77,12 @@ SearchHistoryModel *Library::searches()
 void Library::addSearch(const QString &text)
 {
     m_searches->addSearch(text);
-    QCoro::connect(m_database->execute("insert into searches (search_query) values (?)", text), this, &Library::searchesChanged);
+    QCoro::connect(m_database->execute(u"insert into searches (search_query) values (?)"_s, text), this, &Library::searchesChanged);
 }
 
 void Library::removeSearch(const QString &text) {
     m_searches->removeSearch(text);
-    QCoro::connect(m_database->execute("delete from searches where search_query = ?", text), this, &Library::searchesChanged);
+    QCoro::connect(m_database->execute(u"delete from searches where search_query = ?"_s, text), this, &Library::searchesChanged);
 }
 
 const QString& Library::temporarySearch()
@@ -105,12 +106,12 @@ void Library::refreshPlaybackHistory()
 {
     // playbackHistory
     auto future = m_database->getResults<PlayedSong>(
-        "select * from played_songs natural join songs");
+        u"select * from played_songs natural join songs"_s);
     m_playbackHistory = new PlaybackHistoryModel(std::move(future), this);
 
     // mostPlayed
     auto future2 = m_database->getResults<PlayedSong>(
-        "select * from played_songs natural join songs order by plays desc limit 10");
+        u"select * from played_songs natural join songs order by plays desc limit 10"_s);
     m_mostPlayed = new PlaybackHistoryModel(std::move(future2), this);
     Q_EMIT playbackHistoryChanged();
 }
@@ -118,7 +119,7 @@ void Library::refreshPlaybackHistory()
 void Library::refreshFavourites()
 {
     auto future = m_database->getResults<Song>(
-        "select * from favourites natural join songs order by favourites.rowid desc");
+        u"select * from favourites natural join songs order by favourites.rowid desc"_s);
     m_favourites = new FavouritesModel(std::move(future), this);
     Q_EMIT favouritesChanged();
 }
@@ -126,15 +127,15 @@ void Library::refreshFavourites()
 void Library::addPlaybackHistoryItem(const QString &videoId, const QString &title, const QString &artist, const QString &album)
 {
     QCoro::connect(addSong(videoId, title, artist, album), this, [=, this] {
-        QCoro::connect(m_database->execute("insert or ignore into played_songs (video_id, plays) values (?, ?)", videoId, 0), this, [=, this] {
-            QCoro::connect(m_database->execute("update played_songs set plays = plays + 1 where video_id = ? ", videoId),
+        QCoro::connect(m_database->execute(u"insert or ignore into played_songs (video_id, plays) values (?, ?)"_s, videoId, 0), this, [=, this] {
+            QCoro::connect(m_database->execute(u"update played_songs set plays = plays + 1 where video_id = ? "_s, videoId),
                            this, &Library::refreshPlaybackHistory);
         });
     });
 }
 void Library::removePlaybackHistoryItem(const QString &videoId)
 {
-    QCoro::connect(m_database->execute("delete from played_songs where video_id = ?", videoId),
+    QCoro::connect(m_database->execute(u"delete from played_songs where video_id = ?"_s, videoId),
                    this, &Library::refreshPlaybackHistory);
 }
 
@@ -162,7 +163,7 @@ QNetworkAccessManager &Library::nam()
 QFuture<void> Library::addSong(const QString &videoId, const QString &title, const QString &artist, const QString &album)
 {
     // replace is used here to update songs from times when we didn't store artist and album
-    return m_database->execute("insert or replace into songs (video_id, title, artist, album) values (?, ?, ?, ?)", videoId, title, artist, album);
+    return m_database->execute(u"insert or replace into songs (video_id, title, artist, album) values (?, ?, ?, ?)"_s, videoId, title, artist, album);
 }
 
 PlaybackHistoryModel::PlaybackHistoryModel(QFuture<std::vector<PlayedSong>> &&songs, QObject *parent)
@@ -273,7 +274,7 @@ FavouriteWatcher::FavouriteWatcher(Library *library, const QString &videoId)
     : QObject(library), m_videoId(videoId), m_library(library)
 {
     auto update = [this] {
-        QCoro::connect(m_library->database().getResult<SingleValue<bool>>("select count(*) > 0 from favourites where video_id = ?", m_videoId), this, [this](auto count) {
+        QCoro::connect(m_library->database().getResult<SingleValue<bool>>(u"select count(*) > 0 from favourites where video_id = ?"_s, m_videoId), this, [this](auto count) {
             if (count) {
                 m_isFavourite = count->value;
                 Q_EMIT isFavouriteChanged();
@@ -292,13 +293,13 @@ SearchHistoryModel::SearchHistoryModel(Library *library)
     : QAbstractListModel(library)
 {
     auto historyFuture = library->database()
-                            .getResults<SingleValue<QString>>("select distinct (search_query) from searches order by search_id desc limit 20");
+                            .getResults<SingleValue<QString>>(u"select distinct (search_query) from searches order by search_id desc limit 20"_s);
 
     connect(this, &SearchHistoryModel::filterChanged, this, [library, this]() {
         auto future = library->database()
-            .getResults<SingleValue<QString>>("select distinct (search_query) from searches "
-                                              "where search_query like '%" % m_filter % "%'"
-                                              "order by search_id desc limit 20");
+            .getResults<SingleValue<QString>>(u"select distinct (search_query) from searches "
+                                              u"where search_query like '%" % m_filter % u"%'"
+                                              u"order by search_id desc limit 20");
 
         QCoro::connect(std::move(future), this, [this](auto history) {
             beginResetModel();
@@ -335,7 +336,7 @@ int SearchHistoryModel::rowCount(const QModelIndex &parent) const {
 
 void SearchHistoryModel::removeSearch(const QString &search) {
     int row = getRow(search);
-    if(m_temporarySearch != "") {
+    if(m_temporarySearch != u"") {
         beginRemoveRows({}, row+1, row+1);
     }
     else {
@@ -357,7 +358,7 @@ size_t SearchHistoryModel::getRow(const QString &search) const {
 QVariant SearchHistoryModel::data(const QModelIndex &index, int role) const {
     switch (role) {
         case Qt::DisplayRole:
-            if(m_temporarySearch == "") {
+            if(m_temporarySearch == u"") {
                 return m_history[index.row()].value;
             }
             else if(index.row() == 0) {
@@ -389,17 +390,17 @@ const QString& SearchHistoryModel::temporarySearch() const
 
 void SearchHistoryModel::setTemporarySearch(const QString& text)
 {
-    if(text == "" && m_temporarySearch != "") {
+    if(text == u"" && m_temporarySearch != u"") {
         beginRemoveRows(QModelIndex(), 0, 0);
         m_temporarySearch = text;
         endRemoveRows();
     }
-    else if(text != "" && m_temporarySearch == "") {
+    else if(text != u"" && m_temporarySearch == u"") {
         beginInsertRows(QModelIndex(), 0, 0);
         m_temporarySearch = text;
         endInsertRows();
     }
-    else if(m_temporarySearch != "") {
+    else if(m_temporarySearch != u"") {
         m_temporarySearch = text;
         Q_EMIT dataChanged(createIndex(0,0), createIndex(0,0));
     }
@@ -417,7 +418,7 @@ WasPlayedWatcher::WasPlayedWatcher(Library* library, const QString& videoId)
 
 void WasPlayedWatcher::query()
 {
-    QCoro::connect(m_library->database().getResult<SingleValue<bool>>("select count(*) > 0 from played_songs where video_id = ?", m_videoId), this, &WasPlayedWatcher::update);
+    QCoro::connect(m_library->database().getResult<SingleValue<bool>>(u"select count(*) > 0 from played_songs where video_id = ?"_s, m_videoId), this, &WasPlayedWatcher::update);
 }
 
 
@@ -440,9 +441,9 @@ LocalSearchModel::LocalSearchModel(QObject *parent) : PlaybackHistoryModel(paren
 {
     connect(this, &LocalSearchModel::searchQueryChanged, this, [this]() {
         auto resultFuture = Library::instance().database()
-                                .getResults<PlayedSong>("select * from played_songs natural join songs "
-                                                        "where title like '%" % m_searchQuery % "%' "
-                                                        "order by plays desc limit 10");
+                                .getResults<PlayedSong>(u"select * from played_songs natural join songs "
+                                                        u"where title like '%" % m_searchQuery % u"%' "
+                                                        u"order by plays desc limit 10");
         QCoro::connect(std::move(resultFuture), this, [this](auto results) {
                beginResetModel();
                m_playedSongs = results;

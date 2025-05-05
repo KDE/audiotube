@@ -12,6 +12,8 @@
 
 #include <KLocalizedString>
 
+using namespace Qt::Literals::StringLiterals;
+
 Q_DECLARE_METATYPE(std::vector<QString>);
 
 LocalPlaylistsModel::LocalPlaylistsModel(QObject *parent)
@@ -62,10 +64,10 @@ QVariant LocalPlaylistsModel::data(const QModelIndex &index, int role) const
 
 void LocalPlaylistsModel::refreshModel()
 {
-    QCoro::connect(Library::instance().database().getResults<Playlist>("select * from playlists"), this, [this](const auto &&playlists) {
+    QCoro::connect(Library::instance().database().getResults<Playlist>(u"select * from playlists"_s), this, [this](const auto &&playlists) {
         m_thumbnailIds.resize(playlists.size());
         for (size_t i = 0; i < playlists.size(); i++) {
-            auto future = Library::instance().database().getResults<SingleValue<QString>>("select video_id from playlist_entries where playlist_id = ? order by random() limit 4", playlists.at(i).playlistId);
+            auto future = Library::instance().database().getResults<SingleValue<QString>>(u"select video_id from playlist_entries where playlist_id = ? order by random() limit 4"_s, playlists.at(i).playlistId);
             QCoro::connect(std::move(future), this, [this, playlists, i](auto &&ids) {
                 std::ranges::transform(ids, std::back_inserter(m_thumbnailIds[i]), [](auto &&id) { return id.value; });
                 dataChanged(index(i), index(i), {Roles::ThumbnailIds});
@@ -79,7 +81,7 @@ void LocalPlaylistsModel::refreshModel()
 }
 void LocalPlaylistsModel::addPlaylist(const QString &title, const QString &description)
 {
-    QCoro::connect(Library::instance().database().execute("insert into playlists (title, description) values (?, ?)", title, description), &Library::instance(), &Library::playlistsChanged);
+    QCoro::connect(Library::instance().database().execute(u"insert into playlists (title, description) values (?, ?)"_s, title, description), &Library::instance(), &Library::playlistsChanged);
 }
 
 void LocalPlaylistsModel::addPlaylistEntry(qint64 playlistId, const QString &videoId, const QString &title, const QString &artist, const QString &album)
@@ -104,7 +106,7 @@ void LocalPlaylistsModel::renamePlaylist(qint64 playlistId, const QString &name,
 
 void LocalPlaylistsModel::deletePlaylist(qint64 playlistId)
 {
-    QCoro::connect(Library::instance().database().execute("delete from playlists where playlist_id = ?", playlistId), this, &LocalPlaylistsModel::refreshModel);
+    QCoro::connect(Library::instance().database().execute(u"delete from playlists where playlist_id = ?"_s, playlistId), this, &LocalPlaylistsModel::refreshModel);
 }
 
 QStringView LocalPlaylistsModel::cropURL(QStringView srcUrl)

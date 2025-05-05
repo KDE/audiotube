@@ -6,6 +6,8 @@
 
 #include "library.h"
 
+using namespace Qt::Literals::StringLiterals;
+
 LocalPlaylistModel::LocalPlaylistModel(QObject *parent)
     : QAbstractListModel(parent)
 {
@@ -68,8 +70,8 @@ void LocalPlaylistModel::refreshModel()
     auto future = Library::instance()
             .database()
             .getResults<PlaylistEntry>(
-                "select video_id, title, artist, album from "
-                "playlist_entries natural join songs where playlist_id = ?", m_playlistId);
+                u"select video_id, title, artist, album from "
+                u"playlist_entries natural join songs where playlist_id = ?"_s, m_playlistId);
 
     QCoro::connect(std::move(future), this, [this](auto &&entries) {
         beginResetModel();
@@ -85,5 +87,5 @@ const std::vector<PlaylistEntry> &LocalPlaylistModel::entries() const
 
 void LocalPlaylistModel::removeSong(QString videoId, qint64 playlistId)
 {
-    QCoro::connect(Library::instance().database().execute("delete from playlist_entries where playlist_id = ? and video_id = ?", playlistId, videoId), this, &LocalPlaylistModel::refreshModel);
+    QCoro::connect(Library::instance().database().execute(u"delete from playlist_entries where playlist_id = ? and video_id = ?"_s, playlistId, videoId), this, &LocalPlaylistModel::refreshModel);
 }

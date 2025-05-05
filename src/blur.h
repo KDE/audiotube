@@ -16,6 +16,6 @@ class Blur : public QObject
     QML_ELEMENT
 
 public:
-    Blur(QObject *parent = 0);
+    Blur(QObject *parent = nullptr);
     Q_INVOKABLE void setBlur(QQuickItem *item, bool blur);
 };

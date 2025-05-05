@@ -53,7 +53,7 @@ class MprisPlayer : public QObject,
 
 public:
 
-    MprisPlayer(QObject *parent = 0);
+    MprisPlayer(QObject *parent = nullptr);
     ~MprisPlayer();
 
 public Q_SLOTS:

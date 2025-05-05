@@ -62,7 +62,7 @@ class MprisManager : public QObject
 
 public:
 
-    MprisManager(QObject *parent = 0);
+    MprisManager(QObject *parent = nullptr);
     ~MprisManager();
 
     // Mpris2 Root Interface

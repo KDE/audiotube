@@ -61,7 +61,7 @@ AsyncYTMusic::AsyncYTMusic(QObject *parent)
 
     QTimer::singleShot(1, this, [this]() {
         QCoro::connect(version(), this, [this](auto &&version) {
-            if (version != TESTED_YTMUSICAPI_VERSION) {
+            if (version != QString::fromLatin1(TESTED_YTMUSICAPI_VERSION)) {
                 Q_EMIT errorOccurred(i18n("Running with untested version of ytmusicapi %1. "
                                           "If you experience errors, please report them to your distribution.", version));
             }

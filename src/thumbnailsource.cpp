@@ -25,12 +25,12 @@ void ThumbnailSource::setVideoId(const QString &id) {
     Q_EMIT videoIdChanged();
     setCachedPath({});
 
-    const QString cacheDir = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) % QDir::separator() % "thumbnails";
+    const QString cacheDir = QStandardPaths::writableLocation(QStandardPaths::CacheLocation) % QDir::separator() % u"thumbnails";
     QDir(cacheDir).mkpath(QStringLiteral("."));
 
     // Clear cache if it is old, so people can profit from memory usage improvements from downscaling,
     // and get the new cropped thumbnails
-    auto cacheVersionFile = QString(cacheDir % "/.cache_version");
+    auto cacheVersionFile = QString(cacheDir % u"/.cache_version");
 
     constexpr auto CURRENT_CACHE_VERSION = 1;
 
@@ -50,7 +50,7 @@ void ThumbnailSource::setVideoId(const QString &id) {
         const auto entries = dir.entryList(QDir::Files);
         for (const auto &thumbnail : entries) {
             if (thumbnail.endsWith(QLatin1String(".webp"))) {
-                QFile::remove(cacheDir % "/" % thumbnail);
+                QFile::remove(cacheDir % u"/" % thumbnail);
             }
         }
         QFile file(cacheVersionFile);
@@ -60,14 +60,14 @@ void ThumbnailSource::setVideoId(const QString &id) {
         }
     }
 
-    const QString cacheLocation = cacheDir % QDir::separator() % id % ".webp";
+    const QString cacheLocation = cacheDir % QDir::separator() % id % u".webp";
 
     if (QFile::exists(cacheLocation)) {
         setCachedPath(QUrl::fromLocalFile(cacheLocation));
         return;
     }
 
-    auto *reply = Library::instance().nam().get(QNetworkRequest(QUrl("https://i.ytimg.com/vi_webp/" % m_videoId % "/maxresdefault.webp")));
+    auto *reply = Library::instance().nam().get(QNetworkRequest(QUrl(u"https://i.ytimg.com/vi_webp/" % m_videoId % u"/maxresdefault.webp")));
 
     auto storeResult = [this, cacheLocation, id](QNetworkReply *reply) {
         if (reply->error() != QNetworkReply::NoError) {
