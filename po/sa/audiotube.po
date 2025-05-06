@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-25 00:41+0000\n"
+"POT-Creation-Date: 2025-05-06 00:40+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -404,7 +404,7 @@ msgstr "कलाकाराः"
 msgid "Top Results"
 msgstr "शीर्ष परिणाम"
 
-#: contents/ui/SearchPage.qml:41 playlistimporter.cpp:22
+#: contents/ui/SearchPage.qml:41 playlistimporter.cpp:24
 #, kde-format
 msgid "Unknown"
 msgstr "अज्ञात"
@@ -518,17 +518,17 @@ msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Unofficial API for YouTube Music"
 msgstr "YouTube Music कृते अनधिकृतः एपिआइ"
 
-#: playlistimporter.cpp:22
+#: playlistimporter.cpp:24
 #, kde-format
 msgid "No description"
 msgstr "न वर्णनम्"
 
-#: playlistimporter.cpp:60
+#: playlistimporter.cpp:62
 #, kde-format
 msgid "No title"
 msgstr "न उपाधिः"
 
-#: playlistimporter.cpp:62
+#: playlistimporter.cpp:64
 #, kde-format
 msgid "No album"
 msgstr "एल्बम् नास्ति"
