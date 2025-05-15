@@ -1,13 +1,12 @@
-# SPDX-FileCopyrightText: 2024 Scarlett Moore <sgmoore@kde.org>
+# SPDX-FileCopyrightText: 2024, 2025 Scarlett Moore <sgmoore@kde.org>
 #
 # SPDX-License-Identifier: CC0-1.0
 
 name: audiotube
 confinement: strict
 grade: stable
-base: core22
+base: core24
 adopt-info: audiotube
-compression: lzo
 
 apps:
   audiotube:
@@ -18,6 +17,7 @@ apps:
     command: usr/bin/audiotube
     environment:
       PYTHONPATH: ${SNAP}/usr/lib/python3/dist-packages:${PYTHONPATH}
+      ALSA_CONFIG_PATH: "$SNAP/kf6/etc/asound.conf"
     plugs:
       - home
       - audio-playback
@@ -27,6 +27,10 @@ apps:
       - network-observe
     slots:
       - audiotube-mpris
+
+layout:
+  /usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/alsa-lib:
+    bind: $SNAP/usr/lib/$CRAFT_ARCH_TRIPLET_BUILD_FOR/alsa-lib
 
 slots:
   audiotube-mpris:
@@ -95,7 +99,10 @@ parts:
     stage-packages:
       - libsqlite3-0
       - libwebp7
+      - libpulse0
+      - libxkbcommon0
     source: .
+    source-type: local
     cmake-parameters:
       - -DCMAKE_INSTALL_PREFIX=/usr
       - -DCMAKE_BUILD_TYPE=Release
