@@ -175,7 +175,7 @@ msgstr "Llista de reproducció nova"
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:16
 #, kde-format
 msgid "Rename playlist"
-msgstr "Canvia el nom la llista de reproducció"
+msgstr "Canvia el nom de la llista de reproducció"
 
 #: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:134
 #: contents/ui/NavigationBar.qml:47 contents/ui/NavigationBar.qml:53
