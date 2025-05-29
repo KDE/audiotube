@@ -135,8 +135,20 @@ Flickable {
         sourceComponent: MediaPlayer {
             id: audio
 
+            property int prevPlaybackState: MediaPlayer.StoppedState
             source: info.audioUrl
             onSourceChanged: play()
+
+            onPlaybackStateChanged : {
+                if (mediaStatus == MediaPlayer.BufferingMedia && playbackState == MediaPlayer.StoppedState && prevPlaybackState == MediaPlayer.PlayingState) {
+                    Qt.callLater(function() {
+                        play()
+                        console.log("force play on stuck with BufferingMedia & StoppedState");
+                    })
+                }
+                prevPlaybackState = playbackState
+            }
+
             onMediaStatusChanged: {
                 if (mediaStatus === MediaPlayer.EndOfMedia) {
                     console.log("Song ended");
