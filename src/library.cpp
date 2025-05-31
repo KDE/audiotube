@@ -106,7 +106,7 @@ void Library::refreshPlaybackHistory()
 {
     // playbackHistory
     auto future = m_database->getResults<PlayedSong>(
-        u"select * from played_songs natural join songs"_s);
+        u"select * from played_songs natural join songs order by played_songs.rowid desc"_s);
     m_playbackHistory = new PlaybackHistoryModel(std::move(future), this);
 
     // mostPlayed
