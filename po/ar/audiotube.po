@@ -340,7 +340,7 @@ msgstr "أزل المسار"
 #: contents/ui/MaximizedPlayerPage.qml:1104
 #, kde-format
 msgid "Clear Queue"
-msgstr "امسح الطّابور"
+msgstr "امحُ الطّابور"
 
 #: contents/ui/MaximizedPlayerPage.qml:1129
 #, kde-format
