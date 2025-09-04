@@ -359,7 +359,7 @@ void DBusExtendedAbstractInterface::onPropertiesChanged(const QString& interface
 QVariant DBusExtendedAbstractInterface::demarshall(const QString &interface, const QMetaProperty &metaProperty, const QVariant &value, QDBusError *error)
 {
     Q_ASSERT(metaProperty.isValid());
-    Q_ASSERT(error != 0);
+    Q_ASSERT(error != nullptr);
 
     if (value.userType() == metaProperty.userType()) {
         // No need demarshalling. Passing back straight away ...
