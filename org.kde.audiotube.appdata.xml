@@ -45,7 +45,6 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="sv">AudioTube</name>
   <name xml:lang="tr">AudioTube</name>
   <name xml:lang="uk">AudioTube</name>
-  <name xml:lang="x-test">xxAudioTubexx</name>
   <name xml:lang="zh-CN">AudioTube</name>
   <name xml:lang="zh-TW">AudioTube</name>
   <summary>YouTube Music app</summary>
@@ -80,7 +79,6 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="sv">YouTube musikprogram</summary>
   <summary xml:lang="tr">YouTube Müzik Uygulaması</summary>
   <summary xml:lang="uk">Музична програма для YouTube</summary>
-  <summary xml:lang="x-test">xxYouTube Music appxx</summary>
   <summary xml:lang="zh-CN">YouTube 音乐应用</summary>
   <summary xml:lang="zh-TW">YouTube Music 應用程式</summary>
   <metadata_license>CC0-1.0</metadata_license>
@@ -222,7 +220,6 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="sv">AudioTube kan söka på YouTube Music, lista album och artister, spela upp automatiskt genererade spellistor, album och låter dig sammanställa egna spellistor. Det är anpassat för mobiltelefoner och skrivbordsdatorer.</p>
     <p xml:lang="tr">AudioTube, YouTube Müzik’te arama yapabilir; albümleri, sanatçıları listeler; kendiliğinden üretilmiş çalma listelerini, albümleri çalar ve kendi çalma listenizi oluşturmanıza izin verir. Masaüstü bilgisayarlar ve cep telefonları için uyarlanmıştır.</p>
     <p xml:lang="uk">AudioTube може виконувати пошук на YouTube Music, показувати списки альбомів та виконавців, відтворювати створені автоматично списки відтворення, альбоми та надає вам змогу створювати власні списки відтворення. Програму адаптовано до мобільних телефонів та робочих станцій.</p>
-    <p xml:lang="x-test">xxAudioTube can search YouTube Music, list albums and artists, play automatically generated playlists, albums and allows to put your own playlist together. It is adapted to mobile phones and desktop computers.xx</p>
     <p xml:lang="zh-CN">AudioTube 可以搜索 YouTube Music 的内容，列出专辑和艺人，播放自动生成的播放列表，还可以自行制作播放列表。适用于手机和台式电脑。</p>
     <p xml:lang="zh-TW">AudioTube 可以搜尋 YouTube Music、列出專輯與藝人、播放專輯或自動產生的播放清單，也讓您建立自己的播放清單。它同時設計給行動裝置與桌面電腦使用。</p>
   </description>
