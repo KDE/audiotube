@@ -94,6 +94,7 @@ target_link_libraries(audiotube PRIVATE
     KF6::CoreAddons
     KF6::Crash
     KF6::WindowSystem
+    KF6::IconThemes
     FutureSQL6::FutureSQL
     QCoro6::Core
     qt-mpris
