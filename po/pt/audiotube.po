@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-05-06 00:40+0000\n"
+"POT-Creation-Date: 2025-09-17 02:31+0000\n"
 "PO-Revision-Date: 2023-07-08 12:56+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt@kde.org>\n"
@@ -253,7 +253,7 @@ msgstr "Esta lista de reprodução continua vazia"
 msgid "Import Playlist"
 msgstr "Importar uma Lista de Reprodução"
 
-#: contents/ui/Main.qml:131 main.cpp:54
+#: contents/ui/Main.qml:131 main.cpp:88
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
@@ -471,52 +471,52 @@ msgstr "Remover do Histórico"
 msgid "Add to playlist"
 msgstr "Adicionar à lista de reprodução"
 
-#: main.cpp:56
+#: main.cpp:90
 #, fuzzy, kde-format
 #| msgid "Unofficial API for YouTube Music"
 msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Stream music from YouTube Music"
 msgstr "API não oficial do YouTube Music"
 
-#: main.cpp:58
+#: main.cpp:92
 #, fuzzy, kde-format
 #| msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
 msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
 msgstr "© 2021-2023 de Jonah Brüchert, 2021-2023 da Comunidade do KDE"
 
-#: main.cpp:59
+#: main.cpp:93
 #, kde-format
 msgid "Jonah Brüchert"
 msgstr "Jonah Brüchert"
 
-#: main.cpp:59
+#: main.cpp:93
 #, kde-format
 msgid "Maintainer"
 msgstr "Manutenção"
 
-#: main.cpp:60
+#: main.cpp:94
 #, kde-format
 msgid "Mathis Brüchert"
 msgstr "Mathis Brüchert"
 
-#: main.cpp:60
+#: main.cpp:94
 #, kde-format
 msgid "Designer"
 msgstr "Desenhador"
 
-#: main.cpp:61
+#: main.cpp:95
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
 msgstr "José Nuno Pires"
 
-#: main.cpp:61
+#: main.cpp:95
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
 msgstr "zepires@gmail.com"
 
-#: main.cpp:68
+#: main.cpp:102
 #, fuzzy, kde-format
 #| msgid "Unofficial API for YouTube Music"
 msgctxt "YouTube Music is a music streaming service by Google"
