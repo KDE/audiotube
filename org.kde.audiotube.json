@@ -24,7 +24,6 @@
     ],
     "modules": [
         "flatpak/python3-ytmusicapi.json",
-        "flatpak/kirigami-addons.json",
         {
             "name": "yt-dlp",
             "buildsystem": "simple",
