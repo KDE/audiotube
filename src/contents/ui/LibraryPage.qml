@@ -28,7 +28,7 @@ Kirigami.ScrollablePage {
             Layout.maximumWidth: libraryPage.width
 
             Kirigami.Heading {
-                text: i18n("Favourites")
+                text: i18n("Favorites")
                 Layout.alignment: Qt.AlignLeft
                 leftPadding: 15
             }
@@ -131,7 +131,7 @@ Kirigami.ScrollablePage {
                 icon.name: "arrow-right"
                 onClicked: {
                     pageStack.push(pool.loadPageWithProperties("qrc:/qt/qml/org/kde/audiotube/contents/ui/PlaybackHistory.qml#favourites", {
-                        "title": i18n("Favourites"),
+                        "title": i18n("Favorites"),
                         "objectName": "favourites"
                     }))
                 }
@@ -156,7 +156,7 @@ Kirigami.ScrollablePage {
             Controls.Label {
                 visible: favouriteRepeater.count === 0
                 color: Kirigami.Theme.disabledTextColor
-                text: i18n("No Favourites Yet")
+                text: i18n("No Favorites Yet")
 
                 font {
                     bold: true

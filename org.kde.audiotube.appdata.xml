@@ -133,7 +133,7 @@ SPDX-License-Identifier: CC0-1.0
       <url>https://www.plasma-mobile.org/2022/06/28/plasma-mobile-gear-22-06/</url>
       <description>
         <ul>
-          <li>Add library page which shows favourites and most played songs</li>
+          <li>Add library page which shows favorites and most played songs</li>
           <li>Improve layout of the search popup</li>
           <li>General performance improvements including startup</li>
         </ul>

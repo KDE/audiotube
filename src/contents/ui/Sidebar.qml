@@ -135,12 +135,12 @@ Rectangle {
 
                     action: Kirigami.PagePoolAction {
                         pagePool: pool
-                        text: i18n("Favourites")
+                        text: i18n("Favorites")
                         icon.name: "non-starred-symbolic"
                         page: Qt.resolvedUrl("qrc:/qt/qml/org/kde/audiotube/contents/ui/PlaybackHistory.qml#favourites")
                         initialProperties: {
                             "dataModel": Library.favourites,
-                            "title": i18n("Favourites"),
+                            "title": i18n("Favorites"),
                             "objectName": "favourites"
                         }
                     }

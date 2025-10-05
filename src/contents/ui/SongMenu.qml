@@ -125,7 +125,7 @@ Item {
 
                 readonly property QtObject favouriteWatcher: Library.favouriteWatcher(drawer.videoId)
 
-                text: favouriteWatcher ? (favouriteWatcher.isFavourite ? i18n("Remove Favourite"): i18n("Add Favourite")): ""
+                text: favouriteWatcher ? (favouriteWatcher.isFavourite ? i18n("Remove Favorite"): i18n("Add Favorite")): ""
                 icon.name: favouriteWatcher ? (favouriteWatcher.isFavourite ? "starred-symbolic" : "non-starred-symbolic") : ""
                 onClicked: {
                     if (favouriteWatcher) {
@@ -228,7 +228,7 @@ Item {
 
         Controls.MenuItem {
             readonly property QtObject favouriteWatcher: Library.favouriteWatcher(menu.videoId)
-            text: favouriteWatcher ? (favouriteWatcher.isFavourite ? i18n("Remove Favourite"): i18n("Add Favourite")): ""
+            text: favouriteWatcher ? (favouriteWatcher.isFavourite ? i18n("Remove Favorite"): i18n("Add Favorite")): ""
             icon.name: favouriteWatcher ? (favouriteWatcher.isFavourite ? "starred-symbolic" : "non-starred-symbolic") : ""
             onTriggered: {
                 if (favouriteWatcher) {

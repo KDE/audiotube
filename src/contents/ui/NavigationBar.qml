@@ -44,13 +44,13 @@ Kirigami.NavigationTabBar {
         },
         Kirigami.Action {
             icon.name: "non-starred-symbolic"
-            text: i18n("Favourites")
+            text: i18n("Favorites")
             checked: pageStack.currentItem && pageStack.currentItem.objectName == "favourites"
             onTriggered: {
                 pageStack.clear()
                 pageStack.replace("qrc:/qt/qml/org/kde/audiotube/contents/ui/PlaybackHistory.qml", {
                                                 "dataModel": Library.favourites,
-                                                "title": i18n("Favourites"),
+                                                "title": i18n("Favorites"),
                                                 "objectName": "favourites"})
                 applicationWindow().showSearch = false
             }

@@ -535,7 +535,7 @@ Item {
                                 }
                             }
                         }
-                        text: favouriteWatcher ? (favouriteWatcher.isFavourite ? i18n("Remove from Favourites") : i18n("Add to Favourites")) : i18n("Add to Favourites")
+                        text: favouriteWatcher ? (favouriteWatcher.isFavourite ? i18n("Remove from Favorites") : i18n("Add to Favorites")) : i18n("Add to Favorites")
                         icon.name: favouriteWatcher ? (favouriteWatcher.isFavourite ? "starred-symbolic" : "non-starred-symbolic") : "non-starred-symbolic"
                         enabled: favouriteWatcher
                         icon.color: "white"
