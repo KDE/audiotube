@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-17 00:42+0000\n"
+"POT-Creation-Date: 2025-10-06 00:41+0000\n"
 "PO-Revision-Date: 2024-08-19 22:06+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -175,8 +175,9 @@ msgstr "재생 목록 이름 바꾸기"
 #: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:134
 #: contents/ui/NavigationBar.qml:47 contents/ui/NavigationBar.qml:53
 #: contents/ui/Sidebar.qml:138 contents/ui/Sidebar.qml:143
-#, kde-format
-msgid "Favourites"
+#, fuzzy, kde-format
+#| msgid "Favourites"
+msgid "Favorites"
 msgstr "책갈피"
 
 #: contents/ui/LibraryPage.qml:129 contents/ui/LibraryPage.qml:321
@@ -186,8 +187,9 @@ msgid "Show All"
 msgstr "모두 표시"
 
 #: contents/ui/LibraryPage.qml:159
-#, kde-format
-msgid "No Favourites Yet"
+#, fuzzy, kde-format
+#| msgid "No Favourites Yet"
+msgid "No Favorites Yet"
 msgstr "책갈피에 등록된 항목 없음"
 
 #: contents/ui/LibraryPage.qml:227
@@ -270,13 +272,15 @@ msgid "No media playing"
 msgstr "재생 중인 미디어 없음"
 
 #: contents/ui/MaximizedPlayerPage.qml:538
-#, kde-format
-msgid "Remove from Favourites"
+#, fuzzy, kde-format
+#| msgid "Remove from Favourites"
+msgid "Remove from Favorites"
 msgstr "책갈피에서 삭제"
 
 #: contents/ui/MaximizedPlayerPage.qml:538
-#, kde-format
-msgid "Add to Favourites"
+#, fuzzy, kde-format
+#| msgid "Add to Favourites"
+msgid "Add to Favorites"
 msgstr "책갈피에 추가"
 
 #: contents/ui/MaximizedPlayerPage.qml:563
@@ -447,13 +451,15 @@ msgid "Add to queue"
 msgstr "대기열에 추가"
 
 #: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, kde-format
-msgid "Remove Favourite"
+#, fuzzy, kde-format
+#| msgid "Remove Favourite"
+msgid "Remove Favorite"
 msgstr "책갈피 삭제"
 
 #: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, kde-format
-msgid "Add Favourite"
+#, fuzzy, kde-format
+#| msgid "Add Favourite"
+msgid "Add Favorite"
 msgstr "책갈피에 추가"
 
 #: contents/ui/SongMenu.qml:147 contents/ui/SongMenu.qml:245

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-17 00:42+0000\n"
+"POT-Creation-Date: 2025-10-06 00:41+0000\n"
 "PO-Revision-Date: 2022-01-01 09:11-0800\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -182,9 +182,10 @@ msgstr "ਪਲੇਅਲਿਸਟਾਂ"
 #: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:134
 #: contents/ui/NavigationBar.qml:47 contents/ui/NavigationBar.qml:53
 #: contents/ui/Sidebar.qml:138 contents/ui/Sidebar.qml:143
-#, kde-format
-msgid "Favourites"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Add to Playlist"
+msgid "Favorites"
+msgstr "ਪਲੇਅਲਿਸਟ ਵਿੱਚ ਜੋੜੋ"
 
 #: contents/ui/LibraryPage.qml:129 contents/ui/LibraryPage.qml:321
 #: contents/ui/LibraryPage.qml:423
@@ -193,9 +194,10 @@ msgid "Show All"
 msgstr ""
 
 #: contents/ui/LibraryPage.qml:159
-#, kde-format
-msgid "No Favourites Yet"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Playlists"
+msgid "No Favorites Yet"
+msgstr "ਪਲੇਅਲਿਸਟਾਂ"
 
 #: contents/ui/LibraryPage.qml:227
 #, kde-format
@@ -283,13 +285,13 @@ msgstr "ਕੋਈ ਮੀਡੀਆ ਨਹੀਂ ਚੱਲਦਾ"
 #: contents/ui/MaximizedPlayerPage.qml:538
 #, fuzzy, kde-format
 #| msgid "Playlists"
-msgid "Remove from Favourites"
+msgid "Remove from Favorites"
 msgstr "ਪਲੇਅਲਿਸਟਾਂ"
 
 #: contents/ui/MaximizedPlayerPage.qml:538
 #, fuzzy, kde-format
 #| msgid "Add to Playlist"
-msgid "Add to Favourites"
+msgid "Add to Favorites"
 msgstr "ਪਲੇਅਲਿਸਟ ਵਿੱਚ ਜੋੜੋ"
 
 #: contents/ui/MaximizedPlayerPage.qml:563
@@ -464,14 +466,16 @@ msgid "Add to queue"
 msgstr ""
 
 #: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, kde-format
-msgid "Remove Favourite"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Playlists"
+msgid "Remove Favorite"
+msgstr "ਪਲੇਅਲਿਸਟਾਂ"
 
 #: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, kde-format
-msgid "Add Favourite"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Add to Playlist"
+msgid "Add Favorite"
+msgstr "ਪਲੇਅਲਿਸਟ ਵਿੱਚ ਜੋੜੋ"
 
 #: contents/ui/SongMenu.qml:147 contents/ui/SongMenu.qml:245
 #, kde-format

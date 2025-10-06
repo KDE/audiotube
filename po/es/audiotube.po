@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-17 00:42+0000\n"
+"POT-Creation-Date: 2025-10-06 00:41+0000\n"
 "PO-Revision-Date: 2025-03-19 14:19+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -179,8 +179,9 @@ msgstr "Cambiar nombre de la lista de reproducción"
 #: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:134
 #: contents/ui/NavigationBar.qml:47 contents/ui/NavigationBar.qml:53
 #: contents/ui/Sidebar.qml:138 contents/ui/Sidebar.qml:143
-#, kde-format
-msgid "Favourites"
+#, fuzzy, kde-format
+#| msgid "Favourites"
+msgid "Favorites"
 msgstr "Favoritas"
 
 #: contents/ui/LibraryPage.qml:129 contents/ui/LibraryPage.qml:321
@@ -190,8 +191,9 @@ msgid "Show All"
 msgstr "Mostrar todas"
 
 #: contents/ui/LibraryPage.qml:159
-#, kde-format
-msgid "No Favourites Yet"
+#, fuzzy, kde-format
+#| msgid "No Favourites Yet"
+msgid "No Favorites Yet"
 msgstr "Todavía no hay favoritas"
 
 #: contents/ui/LibraryPage.qml:227
@@ -274,13 +276,15 @@ msgid "No media playing"
 msgstr "Ningún medio en reproducción"
 
 #: contents/ui/MaximizedPlayerPage.qml:538
-#, kde-format
-msgid "Remove from Favourites"
+#, fuzzy, kde-format
+#| msgid "Remove from Favourites"
+msgid "Remove from Favorites"
 msgstr "Eliminar de favoritas"
 
 #: contents/ui/MaximizedPlayerPage.qml:538
-#, kde-format
-msgid "Add to Favourites"
+#, fuzzy, kde-format
+#| msgid "Add to Favourites"
+msgid "Add to Favorites"
 msgstr "Añadir a favoritas"
 
 #: contents/ui/MaximizedPlayerPage.qml:563
@@ -451,13 +455,15 @@ msgid "Add to queue"
 msgstr "Añadir a la cola"
 
 #: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, kde-format
-msgid "Remove Favourite"
+#, fuzzy, kde-format
+#| msgid "Remove Favourite"
+msgid "Remove Favorite"
 msgstr "Eliminar favorita"
 
 #: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, kde-format
-msgid "Add Favourite"
+#, fuzzy, kde-format
+#| msgid "Add Favourite"
+msgid "Add Favorite"
 msgstr "Añadir favorita"
 
 #: contents/ui/SongMenu.qml:147 contents/ui/SongMenu.qml:245

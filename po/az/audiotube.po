@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-17 00:42+0000\n"
+"POT-Creation-Date: 2025-10-06 00:41+0000\n"
 "PO-Revision-Date: 2022-06-19 12:16+0400\n"
 "Last-Translator: Kheyyam <xxmn77@gmail.com>\n"
 "Language-Team: Azerbaijani <kde-i18n-doc@kde.org>\n"
@@ -184,8 +184,9 @@ msgstr "Mahnı siyahıları"
 #: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:134
 #: contents/ui/NavigationBar.qml:47 contents/ui/NavigationBar.qml:53
 #: contents/ui/Sidebar.qml:138 contents/ui/Sidebar.qml:143
-#, kde-format
-msgid "Favourites"
+#, fuzzy, kde-format
+#| msgid "Favourites"
+msgid "Favorites"
 msgstr "Süçilmişlər"
 
 #: contents/ui/LibraryPage.qml:129 contents/ui/LibraryPage.qml:321
@@ -197,7 +198,7 @@ msgstr "Hamısı göstərilsin"
 #: contents/ui/LibraryPage.qml:159
 #, fuzzy, kde-format
 #| msgid "Favourites"
-msgid "No Favourites Yet"
+msgid "No Favorites Yet"
 msgstr "Süçilmişlər"
 
 #: contents/ui/LibraryPage.qml:227
@@ -287,13 +288,13 @@ msgstr "Media faylı oynadılmır"
 #: contents/ui/MaximizedPlayerPage.qml:538
 #, fuzzy, kde-format
 #| msgid "Favourites"
-msgid "Remove from Favourites"
+msgid "Remove from Favorites"
 msgstr "Süçilmişlər"
 
 #: contents/ui/MaximizedPlayerPage.qml:538
 #, fuzzy, kde-format
 #| msgid "Favourites"
-msgid "Add to Favourites"
+msgid "Add to Favorites"
 msgstr "Süçilmişlər"
 
 #: contents/ui/MaximizedPlayerPage.qml:563
@@ -473,13 +474,13 @@ msgstr ""
 #: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
 #, fuzzy, kde-format
 #| msgid "Favourites"
-msgid "Remove Favourite"
+msgid "Remove Favorite"
 msgstr "Süçilmişlər"
 
 #: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
 #, fuzzy, kde-format
 #| msgid "Favourites"
-msgid "Add Favourite"
+msgid "Add Favorite"
 msgstr "Süçilmişlər"
 
 #: contents/ui/SongMenu.qml:147 contents/ui/SongMenu.qml:245

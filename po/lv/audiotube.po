@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-17 00:42+0000\n"
+"POT-Creation-Date: 2025-10-06 00:41+0000\n"
 "PO-Revision-Date: 2024-08-27 18:33+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -178,8 +178,9 @@ msgstr "Pārdēvēt repertuāru"
 #: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:134
 #: contents/ui/NavigationBar.qml:47 contents/ui/NavigationBar.qml:53
 #: contents/ui/Sidebar.qml:138 contents/ui/Sidebar.qml:143
-#, kde-format
-msgid "Favourites"
+#, fuzzy, kde-format
+#| msgid "Favourites"
+msgid "Favorites"
 msgstr "Iecienītākās"
 
 #: contents/ui/LibraryPage.qml:129 contents/ui/LibraryPage.qml:321
@@ -189,8 +190,9 @@ msgid "Show All"
 msgstr "Rādīt visas"
 
 #: contents/ui/LibraryPage.qml:159
-#, kde-format
-msgid "No Favourites Yet"
+#, fuzzy, kde-format
+#| msgid "No Favourites Yet"
+msgid "No Favorites Yet"
 msgstr "Vēl nav iecienītāko"
 
 #: contents/ui/LibraryPage.qml:227
@@ -273,13 +275,15 @@ msgid "No media playing"
 msgstr "Multividi neatskaņo"
 
 #: contents/ui/MaximizedPlayerPage.qml:538
-#, kde-format
-msgid "Remove from Favourites"
+#, fuzzy, kde-format
+#| msgid "Remove from Favourites"
+msgid "Remove from Favorites"
 msgstr "Noņemt no iecienītākajām"
 
 #: contents/ui/MaximizedPlayerPage.qml:538
-#, kde-format
-msgid "Add to Favourites"
+#, fuzzy, kde-format
+#| msgid "Add to Favourites"
+msgid "Add to Favorites"
 msgstr "Pievienot iecienītākajām"
 
 #: contents/ui/MaximizedPlayerPage.qml:563
@@ -450,13 +454,15 @@ msgid "Add to queue"
 msgstr "Pievienot rindai"
 
 #: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, kde-format
-msgid "Remove Favourite"
+#, fuzzy, kde-format
+#| msgid "Remove Favourite"
+msgid "Remove Favorite"
 msgstr "Noņemt no iecienītajām"
 
 #: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, kde-format
-msgid "Add Favourite"
+#, fuzzy, kde-format
+#| msgid "Add Favourite"
+msgid "Add Favorite"
 msgstr "Pievienot iecienītajām"
 
 #: contents/ui/SongMenu.qml:147 contents/ui/SongMenu.qml:245

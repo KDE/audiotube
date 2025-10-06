@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-09-17 00:42+0000\n"
+"POT-Creation-Date: 2025-10-06 00:41+0000\n"
 "PO-Revision-Date: 2024-04-17 23:33+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -180,8 +180,9 @@ msgstr "Berrizendatu jotze-zerrenda"
 #: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:134
 #: contents/ui/NavigationBar.qml:47 contents/ui/NavigationBar.qml:53
 #: contents/ui/Sidebar.qml:138 contents/ui/Sidebar.qml:143
-#, kde-format
-msgid "Favourites"
+#, fuzzy, kde-format
+#| msgid "Favourites"
+msgid "Favorites"
 msgstr "Gogokoak"
 
 #: contents/ui/LibraryPage.qml:129 contents/ui/LibraryPage.qml:321
@@ -191,8 +192,9 @@ msgid "Show All"
 msgstr "Erakutsi denak"
 
 #: contents/ui/LibraryPage.qml:159
-#, kde-format
-msgid "No Favourites Yet"
+#, fuzzy, kde-format
+#| msgid "No Favourites Yet"
+msgid "No Favorites Yet"
 msgstr "Oraindik Gogokorik ez"
 
 #: contents/ui/LibraryPage.qml:227
@@ -275,13 +277,15 @@ msgid "No media playing"
 msgstr "Ez da euskarririk jotzen ari"
 
 #: contents/ui/MaximizedPlayerPage.qml:538
-#, kde-format
-msgid "Remove from Favourites"
+#, fuzzy, kde-format
+#| msgid "Remove from Favourites"
+msgid "Remove from Favorites"
 msgstr "Kendu gogokoetatik"
 
 #: contents/ui/MaximizedPlayerPage.qml:538
-#, kde-format
-msgid "Add to Favourites"
+#, fuzzy, kde-format
+#| msgid "Add to Favourites"
+msgid "Add to Favorites"
 msgstr "Gehitu gogokoetara"
 
 #: contents/ui/MaximizedPlayerPage.qml:563
@@ -452,13 +456,15 @@ msgid "Add to queue"
 msgstr "Gehitu ilaran"
 
 #: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, kde-format
-msgid "Remove Favourite"
+#, fuzzy, kde-format
+#| msgid "Remove Favourite"
+msgid "Remove Favorite"
 msgstr "Kendu gogokoa"
 
 #: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, kde-format
-msgid "Add Favourite"
+#, fuzzy, kde-format
+#| msgid "Add Favourite"
+msgid "Add Favorite"
 msgstr "Gehitu gogokoa"
 
 #: contents/ui/SongMenu.qml:147 contents/ui/SongMenu.qml:245
