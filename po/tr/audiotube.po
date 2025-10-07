@@ -1,21 +1,21 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the audiotube package.
 #
-# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-06 00:41+0000\n"
-"PO-Revision-Date: 2024-04-07 12:38+0300\n"
-"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
+"PO-Revision-Date: 2025-10-06 09:55+0300\n"
+"Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.04.70\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: asyncytmusic.cpp:65
 #, kde-format
@@ -177,10 +177,9 @@ msgstr "Çalma Listesini Yeniden Adlandır"
 #: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:134
 #: contents/ui/NavigationBar.qml:47 contents/ui/NavigationBar.qml:53
 #: contents/ui/Sidebar.qml:138 contents/ui/Sidebar.qml:143
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "Favorites"
-msgstr "Beğeniler"
+msgstr "Favoriler"
 
 #: contents/ui/LibraryPage.qml:129 contents/ui/LibraryPage.qml:321
 #: contents/ui/LibraryPage.qml:423
@@ -189,10 +188,9 @@ msgid "Show All"
 msgstr "Tümünü Göster"
 
 #: contents/ui/LibraryPage.qml:159
-#, fuzzy, kde-format
-#| msgid "No Favourites Yet"
+#, kde-format
 msgid "No Favorites Yet"
-msgstr "Henüz Beğeni Yok"
+msgstr "Henüz favori yok"
 
 #: contents/ui/LibraryPage.qml:227
 #, kde-format
@@ -274,16 +272,14 @@ msgid "No media playing"
 msgstr "Ortam çalmıyor"
 
 #: contents/ui/MaximizedPlayerPage.qml:538
-#, fuzzy, kde-format
-#| msgid "Remove from Favourites"
+#, kde-format
 msgid "Remove from Favorites"
-msgstr "Beğenilerden Kaldır"
+msgstr "Favorilerden Kaldır"
 
 #: contents/ui/MaximizedPlayerPage.qml:538
-#, fuzzy, kde-format
-#| msgid "Add to Favourites"
+#, kde-format
 msgid "Add to Favorites"
-msgstr "Beğenilere Ekle"
+msgstr "Favorilere Ekle"
 
 #: contents/ui/MaximizedPlayerPage.qml:563
 #, kde-format
@@ -453,16 +449,14 @@ msgid "Add to queue"
 msgstr "Kuyruğa ekle"
 
 #: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, fuzzy, kde-format
-#| msgid "Remove Favourite"
+#, kde-format
 msgid "Remove Favorite"
-msgstr "Beğenilerden Kaldır"
+msgstr "Favoriyi Kaldır"
 
 #: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, fuzzy, kde-format
-#| msgid "Add Favourite"
+#, kde-format
 msgid "Add Favorite"
-msgstr "Beğenilere Ekle"
+msgstr "Favori Ekle"
 
 #: contents/ui/SongMenu.qml:147 contents/ui/SongMenu.qml:245
 #, kde-format
