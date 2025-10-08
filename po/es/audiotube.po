@@ -1,15 +1,15 @@
 # Spanish translations for audiotube.po package.
-# Copyright (C) 2021 This file is copyright:
+# Copyright (C) 2021-2025 This file is copyright:
 # This file is distributed under the same license as the audiotube package.
-#
 # Automatically generated, 2021.
+#
 # SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-06 00:41+0000\n"
-"PO-Revision-Date: 2025-03-19 14:19+0100\n"
+"PO-Revision-Date: 2025-10-07 04:33+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.12.3\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: asyncytmusic.cpp:65
 #, kde-format
@@ -179,8 +179,7 @@ msgstr "Cambiar nombre de la lista de reproducción"
 #: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:134
 #: contents/ui/NavigationBar.qml:47 contents/ui/NavigationBar.qml:53
 #: contents/ui/Sidebar.qml:138 contents/ui/Sidebar.qml:143
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "Favorites"
 msgstr "Favoritas"
 
@@ -191,8 +190,7 @@ msgid "Show All"
 msgstr "Mostrar todas"
 
 #: contents/ui/LibraryPage.qml:159
-#, fuzzy, kde-format
-#| msgid "No Favourites Yet"
+#, kde-format
 msgid "No Favorites Yet"
 msgstr "Todavía no hay favoritas"
 
@@ -276,14 +274,12 @@ msgid "No media playing"
 msgstr "Ningún medio en reproducción"
 
 #: contents/ui/MaximizedPlayerPage.qml:538
-#, fuzzy, kde-format
-#| msgid "Remove from Favourites"
+#, kde-format
 msgid "Remove from Favorites"
 msgstr "Eliminar de favoritas"
 
 #: contents/ui/MaximizedPlayerPage.qml:538
-#, fuzzy, kde-format
-#| msgid "Add to Favourites"
+#, kde-format
 msgid "Add to Favorites"
 msgstr "Añadir a favoritas"
 
@@ -455,14 +451,12 @@ msgid "Add to queue"
 msgstr "Añadir a la cola"
 
 #: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, fuzzy, kde-format
-#| msgid "Remove Favourite"
+#, kde-format
 msgid "Remove Favorite"
 msgstr "Eliminar favorita"
 
 #: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, fuzzy, kde-format
-#| msgid "Add Favourite"
+#, kde-format
 msgid "Add Favorite"
 msgstr "Añadir favorita"
 
