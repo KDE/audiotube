@@ -8,7 +8,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-06 00:41+0000\n"
 "PO-Revision-Date: 2024-04-17 09:37+0200\n"
-"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
+"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
@@ -177,8 +177,7 @@ msgstr "Přejmenovat seznam skladeb"
 #: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:134
 #: contents/ui/NavigationBar.qml:47 contents/ui/NavigationBar.qml:53
 #: contents/ui/Sidebar.qml:138 contents/ui/Sidebar.qml:143
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "Favorites"
 msgstr "Oblíbené"
 
@@ -274,16 +273,14 @@ msgid "No media playing"
 msgstr "Nepřehrává se žádné médium"
 
 #: contents/ui/MaximizedPlayerPage.qml:538
-#, fuzzy, kde-format
-#| msgid "Remove from Favourites"
+#, kde-format
 msgid "Remove from Favorites"
 msgstr "Odstranit z oblíbených"
 
 #: contents/ui/MaximizedPlayerPage.qml:538
-#, fuzzy, kde-format
-#| msgid "Add to Favourites"
+#, kde-format
 msgid "Add to Favorites"
-msgstr "Přidat k oblíbeným"
+msgstr "Přidat do oblíbených"
 
 #: contents/ui/MaximizedPlayerPage.qml:563
 #, kde-format
@@ -453,14 +450,12 @@ msgid "Add to queue"
 msgstr "Zařadit do fronty"
 
 #: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, fuzzy, kde-format
-#| msgid "Remove Favourite"
+#, kde-format
 msgid "Remove Favorite"
 msgstr "Odstranit oblíbené"
 
 #: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, fuzzy, kde-format
-#| msgid "Add Favourite"
+#, kde-format
 msgid "Add Favorite"
 msgstr "Přidat oblíbené"
 
