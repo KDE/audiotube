@@ -188,10 +188,9 @@ msgid "Show All"
 msgstr "Zobrazit vše"
 
 #: contents/ui/LibraryPage.qml:159
-#, fuzzy, kde-format
-#| msgid "No Favourites Yet"
+#, kde-format
 msgid "No Favorites Yet"
-msgstr "Zatím žádné oblíbené"
+msgstr ""
 
 #: contents/ui/LibraryPage.qml:227
 #, kde-format
