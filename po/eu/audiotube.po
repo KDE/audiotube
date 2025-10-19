@@ -1,16 +1,16 @@
 # Translation for audiotube.po to Euskara/Basque (eu).
-# Copyright (C) 2021-2024 This file is copyright:
+# Copyright (C) 2021-2025 This file is copyright:
 # This file is distributed under the same license as the audiotube package.
-# KDE euskaratzeko proiektuko arduraduna <xalba@ni.es>.
+# KDE euskaratzeko proiektuaren arduraduna <xalba@ni.es>.
 #
 # Translators:
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Iñigo Salvador Azurmendi <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Iñigo Salvador Azurmendi <xalba@ni.eus>
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-06 00:41+0000\n"
-"PO-Revision-Date: 2024-04-17 23:33+0200\n"
+"PO-Revision-Date: 2025-10-18 16:52+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 25.08.1\n"
 
 #: asyncytmusic.cpp:65
 #, kde-format
@@ -180,8 +180,7 @@ msgstr "Berrizendatu jotze-zerrenda"
 #: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:134
 #: contents/ui/NavigationBar.qml:47 contents/ui/NavigationBar.qml:53
 #: contents/ui/Sidebar.qml:138 contents/ui/Sidebar.qml:143
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "Favorites"
 msgstr "Gogokoak"
 
@@ -192,8 +191,7 @@ msgid "Show All"
 msgstr "Erakutsi denak"
 
 #: contents/ui/LibraryPage.qml:159
-#, fuzzy, kde-format
-#| msgid "No Favourites Yet"
+#, kde-format
 msgid "No Favorites Yet"
 msgstr "Oraindik Gogokorik ez"
 
@@ -277,14 +275,12 @@ msgid "No media playing"
 msgstr "Ez da euskarririk jotzen ari"
 
 #: contents/ui/MaximizedPlayerPage.qml:538
-#, fuzzy, kde-format
-#| msgid "Remove from Favourites"
+#, kde-format
 msgid "Remove from Favorites"
 msgstr "Kendu gogokoetatik"
 
 #: contents/ui/MaximizedPlayerPage.qml:538
-#, fuzzy, kde-format
-#| msgid "Add to Favourites"
+#, kde-format
 msgid "Add to Favorites"
 msgstr "Gehitu gogokoetara"
 
@@ -456,14 +452,12 @@ msgid "Add to queue"
 msgstr "Gehitu ilaran"
 
 #: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, fuzzy, kde-format
-#| msgid "Remove Favourite"
+#, kde-format
 msgid "Remove Favorite"
 msgstr "Kendu gogokoa"
 
 #: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, fuzzy, kde-format
-#| msgid "Add Favourite"
+#, kde-format
 msgid "Add Favorite"
 msgstr "Gehitu gogokoa"
 
