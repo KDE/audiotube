@@ -1,14 +1,14 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the audiotube package.
 #
-# SPDX-FileCopyrightText: 2024 Toms Trasuns <toms.trasuns@posteo.net>
+# SPDX-FileCopyrightText: 2024, 2025 Toms Trasuns <toms.trasuns@posteo.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-06 00:41+0000\n"
-"PO-Revision-Date: 2024-08-27 18:33+0300\n"
-"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"PO-Revision-Date: 2025-10-29 11:09+0200\n"
+"Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: asyncytmusic.cpp:65
 #, kde-format
@@ -178,10 +178,9 @@ msgstr "Pārdēvēt repertuāru"
 #: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:134
 #: contents/ui/NavigationBar.qml:47 contents/ui/NavigationBar.qml:53
 #: contents/ui/Sidebar.qml:138 contents/ui/Sidebar.qml:143
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "Favorites"
-msgstr "Iecienītākās"
+msgstr "Izlase"
 
 #: contents/ui/LibraryPage.qml:129 contents/ui/LibraryPage.qml:321
 #: contents/ui/LibraryPage.qml:423
@@ -190,10 +189,9 @@ msgid "Show All"
 msgstr "Rādīt visas"
 
 #: contents/ui/LibraryPage.qml:159
-#, fuzzy, kde-format
-#| msgid "No Favourites Yet"
+#, kde-format
 msgid "No Favorites Yet"
-msgstr "Vēl nav iecienītāko"
+msgstr "Izlase ir tukša"
 
 #: contents/ui/LibraryPage.qml:227
 #, kde-format
@@ -275,16 +273,14 @@ msgid "No media playing"
 msgstr "Multividi neatskaņo"
 
 #: contents/ui/MaximizedPlayerPage.qml:538
-#, fuzzy, kde-format
-#| msgid "Remove from Favourites"
+#, kde-format
 msgid "Remove from Favorites"
-msgstr "Noņemt no iecienītākajām"
+msgstr "Noņemt no izlases"
 
 #: contents/ui/MaximizedPlayerPage.qml:538
-#, fuzzy, kde-format
-#| msgid "Add to Favourites"
+#, kde-format
 msgid "Add to Favorites"
-msgstr "Pievienot iecienītākajām"
+msgstr "Pievienot izlasei"
 
 #: contents/ui/MaximizedPlayerPage.qml:563
 #, kde-format
@@ -454,16 +450,14 @@ msgid "Add to queue"
 msgstr "Pievienot rindai"
 
 #: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, fuzzy, kde-format
-#| msgid "Remove Favourite"
+#, kde-format
 msgid "Remove Favorite"
-msgstr "Noņemt no iecienītajām"
+msgstr "Noņemt no izlases"
 
 #: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, fuzzy, kde-format
-#| msgid "Add Favourite"
+#, kde-format
 msgid "Add Favorite"
-msgstr "Pievienot iecienītajām"
+msgstr "Pievienot izlasei"
 
 #: contents/ui/SongMenu.qml:147 contents/ui/SongMenu.qml:245
 #, kde-format
