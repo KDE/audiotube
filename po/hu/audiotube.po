@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the audiotube package.
 #
-# SPDX-FileCopyrightText: 2024 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2024, 2025 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-10-06 00:41+0000\n"
-"PO-Revision-Date: 2024-04-29 11:32+0200\n"
+"PO-Revision-Date: 2025-11-06 20:59+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.07.70\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: asyncytmusic.cpp:65
 #, kde-format
@@ -177,8 +177,7 @@ msgstr "Lejátszólista átnevezése"
 #: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:134
 #: contents/ui/NavigationBar.qml:47 contents/ui/NavigationBar.qml:53
 #: contents/ui/Sidebar.qml:138 contents/ui/Sidebar.qml:143
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "Favorites"
 msgstr "Kedvencek"
 
@@ -189,8 +188,7 @@ msgid "Show All"
 msgstr "Összes megjelenítése"
 
 #: contents/ui/LibraryPage.qml:159
-#, fuzzy, kde-format
-#| msgid "No Favourites Yet"
+#, kde-format
 msgid "No Favorites Yet"
 msgstr "Még nincsenek kedvencek"
 
@@ -274,14 +272,12 @@ msgid "No media playing"
 msgstr "Nincs médialejátszás"
 
 #: contents/ui/MaximizedPlayerPage.qml:538
-#, fuzzy, kde-format
-#| msgid "Remove from Favourites"
+#, kde-format
 msgid "Remove from Favorites"
 msgstr "Eltávolítás a kedvencekből"
 
 #: contents/ui/MaximizedPlayerPage.qml:538
-#, fuzzy, kde-format
-#| msgid "Add to Favourites"
+#, kde-format
 msgid "Add to Favorites"
 msgstr "Hozzáadás a kedvencekhez"
 
@@ -453,14 +449,12 @@ msgid "Add to queue"
 msgstr "Hozzáadás a sorhoz"
 
 #: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, fuzzy, kde-format
-#| msgid "Remove Favourite"
+#, kde-format
 msgid "Remove Favorite"
 msgstr "Kedvenc eltávolítása"
 
 #: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, fuzzy, kde-format
-#| msgid "Add Favourite"
+#, kde-format
 msgid "Add Favorite"
 msgstr "Kedvenc hozzáadása"
 
