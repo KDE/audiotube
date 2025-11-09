@@ -173,8 +173,7 @@ msgstr "重命名播放列表"
 #: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:134
 #: contents/ui/NavigationBar.qml:47 contents/ui/NavigationBar.qml:53
 #: contents/ui/Sidebar.qml:138 contents/ui/Sidebar.qml:143
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "Favorites"
 msgstr "收藏夹"
 
@@ -185,10 +184,9 @@ msgid "Show All"
 msgstr "显示全部"
 
 #: contents/ui/LibraryPage.qml:159
-#, fuzzy, kde-format
-#| msgid "No Favourites Yet"
+#, kde-format
 msgid "No Favorites Yet"
-msgstr "无收藏夹"
+msgstr "暂无收藏"
 
 #: contents/ui/LibraryPage.qml:227
 #, kde-format
@@ -270,16 +268,14 @@ msgid "No media playing"
 msgstr "没有正在播放的媒体"
 
 #: contents/ui/MaximizedPlayerPage.qml:538
-#, fuzzy, kde-format
-#| msgid "Remove from Favourites"
+#, kde-format
 msgid "Remove from Favorites"
-msgstr "移出收藏夹"
+msgstr "从收藏夹中移除"
 
 #: contents/ui/MaximizedPlayerPage.qml:538
-#, fuzzy, kde-format
-#| msgid "Add to Favourites"
+#, kde-format
 msgid "Add to Favorites"
-msgstr "移入收藏夹"
+msgstr "添加到收藏夹"
 
 #: contents/ui/MaximizedPlayerPage.qml:563
 #, kde-format
@@ -449,16 +445,14 @@ msgid "Add to queue"
 msgstr "加入队列"
 
 #: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, fuzzy, kde-format
-#| msgid "Remove Favourite"
+#, kde-format
 msgid "Remove Favorite"
-msgstr "从收藏中删除"
+msgstr "移除收藏"
 
 #: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, fuzzy, kde-format
-#| msgid "Add Favourite"
+#, kde-format
 msgid "Add Favorite"
-msgstr "添加收藏夹"
+msgstr "添加收藏"
 
 #: contents/ui/SongMenu.qml:147 contents/ui/SongMenu.qml:245
 #, kde-format
@@ -479,7 +473,7 @@ msgstr ""
 #: main.cpp:92
 #, kde-format
 msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
-msgstr "© 2021-2024 Jonah Brücher, 2021-2024 KDE Community"
+msgstr "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
 
 #: main.cpp:93
 #, kde-format
