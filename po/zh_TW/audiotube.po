@@ -4,13 +4,13 @@
 # This file is distributed under the same license as the audiotube package.
 #
 # Automatically generated, 2022.
-# SPDX-FileCopyrightText: 2023, 2024 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2023, 2024, 2025 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:51+0000\n"
-"PO-Revision-Date: 2024-04-19 02:24+0900\n"
+"PO-Revision-Date: 2025-11-20 21:04+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 24.04.70\n"
+"X-Generator: Lokalize 26.03.70\n"
 
 #: asyncytmusic.cpp:65
 #, kde-format
@@ -177,8 +177,7 @@ msgstr "重新命名播放清單"
 #: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:134
 #: contents/ui/NavigationBar.qml:47 contents/ui/NavigationBar.qml:53
 #: contents/ui/Sidebar.qml:138 contents/ui/Sidebar.qml:143
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "Favorites"
 msgstr "最愛"
 
@@ -189,8 +188,7 @@ msgid "Show All"
 msgstr "顯示全部"
 
 #: contents/ui/LibraryPage.qml:159
-#, fuzzy, kde-format
-#| msgid "No Favourites Yet"
+#, kde-format
 msgid "No Favorites Yet"
 msgstr "尚無最愛"
 
@@ -274,14 +272,12 @@ msgid "No media playing"
 msgstr "沒有播放任何媒體"
 
 #: contents/ui/MaximizedPlayerPage.qml:538
-#, fuzzy, kde-format
-#| msgid "Remove from Favourites"
+#, kde-format
 msgid "Remove from Favorites"
 msgstr "從最愛中移除"
 
 #: contents/ui/MaximizedPlayerPage.qml:538
-#, fuzzy, kde-format
-#| msgid "Add to Favourites"
+#, kde-format
 msgid "Add to Favorites"
 msgstr "加入最愛"
 
@@ -453,14 +449,12 @@ msgid "Add to queue"
 msgstr "加入待播清單"
 
 #: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, fuzzy, kde-format
-#| msgid "Remove Favourite"
+#, kde-format
 msgid "Remove Favorite"
 msgstr "移除最愛"
 
 #: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, fuzzy, kde-format
-#| msgid "Add Favourite"
+#, kde-format
 msgid "Add Favorite"
 msgstr "新增最愛"
 
