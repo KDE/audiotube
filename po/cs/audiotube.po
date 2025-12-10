@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the audiotube package.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 14:40+0000\n"
-"PO-Revision-Date: 2024-04-17 09:37+0200\n"
+"PO-Revision-Date: 2025-12-02 11:22+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 25.08.3\n"
 
 #: asyncytmusic.cpp:65
 #, kde-format
@@ -190,7 +190,7 @@ msgstr "Zobrazit vše"
 #: contents/ui/LibraryPage.qml:159
 #, kde-format
 msgid "No Favorites Yet"
-msgstr ""
+msgstr "Zatím žádné oblíbené"
 
 #: contents/ui/LibraryPage.qml:227
 #, kde-format
