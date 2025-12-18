@@ -92,6 +92,7 @@ parts:
       - docbook
       - docbook-xsl
       - docbook-xml
+      - duktape-dev
       - libpulse0
       - libxkbcommon-dev
       - libvulkan-dev
