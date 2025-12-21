@@ -1066,7 +1066,7 @@ Item {
 
                                     }
                                     ToolButton {
-                                        text: i18n("Remove Track")
+                                        text: i18n("Remove Song")
                                         icon.name: "list-remove"
                                         icon.color: "white"
                                         display: AbstractButton.IconOnly
@@ -1311,7 +1311,7 @@ Item {
                                 }
 
                                 ToolButton {
-                                    text: i18n("Remove Track")
+                                    text: i18n("Remove Song")
                                     icon.name: "list-remove"
                                     display: AbstractButton.IconOnly
                                     onClicked: UserPlaylistModel.remove(drawerDelegateItem.videoId)

@@ -125,7 +125,7 @@ Item {
 
                 readonly property QtObject favouriteWatcher: Library.favouriteWatcher(drawer.videoId)
 
-                text: favouriteWatcher ? (favouriteWatcher.isFavourite ? i18n("Remove Favorite"): i18n("Add Favorite")): ""
+                text: favouriteWatcher ? (favouriteWatcher.isFavourite ? i18n("Remove from Favorites"): i18n("Add to Favorites")): ""
                 icon.name: favouriteWatcher ? (favouriteWatcher.isFavourite ? "starred-symbolic" : "non-starred-symbolic") : ""
                 onClicked: {
                     if (favouriteWatcher) {
