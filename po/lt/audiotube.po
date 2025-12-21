@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 14:40+0000\n"
-"PO-Revision-Date: 2024-04-09 12:04+0300\n"
+"PO-Revision-Date: 2025-12-20 21:01+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
 "Language: lt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.8\n"
 
 #: asyncytmusic.cpp:65
 #, kde-format
@@ -179,8 +179,7 @@ msgstr "Pervadinti grojaraštį"
 #: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:134
 #: contents/ui/NavigationBar.qml:47 contents/ui/NavigationBar.qml:53
 #: contents/ui/Sidebar.qml:138 contents/ui/Sidebar.qml:143
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "Favorites"
 msgstr "Mėgstamos"
 
@@ -191,8 +190,7 @@ msgid "Show All"
 msgstr "Rodyti visas"
 
 #: contents/ui/LibraryPage.qml:159
-#, fuzzy, kde-format
-#| msgid "No Favourites Yet"
+#, kde-format
 msgid "No Favorites Yet"
 msgstr "Kol kas mėgstamų nėra"
 
@@ -276,14 +274,12 @@ msgid "No media playing"
 msgstr "Neatkuriama jokia medija"
 
 #: contents/ui/MaximizedPlayerPage.qml:538
-#, fuzzy, kde-format
-#| msgid "Remove from Favourites"
+#, kde-format
 msgid "Remove from Favorites"
 msgstr "Šalinti iš mėgstamų"
 
 #: contents/ui/MaximizedPlayerPage.qml:538
-#, fuzzy, kde-format
-#| msgid "Add to Favourites"
+#, kde-format
 msgid "Add to Favorites"
 msgstr "Pridėti į mėgstamas"
 
@@ -455,14 +451,12 @@ msgid "Add to queue"
 msgstr "Pridėti į eilę"
 
 #: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, fuzzy, kde-format
-#| msgid "Remove Favourite"
+#, kde-format
 msgid "Remove Favorite"
 msgstr "Šalinti mėgstamą"
 
 #: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, fuzzy, kde-format
-#| msgid "Add Favourite"
+#, kde-format
 msgid "Add Favorite"
 msgstr "Pridėti mėgstamą"
 
