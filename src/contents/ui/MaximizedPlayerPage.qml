@@ -706,7 +706,7 @@ Item {
 
                         enabled: isWidescreen
                         visible: isWidescreen
-                        text: i18n("%1%", Math.round(volumeSlider.value*100))
+                        text: i18nc("%1 is the audio volume in percent", "%1%", Math.round(volumeSlider.value*100))
 
                         Layout.alignment: Qt.AlignLeft | Qt.AlignVCenter
                         Layout.preferredWidth: Kirigami.Units.gridUnit * 2.5
