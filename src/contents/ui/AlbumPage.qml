@@ -106,7 +106,7 @@ Kirigami.ScrollablePage {
             ]
             title: albumModel.title
             imageSourceURL: albumModel.thumbnailUrl
-            subtitle: i18n("Album • %1" , albumModel.artists)
+            subtitle: i18nc("%1 is the artist(s) featured in the album", "Album • %1" , albumModel.artists)
             width: songList.width
         }
 
