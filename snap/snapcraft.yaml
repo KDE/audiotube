@@ -87,6 +87,8 @@ parts:
       - usr/share/metainfo/org.kde.audiotube.appdata.xml
     plugin: cmake
     build-snaps:
+      - kde-qt6-core24-sdk/latest/beta
+      - kf6-core24-sdk/latest/beta
       - cmake
     build-packages:
       - docbook
