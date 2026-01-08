@@ -233,7 +233,4 @@ SPDX-License-Identifier: CC0-1.0
     <color type="primary" scheme_preference="light">#f19a9a</color>
     <color type="primary" scheme_preference="dark">#5a0c0c</color>
   </branding>
-  <custom>
-    <value key="KDE::supporters"> </value>
-  </custom>
 </component>
