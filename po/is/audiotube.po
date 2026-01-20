@@ -1,19 +1,21 @@
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025, 2026 Xavier Besnard <xavier.besnard@kde.org>
-# Xavier Besnard <xavier.besnard@kde.org>, 2022, 2023.
+# Copyright (C) 2026 This file is copyright:
+# This file is distributed under the same license as the audiotube package.
+#
+# SPDX-FileCopyrightText: 2026 Sveinn í Felli <sv1@fellsnet.is>
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 11:51+0000\n"
-"PO-Revision-Date: 2026-01-18 10:04+0100\n"
-"Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
-"Language-Team: \n"
-"Language: fr\n"
+"PO-Revision-Date: 2026-01-19 15:38+0000\n"
+"Last-Translator: Sveinn í Felli <sv1@fellsnet.is>\n"
+"Language-Team: Icelandic\n"
+"Language: is\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #: asyncytmusic.cpp:65
 #, kde-format
@@ -21,9 +23,8 @@ msgid ""
 "Running with untested version of ytmusicapi %1. If you experience errors, "
 "please report them to your distribution."
 msgstr ""
-"En cours d'exécution avec l'API « ytmusicapi » dans la version %1 non "
-"testée. Si vous rencontrez des erreurs, veuillez les signaler à votre "
-"distribution."
+"Keyrt með óprófaðri útgáfu af ytmusicapi %1. Ef þú lendir á villum skaltu "
+"tilkynna þær til dreifingaraðilans þíns."
 
 #: contents/ui/AlbumPage.qml:69 contents/ui/LibraryPage.qml:38
 #: contents/ui/LibraryPage.qml:64 contents/ui/LibraryPage.qml:90
@@ -34,7 +35,7 @@ msgstr ""
 #: contents/ui/PlaylistPage.qml:85
 #, kde-format
 msgid "Play"
-msgstr "Lire"
+msgstr "Spila"
 
 #: contents/ui/AlbumPage.qml:77 contents/ui/ArtistPage.qml:81
 #: contents/ui/LibraryPage.qml:45 contents/ui/LibraryPage.qml:70
@@ -45,7 +46,7 @@ msgstr "Lire"
 #: contents/ui/PlaylistPage.qml:57 contents/ui/PlaylistPage.qml:92
 #, kde-format
 msgid "Shuffle"
-msgstr "Mélanger"
+msgstr "Stokka"
 
 #: contents/ui/AlbumPage.qml:86 contents/ui/LibraryPage.qml:75
 #: contents/ui/LibraryPage.qml:110 contents/ui/LibraryPage.qml:271
@@ -53,41 +54,41 @@ msgstr "Mélanger"
 #: contents/ui/PlaybackHistory.qml:112 contents/ui/PlaylistPage.qml:100
 #, kde-format
 msgid "Append to queue"
-msgstr "Ajouter à la file de lecture"
+msgstr "Bæta aftan við spilunarröð"
 
 #: contents/ui/AlbumPage.qml:92 contents/ui/ArtistPage.qml:89
 #: contents/ui/PlaylistPage.qml:110
 #, kde-format
 msgid "Open in Browser"
-msgstr "Ouvrir dans un navigateur"
+msgstr "Opna í vafra"
 
 #: contents/ui/AlbumPage.qml:98 contents/ui/ArtistPage.qml:94
 #: contents/ui/PlaylistPage.qml:115
 #, kde-format
 msgid "Share"
-msgstr "Partager"
+msgstr "Deila"
 
 #: contents/ui/AlbumPage.qml:109
 #, kde-format
 msgid "Album • %1"
-msgstr "Album • %1"
+msgstr "Hljómplata • %1"
 
 #: contents/ui/AlbumPage.qml:163 contents/ui/ArtistPage.qml:199
 #: contents/ui/LocalPlaylistPage.qml:166 contents/ui/PlaybackHistory.qml:193
 #: contents/ui/PlaylistPage.qml:187 contents/ui/SearchPage.qml:148
 #, kde-format
 msgid "More"
-msgstr "Et plus encore"
+msgstr "Meira"
 
 #: contents/ui/ArtistPage.qml:75
 #, kde-format
 msgid "Radio"
-msgstr "Radio"
+msgstr "Útvarp"
 
 #: contents/ui/ArtistPage.qml:103
 #, kde-format
 msgid "Artist"
-msgstr "Artiste"
+msgstr "Flytjandi"
 
 #: contents/ui/ArtistPage.qml:127 contents/ui/SearchPage.qml:74
 #, kde-format
@@ -95,70 +96,69 @@ msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
 "\"%1\"?"
 msgstr ""
-"La lecture de vidéos n'est pas encore prise en charge. Voulez-vous vraiment "
-"lire uniquement l'audio de « %1 » ?"
+"Afspilun myndmerkis er enn ekki studd. Viltu spila aðeins hljóð úr \"%1\"?"
 
 #: contents/ui/ArtistPage.qml:146 contents/ui/SearchPage.qml:28
 #, kde-format
 msgid "Albums"
-msgstr "Albums"
+msgstr "Hljómplötur"
 
 #: contents/ui/ArtistPage.qml:148
 #, kde-format
 msgid "Singles"
-msgstr "Titres uniques"
+msgstr "Singlar"
 
 #: contents/ui/ArtistPage.qml:150 contents/ui/SearchPage.qml:34
 #, kde-format
 msgid "Songs"
-msgstr "Chansons"
+msgstr "Lög"
 
 #: contents/ui/ArtistPage.qml:152 contents/ui/SearchPage.qml:36
 #, kde-format
 msgid "Videos"
-msgstr "Vidéos"
+msgstr "Myndskeið"
 
 #: contents/ui/ConfirmationMessage.qml:16
 #, kde-format
 msgid "OK"
-msgstr "Ok"
+msgstr "Í lagi"
 
 #: contents/ui/ConfirmationMessage.qml:21
 #, kde-format
 msgid "Cancel"
-msgstr "Annuler"
+msgstr "Hætta við"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:15
 #, kde-format
 msgid "Add playlist"
-msgstr "Ajouter une liste de lecture"
+msgstr "Bæta spilunarlista við"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:21
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:22
 #, kde-format
 msgid "Playlist Title"
-msgstr "Titre de la liste de lecture"
+msgstr "Heiti spilunarlista"
 
 #: contents/ui/dialogs/AddPlaylistDialog.qml:26
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:28
 #, kde-format
 msgid "Playlist Description"
-msgstr "Description de la liste de lecture"
+msgstr "Lýsing spilunarlista"
 
 #: contents/ui/dialogs/ImportPlaylistDialog.qml:15
 #, kde-format
 msgid "Import playlist"
-msgstr "Importer une liste de lecture"
+msgstr "Flytja inn spilunarlista"
 
 #: contents/ui/dialogs/ImportPlaylistDialog.qml:21
 #, kde-format
 msgid "Playlist URL (Youtube)"
-msgstr "URL de liste de lecture (YouTube)"
+msgstr "Slóð á spilunarlista (Youtube)"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:15
 #, kde-format
 msgid "Add Song to Playlist"
-msgstr "Ajouter une chanson à la liste de lecture"
+msgstr "Bæta lagi við spilunarlista"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:27
 #: contents/ui/LocalPlaylistsPage.qml:105
@@ -166,88 +166,88 @@ msgstr "Ajouter une chanson à la liste de lecture"
 #: contents/ui/LocalPlaylistsPage.qml:149
 #, kde-format
 msgid "New Playlist"
-msgstr "Nouvelle liste de lecture"
+msgstr "Nýr spilunarlisti:"
 
 #: contents/ui/dialogs/RenamePlaylistDialog.qml:16
 #, kde-format
 msgid "Rename playlist"
-msgstr "Renommer une liste de lecture"
+msgstr "Endurnefna spilunarlistann"
 
 #: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:134
 #: contents/ui/NavigationBar.qml:47 contents/ui/NavigationBar.qml:53
 #: contents/ui/Sidebar.qml:138 contents/ui/Sidebar.qml:143
 #, kde-format
 msgid "Favorites"
-msgstr "Signets"
+msgstr "Eftirlæti"
 
 #: contents/ui/LibraryPage.qml:129 contents/ui/LibraryPage.qml:321
 #: contents/ui/LibraryPage.qml:423
 #, kde-format
 msgid "Show All"
-msgstr "Tout afficher"
+msgstr "Sýna allt"
 
 #: contents/ui/LibraryPage.qml:159
 #, kde-format
 msgid "No Favorites Yet"
-msgstr "Pas encore en signet"
+msgstr "Engin eftirlæti ennþá"
 
 #: contents/ui/LibraryPage.qml:227
 #, kde-format
 msgid "Most played"
-msgstr "Les plus lus"
+msgstr "Mest spiluðu"
 
 #: contents/ui/LibraryPage.qml:326 contents/ui/NavigationBar.qml:60
 #: contents/ui/NavigationBar.qml:66 contents/ui/Sidebar.qml:159
 #: contents/ui/Sidebar.qml:164
 #, kde-format
 msgid "Played Songs"
-msgstr "Titres lus"
+msgstr "Spiluð lög"
 
 #: contents/ui/LibraryPage.qml:352
 #, kde-format
 msgid "No Songs Played Yet"
-msgstr "Encore aucune chanson jouée"
+msgstr "Engin lög spiluð ennþá"
 
 #: contents/ui/LibraryPage.qml:411 contents/ui/LocalPlaylistsPage.qml:18
 #: contents/ui/LocalPlaylistsPage.qml:82 contents/ui/NavigationBar.qml:74
 #: contents/ui/SearchPage.qml:32 contents/ui/Sidebar.qml:179
 #, kde-format
 msgid "Playlists"
-msgstr "Listes de lecture"
+msgstr "Spilunarlistar"
 
 #: contents/ui/LibraryPage.qml:450
 #, kde-format
 msgid "No Playlists Yet"
-msgstr "Aucune liste de lecture pour l'instant"
+msgstr "Engir spilunarlistar ennþá"
 
 #: contents/ui/LibraryPage.qml:473 contents/ui/LibraryPage.qml:495
 #: contents/ui/LocalPlaylistsPage.qml:36 contents/ui/LocalPlaylistsPage.qml:58
 #, kde-format
 msgid "Rename"
-msgstr "Renommer"
+msgstr "Endurnefna"
 
 #: contents/ui/LibraryPage.qml:482 contents/ui/LibraryPage.qml:503
 #: contents/ui/LocalPlaylistsPage.qml:45 contents/ui/LocalPlaylistsPage.qml:66
 #, kde-format
 msgid "Delete"
-msgstr "Supprimer"
+msgstr "Eyða"
 
 #: contents/ui/LocalPlaylistPage.qml:20
 #, kde-format
 msgid "Remove from Playlist"
-msgstr "Supprimer de la liste de lecture"
+msgstr "Fjarlægja af spilunarlista"
 
 #: contents/ui/LocalPlaylistPage.qml:78
 #, kde-format
 msgid "This playlist is still empty"
-msgstr "La liste de lecture est vide pour l'instant."
+msgstr "Þessi spilunarlisti er tómur"
 
 #: contents/ui/LocalPlaylistsPage.qml:113
 #: contents/ui/LocalPlaylistsPage.qml:136
 #: contents/ui/LocalPlaylistsPage.qml:154 contents/ui/PlaylistPage.qml:105
 #, kde-format
 msgid "Import Playlist"
-msgstr "Importer une liste de lecture"
+msgstr "Flytja inn spilunarlista"
 
 #: contents/ui/Main.qml:131 main.cpp:88
 #, kde-format
@@ -257,226 +257,226 @@ msgstr "AudioTube"
 #: contents/ui/Main.qml:283
 #, kde-format
 msgid "No song playing"
-msgstr "Aucune chanson en lecture"
+msgstr "Ekkert lag í spilun"
 
 #: contents/ui/MaximizedPlayerPage.qml:105
 #, kde-format
 msgid "Close Maximized Player"
-msgstr "Fermer le lecteur en mode maximisé"
+msgstr "Loka hámörkuðum spilara"
 
 #: contents/ui/MaximizedPlayerPage.qml:279
 #: contents/ui/MinimizedPlayerControls.qml:112
 #, kde-format
 msgid "No media playing"
-msgstr "Aucun média en lecture"
+msgstr "Ekkert efni í spilun"
 
 #: contents/ui/MaximizedPlayerPage.qml:538
 #, kde-format
 msgid "Remove from Favorites"
-msgstr "Supprimer des signets"
+msgstr "Fjarlægja úr eftirlætum"
 
 #: contents/ui/MaximizedPlayerPage.qml:538
 #, kde-format
 msgid "Add to Favorites"
-msgstr "Ajouter aux signets"
+msgstr "Bæta í eftirlæti"
 
 #: contents/ui/MaximizedPlayerPage.qml:563
 #, kde-format
 msgid "Open Volume Drawer"
-msgstr "Ouvrir le réglage de volume"
+msgstr "Opna hljóðstyrkssleða"
 
 #: contents/ui/MaximizedPlayerPage.qml:670
 #, kde-format
 msgid "Unmute Audio"
-msgstr "Remettre le son"
+msgstr "Kveikja á hljóði"
 
 #: contents/ui/MaximizedPlayerPage.qml:670
 #, kde-format
 msgid "Mute Audio"
-msgstr "Mettre le son en pause"
+msgstr "Þagga hljóð"
 
 #: contents/ui/MaximizedPlayerPage.qml:709
 #, kde-format
 msgid "%1%"
-msgstr "%1 %"
+msgstr "%1%"
 
 #: contents/ui/MaximizedPlayerPage.qml:739
 #, kde-format
 msgid "Hide Lyrics"
-msgstr "Masquer les paroles"
+msgstr "Fela lagatexta"
 
 #: contents/ui/MaximizedPlayerPage.qml:739
 #, kde-format
 msgid "Show Lyrics"
-msgstr "Afficher les paroles"
+msgstr "Birta lagatexta"
 
 #: contents/ui/MaximizedPlayerPage.qml:759 contents/ui/SongMenu.qml:193
 #: contents/ui/SongMenu.qml:279
 #, kde-format
 msgid "Share Song"
-msgstr "Partager une chanson"
+msgstr "Deila lagi"
 
 #: contents/ui/MaximizedPlayerPage.qml:800
 #, kde-format
 msgid "Add to a local playlist"
-msgstr "Ajouter à la liste locale de lecture"
+msgstr "Bæta við staðværan spilunarlista"
 
 #: contents/ui/MaximizedPlayerPage.qml:837
 #, kde-format
 msgid "Hide Queue"
-msgstr "Masquer la file d'attente"
+msgstr "Fela spilunarröð"
 
 #: contents/ui/MaximizedPlayerPage.qml:837
 #, kde-format
 msgid "Show Queue"
-msgstr "Afficher la file d'attente"
+msgstr "Sýna spilunarröð"
 
 #: contents/ui/MaximizedPlayerPage.qml:1069
 #: contents/ui/MaximizedPlayerPage.qml:1314
 #, kde-format
 msgid "Remove Track"
-msgstr "Supprimer une piste"
+msgstr "Fjarlægja lag"
 
 #: contents/ui/MaximizedPlayerPage.qml:1104
 #, kde-format
 msgid "Clear Queue"
-msgstr "Effacer la file d'attente"
+msgstr "Hreinsa spilunarröð"
 
 #: contents/ui/MaximizedPlayerPage.qml:1129
 #, kde-format
 msgid "Shuffle Queue"
-msgstr "Re-distribuer la file d'attente"
+msgstr "Stokka biðröðina"
 
 #: contents/ui/MaximizedPlayerPage.qml:1162
 #, kde-format
 msgid "Upcoming Songs"
-msgstr "Prochaines chansons"
+msgstr "Væntanleg lög"
 
 #: contents/ui/NavigationBar.qml:23 contents/ui/Sidebar.qml:108
 #, kde-format
 msgid "Library"
-msgstr "Bibliothèque"
+msgstr "Safn"
 
 #: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:119
 #, kde-format
 msgid "Search"
-msgstr "Rechercher"
+msgstr "Leita"
 
 #: contents/ui/PlaybackHistory.qml:15
 #, kde-format
 msgid "Unknown list of songs"
-msgstr "Liste inconnue de titres"
+msgstr "Óþekktur listi yfir lög"
 
 #: contents/ui/PlaybackHistory.qml:133
 #, kde-format
 msgid "No songs here yet"
-msgstr "Aucun titre ici encore"
+msgstr "Engin lög hér ennþá"
 
 #: contents/ui/PlaylistPage.qml:74
 #, kde-format
 msgid "Playlist successfully imported"
-msgstr "La liste de lecture a été importée avec succès"
+msgstr "Innflutningur spilunarlista tókst"
 
 #: contents/ui/PlaylistPage.qml:126
 #, kde-format
 msgid "Playlist"
-msgstr "Liste de lecture"
+msgstr "Spilunarlisti"
 
 #: contents/ui/SearchHistoryPage.qml:82 contents/ui/SearchWithDropdown.qml:393
 #, kde-format
 msgid "remove from search history"
-msgstr "supprimer de l'historique de recherche"
+msgstr "fjarlægja úr leitarferli"
 
 #: contents/ui/SearchPage.qml:16
 #, kde-format
 msgid "Previous Searches:"
-msgstr "Recherches précédentes :"
+msgstr "Fyrri leitir:"
 
 #: contents/ui/SearchPage.qml:30
 #, kde-format
 msgid "Artists"
-msgstr "Artistes"
+msgstr "Flytjendur"
 
 #: contents/ui/SearchPage.qml:38
 #, kde-format
 msgid "Top Results"
-msgstr "Principaux résultats"
+msgstr "Efstu niðurstöður"
 
 #: contents/ui/SearchPage.qml:41 playlistimporter.cpp:24
 #, kde-format
 msgid "Unknown"
-msgstr "Inconnu"
+msgstr "Óþekkt"
 
 #: contents/ui/SearchWithDropdown.qml:339
 #, kde-format
 msgid "No matching previous searches"
-msgstr "Aucune correspondance avec les recherches précédentes"
+msgstr "Engin samsvörun við fyrri leitir"
 
 #: contents/ui/ShareMenu.qml:41
 #, kde-format
 msgid "Share to"
-msgstr "Partager vers"
+msgstr "Deila til"
 
 #: contents/ui/ShareMenu.qml:49 contents/ui/ShareMenu.qml:103
 #, kde-format
 msgid "Copy Link"
-msgstr "Copier un lien"
+msgstr "Afrita tengil"
 
 #: contents/ui/ShareMenu.qml:54 contents/ui/ShareMenu.qml:108
 #, kde-format
 msgid "Link copied to clipboard"
-msgstr "Lien copié dans le presse-papier."
+msgstr "Tengill afritaður á klippispjald"
 
 #: contents/ui/Sidebar.qml:200
 #, kde-format
 msgid "About"
-msgstr "À propos"
+msgstr "Um hugbúnaðinn"
 
 #: contents/ui/Sidebar.qml:214
 #, kde-format
 msgid "Collapse Sidebar"
-msgstr "Réduire la barre latérale"
+msgstr "Fella saman hliðarspjald"
 
 #: contents/ui/SongMenu.qml:106 contents/ui/SongMenu.qml:215
 #, kde-format
 msgid "Play Next"
-msgstr "Lire le suivant"
+msgstr "Spila næst"
 
 #: contents/ui/SongMenu.qml:116 contents/ui/SongMenu.qml:221
 #, kde-format
 msgid "Add to queue"
-msgstr "Ajouter à la file de lecture"
+msgstr "Bæta við spilunarröð"
 
 #: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
 #, kde-format
 msgid "Remove Favorite"
-msgstr "Supprimer un signet"
+msgstr "Fjarlægja eftirlæti"
 
 #: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
 #, kde-format
 msgid "Add Favorite"
-msgstr "Ajouter un signet"
+msgstr "Bæta við eftirlæti"
 
 #: contents/ui/SongMenu.qml:147 contents/ui/SongMenu.qml:245
 #, kde-format
 msgid "Remove from History"
-msgstr "Supprimer de l'historique"
+msgstr "Fjarlægja úr vinnsluferli"
 
 #: contents/ui/SongMenu.qml:162 contents/ui/SongMenu.qml:254
 #, kde-format
 msgid "Add to playlist"
-msgstr "Ajouter à la liste de lecture"
+msgstr "Bæta við spilunarlista"
 
 #: main.cpp:90
 #, kde-format
 msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Stream music from YouTube Music"
-msgstr "Musique en streaming provenant de « YouTube Musique »"
+msgstr "Streymdu tónlist frá YouTube Music"
 
 #: main.cpp:92
 #, kde-format
 msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
-msgstr "© 2021 - 2024 Jonah Brüchert, 2021 - 2024 La communauté de KDE"
+msgstr "© 2021-2024 Jonah Brüchert, 2021-2024 KDE-samfélagið"
 
 #: main.cpp:93
 #, kde-format
@@ -486,7 +486,7 @@ msgstr "Jonah Brüchert"
 #: main.cpp:93
 #, kde-format
 msgid "Maintainer"
-msgstr "Mainteneur"
+msgstr "Umsjónarmaður"
 
 #: main.cpp:94
 #, kde-format
@@ -496,98 +496,37 @@ msgstr "Mathis Brüchert"
 #: main.cpp:94
 #, kde-format
 msgid "Designer"
-msgstr "Concepteur"
+msgstr "Hönnuður"
 
 #: main.cpp:95
 #, kde-format
 msgctxt "NAME OF TRANSLATORS"
 msgid "Your names"
-msgstr "Xavier Besnard"
+msgstr "Sveinn í Felli"
 
 #: main.cpp:95
 #, kde-format
 msgctxt "EMAIL OF TRANSLATORS"
 msgid "Your emails"
-msgstr "xavier.besnard@kde.org"
+msgstr "sv1@fellsnet.is"
 
 #: main.cpp:102
 #, kde-format
 msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Unofficial API for YouTube Music"
-msgstr "API non officiel pour le site « YouTube Musique »"
+msgstr "Óopinbert API-viðmót fyrir YouTube Music"
 
 #: playlistimporter.cpp:24
 #, kde-format
 msgid "No description"
-msgstr "Aucune description"
+msgstr "Engin lýsing"
 
 #: playlistimporter.cpp:62
 #, kde-format
 msgid "No title"
-msgstr "Aucun titre"
+msgstr "Enginn titill"
 
 #: playlistimporter.cpp:64
 #, kde-format
 msgid "No album"
-msgstr "Aucun album"
-
-#~ msgid "YouTube Music Player"
-#~ msgstr "Lecteur de musique pour YouTube"
-
-#~ msgid "Export"
-#~ msgstr "Exporter"
-
-#~ msgid "Import Playlist from Url"
-#~ msgstr "Importer une liste de lecture à partir de l'URL"
-
-#~ msgid "Import Playlist from File"
-#~ msgstr "Importer une liste de lecture à partir d'un fichier"
-
-#~ msgid "Export Playlist"
-#~ msgstr "Exporter une liste de lecture"
-
-#~ msgid "m3u, m3u8 Playlist File (*.m3u *.m3u8)"
-#~ msgstr "Fichier de liste de lecture m3u, m3u8 (*.m3u *.m3u8)"
-
-#~ msgid "Import Playlists"
-#~ msgstr "Importer des listes de lecture"
-
-#~ msgid "m3u, m3u8 Playlist Files (*.m3u *.m3u8)"
-#~ msgstr "Fichiers de liste de lecture m3u, m3u8 (*.m3u *.m3u8)"
-
-#~ msgid "Saving Failed"
-#~ msgstr "L'enregistrement a échoué"
-
-#~ msgctxt "%1 is the path to a playlist file."
-#~ msgid "Failed to Import %1"
-#~ msgstr "Impossible d'importer %1"
-
-#~ msgid "Clear Playlist"
-#~ msgstr "Effacer une liste de lecture"
-
-#~ msgid "played Songs"
-#~ msgstr "Titres lus"
-
-#~ msgid "%"
-#~ msgstr "%"
-
-#~ msgid "Now Playing"
-#~ msgstr "En cours de lecture"
-
-#~ msgid "Back"
-#~ msgstr "En arrière"
-
-#~ msgid "Play next"
-#~ msgstr "Lire le suivant"
-
-#~ msgid "Clear"
-#~ msgstr "Effacer"
-
-#~ msgid "Pause"
-#~ msgstr "Pause"
-
-#~ msgid "Expand"
-#~ msgstr "Développer"
-
-#~ msgid "Play only Audio"
-#~ msgstr "Ne lire que l'audio"
+msgstr "Engin hljómplata"
