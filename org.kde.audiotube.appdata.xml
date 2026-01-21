@@ -26,6 +26,7 @@ SPDX-License-Identifier: CC0-1.0
   <name xml:lang="hu">AudioTube</name>
   <name xml:lang="ia">AudioTube</name>
   <name xml:lang="id">AudioTube</name>
+  <name xml:lang="is">AudioTube</name>
   <name xml:lang="it">AudioTube</name>
   <name xml:lang="ka">AudioTube</name>
   <name xml:lang="ko">AudioTube</name>
@@ -64,6 +65,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="hu">YouTube Music alkalmazás</summary>
   <summary xml:lang="ia">App de Musica de YouTube (YouTube Music)</summary>
   <summary xml:lang="id">Aplikasi YouTube Music</summary>
+  <summary xml:lang="is">Forrit fyrir YouTube Music</summary>
   <summary xml:lang="it">Applicazione YouTube Music</summary>
   <summary xml:lang="ka">YouTube Music-ის აპი</summary>
   <summary xml:lang="ko">YouTube Music 앱</summary>
@@ -210,6 +212,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="hu">Az AudioTube képes a YouTube Music keresésére, albumok és előadók listázására, automatikusan generált lejátszási listák és albumok lejátszására, valamint lehetővé teszi saját lejátszási lista összeállítását. Mobiltelefonokon és asztali számítógépeken egyaránt működik.</p>
     <p xml:lang="ia">AudioTube pote cercar in YouTube Music, listar albums e artistas, reproducer listas de reproduction generate automaticamente, albums e te permitte poner  tu proprie lista de reproduction insimul. Il es adaptate a telephonos mobile e computatiores de scriptorio.</p>
     <p xml:lang="id">AudioTube dapat mencari YouTube Music, daftar album dan artis, putar playlist yang dibuat secara otomatis, album dan memungkinkan Anda untuk menyusun playlist Anda sendiri. Aplikasi ini disesuaikan untuk ponsel dan komputer desktop.</p>
+    <p xml:lang="is">AudioTube getur leitað á YouTube Music, gert lista yfir hljómplötur og flytjendur, spilað sjálfvirkt útbúna spilunarlista, spilað hljómplötur og gerir kleift að útbúa eigin spilunarlista. Það er aðlagað að snjallsímum jafnt sem borðtölvum.</p>
     <p xml:lang="it">AudioTube può eseguire ricerche su YouTube Music, elencare album e artisti, riprodurre scalette e album generati automaticamente e ti consente di creare la tua scaletta. È adatto ai telefoni cellulari e ai computer desktop.</p>
     <p xml:lang="ka">AudioTube -ს შეუძლია მოძებნოს მუსიკა YouTube-ზე, გაჩვენოთ ალბომებისა და შემსრულებლების სია, დაუკრას დაგენერირებული დასაკრავი სიები, ალბომები და საშუალებას გაძლევთ, თქვენი დასაკრავი სია შექმნათ. ის მორგებულია მობილურ კომპიუტერებზე და ნოუთბუქებზე.</p>
     <p xml:lang="ko">AudioTube는 YouTube Music을 검색하고, 앨범과 아티스트를 표시하고, 자동 생성된 재생 목록, 앨범을 재생하고, 사용자 정의 재생 목록을 만들 수 있습니다. 휴대폰과 데스크톱 컴퓨터 둘 다에서 사용할 수 있습니다.</p>
