@@ -24,6 +24,7 @@
     ],
     "modules": [
         "flatpak/python3-ytmusicapi.json",
+        "flatpak/deno.json",
         {
             "name": "yt-dlp",
             "buildsystem": "simple",
@@ -33,8 +34,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/5f/16/fdebbee6473473a1c0576bd165a50e4a70762484d638c1d59fa9074e175b/yt_dlp-2025.11.12-py3-none-any.whl",
-                    "sha256": "b47af37bbb16b08efebb36825a280ea25a507c051f93bf413a6e4a0e586c6e79",
+                    "url": "https://files.pythonhosted.org/packages/0f/1d/696538eb18a9da3dd4b7772162cb3a6537723a56426a7452b98201c04bfd/yt_dlp-2026.1.29-py3-none-any.whl",
+                    "sha256": "08d0a25aead160c4787cbd0d2e82a269c75c8dbcfbfa729ce45ad52a8375fa1d",
                     "x-checker-data": {
                         "type": "pypi",
                         "name": "yt-dlp",
