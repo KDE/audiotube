@@ -5,20 +5,21 @@
 # SPDX-FileCopyrightText: 2022 Frank Steinmetzger <dev-kde@felsenfleischer.de>
 # SPDX-FileCopyrightText: 2024 Johannes Obermayr <johannesobermayr@gmx.de>
 # SPDX-FileCopyrightText: 2025 Alexander Becker <alex-at-kde-l10n-de@freenet.de>
+# SPDX-FileCopyrightText: 2026 Philipp Kiemle <l10n.daphipz@fastmail.de>
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-11-17 14:40+0000\n"
-"PO-Revision-Date: 2025-12-21 00:28+0100\n"
-"Last-Translator: Alexander Becker <alex-at-kde-l10n-de@freenet.de>\n"
+"PO-Revision-Date: 2026-01-27 17:18+0100\n"
+"Last-Translator: Philipp Kiemle <l10n.daphipz@fastmail.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.12.0\n"
+"X-Generator: Lokalize 25.12.1\n"
 
 #: asyncytmusic.cpp:65
 #, kde-format
@@ -115,7 +116,7 @@ msgstr "Singles"
 #: contents/ui/ArtistPage.qml:150 contents/ui/SearchPage.qml:34
 #, kde-format
 msgid "Songs"
-msgstr "Songs"
+msgstr "Lieder"
 
 #: contents/ui/ArtistPage.qml:152 contents/ui/SearchPage.qml:36
 #, kde-format
@@ -198,19 +199,19 @@ msgstr "Noch keine Favoriten"
 #: contents/ui/LibraryPage.qml:227
 #, kde-format
 msgid "Most played"
-msgstr "Am meisten abgespielt"
+msgstr "Am meisten wiedergegeben"
 
 #: contents/ui/LibraryPage.qml:326 contents/ui/NavigationBar.qml:60
 #: contents/ui/NavigationBar.qml:66 contents/ui/Sidebar.qml:159
 #: contents/ui/Sidebar.qml:164
 #, kde-format
 msgid "Played Songs"
-msgstr "Abgespielte Stücke"
+msgstr "Wiedergegebene Lieder"
 
 #: contents/ui/LibraryPage.qml:352
 #, kde-format
 msgid "No Songs Played Yet"
-msgstr "Bisher keine Lieder abgespielt"
+msgstr "Bisher keine Lieder wiedergegeben"
 
 #: contents/ui/LibraryPage.qml:411 contents/ui/LocalPlaylistsPage.qml:18
 #: contents/ui/LocalPlaylistsPage.qml:82 contents/ui/NavigationBar.qml:74
@@ -339,7 +340,7 @@ msgstr "Warteschlange anzeigen"
 #: contents/ui/MaximizedPlayerPage.qml:1314
 #, kde-format
 msgid "Remove Track"
-msgstr "Stück entfernen"
+msgstr "Lied entfernen"
 
 #: contents/ui/MaximizedPlayerPage.qml:1104
 #, kde-format
@@ -444,7 +445,7 @@ msgstr "Seitenleiste einklappen"
 #: contents/ui/SongMenu.qml:106 contents/ui/SongMenu.qml:215
 #, kde-format
 msgid "Play Next"
-msgstr "Nächste Wiedergabe"
+msgstr "Als nächstes wiedergeben"
 
 #: contents/ui/SongMenu.qml:116 contents/ui/SongMenu.qml:221
 #, kde-format
