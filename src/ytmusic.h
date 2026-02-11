@@ -82,6 +82,8 @@ struct Artist {
     std::optional<std::string> shuffle_id;
     std::optional<std::string> radio_id;
     std::vector<meta::Thumbnail> thumbnails;
+    std::optional<std::string> rank;
+    std::optional<std::string> trend;
 };
 
 struct TopResult {
@@ -286,6 +288,13 @@ struct Lyrics {
     std::string lyrics;
 };
 
+namespace home {
+struct Shelf {
+    std::string title;
+    std::vector<search::SearchResultItem> contents;
+};
+}
+
 class YTMusic
 {
 public:
@@ -302,6 +311,15 @@ public:
                                                  const std::optional<std::string> &scope = std::nullopt,
                                                  const int limit = 100,
                                                  const bool ignore_spelling = false) const;
+
+    /// https://ytmusicapi.readthedocs.io/en/latest/reference.html#ytmusicapi.YTMusic.get_home
+    std::vector<home::Shelf> get_home(int limit = 3) const;
+
+    /// https://ytmusicapi.readthedocs.io/en/latest/reference.html#ytmusicapi.YTMusic.get_charts
+    std::vector<home::Shelf> get_charts(const std::string &country = "US") const;
+
+    /// https://ytmusicapi.readthedocs.io/en/latest/reference.html#ytmusicapi.YTMusic.get_mood_categories
+    std::vector<home::Shelf> get_mood_categories() const;
 
     /// https://ytmusicapi.readthedocs.io/en/latest/reference.html#ytmusicapi.YTMusic.get_mood_playlists
     std::vector<search::SearchResultItem> get_mood_playlists(const std::string &params) const;

@@ -80,12 +80,41 @@ QFuture<std::vector<search::SearchResultItem>> AsyncYTMusic::search(const QStrin
 }
 
 //
+// fetchHome
+//
+QFuture<std::vector<home::Shelf>> AsyncYTMusic::fetchHome(int limit)
+{
+    return invokeAndCatchOnThread([=, this]() {
+        return m_ytm->get_home(limit);
+    });
+}
+
+//
 // fetchArtist
 //
 QFuture<artist::Artist> AsyncYTMusic::fetchArtist(const QString &channelId)
 {
     return invokeAndCatchOnThread([=, this]() {
         return m_ytm->get_artist(channelId.toStdString());
+    });
+}
+
+// fetchCharts
+//
+QFuture<std::vector<home::Shelf>> AsyncYTMusic::fetchCharts(const QString &country)
+{
+    return invokeAndCatchOnThread([=, this]() {
+        return m_ytm->get_charts(country.toStdString());
+    });
+}
+
+//
+// fetchMoodCategories
+//
+QFuture<std::vector<home::Shelf>> AsyncYTMusic::fetchMoodCategories()
+{
+    return invokeAndCatchOnThread([=, this]() {
+        return m_ytm->get_mood_categories();
     });
 }
 

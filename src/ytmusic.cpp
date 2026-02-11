@@ -349,7 +349,9 @@ std::optional<search::SearchResultItem> extract_search_result(py::handle result)
             result["artist"].cast<std::string>(),
             optional_key<std::string>(result, "shuffleId"),
             optional_key<std::string>(result, "radioId"),
-            extract_py_list<meta::Thumbnail>(result["thumbnails"])
+            extract_py_list<meta::Thumbnail>(result["thumbnails"]),
+            std::nullopt, // rank
+            std::nullopt  // trend
         };
     } else {
         std::cerr << "Warning: Unsupported search result type found" << std::endl;
@@ -359,11 +361,97 @@ std::optional<search::SearchResultItem> extract_search_result(py::handle result)
     }
 }
 
+search::Playlist extract_chart_video(py::handle video) {
+    return search::Playlist {
+        video["playlistId"].cast<std::string>(),
+        video["title"].cast<std::string>(),
+        std::nullopt, // author
+        "", // item_count (not available in charts)
+        extract_py_list<meta::Thumbnail>(video["thumbnails"])
+    };
+}
+
+search::Artist extract_chart_artist(py::handle artist) {
+    return search::Artist {
+        artist["browseId"].cast<std::string>(),
+        artist["title"].cast<std::string>(),
+        std::nullopt, // shuffleId
+        std::nullopt, // radioId
+        extract_py_list<meta::Thumbnail>(artist["thumbnails"]),
+        optional_key<std::string>(artist, "rank"),
+        optional_key<std::string>(artist, "trend")
+    };
+}
+
 search::Mood extract_mood(py::handle mood) {
     return search::Mood {
         mood["title"].cast<std::string>(),
         mood["params"].cast<std::string>()
     };
+}
+
+std::optional<search::SearchResultItem> extract_home_item(py::handle result) {
+    auto dict = result.cast<py::dict>();
+    if (dict.contains("videoId")) {
+        std::string videoId;
+        if (result["videoId"].is_none()) {
+            // Fallback: Try to extract videoId from thumbnail url (e.g. /vi/<id>/)
+            auto thumbnails = extract_py_list<meta::Thumbnail>(result["thumbnails"]);
+            if (!thumbnails.empty()) {
+                std::string url = thumbnails[0].url;
+                std::string marker = "/vi/";
+                auto pos = url.find(marker);
+                if (pos != std::string::npos) {
+                    auto start = pos + marker.length();
+                    auto end = url.find("/", start);
+                    if (end != std::string::npos) {
+                        videoId = url.substr(start, end - start);
+                    }
+                }
+            }
+        } else {
+            videoId = result["videoId"].cast<std::string>();
+        }
+
+        if (videoId.empty()) return std::nullopt;
+
+        return search::Song {
+            {
+                videoId,
+                result["title"].cast<std::string>(),
+                dict.contains("artists") ? extract_py_list<meta::Artist>(result["artists"]) : std::vector<meta::Artist>{},
+                std::nullopt,
+                extract_py_list<meta::Thumbnail>(result["thumbnails"])
+            },
+            [&]() -> std::optional<meta::Album> {
+                if (dict.contains("album") && !result["album"].is_none()) {
+                    return extract_meta_album(result["album"]);
+                }
+                return std::nullopt;
+            }(),
+            optional_key<bool>(result, "isExplicit")
+        };
+    } else if (dict.contains("playlistId")) {
+        return search::Playlist {
+            result["playlistId"].cast<std::string>(),
+            result["title"].cast<std::string>(),
+            std::nullopt,
+            "",
+            extract_py_list<meta::Thumbnail>(result["thumbnails"])
+        };
+    } else if (dict.contains("browseId")) {
+        return search::Album {
+            result["browseId"].cast<std::optional<std::string>>(),
+            result["title"].cast<std::string>(),
+            dict.contains("type") ? result["type"].cast<std::string>() : "Album",
+            dict.contains("artists") ? extract_py_list<meta::Artist>(result["artists"]) : std::vector<meta::Artist>{},
+            std::nullopt,
+            optional_key<bool>(result, "isExplicit").value_or(false),
+            extract_py_list<meta::Thumbnail>(result["thumbnails"])
+        };
+    }
+
+    return std::nullopt;
 }
 
 YTMusic::YTMusic(
@@ -408,6 +496,110 @@ std::vector<search::SearchResultItem> YTMusic::search(
     };
 
     return output;
+}
+
+std::vector<home::Shelf> YTMusic::get_home(int limit) const
+{
+    try {
+        const auto home = d->get_ytmusic().attr("get_home")(limit).cast<py::list>();
+        std::vector<home::Shelf> shelves;
+
+        for (const auto &shelf : home) {
+            if (shelf.is_none()) continue;
+
+            home::Shelf s;
+            s.title = shelf["title"].cast<std::string>();
+
+            const auto contents = shelf["contents"].cast<py::list>();
+            for (const auto &item : contents) {
+                if (item.is_none()) continue;
+                 try {
+                    if (const auto opt = extract_home_item(item); opt.has_value()) {
+                        s.contents.push_back(opt.value());
+                    }
+                } catch (const std::exception &e) {
+                    std::cerr << "Failed to parse home item because:" << e.what() << std::endl;
+                }
+            }
+            if (!s.contents.empty()) {
+                shelves.push_back(std::move(s));
+            }
+        }
+        return shelves;
+    } catch (const py::error_already_set &e) {
+        std::cerr << "Python error in get_home: " << e.what() << std::endl;
+        return {};
+    }
+}
+
+std::vector<home::Shelf> YTMusic::get_charts(const std::string &country) const {
+    try {
+        const auto charts = d->get_ytmusic().attr("get_charts")(country).cast<py::dict>();
+        std::vector<home::Shelf> shelves;
+
+        if (charts.contains("videos")) {
+            home::Shelf s;
+            s.title = "Top Music Videos"; // Or generic "Charts"
+            const auto videos = charts["videos"].cast<py::list>();
+            if (!videos.empty()) {
+                // Check if items are actually playlists or videos. Inspect debug output said "playlistId", so likely playlists.
+                // But typically charts['videos']['items'] are songs/videos?
+                // Wait, my inspect script for 'videos' showed: {"title": "Trending 20...", "playlistId": "..."}
+                // So it IS a playlist.
+                for (const auto &item : videos) {
+                   s.contents.push_back(extract_chart_video(item));
+                }
+                shelves.push_back(std::move(s));
+            }
+        }
+
+        if (charts.contains("artists")) {
+             home::Shelf s;
+             s.title = "Top Artists";
+             const auto artists = charts["artists"].cast<py::list>();
+             for (const auto &item : artists) {
+                 s.contents.push_back(extract_chart_artist(item));
+             }
+             if (!s.contents.empty()) shelves.push_back(std::move(s));
+        }
+
+        if (charts.contains("trending")) {
+             // specific logic if needed, often similar to videos/songs
+             // My inspect script didn't show 'trending' key but 'countries', 'videos', 'genres', 'artists'
+        }
+
+        return shelves;
+
+    } catch (const py::error_already_set &e) {
+         std::cerr << "Python error in get_charts: " << e.what() << std::endl;
+         return {};
+    }
+}
+
+std::vector<home::Shelf> YTMusic::get_mood_categories() const {
+    try {
+        const auto categories = d->get_ytmusic().attr("get_mood_categories")().cast<py::dict>();
+        std::vector<home::Shelf> shelves;
+
+        for (auto item : categories) {
+             std::string title = item.first.cast<std::string>();
+             py::list moods = item.second.cast<py::list>();
+             
+             home::Shelf s;
+             s.title = title;
+             if (moods.empty()) continue;
+
+             for (const auto &m : moods) {
+                 s.contents.push_back(extract_mood(m));
+             }
+             shelves.push_back(std::move(s));
+        }
+        return shelves;
+
+    } catch (const py::error_already_set &e) {
+         std::cerr << "Python error in get_mood_categories: " << e.what() << std::endl;
+         return {};
+    }
 }
 
 std::vector<search::SearchResultItem> YTMusic::get_mood_playlists(const std::string &params) const {
