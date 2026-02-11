@@ -26,7 +26,8 @@ public:
         Playlist,
         Song,
         Video,
-        TopResult
+        TopResult,
+        Mood,
     };
     Q_ENUM(Type)
 

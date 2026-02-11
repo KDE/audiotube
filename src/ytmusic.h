@@ -93,7 +93,12 @@ struct TopResult {
     std::vector<meta::Thumbnail> thumbnails;
 };
 
-using SearchResultItem = std::variant<Video, Playlist, Song, Album, Artist, TopResult>;
+struct Mood {
+    std::string title;
+    std::string params;
+};
+
+using SearchResultItem = std::variant<Video, Playlist, Song, Album, Artist, TopResult, Mood>;
 };
 
 
@@ -297,6 +302,9 @@ public:
                                                  const std::optional<std::string> &scope = std::nullopt,
                                                  const int limit = 100,
                                                  const bool ignore_spelling = false) const;
+
+    /// https://ytmusicapi.readthedocs.io/en/latest/reference.html#ytmusicapi.YTMusic.get_mood_playlists
+    std::vector<search::SearchResultItem> get_mood_playlists(const std::string &params) const;
 
     /// https://ytmusicapi.readthedocs.io/en/latest/reference.html#ytmusicapi.YTMusic.get_artist
     artist::Artist get_artist(const std::string &channel_id) const;
