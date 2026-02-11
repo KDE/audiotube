@@ -28,6 +28,8 @@ add_executable(audiotube
     thumbnailsource.cpp
     abstractytmusicmodel.cpp
     multiiterableview.h
+    homemodel.cpp
+    exploremodel.cpp
     library.cpp
     localplaylistmodel.cpp
     localplaylistsmodel.cpp
@@ -68,6 +70,12 @@ ecm_add_qml_module(audiotube URI org.kde.audiotube
         contents/ui/dialogs/RenamePlaylistDialog.qml
         contents/ui/HorizontalCoverView.qml
         contents/ui/AlbumCoverItem.qml
+        contents/ui/HomeShelf.qml
+        contents/ui/HeroHomeShelf.qml
+        contents/ui/HomePage.qml
+        contents/ui/BentoCard.qml
+        contents/ui/HeroCard.qml
+	contents/ui/ExplorePage.qml
         contents/ui/components/ActionButton.qml
         contents/ui/components/DoubleActionButton.qml
     RESOURCES
