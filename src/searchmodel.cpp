@@ -64,6 +64,8 @@ QVariant SearchModel::data(const QModelIndex &index, int role) const
                         return std::string();
                     }
                 }
+            } else if constexpr (std::is_same_v<T, search::Mood>) {
+                return arg.title;
             } else {
                 Q_UNREACHABLE();
             }
@@ -83,6 +85,8 @@ QVariant SearchModel::data(const QModelIndex &index, int role) const
                 return Type::Video;
             } else if constexpr (std::is_same_v<T, search::TopResult>) {
                 return Type::TopResult;
+            } else if constexpr (std::is_same_v<T, search::Mood>) {
+                return Type::Mood;
             } else {
                 Q_UNREACHABLE();
             }
@@ -106,6 +110,8 @@ QVariant SearchModel::data(const QModelIndex &index, int role) const
                 } else {
                     return QString();
                 }
+            } else if constexpr (std::is_same_v<T, search::Mood>) {
+                return QString();
             } else {
                 Q_UNREACHABLE();
             }
@@ -125,6 +131,8 @@ QVariant SearchModel::data(const QModelIndex &index, int role) const
                 return arg.artists;
             } else if constexpr (std::is_same_v<T, search::TopResult>) {
                 return arg.artists;
+            } else if constexpr (std::is_same_v<T, search::Mood>) {
+                return std::vector<meta::Artist>();
             } else {
                 Q_UNREACHABLE();
             }
@@ -143,11 +151,16 @@ QVariant SearchModel::data(const QModelIndex &index, int role) const
         }, m_searchResults.at(index.row()));
     case ThumbnailUrl:
         return std::visit([&](auto &&arg) {
-            if (!arg.thumbnails.empty()) {
-                return QString::fromStdString(arg.thumbnails.front().url);
+            using T = std::decay_t<decltype(arg)>;
+            if constexpr (std::is_same_v<T, search::Mood>) {
+                return QString();
+            } else {
+                if (!arg.thumbnails.empty()) {
+                    return QString::fromStdString(arg.thumbnails.front().url);
+                }
+                return QString();
             }
 
-            return QString();
         }, m_searchResults.at(index.row()));
     case ArtistsDisplayString:
         return QVariant::fromValue(std::visit([&](auto&& arg) {
@@ -216,6 +229,8 @@ void SearchModel::triggerItem(int row)
                     Q_EMIT openArtist(QString::fromStdString(*arg.artists.front().id), {}, {});
                 }
             }
+        } else if constexpr (std::is_same_v<T, search::Mood>) {
+            // TODO: Implement mood opening
         } else {
             Q_UNREACHABLE();
         }
@@ -239,6 +254,8 @@ int SearchModel::itemType(search::SearchResultItem const &item)
             return SearchModel::Type::Video;
         } else if constexpr(std::is_same_v<T, search::TopResult>) {
             return SearchModel::Type::TopResult;
+        } else if constexpr(std::is_same_v<T, search::Mood>) {
+            return SearchModel::Type::Mood;
         } else {
             Q_UNREACHABLE();
         }

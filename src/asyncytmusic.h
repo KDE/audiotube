@@ -63,6 +63,8 @@ public:
     // public functions need to be thread safe
     QFuture<std::vector<search::SearchResultItem>> search(const QString &query);
 
+    QFuture<std::vector<search::SearchResultItem>> fetchMoodPlaylists(const QString &params);
+
     QFuture<artist::Artist> fetchArtist(const QString &channelId);
 
     QFuture<album::Album> fetchAlbum(const QString &browseId);

@@ -90,6 +90,16 @@ QFuture<artist::Artist> AsyncYTMusic::fetchArtist(const QString &channelId)
 }
 
 //
+// fetchMoodPlaylists
+//
+QFuture<std::vector<search::SearchResultItem>> AsyncYTMusic::fetchMoodPlaylists(const QString &params)
+{
+    return invokeAndCatchOnThread([=, this]() {
+        return m_ytm->get_mood_playlists(params.toStdString());
+    });
+}
+
+//
 // fetchAlbum
 //
 QFuture<album::Album> AsyncYTMusic::fetchAlbum(const QString &browseId)

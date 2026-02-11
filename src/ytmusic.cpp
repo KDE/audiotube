@@ -359,6 +359,13 @@ std::optional<search::SearchResultItem> extract_search_result(py::handle result)
     }
 }
 
+search::Mood extract_mood(py::handle mood) {
+    return search::Mood {
+        mood["title"].cast<std::string>(),
+        mood["params"].cast<std::string>()
+    };
+}
+
 YTMusic::YTMusic(
         const std::optional<std::string> &auth,
         const std::optional<std::string> &user,
@@ -401,6 +408,27 @@ std::vector<search::SearchResultItem> YTMusic::search(
     };
 
     return output;
+}
+
+std::vector<search::SearchResultItem> YTMusic::get_mood_playlists(const std::string &params) const {
+     try {
+        const auto playlists = d->get_ytmusic().attr("get_mood_playlists")(params).cast<py::list>();
+        std::vector<search::SearchResultItem> output;
+
+        for (const auto &item : playlists) {
+            output.push_back(search::Playlist {
+                item["playlistId"].cast<std::string>(),
+                item["title"].cast<std::string>(),
+                optional_key<std::string>(item, "author"),
+                optional_key<std::string>(item, "itemCount").value_or(""),
+                extract_py_list<meta::Thumbnail>(item["thumbnails"])
+            });
+        }
+        return output;
+    } catch (const py::error_already_set &e) {
+         std::cerr << "Python error in get_mood_playlists: " << e.what() << std::endl;
+         return {};
+    }
 }
 
 artist::Artist YTMusic::get_artist(const std::string &channel_id) const
