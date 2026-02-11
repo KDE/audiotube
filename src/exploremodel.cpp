@@ -100,6 +100,7 @@ QVariant MoodPlaylistsModel::data(const QModelIndex &index, int role) const {
                     return QString();
                 case ItemCount: return QString::fromStdString(arg.item_count);
                 case Author: return arg.author ? QString::fromStdString(*arg.author) : QString();
+                case Artists: return QString();
             }
         }
         return {};
@@ -113,7 +114,8 @@ QHash<int, QByteArray> MoodPlaylistsModel::roleNames() const {
         {VideoId, "videoId"}, // mapped to browseId for playlists
         {ThumbnailUrl, "thumbnailUrl"},
         {ItemCount, "itemCount"},
-        {Author, "author"}
+        {Author, "author"},
+        {Artists, "artists"},
     };
 }
 

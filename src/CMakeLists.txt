@@ -75,7 +75,8 @@ ecm_add_qml_module(audiotube URI org.kde.audiotube
         contents/ui/HomePage.qml
         contents/ui/BentoCard.qml
         contents/ui/HeroCard.qml
-	contents/ui/ExplorePage.qml
+        contents/ui/ExplorePage.qml
+        contents/ui/MoodPage.qml
         contents/ui/components/ActionButton.qml
         contents/ui/components/DoubleActionButton.qml
     RESOURCES

@@ -29,12 +29,12 @@ Kirigami.ScrollablePage {
                 onOpenSong: (videoId) => applicationWindow().play(videoId)
                 onOpenPlaylist: (playlistId) => applicationWindow().playPlaylist(playlistId)
                 onOpenAlbum: (browseId) => {
-                    root.Kirigami.PageStack.push(Qt.createComponent('org.kde.audiotube', 'AlbumPage.qml'), {
+                    root.Kirigami.PageStack.push(Qt.createComponent('org.kde.audiotube', 'AlbumPage'), {
                         browseId: browseId
                     })
                 }
                 onOpenArtist: (browseId, radioId, shuffleId) => {
-                    root.Kirigami.PageStack.push(Qt.createComponent('org.kde.audiotube', 'ArtistsPage.qml'), {
+                    root.Kirigami.PageStack.push(Qt.createComponent('org.kde.audiotube', 'ArtistsPage'), {
                         browseId: browseId
                     })
                 }
@@ -42,11 +42,10 @@ Kirigami.ScrollablePage {
                      applicationWindow().play(videoId)
                 }
                 onOpenMood: (title, params) => {
-                    // TODO
-                    //root.Kirigami.PageStack.push(Qt.createComponent('org.kde.audiotube', 'MoodPage.qml'), {
-                    //    moodTitle: title,
-                    //    moodParams: params
-                    //})
+                    root.Kirigami.PageStack.push(Qt.createComponent('org.kde.audiotube', 'MoodPage'), {
+                        moodTitle: title,
+                        moodParams: params
+                    })
                 }
             }
 
