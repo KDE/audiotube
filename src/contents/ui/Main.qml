@@ -134,7 +134,7 @@ Kirigami.ApplicationWindow {
         id: contextDrawer
     }
 
-    pageStack.initialPage: pool.loadPage(Qt.resolvedUrl("qrc:/qt/qml/org/kde/audiotube/contents/ui/LibraryPage.qml"))
+    pageStack.initialPage: pool.loadPage(Qt.resolvedUrl("./HomePage.qml"))
     pageStack.clip: true
 
     function play(videoId) {

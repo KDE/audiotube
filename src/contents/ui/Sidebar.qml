@@ -96,6 +96,22 @@ Rectangle {
                 spacing: 0
 
                 Kirigami.NavigationTabButton {
+                    id: homeButton
+                    Layout.fillWidth: true
+                    width: column.width - column.Layout.leftMargin - column.Layout.rightMargin
+                    implicitHeight: 50
+                    display: collapsed ? Controls.AbstractButton.IconOnly : Controls.AbstractButton.TextBesideIcon
+                    checked: pageStack.currentItem && pageStack.currentItem.objectName == "homePage"
+
+                    action: Kirigami.PagePoolAction {
+                        pagePool: pool
+                        text: i18n("Home")
+                        icon.name: "user-home-symbolic"
+                        page: Qt.resolvedUrl("./HomePage.qml")
+                    }
+                }
+
+                Kirigami.NavigationTabButton {
                     id: libraryButton
                     Layout.fillWidth: true
                     width: column.width - column.Layout.leftMargin - column.Layout.rightMargin
@@ -110,6 +126,7 @@ Rectangle {
                         page: Qt.resolvedUrl("qrc:/qt/qml/org/kde/audiotube/contents/ui/LibraryPage.qml")
                     }
                 }
+
                 Kirigami.NavigationTabButton {
                     id: searchButton
                     Layout.fillWidth: true
@@ -143,6 +160,22 @@ Rectangle {
                             "title": i18n("Favorites"),
                             "objectName": "favourites"
                         }
+                    }
+                }
+
+                Kirigami.NavigationTabButton {
+                    id: exploreButton
+                    Layout.fillWidth: true
+                    width: column.width - column.Layout.leftMargin - column.Layout.rightMargin
+                    implicitHeight: 50
+                    display: collapsed ? Controls.AbstractButton.IconOnly : Controls.AbstractButton.TextBesideIcon
+                    checked: pageStack.currentItem && pageStack.currentItem.objectName == "explorePage"
+
+                    action: Kirigami.PagePoolAction {
+                        pagePool: pool
+                        text: i18n("Explore")
+                        icon.name: "globe-symbolic"
+                        page: Qt.resolvedUrl("./ExplorePage.qml")
                     }
                 }
 

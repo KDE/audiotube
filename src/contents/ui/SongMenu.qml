@@ -40,7 +40,7 @@ Item {
         if (Kirigami.Settings.isMobile) {
             drawer.interactive = true
             drawer.open()
-         } else {
+        } else {
             menu.popup()
         }
     }
