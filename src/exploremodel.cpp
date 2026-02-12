@@ -9,31 +9,10 @@
 
 // --- ExploreModel ---
 
-ExploreModel::ExploreModel(QObject *parent) : AbstractYTMusicModel(parent) {
+ExploreModel::ExploreModel(QObject *parent)
+	: AbstractShelfModel(parent)
+{
     refresh();
-}
-
-int ExploreModel::rowCount(const QModelIndex &parent) const {
-    return parent.isValid() ? 0 : int(m_shelves.size());
-}
-
-QVariant ExploreModel::data(const QModelIndex &index, int role) const {
-    if (!index.isValid() || index.row() >= int(m_shelves.size())) return {};
-    
-    switch (role) {
-    case Title:
-        return QString::fromStdString(m_shelves.at(index.row()).title);
-    case ContentModelRole:
-        return QVariant::fromValue(static_cast<QObject*>(m_shelfModels.at(index.row()).get()));
-    }
-    return {};
-}
-
-QHash<int, QByteArray> ExploreModel::roleNames() const {
-    return {
-        {Title, "title"},
-        {ContentModelRole, "contentModel"}
-    };
 }
 
 void ExploreModel::refresh() {
@@ -55,17 +34,7 @@ void ExploreModel::refresh() {
              
              m_shelfModels.clear();
              for (const auto &shelf : m_shelves) {
-                 auto model = std::make_unique<HomeShelfModel>(this);
-                 model->setItems(shelf.contents);
-                 
-                 connect(model.get(), &HomeShelfModel::openAlbum, this, &ExploreModel::openAlbum);
-                 connect(model.get(), &HomeShelfModel::openArtist, this, &ExploreModel::openArtist);
-                 connect(model.get(), &HomeShelfModel::openPlaylist, this, &ExploreModel::openPlaylist);
-                 connect(model.get(), &HomeShelfModel::openSong, this, &ExploreModel::openSong);
-                 connect(model.get(), &HomeShelfModel::openVideo, this, &ExploreModel::openVideo);
-                 connect(model.get(), &HomeShelfModel::openMood, this, &ExploreModel::openMood);
-
-                 m_shelfModels.push_back(std::move(model));
+                addShelf(shelf.contents);
              }
              endResetModel();
              setLoading(false);

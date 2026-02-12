@@ -28,6 +28,7 @@ add_executable(audiotube
     thumbnailsource.cpp
     abstractytmusicmodel.cpp
     multiiterableview.h
+    abstractshelfmodel.cpp
     homemodel.cpp
     exploremodel.cpp
     library.cpp

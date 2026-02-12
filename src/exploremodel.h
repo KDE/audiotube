@@ -11,11 +11,10 @@
 #include "abstractytmusicmodel.h"
 #include "ytmusic.h"
 #include "homemodel.h" 
-
-// Reuse HomeShelfModel
+#include "abstractshelfmodel.h" 
 
 // Main model for the Explore tab
-class ExploreModel : public AbstractYTMusicModel {
+class ExploreModel : public AbstractShelfModel {
     Q_OBJECT
     QML_ELEMENT
 
@@ -27,23 +26,7 @@ public:
 
     explicit ExploreModel(QObject *parent = nullptr);
 
-    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
-    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
-    QHash<int, QByteArray> roleNames() const override;
-
-    Q_INVOKABLE void refresh();
-
-    // Re-expose signals from shelf models
-    Q_SIGNAL void openAlbum(const QString &browseId);
-    Q_SIGNAL void openArtist(const QString &browseId, const QString &radioId, const QString &shuffleId);
-    Q_SIGNAL void openPlaylist(const QString &browseId);
-    Q_SIGNAL void openSong(const QString &videoId);
-    Q_SIGNAL void openVideo(const QString &videoId, const QString &title);
-    Q_SIGNAL void openMood(const QString &title, const QString &params);
-
-private:
-    std::vector<home::Shelf> m_shelves;
-    std::vector<std::unique_ptr<HomeShelfModel>> m_shelfModels;
+    void refresh();
 };
 
 // Model for Mood Playlists
