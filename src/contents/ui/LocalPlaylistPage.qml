@@ -12,18 +12,19 @@ import org.kde.audiotube
 
 Kirigami.ScrollablePage {
     id: root
+
     property alias playlistId: playlistModel.playlistId
+
     SongMenu {
-        id:menu
-        pageSpecificActions:[
-            Kirigami.Action {
-                text: i18n("Remove from Playlist")
-                icon.name: "list-remove"
-                onTriggered:{
-                    playlistModel.removeSong(menu.videoId, root.playlistId)
-                }
+        id: menu
+        parentItem: root.Controls.ApplicationWindow.window
+        actions: Kirigami.Action {
+            text: i18n("Remove from Playlist")
+            icon.name: "list-remove"
+            onTriggered:{
+                playlistModel.removeSong(menu.videoId, root.playlistId)
             }
-        ]
+        }
     }
 
     DoubleActionButton {

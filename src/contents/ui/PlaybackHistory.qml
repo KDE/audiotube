@@ -77,7 +77,9 @@ Kirigami.ScrollablePage {
 
     SongMenu {
         id: menu
+        parentItem: playbackHistoryPage.Controls.ApplicationWindow.window
     }
+
     ListView {
         footer: Item { height: 60 }
         header: RowLayout {

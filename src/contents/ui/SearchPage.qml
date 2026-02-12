@@ -85,6 +85,7 @@ Kirigami.ScrollablePage {
 
         SongMenu {
             id: menu
+            parentItem: searchPage.Controls.ApplicationWindow.window
         }
 
         delegate: Controls.ItemDelegate {

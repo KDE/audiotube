@@ -118,9 +118,12 @@ Kirigami.ScrollablePage {
 
             browseId: root.browseId
         }
+
         SongMenu {
             id: menu
+            parentItem: root.Controls.ApplicationWindow.window
         }
+
         delegate: Controls.ItemDelegate {
             id: delegateItem
 

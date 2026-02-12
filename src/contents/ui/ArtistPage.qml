@@ -18,6 +18,7 @@ Kirigami.ScrollablePage {
 
     SongMenu {
         id: menu
+        parentItem: root.Controls.ApplicationWindow.window
     }
 
     DoubleActionButton {

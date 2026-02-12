@@ -14,6 +14,7 @@ import org.kde.audiotube
 
 Kirigami.ScrollablePage {
     id: libraryPage
+
     objectName: "libraryPage"
     Kirigami.Theme.colorSet: Kirigami.Theme.View
     title: "AudioTube"
@@ -584,5 +585,6 @@ Kirigami.ScrollablePage {
 
     SongMenu {
         id: menu
+        parentItem: libraryPage.Controls.ApplicationWindow.window
     }
 }
