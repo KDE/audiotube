@@ -15,6 +15,17 @@ HomeShelfModel::HomeShelfModel(QObject *parent)
 void HomeShelfModel::setItems(std::vector<search::SearchResultItem> items) {
     beginResetModel();
     m_items = std::move(items);
+
+    for (auto &item : m_items) {
+        std::visit([&](auto &arg) {
+            using T = std::decay_t<decltype(arg)>;
+            if constexpr (!std::is_same_v<T, search::Mood>) {
+                std::sort(arg.thumbnails.begin(), arg.thumbnails.end(), [](auto a, auto b) {
+                    return a.width > b.width;
+                });
+            }
+        }, item);
+    }
     endResetModel();
 }
 
