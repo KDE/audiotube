@@ -174,6 +174,7 @@ Kirigami.ScrollablePage {
             Layout.fillWidth: false
             Layout.maximumWidth: libraryPage.flickable.width
 
+            visible: count > 0
             model: Library.favourites
             delegate: ColumnLayout {
                 id: delegateItem
@@ -360,6 +361,7 @@ Kirigami.ScrollablePage {
             Layout.fillWidth: false
             Layout.maximumWidth: libraryPage.flickable.width
 
+            visible: count > 0
             model: Library.mostPlayed
             delegate: ColumnLayout {
                 id: mpdelegateItem
@@ -515,6 +517,7 @@ Kirigami.ScrollablePage {
             Layout.fillWidth: true
             Layout.maximumWidth: libraryPage.flickable.width
 
+            visible: count > 0
             model: LocalPlaylistsModel {
                 id: localPlaylistsModel
             }
