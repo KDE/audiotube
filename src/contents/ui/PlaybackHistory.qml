@@ -82,8 +82,11 @@ Kirigami.ScrollablePage {
 
     ListView {
         footer: Item { height: 60 }
+        topMargin: Kirigami.Units.mediumSpacing
         header: RowLayout {
             spacing: Kirigami.Units.mediumSpacing
+            width: ListView.view.width - Kirigami.Units.smallSpacing * 2
+            x: Kirigami.Units.smallSpacing
 
             Controls.ToolButton {
                 text: i18n("Play")
