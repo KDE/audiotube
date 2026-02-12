@@ -123,7 +123,7 @@ Rectangle {
                         pagePool: pool
                         text: i18n("Library")
                         icon.name: "file-library-symbolic"
-                        page: Qt.resolvedUrl("qrc:/qt/qml/org/kde/audiotube/contents/ui/LibraryPage.qml")
+                        page: Qt.resolvedUrl("./LibraryPage.qml")
                     }
                 }
 
@@ -154,7 +154,7 @@ Rectangle {
                         pagePool: pool
                         text: i18n("Favorites")
                         icon.name: "non-starred-symbolic"
-                        page: Qt.resolvedUrl("qrc:/qt/qml/org/kde/audiotube/contents/ui/PlaybackHistory.qml#favourites")
+                        page: Qt.resolvedUrl("./PlaybackHistory.qml#favourites")
                         initialProperties: {
                             "dataModel": Library.favourites,
                             "title": i18n("Favorites"),
@@ -191,7 +191,7 @@ Rectangle {
                         pagePool: pool
                         text: i18n("Played Songs")
                         icon.name: "edit-undo-history"
-                        page: Qt.resolvedUrl("qrc:/qt/qml/org/kde/audiotube/contents/ui/PlaybackHistory.qml#history")
+                        page: Qt.resolvedUrl("./PlaybackHistory.qml#history")
                         initialProperties: {
                             "dataModel": Library.playbackHistory,
                             "title": i18n("Played Songs"),
@@ -211,7 +211,7 @@ Rectangle {
                         pagePool: pool
                         text: i18n("Playlists")
                         icon.name: "amarok_playlist"
-                        page: Qt.resolvedUrl("qrc:/qt/qml/org/kde/audiotube/contents/ui/LocalPlaylistsPage.qml")
+                        page: Qt.resolvedUrl("./LocalPlaylistsPage.qml")
                         initialProperties: {
                             "objectName": "playlists"
                         }

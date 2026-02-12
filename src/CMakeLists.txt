@@ -41,6 +41,14 @@ add_executable(audiotube
     foreigntypes.h
 )
 
+kconfig_target_kcfg_file(audiotube
+    FILE stateconfig.kcfg
+    CLASS_NAME StateConfig
+    MUTATORS GENERATE_PROPERTIES GENERATE_MOC
+    DEFAULT_VALUE_GETTERS PARENT_IN_CONSTRUCTOR 
+    SINGLETON QML_REGISTRATION
+)
+
 ecm_add_qml_module(audiotube URI org.kde.audiotube
     QML_FILES
         contents/ui/Main.qml
@@ -101,6 +109,7 @@ target_link_libraries(audiotube PRIVATE
     Qt::Concurrent
     Qt::Multimedia
     KF6::I18n
+    KF6::ConfigGui
     KF6::CoreAddons
     KF6::Crash
     KF6::WindowSystem

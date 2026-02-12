@@ -21,6 +21,29 @@ Kirigami.ApplicationWindow {
     Blur{id:blur}
     Component.onCompleted: {
         blur.setBlur(sidebar, true);
+
+        switch (StateConfig.lastOpenedPage) {
+        case 'libraryPage':
+            pageStack.initialPage = pool.loadPage(Qt.resolvedUrl('./LibraryPage.qml'))
+            break;
+        case 'homePage':
+            pageStack.initialPage = pool.loadPage(Qt.resolvedUrl('./HomePage.qml'))
+            break;
+        case 'favourites':
+            pageStack.initialPage = pool.loadPage(Qt.resolvedUrl('./PlaybackHistory.qml#favourites'))
+            break;
+        case 'history':
+            pageStack.initialPage = pool.loadPage(Qt.resolvedUrl('./PlaybackHistory.qml#history'))
+            break;
+        case 'explorePage':
+            pageStack.initialPage = pool.loadPage(Qt.resolvedUrl('./ExplorePage.qml'))
+            break;
+        case 'playlists':
+            pageStack.initialPage = pool.loadPage(Qt.resolvedUrl("./LocalPlaylistsPage.qml"))
+            break;
+        default:
+            pageStack.initialPage = pool.loadPage(Qt.resolvedUrl('./HomePage.qml'))
+        }
     }
 
     contentItem.parent.z: (playerFooter.contentY === 0) ? 0 : 2 // HACK: So contents can cover the header. This is only necessary since Qt 6.9.
@@ -45,6 +68,12 @@ Kirigami.ApplicationWindow {
 
     Kirigami.PagePool {
         id: pool
+        onLastLoadedItemChanged: if (lastLoadedItem) {
+            if (['homePage', 'libraryPage', 'favourites', 'explorePage', 'history', 'playlists'].includes(lastLoadedItem.objectName)) {
+                StateConfig.lastOpenedPage = lastLoadedItem.objectName;
+                StateConfig.save();
+            }
+        }
     }
 
     Loader {
@@ -134,7 +163,6 @@ Kirigami.ApplicationWindow {
         id: contextDrawer
     }
 
-    pageStack.initialPage: pool.loadPage(Qt.resolvedUrl("./HomePage.qml"))
     pageStack.clip: true
 
     function play(videoId) {

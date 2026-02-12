@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+                          http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+
+<!--
+SPDX-FileCopyrightText: 2026 Carl Schwan <carl@carlschwan.eu>
+SPDX-License-Identifier: CC0-1.0
+-->
+  <kcfgfile name="tokodonrc"  stateConfig="true" />
+  <group name="General">
+    <entry name="LastOpenedPage" type="string">
+      <default></default>
+    </entry>
+  </group>
+</kcfg>
