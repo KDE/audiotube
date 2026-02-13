@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:51+0000\n"
+"POT-Creation-Date: 2026-02-13 00:42+0000\n"
 "PO-Revision-Date: 2025-10-06 13:46+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -70,7 +70,9 @@ msgid "Share"
 msgstr "Оприлюднити"
 
 #: contents/ui/AlbumPage.qml:109
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Album • %1"
+msgctxt "%1 is the artist(s) featured in the album"
 msgid "Album • %1"
 msgstr "Альбом • %1"
 
@@ -91,11 +93,15 @@ msgstr "Радіо"
 msgid "Artist"
 msgstr "Виконавець"
 
-#: contents/ui/ArtistPage.qml:127 contents/ui/SearchPage.qml:74
-#, kde-format
+#: contents/ui/ArtistPage.qml:127
+#, fuzzy, kde-format
+#| msgid ""
+#| "Video playback is not supported yet. Do you want to play only the audio "
+#| "of \"%1\"?"
+msgctxt "%1 is a video title"
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
-"\"%1\"?"
+"“%1”?"
 msgstr ""
 "Підтримки відтворення відео ще не передбачено. Хочете, щоб було відтворено "
 "лише звукову частину «%1»?"
@@ -272,12 +278,12 @@ msgstr "Закрити максимізований програвач"
 msgid "No media playing"
 msgstr "Відтворення не відбувається"
 
-#: contents/ui/MaximizedPlayerPage.qml:538
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:128
 #, kde-format
 msgid "Remove from Favorites"
 msgstr "Вилучити з улюблених"
 
-#: contents/ui/MaximizedPlayerPage.qml:538
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:128
 #, kde-format
 msgid "Add to Favorites"
 msgstr "Додати до улюбленого"
@@ -298,7 +304,9 @@ msgid "Mute Audio"
 msgstr "Вимкнути звук"
 
 #: contents/ui/MaximizedPlayerPage.qml:709
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "%1%"
+msgctxt "%1 is the audio volume in percent"
 msgid "%1%"
 msgstr "%1%"
 
@@ -335,9 +343,10 @@ msgstr "Показати чергу"
 
 #: contents/ui/MaximizedPlayerPage.qml:1069
 #: contents/ui/MaximizedPlayerPage.qml:1314
-#, kde-format
-msgid "Remove Track"
-msgstr "Вилучити композицію"
+#, fuzzy, kde-format
+#| msgid "Remove Favorite"
+msgid "Remove Song"
+msgstr "Вилучити з улюблених"
 
 #: contents/ui/MaximizedPlayerPage.qml:1104
 #, kde-format
@@ -409,6 +418,19 @@ msgstr "Найкращі результати"
 msgid "Unknown"
 msgstr "Невідомий"
 
+#: contents/ui/SearchPage.qml:74
+#, fuzzy, kde-format
+#| msgid ""
+#| "Video playback is not supported yet. Do you want to play only the audio "
+#| "of \"%1\"?"
+msgctxt "%1 is a video title"
+msgid ""
+"Video playback is not supported yet. Do you want to play only the audio of "
+"\"%1\"?"
+msgstr ""
+"Підтримки відтворення відео ще не передбачено. Хочете, щоб було відтворено "
+"лише звукову частину «%1»?"
+
 #: contents/ui/SearchWithDropdown.qml:339
 #, kde-format
 msgid "No matching previous searches"
@@ -449,16 +471,6 @@ msgstr "Відтворити наступну"
 msgid "Add to queue"
 msgstr "Додати до черги"
 
-#: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, kde-format
-msgid "Remove Favorite"
-msgstr "Вилучити з улюблених"
-
-#: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, kde-format
-msgid "Add Favorite"
-msgstr "Додати до улюблених"
-
 #: contents/ui/SongMenu.qml:147 contents/ui/SongMenu.qml:245
 #, kde-format
 msgid "Remove from History"
@@ -469,6 +481,16 @@ msgstr "Вилучити із журналу"
 msgid "Add to playlist"
 msgstr "Додати до списку відтворення"
 
+#: contents/ui/SongMenu.qml:231
+#, kde-format
+msgid "Remove Favorite"
+msgstr "Вилучити з улюблених"
+
+#: contents/ui/SongMenu.qml:231
+#, kde-format
+msgid "Add Favorite"
+msgstr "Додати до улюблених"
+
 #: main.cpp:90
 #, kde-format
 msgctxt "YouTube Music is a music streaming service by Google"
@@ -476,8 +498,9 @@ msgid "Stream music from YouTube Music"
 msgstr "Трансляція музики з YouTube Music"
 
 #: main.cpp:92
-#, kde-format
-msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
+#, fuzzy, kde-format
+#| msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
+msgid "© 2021–2024 Jonah Brüchert, 2021–2024 KDE Community"
 msgstr "© Jonah Brüchert, 2021-2024; KDE Community,2021-2024"
 
 #: main.cpp:93
@@ -532,6 +555,9 @@ msgstr "Без заголовка"
 #, kde-format
 msgid "No album"
 msgstr "Без альбому"
+
+#~ msgid "Remove Track"
+#~ msgstr "Вилучити композицію"
 
 #~ msgid "YouTube Music Player"
 #~ msgstr "Програвач YouTube Music"

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:51+0000\n"
+"POT-Creation-Date: 2026-02-13 00:42+0000\n"
 "PO-Revision-Date: 2025-10-18 16:52+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -72,7 +72,9 @@ msgid "Share"
 msgstr "Partekatu"
 
 #: contents/ui/AlbumPage.qml:109
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Album • %1"
+msgctxt "%1 is the artist(s) featured in the album"
 msgid "Album • %1"
 msgstr "Albuma • %1"
 
@@ -93,11 +95,15 @@ msgstr "Irratia"
 msgid "Artist"
 msgstr "Artista"
 
-#: contents/ui/ArtistPage.qml:127 contents/ui/SearchPage.qml:74
-#, kde-format
+#: contents/ui/ArtistPage.qml:127
+#, fuzzy, kde-format
+#| msgid ""
+#| "Video playback is not supported yet. Do you want to play only the audio "
+#| "of \"%1\"?"
+msgctxt "%1 is a video title"
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
-"\"%1\"?"
+"“%1”?"
 msgstr ""
 "Oraindik ez dago bideoa atzera jotzeko euskarririk. «%1»(r)en audioa "
 "bakarrik jo nahi duzu?"
@@ -274,12 +280,12 @@ msgstr "Itxi maximizatutako jotzailea"
 msgid "No media playing"
 msgstr "Ez da euskarririk jotzen ari"
 
-#: contents/ui/MaximizedPlayerPage.qml:538
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:128
 #, kde-format
 msgid "Remove from Favorites"
 msgstr "Kendu gogokoetatik"
 
-#: contents/ui/MaximizedPlayerPage.qml:538
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:128
 #, kde-format
 msgid "Add to Favorites"
 msgstr "Gehitu gogokoetara"
@@ -300,7 +306,9 @@ msgid "Mute Audio"
 msgstr "Isilarazi audioa"
 
 #: contents/ui/MaximizedPlayerPage.qml:709
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "%1%"
+msgctxt "%1 is the audio volume in percent"
 msgid "%1%"
 msgstr "%%1"
 
@@ -337,9 +345,10 @@ msgstr "Erakutsi ilara"
 
 #: contents/ui/MaximizedPlayerPage.qml:1069
 #: contents/ui/MaximizedPlayerPage.qml:1314
-#, kde-format
-msgid "Remove Track"
-msgstr "Kendu pista"
+#, fuzzy, kde-format
+#| msgid "Remove Favorite"
+msgid "Remove Song"
+msgstr "Kendu gogokoa"
 
 #: contents/ui/MaximizedPlayerPage.qml:1104
 #, kde-format
@@ -411,6 +420,19 @@ msgstr "Emaitza nagusiak"
 msgid "Unknown"
 msgstr "Ezezaguna"
 
+#: contents/ui/SearchPage.qml:74
+#, fuzzy, kde-format
+#| msgid ""
+#| "Video playback is not supported yet. Do you want to play only the audio "
+#| "of \"%1\"?"
+msgctxt "%1 is a video title"
+msgid ""
+"Video playback is not supported yet. Do you want to play only the audio of "
+"\"%1\"?"
+msgstr ""
+"Oraindik ez dago bideoa atzera jotzeko euskarririk. «%1»(r)en audioa "
+"bakarrik jo nahi duzu?"
+
 #: contents/ui/SearchWithDropdown.qml:339
 #, kde-format
 msgid "No matching previous searches"
@@ -451,16 +473,6 @@ msgstr "Jo hurrengoa"
 msgid "Add to queue"
 msgstr "Gehitu ilaran"
 
-#: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, kde-format
-msgid "Remove Favorite"
-msgstr "Kendu gogokoa"
-
-#: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, kde-format
-msgid "Add Favorite"
-msgstr "Gehitu gogokoa"
-
 #: contents/ui/SongMenu.qml:147 contents/ui/SongMenu.qml:245
 #, kde-format
 msgid "Remove from History"
@@ -471,6 +483,16 @@ msgstr "Kendu historiatik"
 msgid "Add to playlist"
 msgstr "Gehitu jotze-zerrendara"
 
+#: contents/ui/SongMenu.qml:231
+#, kde-format
+msgid "Remove Favorite"
+msgstr "Kendu gogokoa"
+
+#: contents/ui/SongMenu.qml:231
+#, kde-format
+msgid "Add Favorite"
+msgstr "Gehitu gogokoa"
+
 #: main.cpp:90
 #, kde-format
 msgctxt "YouTube Music is a music streaming service by Google"
@@ -478,8 +500,9 @@ msgid "Stream music from YouTube Music"
 msgstr "«YouTube Music»etik musika korrontea"
 
 #: main.cpp:92
-#, kde-format
-msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
+#, fuzzy, kde-format
+#| msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
+msgid "© 2021–2024 Jonah Brüchert, 2021–2024 KDE Community"
 msgstr "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Komunitatea"
 
 #: main.cpp:93
@@ -534,6 +557,9 @@ msgstr "Titulurik ez"
 #, kde-format
 msgid "No album"
 msgstr "Albumik ez"
+
+#~ msgid "Remove Track"
+#~ msgstr "Kendu pista"
 
 #~ msgid "YouTube Music Player"
 #~ msgstr "YouTube musika jotzailea"

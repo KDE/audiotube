@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:51+0000\n"
+"POT-Creation-Date: 2026-02-13 00:42+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -67,7 +67,9 @@ msgid "Share"
 msgstr "分享"
 
 #: contents/ui/AlbumPage.qml:109
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Album • %1"
+msgctxt "%1 is the artist(s) featured in the album"
 msgid "Album • %1"
 msgstr "专辑：%1"
 
@@ -88,11 +90,15 @@ msgstr "电台"
 msgid "Artist"
 msgstr "艺术家"
 
-#: contents/ui/ArtistPage.qml:127 contents/ui/SearchPage.qml:74
-#, kde-format
+#: contents/ui/ArtistPage.qml:127
+#, fuzzy, kde-format
+#| msgid ""
+#| "Video playback is not supported yet. Do you want to play only the audio "
+#| "of \"%1\"?"
+msgctxt "%1 is a video title"
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
-"\"%1\"?"
+"“%1”?"
 msgstr "视频播放尚未被支持。您想要只播放“%1”中的音频吗？"
 
 #: contents/ui/ArtistPage.qml:146 contents/ui/SearchPage.qml:28
@@ -267,12 +273,12 @@ msgstr "关闭最大化播放器"
 msgid "No media playing"
 msgstr "没有正在播放的媒体"
 
-#: contents/ui/MaximizedPlayerPage.qml:538
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:128
 #, kde-format
 msgid "Remove from Favorites"
 msgstr "从收藏夹中移除"
 
-#: contents/ui/MaximizedPlayerPage.qml:538
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:128
 #, kde-format
 msgid "Add to Favorites"
 msgstr "添加到收藏夹"
@@ -293,7 +299,9 @@ msgid "Mute Audio"
 msgstr "静音"
 
 #: contents/ui/MaximizedPlayerPage.qml:709
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "%1%"
+msgctxt "%1 is the audio volume in percent"
 msgid "%1%"
 msgstr "%1%"
 
@@ -330,9 +338,10 @@ msgstr "显示队列"
 
 #: contents/ui/MaximizedPlayerPage.qml:1069
 #: contents/ui/MaximizedPlayerPage.qml:1314
-#, kde-format
-msgid "Remove Track"
-msgstr "移除曲目"
+#, fuzzy, kde-format
+#| msgid "Remove Favorite"
+msgid "Remove Song"
+msgstr "移除收藏"
 
 #: contents/ui/MaximizedPlayerPage.qml:1104
 #, kde-format
@@ -404,6 +413,17 @@ msgstr ""
 msgid "Unknown"
 msgstr "未知"
 
+#: contents/ui/SearchPage.qml:74
+#, fuzzy, kde-format
+#| msgid ""
+#| "Video playback is not supported yet. Do you want to play only the audio "
+#| "of \"%1\"?"
+msgctxt "%1 is a video title"
+msgid ""
+"Video playback is not supported yet. Do you want to play only the audio of "
+"\"%1\"?"
+msgstr "视频播放尚未被支持。您想要只播放“%1”中的音频吗？"
+
 #: contents/ui/SearchWithDropdown.qml:339
 #, kde-format
 msgid "No matching previous searches"
@@ -444,16 +464,6 @@ msgstr "播放下一首"
 msgid "Add to queue"
 msgstr "加入队列"
 
-#: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, kde-format
-msgid "Remove Favorite"
-msgstr "移除收藏"
-
-#: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, kde-format
-msgid "Add Favorite"
-msgstr "添加收藏"
-
 #: contents/ui/SongMenu.qml:147 contents/ui/SongMenu.qml:245
 #, kde-format
 msgid "Remove from History"
@@ -464,6 +474,16 @@ msgstr "从历史记录中删除"
 msgid "Add to playlist"
 msgstr "添加到播放列表"
 
+#: contents/ui/SongMenu.qml:231
+#, kde-format
+msgid "Remove Favorite"
+msgstr "移除收藏"
+
+#: contents/ui/SongMenu.qml:231
+#, kde-format
+msgid "Add Favorite"
+msgstr "添加收藏"
+
 #: main.cpp:90
 #, kde-format
 msgctxt "YouTube Music is a music streaming service by Google"
@@ -471,8 +491,9 @@ msgid "Stream music from YouTube Music"
 msgstr ""
 
 #: main.cpp:92
-#, kde-format
-msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
+#, fuzzy, kde-format
+#| msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
+msgid "© 2021–2024 Jonah Brüchert, 2021–2024 KDE Community"
 msgstr "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
 
 #: main.cpp:93
@@ -527,3 +548,6 @@ msgstr ""
 #, kde-format
 msgid "No album"
 msgstr ""
+
+#~ msgid "Remove Track"
+#~ msgstr "移除曲目"

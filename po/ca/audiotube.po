@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:51+0000\n"
+"POT-Creation-Date: 2026-02-13 00:42+0000\n"
 "PO-Revision-Date: 2025-10-06 12:17+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -72,7 +72,9 @@ msgid "Share"
 msgstr "Comparteix"
 
 #: contents/ui/AlbumPage.qml:109
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Album • %1"
+msgctxt "%1 is the artist(s) featured in the album"
 msgid "Album • %1"
 msgstr "Àlbum • %1"
 
@@ -93,11 +95,15 @@ msgstr "Ràdio"
 msgid "Artist"
 msgstr "Artista"
 
-#: contents/ui/ArtistPage.qml:127 contents/ui/SearchPage.qml:74
-#, kde-format
+#: contents/ui/ArtistPage.qml:127
+#, fuzzy, kde-format
+#| msgid ""
+#| "Video playback is not supported yet. Do you want to play only the audio "
+#| "of \"%1\"?"
+msgctxt "%1 is a video title"
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
-"\"%1\"?"
+"“%1”?"
 msgstr ""
 "Encara no s'admet la reproducció de vídeo. Voleu reproduir només l'àudio de "
 "«%1»?"
@@ -274,12 +280,12 @@ msgstr "Tanca el reproductor maximitzat"
 msgid "No media playing"
 msgstr "No s'està reproduint cap fitxer multimèdia"
 
-#: contents/ui/MaximizedPlayerPage.qml:538
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:128
 #, kde-format
 msgid "Remove from Favorites"
 msgstr "Elimina de les preferides"
 
-#: contents/ui/MaximizedPlayerPage.qml:538
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:128
 #, kde-format
 msgid "Add to Favorites"
 msgstr "Afegeix a les preferides"
@@ -300,7 +306,9 @@ msgid "Mute Audio"
 msgstr "Silencia l'àudio"
 
 #: contents/ui/MaximizedPlayerPage.qml:709
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "%1%"
+msgctxt "%1 is the audio volume in percent"
 msgid "%1%"
 msgstr "%1%"
 
@@ -337,9 +345,10 @@ msgstr "Mostra la cua"
 
 #: contents/ui/MaximizedPlayerPage.qml:1069
 #: contents/ui/MaximizedPlayerPage.qml:1314
-#, kde-format
-msgid "Remove Track"
-msgstr "Elimina la pista"
+#, fuzzy, kde-format
+#| msgid "Remove Favorite"
+msgid "Remove Song"
+msgstr "Elimina de les preferides"
 
 #: contents/ui/MaximizedPlayerPage.qml:1104
 #, kde-format
@@ -411,6 +420,19 @@ msgstr "Resultats principals"
 msgid "Unknown"
 msgstr "Desconegut"
 
+#: contents/ui/SearchPage.qml:74
+#, fuzzy, kde-format
+#| msgid ""
+#| "Video playback is not supported yet. Do you want to play only the audio "
+#| "of \"%1\"?"
+msgctxt "%1 is a video title"
+msgid ""
+"Video playback is not supported yet. Do you want to play only the audio of "
+"\"%1\"?"
+msgstr ""
+"Encara no s'admet la reproducció de vídeo. Voleu reproduir només l'àudio de "
+"«%1»?"
+
 #: contents/ui/SearchWithDropdown.qml:339
 #, kde-format
 msgid "No matching previous searches"
@@ -451,16 +473,6 @@ msgstr "Reprodueix el següent"
 msgid "Add to queue"
 msgstr "Afegeix a la cua"
 
-#: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, kde-format
-msgid "Remove Favorite"
-msgstr "Elimina de les preferides"
-
-#: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, kde-format
-msgid "Add Favorite"
-msgstr "Afegeix a les preferides"
-
 #: contents/ui/SongMenu.qml:147 contents/ui/SongMenu.qml:245
 #, kde-format
 msgid "Remove from History"
@@ -471,6 +483,16 @@ msgstr "Elimina de l'historial"
 msgid "Add to playlist"
 msgstr "Afegeix a la llista de reproducció"
 
+#: contents/ui/SongMenu.qml:231
+#, kde-format
+msgid "Remove Favorite"
+msgstr "Elimina de les preferides"
+
+#: contents/ui/SongMenu.qml:231
+#, kde-format
+msgid "Add Favorite"
+msgstr "Afegeix a les preferides"
+
 #: main.cpp:90
 #, kde-format
 msgctxt "YouTube Music is a music streaming service by Google"
@@ -478,8 +500,9 @@ msgid "Stream music from YouTube Music"
 msgstr "Flux de música des de YouTube Music"
 
 #: main.cpp:92
-#, kde-format
-msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
+#, fuzzy, kde-format
+#| msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
+msgid "© 2021–2024 Jonah Brüchert, 2021–2024 KDE Community"
 msgstr "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
 
 #: main.cpp:93
@@ -534,3 +557,6 @@ msgstr "Sense títol"
 #, kde-format
 msgid "No album"
 msgstr "Sense àlbum"
+
+#~ msgid "Remove Track"
+#~ msgstr "Elimina la pista"

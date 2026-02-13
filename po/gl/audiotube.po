@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:51+0000\n"
+"POT-Creation-Date: 2026-02-13 00:42+0000\n"
 "PO-Revision-Date: 2025-01-12 16:48+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -69,7 +69,9 @@ msgid "Share"
 msgstr "Compartir"
 
 #: contents/ui/AlbumPage.qml:109
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Album • %1"
+msgctxt "%1 is the artist(s) featured in the album"
 msgid "Album • %1"
 msgstr "Álbum — %1"
 
@@ -90,11 +92,15 @@ msgstr "Radio"
 msgid "Artist"
 msgstr "Intérprete"
 
-#: contents/ui/ArtistPage.qml:127 contents/ui/SearchPage.qml:74
-#, kde-format
+#: contents/ui/ArtistPage.qml:127
+#, fuzzy, kde-format
+#| msgid ""
+#| "Video playback is not supported yet. Do you want to play only the audio "
+#| "of \"%1\"?"
+msgctxt "%1 is a video title"
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
-"\"%1\"?"
+"“%1”?"
 msgstr "Aínda non se permite reproducir vídeo. Quere reproducir o son de «%1»?"
 
 #: contents/ui/ArtistPage.qml:146 contents/ui/SearchPage.qml:28
@@ -271,13 +277,13 @@ msgstr "Pechar o reprodutor maximizado"
 msgid "No media playing"
 msgstr "Non se está a reproducir nada."
 
-#: contents/ui/MaximizedPlayerPage.qml:538
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:128
 #, fuzzy, kde-format
 #| msgid "Remove from Favourites"
 msgid "Remove from Favorites"
 msgstr "Retirar das favoritas"
 
-#: contents/ui/MaximizedPlayerPage.qml:538
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:128
 #, fuzzy, kde-format
 #| msgid "Add to Favourites"
 msgid "Add to Favorites"
@@ -299,7 +305,9 @@ msgid "Mute Audio"
 msgstr "Silenciar"
 
 #: contents/ui/MaximizedPlayerPage.qml:709
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "%1%"
+msgctxt "%1 is the audio volume in percent"
 msgid "%1%"
 msgstr "%1%"
 
@@ -336,9 +344,10 @@ msgstr "Amosar a cola"
 
 #: contents/ui/MaximizedPlayerPage.qml:1069
 #: contents/ui/MaximizedPlayerPage.qml:1314
-#, kde-format
-msgid "Remove Track"
-msgstr "Retirar a pista"
+#, fuzzy, kde-format
+#| msgid "Remove Favourite"
+msgid "Remove Song"
+msgstr "Retiras das favoritas"
 
 #: contents/ui/MaximizedPlayerPage.qml:1104
 #, kde-format
@@ -410,6 +419,17 @@ msgstr "Resultados principais"
 msgid "Unknown"
 msgstr "Descoñecida"
 
+#: contents/ui/SearchPage.qml:74
+#, fuzzy, kde-format
+#| msgid ""
+#| "Video playback is not supported yet. Do you want to play only the audio "
+#| "of \"%1\"?"
+msgctxt "%1 is a video title"
+msgid ""
+"Video playback is not supported yet. Do you want to play only the audio of "
+"\"%1\"?"
+msgstr "Aínda non se permite reproducir vídeo. Quere reproducir o son de «%1»?"
+
 #: contents/ui/SearchWithDropdown.qml:339
 #, kde-format
 msgid "No matching previous searches"
@@ -450,18 +470,6 @@ msgstr "Reproducir a seguinte"
 msgid "Add to queue"
 msgstr "Engadir á cola"
 
-#: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, fuzzy, kde-format
-#| msgid "Remove Favourite"
-msgid "Remove Favorite"
-msgstr "Retiras das favoritas"
-
-#: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, fuzzy, kde-format
-#| msgid "Add Favourite"
-msgid "Add Favorite"
-msgstr "Engadir ás favoritas"
-
 #: contents/ui/SongMenu.qml:147 contents/ui/SongMenu.qml:245
 #, kde-format
 msgid "Remove from History"
@@ -472,6 +480,18 @@ msgstr "Retirar do historial"
 msgid "Add to playlist"
 msgstr "Engadir á lista de reprodución"
 
+#: contents/ui/SongMenu.qml:231
+#, fuzzy, kde-format
+#| msgid "Remove Favourite"
+msgid "Remove Favorite"
+msgstr "Retiras das favoritas"
+
+#: contents/ui/SongMenu.qml:231
+#, fuzzy, kde-format
+#| msgid "Add Favourite"
+msgid "Add Favorite"
+msgstr "Engadir ás favoritas"
+
 #: main.cpp:90
 #, kde-format
 msgctxt "YouTube Music is a music streaming service by Google"
@@ -479,8 +499,9 @@ msgid "Stream music from YouTube Music"
 msgstr "Escoita música de YouTube Music"
 
 #: main.cpp:92
-#, kde-format
-msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
+#, fuzzy, kde-format
+#| msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
+msgid "© 2021–2024 Jonah Brüchert, 2021–2024 KDE Community"
 msgstr "© 2021-2024 Jonah Brüchert; 2021-2024 Comunidade KDE"
 
 #: main.cpp:93
@@ -535,6 +556,9 @@ msgstr "Sen título"
 #, kde-format
 msgid "No album"
 msgstr "Sen álbum"
+
+#~ msgid "Remove Track"
+#~ msgstr "Retirar a pista"
 
 #~ msgid "YouTube Music Player"
 #~ msgstr "Reprodutor de música de YouTube"

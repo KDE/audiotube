@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:51+0000\n"
+"POT-Creation-Date: 2026-02-13 00:42+0000\n"
 "PO-Revision-Date: 2025-12-02 11:22+0100\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -69,7 +69,9 @@ msgid "Share"
 msgstr "Sdílet"
 
 #: contents/ui/AlbumPage.qml:109
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Album • %1"
+msgctxt "%1 is the artist(s) featured in the album"
 msgid "Album • %1"
 msgstr "Album • %1"
 
@@ -90,11 +92,15 @@ msgstr "Rádio"
 msgid "Artist"
 msgstr "Umělec"
 
-#: contents/ui/ArtistPage.qml:127 contents/ui/SearchPage.qml:74
-#, kde-format
+#: contents/ui/ArtistPage.qml:127
+#, fuzzy, kde-format
+#| msgid ""
+#| "Video playback is not supported yet. Do you want to play only the audio "
+#| "of \"%1\"?"
+msgctxt "%1 is a video title"
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
-"\"%1\"?"
+"“%1”?"
 msgstr ""
 "Přehrávání videa ještě není podporováno. Chcete z \"%1\" přehrávat pouze "
 "zvuk?"
@@ -271,12 +277,12 @@ msgstr "Zavřít minimalizovaný přehrávač"
 msgid "No media playing"
 msgstr "Nepřehrává se žádné médium"
 
-#: contents/ui/MaximizedPlayerPage.qml:538
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:128
 #, kde-format
 msgid "Remove from Favorites"
 msgstr "Odstranit z oblíbených"
 
-#: contents/ui/MaximizedPlayerPage.qml:538
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:128
 #, kde-format
 msgid "Add to Favorites"
 msgstr "Přidat do oblíbených"
@@ -297,7 +303,9 @@ msgid "Mute Audio"
 msgstr "Ztlumit zvuk"
 
 #: contents/ui/MaximizedPlayerPage.qml:709
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "%1%"
+msgctxt "%1 is the audio volume in percent"
 msgid "%1%"
 msgstr "%1%"
 
@@ -334,9 +342,10 @@ msgstr "Zobrazit frontu"
 
 #: contents/ui/MaximizedPlayerPage.qml:1069
 #: contents/ui/MaximizedPlayerPage.qml:1314
-#, kde-format
-msgid "Remove Track"
-msgstr "Odstranit skladbu"
+#, fuzzy, kde-format
+#| msgid "Remove Favorite"
+msgid "Remove Song"
+msgstr "Odstranit oblíbené"
 
 #: contents/ui/MaximizedPlayerPage.qml:1104
 #, kde-format
@@ -408,6 +417,19 @@ msgstr "Nejlepší výsledky"
 msgid "Unknown"
 msgstr "Neznámý"
 
+#: contents/ui/SearchPage.qml:74
+#, fuzzy, kde-format
+#| msgid ""
+#| "Video playback is not supported yet. Do you want to play only the audio "
+#| "of \"%1\"?"
+msgctxt "%1 is a video title"
+msgid ""
+"Video playback is not supported yet. Do you want to play only the audio of "
+"\"%1\"?"
+msgstr ""
+"Přehrávání videa ještě není podporováno. Chcete z \"%1\" přehrávat pouze "
+"zvuk?"
+
 #: contents/ui/SearchWithDropdown.qml:339
 #, kde-format
 msgid "No matching previous searches"
@@ -448,16 +470,6 @@ msgstr "Přehrát následující"
 msgid "Add to queue"
 msgstr "Zařadit do fronty"
 
-#: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, kde-format
-msgid "Remove Favorite"
-msgstr "Odstranit oblíbené"
-
-#: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, kde-format
-msgid "Add Favorite"
-msgstr "Přidat oblíbené"
-
 #: contents/ui/SongMenu.qml:147 contents/ui/SongMenu.qml:245
 #, kde-format
 msgid "Remove from History"
@@ -468,6 +480,16 @@ msgstr "Odstranit z historie"
 msgid "Add to playlist"
 msgstr "Přidat do seznamu stop"
 
+#: contents/ui/SongMenu.qml:231
+#, kde-format
+msgid "Remove Favorite"
+msgstr "Odstranit oblíbené"
+
+#: contents/ui/SongMenu.qml:231
+#, kde-format
+msgid "Add Favorite"
+msgstr "Přidat oblíbené"
+
 #: main.cpp:90
 #, kde-format
 msgctxt "YouTube Music is a music streaming service by Google"
@@ -475,8 +497,9 @@ msgid "Stream music from YouTube Music"
 msgstr "Přehrávejte hudbu z Hudba YouTube"
 
 #: main.cpp:92
-#, kde-format
-msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
+#, fuzzy, kde-format
+#| msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
+msgid "© 2021–2024 Jonah Brüchert, 2021–2024 KDE Community"
 msgstr "© 2021-2024 Jonah Brüchert, 2021-2024 Komunita KDE"
 
 #: main.cpp:93
@@ -531,3 +554,6 @@ msgstr "Bez názvu"
 #, kde-format
 msgid "No album"
 msgstr "Žádné album"
+
+#~ msgid "Remove Track"
+#~ msgstr "Odstranit skladbu"

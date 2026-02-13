@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:51+0000\n"
+"POT-Creation-Date: 2026-02-13 00:42+0000\n"
 "PO-Revision-Date: 2025-10-06 20:51+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -69,7 +69,9 @@ msgid "Share"
 msgstr "Dela"
 
 #: contents/ui/AlbumPage.qml:109
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Album • %1"
+msgctxt "%1 is the artist(s) featured in the album"
 msgid "Album • %1"
 msgstr "Album • %1"
 
@@ -90,11 +92,15 @@ msgstr "Radio"
 msgid "Artist"
 msgstr "Artist"
 
-#: contents/ui/ArtistPage.qml:127 contents/ui/SearchPage.qml:74
-#, kde-format
+#: contents/ui/ArtistPage.qml:127
+#, fuzzy, kde-format
+#| msgid ""
+#| "Video playback is not supported yet. Do you want to play only the audio "
+#| "of \"%1\"?"
+msgctxt "%1 is a video title"
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
-"\"%1\"?"
+"“%1”?"
 msgstr "Videouppspelning stöds inte ännu. Vill du bara spela ljudet på \"%1\"?"
 
 #: contents/ui/ArtistPage.qml:146 contents/ui/SearchPage.qml:28
@@ -269,12 +275,12 @@ msgstr "Stäng maximerad spelare"
 msgid "No media playing"
 msgstr "Inga media spelar"
 
-#: contents/ui/MaximizedPlayerPage.qml:538
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:128
 #, kde-format
 msgid "Remove from Favorites"
 msgstr "Ta bort från favoriter"
 
-#: contents/ui/MaximizedPlayerPage.qml:538
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:128
 #, kde-format
 msgid "Add to Favorites"
 msgstr "Lägg till i favoriter"
@@ -295,7 +301,9 @@ msgid "Mute Audio"
 msgstr "Tysta ljud"
 
 #: contents/ui/MaximizedPlayerPage.qml:709
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "%1%"
+msgctxt "%1 is the audio volume in percent"
 msgid "%1%"
 msgstr "%1 %"
 
@@ -332,9 +340,10 @@ msgstr "Visa kö"
 
 #: contents/ui/MaximizedPlayerPage.qml:1069
 #: contents/ui/MaximizedPlayerPage.qml:1314
-#, kde-format
-msgid "Remove Track"
-msgstr "Ta bort spår"
+#, fuzzy, kde-format
+#| msgid "Remove Favorite"
+msgid "Remove Song"
+msgstr "Ta bort favorit"
 
 #: contents/ui/MaximizedPlayerPage.qml:1104
 #, kde-format
@@ -406,6 +415,17 @@ msgstr "Toppresultat"
 msgid "Unknown"
 msgstr "Okänd"
 
+#: contents/ui/SearchPage.qml:74
+#, fuzzy, kde-format
+#| msgid ""
+#| "Video playback is not supported yet. Do you want to play only the audio "
+#| "of \"%1\"?"
+msgctxt "%1 is a video title"
+msgid ""
+"Video playback is not supported yet. Do you want to play only the audio of "
+"\"%1\"?"
+msgstr "Videouppspelning stöds inte ännu. Vill du bara spela ljudet på \"%1\"?"
+
 #: contents/ui/SearchWithDropdown.qml:339
 #, kde-format
 msgid "No matching previous searches"
@@ -446,16 +466,6 @@ msgstr "Spela nästa"
 msgid "Add to queue"
 msgstr "Lägg till i kö"
 
-#: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, kde-format
-msgid "Remove Favorite"
-msgstr "Ta bort favorit"
-
-#: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, kde-format
-msgid "Add Favorite"
-msgstr "Lägg till favorit"
-
 #: contents/ui/SongMenu.qml:147 contents/ui/SongMenu.qml:245
 #, kde-format
 msgid "Remove from History"
@@ -466,6 +476,16 @@ msgstr "Ta bort från historik"
 msgid "Add to playlist"
 msgstr "Lägg till i spellista"
 
+#: contents/ui/SongMenu.qml:231
+#, kde-format
+msgid "Remove Favorite"
+msgstr "Ta bort favorit"
+
+#: contents/ui/SongMenu.qml:231
+#, kde-format
+msgid "Add Favorite"
+msgstr "Lägg till favorit"
+
 #: main.cpp:90
 #, kde-format
 msgctxt "YouTube Music is a music streaming service by Google"
@@ -473,8 +493,9 @@ msgid "Stream music from YouTube Music"
 msgstr "Strömma musik från YouTube musik"
 
 #: main.cpp:92
-#, kde-format
-msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
+#, fuzzy, kde-format
+#| msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
+msgid "© 2021–2024 Jonah Brüchert, 2021–2024 KDE Community"
 msgstr "© 2021-2024 Jonah Brüchert, 2021-2024 KDE-gemenskapen"
 
 #: main.cpp:93
@@ -529,6 +550,9 @@ msgstr "Namnlös"
 #, kde-format
 msgid "No album"
 msgstr "Inget album"
+
+#~ msgid "Remove Track"
+#~ msgstr "Ta bort spår"
 
 #~ msgid "YouTube Music Player"
 #~ msgstr "YouTube musikspelare"

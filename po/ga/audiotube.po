@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:51+0000\n"
+"POT-Creation-Date: 2026-02-13 00:42+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: Irish Gaelic <kde-i18n-doc@kde.org>\n"
@@ -69,6 +69,7 @@ msgstr ""
 
 #: contents/ui/AlbumPage.qml:109
 #, kde-format
+msgctxt "%1 is the artist(s) featured in the album"
 msgid "Album • %1"
 msgstr ""
 
@@ -89,11 +90,12 @@ msgstr ""
 msgid "Artist"
 msgstr ""
 
-#: contents/ui/ArtistPage.qml:127 contents/ui/SearchPage.qml:74
+#: contents/ui/ArtistPage.qml:127
 #, kde-format
+msgctxt "%1 is a video title"
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
-"\"%1\"?"
+"“%1”?"
 msgstr ""
 
 #: contents/ui/ArtistPage.qml:146 contents/ui/SearchPage.qml:28
@@ -268,12 +270,12 @@ msgstr ""
 msgid "No media playing"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:538
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:128
 #, kde-format
 msgid "Remove from Favorites"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:538
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:128
 #, kde-format
 msgid "Add to Favorites"
 msgstr ""
@@ -295,6 +297,7 @@ msgstr ""
 
 #: contents/ui/MaximizedPlayerPage.qml:709
 #, kde-format
+msgctxt "%1 is the audio volume in percent"
 msgid "%1%"
 msgstr ""
 
@@ -332,7 +335,7 @@ msgstr ""
 #: contents/ui/MaximizedPlayerPage.qml:1069
 #: contents/ui/MaximizedPlayerPage.qml:1314
 #, kde-format
-msgid "Remove Track"
+msgid "Remove Song"
 msgstr ""
 
 #: contents/ui/MaximizedPlayerPage.qml:1104
@@ -405,6 +408,14 @@ msgstr ""
 msgid "Unknown"
 msgstr ""
 
+#: contents/ui/SearchPage.qml:74
+#, kde-format
+msgctxt "%1 is a video title"
+msgid ""
+"Video playback is not supported yet. Do you want to play only the audio of "
+"\"%1\"?"
+msgstr ""
+
 #: contents/ui/SearchWithDropdown.qml:339
 #, kde-format
 msgid "No matching previous searches"
@@ -445,16 +456,6 @@ msgstr ""
 msgid "Add to queue"
 msgstr ""
 
-#: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, kde-format
-msgid "Remove Favorite"
-msgstr ""
-
-#: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, kde-format
-msgid "Add Favorite"
-msgstr ""
-
 #: contents/ui/SongMenu.qml:147 contents/ui/SongMenu.qml:245
 #, kde-format
 msgid "Remove from History"
@@ -465,6 +466,16 @@ msgstr ""
 msgid "Add to playlist"
 msgstr ""
 
+#: contents/ui/SongMenu.qml:231
+#, kde-format
+msgid "Remove Favorite"
+msgstr ""
+
+#: contents/ui/SongMenu.qml:231
+#, kde-format
+msgid "Add Favorite"
+msgstr ""
+
 #: main.cpp:90
 #, kde-format
 msgctxt "YouTube Music is a music streaming service by Google"
@@ -473,7 +484,7 @@ msgstr ""
 
 #: main.cpp:92
 #, kde-format
-msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
+msgid "© 2021–2024 Jonah Brüchert, 2021–2024 KDE Community"
 msgstr ""
 
 #: main.cpp:93

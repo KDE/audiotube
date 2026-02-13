@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:51+0000\n"
+"POT-Creation-Date: 2026-02-13 00:42+0000\n"
 "PO-Revision-Date: 2023-11-24 09:45+0900\n"
 "Last-Translator: maboroshin <pc.genkaku.in>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -69,7 +69,9 @@ msgid "Share"
 msgstr "共有"
 
 #: contents/ui/AlbumPage.qml:109
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Album • %1"
+msgctxt "%1 is the artist(s) featured in the album"
 msgid "Album • %1"
 msgstr "アルバム • %1"
 
@@ -90,11 +92,15 @@ msgstr "ラジオ"
 msgid "Artist"
 msgstr "アーティスト"
 
-#: contents/ui/ArtistPage.qml:127 contents/ui/SearchPage.qml:74
-#, kde-format
+#: contents/ui/ArtistPage.qml:127
+#, fuzzy, kde-format
+#| msgid ""
+#| "Video playback is not supported yet. Do you want to play only the audio "
+#| "of \"%1\"?"
+msgctxt "%1 is a video title"
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
-"\"%1\"?"
+"“%1”?"
 msgstr "動画の再生はまだ未対応です。「%1」の音声のみを再生しますか？"
 
 #: contents/ui/ArtistPage.qml:146 contents/ui/SearchPage.qml:28
@@ -271,13 +277,13 @@ msgstr "最大化したプレーヤーを閉じる"
 msgid "No media playing"
 msgstr "再生中のメディアなし"
 
-#: contents/ui/MaximizedPlayerPage.qml:538
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:128
 #, fuzzy, kde-format
 #| msgid "Remove from Favourites"
 msgid "Remove from Favorites"
 msgstr "お気に入りから削除"
 
-#: contents/ui/MaximizedPlayerPage.qml:538
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:128
 #, fuzzy, kde-format
 #| msgid "Add to Favourites"
 msgid "Add to Favorites"
@@ -300,6 +306,7 @@ msgstr "音声をミュート"
 
 #: contents/ui/MaximizedPlayerPage.qml:709
 #, kde-format
+msgctxt "%1 is the audio volume in percent"
 msgid "%1%"
 msgstr ""
 
@@ -336,9 +343,10 @@ msgstr "再生キューを表示"
 
 #: contents/ui/MaximizedPlayerPage.qml:1069
 #: contents/ui/MaximizedPlayerPage.qml:1314
-#, kde-format
-msgid "Remove Track"
-msgstr "曲の除去"
+#, fuzzy, kde-format
+#| msgid "Remove Favourite"
+msgid "Remove Song"
+msgstr "お気に入りから除去"
 
 #: contents/ui/MaximizedPlayerPage.qml:1104
 #, kde-format
@@ -410,6 +418,17 @@ msgstr "検索上位"
 msgid "Unknown"
 msgstr "不明"
 
+#: contents/ui/SearchPage.qml:74
+#, fuzzy, kde-format
+#| msgid ""
+#| "Video playback is not supported yet. Do you want to play only the audio "
+#| "of \"%1\"?"
+msgctxt "%1 is a video title"
+msgid ""
+"Video playback is not supported yet. Do you want to play only the audio of "
+"\"%1\"?"
+msgstr "動画の再生はまだ未対応です。「%1」の音声のみを再生しますか？"
+
 #: contents/ui/SearchWithDropdown.qml:339
 #, kde-format
 msgid "No matching previous searches"
@@ -450,18 +469,6 @@ msgstr "次に再生"
 msgid "Add to queue"
 msgstr "再生キューに追加"
 
-#: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, fuzzy, kde-format
-#| msgid "Remove Favourite"
-msgid "Remove Favorite"
-msgstr "お気に入りから除去"
-
-#: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, fuzzy, kde-format
-#| msgid "Add Favourite"
-msgid "Add Favorite"
-msgstr "お気に入りに追加"
-
 #: contents/ui/SongMenu.qml:147 contents/ui/SongMenu.qml:245
 #, kde-format
 msgid "Remove from History"
@@ -472,6 +479,18 @@ msgstr "履歴から除去"
 msgid "Add to playlist"
 msgstr "再生リストに追加"
 
+#: contents/ui/SongMenu.qml:231
+#, fuzzy, kde-format
+#| msgid "Remove Favourite"
+msgid "Remove Favorite"
+msgstr "お気に入りから除去"
+
+#: contents/ui/SongMenu.qml:231
+#, fuzzy, kde-format
+#| msgid "Add Favourite"
+msgid "Add Favorite"
+msgstr "お気に入りに追加"
+
 #: main.cpp:90
 #, kde-format
 msgctxt "YouTube Music is a music streaming service by Google"
@@ -480,7 +499,7 @@ msgstr "YouTube Music から音楽を配信"
 
 #: main.cpp:92
 #, kde-format
-msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
+msgid "© 2021–2024 Jonah Brüchert, 2021–2024 KDE Community"
 msgstr ""
 
 #: main.cpp:93
@@ -535,3 +554,6 @@ msgstr "タイトルなし"
 #, kde-format
 msgid "No album"
 msgstr "アルバムなし"
+
+#~ msgid "Remove Track"
+#~ msgstr "曲の除去"

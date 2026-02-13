@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:51+0000\n"
+"POT-Creation-Date: 2026-02-13 00:42+0000\n"
 "PO-Revision-Date: 2025-12-20 21:02+0200\n"
 "Last-Translator: Automatically generated\n"
 "Language-Team: none\n"
@@ -71,7 +71,9 @@ msgid "Share"
 msgstr "Bendrinti"
 
 #: contents/ui/AlbumPage.qml:109
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Album • %1"
+msgctxt "%1 is the artist(s) featured in the album"
 msgid "Album • %1"
 msgstr "Albumas • %1"
 
@@ -92,11 +94,15 @@ msgstr "Radijas"
 msgid "Artist"
 msgstr "Atlikėjas"
 
-#: contents/ui/ArtistPage.qml:127 contents/ui/SearchPage.qml:74
-#, kde-format
+#: contents/ui/ArtistPage.qml:127
+#, fuzzy, kde-format
+#| msgid ""
+#| "Video playback is not supported yet. Do you want to play only the audio "
+#| "of \"%1\"?"
+msgctxt "%1 is a video title"
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
-"\"%1\"?"
+"“%1”?"
 msgstr ""
 "Vaizdo įrašo atkūrimas kol kas nepalaikomas. Ar norite atkurti tik „%1“ "
 "garso įrašą?"
@@ -273,12 +279,12 @@ msgstr "Užverti išskleistą grotuvą"
 msgid "No media playing"
 msgstr "Neatkuriama jokia medija"
 
-#: contents/ui/MaximizedPlayerPage.qml:538
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:128
 #, kde-format
 msgid "Remove from Favorites"
 msgstr "Šalinti iš mėgstamų"
 
-#: contents/ui/MaximizedPlayerPage.qml:538
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:128
 #, kde-format
 msgid "Add to Favorites"
 msgstr "Pridėti į mėgstamas"
@@ -299,7 +305,9 @@ msgid "Mute Audio"
 msgstr "Nutildyti garso įrašą"
 
 #: contents/ui/MaximizedPlayerPage.qml:709
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "%1%"
+msgctxt "%1 is the audio volume in percent"
 msgid "%1%"
 msgstr "%1%"
 
@@ -336,9 +344,10 @@ msgstr "Rodyti eilę"
 
 #: contents/ui/MaximizedPlayerPage.qml:1069
 #: contents/ui/MaximizedPlayerPage.qml:1314
-#, kde-format
-msgid "Remove Track"
-msgstr "Šalinti takelį"
+#, fuzzy, kde-format
+#| msgid "Remove Favorite"
+msgid "Remove Song"
+msgstr "Šalinti mėgstamą"
 
 #: contents/ui/MaximizedPlayerPage.qml:1104
 #, kde-format
@@ -410,6 +419,19 @@ msgstr "Populiariausi rezultatai"
 msgid "Unknown"
 msgstr "Nežinoma"
 
+#: contents/ui/SearchPage.qml:74
+#, fuzzy, kde-format
+#| msgid ""
+#| "Video playback is not supported yet. Do you want to play only the audio "
+#| "of \"%1\"?"
+msgctxt "%1 is a video title"
+msgid ""
+"Video playback is not supported yet. Do you want to play only the audio of "
+"\"%1\"?"
+msgstr ""
+"Vaizdo įrašo atkūrimas kol kas nepalaikomas. Ar norite atkurti tik „%1“ "
+"garso įrašą?"
+
 #: contents/ui/SearchWithDropdown.qml:339
 #, kde-format
 msgid "No matching previous searches"
@@ -450,16 +472,6 @@ msgstr "Atkurti kitą"
 msgid "Add to queue"
 msgstr "Pridėti į eilę"
 
-#: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, kde-format
-msgid "Remove Favorite"
-msgstr "Šalinti mėgstamą"
-
-#: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, kde-format
-msgid "Add Favorite"
-msgstr "Pridėti mėgstamą"
-
 #: contents/ui/SongMenu.qml:147 contents/ui/SongMenu.qml:245
 #, kde-format
 msgid "Remove from History"
@@ -470,6 +482,16 @@ msgstr "Šalinti iš istorijos"
 msgid "Add to playlist"
 msgstr "Pridėti į grojaraštį"
 
+#: contents/ui/SongMenu.qml:231
+#, kde-format
+msgid "Remove Favorite"
+msgstr "Šalinti mėgstamą"
+
+#: contents/ui/SongMenu.qml:231
+#, kde-format
+msgid "Add Favorite"
+msgstr "Pridėti mėgstamą"
+
 #: main.cpp:90
 #, kde-format
 msgctxt "YouTube Music is a music streaming service by Google"
@@ -477,8 +499,9 @@ msgid "Stream music from YouTube Music"
 msgstr "Transliuoti muziką iš „YouTube Music“"
 
 #: main.cpp:92
-#, kde-format
-msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
+#, fuzzy, kde-format
+#| msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
+msgid "© 2021–2024 Jonah Brüchert, 2021–2024 KDE Community"
 msgstr "© 2021–2024 Jonah Brüchert, 2021–2024 KDE bendruomenė"
 
 #: main.cpp:93
@@ -533,3 +556,6 @@ msgstr "Nėra pavadinimo"
 #, kde-format
 msgid "No album"
 msgstr "Nėra albumo"
+
+#~ msgid "Remove Track"
+#~ msgstr "Šalinti takelį"

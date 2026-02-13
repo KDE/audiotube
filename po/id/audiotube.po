@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:51+0000\n"
+"POT-Creation-Date: 2026-02-13 00:42+0000\n"
 "PO-Revision-Date: 2023-06-16 19:34+0700\n"
 "Last-Translator: Linerly <linerly@protonmail.com>\n"
 "Language-Team: Indonesian <kde-i18n-doc@kde.org>\n"
@@ -69,7 +69,9 @@ msgid "Share"
 msgstr "Bagikan"
 
 #: contents/ui/AlbumPage.qml:109
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Album • %1"
+msgctxt "%1 is the artist(s) featured in the album"
 msgid "Album • %1"
 msgstr "Album • %1"
 
@@ -90,11 +92,15 @@ msgstr "Radio"
 msgid "Artist"
 msgstr "Artis"
 
-#: contents/ui/ArtistPage.qml:127 contents/ui/SearchPage.qml:74
-#, kde-format
+#: contents/ui/ArtistPage.qml:127
+#, fuzzy, kde-format
+#| msgid ""
+#| "Video playback is not supported yet. Do you want to play only the audio "
+#| "of \"%1\"?"
+msgctxt "%1 is a video title"
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
-"\"%1\"?"
+"“%1”?"
 msgstr ""
 "Pemutaran video belum didukung. Apakah Anda ingin memutar audionya dari "
 "\"%1\" saja?"
@@ -277,13 +283,13 @@ msgstr "Tutup Pemutar Termaksimalkan"
 msgid "No media playing"
 msgstr "Tidak ada media yang diputarkan"
 
-#: contents/ui/MaximizedPlayerPage.qml:538
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:128
 #, fuzzy, kde-format
 #| msgid "Remove Favourite"
 msgid "Remove from Favorites"
 msgstr "Hapus Favorit"
 
-#: contents/ui/MaximizedPlayerPage.qml:538
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:128
 #, fuzzy, kde-format
 #| msgid "Add Favourite"
 msgid "Add to Favorites"
@@ -306,7 +312,9 @@ msgid "Mute Audio"
 msgstr "Bisukan Audio"
 
 #: contents/ui/MaximizedPlayerPage.qml:709
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "%1%"
+msgctxt "%1 is the audio volume in percent"
 msgid "%1%"
 msgstr "%1%"
 
@@ -348,9 +356,10 @@ msgstr "Antrean"
 
 #: contents/ui/MaximizedPlayerPage.qml:1069
 #: contents/ui/MaximizedPlayerPage.qml:1314
-#, kde-format
-msgid "Remove Track"
-msgstr "Hapus Trek"
+#, fuzzy, kde-format
+#| msgid "Remove Favourite"
+msgid "Remove Song"
+msgstr "Hapus Favorit"
 
 #: contents/ui/MaximizedPlayerPage.qml:1104
 #, fuzzy, kde-format
@@ -424,6 +433,19 @@ msgstr "Hasil Teratas"
 msgid "Unknown"
 msgstr "Tidak diketahui"
 
+#: contents/ui/SearchPage.qml:74
+#, fuzzy, kde-format
+#| msgid ""
+#| "Video playback is not supported yet. Do you want to play only the audio "
+#| "of \"%1\"?"
+msgctxt "%1 is a video title"
+msgid ""
+"Video playback is not supported yet. Do you want to play only the audio of "
+"\"%1\"?"
+msgstr ""
+"Pemutaran video belum didukung. Apakah Anda ingin memutar audionya dari "
+"\"%1\" saja?"
+
 #: contents/ui/SearchWithDropdown.qml:339
 #, kde-format
 msgid "No matching previous searches"
@@ -464,18 +486,6 @@ msgstr "Putar Berikutnya"
 msgid "Add to queue"
 msgstr "Tambahkan ke antrean"
 
-#: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, fuzzy, kde-format
-#| msgid "Remove Favourite"
-msgid "Remove Favorite"
-msgstr "Hapus Favorit"
-
-#: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, fuzzy, kde-format
-#| msgid "Add Favourite"
-msgid "Add Favorite"
-msgstr "Tambahkan Favorit"
-
 #: contents/ui/SongMenu.qml:147 contents/ui/SongMenu.qml:245
 #, kde-format
 msgid "Remove from History"
@@ -485,6 +495,18 @@ msgstr "Hapus dari Riwayat"
 #, kde-format
 msgid "Add to playlist"
 msgstr "Tambahkan ke daftar putar"
+
+#: contents/ui/SongMenu.qml:231
+#, fuzzy, kde-format
+#| msgid "Remove Favourite"
+msgid "Remove Favorite"
+msgstr "Hapus Favorit"
+
+#: contents/ui/SongMenu.qml:231
+#, fuzzy, kde-format
+#| msgid "Add Favourite"
+msgid "Add Favorite"
+msgstr "Tambahkan Favorit"
 
 #: main.cpp:90
 #, fuzzy, kde-format
@@ -496,7 +518,7 @@ msgstr "API tidak resmi untuk YouTube Music"
 #: main.cpp:92
 #, fuzzy, kde-format
 #| msgid "© 2021-2023 Jonah Brüchert, 2021-2023 KDE Community"
-msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
+msgid "© 2021–2024 Jonah Brüchert, 2021–2024 KDE Community"
 msgstr "© 2021-2023 Jonah Brüchert, 2021-2023 Komunitas KDE"
 
 #: main.cpp:93
@@ -553,6 +575,9 @@ msgstr "Tidak ada judul"
 #, kde-format
 msgid "No album"
 msgstr "Tidak ada album"
+
+#~ msgid "Remove Track"
+#~ msgstr "Hapus Trek"
 
 #~ msgid "YouTube Music Player"
 #~ msgstr "Pemutar YouTube Music"

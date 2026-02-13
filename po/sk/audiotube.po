@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:51+0000\n"
+"POT-Creation-Date: 2026-02-13 00:42+0000\n"
 "PO-Revision-Date: 2022-04-07 18:01+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -66,6 +66,7 @@ msgstr ""
 
 #: contents/ui/AlbumPage.qml:109
 #, kde-format
+msgctxt "%1 is the artist(s) featured in the album"
 msgid "Album • %1"
 msgstr ""
 
@@ -87,11 +88,12 @@ msgstr "Rádio"
 msgid "Artist"
 msgstr "Interpreti"
 
-#: contents/ui/ArtistPage.qml:127 contents/ui/SearchPage.qml:74
+#: contents/ui/ArtistPage.qml:127
 #, kde-format
+msgctxt "%1 is a video title"
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
-"\"%1\"?"
+"“%1”?"
 msgstr ""
 
 #: contents/ui/ArtistPage.qml:146 contents/ui/SearchPage.qml:28
@@ -280,13 +282,13 @@ msgstr ""
 msgid "No media playing"
 msgstr "Neprehráva sa žiadne médium"
 
-#: contents/ui/MaximizedPlayerPage.qml:538
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:128
 #, fuzzy, kde-format
 #| msgid "Playlists"
 msgid "Remove from Favorites"
 msgstr "Zoznamy skladieb"
 
-#: contents/ui/MaximizedPlayerPage.qml:538
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:128
 #, fuzzy, kde-format
 #| msgid "Add to Playlist"
 msgid "Add to Favorites"
@@ -309,6 +311,7 @@ msgstr ""
 
 #: contents/ui/MaximizedPlayerPage.qml:709
 #, kde-format
+msgctxt "%1 is the audio volume in percent"
 msgid "%1%"
 msgstr ""
 
@@ -346,9 +349,10 @@ msgstr ""
 
 #: contents/ui/MaximizedPlayerPage.qml:1069
 #: contents/ui/MaximizedPlayerPage.qml:1314
-#, kde-format
-msgid "Remove Track"
-msgstr ""
+#, fuzzy, kde-format
+#| msgid "Playlists"
+msgid "Remove Song"
+msgstr "Zoznamy skladieb"
 
 #: contents/ui/MaximizedPlayerPage.qml:1104
 #, fuzzy, kde-format
@@ -423,6 +427,14 @@ msgstr ""
 msgid "Unknown"
 msgstr "Neznáme"
 
+#: contents/ui/SearchPage.qml:74
+#, kde-format
+msgctxt "%1 is a video title"
+msgid ""
+"Video playback is not supported yet. Do you want to play only the audio of "
+"\"%1\"?"
+msgstr ""
+
 #: contents/ui/SearchWithDropdown.qml:339
 #, kde-format
 msgid "No matching previous searches"
@@ -464,18 +476,6 @@ msgstr "Prehrať"
 msgid "Add to queue"
 msgstr ""
 
-#: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, fuzzy, kde-format
-#| msgid "Playlists"
-msgid "Remove Favorite"
-msgstr "Zoznamy skladieb"
-
-#: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, fuzzy, kde-format
-#| msgid "Add to Playlist"
-msgid "Add Favorite"
-msgstr "Pridať do zoznamu skladieb"
-
 #: contents/ui/SongMenu.qml:147 contents/ui/SongMenu.qml:245
 #, kde-format
 msgid "Remove from History"
@@ -487,6 +487,18 @@ msgstr ""
 msgid "Add to playlist"
 msgstr "Pridať do zoznamu skladieb"
 
+#: contents/ui/SongMenu.qml:231
+#, fuzzy, kde-format
+#| msgid "Playlists"
+msgid "Remove Favorite"
+msgstr "Zoznamy skladieb"
+
+#: contents/ui/SongMenu.qml:231
+#, fuzzy, kde-format
+#| msgid "Add to Playlist"
+msgid "Add Favorite"
+msgstr "Pridať do zoznamu skladieb"
+
 #: main.cpp:90
 #, kde-format
 msgctxt "YouTube Music is a music streaming service by Google"
@@ -495,7 +507,7 @@ msgstr ""
 
 #: main.cpp:92
 #, kde-format
-msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
+msgid "© 2021–2024 Jonah Brüchert, 2021–2024 KDE Community"
 msgstr ""
 
 #: main.cpp:93

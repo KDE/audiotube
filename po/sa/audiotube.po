@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:51+0000\n"
+"POT-Creation-Date: 2026-02-13 00:42+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -71,7 +71,9 @@ msgid "Share"
 msgstr "संविभागः"
 
 #: contents/ui/AlbumPage.qml:109
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Album • %1"
+msgctxt "%1 is the artist(s) featured in the album"
 msgid "Album • %1"
 msgstr "एल्बम • %1"
 
@@ -92,11 +94,15 @@ msgstr "रेडियो"
 msgid "Artist"
 msgstr "कलाकार"
 
-#: contents/ui/ArtistPage.qml:127 contents/ui/SearchPage.qml:74
-#, kde-format
+#: contents/ui/ArtistPage.qml:127
+#, fuzzy, kde-format
+#| msgid ""
+#| "Video playback is not supported yet. Do you want to play only the audio "
+#| "of \"%1\"?"
+msgctxt "%1 is a video title"
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
-"\"%1\"?"
+"“%1”?"
 msgstr ""
 "अद्यापि विडियो प्लेबैक् समर्थितं नास्ति। किं भवान् केवलं \"%1\" इत्यस्य श्रव्यं वादयितुम् इच्छति?"
 
@@ -274,13 +280,13 @@ msgstr "अधिकतमं खिलाडी बन्दं कुर्व
 msgid "No media playing"
 msgstr "न मीडिया वाद्यते"
 
-#: contents/ui/MaximizedPlayerPage.qml:538
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:128
 #, fuzzy, kde-format
 #| msgid "Remove from Favourites"
 msgid "Remove from Favorites"
 msgstr "प्रियतः निष्कासयन्तु"
 
-#: contents/ui/MaximizedPlayerPage.qml:538
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:128
 #, fuzzy, kde-format
 #| msgid "Add to Favourites"
 msgid "Add to Favorites"
@@ -302,7 +308,9 @@ msgid "Mute Audio"
 msgstr "म्यूट ऑडियो"
 
 #: contents/ui/MaximizedPlayerPage.qml:709
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "%1%"
+msgctxt "%1 is the audio volume in percent"
 msgid "%1%"
 msgstr "%1% "
 
@@ -339,9 +347,10 @@ msgstr "कतारं दर्शयतु"
 
 #: contents/ui/MaximizedPlayerPage.qml:1069
 #: contents/ui/MaximizedPlayerPage.qml:1314
-#, kde-format
-msgid "Remove Track"
-msgstr "Track इत्येतत् निष्कासयन्तु"
+#, fuzzy, kde-format
+#| msgid "Remove Favourite"
+msgid "Remove Song"
+msgstr "प्रियं निष्कासयन्तु"
 
 #: contents/ui/MaximizedPlayerPage.qml:1104
 #, kde-format
@@ -413,6 +422,18 @@ msgstr "शीर्ष परिणाम"
 msgid "Unknown"
 msgstr "अज्ञात"
 
+#: contents/ui/SearchPage.qml:74
+#, fuzzy, kde-format
+#| msgid ""
+#| "Video playback is not supported yet. Do you want to play only the audio "
+#| "of \"%1\"?"
+msgctxt "%1 is a video title"
+msgid ""
+"Video playback is not supported yet. Do you want to play only the audio of "
+"\"%1\"?"
+msgstr ""
+"अद्यापि विडियो प्लेबैक् समर्थितं नास्ति। किं भवान् केवलं \"%1\" इत्यस्य श्रव्यं वादयितुम् इच्छति?"
+
 #: contents/ui/SearchWithDropdown.qml:339
 #, kde-format
 msgid "No matching previous searches"
@@ -453,18 +474,6 @@ msgstr "अग्रिमम् क्रीडतु"
 msgid "Add to queue"
 msgstr "पङ्क्तौ योजयतु"
 
-#: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, fuzzy, kde-format
-#| msgid "Remove Favourite"
-msgid "Remove Favorite"
-msgstr "प्रियं निष्कासयन्तु"
-
-#: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, fuzzy, kde-format
-#| msgid "Add Favourite"
-msgid "Add Favorite"
-msgstr "प्रियं योजयतु"
-
 #: contents/ui/SongMenu.qml:147 contents/ui/SongMenu.qml:245
 #, kde-format
 msgid "Remove from History"
@@ -475,6 +484,18 @@ msgstr "इतिहासात् निष्कासयन्तु"
 msgid "Add to playlist"
 msgstr "प्लेलिस्ट् मध्ये योजयन्तु"
 
+#: contents/ui/SongMenu.qml:231
+#, fuzzy, kde-format
+#| msgid "Remove Favourite"
+msgid "Remove Favorite"
+msgstr "प्रियं निष्कासयन्तु"
+
+#: contents/ui/SongMenu.qml:231
+#, fuzzy, kde-format
+#| msgid "Add Favourite"
+msgid "Add Favorite"
+msgstr "प्रियं योजयतु"
+
 #: main.cpp:90
 #, kde-format
 msgctxt "YouTube Music is a music streaming service by Google"
@@ -482,8 +503,9 @@ msgid "Stream music from YouTube Music"
 msgstr "YouTube Music इत्यस्मात् संगीतं प्रवाहयन्तु"
 
 #: main.cpp:92
-#, kde-format
-msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
+#, fuzzy, kde-format
+#| msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
+msgid "© 2021–2024 Jonah Brüchert, 2021–2024 KDE Community"
 msgstr "© 2021-2024 जोनाह ब्रुचेर्ट, 2021-2024 केडीई समुदाय"
 
 #: main.cpp:93
@@ -538,3 +560,6 @@ msgstr "न उपाधिः"
 #, kde-format
 msgid "No album"
 msgstr "एल्बम् नास्ति"
+
+#~ msgid "Remove Track"
+#~ msgstr "Track इत्येतत् निष्कासयन्तु"

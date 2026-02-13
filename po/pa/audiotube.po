@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:51+0000\n"
+"POT-Creation-Date: 2026-02-13 00:42+0000\n"
 "PO-Revision-Date: 2022-01-01 09:11-0800\n"
 "Last-Translator: A S Alam <aalam@satluj.org>\n"
 "Language-Team: Punjabi <punjabi-users@lists.sf.net>\n"
@@ -68,6 +68,7 @@ msgstr ""
 
 #: contents/ui/AlbumPage.qml:109
 #, kde-format
+msgctxt "%1 is the artist(s) featured in the album"
 msgid "Album • %1"
 msgstr ""
 
@@ -89,11 +90,15 @@ msgstr "ਰੇਡੀਓ"
 msgid "Artist"
 msgstr "ਕਲਾਕਾਰ"
 
-#: contents/ui/ArtistPage.qml:127 contents/ui/SearchPage.qml:74
-#, kde-format
+#: contents/ui/ArtistPage.qml:127
+#, fuzzy, kde-format
+#| msgid ""
+#| "Video playback is not supported yet. Do you want to play only the audio "
+#| "of \"%1\"?"
+msgctxt "%1 is a video title"
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
-"\"%1\"?"
+"“%1”?"
 msgstr "ਵਿਡੀਓ ਪਲੇਅਬੈਕ ਹਾਲੇ ਸਹਾਇਕ ਨਹੀਂ ਹੈ। ਕੀ ਤੁਸੀਂ \"%1\" ਦਾ ਆਡੀਓ ਹੀ ਚਲਾਉਣਾ ਚਾਹੋਗੇ?"
 
 #: contents/ui/ArtistPage.qml:146 contents/ui/SearchPage.qml:28
@@ -282,13 +287,13 @@ msgstr ""
 msgid "No media playing"
 msgstr "ਕੋਈ ਮੀਡੀਆ ਨਹੀਂ ਚੱਲਦਾ"
 
-#: contents/ui/MaximizedPlayerPage.qml:538
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:128
 #, fuzzy, kde-format
 #| msgid "Playlists"
 msgid "Remove from Favorites"
 msgstr "ਪਲੇਅਲਿਸਟਾਂ"
 
-#: contents/ui/MaximizedPlayerPage.qml:538
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:128
 #, fuzzy, kde-format
 #| msgid "Add to Playlist"
 msgid "Add to Favorites"
@@ -311,6 +316,7 @@ msgstr ""
 
 #: contents/ui/MaximizedPlayerPage.qml:709
 #, kde-format
+msgctxt "%1 is the audio volume in percent"
 msgid "%1%"
 msgstr ""
 
@@ -348,9 +354,10 @@ msgstr ""
 
 #: contents/ui/MaximizedPlayerPage.qml:1069
 #: contents/ui/MaximizedPlayerPage.qml:1314
-#, kde-format
-msgid "Remove Track"
-msgstr "ਟਰੈਕ ਨੂੰ ਹਟਾਓ"
+#, fuzzy, kde-format
+#| msgid "Playlists"
+msgid "Remove Song"
+msgstr "ਪਲੇਅਲਿਸਟਾਂ"
 
 #: contents/ui/MaximizedPlayerPage.qml:1104
 #, fuzzy, kde-format
@@ -425,6 +432,17 @@ msgstr ""
 msgid "Unknown"
 msgstr "ਅਣਪਛਾਤਾ"
 
+#: contents/ui/SearchPage.qml:74
+#, fuzzy, kde-format
+#| msgid ""
+#| "Video playback is not supported yet. Do you want to play only the audio "
+#| "of \"%1\"?"
+msgctxt "%1 is a video title"
+msgid ""
+"Video playback is not supported yet. Do you want to play only the audio of "
+"\"%1\"?"
+msgstr "ਵਿਡੀਓ ਪਲੇਅਬੈਕ ਹਾਲੇ ਸਹਾਇਕ ਨਹੀਂ ਹੈ। ਕੀ ਤੁਸੀਂ \"%1\" ਦਾ ਆਡੀਓ ਹੀ ਚਲਾਉਣਾ ਚਾਹੋਗੇ?"
+
 #: contents/ui/SearchWithDropdown.qml:339
 #, kde-format
 msgid "No matching previous searches"
@@ -465,18 +483,6 @@ msgstr "ਅਗਲਾ ਚਲਾਓ"
 msgid "Add to queue"
 msgstr ""
 
-#: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, fuzzy, kde-format
-#| msgid "Playlists"
-msgid "Remove Favorite"
-msgstr "ਪਲੇਅਲਿਸਟਾਂ"
-
-#: contents/ui/SongMenu.qml:128 contents/ui/SongMenu.qml:231
-#, fuzzy, kde-format
-#| msgid "Add to Playlist"
-msgid "Add Favorite"
-msgstr "ਪਲੇਅਲਿਸਟ ਵਿੱਚ ਜੋੜੋ"
-
 #: contents/ui/SongMenu.qml:147 contents/ui/SongMenu.qml:245
 #, kde-format
 msgid "Remove from History"
@@ -488,6 +494,18 @@ msgstr ""
 msgid "Add to playlist"
 msgstr "ਪਲੇਅਲਿਸਟ ਵਿੱਚ ਜੋੜੋ"
 
+#: contents/ui/SongMenu.qml:231
+#, fuzzy, kde-format
+#| msgid "Playlists"
+msgid "Remove Favorite"
+msgstr "ਪਲੇਅਲਿਸਟਾਂ"
+
+#: contents/ui/SongMenu.qml:231
+#, fuzzy, kde-format
+#| msgid "Add to Playlist"
+msgid "Add Favorite"
+msgstr "ਪਲੇਅਲਿਸਟ ਵਿੱਚ ਜੋੜੋ"
+
 #: main.cpp:90
 #, fuzzy, kde-format
 #| msgid "Find music on YouTube Music"
@@ -497,7 +515,7 @@ msgstr "ਯੂਟਿਊਬ ਸੰਗੀਤ ਉੱਤੇ ਸੰਗੀਤ ਲੱ�
 
 #: main.cpp:92
 #, kde-format
-msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
+msgid "© 2021–2024 Jonah Brüchert, 2021–2024 KDE Community"
 msgstr ""
 
 #: main.cpp:93
@@ -554,6 +572,9 @@ msgstr ""
 #, kde-format
 msgid "No album"
 msgstr ""
+
+#~ msgid "Remove Track"
+#~ msgstr "ਟਰੈਕ ਨੂੰ ਹਟਾਓ"
 
 #, fuzzy
 #~| msgid "Playlists"
