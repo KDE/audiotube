@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-13 00:42+0000\n"
+"POT-Creation-Date: 2026-02-14 00:42+0000\n"
 "PO-Revision-Date: 2024-04-13 18:52+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -27,44 +27,44 @@ msgstr ""
 "Uruchomiono na niesprawdzonej wersji ytmusicapi %1. Jeśli doświadczasz "
 "błędów, to zgłoś je swojej dystrybucji."
 
-#: contents/ui/AlbumPage.qml:69 contents/ui/LibraryPage.qml:38
-#: contents/ui/LibraryPage.qml:64 contents/ui/LibraryPage.qml:90
-#: contents/ui/LibraryPage.qml:234 contents/ui/LibraryPage.qml:260
-#: contents/ui/LibraryPage.qml:284 contents/ui/LocalPlaylistPage.qml:70
-#: contents/ui/LocalPlaylistPage.qml:91 contents/ui/PlaybackHistory.qml:65
-#: contents/ui/PlaybackHistory.qml:87 contents/ui/PlaylistPage.qml:64
-#: contents/ui/PlaylistPage.qml:85
+#: contents/ui/AlbumPage.qml:69 contents/ui/LibraryPage.qml:39
+#: contents/ui/LibraryPage.qml:65 contents/ui/LibraryPage.qml:91
+#: contents/ui/LibraryPage.qml:236 contents/ui/LibraryPage.qml:262
+#: contents/ui/LibraryPage.qml:286 contents/ui/LocalPlaylistPage.qml:71
+#: contents/ui/LocalPlaylistPage.qml:92 contents/ui/PlaybackHistory.qml:65
+#: contents/ui/PlaybackHistory.qml:92 contents/ui/PlaylistPage.qml:66
+#: contents/ui/PlaylistPage.qml:87
 #, kde-format
 msgid "Play"
 msgstr "Odtwórz"
 
-#: contents/ui/AlbumPage.qml:77 contents/ui/ArtistPage.qml:81
-#: contents/ui/LibraryPage.qml:45 contents/ui/LibraryPage.qml:70
-#: contents/ui/LibraryPage.qml:100 contents/ui/LibraryPage.qml:241
-#: contents/ui/LibraryPage.qml:266 contents/ui/LibraryPage.qml:293
-#: contents/ui/LocalPlaylistPage.qml:65 contents/ui/LocalPlaylistPage.qml:97
-#: contents/ui/PlaybackHistory.qml:53 contents/ui/PlaybackHistory.qml:100
-#: contents/ui/PlaylistPage.qml:57 contents/ui/PlaylistPage.qml:92
+#: contents/ui/AlbumPage.qml:77 contents/ui/ArtistPage.qml:82
+#: contents/ui/LibraryPage.qml:46 contents/ui/LibraryPage.qml:71
+#: contents/ui/LibraryPage.qml:101 contents/ui/LibraryPage.qml:243
+#: contents/ui/LibraryPage.qml:268 contents/ui/LibraryPage.qml:295
+#: contents/ui/LocalPlaylistPage.qml:66 contents/ui/LocalPlaylistPage.qml:98
+#: contents/ui/PlaybackHistory.qml:53 contents/ui/PlaybackHistory.qml:105
+#: contents/ui/PlaylistPage.qml:59 contents/ui/PlaylistPage.qml:94
 #, kde-format
 msgid "Shuffle"
 msgstr "Wymieszaj"
 
-#: contents/ui/AlbumPage.qml:86 contents/ui/LibraryPage.qml:75
-#: contents/ui/LibraryPage.qml:110 contents/ui/LibraryPage.qml:271
-#: contents/ui/LibraryPage.qml:301 contents/ui/LocalPlaylistPage.qml:102
-#: contents/ui/PlaybackHistory.qml:112 contents/ui/PlaylistPage.qml:100
+#: contents/ui/AlbumPage.qml:86 contents/ui/LibraryPage.qml:76
+#: contents/ui/LibraryPage.qml:111 contents/ui/LibraryPage.qml:273
+#: contents/ui/LibraryPage.qml:303 contents/ui/LocalPlaylistPage.qml:103
+#: contents/ui/PlaybackHistory.qml:117 contents/ui/PlaylistPage.qml:102
 #, kde-format
 msgid "Append to queue"
 msgstr "Dodaj do kolejki"
 
-#: contents/ui/AlbumPage.qml:92 contents/ui/ArtistPage.qml:89
-#: contents/ui/PlaylistPage.qml:110
+#: contents/ui/AlbumPage.qml:92 contents/ui/ArtistPage.qml:90
+#: contents/ui/PlaylistPage.qml:112
 #, kde-format
 msgid "Open in Browser"
 msgstr "Otwórz w przeglądarce"
 
-#: contents/ui/AlbumPage.qml:98 contents/ui/ArtistPage.qml:94
-#: contents/ui/PlaylistPage.qml:115
+#: contents/ui/AlbumPage.qml:98 contents/ui/ArtistPage.qml:95
+#: contents/ui/PlaylistPage.qml:117
 #, kde-format
 msgid "Share"
 msgstr "Udostępnij"
@@ -76,24 +76,24 @@ msgctxt "%1 is the artist(s) featured in the album"
 msgid "Album • %1"
 msgstr "Album • %1"
 
-#: contents/ui/AlbumPage.qml:163 contents/ui/ArtistPage.qml:199
-#: contents/ui/LocalPlaylistPage.qml:166 contents/ui/PlaybackHistory.qml:193
-#: contents/ui/PlaylistPage.qml:187 contents/ui/SearchPage.qml:148
+#: contents/ui/AlbumPage.qml:166 contents/ui/ArtistPage.qml:200
+#: contents/ui/LocalPlaylistPage.qml:167 contents/ui/PlaybackHistory.qml:198
+#: contents/ui/PlaylistPage.qml:189 contents/ui/SearchPage.qml:149
 #, kde-format
 msgid "More"
 msgstr "Więcej"
 
-#: contents/ui/ArtistPage.qml:75
+#: contents/ui/ArtistPage.qml:76
 #, kde-format
 msgid "Radio"
 msgstr "Radio"
 
-#: contents/ui/ArtistPage.qml:103
+#: contents/ui/ArtistPage.qml:104
 #, kde-format
 msgid "Artist"
 msgstr "Wykonawca"
 
-#: contents/ui/ArtistPage.qml:127
+#: contents/ui/ArtistPage.qml:128
 #, fuzzy, kde-format
 #| msgid ""
 #| "Video playback is not supported yet. Do you want to play only the audio "
@@ -106,22 +106,22 @@ msgstr ""
 "Odtwarzanie wideo nie jest jeszcze obsługiwane. Czy odtworzyć tylko dźwięk z "
 "„%1”?"
 
-#: contents/ui/ArtistPage.qml:146 contents/ui/SearchPage.qml:28
+#: contents/ui/ArtistPage.qml:147 contents/ui/SearchPage.qml:28
 #, kde-format
 msgid "Albums"
 msgstr "Albumy"
 
-#: contents/ui/ArtistPage.qml:148
+#: contents/ui/ArtistPage.qml:149
 #, kde-format
 msgid "Singles"
 msgstr "Single"
 
-#: contents/ui/ArtistPage.qml:150 contents/ui/SearchPage.qml:34
+#: contents/ui/ArtistPage.qml:151 contents/ui/SearchPage.qml:34
 #, kde-format
 msgid "Songs"
 msgstr "Piosenki"
 
-#: contents/ui/ArtistPage.qml:152 contents/ui/SearchPage.qml:36
+#: contents/ui/ArtistPage.qml:153 contents/ui/SearchPage.qml:36
 #, kde-format
 msgid "Videos"
 msgstr "Filmy"
@@ -181,7 +181,7 @@ msgstr "Nowa lista odtwarzania"
 msgid "Rename playlist"
 msgstr "Przemianuj listę odtwarzania"
 
-#: contents/ui/LibraryPage.qml:31 contents/ui/LibraryPage.qml:134
+#: contents/ui/LibraryPage.qml:32 contents/ui/LibraryPage.qml:135
 #: contents/ui/NavigationBar.qml:47 contents/ui/NavigationBar.qml:53
 #: contents/ui/Sidebar.qml:138 contents/ui/Sidebar.qml:143
 #, fuzzy, kde-format
@@ -189,72 +189,72 @@ msgstr "Przemianuj listę odtwarzania"
 msgid "Favorites"
 msgstr "Ulubione"
 
-#: contents/ui/LibraryPage.qml:129 contents/ui/LibraryPage.qml:321
-#: contents/ui/LibraryPage.qml:423
+#: contents/ui/LibraryPage.qml:130 contents/ui/LibraryPage.qml:323
+#: contents/ui/LibraryPage.qml:426
 #, kde-format
 msgid "Show All"
 msgstr "Pokaż wszystkie"
 
-#: contents/ui/LibraryPage.qml:159
+#: contents/ui/LibraryPage.qml:160
 #, fuzzy, kde-format
 #| msgid "No Favourites Yet"
 msgid "No Favorites Yet"
 msgstr "Nie ma jeszcze żadnych ulubionych"
 
-#: contents/ui/LibraryPage.qml:227
+#: contents/ui/LibraryPage.qml:229
 #, kde-format
 msgid "Most played"
 msgstr "Najczęściej odtwarzane"
 
-#: contents/ui/LibraryPage.qml:326 contents/ui/NavigationBar.qml:60
+#: contents/ui/LibraryPage.qml:328 contents/ui/NavigationBar.qml:60
 #: contents/ui/NavigationBar.qml:66 contents/ui/Sidebar.qml:159
 #: contents/ui/Sidebar.qml:164
 #, kde-format
 msgid "Played Songs"
 msgstr "Odtwarzane utwory"
 
-#: contents/ui/LibraryPage.qml:352
+#: contents/ui/LibraryPage.qml:354
 #, kde-format
 msgid "No Songs Played Yet"
 msgstr "Jeszcze nie odtworzono żadnego utworu"
 
-#: contents/ui/LibraryPage.qml:411 contents/ui/LocalPlaylistsPage.qml:18
+#: contents/ui/LibraryPage.qml:414 contents/ui/LocalPlaylistsPage.qml:18
 #: contents/ui/LocalPlaylistsPage.qml:82 contents/ui/NavigationBar.qml:74
 #: contents/ui/SearchPage.qml:32 contents/ui/Sidebar.qml:179
 #, kde-format
 msgid "Playlists"
 msgstr "Listy odtwarzania"
 
-#: contents/ui/LibraryPage.qml:450
+#: contents/ui/LibraryPage.qml:453
 #, kde-format
 msgid "No Playlists Yet"
 msgstr "Nie ma jeszcze żadnej listy odtwarzania"
 
-#: contents/ui/LibraryPage.qml:473 contents/ui/LibraryPage.qml:495
+#: contents/ui/LibraryPage.qml:476 contents/ui/LibraryPage.qml:498
 #: contents/ui/LocalPlaylistsPage.qml:36 contents/ui/LocalPlaylistsPage.qml:58
 #, kde-format
 msgid "Rename"
 msgstr "Przemianuj"
 
-#: contents/ui/LibraryPage.qml:482 contents/ui/LibraryPage.qml:503
+#: contents/ui/LibraryPage.qml:485 contents/ui/LibraryPage.qml:506
 #: contents/ui/LocalPlaylistsPage.qml:45 contents/ui/LocalPlaylistsPage.qml:66
 #, kde-format
 msgid "Delete"
 msgstr "Usuń"
 
-#: contents/ui/LocalPlaylistPage.qml:20
+#: contents/ui/LocalPlaylistPage.qml:22
 #, kde-format
 msgid "Remove from Playlist"
 msgstr "Usuń z listy odtwarzania"
 
-#: contents/ui/LocalPlaylistPage.qml:78
+#: contents/ui/LocalPlaylistPage.qml:79
 #, kde-format
 msgid "This playlist is still empty"
 msgstr "Lista odtwarzania nadal jest pusta"
 
 #: contents/ui/LocalPlaylistsPage.qml:113
 #: contents/ui/LocalPlaylistsPage.qml:136
-#: contents/ui/LocalPlaylistsPage.qml:154 contents/ui/PlaylistPage.qml:105
+#: contents/ui/LocalPlaylistsPage.qml:154 contents/ui/PlaylistPage.qml:107
 #, kde-format
 msgid "Import Playlist"
 msgstr "Zaimportuj listę odtwarzania"
@@ -280,13 +280,13 @@ msgstr "Zamknij zmaksymalizowany odtwarzacz"
 msgid "No media playing"
 msgstr "Nic nie jest odtwarzane"
 
-#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:128
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:103
 #, fuzzy, kde-format
 #| msgid "Remove from Favourites"
 msgid "Remove from Favorites"
 msgstr "Usuń z ulubionych"
 
-#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:128
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:103
 #, fuzzy, kde-format
 #| msgid "Add to Favourites"
 msgid "Add to Favorites"
@@ -324,8 +324,7 @@ msgstr "Ukryj słowa"
 msgid "Show Lyrics"
 msgstr "Pokaż słowa"
 
-#: contents/ui/MaximizedPlayerPage.qml:759 contents/ui/SongMenu.qml:193
-#: contents/ui/SongMenu.qml:279
+#: contents/ui/MaximizedPlayerPage.qml:759 contents/ui/SongMenu.qml:135
 #, kde-format
 msgid "Share Song"
 msgstr "Udostępnij utwór"
@@ -382,17 +381,17 @@ msgstr "Szukaj"
 msgid "Unknown list of songs"
 msgstr "Nieznana lista utworów"
 
-#: contents/ui/PlaybackHistory.qml:133
+#: contents/ui/PlaybackHistory.qml:138
 #, kde-format
 msgid "No songs here yet"
 msgstr "Jeszcze nie ma tutaj utworów"
 
-#: contents/ui/PlaylistPage.qml:74
+#: contents/ui/PlaylistPage.qml:76
 #, kde-format
 msgid "Playlist successfully imported"
 msgstr "Pomyślnie zaimportowano listy odtwarzania"
 
-#: contents/ui/PlaylistPage.qml:126
+#: contents/ui/PlaylistPage.qml:128
 #, kde-format
 msgid "Playlist"
 msgstr "Lista odtwarzania"
@@ -465,37 +464,25 @@ msgstr "O programie"
 msgid "Collapse Sidebar"
 msgstr "Zwiń pasek boczny"
 
-#: contents/ui/SongMenu.qml:106 contents/ui/SongMenu.qml:215
+#: contents/ui/SongMenu.qml:84
 #, kde-format
 msgid "Play Next"
 msgstr "Odtwórz następny"
 
-#: contents/ui/SongMenu.qml:116 contents/ui/SongMenu.qml:221
+#: contents/ui/SongMenu.qml:93
 #, kde-format
 msgid "Add to queue"
 msgstr "Dodaj do kolejki"
 
-#: contents/ui/SongMenu.qml:147 contents/ui/SongMenu.qml:245
+#: contents/ui/SongMenu.qml:116
 #, kde-format
 msgid "Remove from History"
 msgstr "Usuń z historii"
 
-#: contents/ui/SongMenu.qml:162 contents/ui/SongMenu.qml:254
+#: contents/ui/SongMenu.qml:126
 #, kde-format
 msgid "Add to playlist"
 msgstr "Dodaj do listy odtwarzania"
-
-#: contents/ui/SongMenu.qml:231
-#, fuzzy, kde-format
-#| msgid "Remove Favourite"
-msgid "Remove Favorite"
-msgstr "Usuń z ulubionych"
-
-#: contents/ui/SongMenu.qml:231
-#, fuzzy, kde-format
-#| msgid "Add Favourite"
-msgid "Add Favorite"
-msgstr "Dodaj do ulubionych"
 
 #: main.cpp:90
 #, kde-format
@@ -561,6 +548,16 @@ msgstr "Nienazwane"
 #, kde-format
 msgid "No album"
 msgstr "Nie ma żadnego albumu"
+
+#, fuzzy
+#~| msgid "Remove Favourite"
+#~ msgid "Remove Favorite"
+#~ msgstr "Usuń z ulubionych"
+
+#, fuzzy
+#~| msgid "Add Favourite"
+#~ msgid "Add Favorite"
+#~ msgstr "Dodaj do ulubionych"
 
 #~ msgid "Remove Track"
 #~ msgstr "Usuń utwór"
