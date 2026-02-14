@@ -69,7 +69,7 @@ msgstr "分享"
 #: contents/ui/AlbumPage.qml:109
 #, kde-format
 msgid "Album • %1"
-msgstr "专辑：%1"
+msgstr ""
 
 #: contents/ui/AlbumPage.qml:163 contents/ui/ArtistPage.qml:199
 #: contents/ui/LocalPlaylistPage.qml:166 contents/ui/PlaybackHistory.qml:193
@@ -93,7 +93,7 @@ msgstr "艺术家"
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
 "\"%1\"?"
-msgstr "视频播放尚未被支持。您想要只播放“%1”中的音频吗？"
+msgstr ""
 
 #: contents/ui/ArtistPage.qml:146 contents/ui/SearchPage.qml:28
 #, kde-format
@@ -295,7 +295,7 @@ msgstr "静音"
 #: contents/ui/MaximizedPlayerPage.qml:709
 #, kde-format
 msgid "%1%"
-msgstr "%1%"
+msgstr ""
 
 #: contents/ui/MaximizedPlayerPage.qml:739
 #, kde-format
