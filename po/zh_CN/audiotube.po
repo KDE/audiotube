@@ -527,9 +527,3 @@ msgstr ""
 #, kde-format
 msgid "No album"
 msgstr ""
-
-#~ msgid "Remove Favorite"
-#~ msgstr "移除收藏"
-
-#~ msgid "Add Favorite"
-#~ msgstr "添加收藏"
