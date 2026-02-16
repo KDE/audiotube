@@ -139,8 +139,26 @@ SPDX-License-Identifier: CC0-1.0
       <description>
         <ul>
           <li>Add library page which shows favorites and most played songs</li>
+          <li xml:lang="ca">Afegeix una pàgina de biblioteca que mostra les cançons preferides i les més reproduïdes</li>
+          <li xml:lang="ca-valencia">Afig una pàgina de biblioteca que mostra les cançons preferides i les més reproduïdes</li>
+          <li xml:lang="es">Se ha añadido una página de la biblioteca que muestra las canciones favoritas y las más reproducidas</li>
+          <li xml:lang="he">נוסף עמוד ספרייה שמציג את המועדפים ואת השירים שהתנגנו הכי הרבה</li>
+          <li xml:lang="pt-BR">Adicionada página à biblioteca que mostra as músicas favoritas e as mais tocadas</li>
+          <li xml:lang="ru">Добавлена страница библиотеки с избранными и наиболее прослушиваемыми композициями</li>
           <li>Improve layout of the search popup</li>
+          <li xml:lang="ca">Millora la disposició de la finestra emergent de cerca</li>
+          <li xml:lang="ca-valencia">Millora la disposició de la finestra emergent de busca</li>
+          <li xml:lang="es">Mejora de la disposición de la ventana emergente de búsqueda</li>
+          <li xml:lang="he">פריסת חלונית החיפוש הצצה השתפרה</li>
+          <li xml:lang="pt-BR">Melhoria no layout da janela pop-up de pesquisa</li>
+          <li xml:lang="ru">Улучшено расположение всплывающего окна поиска</li>
           <li>General performance improvements including startup</li>
+          <li xml:lang="ca">Millores generals de rendiment incloent-hi l'inici</li>
+          <li xml:lang="ca-valencia">Millores generals de rendiment incloent-hi l'inici</li>
+          <li xml:lang="es">Mejoras del rendimiento en general, incluido el inicio</li>
+          <li xml:lang="he">שיפורי ביצועים כלליים כולל העלייה</li>
+          <li xml:lang="pt-BR">Melhorias gerais de desempenho, incluindo na inicialização</li>
+          <li xml:lang="ru">Улучшена общая производительность, включая время запуска</li>
         </ul>
       </description>
     </release>
@@ -149,7 +167,19 @@ SPDX-License-Identifier: CC0-1.0
       <description>
         <ul>
           <li>Update the version of ytmusicapi</li>
+          <li xml:lang="ca">Actualitza la versió de «ytmusicapi»</li>
+          <li xml:lang="ca-valencia">Actualitza la versió de «ytmusicapi»</li>
+          <li xml:lang="es">Actualización de la versión de ytmusicapi</li>
+          <li xml:lang="he">הגרסה של ytmusicapi עודכנה</li>
+          <li xml:lang="pt-BR">Atualizada a versão do ytmusicapi</li>
+          <li xml:lang="ru">Обновлена версия ytmusicapi</li>
           <li>General code-refactoring and translation updates</li>
+          <li xml:lang="ca">Actualitzacions generals de reestructuració de codi i traduccions</li>
+          <li xml:lang="ca-valencia">Actualitzacions generals de reestructuració de codi i traduccions</li>
+          <li xml:lang="es">Refactorización general del código y actualización de las traducciones</li>
+          <li xml:lang="he">שכתוב קוד כללי ועדכוני תרגומים</li>
+          <li xml:lang="pt-BR">Atualizações gerais de refatoração do código e tradução</li>
+          <li xml:lang="ru">Общий рефакторинг кода и обновления переводов</li>
         </ul>
       </description>
     </release>
@@ -158,6 +188,12 @@ SPDX-License-Identifier: CC0-1.0
       <description>
         <ul>
           <li>Update the version of ytmusicapi</li>
+          <li xml:lang="ca">Actualitza la versió de «ytmusicapi»</li>
+          <li xml:lang="ca-valencia">Actualitza la versió de «ytmusicapi»</li>
+          <li xml:lang="es">Actualización de la versión de ytmusicapi</li>
+          <li xml:lang="he">הגרסה של ytmusicapi עודכנה</li>
+          <li xml:lang="pt-BR">Atualizada a versão do ytmusicapi</li>
+          <li xml:lang="ru">Обновлена версия ytmusicapi</li>
         </ul>
       </description>
     </release>
