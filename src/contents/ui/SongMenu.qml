@@ -23,7 +23,11 @@ Components.ConvergentContextMenu {
     readonly property QtObject favouriteWatcher: root.videoId !== '' ? Library.favouriteWatcher(root.videoId) : null
     property var parentItem
 
-    readonly property PlaylistDialog playlistDialog: PlaylistDialog {}
+    readonly property PlaylistDialog playlistDialog: PlaylistDialog {
+        videoId: root.videoId
+        songTitle: root.songTitle
+        artists: root.artistsDisplayString
+    }
 
     function openForSong(videoId: string , songTitle: string , artists: var, artistsDisplayString: string): void {
         root.videoId = videoId;
