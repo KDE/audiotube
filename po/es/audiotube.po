@@ -1,15 +1,15 @@
 # Spanish translations for audiotube.po package.
-# Copyright (C) 2021-2025 This file is copyright:
+# Copyright (C) 2021-2026 This file is copyright:
 # This file is distributed under the same license as the audiotube package.
 # Automatically generated, 2021.
 #
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Eloy Cuadra <ecuadra@eloihr.net>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025, 2026 Eloy Cuadra <ecuadra@eloihr.net>
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-14 00:42+0000\n"
-"PO-Revision-Date: 2025-10-07 04:33+0100\n"
+"PO-Revision-Date: 2026-02-17 01:38+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: asyncytmusic.cpp:65
 #, kde-format
@@ -71,8 +71,7 @@ msgid "Share"
 msgstr "Compartir"
 
 #: contents/ui/AlbumPage.qml:109
-#, fuzzy, kde-format
-#| msgid "Album • %1"
+#, kde-format
 msgctxt "%1 is the artist(s) featured in the album"
 msgid "Album • %1"
 msgstr "Álbum • %1"
@@ -95,10 +94,7 @@ msgid "Artist"
 msgstr "Artista"
 
 #: contents/ui/ArtistPage.qml:128
-#, fuzzy, kde-format
-#| msgid ""
-#| "Video playback is not supported yet. Do you want to play only the audio "
-#| "of \"%1\"?"
+#, kde-format
 msgctxt "%1 is a video title"
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
@@ -305,8 +301,7 @@ msgid "Mute Audio"
 msgstr "Silenciar el sonido"
 
 #: contents/ui/MaximizedPlayerPage.qml:709
-#, fuzzy, kde-format
-#| msgid "%1%"
+#, kde-format
 msgctxt "%1 is the audio volume in percent"
 msgid "%1%"
 msgstr "%1 %"
@@ -343,10 +338,9 @@ msgstr "Mostrar cola"
 
 #: contents/ui/MaximizedPlayerPage.qml:1069
 #: contents/ui/MaximizedPlayerPage.qml:1314
-#, fuzzy, kde-format
-#| msgid "Remove Favorite"
+#, kde-format
 msgid "Remove Song"
-msgstr "Eliminar favorita"
+msgstr "Eliminar canción"
 
 #: contents/ui/MaximizedPlayerPage.qml:1104
 #, kde-format
@@ -419,10 +413,7 @@ msgid "Unknown"
 msgstr "Desconocido"
 
 #: contents/ui/SearchPage.qml:74
-#, fuzzy, kde-format
-#| msgid ""
-#| "Video playback is not supported yet. Do you want to play only the audio "
-#| "of \"%1\"?"
+#, kde-format
 msgctxt "%1 is a video title"
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
@@ -488,10 +479,9 @@ msgid "Stream music from YouTube Music"
 msgstr "Transmisión de música de YouTube Music"
 
 #: main.cpp:92
-#, fuzzy, kde-format
-#| msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
+#, kde-format
 msgid "© 2021–2024 Jonah Brüchert, 2021–2024 KDE Community"
-msgstr "© 2021-2024 Jonah Brüchert, 2021-2024 La Comunidad KDE"
+msgstr "© 2021–2024 Jonah Brüchert, 2021–2024 La Comunidad KDE"
 
 #: main.cpp:93
 #, kde-format
@@ -545,12 +535,3 @@ msgstr "Sin título"
 #, kde-format
 msgid "No album"
 msgstr "Sin álbumes"
-
-#~ msgid "Remove Favorite"
-#~ msgstr "Eliminar favorita"
-
-#~ msgid "Add Favorite"
-#~ msgstr "Añadir favorita"
-
-#~ msgid "Remove Track"
-#~ msgstr "Eliminar pista"
