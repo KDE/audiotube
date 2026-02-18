@@ -3,20 +3,19 @@
 # This file is distributed under the same license as the audiotube package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-14 00:42+0000\n"
+"POT-Creation-Date: 2026-02-18 00:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: Irish Gaelic <kde-i18n-doc@kde.org>\n"
-"Language: ga\n"
+"Language-Team: LANGUAGE <kde-i18n-doc@kde.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=5; plural=n==1 ? 0 : n==2 ? 1 : n<7 ? 2 : n < 11 ? "
-"3 : 4\n"
 
 #: asyncytmusic.cpp:65
 #, kde-format
@@ -270,12 +269,12 @@ msgstr ""
 msgid "No media playing"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:103
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:107
 #, kde-format
 msgid "Remove from Favorites"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:103
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:107
 #, kde-format
 msgid "Add to Favorites"
 msgstr ""
@@ -311,7 +310,7 @@ msgstr ""
 msgid "Show Lyrics"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:759 contents/ui/SongMenu.qml:135
+#: contents/ui/MaximizedPlayerPage.qml:759 contents/ui/SongMenu.qml:139
 #, kde-format
 msgid "Share Song"
 msgstr ""
@@ -445,22 +444,22 @@ msgstr ""
 msgid "Collapse Sidebar"
 msgstr ""
 
-#: contents/ui/SongMenu.qml:84
+#: contents/ui/SongMenu.qml:88
 #, kde-format
 msgid "Play Next"
 msgstr ""
 
-#: contents/ui/SongMenu.qml:93
+#: contents/ui/SongMenu.qml:97
 #, kde-format
 msgid "Add to queue"
 msgstr ""
 
-#: contents/ui/SongMenu.qml:116
+#: contents/ui/SongMenu.qml:120
 #, kde-format
 msgid "Remove from History"
 msgstr ""
 
-#: contents/ui/SongMenu.qml:126
+#: contents/ui/SongMenu.qml:130
 #, kde-format
 msgid "Add to playlist"
 msgstr ""

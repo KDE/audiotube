@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-14 00:42+0000\n"
+"POT-Creation-Date: 2026-02-18 00:44+0000\n"
 "PO-Revision-Date: 2024-04-13 18:52+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -280,13 +280,13 @@ msgstr "Zamknij zmaksymalizowany odtwarzacz"
 msgid "No media playing"
 msgstr "Nic nie jest odtwarzane"
 
-#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:103
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:107
 #, fuzzy, kde-format
 #| msgid "Remove from Favourites"
 msgid "Remove from Favorites"
 msgstr "Usuń z ulubionych"
 
-#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:103
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:107
 #, fuzzy, kde-format
 #| msgid "Add to Favourites"
 msgid "Add to Favorites"
@@ -324,7 +324,7 @@ msgstr "Ukryj słowa"
 msgid "Show Lyrics"
 msgstr "Pokaż słowa"
 
-#: contents/ui/MaximizedPlayerPage.qml:759 contents/ui/SongMenu.qml:135
+#: contents/ui/MaximizedPlayerPage.qml:759 contents/ui/SongMenu.qml:139
 #, kde-format
 msgid "Share Song"
 msgstr "Udostępnij utwór"
@@ -464,22 +464,22 @@ msgstr "O programie"
 msgid "Collapse Sidebar"
 msgstr "Zwiń pasek boczny"
 
-#: contents/ui/SongMenu.qml:84
+#: contents/ui/SongMenu.qml:88
 #, kde-format
 msgid "Play Next"
 msgstr "Odtwórz następny"
 
-#: contents/ui/SongMenu.qml:93
+#: contents/ui/SongMenu.qml:97
 #, kde-format
 msgid "Add to queue"
 msgstr "Dodaj do kolejki"
 
-#: contents/ui/SongMenu.qml:116
+#: contents/ui/SongMenu.qml:120
 #, kde-format
 msgid "Remove from History"
 msgstr "Usuń z historii"
 
-#: contents/ui/SongMenu.qml:126
+#: contents/ui/SongMenu.qml:130
 #, kde-format
 msgid "Add to playlist"
 msgstr "Dodaj do listy odtwarzania"

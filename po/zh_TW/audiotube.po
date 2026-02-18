@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-14 00:42+0000\n"
+"POT-Creation-Date: 2026-02-18 00:44+0000\n"
 "PO-Revision-Date: 2025-11-20 21:04+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -277,12 +277,12 @@ msgstr "關閉最大化播放器"
 msgid "No media playing"
 msgstr "沒有播放任何媒體"
 
-#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:103
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:107
 #, kde-format
 msgid "Remove from Favorites"
 msgstr "從最愛中移除"
 
-#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:103
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:107
 #, kde-format
 msgid "Add to Favorites"
 msgstr "加入最愛"
@@ -319,7 +319,7 @@ msgstr "隱藏歌詞"
 msgid "Show Lyrics"
 msgstr "顯示歌詞"
 
-#: contents/ui/MaximizedPlayerPage.qml:759 contents/ui/SongMenu.qml:135
+#: contents/ui/MaximizedPlayerPage.qml:759 contents/ui/SongMenu.qml:139
 #, kde-format
 msgid "Share Song"
 msgstr "分享歌曲"
@@ -457,22 +457,22 @@ msgstr "關於"
 msgid "Collapse Sidebar"
 msgstr "折疊側邊欄"
 
-#: contents/ui/SongMenu.qml:84
+#: contents/ui/SongMenu.qml:88
 #, kde-format
 msgid "Play Next"
 msgstr "接著播放"
 
-#: contents/ui/SongMenu.qml:93
+#: contents/ui/SongMenu.qml:97
 #, kde-format
 msgid "Add to queue"
 msgstr "加入待播清單"
 
-#: contents/ui/SongMenu.qml:116
+#: contents/ui/SongMenu.qml:120
 #, kde-format
 msgid "Remove from History"
 msgstr "從履歷中移除"
 
-#: contents/ui/SongMenu.qml:126
+#: contents/ui/SongMenu.qml:130
 #, kde-format
 msgid "Add to playlist"
 msgstr "加入至播放清單"

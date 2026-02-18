@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-14 00:42+0000\n"
+"POT-Creation-Date: 2026-02-18 00:44+0000\n"
 "PO-Revision-Date: 2022-04-07 18:01+0200\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -282,13 +282,13 @@ msgstr ""
 msgid "No media playing"
 msgstr "Neprehráva sa žiadne médium"
 
-#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:103
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:107
 #, fuzzy, kde-format
 #| msgid "Playlists"
 msgid "Remove from Favorites"
 msgstr "Zoznamy skladieb"
 
-#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:103
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:107
 #, fuzzy, kde-format
 #| msgid "Add to Playlist"
 msgid "Add to Favorites"
@@ -325,7 +325,7 @@ msgstr ""
 msgid "Show Lyrics"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:759 contents/ui/SongMenu.qml:135
+#: contents/ui/MaximizedPlayerPage.qml:759 contents/ui/SongMenu.qml:139
 #, kde-format
 msgid "Share Song"
 msgstr ""
@@ -464,23 +464,23 @@ msgstr ""
 msgid "Collapse Sidebar"
 msgstr ""
 
-#: contents/ui/SongMenu.qml:84
+#: contents/ui/SongMenu.qml:88
 #, fuzzy, kde-format
 #| msgid "Play"
 msgid "Play Next"
 msgstr "Prehrať"
 
-#: contents/ui/SongMenu.qml:93
+#: contents/ui/SongMenu.qml:97
 #, kde-format
 msgid "Add to queue"
 msgstr ""
 
-#: contents/ui/SongMenu.qml:116
+#: contents/ui/SongMenu.qml:120
 #, kde-format
 msgid "Remove from History"
 msgstr ""
 
-#: contents/ui/SongMenu.qml:126
+#: contents/ui/SongMenu.qml:130
 #, fuzzy, kde-format
 #| msgid "Add to Playlist"
 msgid "Add to playlist"

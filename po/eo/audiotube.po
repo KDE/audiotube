@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-14 00:42+0000\n"
+"POT-Creation-Date: 2026-02-18 00:44+0000\n"
 "PO-Revision-Date: 2024-05-04 23:30+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -280,13 +280,13 @@ msgstr "Fermi Maksimumigitan Ludanton"
 msgid "No media playing"
 msgstr "Neniu aŭdvidaĵo ludanta"
 
-#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:103
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:107
 #, fuzzy, kde-format
 #| msgid "Remove from Favourites"
 msgid "Remove from Favorites"
 msgstr "Forigi el Favoritoj"
 
-#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:103
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:107
 #, fuzzy, kde-format
 #| msgid "Add to Favourites"
 msgid "Add to Favorites"
@@ -324,7 +324,7 @@ msgstr "Kaŝi Kantotekstojn"
 msgid "Show Lyrics"
 msgstr "Montri kantotekstojn"
 
-#: contents/ui/MaximizedPlayerPage.qml:759 contents/ui/SongMenu.qml:135
+#: contents/ui/MaximizedPlayerPage.qml:759 contents/ui/SongMenu.qml:139
 #, kde-format
 msgid "Share Song"
 msgstr "Kunhavigi Kanton"
@@ -464,22 +464,22 @@ msgstr "Pri"
 msgid "Collapse Sidebar"
 msgstr "Malvastigi Flankbreton"
 
-#: contents/ui/SongMenu.qml:84
+#: contents/ui/SongMenu.qml:88
 #, kde-format
 msgid "Play Next"
 msgstr "Ludi Poste"
 
-#: contents/ui/SongMenu.qml:93
+#: contents/ui/SongMenu.qml:97
 #, kde-format
 msgid "Add to queue"
 msgstr "Aldoni al vico"
 
-#: contents/ui/SongMenu.qml:116
+#: contents/ui/SongMenu.qml:120
 #, kde-format
 msgid "Remove from History"
 msgstr "Forigi el Historio"
 
-#: contents/ui/SongMenu.qml:126
+#: contents/ui/SongMenu.qml:130
 #, kde-format
 msgid "Add to playlist"
 msgstr "Aldoni al ludlisto"
