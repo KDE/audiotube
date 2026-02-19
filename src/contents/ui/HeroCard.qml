@@ -36,7 +36,7 @@ T.ItemDelegate {
     // Glass backdrop (matching AlbumCoverItem)
     background: Kirigami.ShadowedRectangle {
         anchors.fill: parent
-        radius: 12
+        radius: 10
 
         color: Qt.rgba(Kirigami.Theme.backgroundColor.r, Kirigami.Theme.backgroundColor.g, Kirigami.Theme.backgroundColor.b, 0.4)
         border.color: Qt.rgba(1, 1, 1, 0.15)
@@ -57,7 +57,7 @@ T.ItemDelegate {
                 maskSource: Rectangle {
                     width: bgContainer.width
                     height: bgContainer.height
-                    radius: 16
+                    radius: 10
                     visible: false
                 }
             }

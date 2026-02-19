@@ -18,7 +18,7 @@ T.ItemDelegate {
 
     property bool wide: false
     property bool tall: false
-    property int radius: Kirigami.Units.cornerRadius * 2
+    property int radius: 10
     
     // Song-specific properties for menu
     required property string videoId
