@@ -21,24 +21,22 @@ void ExploreModel::refresh() {
     // Fetch charts first
     auto future = YTMusicThread::instance()->fetchCharts();
     QCoro::connect(std::move(future), this, [this](std::vector<home::Shelf> charts) {
-         
-         // Then fetch moods
-         auto moodFuture = YTMusicThread::instance()->fetchMoodCategories();
-         auto chartsPtr = std::make_shared<std::vector<home::Shelf>>(std::move(charts));
-         QCoro::connect(std::move(moodFuture), this, [this, chartsPtr](std::vector<home::Shelf> moods) {
-             beginResetModel();
-             m_shelves = std::move(*chartsPtr);
-             
-             // Append moods
-             std::move(moods.begin(), moods.end(), std::back_inserter(m_shelves));
-             
-             m_shelfModels.clear();
-             for (const auto &shelf : m_shelves) {
+        // Then fetch moods
+        auto moodFuture = YTMusicThread::instance()->fetchMoodCategories();
+        QCoro::connect(std::move(moodFuture), this, [this, charts = std::move(charts)](std::vector<home::Shelf> moods) {
+            beginResetModel();
+            m_shelves = std::move(charts);
+
+            // Append moods
+            std::move(moods.begin(), moods.end(), std::back_inserter(m_shelves));
+
+            m_shelfModels.clear();
+            for (const auto &shelf : m_shelves) {
                 addShelf(shelf.contents);
-             }
-             endResetModel();
-             setLoading(false);
-         });
+            }
+            endResetModel();
+            setLoading(false);
+        });
     });
 }
 
