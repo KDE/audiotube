@@ -500,127 +500,107 @@ std::vector<search::SearchResultItem> YTMusic::search(
 
 std::vector<home::Shelf> YTMusic::get_home(int limit) const
 {
-    try {
-        const auto home = d->get_ytmusic().attr("get_home")(limit).cast<py::list>();
-        std::vector<home::Shelf> shelves;
+    const auto home = d->get_ytmusic().attr("get_home")(limit).cast<py::list>();
+    std::vector<home::Shelf> shelves;
 
-        for (const auto &shelf : home) {
-            if (shelf.is_none()) continue;
+    for (const auto &shelf : home) {
+        if (shelf.is_none())
+            continue;
 
-            home::Shelf s;
-            s.title = shelf["title"].cast<std::string>();
+        home::Shelf s;
+        s.title = shelf["title"].cast<std::string>();
 
-            const auto contents = shelf["contents"].cast<py::list>();
-            for (const auto &item : contents) {
-                if (item.is_none()) continue;
-                 try {
-                    if (const auto opt = extract_home_item(item); opt.has_value()) {
-                        s.contents.push_back(opt.value());
-                    }
-                } catch (const std::exception &e) {
-                    std::cerr << "Failed to parse home item because:" << e.what() << std::endl;
+        const auto contents = shelf["contents"].cast<py::list>();
+        for (const auto &item : contents) {
+            if (item.is_none())
+                continue;
+            try {
+                if (const auto opt = extract_home_item(item); opt.has_value()) {
+                    s.contents.push_back(opt.value());
                 }
-            }
-            if (!s.contents.empty()) {
-                shelves.push_back(std::move(s));
+            } catch (const std::exception &e) {
+                std::cerr << "Failed to parse home item because:" << e.what() << std::endl;
             }
         }
-        return shelves;
-    } catch (const py::error_already_set &e) {
-        std::cerr << "Python error in get_home: " << e.what() << std::endl;
-        return {};
+        if (!s.contents.empty()) {
+            shelves.push_back(std::move(s));
+        }
     }
+    return shelves;
 }
 
 std::vector<home::Shelf> YTMusic::get_charts(const std::string &country) const {
-    try {
-        const auto charts = d->get_ytmusic().attr("get_charts")(country).cast<py::dict>();
-        std::vector<home::Shelf> shelves;
+    const auto charts = d->get_ytmusic().attr("get_charts")(country).cast<py::dict>();
+    std::vector<home::Shelf> shelves;
 
-        if (charts.contains("videos")) {
-            home::Shelf s;
-            s.title = "Top Music Videos"; // Or generic "Charts"
-            const auto videos = charts["videos"].cast<py::list>();
-            if (!videos.empty()) {
-                // Check if items are actually playlists or videos. Inspect debug output said "playlistId", so likely playlists.
-                // But typically charts['videos']['items'] are songs/videos?
-                // Wait, my inspect script for 'videos' showed: {"title": "Trending 20...", "playlistId": "..."}
-                // So it IS a playlist.
-                for (const auto &item : videos) {
-                   s.contents.push_back(extract_chart_video(item));
-                }
-                shelves.push_back(std::move(s));
+    if (charts.contains("videos")) {
+        home::Shelf s;
+        s.title = "Top Music Videos"; // Or generic "Charts"
+        const auto videos = charts["videos"].cast<py::list>();
+        if (!videos.empty()) {
+            // Check if items are actually playlists or videos. Inspect debug output said "playlistId", so likely playlists.
+            // But typically charts['videos']['items'] are songs/videos?
+            // Wait, my inspect script for 'videos' showed: {"title": "Trending 20...", "playlistId": "..."}
+            // So it IS a playlist.
+            for (const auto &item : videos) {
+                s.contents.push_back(extract_chart_video(item));
             }
+            shelves.push_back(std::move(s));
         }
-
-        if (charts.contains("artists")) {
-             home::Shelf s;
-             s.title = "Top Artists";
-             const auto artists = charts["artists"].cast<py::list>();
-             for (const auto &item : artists) {
-                 s.contents.push_back(extract_chart_artist(item));
-             }
-             if (!s.contents.empty()) shelves.push_back(std::move(s));
-        }
-
-        if (charts.contains("trending")) {
-             // specific logic if needed, often similar to videos/songs
-             // My inspect script didn't show 'trending' key but 'countries', 'videos', 'genres', 'artists'
-        }
-
-        return shelves;
-
-    } catch (const py::error_already_set &e) {
-         std::cerr << "Python error in get_charts: " << e.what() << std::endl;
-         return {};
     }
+
+    if (charts.contains("artists")) {
+        home::Shelf s;
+        s.title = "Top Artists";
+        const auto artists = charts["artists"].cast<py::list>();
+        for (const auto &item : artists) {
+            s.contents.push_back(extract_chart_artist(item));
+        }
+        if (!s.contents.empty())
+            shelves.push_back(std::move(s));
+    }
+
+    if (charts.contains("trending")) {
+        // specific logic if needed, often similar to videos/songs
+        // My inspect script didn't show 'trending' key but 'countries', 'videos', 'genres', 'artists'
+    }
+
+    return shelves;
 }
 
 std::vector<home::Shelf> YTMusic::get_mood_categories() const {
-    try {
-        const auto categories = d->get_ytmusic().attr("get_mood_categories")().cast<py::dict>();
-        std::vector<home::Shelf> shelves;
+    const auto categories = d->get_ytmusic().attr("get_mood_categories")().cast<py::dict>();
+    std::vector<home::Shelf> shelves;
 
-        for (auto item : categories) {
-             std::string title = item.first.cast<std::string>();
-             py::list moods = item.second.cast<py::list>();
-             
-             home::Shelf s;
-             s.title = title;
-             if (moods.empty()) continue;
+    for (auto item : categories) {
+        std::string title = item.first.cast<std::string>();
+        py::list moods = item.second.cast<py::list>();
 
-             for (const auto &m : moods) {
-                 s.contents.push_back(extract_mood(m));
-             }
-             shelves.push_back(std::move(s));
+        home::Shelf s;
+        s.title = title;
+        if (moods.empty())
+            continue;
+
+        for (const auto &m : moods) {
+            s.contents.push_back(extract_mood(m));
         }
-        return shelves;
-
-    } catch (const py::error_already_set &e) {
-         std::cerr << "Python error in get_mood_categories: " << e.what() << std::endl;
-         return {};
+        shelves.push_back(std::move(s));
     }
+    return shelves;
 }
 
 std::vector<search::SearchResultItem> YTMusic::get_mood_playlists(const std::string &params) const {
-     try {
-        const auto playlists = d->get_ytmusic().attr("get_mood_playlists")(params).cast<py::list>();
-        std::vector<search::SearchResultItem> output;
+    const auto playlists = d->get_ytmusic().attr("get_mood_playlists")(params).cast<py::list>();
+    std::vector<search::SearchResultItem> output;
 
-        for (const auto &item : playlists) {
-            output.push_back(search::Playlist {
-                item["playlistId"].cast<std::string>(),
-                item["title"].cast<std::string>(),
-                optional_key<std::string>(item, "author"),
-                optional_key<std::string>(item, "itemCount").value_or(""),
-                extract_py_list<meta::Thumbnail>(item["thumbnails"])
-            });
-        }
-        return output;
-    } catch (const py::error_already_set &e) {
-         std::cerr << "Python error in get_mood_playlists: " << e.what() << std::endl;
-         return {};
+    for (const auto &item : playlists) {
+        output.push_back(search::Playlist{item["playlistId"].cast<std::string>(),
+                                          item["title"].cast<std::string>(),
+                                          optional_key<std::string>(item, "author"),
+                                          optional_key<std::string>(item, "itemCount").value_or(""),
+                                          extract_py_list<meta::Thumbnail>(item["thumbnails"])});
     }
+    return output;
 }
 
 artist::Artist YTMusic::get_artist(const std::string &channel_id) const
