@@ -23,12 +23,11 @@ Kirigami.ScrollablePage {
 
     Kirigami.Theme.colorSet: Kirigami.Theme.View
 
-    Kirigami.LoadingPlaceholder {
+    Controls.BusyIndicator {
         anchors.centerIn: parent
-        visible: repeater.count === 0
-        text: i18nc("@info:placeholder", "Loading…")
+        visible: exploreModel.loading
     }
-    
+
     ColumnLayout {
         spacing: Kirigami.Units.largeSpacing * 7
 

@@ -23,10 +23,9 @@ Kirigami.ScrollablePage {
         parentItem: root.Controls.ApplicationWindow.window
     }
 
-    Kirigami.LoadingPlaceholder {
+    Controls.BusyIndicator {
         anchors.centerIn: parent
-        visible: repeater.count === 0
-        text: i18nc("@info:placeholder", "Loading…")
+        visible: homeModel.loading
     }
 
     ColumnLayout {
