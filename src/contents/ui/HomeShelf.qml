@@ -26,7 +26,7 @@ ColumnLayout {
 
     Flickable {
         Layout.fillWidth: true
-        Layout.preferredHeight: 180
+        Layout.preferredHeight: Kirigami.Units.gridUnit * 10
         Layout.topMargin: Kirigami.Units.largeSpacing
         
         contentWidth: shelfRow.implicitWidth + Kirigami.Units.gridUnit
@@ -36,7 +36,7 @@ ColumnLayout {
         RowLayout {
             id: shelfRow
             x: 0
-            spacing: Kirigami.Units.gridUnit
+            spacing: Kirigami.Units.largeSpacing * 2
             
             Repeater {
                 model: root.contentModel
@@ -45,8 +45,8 @@ ColumnLayout {
                     wide: false
                     tall: false
                     
-                    Layout.preferredWidth: 180
-                    Layout.preferredHeight: 180
+                    Layout.preferredWidth: Kirigami.Units.gridUnit * 10
+                    Layout.preferredHeight: Kirigami.Units.gridUnit * 10
 
                     Layout.fillWidth: true 
                     Layout.fillHeight: true

@@ -56,9 +56,9 @@ ColumnLayout {
             
             rows: 2
             flow: GridLayout.TopToBottom
-            rowSpacing: Kirigami.Units.gridUnit
-            columnSpacing: Kirigami.Units.gridUnit
-        
+            rowSpacing: Kirigami.Units.largeSpacing * 2
+            columnSpacing: Kirigami.Units.largeSpacing * 2
+
             Repeater {
                 model: root.contentModel
                 delegate: DelegateChooser {
@@ -80,7 +80,7 @@ ColumnLayout {
                             Layout.fillHeight: true
                     
                             wide: (index % 6 === 1) || (index % 6 === 5)
-                            spacing: Kirigami.Units.gridUnit
+                            spacing: Kirigami.Units.largeSpacing * 2
                         
                             onClicked: root.contentModel.triggerItem(index)
                             Controls.ContextMenu.onRequested: if (isSong && videoId && title && artists) {

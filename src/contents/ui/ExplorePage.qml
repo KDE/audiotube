@@ -13,7 +13,10 @@ import QtQml
 Kirigami.ScrollablePage {
     id: root
 
-    readonly property SongMenu songMenu: SongMenu {}
+    SongMenu {
+        id: menu
+        parentItem: root.Controls.ApplicationWindow.window
+    }
 
     title: i18nc("@title:window", "Explore")
     objectName: "explorePage"
@@ -21,7 +24,7 @@ Kirigami.ScrollablePage {
     Kirigami.Theme.colorSet: Kirigami.Theme.View
     
     ColumnLayout {
-        spacing: Kirigami.Units.gridUnit * 3
+        spacing: Kirigami.Units.largeSpacing * 7
 
         Repeater {
             model: ExploreModel {
@@ -34,7 +37,7 @@ Kirigami.ScrollablePage {
                     })
                 }
                 onOpenArtist: (browseId, radioId, shuffleId) => {
-                    root.Kirigami.PageStack.push(Qt.createComponent('org.kde.audiotube', 'ArtistsPage'), {
+                    root.Kirigami.PageStack.push(Qt.createComponent('org.kde.audiotube', 'ArtistPage'), {
                         browseId: browseId
                     })
                 }
@@ -50,7 +53,7 @@ Kirigami.ScrollablePage {
             }
 
             delegate: HomeShelf {
-                songMenu: root.songMenu
+                songMenu: menu
             }
         }
     }

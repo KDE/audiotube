@@ -18,10 +18,13 @@ Kirigami.ScrollablePage {
     title: i18nc("@title:window", "Home")
     objectName: "homePage"
 
-    readonly property SongMenu songMenu: SongMenu {}
+    SongMenu {
+        id: menu
+        parentItem: root.Controls.ApplicationWindow.window
+    }
 
     ColumnLayout {
-        spacing: Kirigami.Units.gridUnit * 3
+        spacing: Kirigami.Units.largeSpacing * 7
 
         Repeater {
             model: HomeModel {
@@ -34,7 +37,7 @@ Kirigami.ScrollablePage {
                     })
                 }
                 onOpenArtist: (browseId, radioId, shuffleId) => {
-                    root.Kirigami.PageStack.push(Qt.createComponent('org.kde.audiotube', 'ArtistsPage'), {
+                    root.Kirigami.PageStack.push(Qt.createComponent('org.kde.audiotube', 'ArtistPage'), {
                         browseId: browseId
                     })
                 }
@@ -49,14 +52,14 @@ Kirigami.ScrollablePage {
                 DelegateChoice {
                     row: 0
                     HeroHomeShelf {
-                        songMenu: root.songMenu
+                        songMenu: menu
                         page: root
                     }
                 }
 
                 DelegateChoice {
                     HomeShelf {
-                        songMenu: root.songMenu
+                        songMenu: menu
                     }
                 }
             }

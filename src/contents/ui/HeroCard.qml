@@ -91,7 +91,7 @@ T.ItemDelegate {
     }
 
     contentItem: RowLayout {
-        spacing: Kirigami.Units.gridUnit
+        spacing: Kirigami.Units.largeSpacing * 2
 
         // Main Album Art (Sharp) - Vertically Centered
         Kirigami.ShadowedRectangle {
@@ -127,7 +127,7 @@ T.ItemDelegate {
             Kirigami.Heading {
                 text: i18n("Featured Pick")
                 font.capitalization: Font.AllUppercase
-                font.letterSpacing: 4
+                font.letterSpacing: Kirigami.Units.smallSpacing
                 color: Kirigami.Theme.highlightColor
                 font.weight: Font.Black
                 font.pointSize: Kirigami.Theme.defaultFont.pointSize * 1.4
