@@ -31,11 +31,13 @@ ColumnLayout {
         model: root.contentModel
         delegate: DelegateChooser {
             DelegateChoice {
+                id: choice
+
                 row: 0
                 HeroCard {
                     Layout.topMargin: Kirigami.Units.largeSpacing
-                    onPlayClicked: root.contentModel.triggerItem(index)
-                    onOpenClicked: root.contentModel.triggerItem(index)
+                    onPlayClicked: root.contentModel.triggerItem(choice.index)
+                    onOpenClicked: root.contentModel.triggerItem(choice.index)
                 }
             }
         }
