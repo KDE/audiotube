@@ -23,10 +23,18 @@ Kirigami.ScrollablePage {
         parentItem: root.Controls.ApplicationWindow.window
     }
 
+    Kirigami.LoadingPlaceholder {
+        anchors.centerIn: parent
+        visible: repeater.count === 0
+        text: i18nc("@info:placeholder", "Loading…")
+    }
+
     ColumnLayout {
         spacing: Kirigami.Units.largeSpacing * 7
 
         Repeater {
+            id: repeater
+
             model: HomeModel {
                 id: homeModel
                 onOpenSong: (videoId) => applicationWindow().play(videoId)

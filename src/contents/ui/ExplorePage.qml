@@ -22,11 +22,19 @@ Kirigami.ScrollablePage {
     objectName: "explorePage"
 
     Kirigami.Theme.colorSet: Kirigami.Theme.View
+
+    Kirigami.LoadingPlaceholder {
+        anchors.centerIn: parent
+        visible: repeater.count === 0
+        text: i18nc("@info:placeholder", "Loading…")
+    }
     
     ColumnLayout {
         spacing: Kirigami.Units.largeSpacing * 7
 
         Repeater {
+            id: repeater
+
             model: ExploreModel {
                 id: exploreModel
                 onOpenSong: (videoId) => applicationWindow().play(videoId)
