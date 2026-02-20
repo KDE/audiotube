@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-18 00:44+0000\n"
+"POT-Creation-Date: 2026-02-20 00:44+0000\n"
 "PO-Revision-Date: 2026-02-13 11:32+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -120,6 +120,11 @@ msgstr "Glasba"
 msgid "Videos"
 msgstr "Videposnetki"
 
+#: contents/ui/BentoCard.qml:158
+#, kde-format
+msgid "More options"
+msgstr ""
+
 #: contents/ui/ConfirmationMessage.qml:16
 #, kde-format
 msgid "OK"
@@ -175,9 +180,32 @@ msgstr "Novi seznam predvajanja"
 msgid "Rename playlist"
 msgstr "Preimenuj seznam predvajanja"
 
+#: contents/ui/ExplorePage.qml:21
+#, kde-format
+msgctxt "@title:window"
+msgid "Explore"
+msgstr ""
+
+#: contents/ui/HeroCard.qml:128
+#, kde-format
+msgid "Featured Pick"
+msgstr ""
+
+#: contents/ui/HeroCard.qml:167
+#, fuzzy, kde-format
+#| msgid "Play Next"
+msgid "Play Now"
+msgstr "Predvajaj naslednjo"
+
+#: contents/ui/HomePage.qml:18
+#, kde-format
+msgctxt "@title:window"
+msgid "Home"
+msgstr ""
+
 #: contents/ui/LibraryPage.qml:32 contents/ui/LibraryPage.qml:135
 #: contents/ui/NavigationBar.qml:47 contents/ui/NavigationBar.qml:53
-#: contents/ui/Sidebar.qml:138 contents/ui/Sidebar.qml:143
+#: contents/ui/Sidebar.qml:155 contents/ui/Sidebar.qml:160
 #, kde-format
 msgid "Favorites"
 msgstr "Priljubljene"
@@ -199,8 +227,8 @@ msgid "Most played"
 msgstr "Največkrat predvajane"
 
 #: contents/ui/LibraryPage.qml:328 contents/ui/NavigationBar.qml:60
-#: contents/ui/NavigationBar.qml:66 contents/ui/Sidebar.qml:159
-#: contents/ui/Sidebar.qml:164
+#: contents/ui/NavigationBar.qml:66 contents/ui/Sidebar.qml:192
+#: contents/ui/Sidebar.qml:197
 #, kde-format
 msgid "Played Songs"
 msgstr "Predvajane pesmi"
@@ -212,7 +240,7 @@ msgstr "Še ni nobene predvajane pesmi"
 
 #: contents/ui/LibraryPage.qml:414 contents/ui/LocalPlaylistsPage.qml:18
 #: contents/ui/LocalPlaylistsPage.qml:82 contents/ui/NavigationBar.qml:74
-#: contents/ui/SearchPage.qml:32 contents/ui/Sidebar.qml:179
+#: contents/ui/SearchPage.qml:32 contents/ui/Sidebar.qml:212
 #, kde-format
 msgid "Playlists"
 msgstr "Seznami predvajanja"
@@ -251,12 +279,12 @@ msgstr "Ta seznam predvajanja je še prazen"
 msgid "Import Playlist"
 msgstr "Uvozi seznam predvajanja"
 
-#: contents/ui/Main.qml:131 main.cpp:88
+#: contents/ui/Main.qml:160 main.cpp:88
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
 
-#: contents/ui/Main.qml:283
+#: contents/ui/Main.qml:311
 #, kde-format
 msgid "No song playing"
 msgstr "Nobene pesmi se ne predvaja"
@@ -354,12 +382,22 @@ msgstr "Premešaj čakalno vrsto"
 msgid "Upcoming Songs"
 msgstr "Prihajajoče pesmi"
 
-#: contents/ui/NavigationBar.qml:23 contents/ui/Sidebar.qml:108
+#: contents/ui/MoodPage.qml:54
+#, kde-format
+msgctxt "song count"
+msgid "%1 song"
+msgid_plural "%1 songs"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+msgstr[3] ""
+
+#: contents/ui/NavigationBar.qml:23 contents/ui/Sidebar.qml:124
 #, kde-format
 msgid "Library"
 msgstr "Knjižnica"
 
-#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:119
+#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:136
 #, kde-format
 msgid "Search"
 msgstr "Išči"
@@ -437,12 +475,22 @@ msgstr "Kopiraj povezavo"
 msgid "Link copied to clipboard"
 msgstr "Povezava skopirana na odložišče"
 
-#: contents/ui/Sidebar.qml:200
+#: contents/ui/Sidebar.qml:108
+#, kde-format
+msgid "Home"
+msgstr ""
+
+#: contents/ui/Sidebar.qml:176
+#, kde-format
+msgid "Explore"
+msgstr ""
+
+#: contents/ui/Sidebar.qml:233
 #, kde-format
 msgid "About"
 msgstr "O programu"
 
-#: contents/ui/Sidebar.qml:214
+#: contents/ui/Sidebar.qml:247
 #, kde-format
 msgid "Collapse Sidebar"
 msgstr "Strni stransko vrstico"

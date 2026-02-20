@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-18 00:44+0000\n"
+"POT-Creation-Date: 2026-02-20 00:44+0000\n"
 "PO-Revision-Date: 2023-11-24 09:45+0900\n"
 "Last-Translator: maboroshin <pc.genkaku.in>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -123,6 +123,11 @@ msgstr "曲"
 msgid "Videos"
 msgstr "動画"
 
+#: contents/ui/BentoCard.qml:158
+#, kde-format
+msgid "More options"
+msgstr ""
+
 #: contents/ui/ConfirmationMessage.qml:16
 #, kde-format
 msgid "OK"
@@ -178,9 +183,32 @@ msgstr "新規再生リスト"
 msgid "Rename playlist"
 msgstr "再生リストの名前を変更"
 
+#: contents/ui/ExplorePage.qml:21
+#, kde-format
+msgctxt "@title:window"
+msgid "Explore"
+msgstr ""
+
+#: contents/ui/HeroCard.qml:128
+#, kde-format
+msgid "Featured Pick"
+msgstr ""
+
+#: contents/ui/HeroCard.qml:167
+#, fuzzy, kde-format
+#| msgid "Play Next"
+msgid "Play Now"
+msgstr "次に再生"
+
+#: contents/ui/HomePage.qml:18
+#, kde-format
+msgctxt "@title:window"
+msgid "Home"
+msgstr ""
+
 #: contents/ui/LibraryPage.qml:32 contents/ui/LibraryPage.qml:135
 #: contents/ui/NavigationBar.qml:47 contents/ui/NavigationBar.qml:53
-#: contents/ui/Sidebar.qml:138 contents/ui/Sidebar.qml:143
+#: contents/ui/Sidebar.qml:155 contents/ui/Sidebar.qml:160
 #, fuzzy, kde-format
 #| msgid "Favourites"
 msgid "Favorites"
@@ -204,8 +232,8 @@ msgid "Most played"
 msgstr "再生回数が多い"
 
 #: contents/ui/LibraryPage.qml:328 contents/ui/NavigationBar.qml:60
-#: contents/ui/NavigationBar.qml:66 contents/ui/Sidebar.qml:159
-#: contents/ui/Sidebar.qml:164
+#: contents/ui/NavigationBar.qml:66 contents/ui/Sidebar.qml:192
+#: contents/ui/Sidebar.qml:197
 #, kde-format
 msgid "Played Songs"
 msgstr "履歴"
@@ -217,7 +245,7 @@ msgstr "まだ再生した曲なし"
 
 #: contents/ui/LibraryPage.qml:414 contents/ui/LocalPlaylistsPage.qml:18
 #: contents/ui/LocalPlaylistsPage.qml:82 contents/ui/NavigationBar.qml:74
-#: contents/ui/SearchPage.qml:32 contents/ui/Sidebar.qml:179
+#: contents/ui/SearchPage.qml:32 contents/ui/Sidebar.qml:212
 #, kde-format
 msgid "Playlists"
 msgstr "再生リスト"
@@ -256,12 +284,12 @@ msgstr "この再生リストはまだ曲が未登録"
 msgid "Import Playlist"
 msgstr "再生リストのインポート"
 
-#: contents/ui/Main.qml:131 main.cpp:88
+#: contents/ui/Main.qml:160 main.cpp:88
 #, kde-format
 msgid "AudioTube"
 msgstr ""
 
-#: contents/ui/Main.qml:283
+#: contents/ui/Main.qml:311
 #, kde-format
 msgid "No song playing"
 msgstr "再生中の曲なし"
@@ -362,12 +390,19 @@ msgstr "キューをシャッフル"
 msgid "Upcoming Songs"
 msgstr "次の曲"
 
-#: contents/ui/NavigationBar.qml:23 contents/ui/Sidebar.qml:108
+#: contents/ui/MoodPage.qml:54
+#, kde-format
+msgctxt "song count"
+msgid "%1 song"
+msgid_plural "%1 songs"
+msgstr[0] ""
+
+#: contents/ui/NavigationBar.qml:23 contents/ui/Sidebar.qml:124
 #, kde-format
 msgid "Library"
 msgstr "ライブラリ"
 
-#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:119
+#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:136
 #, kde-format
 msgid "Search"
 msgstr "検索"
@@ -448,12 +483,22 @@ msgstr "リンクをコピー"
 msgid "Link copied to clipboard"
 msgstr "リンクをクリップボードにコピーしました"
 
-#: contents/ui/Sidebar.qml:200
+#: contents/ui/Sidebar.qml:108
+#, kde-format
+msgid "Home"
+msgstr ""
+
+#: contents/ui/Sidebar.qml:176
+#, kde-format
+msgid "Explore"
+msgstr ""
+
+#: contents/ui/Sidebar.qml:233
 #, kde-format
 msgid "About"
 msgstr "情報"
 
-#: contents/ui/Sidebar.qml:214
+#: contents/ui/Sidebar.qml:247
 #, kde-format
 msgid "Collapse Sidebar"
 msgstr "サイドバーをたたむ"

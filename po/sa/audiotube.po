@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-02-18 00:44+0000\n"
+"POT-Creation-Date: 2026-02-20 00:44+0000\n"
 "PO-Revision-Date: 2024-12-24 20:39+0530\n"
 "Last-Translator: kali <shreekantkalwar@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
@@ -126,6 +126,11 @@ msgstr "गीतानि"
 msgid "Videos"
 msgstr "विडियो"
 
+#: contents/ui/BentoCard.qml:158
+#, kde-format
+msgid "More options"
+msgstr ""
+
 #: contents/ui/ConfirmationMessage.qml:16
 #, kde-format
 msgid "OK"
@@ -181,9 +186,32 @@ msgstr "नवीनं प्लेलिस्ट्"
 msgid "Rename playlist"
 msgstr "प्लेलिस्ट् इत्यस्य नामकरणं कुर्वन्तु"
 
+#: contents/ui/ExplorePage.qml:21
+#, kde-format
+msgctxt "@title:window"
+msgid "Explore"
+msgstr ""
+
+#: contents/ui/HeroCard.qml:128
+#, kde-format
+msgid "Featured Pick"
+msgstr ""
+
+#: contents/ui/HeroCard.qml:167
+#, fuzzy, kde-format
+#| msgid "Play Next"
+msgid "Play Now"
+msgstr "अग्रिमम् क्रीडतु"
+
+#: contents/ui/HomePage.qml:18
+#, kde-format
+msgctxt "@title:window"
+msgid "Home"
+msgstr ""
+
 #: contents/ui/LibraryPage.qml:32 contents/ui/LibraryPage.qml:135
 #: contents/ui/NavigationBar.qml:47 contents/ui/NavigationBar.qml:53
-#: contents/ui/Sidebar.qml:138 contents/ui/Sidebar.qml:143
+#: contents/ui/Sidebar.qml:155 contents/ui/Sidebar.qml:160
 #, fuzzy, kde-format
 #| msgid "Favourites"
 msgid "Favorites"
@@ -207,8 +235,8 @@ msgid "Most played"
 msgstr "अधिकांशः क्रीडितः"
 
 #: contents/ui/LibraryPage.qml:328 contents/ui/NavigationBar.qml:60
-#: contents/ui/NavigationBar.qml:66 contents/ui/Sidebar.qml:159
-#: contents/ui/Sidebar.qml:164
+#: contents/ui/NavigationBar.qml:66 contents/ui/Sidebar.qml:192
+#: contents/ui/Sidebar.qml:197
 #, kde-format
 msgid "Played Songs"
 msgstr "गीतानि वादयन्ति"
@@ -220,7 +248,7 @@ msgstr "अद्यापि गीतं न वाद्यते"
 
 #: contents/ui/LibraryPage.qml:414 contents/ui/LocalPlaylistsPage.qml:18
 #: contents/ui/LocalPlaylistsPage.qml:82 contents/ui/NavigationBar.qml:74
-#: contents/ui/SearchPage.qml:32 contents/ui/Sidebar.qml:179
+#: contents/ui/SearchPage.qml:32 contents/ui/Sidebar.qml:212
 #, kde-format
 msgid "Playlists"
 msgstr "प्लेलिस्ट्"
@@ -259,12 +287,12 @@ msgstr "इयं प्लेलिस्ट् अद्यापि रिक
 msgid "Import Playlist"
 msgstr "प्लेलिस्ट आयात करें"
 
-#: contents/ui/Main.qml:131 main.cpp:88
+#: contents/ui/Main.qml:160 main.cpp:88
 #, kde-format
 msgid "AudioTube"
 msgstr "ऑडियोट्यूब"
 
-#: contents/ui/Main.qml:283
+#: contents/ui/Main.qml:311
 #, kde-format
 msgid "No song playing"
 msgstr "न गीतं वाद्यते"
@@ -366,12 +394,20 @@ msgstr "शफल कतार"
 msgid "Upcoming Songs"
 msgstr "आगामी गीत"
 
-#: contents/ui/NavigationBar.qml:23 contents/ui/Sidebar.qml:108
+#: contents/ui/MoodPage.qml:54
+#, kde-format
+msgctxt "song count"
+msgid "%1 song"
+msgid_plural "%1 songs"
+msgstr[0] ""
+msgstr[1] ""
+
+#: contents/ui/NavigationBar.qml:23 contents/ui/Sidebar.qml:124
 #, kde-format
 msgid "Library"
 msgstr "पुस्तकालय"
 
-#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:119
+#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:136
 #, kde-format
 msgid "Search"
 msgstr "अन्वेषण"
@@ -453,12 +489,22 @@ msgstr "प्रतिलिपि लिङ्क"
 msgid "Link copied to clipboard"
 msgstr "लिङ्क् क्लिप्बोर्ड् प्रति प्रतिलिपितः"
 
-#: contents/ui/Sidebar.qml:200
+#: contents/ui/Sidebar.qml:108
+#, kde-format
+msgid "Home"
+msgstr ""
+
+#: contents/ui/Sidebar.qml:176
+#, kde-format
+msgid "Explore"
+msgstr ""
+
+#: contents/ui/Sidebar.qml:233
 #, kde-format
 msgid "About"
 msgstr "विषये"
 
-#: contents/ui/Sidebar.qml:214
+#: contents/ui/Sidebar.qml:247
 #, kde-format
 msgid "Collapse Sidebar"
 msgstr "Collapse पार्श्वपट्टिका"
