@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-20 00:44+0000\n"
-"PO-Revision-Date: 2026-01-18 10:04+0100\n"
+"PO-Revision-Date: 2026-02-20 17:48+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.12.1\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: asyncytmusic.cpp:65
 #, kde-format
@@ -68,8 +68,7 @@ msgid "Share"
 msgstr "Partager"
 
 #: contents/ui/AlbumPage.qml:109
-#, fuzzy, kde-format
-#| msgid "Album • %1"
+#, kde-format
 msgctxt "%1 is the artist(s) featured in the album"
 msgid "Album • %1"
 msgstr "Album • %1"
@@ -92,10 +91,7 @@ msgid "Artist"
 msgstr "Artiste"
 
 #: contents/ui/ArtistPage.qml:128
-#, fuzzy, kde-format
-#| msgid ""
-#| "Video playback is not supported yet. Do you want to play only the audio "
-#| "of \"%1\"?"
+#, kde-format
 msgctxt "%1 is a video title"
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
@@ -330,8 +326,7 @@ msgid "Mute Audio"
 msgstr "Mettre le son en pause"
 
 #: contents/ui/MaximizedPlayerPage.qml:709
-#, fuzzy, kde-format
-#| msgid "%1%"
+#, kde-format
 msgctxt "%1 is the audio volume in percent"
 msgid "%1%"
 msgstr "%1 %"
@@ -368,10 +363,9 @@ msgstr "Afficher la file d'attente"
 
 #: contents/ui/MaximizedPlayerPage.qml:1069
 #: contents/ui/MaximizedPlayerPage.qml:1314
-#, fuzzy, kde-format
-#| msgid "Remove Favorite"
+#, kde-format
 msgid "Remove Song"
-msgstr "Supprimer un signet"
+msgstr "Supprimer une chanson"
 
 #: contents/ui/MaximizedPlayerPage.qml:1104
 #, kde-format
@@ -452,17 +446,14 @@ msgid "Unknown"
 msgstr "Inconnu"
 
 #: contents/ui/SearchPage.qml:74
-#, fuzzy, kde-format
-#| msgid ""
-#| "Video playback is not supported yet. Do you want to play only the audio "
-#| "of \"%1\"?"
+#, kde-format
 msgctxt "%1 is a video title"
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
 "\"%1\"?"
 msgstr ""
 "La lecture de vidéos n'est pas encore prise en charge. Voulez-vous vraiment "
-"lire uniquement l'audio de « %1 » ?"
+"ne lire que l'audio de « %1 » ?"
 
 #: contents/ui/SearchWithDropdown.qml:339
 #, kde-format
@@ -531,8 +522,7 @@ msgid "Stream music from YouTube Music"
 msgstr "Musique en streaming provenant de « YouTube Musique »"
 
 #: main.cpp:92
-#, fuzzy, kde-format
-#| msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
+#, kde-format
 msgid "© 2021–2024 Jonah Brüchert, 2021–2024 KDE Community"
 msgstr "© 2021 - 2024 Jonah Brüchert, 2021 - 2024 La communauté de KDE"
 

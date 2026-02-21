@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-20 00:44+0000\n"
-"PO-Revision-Date: 2026-02-13 09:08+0200\n"
+"PO-Revision-Date: 2026-02-20 08:44+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
@@ -125,7 +125,7 @@ msgstr "Відео"
 #: contents/ui/BentoCard.qml:158
 #, kde-format
 msgid "More options"
-msgstr ""
+msgstr "Додаткові параметри"
 
 #: contents/ui/ConfirmationMessage.qml:16
 #, kde-format
@@ -186,24 +186,23 @@ msgstr "Перейменувати список відтворення"
 #, kde-format
 msgctxt "@title:window"
 msgid "Explore"
-msgstr ""
+msgstr "Ознайомлення"
 
 #: contents/ui/HeroCard.qml:128
 #, kde-format
 msgid "Featured Pick"
-msgstr ""
+msgstr "Рекомендовані"
 
 #: contents/ui/HeroCard.qml:167
-#, fuzzy, kde-format
-#| msgid "Play Next"
+#, kde-format
 msgid "Play Now"
-msgstr "Відтворити наступну"
+msgstr "Відтворити"
 
 #: contents/ui/HomePage.qml:18
 #, kde-format
 msgctxt "@title:window"
 msgid "Home"
-msgstr ""
+msgstr "Домівка"
 
 #: contents/ui/LibraryPage.qml:32 contents/ui/LibraryPage.qml:135
 #: contents/ui/NavigationBar.qml:47 contents/ui/NavigationBar.qml:53
@@ -389,10 +388,10 @@ msgstr "Майбутні композиції"
 msgctxt "song count"
 msgid "%1 song"
 msgid_plural "%1 songs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%1 композиція"
+msgstr[1] "%1 пісень"
+msgstr[2] "%1 пісень"
+msgstr[3] "%1 пісень"
 
 #: contents/ui/NavigationBar.qml:23 contents/ui/Sidebar.qml:124
 #, kde-format
@@ -482,12 +481,12 @@ msgstr "Посилання скопійовано до буфера обміну
 #: contents/ui/Sidebar.qml:108
 #, kde-format
 msgid "Home"
-msgstr ""
+msgstr "Домівка"
 
 #: contents/ui/Sidebar.qml:176
 #, kde-format
 msgid "Explore"
-msgstr ""
+msgstr "Ознайомлення"
 
 #: contents/ui/Sidebar.qml:233
 #, kde-format

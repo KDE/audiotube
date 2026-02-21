@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-20 00:44+0000\n"
-"PO-Revision-Date: 2026-02-13 11:32+0100\n"
+"PO-Revision-Date: 2026-02-20 07:39+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -123,7 +123,7 @@ msgstr "Videposnetki"
 #: contents/ui/BentoCard.qml:158
 #, kde-format
 msgid "More options"
-msgstr ""
+msgstr "Več možnosti"
 
 #: contents/ui/ConfirmationMessage.qml:16
 #, kde-format
@@ -184,24 +184,23 @@ msgstr "Preimenuj seznam predvajanja"
 #, kde-format
 msgctxt "@title:window"
 msgid "Explore"
-msgstr ""
+msgstr "Razišči"
 
 #: contents/ui/HeroCard.qml:128
 #, kde-format
 msgid "Featured Pick"
-msgstr ""
+msgstr "Izbrana zmožnost"
 
 #: contents/ui/HeroCard.qml:167
-#, fuzzy, kde-format
-#| msgid "Play Next"
+#, kde-format
 msgid "Play Now"
-msgstr "Predvajaj naslednjo"
+msgstr "Predvajaj zdaj"
 
 #: contents/ui/HomePage.qml:18
 #, kde-format
 msgctxt "@title:window"
 msgid "Home"
-msgstr ""
+msgstr "Domov"
 
 #: contents/ui/LibraryPage.qml:32 contents/ui/LibraryPage.qml:135
 #: contents/ui/NavigationBar.qml:47 contents/ui/NavigationBar.qml:53
@@ -387,10 +386,10 @@ msgstr "Prihajajoče pesmi"
 msgctxt "song count"
 msgid "%1 song"
 msgid_plural "%1 songs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "%1 skladb"
+msgstr[1] "%1 skladba"
+msgstr[2] "%1 skladbi"
+msgstr[3] "%1 skladbe"
 
 #: contents/ui/NavigationBar.qml:23 contents/ui/Sidebar.qml:124
 #, kde-format
@@ -478,12 +477,12 @@ msgstr "Povezava skopirana na odložišče"
 #: contents/ui/Sidebar.qml:108
 #, kde-format
 msgid "Home"
-msgstr ""
+msgstr "Domov"
 
 #: contents/ui/Sidebar.qml:176
 #, kde-format
 msgid "Explore"
-msgstr ""
+msgstr "Razišči"
 
 #: contents/ui/Sidebar.qml:233
 #, kde-format

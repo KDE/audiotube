@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-20 00:44+0000\n"
-"PO-Revision-Date: 2026-02-13 05:39+0100\n"
+"PO-Revision-Date: 2026-02-20 06:32+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -124,7 +124,7 @@ msgstr "ვიდეო"
 #: contents/ui/BentoCard.qml:158
 #, kde-format
 msgid "More options"
-msgstr ""
+msgstr "მეტი პარამეტრი"
 
 #: contents/ui/ConfirmationMessage.qml:16
 #, kde-format
@@ -185,24 +185,23 @@ msgstr "დასაკრავი სიის სახელის გად
 #, kde-format
 msgctxt "@title:window"
 msgid "Explore"
-msgstr ""
+msgstr "დათვალიერება"
 
 #: contents/ui/HeroCard.qml:128
 #, kde-format
 msgid "Featured Pick"
-msgstr ""
+msgstr "პოპულარული არჩევანი"
 
 #: contents/ui/HeroCard.qml:167
-#, fuzzy, kde-format
-#| msgid "Play Next"
+#, kde-format
 msgid "Play Now"
-msgstr "შემდეგის დაკვრა"
+msgstr "ახლავე დაკვრა"
 
 #: contents/ui/HomePage.qml:18
 #, kde-format
 msgctxt "@title:window"
 msgid "Home"
-msgstr ""
+msgstr "საწყისი"
 
 #: contents/ui/LibraryPage.qml:32 contents/ui/LibraryPage.qml:135
 #: contents/ui/NavigationBar.qml:47 contents/ui/NavigationBar.qml:53
@@ -388,8 +387,8 @@ msgstr "მომავალი სიმღერები"
 msgctxt "song count"
 msgid "%1 song"
 msgid_plural "%1 songs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 სიმღერა"
+msgstr[1] "%1 სიმღერა"
 
 #: contents/ui/NavigationBar.qml:23 contents/ui/Sidebar.qml:124
 #, kde-format
@@ -478,12 +477,12 @@ msgstr "ბმული დაკოპირებულია"
 #: contents/ui/Sidebar.qml:108
 #, kde-format
 msgid "Home"
-msgstr ""
+msgstr "საწყისი"
 
 #: contents/ui/Sidebar.qml:176
 #, kde-format
 msgid "Explore"
-msgstr ""
+msgstr "დათვალიერება"
 
 #: contents/ui/Sidebar.qml:233
 #, kde-format

@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-20 00:44+0000\n"
-"PO-Revision-Date: 2026-02-13 09:12-0300\n"
+"PO-Revision-Date: 2026-02-20 09:14-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -127,7 +127,7 @@ msgstr "Vídeos"
 #: contents/ui/BentoCard.qml:158
 #, kde-format
 msgid "More options"
-msgstr ""
+msgstr "Mais opções"
 
 #: contents/ui/ConfirmationMessage.qml:16
 #, kde-format
@@ -188,24 +188,23 @@ msgstr "Renomear lista de músicas"
 #, kde-format
 msgctxt "@title:window"
 msgid "Explore"
-msgstr ""
+msgstr "Explorar"
 
 #: contents/ui/HeroCard.qml:128
 #, kde-format
 msgid "Featured Pick"
-msgstr ""
+msgstr "Escolha em destaque"
 
 #: contents/ui/HeroCard.qml:167
-#, fuzzy, kde-format
-#| msgid "Play Next"
+#, kde-format
 msgid "Play Now"
-msgstr "Reproduzir próxima"
+msgstr "Reproduzir agora"
 
 #: contents/ui/HomePage.qml:18
 #, kde-format
 msgctxt "@title:window"
 msgid "Home"
-msgstr ""
+msgstr "Início"
 
 #: contents/ui/LibraryPage.qml:32 contents/ui/LibraryPage.qml:135
 #: contents/ui/NavigationBar.qml:47 contents/ui/NavigationBar.qml:53
@@ -391,8 +390,8 @@ msgstr "Próximas músicas"
 msgctxt "song count"
 msgid "%1 song"
 msgid_plural "%1 songs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 música"
+msgstr[1] "%1 músicas"
 
 #: contents/ui/NavigationBar.qml:23 contents/ui/Sidebar.qml:124
 #, kde-format
@@ -482,12 +481,12 @@ msgstr "Link copiado para a área de transferência"
 #: contents/ui/Sidebar.qml:108
 #, kde-format
 msgid "Home"
-msgstr ""
+msgstr "Início"
 
 #: contents/ui/Sidebar.qml:176
 #, kde-format
 msgid "Explore"
-msgstr ""
+msgstr "Explorar"
 
 #: contents/ui/Sidebar.qml:233
 #, kde-format
