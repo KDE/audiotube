@@ -143,8 +143,10 @@ SPDX-License-Identifier: CC0-1.0
           <li xml:lang="ca">Afegeix una pàgina de biblioteca que mostra les cançons preferides i les més reproduïdes</li>
           <li xml:lang="ca-valencia">Afig una pàgina de biblioteca que mostra les cançons preferides i les més reproduïdes</li>
           <li xml:lang="es">Se ha añadido una página de la biblioteca que muestra las canciones favoritas y las más reproducidas</li>
+          <li xml:lang="fr">Ajouter une page de bibliothèque affichant les favoris et les chansons les plus écoutées</li>
           <li xml:lang="he">נוסף עמוד ספרייה שמציג את המועדפים ואת השירים שהתנגנו הכי הרבה</li>
           <li xml:lang="ia">Adde pagina de bibliotheca que monstra favoritos e cantos plus reproducite </li>
+          <li xml:lang="lt">Pridėtas bibliotekos puslapis, kuriame rodomos mėgstamos ir dažniausiai atkurtos dainos</li>
           <li xml:lang="nl">Voeg een bibliotheekpagina toe waarop favorieten en meest gespeelde nummers worden weergegeven.</li>
           <li xml:lang="pt-BR">Adicionada página à biblioteca que mostra as músicas favoritas e as mais tocadas</li>
           <li xml:lang="ru">Добавлена страница библиотеки с избранными и наиболее прослушиваемыми композициями</li>
@@ -155,8 +157,10 @@ SPDX-License-Identifier: CC0-1.0
           <li xml:lang="ca">Millora la disposició de la finestra emergent de cerca</li>
           <li xml:lang="ca-valencia">Millora la disposició de la finestra emergent de busca</li>
           <li xml:lang="es">Mejora de la disposición de la ventana emergente de búsqueda</li>
+          <li xml:lang="fr">Améliorer la disposition de la fenêtre de recherche</li>
           <li xml:lang="he">פריסת חלונית החיפוש הצצה השתפרה</li>
           <li xml:lang="ia">Meliora disposition del popup (emergente) de cerca</li>
+          <li xml:lang="lt">Patobulintas paieškos iškylančiojo lango išdėstymas</li>
           <li xml:lang="nl">Verbeter de indeling van het zoekpop-upvenster.</li>
           <li xml:lang="pt-BR">Melhoria no layout da janela pop-up de pesquisa</li>
           <li xml:lang="ru">Улучшено расположение всплывающего окна поиска</li>
@@ -167,8 +171,10 @@ SPDX-License-Identifier: CC0-1.0
           <li xml:lang="ca">Millores generals de rendiment incloent-hi l'inici</li>
           <li xml:lang="ca-valencia">Millores generals de rendiment incloent-hi l'inici</li>
           <li xml:lang="es">Mejoras del rendimiento en general, incluido el inicio</li>
+          <li xml:lang="fr">Améliorations générales des performances, y compris au démarrage</li>
           <li xml:lang="he">שיפורי ביצועים כלליים כולל העלייה</li>
           <li xml:lang="ia">Melioramentod de prestation general includente startar</li>
+          <li xml:lang="lt">Bendri našumo patobulinimai, įskaitant programos paleidimą</li>
           <li xml:lang="nl">Algemene prestatieverbeteringen, inclusief opstartproblemen</li>
           <li xml:lang="pt-BR">Melhorias gerais de desempenho, incluindo na inicialização</li>
           <li xml:lang="ru">Улучшена общая производительность, включая время запуска</li>
@@ -186,8 +192,10 @@ SPDX-License-Identifier: CC0-1.0
           <li xml:lang="ca">Actualitza la versió de «ytmusicapi»</li>
           <li xml:lang="ca-valencia">Actualitza la versió de «ytmusicapi»</li>
           <li xml:lang="es">Actualización de la versión de ytmusicapi</li>
+          <li xml:lang="fr">Mise à jour la version de la bibliothèque « ytmusicapi »</li>
           <li xml:lang="he">הגרסה של ytmusicapi עודכנה</li>
           <li xml:lang="ia">Actualisa le version de ytmusicapi</li>
+          <li xml:lang="lt">Atnaujinta ytmusicapi versija</li>
           <li xml:lang="nl">Werk de versie van ytmusicapi bij</li>
           <li xml:lang="pt-BR">Atualizada a versão do ytmusicapi</li>
           <li xml:lang="ru">Обновлена версия ytmusicapi</li>
@@ -198,8 +206,10 @@ SPDX-License-Identifier: CC0-1.0
           <li xml:lang="ca">Actualitzacions generals de reestructuració de codi i traduccions</li>
           <li xml:lang="ca-valencia">Actualitzacions generals de reestructuració de codi i traduccions</li>
           <li xml:lang="es">Refactorización general del código y actualización de las traducciones</li>
+          <li xml:lang="fr">Ré-agencement général du code et mises à jour des traductions</li>
           <li xml:lang="he">שכתוב קוד כללי ועדכוני תרגומים</li>
           <li xml:lang="ia">Re-factorisation de codice general e actualistiones de traduction</li>
+          <li xml:lang="lt">Bendri kodo pertvarkymo ir vertimų atnaujinimai</li>
           <li xml:lang="nl">Algemene herziening van code en vertaalupdates</li>
           <li xml:lang="pt-BR">Atualizações gerais de refatoração do código e tradução</li>
           <li xml:lang="ru">Общий рефакторинг кода и обновления переводов</li>
@@ -217,8 +227,10 @@ SPDX-License-Identifier: CC0-1.0
           <li xml:lang="ca">Actualitza la versió de «ytmusicapi»</li>
           <li xml:lang="ca-valencia">Actualitza la versió de «ytmusicapi»</li>
           <li xml:lang="es">Actualización de la versión de ytmusicapi</li>
+          <li xml:lang="fr">Mise à jour la version de la bibliothèque « ytmusicapi »</li>
           <li xml:lang="he">הגרסה של ytmusicapi עודכנה</li>
           <li xml:lang="ia">Actualisa le version de ytmusicapi</li>
+          <li xml:lang="lt">Atnaujinta ytmusicapi versija</li>
           <li xml:lang="nl">Werk de versie van ytmusicapi bij</li>
           <li xml:lang="pt-BR">Atualizada a versão do ytmusicapi</li>
           <li xml:lang="ru">Обновлена версия ytmusicapi</li>
