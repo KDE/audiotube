@@ -128,7 +128,7 @@ msgstr "Videa"
 #: contents/ui/BentoCard.qml:158
 #, kde-format
 msgid "More options"
-msgstr ""
+msgstr "Více možností"
 
 #: contents/ui/ConfirmationMessage.qml:16
 #, kde-format
@@ -197,10 +197,9 @@ msgid "Featured Pick"
 msgstr ""
 
 #: contents/ui/HeroCard.qml:167
-#, fuzzy, kde-format
-#| msgid "Play Next"
+#, kde-format
 msgid "Play Now"
-msgstr "Přehrát následující"
+msgstr "Přehrát nyní"
 
 #: contents/ui/HomePage.qml:18
 #, kde-format
@@ -489,12 +488,12 @@ msgstr "Odkaz byl zkopírován do schránky"
 #: contents/ui/Sidebar.qml:108
 #, kde-format
 msgid "Home"
-msgstr ""
+msgstr "Domů"
 
 #: contents/ui/Sidebar.qml:176
 #, kde-format
 msgid "Explore"
-msgstr ""
+msgstr "Objevovat"
 
 #: contents/ui/Sidebar.qml:233
 #, kde-format
