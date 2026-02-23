@@ -1,13 +1,13 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the audiotube package.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Vincenzo Reale <smart2128vr@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025, 2026 Vincenzo Reale <smart2128vr@gmail.com>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-20 00:44+0000\n"
-"PO-Revision-Date: 2025-10-07 09:16+0200\n"
+"PO-Revision-Date: 2026-02-21 08:38+0100\n"
 "Last-Translator: Vincenzo Reale <smart2128vr@gmail.com>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 25.12.2\n"
 
 #: asyncytmusic.cpp:65
 #, kde-format
@@ -69,8 +69,7 @@ msgid "Share"
 msgstr "Condividi"
 
 #: contents/ui/AlbumPage.qml:109
-#, fuzzy, kde-format
-#| msgid "Album • %1"
+#, kde-format
 msgctxt "%1 is the artist(s) featured in the album"
 msgid "Album • %1"
 msgstr "Album • %1"
@@ -93,10 +92,7 @@ msgid "Artist"
 msgstr "Artista"
 
 #: contents/ui/ArtistPage.qml:128
-#, fuzzy, kde-format
-#| msgid ""
-#| "Video playback is not supported yet. Do you want to play only the audio "
-#| "of \"%1\"?"
+#, kde-format
 msgctxt "%1 is a video title"
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
@@ -128,7 +124,7 @@ msgstr "Video"
 #: contents/ui/BentoCard.qml:158
 #, kde-format
 msgid "More options"
-msgstr ""
+msgstr "Altre opzioni"
 
 #: contents/ui/ConfirmationMessage.qml:16
 #, kde-format
@@ -189,24 +185,23 @@ msgstr "Rinomina la scaletta"
 #, kde-format
 msgctxt "@title:window"
 msgid "Explore"
-msgstr ""
+msgstr "Esplora"
 
 #: contents/ui/HeroCard.qml:128
 #, kde-format
 msgid "Featured Pick"
-msgstr ""
+msgstr "In primo piano"
 
 #: contents/ui/HeroCard.qml:167
-#, fuzzy, kde-format
-#| msgid "Play Next"
+#, kde-format
 msgid "Play Now"
-msgstr "Riproduci successivo"
+msgstr "Riproduci ora"
 
 #: contents/ui/HomePage.qml:18
 #, kde-format
 msgctxt "@title:window"
 msgid "Home"
-msgstr ""
+msgstr "Home"
 
 #: contents/ui/LibraryPage.qml:32 contents/ui/LibraryPage.qml:135
 #: contents/ui/NavigationBar.qml:47 contents/ui/NavigationBar.qml:53
@@ -331,8 +326,7 @@ msgid "Mute Audio"
 msgstr "Silenzia l'audio"
 
 #: contents/ui/MaximizedPlayerPage.qml:709
-#, fuzzy, kde-format
-#| msgid "%1%"
+#, kde-format
 msgctxt "%1 is the audio volume in percent"
 msgid "%1%"
 msgstr "%1%"
@@ -369,10 +363,9 @@ msgstr "Mostra la coda"
 
 #: contents/ui/MaximizedPlayerPage.qml:1069
 #: contents/ui/MaximizedPlayerPage.qml:1314
-#, fuzzy, kde-format
-#| msgid "Remove Favorite"
+#, kde-format
 msgid "Remove Song"
-msgstr "Rimuovi preferito"
+msgstr "Rimuovi brano"
 
 #: contents/ui/MaximizedPlayerPage.qml:1104
 #, kde-format
@@ -394,8 +387,8 @@ msgstr "Prossimi brani"
 msgctxt "song count"
 msgid "%1 song"
 msgid_plural "%1 songs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 brano"
+msgstr[1] "%1 brani"
 
 #: contents/ui/NavigationBar.qml:23 contents/ui/Sidebar.qml:124
 #, kde-format
@@ -453,10 +446,7 @@ msgid "Unknown"
 msgstr "Sconosciuto"
 
 #: contents/ui/SearchPage.qml:74
-#, fuzzy, kde-format
-#| msgid ""
-#| "Video playback is not supported yet. Do you want to play only the audio "
-#| "of \"%1\"?"
+#, kde-format
 msgctxt "%1 is a video title"
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
@@ -488,12 +478,12 @@ msgstr "Collegamento copiato negli appunti"
 #: contents/ui/Sidebar.qml:108
 #, kde-format
 msgid "Home"
-msgstr ""
+msgstr "Home"
 
 #: contents/ui/Sidebar.qml:176
 #, kde-format
 msgid "Explore"
-msgstr ""
+msgstr "Esplora"
 
 #: contents/ui/Sidebar.qml:233
 #, kde-format
@@ -532,10 +522,9 @@ msgid "Stream music from YouTube Music"
 msgstr "Riproduci musica da YouTube Music"
 
 #: main.cpp:92
-#, fuzzy, kde-format
-#| msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
+#, kde-format
 msgid "© 2021–2024 Jonah Brüchert, 2021–2024 KDE Community"
-msgstr "© 2021-2024 Jonah Brüchert, 2021-2024 Comunità KDE"
+msgstr "© 2021–2024 Jonah Brüchert, 2021–2024 Comunità KDE"
 
 #: main.cpp:93
 #, kde-format
