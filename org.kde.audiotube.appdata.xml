@@ -52,7 +52,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="ca">Aplicació de YouTube Music</summary>
   <summary xml:lang="ca-valencia">Aplicació de YouTube Music</summary>
   <summary xml:lang="cs">Přehrávač hudby YouTube</summary>
-  <summary xml:lang="de">YouTube-Musikprogramm</summary>
+  <summary xml:lang="de">Anwendung für „YouTube Music“</summary>
   <summary xml:lang="en-GB">YouTube Music app</summary>
   <summary xml:lang="eo">YouTube Music-apo</summary>
   <summary xml:lang="es">Aplicación de música de YouTube</summary>
@@ -142,6 +142,7 @@ SPDX-License-Identifier: CC0-1.0
           <li xml:lang="ar">أُضيفت صفحة المكتبة التي تعرض المفضلات والأغاني الأكثر تشغيلًا</li>
           <li xml:lang="ca">Afegeix una pàgina de biblioteca que mostra les cançons preferides i les més reproduïdes</li>
           <li xml:lang="ca-valencia">Afig una pàgina de biblioteca que mostra les cançons preferides i les més reproduïdes</li>
+          <li xml:lang="de">Bibliotheksseite hinzugefügt, die Favoriten und meistgespielte Lieder anzeigt</li>
           <li xml:lang="es">Se ha añadido una página de la biblioteca que muestra las canciones favoritas y las más reproducidas</li>
           <li xml:lang="fr">Ajouter une page de bibliothèque affichant les favoris et les chansons les plus écoutées</li>
           <li xml:lang="he">נוסף עמוד ספרייה שמציג את המועדפים ואת השירים שהתנגנו הכי הרבה</li>
@@ -157,6 +158,7 @@ SPDX-License-Identifier: CC0-1.0
           <li xml:lang="ar">حُسّن مظهر نافذة البحث المنبثقة</li>
           <li xml:lang="ca">Millora la disposició de la finestra emergent de cerca</li>
           <li xml:lang="ca-valencia">Millora la disposició de la finestra emergent de busca</li>
+          <li xml:lang="de">Verbessertes Layout des Suchdialogs</li>
           <li xml:lang="es">Mejora de la disposición de la ventana emergente de búsqueda</li>
           <li xml:lang="fr">Améliorer la disposition de la fenêtre de recherche</li>
           <li xml:lang="he">פריסת חלונית החיפוש הצצה השתפרה</li>
@@ -172,6 +174,7 @@ SPDX-License-Identifier: CC0-1.0
           <li xml:lang="ar">تحسينات عامة في الأداء بما في ذلك بدء التشغيل</li>
           <li xml:lang="ca">Millores generals de rendiment incloent-hi l'inici</li>
           <li xml:lang="ca-valencia">Millores generals de rendiment incloent-hi l'inici</li>
+          <li xml:lang="de">Allgemeine Leistungsverbesserungen, einschließlich des Startvorgangs</li>
           <li xml:lang="es">Mejoras del rendimiento en general, incluido el inicio</li>
           <li xml:lang="fr">Améliorations générales des performances, y compris au démarrage</li>
           <li xml:lang="he">שיפורי ביצועים כלליים כולל העלייה</li>
@@ -194,6 +197,7 @@ SPDX-License-Identifier: CC0-1.0
           <li xml:lang="ar">حُدّث إصدار ytmusicapi</li>
           <li xml:lang="ca">Actualitza la versió de «ytmusicapi»</li>
           <li xml:lang="ca-valencia">Actualitza la versió de «ytmusicapi»</li>
+          <li xml:lang="de">„ytmusicapi“-Version aktualisiert</li>
           <li xml:lang="es">Actualización de la versión de ytmusicapi</li>
           <li xml:lang="fr">Mise à jour la version de la bibliothèque « ytmusicapi »</li>
           <li xml:lang="he">הגרסה של ytmusicapi עודכנה</li>
@@ -209,6 +213,7 @@ SPDX-License-Identifier: CC0-1.0
           <li xml:lang="ar">إعادة هيكلة عامة للكود وتحديثات للترجمة</li>
           <li xml:lang="ca">Actualitzacions generals de reestructuració de codi i traduccions</li>
           <li xml:lang="ca-valencia">Actualitzacions generals de reestructuració de codi i traduccions</li>
+          <li xml:lang="de">Allgemeine Code-Überarbeitung und Aktualisierung der Übersetzungen</li>
           <li xml:lang="es">Refactorización general del código y actualización de las traducciones</li>
           <li xml:lang="fr">Ré-agencement général du code et mises à jour des traductions</li>
           <li xml:lang="he">שכתוב קוד כללי ועדכוני תרגומים</li>
@@ -231,6 +236,7 @@ SPDX-License-Identifier: CC0-1.0
           <li xml:lang="ar">حُدّث إصدار ytmusicapi</li>
           <li xml:lang="ca">Actualitza la versió de «ytmusicapi»</li>
           <li xml:lang="ca-valencia">Actualitza la versió de «ytmusicapi»</li>
+          <li xml:lang="de">„ytmusicapi“-Version aktualisiert</li>
           <li xml:lang="es">Actualización de la versión de ytmusicapi</li>
           <li xml:lang="fr">Mise à jour la version de la bibliothèque « ytmusicapi »</li>
           <li xml:lang="he">הגרסה של ytmusicapi עודכנה</li>
@@ -283,7 +289,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="ar">يمكن لتيوب الصوتي البحث في موسيقى يوتيوب، وعرض الألبومات والفنانين، وتشغيل القوائم والألبومات المولدة آليًّا، ويسمح لك بوضع قائمة التشغيل الخاصة بك معًا. هو ملائم للهواتف المحمولة وأجهزة الحاسوب المكتبية.</p>
     <p xml:lang="ca">L'AudioTube pot cercar a YouTube Music, llistar àlbums i artistes, reproduir llistes de reproducció generades automàticament, àlbums i permet crear la vostra pròpia llista de reproducció. Està adaptat als telèfons mòbils i els ordinadors de sobretaula.</p>
     <p xml:lang="ca-valencia">AudioTube pot buscar a YouTube Music, llistar àlbums i artistes, reproduir llistes de reproducció generades automàticament, àlbums i permet crear la vostra pròpia llista de reproducció. Està adaptat als telèfons mòbils i els ordinadors de sobretaula.</p>
-    <p xml:lang="de">AudioTube kann Musik auf YouTube durchsuchen, Alben und Interpreten auflisten, automatisch generierte Wiedergabelisten und Alben wiedergeben und ermöglicht es, eine eigene Wiedergabeliste zusammenzustellen. Mobiltelefone und Desktoprechner werden unterstützt.</p>
+    <p xml:lang="de">AudioTube kann „YouTube Music“ durchsuchen, Alben und Interpreten auflisten, automatisch generierte Wiedergabelisten und Alben wiedergeben und ermöglicht es, eine eigene Wiedergabeliste zusammenzustellen. Mobiltelefone und Desktoprechner werden unterstützt.</p>
     <p xml:lang="en-GB">AudioTube can search YouTube Music, list albums and artists, play automatically generated playlists, albums and allows to put your own playlist together. It is adapted to mobile phones and desktop computers.</p>
     <p xml:lang="eo">AudioTube povas serĉi YouTube Music, listigi albumojn kaj artistojn, ludi aŭtomate generitajn ludlistojn, albumojn kaj permesas kunmeti vian propran ludliston. Ĝi estas adaptita al porteblaj telefonoj kaj labortablaj komputiloj.</p>
     <p xml:lang="es">AudioTube puede buscar música de YouTube, listar álbumes y artistas, reproducir las listas de reproducción generadas, álbumes y le permite crear su propia lista de reproducción. Está adaptada para teléfonos móviles y equipos de escritorio.</p>
