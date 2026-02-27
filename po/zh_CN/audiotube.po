@@ -23,6 +23,7 @@ msgid ""
 "Running with untested version of ytmusicapi %1. If you experience errors, "
 "please report them to your distribution."
 msgstr ""
+"正在使用未经测试的 ytmusicapi 版本 %1。如果您遇到错误，请向您的发行版报告。"
 
 #: contents/ui/AlbumPage.qml:69 contents/ui/LibraryPage.qml:38
 #: contents/ui/LibraryPage.qml:64 contents/ui/LibraryPage.qml:90
@@ -69,7 +70,7 @@ msgstr "分享"
 #: contents/ui/AlbumPage.qml:109
 #, kde-format
 msgid "Album • %1"
-msgstr ""
+msgstr "专辑：%1"
 
 #: contents/ui/AlbumPage.qml:163 contents/ui/ArtistPage.qml:199
 #: contents/ui/LocalPlaylistPage.qml:166 contents/ui/PlaybackHistory.qml:193
@@ -93,7 +94,7 @@ msgstr "艺术家"
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
 "\"%1\"?"
-msgstr ""
+msgstr "视频播放尚未被支持。您想要只播放“%1”中的音频吗？"
 
 #: contents/ui/ArtistPage.qml:146 contents/ui/SearchPage.qml:28
 #, kde-format
@@ -145,12 +146,12 @@ msgstr "播放列表描述"
 #: contents/ui/dialogs/ImportPlaylistDialog.qml:15
 #, kde-format
 msgid "Import playlist"
-msgstr ""
+msgstr "导入播放列表"
 
 #: contents/ui/dialogs/ImportPlaylistDialog.qml:21
 #, kde-format
 msgid "Playlist URL (Youtube)"
-msgstr ""
+msgstr "播放列表 URL (Youtube)"
 
 #: contents/ui/dialogs/PlaylistDialog.qml:15
 #, kde-format
@@ -244,7 +245,7 @@ msgstr "此播放列表未包含歌曲"
 #: contents/ui/LocalPlaylistsPage.qml:154 contents/ui/PlaylistPage.qml:105
 #, kde-format
 msgid "Import Playlist"
-msgstr ""
+msgstr "导入播放列表"
 
 #: contents/ui/Main.qml:131 main.cpp:88
 #, kde-format
@@ -295,7 +296,7 @@ msgstr "静音"
 #: contents/ui/MaximizedPlayerPage.qml:709
 #, kde-format
 msgid "%1%"
-msgstr ""
+msgstr "%1%"
 
 #: contents/ui/MaximizedPlayerPage.qml:739
 #, kde-format
@@ -372,7 +373,7 @@ msgstr "此处无歌曲"
 #: contents/ui/PlaylistPage.qml:74
 #, kde-format
 msgid "Playlist successfully imported"
-msgstr ""
+msgstr "导入播放列表成功"
 
 #: contents/ui/PlaylistPage.qml:126
 #, kde-format
@@ -397,7 +398,7 @@ msgstr "艺人"
 #: contents/ui/SearchPage.qml:38
 #, kde-format
 msgid "Top Results"
-msgstr ""
+msgstr "最佳结果"
 
 #: contents/ui/SearchPage.qml:41 playlistimporter.cpp:24
 #, kde-format
@@ -468,7 +469,7 @@ msgstr "添加到播放列表"
 #, kde-format
 msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Stream music from YouTube Music"
-msgstr ""
+msgstr "从 YouTube Music 串流播放音乐"
 
 #: main.cpp:92
 #, kde-format
@@ -478,22 +479,22 @@ msgstr "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
 #: main.cpp:93
 #, kde-format
 msgid "Jonah Brüchert"
-msgstr ""
+msgstr "Jonah Brüchert"
 
 #: main.cpp:93
 #, kde-format
 msgid "Maintainer"
-msgstr ""
+msgstr "维护人员"
 
 #: main.cpp:94
 #, kde-format
 msgid "Mathis Brüchert"
-msgstr ""
+msgstr "Mathis Brüchert"
 
 #: main.cpp:94
 #, kde-format
 msgid "Designer"
-msgstr ""
+msgstr "设计师"
 
 #: main.cpp:95
 #, kde-format
@@ -511,19 +512,19 @@ msgstr "weearc@kde.org, tds00@qq.com"
 #, kde-format
 msgctxt "YouTube Music is a music streaming service by Google"
 msgid "Unofficial API for YouTube Music"
-msgstr ""
+msgstr "YouTube Music 的非官方 API"
 
 #: playlistimporter.cpp:24
 #, kde-format
 msgid "No description"
-msgstr ""
+msgstr "无描述"
 
 #: playlistimporter.cpp:62
 #, kde-format
 msgid "No title"
-msgstr ""
+msgstr "无标题"
 
 #: playlistimporter.cpp:64
 #, kde-format
 msgid "No album"
-msgstr ""
+msgstr "无专辑"
