@@ -4,13 +4,13 @@
 # This file is distributed under the same license as the audiotube package.
 #
 # Automatically generated, 2022.
-# SPDX-FileCopyrightText: 2023, 2024, 2025 Kisaragi Hiu <mail@kisaragi-hiu.com>
+# SPDX-FileCopyrightText: 2023, 2024, 2025, 2026 Kisaragi Hiu <mail@kisaragi-hiu.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-20 00:44+0000\n"
-"PO-Revision-Date: 2025-11-20 21:04+0900\n"
+"PO-Revision-Date: 2026-03-02 04:56+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Lokalize 26.03.70\n"
+"X-Generator: Lokalize 25.11.70\n"
 
 #: asyncytmusic.cpp:65
 #, kde-format
@@ -71,8 +71,7 @@ msgid "Share"
 msgstr "分享"
 
 #: contents/ui/AlbumPage.qml:109
-#, fuzzy, kde-format
-#| msgid "Album • %1"
+#, kde-format
 msgctxt "%1 is the artist(s) featured in the album"
 msgid "Album • %1"
 msgstr "專輯 • %1"
@@ -95,15 +94,12 @@ msgid "Artist"
 msgstr "藝人"
 
 #: contents/ui/ArtistPage.qml:128
-#, fuzzy, kde-format
-#| msgid ""
-#| "Video playback is not supported yet. Do you want to play only the audio "
-#| "of \"%1\"?"
+#, kde-format
 msgctxt "%1 is a video title"
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
 "“%1”?"
-msgstr "尚不支援影片播放。您是否要只播放 \"%1\" 的音效？"
+msgstr "尚不支援影片播放。您是否要只播放 \"%1\" 的音訊？"
 
 #: contents/ui/ArtistPage.qml:147 contents/ui/SearchPage.qml:28
 #, kde-format
@@ -128,7 +124,7 @@ msgstr "影片"
 #: contents/ui/BentoCard.qml:158
 #, kde-format
 msgid "More options"
-msgstr ""
+msgstr "更多選項"
 
 #: contents/ui/ConfirmationMessage.qml:16
 #, kde-format
@@ -189,24 +185,23 @@ msgstr "重新命名播放清單"
 #, kde-format
 msgctxt "@title:window"
 msgid "Explore"
-msgstr ""
+msgstr "探索"
 
 #: contents/ui/HeroCard.qml:128
 #, kde-format
 msgid "Featured Pick"
-msgstr ""
+msgstr "精選"
 
 #: contents/ui/HeroCard.qml:167
-#, fuzzy, kde-format
-#| msgid "Play Next"
+#, kde-format
 msgid "Play Now"
-msgstr "接著播放"
+msgstr "現在播放"
 
 #: contents/ui/HomePage.qml:18
 #, kde-format
 msgctxt "@title:window"
 msgid "Home"
-msgstr ""
+msgstr "首頁"
 
 #: contents/ui/LibraryPage.qml:32 contents/ui/LibraryPage.qml:135
 #: contents/ui/NavigationBar.qml:47 contents/ui/NavigationBar.qml:53
@@ -331,8 +326,7 @@ msgid "Mute Audio"
 msgstr "靜音"
 
 #: contents/ui/MaximizedPlayerPage.qml:709
-#, fuzzy, kde-format
-#| msgid "%1%"
+#, kde-format
 msgctxt "%1 is the audio volume in percent"
 msgid "%1%"
 msgstr "%1%"
@@ -369,10 +363,9 @@ msgstr "顯示待播清單"
 
 #: contents/ui/MaximizedPlayerPage.qml:1069
 #: contents/ui/MaximizedPlayerPage.qml:1314
-#, fuzzy, kde-format
-#| msgid "Remove Favorite"
+#, kde-format
 msgid "Remove Song"
-msgstr "移除最愛"
+msgstr "移除歌曲"
 
 #: contents/ui/MaximizedPlayerPage.qml:1104
 #, kde-format
@@ -394,7 +387,7 @@ msgstr "接下來的歌曲"
 msgctxt "song count"
 msgid "%1 song"
 msgid_plural "%1 songs"
-msgstr[0] ""
+msgstr[0] "%1 首歌曲"
 
 #: contents/ui/NavigationBar.qml:23 contents/ui/Sidebar.qml:124
 #, kde-format
@@ -452,10 +445,7 @@ msgid "Unknown"
 msgstr "未知"
 
 #: contents/ui/SearchPage.qml:74
-#, fuzzy, kde-format
-#| msgid ""
-#| "Video playback is not supported yet. Do you want to play only the audio "
-#| "of \"%1\"?"
+#, kde-format
 msgctxt "%1 is a video title"
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
@@ -485,12 +475,12 @@ msgstr "連結已複製到剪貼簿"
 #: contents/ui/Sidebar.qml:108
 #, kde-format
 msgid "Home"
-msgstr ""
+msgstr "首頁"
 
 #: contents/ui/Sidebar.qml:176
 #, kde-format
 msgid "Explore"
-msgstr ""
+msgstr "探索"
 
 #: contents/ui/Sidebar.qml:233
 #, kde-format
@@ -529,10 +519,9 @@ msgid "Stream music from YouTube Music"
 msgstr "從 YouTube Music 串流播放音樂"
 
 #: main.cpp:92
-#, fuzzy, kde-format
-#| msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
+#, kde-format
 msgid "© 2021–2024 Jonah Brüchert, 2021–2024 KDE Community"
-msgstr "© 2021-2024 Jonah Brüchert, 2021-2024 KDE 社群"
+msgstr "© 2021–2024 Jonah Brüchert, 2021–2024 KDE 社群"
 
 #: main.cpp:93
 #, kde-format
