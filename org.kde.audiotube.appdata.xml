@@ -149,12 +149,14 @@ SPDX-License-Identifier: CC0-1.0
           <li xml:lang="he">נוסף עמוד ספרייה שמציג את המועדפים ואת השירים שהתנגנו הכי הרבה</li>
           <li xml:lang="ia">Adde pagina de bibliotheca que monstra favoritos e cantos plus reproducite </li>
           <li xml:lang="it">Aggiungi una pagina della raccolta che mostra i preferiti e i brani più riprodotti</li>
+          <li xml:lang="ka">დაემატა ბიბლიოთეკის გვერდი, რომელშიც ჩანს რჩეულები და ყველაზე ხშირად დაკრული სიმღერები</li>
           <li xml:lang="lt">Pridėtas bibliotekos puslapis, kuriame rodomos mėgstamos ir dažniausiai atkurtos dainos</li>
           <li xml:lang="nl">Voeg een bibliotheekpagina toe waarop favorieten en meest gespeelde nummers worden weergegeven.</li>
           <li xml:lang="pt-BR">Adicionada página à biblioteca que mostra as músicas favoritas e as mais tocadas</li>
           <li xml:lang="ru">Добавлена страница библиотеки с избранными и наиболее прослушиваемыми композициями</li>
           <li xml:lang="sl">Doda stran knjižnice, ki prikazuje priljubljene in najpogosteje predvajane skladbe</li>
           <li xml:lang="uk">Додано сторінку бібліотеки, на якій буде показано улюблені і найчастіше відтворювані композиції</li>
+          <li xml:lang="zh-TW">新增顯示最愛與最常播放歌曲的音樂庫頁面</li>
           <li>Improve layout of the search popup</li>
           <li xml:lang="ar">حُسّن مظهر نافذة البحث المنبثقة</li>
           <li xml:lang="ca">Millora la disposició de la finestra emergent de cerca</li>
@@ -165,12 +167,14 @@ SPDX-License-Identifier: CC0-1.0
           <li xml:lang="he">פריסת חלונית החיפוש הצצה השתפרה</li>
           <li xml:lang="ia">Meliora disposition del popup (emergente) de cerca</li>
           <li xml:lang="it">Migliora la disposizione della finestra di ricerca a comparsa</li>
+          <li xml:lang="ka">გაუმჯობესდა ძებნის მხტუნარას განლაგება</li>
           <li xml:lang="lt">Patobulintas paieškos iškylančiojo lango išdėstymas</li>
           <li xml:lang="nl">Verbeter de indeling van het zoekpop-upvenster.</li>
           <li xml:lang="pt-BR">Melhoria no layout da janela pop-up de pesquisa</li>
           <li xml:lang="ru">Улучшено расположение всплывающего окна поиска</li>
           <li xml:lang="sl">Izboljša postavitev pojavnega okna za iskanje</li>
           <li xml:lang="uk">Удосконалено компонування контекстної панелі пошуку</li>
+          <li xml:lang="zh-TW">改善搜尋彈出視窗的佈局</li>
           <li>General performance improvements including startup</li>
           <li xml:lang="ar">تحسينات عامة في الأداء بما في ذلك بدء التشغيل</li>
           <li xml:lang="ca">Millores generals de rendiment incloent-hi l'inici</li>
@@ -181,12 +185,14 @@ SPDX-License-Identifier: CC0-1.0
           <li xml:lang="he">שיפורי ביצועים כלליים כולל העלייה</li>
           <li xml:lang="ia">Melioramentod de prestation general includente startar</li>
           <li xml:lang="it">Miglioramenti generali delle prestazioni, incluso l'avvio</li>
+          <li xml:lang="ka">ზოგადი წარმადობის გაუმჯობესება, გაშვების ჩათვლით</li>
           <li xml:lang="lt">Bendri našumo patobulinimai, įskaitant programos paleidimą</li>
           <li xml:lang="nl">Algemene prestatieverbeteringen, inclusief opstartproblemen</li>
           <li xml:lang="pt-BR">Melhorias gerais de desempenho, incluindo na inicialização</li>
           <li xml:lang="ru">Улучшена общая производительность, включая время запуска</li>
           <li xml:lang="sl">Splošne izboljšave delovanja, vključno z zagonom</li>
           <li xml:lang="uk">Загальні удосконалення швидкодії, зокрема запуску</li>
+          <li xml:lang="zh-TW">一般效能改善，包含啟動效能</li>
         </ul>
       </description>
     </release>
@@ -204,12 +210,14 @@ SPDX-License-Identifier: CC0-1.0
           <li xml:lang="he">הגרסה של ytmusicapi עודכנה</li>
           <li xml:lang="ia">Actualisa le version de ytmusicapi</li>
           <li xml:lang="it">Aggiorna la versione di ytmusicapi</li>
+          <li xml:lang="ka">განახლდა ytmusicapi-ის ვერსია</li>
           <li xml:lang="lt">Atnaujinta ytmusicapi versija</li>
           <li xml:lang="nl">Werk de versie van ytmusicapi bij</li>
           <li xml:lang="pt-BR">Atualizada a versão do ytmusicapi</li>
           <li xml:lang="ru">Обновлена версия ytmusicapi</li>
           <li xml:lang="sl">Posodobi različico ytmusicapi</li>
           <li xml:lang="uk">Оновлено версію ytmusicapi</li>
+          <li xml:lang="zh-TW">更新 ytmusicapi 版本</li>
           <li>General code-refactoring and translation updates</li>
           <li xml:lang="ar">إعادة هيكلة عامة للكود وتحديثات للترجمة</li>
           <li xml:lang="ca">Actualitzacions generals de reestructuració de codi i traduccions</li>
@@ -220,6 +228,7 @@ SPDX-License-Identifier: CC0-1.0
           <li xml:lang="he">שכתוב קוד כללי ועדכוני תרגומים</li>
           <li xml:lang="ia">Re-factorisation de codice general e actualistiones de traduction</li>
           <li xml:lang="it">Revisione generale del codice e aggiornamenti delle traduzioni</li>
+          <li xml:lang="ka">კოდის რეფაქტორინგი და თარგმანის გაუმჯობესებები</li>
           <li xml:lang="lt">Bendri kodo pertvarkymo ir vertimų atnaujinimai</li>
           <li xml:lang="nl">Algemene herziening van code en vertaalupdates</li>
           <li xml:lang="pt-BR">Atualizações gerais de refatoração do código e tradução</li>
@@ -243,12 +252,14 @@ SPDX-License-Identifier: CC0-1.0
           <li xml:lang="he">הגרסה של ytmusicapi עודכנה</li>
           <li xml:lang="ia">Actualisa le version de ytmusicapi</li>
           <li xml:lang="it">Aggiorna la versione di ytmusicapi</li>
+          <li xml:lang="ka">განახლდა ytmusicapi-ის ვერსია</li>
           <li xml:lang="lt">Atnaujinta ytmusicapi versija</li>
           <li xml:lang="nl">Werk de versie van ytmusicapi bij</li>
           <li xml:lang="pt-BR">Atualizada a versão do ytmusicapi</li>
           <li xml:lang="ru">Обновлена версия ytmusicapi</li>
           <li xml:lang="sl">Posodobi različico ytmusicapi</li>
           <li xml:lang="uk">Оновлено версію ytmusicapi</li>
+          <li xml:lang="zh-TW">更新 ytmusicapi 版本</li>
         </ul>
       </description>
     </release>
