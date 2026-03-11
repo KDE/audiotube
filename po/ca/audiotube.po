@@ -581,12 +581,3 @@ msgstr "Sense títol"
 #, kde-format
 msgid "No album"
 msgstr "Sense àlbum"
-
-#~ msgid "Remove Favorite"
-#~ msgstr "Elimina de les preferides"
-
-#~ msgid "Add Favorite"
-#~ msgstr "Afegeix a les preferides"
-
-#~ msgid "Remove Track"
-#~ msgstr "Elimina la pista"
