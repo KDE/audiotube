@@ -247,6 +247,7 @@ SPDX-License-Identifier: CC0-1.0
           <li xml:lang="sl">Splošne posodobitve preoblikovanja kode in prevoda</li>
           <li xml:lang="tr">Genel kod yeniden düzenleme ve çeviri güncellemeleri yapıldı.</li>
           <li xml:lang="uk">Загальне переформатування програмного коду та оновлення перекладів</li>
+          <li xml:lang="zh-TW">一些程式碼重構與翻譯更新</li>
         </ul>
       </description>
     </release>
