@@ -1,21 +1,21 @@
 # Copyright (C) 2023 This file is copyright:
 # This file is distributed under the same license as the audiotube package.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Vit Pelcak <vit@pelcak.org>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025, 2026 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-20 00:44+0000\n"
-"PO-Revision-Date: 2025-12-02 11:22+0100\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"PO-Revision-Date: 2026-03-16 11:35+0100\n"
+"Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 25.08.3\n"
+"X-Generator: Lokalize 25.12.3\n"
 
 #: asyncytmusic.cpp:65
 #, kde-format
@@ -69,8 +69,7 @@ msgid "Share"
 msgstr "Sdílet"
 
 #: contents/ui/AlbumPage.qml:109
-#, fuzzy, kde-format
-#| msgid "Album • %1"
+#, kde-format
 msgctxt "%1 is the artist(s) featured in the album"
 msgid "Album • %1"
 msgstr "Album • %1"
@@ -93,10 +92,7 @@ msgid "Artist"
 msgstr "Umělec"
 
 #: contents/ui/ArtistPage.qml:128
-#, fuzzy, kde-format
-#| msgid ""
-#| "Video playback is not supported yet. Do you want to play only the audio "
-#| "of \"%1\"?"
+#, kde-format
 msgctxt "%1 is a video title"
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
@@ -189,12 +185,12 @@ msgstr "Přejmenovat seznam skladeb"
 #, kde-format
 msgctxt "@title:window"
 msgid "Explore"
-msgstr ""
+msgstr "Objevovat"
 
 #: contents/ui/HeroCard.qml:128
 #, kde-format
 msgid "Featured Pick"
-msgstr ""
+msgstr "Vybraný tip"
 
 #: contents/ui/HeroCard.qml:167
 #, kde-format
@@ -205,7 +201,7 @@ msgstr "Přehrát nyní"
 #, kde-format
 msgctxt "@title:window"
 msgid "Home"
-msgstr ""
+msgstr "Domů"
 
 #: contents/ui/LibraryPage.qml:32 contents/ui/LibraryPage.qml:135
 #: contents/ui/NavigationBar.qml:47 contents/ui/NavigationBar.qml:53
@@ -330,8 +326,7 @@ msgid "Mute Audio"
 msgstr "Ztlumit zvuk"
 
 #: contents/ui/MaximizedPlayerPage.qml:709
-#, fuzzy, kde-format
-#| msgid "%1%"
+#, kde-format
 msgctxt "%1 is the audio volume in percent"
 msgid "%1%"
 msgstr "%1%"
@@ -368,10 +363,9 @@ msgstr "Zobrazit frontu"
 
 #: contents/ui/MaximizedPlayerPage.qml:1069
 #: contents/ui/MaximizedPlayerPage.qml:1314
-#, fuzzy, kde-format
-#| msgid "Remove Favorite"
+#, kde-format
 msgid "Remove Song"
-msgstr "Odstranit oblíbené"
+msgstr "Odstranit skladbu"
 
 #: contents/ui/MaximizedPlayerPage.qml:1104
 #, kde-format
@@ -393,9 +387,9 @@ msgstr "Nadcházející písně"
 msgctxt "song count"
 msgid "%1 song"
 msgid_plural "%1 songs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%1 skladba"
+msgstr[1] "%1 skladby"
+msgstr[2] "%1 skladeb"
 
 #: contents/ui/NavigationBar.qml:23 contents/ui/Sidebar.qml:124
 #, kde-format
@@ -453,10 +447,7 @@ msgid "Unknown"
 msgstr "Neznámý"
 
 #: contents/ui/SearchPage.qml:74
-#, fuzzy, kde-format
-#| msgid ""
-#| "Video playback is not supported yet. Do you want to play only the audio "
-#| "of \"%1\"?"
+#, kde-format
 msgctxt "%1 is a video title"
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
@@ -532,8 +523,7 @@ msgid "Stream music from YouTube Music"
 msgstr "Přehrávejte hudbu z Hudba YouTube"
 
 #: main.cpp:92
-#, fuzzy, kde-format
-#| msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
+#, kde-format
 msgid "© 2021–2024 Jonah Brüchert, 2021–2024 KDE Community"
 msgstr "© 2021-2024 Jonah Brüchert, 2021-2024 Komunita KDE"
 
