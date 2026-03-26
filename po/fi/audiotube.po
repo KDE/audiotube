@@ -1,13 +1,13 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the audiotube package.
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Tommi Nieminen <translator@legisign.org>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025, 2026 Tommi Nieminen <translator@legisign.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-20 00:44+0000\n"
-"PO-Revision-Date: 2025-10-13 20:42+0300\n"
+"PO-Revision-Date: 2026-02-26 10:05+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -69,8 +69,7 @@ msgid "Share"
 msgstr "Jaa"
 
 #: contents/ui/AlbumPage.qml:109
-#, fuzzy, kde-format
-#| msgid "Album • %1"
+#, kde-format
 msgctxt "%1 is the artist(s) featured in the album"
 msgid "Album • %1"
 msgstr "Albumi • %1"
@@ -93,10 +92,7 @@ msgid "Artist"
 msgstr "Artisti"
 
 #: contents/ui/ArtistPage.qml:128
-#, fuzzy, kde-format
-#| msgid ""
-#| "Video playback is not supported yet. Do you want to play only the audio "
-#| "of \"%1\"?"
+#, kde-format
 msgctxt "%1 is a video title"
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
@@ -330,8 +326,7 @@ msgid "Mute Audio"
 msgstr "Vaimenna ääni"
 
 #: contents/ui/MaximizedPlayerPage.qml:709
-#, fuzzy, kde-format
-#| msgid "%1%"
+#, kde-format
 msgctxt "%1 is the audio volume in percent"
 msgid "%1%"
 msgstr "%1 %"
@@ -368,10 +363,9 @@ msgstr "Näytä jono"
 
 #: contents/ui/MaximizedPlayerPage.qml:1069
 #: contents/ui/MaximizedPlayerPage.qml:1314
-#, fuzzy, kde-format
-#| msgid "Remove Favorite"
+#, kde-format
 msgid "Remove Song"
-msgstr "Poista suosikki"
+msgstr "Poista kappale"
 
 #: contents/ui/MaximizedPlayerPage.qml:1104
 #, kde-format
@@ -452,10 +446,7 @@ msgid "Unknown"
 msgstr "Tuntematon"
 
 #: contents/ui/SearchPage.qml:74
-#, fuzzy, kde-format
-#| msgid ""
-#| "Video playback is not supported yet. Do you want to play only the audio "
-#| "of \"%1\"?"
+#, kde-format
 msgctxt "%1 is a video title"
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
@@ -530,8 +521,7 @@ msgid "Stream music from YouTube Music"
 msgstr "Suoratoista musiikkia YouTube Musicista"
 
 #: main.cpp:92
-#, fuzzy, kde-format
-#| msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
+#, kde-format
 msgid "© 2021–2024 Jonah Brüchert, 2021–2024 KDE Community"
 msgstr "© 2021–2024 Jonah Brüchert, 2021–2024 KDE-yhteisö"
 
