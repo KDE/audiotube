@@ -78,6 +78,7 @@ SPDX-License-Identifier: CC0-1.0
   <summary xml:lang="ro">Aplicație pentru YouTube Music</summary>
   <summary xml:lang="ru">Приложение для работы с YouTube Music</summary>
   <summary xml:lang="sa">YouTube Music app</summary>
+  <summary xml:lang="sk">Aplikácia YouTube Music</summary>
   <summary xml:lang="sl">Aplikacija za glasbo YouTube</summary>
   <summary xml:lang="sv">YouTube musikprogram</summary>
   <summary xml:lang="tr">YouTube Müzik Uygulaması</summary>
@@ -159,6 +160,7 @@ SPDX-License-Identifier: CC0-1.0
           <li xml:lang="nl">Voeg een bibliotheekpagina toe waarop favorieten en meest gespeelde nummers worden weergegeven.</li>
           <li xml:lang="pt-BR">Adicionada página à biblioteca que mostra as músicas favoritas e as mais tocadas</li>
           <li xml:lang="ru">Добавлена страница библиотеки с избранными и наиболее прослушиваемыми композициями</li>
+          <li xml:lang="sk">Pridanie stránky knižnice so zobrazením obľúbených a najhranejších skladieb</li>
           <li xml:lang="sl">Doda stran knjižnice, ki prikazuje priljubljene in najpogosteje predvajane skladbe</li>
           <li xml:lang="tr">Favori ve en çok çalınan şarkıları gösteren bir kitaplık sayfası eklendi.</li>
           <li xml:lang="uk">Додано сторінку бібліотеки, на якій буде показано улюблені і найчастіше відтворювані композиції</li>
@@ -180,6 +182,7 @@ SPDX-License-Identifier: CC0-1.0
           <li xml:lang="nl">Verbeter de indeling van het zoekpop-upvenster.</li>
           <li xml:lang="pt-BR">Melhoria no layout da janela pop-up de pesquisa</li>
           <li xml:lang="ru">Улучшено расположение всплывающего окна поиска</li>
+          <li xml:lang="sk">Zlepšenie rozloženia vyskakovacieho okna vyhľadávania</li>
           <li xml:lang="sl">Izboljša postavitev pojavnega okna za iskanje</li>
           <li xml:lang="tr">Arama açılır penceresinin yerleşimi iyileştirildi.</li>
           <li xml:lang="uk">Удосконалено компонування контекстної панелі пошуку</li>
@@ -201,6 +204,7 @@ SPDX-License-Identifier: CC0-1.0
           <li xml:lang="nl">Algemene prestatieverbeteringen, inclusief opstartproblemen</li>
           <li xml:lang="pt-BR">Melhorias gerais de desempenho, incluindo na inicialização</li>
           <li xml:lang="ru">Улучшена общая производительность, включая время запуска</li>
+          <li xml:lang="sk">Všeobecné zlepšenia výkonu vrátane spúšťania</li>
           <li xml:lang="sl">Splošne izboljšave delovanja, vključno z zagonom</li>
           <li xml:lang="tr">Başlangıç dahil genel başarım iyileştirmeleri yapıldı.</li>
           <li xml:lang="uk">Загальні удосконалення швидкодії, зокрема запуску</li>
@@ -229,6 +233,7 @@ SPDX-License-Identifier: CC0-1.0
           <li xml:lang="nl">Werk de versie van ytmusicapi bij</li>
           <li xml:lang="pt-BR">Atualizada a versão do ytmusicapi</li>
           <li xml:lang="ru">Обновлена версия ytmusicapi</li>
+          <li xml:lang="sk">Aktualizácia verzie ytmusicapi</li>
           <li xml:lang="sl">Posodobi različico ytmusicapi</li>
           <li xml:lang="tr">ytmusicapi sürümü güncellendi.</li>
           <li xml:lang="uk">Оновлено версію ytmusicapi</li>
@@ -250,6 +255,7 @@ SPDX-License-Identifier: CC0-1.0
           <li xml:lang="nl">Algemene herziening van code en vertaalupdates</li>
           <li xml:lang="pt-BR">Atualizações gerais de refatoração do código e tradução</li>
           <li xml:lang="ru">Общий рефакторинг кода и обновления переводов</li>
+          <li xml:lang="sk">Všeobecný refaktoring kódu a aktualizácia prekladov</li>
           <li xml:lang="sl">Splošne posodobitve preoblikovanja kode in prevoda</li>
           <li xml:lang="tr">Genel kod yeniden düzenleme ve çeviri güncellemeleri yapıldı.</li>
           <li xml:lang="uk">Загальне переформатування програмного коду та оновлення перекладів</li>
@@ -278,6 +284,7 @@ SPDX-License-Identifier: CC0-1.0
           <li xml:lang="nl">Werk de versie van ytmusicapi bij</li>
           <li xml:lang="pt-BR">Atualizada a versão do ytmusicapi</li>
           <li xml:lang="ru">Обновлена версия ytmusicapi</li>
+          <li xml:lang="sk">Aktualizácia verzie ytmusicapi</li>
           <li xml:lang="sl">Posodobi različico ytmusicapi</li>
           <li xml:lang="tr">ytmusicapi sürümü güncellendi.</li>
           <li xml:lang="uk">Оновлено версію ytmusicapi</li>
@@ -349,6 +356,7 @@ SPDX-License-Identifier: CC0-1.0
     <p xml:lang="ro">AudioTube poate căuta pe Youtube Music, enumera albume și interpreți, reda liste generate automat, și albume. Aceasta vă permite să întocmiți propriile liste de redare și e adaptată pentru telefoane mobile și calculatoare de birou.</p>
     <p xml:lang="ru">AudioTube позволяет выполнять поиск в сервисе YouTube Music, просматривать списки найденных альбомов и исполнителей, воспроизводить автоматически созданные списки воспроизведения и альбомы, а также составлять свои собственные списки воспроизведения. Приложение адаптировано для работы на мобильных телефонах и настольных компьютерах.</p>
     <p xml:lang="sa">AudioTube YouTube Music अन्वेष्टुं शक्नोति, एल्बमान् कलाकारान् च सूचीतुं शक्नोति, स्वयमेव उत्पन्नं प्लेलिस्ट्, एल्बम् वादयितुं शक्नोति तथा च स्वस्य प्लेलिस्ट् एकत्र स्थापयितुं शक्नोति। इदं मोबाईलफोनेषु, डेस्कटॉप् सङ्गणकेषु च अनुकूलितम् अस्ति ।</p>
+    <p xml:lang="sk">AudioTube dokáže vyhľadávať na YouTube Music, zobrazovať albumy a interpretov, prehrávať automaticky generované zoznamy skladieb, albumy a umožňuje vytvárať vlastný zoznam skladieb.</p>
     <p xml:lang="sl">AudioTube lahko išče YouTube Music, navaja albume in izvajalce, predvaja samodejno ustvarjene sezname predvajanja, albume in omogoča sestavljanje lastnega seznama predvajanja. Prilagojena je mobilnim telefonom in namiznim računalnikom.</p>
     <p xml:lang="sv">AudioTube kan söka på YouTube Music, lista album och artister, spela upp automatiskt genererade spellistor, album och låter dig sammanställa egna spellistor. Det är anpassat för mobiltelefoner och skrivbordsdatorer.</p>
     <p xml:lang="tr">AudioTube, YouTube Müzik’te arama yapabilir; albümleri, sanatçıları listeler; kendiliğinden üretilmiş çalma listelerini, albümleri çalar ve kendi çalma listenizi oluşturmanıza izin verir. Masaüstü bilgisayarlar ve cep telefonları için uyarlanmıştır.</p>
