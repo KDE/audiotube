@@ -164,6 +164,7 @@ SPDX-License-Identifier: CC0-1.0
           <li xml:lang="sl">Doda stran knjižnice, ki prikazuje priljubljene in najpogosteje predvajane skladbe</li>
           <li xml:lang="tr">Favori ve en çok çalınan şarkıları gösteren bir kitaplık sayfası eklendi.</li>
           <li xml:lang="uk">Додано сторінку бібліотеки, на якій буде показано улюблені і найчастіше відтворювані композиції</li>
+          <li xml:lang="zh-CN">添加显示收藏夹和最常播放的歌曲的库页面</li>
           <li xml:lang="zh-TW">新增顯示最愛與最常播放歌曲的音樂庫頁面</li>
           <li>Improve layout of the search popup</li>
           <li xml:lang="ar">حُسّن مظهر نافذة البحث المنبثقة</li>
@@ -186,6 +187,7 @@ SPDX-License-Identifier: CC0-1.0
           <li xml:lang="sl">Izboljša postavitev pojavnega okna za iskanje</li>
           <li xml:lang="tr">Arama açılır penceresinin yerleşimi iyileştirildi.</li>
           <li xml:lang="uk">Удосконалено компонування контекстної панелі пошуку</li>
+          <li xml:lang="zh-CN">改进搜索弹出窗口的布局</li>
           <li xml:lang="zh-TW">改善搜尋彈出視窗的佈局</li>
           <li>General performance improvements including startup</li>
           <li xml:lang="ar">تحسينات عامة في الأداء بما في ذلك بدء التشغيل</li>
@@ -208,6 +210,7 @@ SPDX-License-Identifier: CC0-1.0
           <li xml:lang="sl">Splošne izboljšave delovanja, vključno z zagonom</li>
           <li xml:lang="tr">Başlangıç dahil genel başarım iyileştirmeleri yapıldı.</li>
           <li xml:lang="uk">Загальні удосконалення швидкодії, зокрема запуску</li>
+          <li xml:lang="zh-CN">常规性能改进，包括启动</li>
           <li xml:lang="zh-TW">一般效能改善，包含啟動效能</li>
         </ul>
       </description>
@@ -237,6 +240,7 @@ SPDX-License-Identifier: CC0-1.0
           <li xml:lang="sl">Posodobi različico ytmusicapi</li>
           <li xml:lang="tr">ytmusicapi sürümü güncellendi.</li>
           <li xml:lang="uk">Оновлено версію ytmusicapi</li>
+          <li xml:lang="zh-CN">更新 ytmusicapi 版本</li>
           <li xml:lang="zh-TW">更新 ytmusicapi 版本</li>
           <li>General code-refactoring and translation updates</li>
           <li xml:lang="ar">إعادة هيكلة عامة للكود وتحديثات للترجمة</li>
@@ -259,6 +263,7 @@ SPDX-License-Identifier: CC0-1.0
           <li xml:lang="sl">Splošne posodobitve preoblikovanja kode in prevoda</li>
           <li xml:lang="tr">Genel kod yeniden düzenleme ve çeviri güncellemeleri yapıldı.</li>
           <li xml:lang="uk">Загальне переформатування програмного коду та оновлення перекладів</li>
+          <li xml:lang="zh-CN">常规代码重构和翻译更新</li>
           <li xml:lang="zh-TW">一些程式碼重構與翻譯更新</li>
         </ul>
       </description>
@@ -288,6 +293,7 @@ SPDX-License-Identifier: CC0-1.0
           <li xml:lang="sl">Posodobi različico ytmusicapi</li>
           <li xml:lang="tr">ytmusicapi sürümü güncellendi.</li>
           <li xml:lang="uk">Оновлено версію ytmusicapi</li>
+          <li xml:lang="zh-CN">更新 ytmusicapi 版本</li>
           <li xml:lang="zh-TW">更新 ytmusicapi 版本</li>
         </ul>
       </description>
