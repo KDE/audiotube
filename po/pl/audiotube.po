@@ -1,22 +1,23 @@
 # Copyright (C) 2024 This file is copyright:
 # This file is distributed under the same license as the audiotube package.
-#
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
+# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2026 Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>
 # Ignacy Kajdan <ignacy.kajdan@gmail.com>, 2021.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-20 00:44+0000\n"
-"PO-Revision-Date: 2024-04-13 18:52+0200\n"
+"PO-Revision-Date: 2026-04-18 14:22+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
-"Language-Team: Polish <kde-i18n-doc@kde.org>\n"
+"Language-Team: pl\n"
 "Language: pl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2);\n"
+"X-Generator: Lokalize 25.08.2\n"
 
 #: asyncytmusic.cpp:65
 #, kde-format
@@ -70,8 +71,7 @@ msgid "Share"
 msgstr "Udostępnij"
 
 #: contents/ui/AlbumPage.qml:109
-#, fuzzy, kde-format
-#| msgid "Album • %1"
+#, kde-format
 msgctxt "%1 is the artist(s) featured in the album"
 msgid "Album • %1"
 msgstr "Album • %1"
@@ -94,10 +94,7 @@ msgid "Artist"
 msgstr "Wykonawca"
 
 #: contents/ui/ArtistPage.qml:128
-#, fuzzy, kde-format
-#| msgid ""
-#| "Video playback is not supported yet. Do you want to play only the audio "
-#| "of \"%1\"?"
+#, kde-format
 msgctxt "%1 is a video title"
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
@@ -129,7 +126,7 @@ msgstr "Filmy"
 #: contents/ui/BentoCard.qml:158
 #, kde-format
 msgid "More options"
-msgstr ""
+msgstr "Więcej ustawień"
 
 #: contents/ui/ConfirmationMessage.qml:16
 #, kde-format
@@ -190,30 +187,28 @@ msgstr "Przemianuj listę odtwarzania"
 #, kde-format
 msgctxt "@title:window"
 msgid "Explore"
-msgstr ""
+msgstr "Odkrywaj"
 
 #: contents/ui/HeroCard.qml:128
 #, kde-format
 msgid "Featured Pick"
-msgstr ""
+msgstr "Zbiór wyróżnionych"
 
 #: contents/ui/HeroCard.qml:167
-#, fuzzy, kde-format
-#| msgid "Play Next"
+#, kde-format
 msgid "Play Now"
-msgstr "Odtwórz następny"
+msgstr "Odtwórz teraz"
 
 #: contents/ui/HomePage.qml:18
 #, kde-format
 msgctxt "@title:window"
 msgid "Home"
-msgstr ""
+msgstr "Strona domowa"
 
 #: contents/ui/LibraryPage.qml:32 contents/ui/LibraryPage.qml:135
 #: contents/ui/NavigationBar.qml:47 contents/ui/NavigationBar.qml:53
 #: contents/ui/Sidebar.qml:155 contents/ui/Sidebar.qml:160
-#, fuzzy, kde-format
-#| msgid "Favourites"
+#, kde-format
 msgid "Favorites"
 msgstr "Ulubione"
 
@@ -224,8 +219,7 @@ msgid "Show All"
 msgstr "Pokaż wszystkie"
 
 #: contents/ui/LibraryPage.qml:160
-#, fuzzy, kde-format
-#| msgid "No Favourites Yet"
+#, kde-format
 msgid "No Favorites Yet"
 msgstr "Nie ma jeszcze żadnych ulubionych"
 
@@ -309,14 +303,12 @@ msgid "No media playing"
 msgstr "Nic nie jest odtwarzane"
 
 #: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:107
-#, fuzzy, kde-format
-#| msgid "Remove from Favourites"
+#, kde-format
 msgid "Remove from Favorites"
 msgstr "Usuń z ulubionych"
 
 #: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:107
-#, fuzzy, kde-format
-#| msgid "Add to Favourites"
+#, kde-format
 msgid "Add to Favorites"
 msgstr "Dodaj do ulubionych"
 
@@ -336,8 +328,7 @@ msgid "Mute Audio"
 msgstr "Wycisz dźwięk"
 
 #: contents/ui/MaximizedPlayerPage.qml:709
-#, fuzzy, kde-format
-#| msgid "%1%"
+#, kde-format
 msgctxt "%1 is the audio volume in percent"
 msgid "%1%"
 msgstr "%1%"
@@ -374,10 +365,9 @@ msgstr "Pokaż kolejkę"
 
 #: contents/ui/MaximizedPlayerPage.qml:1069
 #: contents/ui/MaximizedPlayerPage.qml:1314
-#, fuzzy, kde-format
-#| msgid "Remove Favourite"
+#, kde-format
 msgid "Remove Song"
-msgstr "Usuń z ulubionych"
+msgstr "Usuń utwór"
 
 #: contents/ui/MaximizedPlayerPage.qml:1104
 #, kde-format
@@ -399,9 +389,9 @@ msgstr "Nadchodzące utwory"
 msgctxt "song count"
 msgid "%1 song"
 msgid_plural "%1 songs"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "%1 utwór"
+msgstr[1] "%1 utwory"
+msgstr[2] "%1 utworów"
 
 #: contents/ui/NavigationBar.qml:23 contents/ui/Sidebar.qml:124
 #, kde-format
@@ -459,10 +449,7 @@ msgid "Unknown"
 msgstr "Nieznany"
 
 #: contents/ui/SearchPage.qml:74
-#, fuzzy, kde-format
-#| msgid ""
-#| "Video playback is not supported yet. Do you want to play only the audio "
-#| "of \"%1\"?"
+#, kde-format
 msgctxt "%1 is a video title"
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
@@ -494,12 +481,12 @@ msgstr "Skopiowano odnośnik do schowka"
 #: contents/ui/Sidebar.qml:108
 #, kde-format
 msgid "Home"
-msgstr ""
+msgstr "Strona domowa"
 
 #: contents/ui/Sidebar.qml:176
 #, kde-format
 msgid "Explore"
-msgstr ""
+msgstr "Odkrywaj"
 
 #: contents/ui/Sidebar.qml:233
 #, kde-format
@@ -538,10 +525,9 @@ msgid "Stream music from YouTube Music"
 msgstr "Strumieniuj muzykę z Muzyki YouTube"
 
 #: main.cpp:92
-#, fuzzy, kde-format
-#| msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
+#, kde-format
 msgid "© 2021–2024 Jonah Brüchert, 2021–2024 KDE Community"
-msgstr "© 2021-2024 Jonah Brüchert, 2021-2024 Społeczność KDE"
+msgstr "© 2021–2024 Jonah Brüchert, 2021–2024 Społeczność KDE"
 
 #: main.cpp:93
 #, kde-format
