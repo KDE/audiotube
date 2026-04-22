@@ -6,7 +6,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-02-20 00:44+0000\n"
-"PO-Revision-Date: 2025-10-26 13:33+0100\n"
+"PO-Revision-Date: 2026-04-21 18:29+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
@@ -14,7 +14,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 25.08.2\n"
+"X-Generator: Lokalize 25.12.3\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -25,7 +25,7 @@ msgid ""
 "Running with untested version of ytmusicapi %1. If you experience errors, "
 "please report them to your distribution."
 msgstr ""
-"Køyrer med utesta versejon av ytmusicapi %1. Opplever du feil, meld frå om "
+"Køyrer med utesta versjon av ytmusicapi %1. Opplever du feil, meld frå om "
 "desse til distribusjonen din."
 
 #: contents/ui/AlbumPage.qml:69 contents/ui/LibraryPage.qml:39
@@ -71,8 +71,7 @@ msgid "Share"
 msgstr "Del"
 
 #: contents/ui/AlbumPage.qml:109
-#, fuzzy, kde-format
-#| msgid "Album • %1"
+#, kde-format
 msgctxt "%1 is the artist(s) featured in the album"
 msgid "Album • %1"
 msgstr "Album • %1"
@@ -95,10 +94,7 @@ msgid "Artist"
 msgstr "Artist"
 
 #: contents/ui/ArtistPage.qml:128
-#, fuzzy, kde-format
-#| msgid ""
-#| "Video playback is not supported yet. Do you want to play only the audio "
-#| "of \"%1\"?"
+#, kde-format
 msgctxt "%1 is a video title"
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
@@ -128,7 +124,7 @@ msgstr "Videoar"
 #: contents/ui/BentoCard.qml:158
 #, kde-format
 msgid "More options"
-msgstr ""
+msgstr "Fleire val"
 
 #: contents/ui/ConfirmationMessage.qml:16
 #, kde-format
@@ -189,24 +185,23 @@ msgstr "Endra namn på speleliste"
 #, kde-format
 msgctxt "@title:window"
 msgid "Explore"
-msgstr ""
+msgstr "Utforsk"
 
 #: contents/ui/HeroCard.qml:128
 #, kde-format
 msgid "Featured Pick"
-msgstr ""
+msgstr "Framheva"
 
 #: contents/ui/HeroCard.qml:167
-#, fuzzy, kde-format
-#| msgid "Play Next"
+#, kde-format
 msgid "Play Now"
-msgstr "Spel som neste"
+msgstr "Spel no"
 
 #: contents/ui/HomePage.qml:18
 #, kde-format
 msgctxt "@title:window"
 msgid "Home"
-msgstr ""
+msgstr "Heim"
 
 #: contents/ui/LibraryPage.qml:32 contents/ui/LibraryPage.qml:135
 #: contents/ui/NavigationBar.qml:47 contents/ui/NavigationBar.qml:53
@@ -331,8 +326,7 @@ msgid "Mute Audio"
 msgstr "Demp lyd"
 
 #: contents/ui/MaximizedPlayerPage.qml:709
-#, fuzzy, kde-format
-#| msgid "%1%"
+#, kde-format
 msgctxt "%1 is the audio volume in percent"
 msgid "%1%"
 msgstr "%1 %"
@@ -369,10 +363,9 @@ msgstr "Vis avspelingskøen"
 
 #: contents/ui/MaximizedPlayerPage.qml:1069
 #: contents/ui/MaximizedPlayerPage.qml:1314
-#, fuzzy, kde-format
-#| msgid "Remove Favorite"
+#, kde-format
 msgid "Remove Song"
-msgstr "Fjern frå favorittar"
+msgstr "Fjern song"
 
 #: contents/ui/MaximizedPlayerPage.qml:1104
 #, kde-format
@@ -394,8 +387,8 @@ msgstr "Framtidige songar"
 msgctxt "song count"
 msgid "%1 song"
 msgid_plural "%1 songs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "%1 song"
+msgstr[1] "%1 songar"
 
 #: contents/ui/NavigationBar.qml:23 contents/ui/Sidebar.qml:124
 #, kde-format
@@ -453,15 +446,13 @@ msgid "Unknown"
 msgstr "Ukjend"
 
 #: contents/ui/SearchPage.qml:74
-#, fuzzy, kde-format
-#| msgid ""
-#| "Video playback is not supported yet. Do you want to play only the audio "
-#| "of \"%1\"?"
+#, kde-format
 msgctxt "%1 is a video title"
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
 "\"%1\"?"
-msgstr "Videoavspeling er endå ikkje støtta. Vil du spela av lyden til «%1»?"
+msgstr ""
+"Videoavspeling er ikkje støtta enno. Vil du spela av berre lyden til «%1»?"
 
 #: contents/ui/SearchWithDropdown.qml:339
 #, kde-format
@@ -486,12 +477,12 @@ msgstr "Lenkje kopiert til utklippstavla"
 #: contents/ui/Sidebar.qml:108
 #, kde-format
 msgid "Home"
-msgstr ""
+msgstr "Heim"
 
 #: contents/ui/Sidebar.qml:176
 #, kde-format
 msgid "Explore"
-msgstr ""
+msgstr "Utforsk"
 
 #: contents/ui/Sidebar.qml:233
 #, kde-format
@@ -530,8 +521,7 @@ msgid "Stream music from YouTube Music"
 msgstr "Straum musikk frå YouTube Music"
 
 #: main.cpp:92
-#, fuzzy, kde-format
-#| msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
+#, kde-format
 msgid "© 2021–2024 Jonah Brüchert, 2021–2024 KDE Community"
 msgstr "© 2021–2024 Jonah Brüchert, 2021–2024 KDE-fellesskapet"
 
