@@ -158,6 +158,7 @@ SPDX-License-Identifier: CC0-1.0
           <li xml:lang="lt">Pridėtas bibliotekos puslapis, kuriame rodomos mėgstamos ir dažniausiai atkurtos dainos</li>
           <li xml:lang="lv">Pievienota bibliotēkas lapa, kurā redzama izlase un biežāk atskaņotie skaņdarbi</li>
           <li xml:lang="nl">Voeg een bibliotheekpagina toe waarop favorieten en meest gespeelde nummers worden weergegeven.</li>
+          <li xml:lang="nn">Lagt til bibliotekside med favorittar og dei oftast avspela songane</li>
           <li xml:lang="pt-BR">Adicionada página à biblioteca que mostra as músicas favoritas e as mais tocadas</li>
           <li xml:lang="ru">Добавлена страница библиотеки с избранными и наиболее прослушиваемыми композициями</li>
           <li xml:lang="sk">Pridanie stránky knižnice so zobrazením obľúbených a najhranejších skladieb</li>
@@ -181,6 +182,7 @@ SPDX-License-Identifier: CC0-1.0
           <li xml:lang="lt">Patobulintas paieškos iškylančiojo lango išdėstymas</li>
           <li xml:lang="lv">Uzlabots meklēšanas uzlecošais logs</li>
           <li xml:lang="nl">Verbeter de indeling van het zoekpop-upvenster.</li>
+          <li xml:lang="nn">Forbetra utforming av søkje-sprettoppvindauget</li>
           <li xml:lang="pt-BR">Melhoria no layout da janela pop-up de pesquisa</li>
           <li xml:lang="ru">Улучшено расположение всплывающего окна поиска</li>
           <li xml:lang="sk">Zlepšenie rozloženia vyskakovacieho okna vyhľadávania</li>
@@ -204,6 +206,7 @@ SPDX-License-Identifier: CC0-1.0
           <li xml:lang="lt">Bendri našumo patobulinimai, įskaitant programos paleidimą</li>
           <li xml:lang="lv">Pamata veiktspējas uzlabojumi, ieskaitot palaišanu</li>
           <li xml:lang="nl">Algemene prestatieverbeteringen, inclusief opstartproblemen</li>
+          <li xml:lang="nn">Generelle ytingsforbetringar, blant anna ved oppstart</li>
           <li xml:lang="pt-BR">Melhorias gerais de desempenho, incluindo na inicialização</li>
           <li xml:lang="ru">Улучшена общая производительность, включая время запуска</li>
           <li xml:lang="sk">Všeobecné zlepšenia výkonu vrátane spúšťania</li>
@@ -234,6 +237,7 @@ SPDX-License-Identifier: CC0-1.0
           <li xml:lang="lt">Atnaujinta ytmusicapi versija</li>
           <li xml:lang="lv">Atjaunināta „ytmusicapi“ versija</li>
           <li xml:lang="nl">Werk de versie van ytmusicapi bij</li>
+          <li xml:lang="nn">Oppdatert versjon av ytmusicapi</li>
           <li xml:lang="pt-BR">Atualizada a versão do ytmusicapi</li>
           <li xml:lang="ru">Обновлена версия ytmusicapi</li>
           <li xml:lang="sk">Aktualizácia verzie ytmusicapi</li>
@@ -257,6 +261,7 @@ SPDX-License-Identifier: CC0-1.0
           <li xml:lang="lt">Bendri kodo pertvarkymo ir vertimų atnaujinimai</li>
           <li xml:lang="lv">Pamata koda pārstrukturēšana un tulkojumu atjauninājumi</li>
           <li xml:lang="nl">Algemene herziening van code en vertaalupdates</li>
+          <li xml:lang="nn">Generell kode­refaktorering og oppdaterte omsetjingar</li>
           <li xml:lang="pt-BR">Atualizações gerais de refatoração do código e tradução</li>
           <li xml:lang="ru">Общий рефакторинг кода и обновления переводов</li>
           <li xml:lang="sk">Všeobecný refaktoring kódu a aktualizácia prekladov</li>
@@ -287,6 +292,7 @@ SPDX-License-Identifier: CC0-1.0
           <li xml:lang="lt">Atnaujinta ytmusicapi versija</li>
           <li xml:lang="lv">Atjaunināta „ytmusicapi“ versija</li>
           <li xml:lang="nl">Werk de versie van ytmusicapi bij</li>
+          <li xml:lang="nn">Oppdatert versjon av ytmusicapi</li>
           <li xml:lang="pt-BR">Atualizada a versão do ytmusicapi</li>
           <li xml:lang="ru">Обновлена версия ytmusicapi</li>
           <li xml:lang="sk">Aktualizácia verzie ytmusicapi</li>
