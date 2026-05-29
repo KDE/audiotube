@@ -38,21 +38,34 @@ QUrl VideoInfoExtractor::audioUrl() const
 
     std::vector<video_info::Format> audioFormats;
 
+    qWarning() << "available formats:";
+    for (const auto &f : m_videoInfo.formats) {
+        qWarning() << "  " << "acodec" << f.acodec << "format_id" << f.format_id << "quality" << f.quality << "vcodec" << f.vcodec;
+    }
+
     // filter audio only formats
     std::copy_if(m_videoInfo.formats.begin(), m_videoInfo.formats.end(), std::back_inserter(audioFormats),
         [](const video_info::Format &format) {
         return (!format.acodec.has_value() || format.acodec != "none") && format.vcodec == "none";
     });
 
-    if (audioFormats.empty()) {
-        qWarning() << "No audio track found";
-        return {};
-    }
-
-    std::sort(audioFormats.begin(), audioFormats.end(),
-              [](const video_info::Format &a, const video_info::Format &b) {
+    std::sort(audioFormats.begin(), audioFormats.end(), [](const video_info::Format &a, const video_info::Format &b) {
         return a.quality > b.quality;
     });
+
+    if (audioFormats.empty()) {
+        qWarning() << "No audio track found, falling back to worst-quality video";
+
+        std::copy_if(m_videoInfo.formats.begin(), m_videoInfo.formats.end(), std::back_inserter(audioFormats), [](const video_info::Format &format) {
+            return format.acodec != "none";
+        });
+
+        std::sort(audioFormats.begin(), audioFormats.end(), [](const video_info::Format &a, const video_info::Format &b) {
+            return a.quality < b.quality;
+        });
+    }
+
+    qWarning() << "chosen url:" << audioFormats.front().url;
 
     return QUrl(QString::fromStdString(audioFormats.front().url));
 }
