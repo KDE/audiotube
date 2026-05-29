@@ -65,6 +65,10 @@ QUrl VideoInfoExtractor::audioUrl() const
         });
     }
 
+    if (audioFormats.empty()) {
+        return {};
+    }
+
     qWarning() << "chosen url:" << audioFormats.front().url;
 
     return QUrl(QString::fromStdString(audioFormats.front().url));
