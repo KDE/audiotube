@@ -1,0 +1,574 @@
+# Uyghur translation for audiotube.
+# Copyright (C) YEAR This file is copyright:
+# This file is distributed under the same license as the audiotube package.
+# Abduqadir Abliz <sahranbay@gmail.com>, 2026., YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: audiotube\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2026-02-20 00:44+0000\n"
+"PO-Revision-Date: 2026-05-28 17:12-0400\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
+"Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
+"Language: ug\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.9\n"
+
+#: asyncytmusic.cpp:65
+#, kde-format
+msgid ""
+"Running with untested version of ytmusicapi %1. If you experience errors, "
+"please report them to your distribution."
+msgstr ""
+
+#: contents/ui/AlbumPage.qml:69 contents/ui/LibraryPage.qml:39
+#: contents/ui/LibraryPage.qml:65 contents/ui/LibraryPage.qml:91
+#: contents/ui/LibraryPage.qml:236 contents/ui/LibraryPage.qml:262
+#: contents/ui/LibraryPage.qml:286 contents/ui/LocalPlaylistPage.qml:71
+#: contents/ui/LocalPlaylistPage.qml:92 contents/ui/PlaybackHistory.qml:65
+#: contents/ui/PlaybackHistory.qml:92 contents/ui/PlaylistPage.qml:66
+#: contents/ui/PlaylistPage.qml:87
+#, kde-format
+msgid "Play"
+msgstr "ياڭرات"
+
+#: contents/ui/AlbumPage.qml:77 contents/ui/ArtistPage.qml:82
+#: contents/ui/LibraryPage.qml:46 contents/ui/LibraryPage.qml:71
+#: contents/ui/LibraryPage.qml:101 contents/ui/LibraryPage.qml:243
+#: contents/ui/LibraryPage.qml:268 contents/ui/LibraryPage.qml:295
+#: contents/ui/LocalPlaylistPage.qml:66 contents/ui/LocalPlaylistPage.qml:98
+#: contents/ui/PlaybackHistory.qml:53 contents/ui/PlaybackHistory.qml:105
+#: contents/ui/PlaylistPage.qml:59 contents/ui/PlaylistPage.qml:94
+#, kde-format
+msgid "Shuffle"
+msgstr "تەرتىپسىز"
+
+#: contents/ui/AlbumPage.qml:86 contents/ui/LibraryPage.qml:76
+#: contents/ui/LibraryPage.qml:111 contents/ui/LibraryPage.qml:273
+#: contents/ui/LibraryPage.qml:303 contents/ui/LocalPlaylistPage.qml:103
+#: contents/ui/PlaybackHistory.qml:117 contents/ui/PlaylistPage.qml:102
+#, kde-format
+msgid "Append to queue"
+msgstr ""
+
+#: contents/ui/AlbumPage.qml:92 contents/ui/ArtistPage.qml:90
+#: contents/ui/PlaylistPage.qml:112
+#, kde-format
+msgid "Open in Browser"
+msgstr ""
+
+#: contents/ui/AlbumPage.qml:98 contents/ui/ArtistPage.qml:95
+#: contents/ui/PlaylistPage.qml:117
+#, kde-format
+msgid "Share"
+msgstr "ھەمبەھىر"
+
+#: contents/ui/AlbumPage.qml:109
+#, kde-format
+msgctxt "%1 is the artist(s) featured in the album"
+msgid "Album • %1"
+msgstr ""
+
+#: contents/ui/AlbumPage.qml:166 contents/ui/ArtistPage.qml:200
+#: contents/ui/LocalPlaylistPage.qml:167 contents/ui/PlaybackHistory.qml:198
+#: contents/ui/PlaylistPage.qml:189 contents/ui/SearchPage.qml:149
+#, kde-format
+msgid "More"
+msgstr "تېخىمۇ كۆپ"
+
+#: contents/ui/ArtistPage.qml:76
+#, kde-format
+msgid "Radio"
+msgstr "رادىيو"
+
+#: contents/ui/ArtistPage.qml:104
+#, kde-format
+msgid "Artist"
+msgstr "ئورۇنلىغۇچى"
+
+#: contents/ui/ArtistPage.qml:128
+#, kde-format
+msgctxt "%1 is a video title"
+msgid ""
+"Video playback is not supported yet. Do you want to play only the audio of "
+"“%1”?"
+msgstr ""
+
+#: contents/ui/ArtistPage.qml:147 contents/ui/SearchPage.qml:28
+#, kde-format
+msgid "Albums"
+msgstr "سۈرەتدان"
+
+#: contents/ui/ArtistPage.qml:149
+#, kde-format
+msgid "Singles"
+msgstr ""
+
+#: contents/ui/ArtistPage.qml:151 contents/ui/SearchPage.qml:34
+#, kde-format
+msgid "Songs"
+msgstr ""
+
+#: contents/ui/ArtistPage.qml:153 contents/ui/SearchPage.qml:36
+#, kde-format
+msgid "Videos"
+msgstr "سىن"
+
+#: contents/ui/BentoCard.qml:158
+#, kde-format
+msgid "More options"
+msgstr "تېخىمۇ كۆپ تاللانما"
+
+#: contents/ui/ConfirmationMessage.qml:16
+#, kde-format
+msgid "OK"
+msgstr "جەزملە"
+
+#: contents/ui/ConfirmationMessage.qml:21
+#, kde-format
+msgid "Cancel"
+msgstr "ۋاز كەچ"
+
+#: contents/ui/dialogs/AddPlaylistDialog.qml:15
+#, kde-format
+msgid "Add playlist"
+msgstr ""
+
+#: contents/ui/dialogs/AddPlaylistDialog.qml:21
+#: contents/ui/dialogs/RenamePlaylistDialog.qml:22
+#, kde-format
+msgid "Playlist Title"
+msgstr ""
+
+#: contents/ui/dialogs/AddPlaylistDialog.qml:26
+#: contents/ui/dialogs/RenamePlaylistDialog.qml:28
+#, kde-format
+msgid "Playlist Description"
+msgstr ""
+
+#: contents/ui/dialogs/ImportPlaylistDialog.qml:15
+#, kde-format
+msgid "Import playlist"
+msgstr ""
+
+#: contents/ui/dialogs/ImportPlaylistDialog.qml:21
+#, kde-format
+msgid "Playlist URL (Youtube)"
+msgstr ""
+
+#: contents/ui/dialogs/PlaylistDialog.qml:15
+#, kde-format
+msgid "Add Song to Playlist"
+msgstr ""
+
+#: contents/ui/dialogs/PlaylistDialog.qml:27
+#: contents/ui/LocalPlaylistsPage.qml:105
+#: contents/ui/LocalPlaylistsPage.qml:131
+#: contents/ui/LocalPlaylistsPage.qml:149
+#, kde-format
+msgid "New Playlist"
+msgstr ""
+
+#: contents/ui/dialogs/RenamePlaylistDialog.qml:16
+#, kde-format
+msgid "Rename playlist"
+msgstr ""
+
+#: contents/ui/ExplorePage.qml:21
+#, kde-format
+msgctxt "@title:window"
+msgid "Explore"
+msgstr ""
+
+#: contents/ui/HeroCard.qml:128
+#, kde-format
+msgid "Featured Pick"
+msgstr ""
+
+#: contents/ui/HeroCard.qml:167
+#, kde-format
+msgid "Play Now"
+msgstr ""
+
+#: contents/ui/HomePage.qml:18
+#, kde-format
+msgctxt "@title:window"
+msgid "Home"
+msgstr "باش بەت"
+
+#: contents/ui/LibraryPage.qml:32 contents/ui/LibraryPage.qml:135
+#: contents/ui/NavigationBar.qml:47 contents/ui/NavigationBar.qml:53
+#: contents/ui/Sidebar.qml:155 contents/ui/Sidebar.qml:160
+#, kde-format
+msgid "Favorites"
+msgstr "يىغقۇچ"
+
+#: contents/ui/LibraryPage.qml:130 contents/ui/LibraryPage.qml:323
+#: contents/ui/LibraryPage.qml:426
+#, kde-format
+msgid "Show All"
+msgstr "ھەممىنى كۆرسەت"
+
+#: contents/ui/LibraryPage.qml:160
+#, kde-format
+msgid "No Favorites Yet"
+msgstr ""
+
+#: contents/ui/LibraryPage.qml:229
+#, kde-format
+msgid "Most played"
+msgstr ""
+
+#: contents/ui/LibraryPage.qml:328 contents/ui/NavigationBar.qml:60
+#: contents/ui/NavigationBar.qml:66 contents/ui/Sidebar.qml:192
+#: contents/ui/Sidebar.qml:197
+#, kde-format
+msgid "Played Songs"
+msgstr ""
+
+#: contents/ui/LibraryPage.qml:354
+#, kde-format
+msgid "No Songs Played Yet"
+msgstr ""
+
+#: contents/ui/LibraryPage.qml:414 contents/ui/LocalPlaylistsPage.qml:18
+#: contents/ui/LocalPlaylistsPage.qml:82 contents/ui/NavigationBar.qml:74
+#: contents/ui/SearchPage.qml:32 contents/ui/Sidebar.qml:212
+#, kde-format
+msgid "Playlists"
+msgstr "قويۇش تىزىمى"
+
+#: contents/ui/LibraryPage.qml:453
+#, kde-format
+msgid "No Playlists Yet"
+msgstr ""
+
+#: contents/ui/LibraryPage.qml:476 contents/ui/LibraryPage.qml:498
+#: contents/ui/LocalPlaylistsPage.qml:36 contents/ui/LocalPlaylistsPage.qml:58
+#, kde-format
+msgid "Rename"
+msgstr "ئات ئۆزگەرت"
+
+#: contents/ui/LibraryPage.qml:485 contents/ui/LibraryPage.qml:506
+#: contents/ui/LocalPlaylistsPage.qml:45 contents/ui/LocalPlaylistsPage.qml:66
+#, kde-format
+msgid "Delete"
+msgstr "ئۆچۈر"
+
+#: contents/ui/LocalPlaylistPage.qml:22
+#, kde-format
+msgid "Remove from Playlist"
+msgstr ""
+
+#: contents/ui/LocalPlaylistPage.qml:79
+#, kde-format
+msgid "This playlist is still empty"
+msgstr ""
+
+#: contents/ui/LocalPlaylistsPage.qml:113
+#: contents/ui/LocalPlaylistsPage.qml:136
+#: contents/ui/LocalPlaylistsPage.qml:154 contents/ui/PlaylistPage.qml:107
+#, kde-format
+msgid "Import Playlist"
+msgstr ""
+
+#: contents/ui/Main.qml:160 main.cpp:88
+#, kde-format
+msgid "AudioTube"
+msgstr "AudioTube"
+
+#: contents/ui/Main.qml:311
+#, kde-format
+msgid "No song playing"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:105
+#, kde-format
+msgid "Close Maximized Player"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:279
+#: contents/ui/MinimizedPlayerControls.qml:112
+#, kde-format
+msgid "No media playing"
+msgstr "ھېچقانداق ۋاسىتە ياڭرىمايۋاتىدۇ"
+
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:107
+#, kde-format
+msgid "Remove from Favorites"
+msgstr "يىغقۇچتىن چىقىرىۋەت"
+
+#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:107
+#, kde-format
+msgid "Add to Favorites"
+msgstr "يىغقۇچقا قوش"
+
+#: contents/ui/MaximizedPlayerPage.qml:563
+#, kde-format
+msgid "Open Volume Drawer"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:670
+#, kde-format
+msgid "Unmute Audio"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:670
+#, kde-format
+msgid "Mute Audio"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:709
+#, kde-format
+msgctxt "%1 is the audio volume in percent"
+msgid "%1%"
+msgstr "%1%"
+
+#: contents/ui/MaximizedPlayerPage.qml:739
+#, kde-format
+msgid "Hide Lyrics"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:739
+#, kde-format
+msgid "Show Lyrics"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:759 contents/ui/SongMenu.qml:139
+#, kde-format
+msgid "Share Song"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:800
+#, kde-format
+msgid "Add to a local playlist"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:837
+#, kde-format
+msgid "Hide Queue"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:837
+#, kde-format
+msgid "Show Queue"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:1069
+#: contents/ui/MaximizedPlayerPage.qml:1314
+#, kde-format
+msgid "Remove Song"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:1104
+#, kde-format
+msgid "Clear Queue"
+msgstr "قاتارىنى تازىلاش"
+
+#: contents/ui/MaximizedPlayerPage.qml:1129
+#, kde-format
+msgid "Shuffle Queue"
+msgstr ""
+
+#: contents/ui/MaximizedPlayerPage.qml:1162
+#, kde-format
+msgid "Upcoming Songs"
+msgstr ""
+
+#: contents/ui/MoodPage.qml:54
+#, kde-format
+msgctxt "song count"
+msgid "%1 song"
+msgid_plural "%1 songs"
+msgstr[0] ""
+
+#: contents/ui/NavigationBar.qml:23 contents/ui/Sidebar.qml:124
+#, kde-format
+msgid "Library"
+msgstr ""
+
+#: contents/ui/NavigationBar.qml:35 contents/ui/Sidebar.qml:136
+#, kde-format
+msgid "Search"
+msgstr "ئىزدە"
+
+#: contents/ui/PlaybackHistory.qml:15
+#, kde-format
+msgid "Unknown list of songs"
+msgstr ""
+
+#: contents/ui/PlaybackHistory.qml:138
+#, kde-format
+msgid "No songs here yet"
+msgstr ""
+
+#: contents/ui/PlaylistPage.qml:76
+#, kde-format
+msgid "Playlist successfully imported"
+msgstr ""
+
+#: contents/ui/PlaylistPage.qml:128
+#, kde-format
+msgid "Playlist"
+msgstr "قويۇش تىزىمى"
+
+#: contents/ui/SearchHistoryPage.qml:82 contents/ui/SearchWithDropdown.qml:393
+#, kde-format
+msgid "remove from search history"
+msgstr ""
+
+#: contents/ui/SearchPage.qml:16
+#, kde-format
+msgid "Previous Searches:"
+msgstr ""
+
+#: contents/ui/SearchPage.qml:30
+#, kde-format
+msgid "Artists"
+msgstr "سەنئەتكار"
+
+#: contents/ui/SearchPage.qml:38
+#, kde-format
+msgid "Top Results"
+msgstr ""
+
+#: contents/ui/SearchPage.qml:41 playlistimporter.cpp:24
+#, kde-format
+msgid "Unknown"
+msgstr "يوچۇن"
+
+#: contents/ui/SearchPage.qml:74
+#, kde-format
+msgctxt "%1 is a video title"
+msgid ""
+"Video playback is not supported yet. Do you want to play only the audio of "
+"\"%1\"?"
+msgstr ""
+
+#: contents/ui/SearchWithDropdown.qml:339
+#, kde-format
+msgid "No matching previous searches"
+msgstr ""
+
+#: contents/ui/ShareMenu.qml:41
+#, kde-format
+msgid "Share to"
+msgstr ""
+
+#: contents/ui/ShareMenu.qml:49 contents/ui/ShareMenu.qml:103
+#, kde-format
+msgid "Copy Link"
+msgstr ""
+
+#: contents/ui/ShareMenu.qml:54 contents/ui/ShareMenu.qml:108
+#, kde-format
+msgid "Link copied to clipboard"
+msgstr ""
+
+#: contents/ui/Sidebar.qml:108
+#, kde-format
+msgid "Home"
+msgstr "باش بەت"
+
+#: contents/ui/Sidebar.qml:176
+#, kde-format
+msgid "Explore"
+msgstr ""
+
+#: contents/ui/Sidebar.qml:233
+#, kde-format
+msgid "About"
+msgstr "ھەققىدە"
+
+#: contents/ui/Sidebar.qml:247
+#, kde-format
+msgid "Collapse Sidebar"
+msgstr ""
+
+#: contents/ui/SongMenu.qml:88
+#, kde-format
+msgid "Play Next"
+msgstr ""
+
+#: contents/ui/SongMenu.qml:97
+#, kde-format
+msgid "Add to queue"
+msgstr ""
+
+#: contents/ui/SongMenu.qml:120
+#, kde-format
+msgid "Remove from History"
+msgstr ""
+
+#: contents/ui/SongMenu.qml:130
+#, kde-format
+msgid "Add to playlist"
+msgstr ""
+
+#: main.cpp:90
+#, kde-format
+msgctxt "YouTube Music is a music streaming service by Google"
+msgid "Stream music from YouTube Music"
+msgstr ""
+
+#: main.cpp:92
+#, kde-format
+msgid "© 2021–2024 Jonah Brüchert, 2021–2024 KDE Community"
+msgstr ""
+
+#: main.cpp:93
+#, kde-format
+msgid "Jonah Brüchert"
+msgstr "Jonah Brüchert"
+
+#: main.cpp:93
+#, kde-format
+msgid "Maintainer"
+msgstr "ئاسرىغۇچى"
+
+#: main.cpp:94
+#, kde-format
+msgid "Mathis Brüchert"
+msgstr ""
+
+#: main.cpp:94
+#, kde-format
+msgid "Designer"
+msgstr ""
+
+#: main.cpp:95
+#, kde-format
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "ئابدۇقادىر ئابلىز، غەيرەت كەنجى"
+
+#: main.cpp:95
+#, kde-format
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "sahranbay@gmail.com, gheyret@gmail.com"
+
+#: main.cpp:102
+#, kde-format
+msgctxt "YouTube Music is a music streaming service by Google"
+msgid "Unofficial API for YouTube Music"
+msgstr ""
+
+#: playlistimporter.cpp:24
+#, kde-format
+msgid "No description"
+msgstr "چۈشەندۈرۈش يوق"
+
+#: playlistimporter.cpp:62
+#, kde-format
+msgid "No title"
+msgstr "ماۋزۇ يوق"
+
+#: playlistimporter.cpp:64
+#, kde-format
+msgid "No album"
+msgstr ""
