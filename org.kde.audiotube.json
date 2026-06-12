@@ -34,8 +34,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/7e/a4/8b5cd28ab87aef48ef15e74241befec3445496327db028f34147a9e0f14f/yt_dlp-2026.3.3-py3-none-any.whl",
-                    "sha256": "166c6e68c49ba526474bd400e0129f58aa522c2896204aa73be669c3d2f15e63",
+                    "url": "https://files.pythonhosted.org/packages/f3/ee/188a3dadf9dfdac713243521f919feca1cd091d4358c9ea7e8ebb710a7cc/yt_dlp-2026.6.9-py3-none-any.whl",
+                    "sha256": "442ba4c75724b9496144c8434b617962ee08d0ee7c26ec663848fe9b78d5a3e4",
                     "x-checker-data": {
                         "type": "pypi",
                         "name": "yt-dlp",
@@ -77,8 +77,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/pybind/pybind11/archive/refs/tags/v3.0.2.tar.gz",
-                    "sha256": "2f20a0af0b921815e0e169ea7fec63909869323581b89d7de1553468553f6a2d",
+                    "url": "https://github.com/pybind/pybind11/archive/refs/tags/v3.0.4.tar.gz",
+                    "sha256": "74b6a2c2b4573a400cafb6ecbf60c98df300cd3d0041296b913d02b2cbbb2676",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 13384,
