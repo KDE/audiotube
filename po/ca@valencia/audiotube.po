@@ -527,7 +527,7 @@ msgstr "Flux de música des de YouTube Music"
 #: main.cpp:92
 #, kde-format
 msgid "© 2021–2024 Jonah Brüchert, 2021–2024 KDE Community"
-msgstr "© 2021–2024 Jonah Brüchert, 2021–2024 Comunitat KDE"
+msgstr "© 2021–2024 Jonah Brüchert, 2021–2024 La comunitat KDE"
 
 #: main.cpp:93
 #, kde-format
