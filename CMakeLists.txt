@@ -47,7 +47,7 @@ set(PYBIND11_FINDPYTHON ON)
 find_package(pybind11 REQUIRED)
 find_package(Ytdlp REQUIRED RUNTIME)
 find_package(YTMusicAPI 1.10.2 REQUIRED RUNTIME)
-find_package(KF6KirigamiAddons 0.11.0 REQUIRED)
+find_package(KF6KirigamiAddons 1.12.0 REQUIRED)
 find_package(FutureSQL6 REQUIRED)
 find_package(QCoro6 0.10.0 REQUIRED COMPONENTS Core)
 

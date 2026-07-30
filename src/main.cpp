@@ -17,6 +17,7 @@
 #include <KIconTheme>
 #include <KLocalizedContext>
 #include <KLocalizedString>
+#include <KirigamiAddons/App/KirigamiAppDefaults>
 
 #include <ThreadedDatabase>
 
@@ -24,47 +25,10 @@
 
 using namespace Qt::StringLiterals;
 
-class StyleFallback
-{
-public:
-    StyleFallback()
-    {
-        if (QGuiApplication::instance()) {
-            qFatal("StyleFallback must be created before Q(Gui)Application");
-        }
-
-        KIconTheme::initTheme();
-
-        m_initialQuickControlsStyle = QQuickStyle::name();
-    }
-
-    void setup(QGuiApplication *app)
-    {
-        Q_ASSERT(app); // Force people to run this at the right time
-
-        // Check if the platformtheme or user set up a style for us
-        if (m_initialQuickControlsStyle != QQuickStyle::name()
-            || !qEnvironmentVariableIsEmpty("QT_QUICK_CONTROLS_STYLE")) {
-            return;
-        }
-
-        qWarning() << "Detected that the platform did not set up a style, using defaults";
-
-        // platformtheme did not handle QtQuick styling, set everything to fallback values
-        QQuickStyle::setStyle(QStringLiteral("org.kde.desktop"));
-        QApplication::setStyle(QStyleFactory::create(QStringLiteral("Breeze")));
-        QIcon::setThemeName(QStringLiteral("breeze"));
-    }
-
-private:
-    QString m_initialQuickControlsStyle;
-};
-
 Q_DECL_EXPORT int main(int argc, char *argv[])
 {
-    StyleFallback fallback;
     QApplication app(argc, argv);
-    fallback.setup(&app);
+    KirigamiAppDefaults::apply(&app);
 
     // WORKAROUND: Force QtMultimedia gstreamer backend
     /*
@@ -105,8 +69,6 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
     });
 
     QGuiApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("org.kde.audiotube")));
-
-    KCrash::initialize();
 
     QQmlApplicationEngine engine;
 

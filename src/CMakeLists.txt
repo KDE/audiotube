@@ -118,6 +118,7 @@ target_link_libraries(audiotube PRIVATE
     QCoro6::Core
     qt-mpris
     ytm
+    KirigamiApp
 )
 
 target_compile_definitions(audiotube PRIVATE
