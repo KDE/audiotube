@@ -7,13 +7,13 @@
     "sources": [
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/e6/ad/3cc14f097111b4de0040c83a525973216457bbeeb63739ef1ed275c1c021/certifi-2026.1.4-py3-none-any.whl",
-            "sha256": "9943707519e4add1115f44c2bc244f782c0249876bf51b6599fee1ffbedd685c"
+            "url": "https://files.pythonhosted.org/packages/0b/a7/71ac2cff56fec219ed242bb11b8efb69fcc4bec75db06fb7bfe35de520e6/certifi-2026.7.22-py3-none-any.whl",
+            "sha256": "62f22742b58a1a33014a2b6b706588a8d7e2a88ae7bd1a6ebe8c992928483775"
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/13/69/33ddede1939fdd074bce5434295f38fae7136463422fe4fd3e0e89b98062/charset_normalizer-3.4.4.tar.gz",
-            "sha256": "94537985111c35f28720e43603b8e7b43a6ecfb2ce1d3058bbe955b73404e21a"
+            "url": "https://files.pythonhosted.org/packages/98/2b/f97f1c193fb855c345d678f5077d6926034db0722df74c8f057020e05a25/charset_normalizer-3.4.9-py3-none-any.whl",
+            "sha256": "68e5f26a1ad57ded6d1cfb85331d1c1a195314756471d97758c48498bb4dcdf5"
         },
         {
             "type": "file",
@@ -32,8 +32,8 @@
         },
         {
             "type": "file",
-            "url": "https://files.pythonhosted.org/packages/53/6d/f7156e7ab9953d09e14ef538de4e92c484169fac19d207b19b9d9eb9c845/ytmusicapi-1.12.1-py3-none-any.whl",
-            "sha256": "2a53f6df504b97b93a4d41c804b699b46190207cb9d864fcf4edeb338b1f15d9"
+            "url": "https://files.pythonhosted.org/packages/5c/b8/5a925aabd5fa7c31f20bf84d352a3fc372aa62cc0965f27dd43f8a22289f/ytmusicapi-1.12.2-py3-none-any.whl",
+            "sha256": "54b42b26d76de9b954f306a44e1ba4413a830cb2c41c019d255a297af941711e"
         }
     ]
 }
