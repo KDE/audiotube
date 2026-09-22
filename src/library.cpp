@@ -47,9 +47,14 @@ FavouritesModel *Library::favourites()
     return m_favourites;
 }
 
-void Library::addFavourite(const QString &videoId, const QString &title, const QString &artist, const QString &album)
+void Library::addFavourite(const QString &videoId,
+                           const QString &title,
+                           const QString &artistName,
+                           const QString &artistId,
+                           const QString &album,
+                           const QString &albumId)
 {
-    QCoro::connect(addSong(videoId, title, artist, album), this, [=, this] {
+    QCoro::connect(addSong(videoId, title, artistName, artistId, album, albumId), this, [=, this] {
         QCoro::connect(m_database->execute(u"insert or ignore into favourites (video_id) values (?)"_s, videoId),
                        this, &Library::refreshFavourites);
     });
@@ -124,9 +129,14 @@ void Library::refreshFavourites()
     Q_EMIT favouritesChanged();
 }
 
-void Library::addPlaybackHistoryItem(const QString &videoId, const QString &title, const QString &artist, const QString &album)
+void Library::addPlaybackHistoryItem(const QString &videoId,
+                                     const QString &title,
+                                     const QString &artistName,
+                                     const QString &artistId,
+                                     const QString &album,
+                                     const QString &albumId)
 {
-    QCoro::connect(addSong(videoId, title, artist, album), this, [=, this] {
+    QCoro::connect(addSong(videoId, title, artistName, artistId, album, albumId), this, [=, this] {
         QCoro::connect(m_database->execute(u"insert or ignore into played_songs (video_id, plays) values (?, ?)"_s, videoId, 0), this, [=, this] {
             QCoro::connect(m_database->execute(u"update played_songs set plays = plays + 1 where video_id = ? "_s, videoId),
                            this, &Library::refreshPlaybackHistory);
@@ -160,10 +170,17 @@ QNetworkAccessManager &Library::nam()
     return m_networkImageCacher;
 }
 
-QFuture<void> Library::addSong(const QString &videoId, const QString &title, const QString &artist, const QString &album)
+QFuture<void>
+Library::addSong(const QString &videoId, const QString &title, const QString &artistName, const QString &artistId, const QString &album, const QString &albumId)
 {
     // replace is used here to update songs from times when we didn't store artist and album
-    return m_database->execute(u"insert or replace into songs (video_id, title, artist, album) values (?, ?, ?, ?)"_s, videoId, title, artist, album);
+    return m_database->execute(u"insert or replace into songs (video_id, title, artist, album) values (?, ?, ?, ?, ?, ?)"_s,
+                               videoId,
+                               title,
+                               artistName,
+                               album,
+                               artistId,
+                               albumId);
 }
 
 PlaybackHistoryModel::PlaybackHistoryModel(QFuture<std::vector<PlayedSong>> &&songs, QObject *parent)

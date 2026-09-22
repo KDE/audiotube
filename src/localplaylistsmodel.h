@@ -48,7 +48,13 @@ public:
     QVariant data(const QModelIndex &index, int role) const override;
 
     Q_INVOKABLE void addPlaylist(const QString &title, const QString &description);
-    Q_INVOKABLE void addPlaylistEntry(qint64 playlistId, const QString &videoId, const QString &title, const QString &artist, const QString &album);
+    Q_INVOKABLE void addPlaylistEntry(qint64 playlistId,
+                                      const QString &videoId,
+                                      const QString &title,
+                                      const QString &artist,
+                                      const QString &artistId,
+                                      const QString &album,
+                                      const QString &albumId);
     Q_INVOKABLE void addPlaylistEntry(qint64 playlistId, const playlist::Track &track);
     Q_INVOKABLE void importPlaylist(const QString &url);
     Q_SIGNAL void importFinished();

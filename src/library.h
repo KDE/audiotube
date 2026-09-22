@@ -161,7 +161,12 @@ public:
     FavouritesModel *favourites();
     Q_SIGNAL void favouritesChanged();
     void refreshFavourites();
-    Q_INVOKABLE void addFavourite(const QString &videoId, const QString &title, const QString &artist, const QString &album);
+    Q_INVOKABLE void addFavourite(const QString &videoId,
+                                  const QString &title,
+                                  const QString &artistName,
+                                  const QString &artistId,
+                                  const QString &album,
+                                  const QString &albumId);
     Q_INVOKABLE void removeFavourite(const QString &videoId);
     Q_INVOKABLE FavouriteWatcher *favouriteWatcher(const QString &videoId);
 
@@ -176,7 +181,12 @@ public:
     PlaybackHistoryModel *playbackHistory();
     Q_SIGNAL void playbackHistoryChanged();
     void refreshPlaybackHistory();
-    Q_INVOKABLE void addPlaybackHistoryItem(const QString &videoId, const QString &title, const QString &artist, const QString &album);
+    Q_INVOKABLE void addPlaybackHistoryItem(const QString &videoId,
+                                            const QString &title,
+                                            const QString &artistName,
+                                            const QString &artistId,
+                                            const QString &album,
+                                            const QString &albumId);
     Q_INVOKABLE void removePlaybackHistoryItem(const QString &videoId);
     Q_INVOKABLE WasPlayedWatcher *wasPlayedWatcher(const QString &videoId);
 
@@ -188,7 +198,8 @@ public:
     ThreadedDatabase &database() {
         return *m_database;
     }
-    QFuture<void> addSong(const QString &videoId, const QString &title, const QString &artist, const QString &album);
+    QFuture<void>
+    addSong(const QString &videoId, const QString &title, const QString &artistName, const QString &artistId, const QString &album, const QString &albumId);
 
 private:
     explicit Library(QObject *parent = nullptr);

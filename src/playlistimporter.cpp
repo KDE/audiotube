@@ -47,9 +47,15 @@ void PlaylistImporter::importPlaylist(const QString &url)
     });
 }
 
-void PlaylistImporter::addPlaylistEntry(qint64 playlistId, const QString &videoId, const QString &title, const QString &artist, const QString &album)
+void PlaylistImporter::addPlaylistEntry(qint64 playlistId,
+                                        const QString &videoId,
+                                        const QString &title,
+                                        const QString &artist,
+                                        const QString &artistId,
+                                        const QString &album,
+                                        const QString &albumId)
 {
-    QCoro::connect(Library::instance().addSong(videoId, title, artist, album), this, [=, this] {
+    QCoro::connect(Library::instance().addSong(videoId, title, artist, artistId, album, albumId), this, [=, this] {
         QCoro::connect(Library::instance().database().execute(u"insert into playlist_entries (playlist_id, video_id) values (?, ?)"_s, playlistId, videoId), this, [=, this] {
             Q_EMIT playlistEntriesChanged(playlistId);
         });
@@ -61,8 +67,10 @@ void PlaylistImporter::addPlaylistEntry(qint64 playlistId, const playlist::Track
     const QString videoId = QString::fromStdString(track.video_id.value());
     const QString title   = (!track.title.empty()) ? QString::fromStdString(track.title) : i18n("No title");
     const QString artists = PlaylistUtils::artistsToString(track.artists);
-    const QString album   = track.album ? QString::fromStdString(track.album->name) : i18n("No album");
-    this->addPlaylistEntry(playlistId, videoId, title, artists, album);
+    const QString artistId = track.artists.empty() ? QString() : QString::fromStdString(track.artists.front().id.value_or(std::string()));
+    const QString album = track.album ? QString::fromStdString(track.album->name) : i18n("No album");
+    const QString albumId = track.album ? QString::fromStdString(track.album->id.value_or(std::string())) : QString();
+    this->addPlaylistEntry(playlistId, videoId, title, artists, artistId, album, albumId);
 }
 
 void PlaylistImporter::renamePlaylist(qint64 playlistId, const QString &name, const QString &description)

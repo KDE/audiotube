@@ -84,9 +84,15 @@ void LocalPlaylistsModel::addPlaylist(const QString &title, const QString &descr
     QCoro::connect(Library::instance().database().execute(u"insert into playlists (title, description) values (?, ?)"_s, title, description), &Library::instance(), &Library::playlistsChanged);
 }
 
-void LocalPlaylistsModel::addPlaylistEntry(qint64 playlistId, const QString &videoId, const QString &title, const QString &artist, const QString &album)
+void LocalPlaylistsModel::addPlaylistEntry(qint64 playlistId,
+                                           const QString &videoId,
+                                           const QString &title,
+                                           const QString &artist,
+                                           const QString &artistId,
+                                           const QString &album,
+                                           const QString &albumId)
 {
-    importer->addPlaylistEntry(playlistId, videoId, title, artist, album);
+    importer->addPlaylistEntry(playlistId, videoId, title, artist, artistId, album, albumId);
 }
 
 void LocalPlaylistsModel::addPlaylistEntry(qint64 playlistId, const playlist::Track &track)
