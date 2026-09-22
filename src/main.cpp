@@ -15,7 +15,7 @@
 #include <KAboutData>
 #include <KCrash>
 #include <KIconTheme>
-#include <KLocalizedContext>
+#include <KLocalizedQmlContext>
 #include <KLocalizedString>
 #include <KirigamiAddons/App/KirigamiAppDefaults>
 
@@ -72,7 +72,7 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 
     QQmlApplicationEngine engine;
 
-    engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
+    KLocalization::setupLocalizedContext(&engine);
     engine.loadFromModule("org.kde.audiotube", "Main");
 
     if (engine.rootObjects().isEmpty()) {

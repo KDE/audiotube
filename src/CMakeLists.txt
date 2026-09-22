@@ -109,6 +109,7 @@ target_link_libraries(audiotube PRIVATE
     Qt::Concurrent
     Qt::Multimedia
     KF6::I18n
+    KF6::I18nQml
     KF6::ConfigGui
     KF6::CoreAddons
     KF6::Crash
