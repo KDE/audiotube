@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-07-31 00:44+0000\n"
-"PO-Revision-Date: 2026-05-28 17:12-0400\n"
+"PO-Revision-Date: 2026-09-22 18:02+0900\n"
 "Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur <kde-i18n-doc@kde.org>\n"
 "Language: ug\n"
@@ -279,7 +279,7 @@ msgstr ""
 #: contents/ui/Main.qml:160 main.cpp:52
 #, kde-format
 msgid "AudioTube"
-msgstr "AudioTube"
+msgstr ""
 
 #: contents/ui/Main.qml:311
 #, kde-format
@@ -326,7 +326,7 @@ msgstr ""
 #, kde-format
 msgctxt "%1 is the audio volume in percent"
 msgid "%1%"
-msgstr "%1%"
+msgstr ""
 
 #: contents/ui/MaximizedPlayerPage.qml:739
 #, kde-format
@@ -462,7 +462,7 @@ msgstr ""
 #: contents/ui/ShareMenu.qml:49 contents/ui/ShareMenu.qml:103
 #, kde-format
 msgid "Copy Link"
-msgstr ""
+msgstr "ئۇلانما كۆچۈر"
 
 #: contents/ui/ShareMenu.qml:54 contents/ui/ShareMenu.qml:108
 #, kde-format
@@ -487,7 +487,7 @@ msgstr "ھەققىدە"
 #: contents/ui/Sidebar.qml:247
 #, kde-format
 msgid "Collapse Sidebar"
-msgstr ""
+msgstr "يان بالداقنى يىغ"
 
 #: contents/ui/SongMenu.qml:88
 #, kde-format
@@ -523,7 +523,7 @@ msgstr ""
 #: main.cpp:57
 #, kde-format
 msgid "Jonah Brüchert"
-msgstr "Jonah Brüchert"
+msgstr ""
 
 #: main.cpp:57
 #, kde-format
