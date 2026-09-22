@@ -39,6 +39,7 @@ public:
         Title = Qt::UserRole + 1,
         VideoId,
         Artists,
+        ArtistId,
         Album,
         AlbumId,
         IsCurrent,

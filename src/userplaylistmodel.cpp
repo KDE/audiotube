@@ -87,6 +87,15 @@ QVariant UserPlaylistModel::data(const QModelIndex &index, int role) const
         return QString::fromStdString(m_playlist.tracks[index.row()].video_id);
     case Artists:
         return PlaylistUtils::artistsToString(m_playlist.tracks[index.row()].artists);
+    case ArtistId:
+        if (!m_playlist.tracks[index.row()].artists.empty()) {
+            auto const &id = m_playlist.tracks[index.row()].artists.front().id;
+            if (id) {
+                return QString::fromStdString(*id);
+            }
+        }
+
+        return {};
     case Album:
         return QString::fromStdString(m_playlist.tracks[index.row()].album.value_or(meta::Album()).name);
     case AlbumId:

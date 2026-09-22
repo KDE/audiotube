@@ -335,6 +335,19 @@ Item {
                     horizontalAlignment: Text.AlignHCenter
                     elide: Text.ElideRight
                     maximumLineCount: 1
+
+                    MouseArea {
+                        anchors.fill: parent
+                        onClicked: {
+                            let index = UserPlaylistModel.index(UserPlaylistModel.currentIndex, 0)
+                            let artistId = UserPlaylistModel.data(index, UserPlaylistModel.ArtistId)
+                            pageStack.push("qrc:/qt/qml/org/kde/audiotube/contents/ui/ArtistPage.qml", {
+                                "channelId": artistId
+                            })
+                            root.requestClose()
+                        }
+                    }
+
                     // Hardcoded because the footerbar blur always makes a dark-ish
                     // background, so we don't want to use a color scheme color that
                     // might also be dark
