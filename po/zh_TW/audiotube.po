@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-31 00:44+0000\n"
+"POT-Creation-Date: 2026-09-23 00:50+0000\n"
 "PO-Revision-Date: 2026-03-02 04:56+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -300,84 +300,84 @@ msgstr "關閉最大化播放器"
 msgid "No media playing"
 msgstr "沒有播放任何媒體"
 
-#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:107
+#: contents/ui/MaximizedPlayerPage.qml:551 contents/ui/SongMenu.qml:107
 #, kde-format
 msgid "Remove from Favorites"
 msgstr "從最愛中移除"
 
-#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:107
+#: contents/ui/MaximizedPlayerPage.qml:551 contents/ui/SongMenu.qml:107
 #, kde-format
 msgid "Add to Favorites"
 msgstr "加入最愛"
 
-#: contents/ui/MaximizedPlayerPage.qml:563
+#: contents/ui/MaximizedPlayerPage.qml:576
 #, kde-format
 msgid "Open Volume Drawer"
 msgstr "開啟音量側邊欄"
 
-#: contents/ui/MaximizedPlayerPage.qml:670
+#: contents/ui/MaximizedPlayerPage.qml:683
 #, kde-format
 msgid "Unmute Audio"
 msgstr "取消靜音"
 
-#: contents/ui/MaximizedPlayerPage.qml:670
+#: contents/ui/MaximizedPlayerPage.qml:683
 #, kde-format
 msgid "Mute Audio"
 msgstr "靜音"
 
-#: contents/ui/MaximizedPlayerPage.qml:709
+#: contents/ui/MaximizedPlayerPage.qml:722
 #, kde-format
 msgctxt "%1 is the audio volume in percent"
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/ui/MaximizedPlayerPage.qml:739
+#: contents/ui/MaximizedPlayerPage.qml:752
 #, kde-format
 msgid "Hide Lyrics"
 msgstr "隱藏歌詞"
 
-#: contents/ui/MaximizedPlayerPage.qml:739
+#: contents/ui/MaximizedPlayerPage.qml:752
 #, kde-format
 msgid "Show Lyrics"
 msgstr "顯示歌詞"
 
-#: contents/ui/MaximizedPlayerPage.qml:759 contents/ui/SongMenu.qml:139
+#: contents/ui/MaximizedPlayerPage.qml:772 contents/ui/SongMenu.qml:139
 #, kde-format
 msgid "Share Song"
 msgstr "分享歌曲"
 
-#: contents/ui/MaximizedPlayerPage.qml:800
+#: contents/ui/MaximizedPlayerPage.qml:813
 #, kde-format
 msgid "Add to a local playlist"
 msgstr "加入至本地播放清單"
 
-#: contents/ui/MaximizedPlayerPage.qml:837
+#: contents/ui/MaximizedPlayerPage.qml:850
 #, kde-format
 msgid "Hide Queue"
 msgstr "隱藏待播清單"
 
-#: contents/ui/MaximizedPlayerPage.qml:837
+#: contents/ui/MaximizedPlayerPage.qml:850
 #, kde-format
 msgid "Show Queue"
 msgstr "顯示待播清單"
 
-#: contents/ui/MaximizedPlayerPage.qml:1069
-#: contents/ui/MaximizedPlayerPage.qml:1314
+#: contents/ui/MaximizedPlayerPage.qml:1082
+#: contents/ui/MaximizedPlayerPage.qml:1327
 #, kde-format
 msgid "Remove Song"
 msgstr "移除歌曲"
 
-#: contents/ui/MaximizedPlayerPage.qml:1104
+#: contents/ui/MaximizedPlayerPage.qml:1117
 #, kde-format
 msgid "Clear Queue"
 msgstr "清除待播清單"
 
-#: contents/ui/MaximizedPlayerPage.qml:1129
+#: contents/ui/MaximizedPlayerPage.qml:1142
 #, kde-format
 msgid "Shuffle Queue"
 msgstr "隨機排序待播清單"
 
-#: contents/ui/MaximizedPlayerPage.qml:1162
+#: contents/ui/MaximizedPlayerPage.qml:1175
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "接下來的歌曲"
@@ -461,16 +461,6 @@ msgstr "沒有符合的先前的搜尋"
 #, kde-format
 msgid "Share to"
 msgstr "分享至"
-
-#: contents/ui/ShareMenu.qml:49 contents/ui/ShareMenu.qml:103
-#, kde-format
-msgid "Copy Link"
-msgstr "複製連結"
-
-#: contents/ui/ShareMenu.qml:54 contents/ui/ShareMenu.qml:108
-#, kde-format
-msgid "Link copied to clipboard"
-msgstr "連結已複製到剪貼簿"
 
 #: contents/ui/Sidebar.qml:108
 #, kde-format
@@ -566,15 +556,21 @@ msgstr "YouTube Music 非官方 API"
 msgid "No description"
 msgstr "無描述"
 
-#: playlistimporter.cpp:62
+#: playlistimporter.cpp:68
 #, kde-format
 msgid "No title"
 msgstr "無標題"
 
-#: playlistimporter.cpp:64
+#: playlistimporter.cpp:71
 #, kde-format
 msgid "No album"
 msgstr "無專輯"
+
+#~ msgid "Copy Link"
+#~ msgstr "複製連結"
+
+#~ msgid "Link copied to clipboard"
+#~ msgstr "連結已複製到剪貼簿"
 
 #~ msgid "Remove Favorite"
 #~ msgstr "移除最愛"

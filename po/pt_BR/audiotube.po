@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-31 00:44+0000\n"
+"POT-Creation-Date: 2026-09-23 00:50+0000\n"
 "PO-Revision-Date: 2026-02-20 09:14-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -303,84 +303,84 @@ msgstr "Fechar reprodutor maximizado"
 msgid "No media playing"
 msgstr "Nenhuma mídia em reprodução"
 
-#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:107
+#: contents/ui/MaximizedPlayerPage.qml:551 contents/ui/SongMenu.qml:107
 #, kde-format
 msgid "Remove from Favorites"
 msgstr "Remover dos favoritos"
 
-#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:107
+#: contents/ui/MaximizedPlayerPage.qml:551 contents/ui/SongMenu.qml:107
 #, kde-format
 msgid "Add to Favorites"
 msgstr "Adicionar aos favoritos"
 
-#: contents/ui/MaximizedPlayerPage.qml:563
+#: contents/ui/MaximizedPlayerPage.qml:576
 #, kde-format
 msgid "Open Volume Drawer"
 msgstr "Abrir gaveta de volume"
 
-#: contents/ui/MaximizedPlayerPage.qml:670
+#: contents/ui/MaximizedPlayerPage.qml:683
 #, kde-format
 msgid "Unmute Audio"
 msgstr "Ativar som"
 
-#: contents/ui/MaximizedPlayerPage.qml:670
+#: contents/ui/MaximizedPlayerPage.qml:683
 #, kde-format
 msgid "Mute Audio"
 msgstr "Desativar som"
 
-#: contents/ui/MaximizedPlayerPage.qml:709
+#: contents/ui/MaximizedPlayerPage.qml:722
 #, kde-format
 msgctxt "%1 is the audio volume in percent"
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/ui/MaximizedPlayerPage.qml:739
+#: contents/ui/MaximizedPlayerPage.qml:752
 #, kde-format
 msgid "Hide Lyrics"
 msgstr "Ocultar letras"
 
-#: contents/ui/MaximizedPlayerPage.qml:739
+#: contents/ui/MaximizedPlayerPage.qml:752
 #, kde-format
 msgid "Show Lyrics"
 msgstr "Mostrar letras"
 
-#: contents/ui/MaximizedPlayerPage.qml:759 contents/ui/SongMenu.qml:139
+#: contents/ui/MaximizedPlayerPage.qml:772 contents/ui/SongMenu.qml:139
 #, kde-format
 msgid "Share Song"
 msgstr "Compartilhar música"
 
-#: contents/ui/MaximizedPlayerPage.qml:800
+#: contents/ui/MaximizedPlayerPage.qml:813
 #, kde-format
 msgid "Add to a local playlist"
 msgstr "Adicionar à lista de músicas local"
 
-#: contents/ui/MaximizedPlayerPage.qml:837
+#: contents/ui/MaximizedPlayerPage.qml:850
 #, kde-format
 msgid "Hide Queue"
 msgstr "Ocultar fila"
 
-#: contents/ui/MaximizedPlayerPage.qml:837
+#: contents/ui/MaximizedPlayerPage.qml:850
 #, kde-format
 msgid "Show Queue"
 msgstr "Mostrar fila"
 
-#: contents/ui/MaximizedPlayerPage.qml:1069
-#: contents/ui/MaximizedPlayerPage.qml:1314
+#: contents/ui/MaximizedPlayerPage.qml:1082
+#: contents/ui/MaximizedPlayerPage.qml:1327
 #, kde-format
 msgid "Remove Song"
 msgstr "Remover música"
 
-#: contents/ui/MaximizedPlayerPage.qml:1104
+#: contents/ui/MaximizedPlayerPage.qml:1117
 #, kde-format
 msgid "Clear Queue"
 msgstr "Limpar fila"
 
-#: contents/ui/MaximizedPlayerPage.qml:1129
+#: contents/ui/MaximizedPlayerPage.qml:1142
 #, kde-format
 msgid "Shuffle Queue"
 msgstr "Embaralhar fila"
 
-#: contents/ui/MaximizedPlayerPage.qml:1162
+#: contents/ui/MaximizedPlayerPage.qml:1175
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "Próximas músicas"
@@ -467,16 +467,6 @@ msgstr "Nenhuma pesquisa anterior correspondente"
 #, kde-format
 msgid "Share to"
 msgstr "Compartilhar para"
-
-#: contents/ui/ShareMenu.qml:49 contents/ui/ShareMenu.qml:103
-#, kde-format
-msgid "Copy Link"
-msgstr "Copiar link"
-
-#: contents/ui/ShareMenu.qml:54 contents/ui/ShareMenu.qml:108
-#, kde-format
-msgid "Link copied to clipboard"
-msgstr "Link copiado para a área de transferência"
 
 #: contents/ui/Sidebar.qml:108
 #, kde-format
@@ -572,15 +562,21 @@ msgstr "API não oficial do YouTube Music"
 msgid "No description"
 msgstr "Sem descrição"
 
-#: playlistimporter.cpp:62
+#: playlistimporter.cpp:68
 #, kde-format
 msgid "No title"
 msgstr "Nenhuma música"
 
-#: playlistimporter.cpp:64
+#: playlistimporter.cpp:71
 #, kde-format
 msgid "No album"
 msgstr "Nenhum álbum"
+
+#~ msgid "Copy Link"
+#~ msgstr "Copiar link"
+
+#~ msgid "Link copied to clipboard"
+#~ msgstr "Link copiado para a área de transferência"
 
 #~ msgid "Remove Favorite"
 #~ msgstr "Remover favorito"

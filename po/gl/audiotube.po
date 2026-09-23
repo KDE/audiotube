@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-31 00:44+0000\n"
+"POT-Creation-Date: 2026-09-23 00:50+0000\n"
 "PO-Revision-Date: 2025-01-12 16:48+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -305,88 +305,88 @@ msgstr "Pechar o reprodutor maximizado"
 msgid "No media playing"
 msgstr "Non se está a reproducir nada."
 
-#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:107
+#: contents/ui/MaximizedPlayerPage.qml:551 contents/ui/SongMenu.qml:107
 #, fuzzy, kde-format
 #| msgid "Remove from Favourites"
 msgid "Remove from Favorites"
 msgstr "Retirar das favoritas"
 
-#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:107
+#: contents/ui/MaximizedPlayerPage.qml:551 contents/ui/SongMenu.qml:107
 #, fuzzy, kde-format
 #| msgid "Add to Favourites"
 msgid "Add to Favorites"
 msgstr "Engadir ás favoritas"
 
-#: contents/ui/MaximizedPlayerPage.qml:563
+#: contents/ui/MaximizedPlayerPage.qml:576
 #, kde-format
 msgid "Open Volume Drawer"
 msgstr "Abrir o caixón do volume"
 
-#: contents/ui/MaximizedPlayerPage.qml:670
+#: contents/ui/MaximizedPlayerPage.qml:683
 #, kde-format
 msgid "Unmute Audio"
 msgstr "Activar o son"
 
-#: contents/ui/MaximizedPlayerPage.qml:670
+#: contents/ui/MaximizedPlayerPage.qml:683
 #, kde-format
 msgid "Mute Audio"
 msgstr "Silenciar"
 
-#: contents/ui/MaximizedPlayerPage.qml:709
+#: contents/ui/MaximizedPlayerPage.qml:722
 #, fuzzy, kde-format
 #| msgid "%1%"
 msgctxt "%1 is the audio volume in percent"
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/ui/MaximizedPlayerPage.qml:739
+#: contents/ui/MaximizedPlayerPage.qml:752
 #, kde-format
 msgid "Hide Lyrics"
 msgstr "Agochar a letra"
 
-#: contents/ui/MaximizedPlayerPage.qml:739
+#: contents/ui/MaximizedPlayerPage.qml:752
 #, kde-format
 msgid "Show Lyrics"
 msgstr "Amosar a letra"
 
-#: contents/ui/MaximizedPlayerPage.qml:759 contents/ui/SongMenu.qml:139
+#: contents/ui/MaximizedPlayerPage.qml:772 contents/ui/SongMenu.qml:139
 #, kde-format
 msgid "Share Song"
 msgstr "Compartir a canción"
 
-#: contents/ui/MaximizedPlayerPage.qml:800
+#: contents/ui/MaximizedPlayerPage.qml:813
 #, kde-format
 msgid "Add to a local playlist"
 msgstr "Engadir a unha lista de reprodución local"
 
-#: contents/ui/MaximizedPlayerPage.qml:837
+#: contents/ui/MaximizedPlayerPage.qml:850
 #, kde-format
 msgid "Hide Queue"
 msgstr "Agochar a cola"
 
-#: contents/ui/MaximizedPlayerPage.qml:837
+#: contents/ui/MaximizedPlayerPage.qml:850
 #, kde-format
 msgid "Show Queue"
 msgstr "Amosar a cola"
 
-#: contents/ui/MaximizedPlayerPage.qml:1069
-#: contents/ui/MaximizedPlayerPage.qml:1314
+#: contents/ui/MaximizedPlayerPage.qml:1082
+#: contents/ui/MaximizedPlayerPage.qml:1327
 #, fuzzy, kde-format
 #| msgid "Remove Favourite"
 msgid "Remove Song"
 msgstr "Retiras das favoritas"
 
-#: contents/ui/MaximizedPlayerPage.qml:1104
+#: contents/ui/MaximizedPlayerPage.qml:1117
 #, kde-format
 msgid "Clear Queue"
 msgstr "Borrar a cola"
 
-#: contents/ui/MaximizedPlayerPage.qml:1129
+#: contents/ui/MaximizedPlayerPage.qml:1142
 #, kde-format
 msgid "Shuffle Queue"
 msgstr "Desordenar a cola"
 
-#: contents/ui/MaximizedPlayerPage.qml:1162
+#: contents/ui/MaximizedPlayerPage.qml:1175
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "Vindeiras cancións"
@@ -474,16 +474,6 @@ msgstr "Ningunha busca anterior coincide."
 #, kde-format
 msgid "Share to"
 msgstr "Compartir con"
-
-#: contents/ui/ShareMenu.qml:49 contents/ui/ShareMenu.qml:103
-#, kde-format
-msgid "Copy Link"
-msgstr "Copiar a ligazón"
-
-#: contents/ui/ShareMenu.qml:54 contents/ui/ShareMenu.qml:108
-#, kde-format
-msgid "Link copied to clipboard"
-msgstr "A ligazón copiouse no portapapeis."
 
 #: contents/ui/Sidebar.qml:108
 #, kde-format
@@ -580,15 +570,21 @@ msgstr "API non oficial de YouTube Music"
 msgid "No description"
 msgstr "Sen descrición"
 
-#: playlistimporter.cpp:62
+#: playlistimporter.cpp:68
 #, kde-format
 msgid "No title"
 msgstr "Sen título"
 
-#: playlistimporter.cpp:64
+#: playlistimporter.cpp:71
 #, kde-format
 msgid "No album"
 msgstr "Sen álbum"
+
+#~ msgid "Copy Link"
+#~ msgstr "Copiar a ligazón"
+
+#~ msgid "Link copied to clipboard"
+#~ msgstr "A ligazón copiouse no portapapeis."
 
 #, fuzzy
 #~| msgid "Remove Favourite"

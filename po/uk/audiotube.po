@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-31 00:44+0000\n"
+"POT-Creation-Date: 2026-09-23 00:50+0000\n"
 "PO-Revision-Date: 2026-02-20 08:44+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -301,84 +301,84 @@ msgstr "Закрити максимізований програвач"
 msgid "No media playing"
 msgstr "Відтворення не відбувається"
 
-#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:107
+#: contents/ui/MaximizedPlayerPage.qml:551 contents/ui/SongMenu.qml:107
 #, kde-format
 msgid "Remove from Favorites"
 msgstr "Вилучити з улюблених"
 
-#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:107
+#: contents/ui/MaximizedPlayerPage.qml:551 contents/ui/SongMenu.qml:107
 #, kde-format
 msgid "Add to Favorites"
 msgstr "Додати до улюбленого"
 
-#: contents/ui/MaximizedPlayerPage.qml:563
+#: contents/ui/MaximizedPlayerPage.qml:576
 #, kde-format
 msgid "Open Volume Drawer"
 msgstr "Відкрити висувну панель гучності"
 
-#: contents/ui/MaximizedPlayerPage.qml:670
+#: contents/ui/MaximizedPlayerPage.qml:683
 #, kde-format
 msgid "Unmute Audio"
 msgstr "Увімкнути звук"
 
-#: contents/ui/MaximizedPlayerPage.qml:670
+#: contents/ui/MaximizedPlayerPage.qml:683
 #, kde-format
 msgid "Mute Audio"
 msgstr "Вимкнути звук"
 
-#: contents/ui/MaximizedPlayerPage.qml:709
+#: contents/ui/MaximizedPlayerPage.qml:722
 #, kde-format
 msgctxt "%1 is the audio volume in percent"
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/ui/MaximizedPlayerPage.qml:739
+#: contents/ui/MaximizedPlayerPage.qml:752
 #, kde-format
 msgid "Hide Lyrics"
 msgstr "Приховати текст"
 
-#: contents/ui/MaximizedPlayerPage.qml:739
+#: contents/ui/MaximizedPlayerPage.qml:752
 #, kde-format
 msgid "Show Lyrics"
 msgstr "Показати текст"
 
-#: contents/ui/MaximizedPlayerPage.qml:759 contents/ui/SongMenu.qml:139
+#: contents/ui/MaximizedPlayerPage.qml:772 contents/ui/SongMenu.qml:139
 #, kde-format
 msgid "Share Song"
 msgstr "Оприлюднити композицію"
 
-#: contents/ui/MaximizedPlayerPage.qml:800
+#: contents/ui/MaximizedPlayerPage.qml:813
 #, kde-format
 msgid "Add to a local playlist"
 msgstr "Додати до локального списку відтворення"
 
-#: contents/ui/MaximizedPlayerPage.qml:837
+#: contents/ui/MaximizedPlayerPage.qml:850
 #, kde-format
 msgid "Hide Queue"
 msgstr "Приховати чергу"
 
-#: contents/ui/MaximizedPlayerPage.qml:837
+#: contents/ui/MaximizedPlayerPage.qml:850
 #, kde-format
 msgid "Show Queue"
 msgstr "Показати чергу"
 
-#: contents/ui/MaximizedPlayerPage.qml:1069
-#: contents/ui/MaximizedPlayerPage.qml:1314
+#: contents/ui/MaximizedPlayerPage.qml:1082
+#: contents/ui/MaximizedPlayerPage.qml:1327
 #, kde-format
 msgid "Remove Song"
 msgstr "Вилучити композицію"
 
-#: contents/ui/MaximizedPlayerPage.qml:1104
+#: contents/ui/MaximizedPlayerPage.qml:1117
 #, kde-format
 msgid "Clear Queue"
 msgstr "Спорожнити чергу"
 
-#: contents/ui/MaximizedPlayerPage.qml:1129
+#: contents/ui/MaximizedPlayerPage.qml:1142
 #, kde-format
 msgid "Shuffle Queue"
 msgstr "Перемішати чергу"
 
-#: contents/ui/MaximizedPlayerPage.qml:1162
+#: contents/ui/MaximizedPlayerPage.qml:1175
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "Майбутні композиції"
@@ -467,16 +467,6 @@ msgstr "Немає відповідних попередніх пошуків"
 #, kde-format
 msgid "Share to"
 msgstr "Оприлюднити"
-
-#: contents/ui/ShareMenu.qml:49 contents/ui/ShareMenu.qml:103
-#, kde-format
-msgid "Copy Link"
-msgstr "Копіювати посилання"
-
-#: contents/ui/ShareMenu.qml:54 contents/ui/ShareMenu.qml:108
-#, kde-format
-msgid "Link copied to clipboard"
-msgstr "Посилання скопійовано до буфера обміну"
 
 #: contents/ui/Sidebar.qml:108
 #, kde-format
@@ -572,15 +562,21 @@ msgstr "Неофіційний програмний інтерфейс до YouT
 msgid "No description"
 msgstr "Без опису"
 
-#: playlistimporter.cpp:62
+#: playlistimporter.cpp:68
 #, kde-format
 msgid "No title"
 msgstr "Без заголовка"
 
-#: playlistimporter.cpp:64
+#: playlistimporter.cpp:71
 #, kde-format
 msgid "No album"
 msgstr "Без альбому"
+
+#~ msgid "Copy Link"
+#~ msgstr "Копіювати посилання"
+
+#~ msgid "Link copied to clipboard"
+#~ msgstr "Посилання скопійовано до буфера обміну"
 
 #~ msgid "Remove Favorite"
 #~ msgstr "Вилучити з улюблених"

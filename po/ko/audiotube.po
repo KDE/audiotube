@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-07-31 00:44+0000\n"
+"POT-Creation-Date: 2026-09-23 00:50+0000\n"
 "PO-Revision-Date: 2026-05-25 18:35+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -298,84 +298,84 @@ msgstr "최대화된 재생기 닫기"
 msgid "No media playing"
 msgstr "재생 중인 미디어 없음"
 
-#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:107
+#: contents/ui/MaximizedPlayerPage.qml:551 contents/ui/SongMenu.qml:107
 #, kde-format
 msgid "Remove from Favorites"
 msgstr "책갈피에서 삭제"
 
-#: contents/ui/MaximizedPlayerPage.qml:538 contents/ui/SongMenu.qml:107
+#: contents/ui/MaximizedPlayerPage.qml:551 contents/ui/SongMenu.qml:107
 #, kde-format
 msgid "Add to Favorites"
 msgstr "책갈피에 추가"
 
-#: contents/ui/MaximizedPlayerPage.qml:563
+#: contents/ui/MaximizedPlayerPage.qml:576
 #, kde-format
 msgid "Open Volume Drawer"
 msgstr "음량 서랍 열기"
 
-#: contents/ui/MaximizedPlayerPage.qml:670
+#: contents/ui/MaximizedPlayerPage.qml:683
 #, kde-format
 msgid "Unmute Audio"
 msgstr "오디오 음소거 해제"
 
-#: contents/ui/MaximizedPlayerPage.qml:670
+#: contents/ui/MaximizedPlayerPage.qml:683
 #, kde-format
 msgid "Mute Audio"
 msgstr "오디오 음소거"
 
-#: contents/ui/MaximizedPlayerPage.qml:709
+#: contents/ui/MaximizedPlayerPage.qml:722
 #, kde-format
 msgctxt "%1 is the audio volume in percent"
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/ui/MaximizedPlayerPage.qml:739
+#: contents/ui/MaximizedPlayerPage.qml:752
 #, kde-format
 msgid "Hide Lyrics"
 msgstr "가사 숨기기"
 
-#: contents/ui/MaximizedPlayerPage.qml:739
+#: contents/ui/MaximizedPlayerPage.qml:752
 #, kde-format
 msgid "Show Lyrics"
 msgstr "가사 표시"
 
-#: contents/ui/MaximizedPlayerPage.qml:759 contents/ui/SongMenu.qml:139
+#: contents/ui/MaximizedPlayerPage.qml:772 contents/ui/SongMenu.qml:139
 #, kde-format
 msgid "Share Song"
 msgstr "노래 공유"
 
-#: contents/ui/MaximizedPlayerPage.qml:800
+#: contents/ui/MaximizedPlayerPage.qml:813
 #, kde-format
 msgid "Add to a local playlist"
 msgstr "로컬 재생 목록에 추가"
 
-#: contents/ui/MaximizedPlayerPage.qml:837
+#: contents/ui/MaximizedPlayerPage.qml:850
 #, kde-format
 msgid "Hide Queue"
 msgstr "대기열 숨기기"
 
-#: contents/ui/MaximizedPlayerPage.qml:837
+#: contents/ui/MaximizedPlayerPage.qml:850
 #, kde-format
 msgid "Show Queue"
 msgstr "대기열 표시"
 
-#: contents/ui/MaximizedPlayerPage.qml:1069
-#: contents/ui/MaximizedPlayerPage.qml:1314
+#: contents/ui/MaximizedPlayerPage.qml:1082
+#: contents/ui/MaximizedPlayerPage.qml:1327
 #, kde-format
 msgid "Remove Song"
 msgstr "곡 삭제"
 
-#: contents/ui/MaximizedPlayerPage.qml:1104
+#: contents/ui/MaximizedPlayerPage.qml:1117
 #, kde-format
 msgid "Clear Queue"
 msgstr "대기열 비우기"
 
-#: contents/ui/MaximizedPlayerPage.qml:1129
+#: contents/ui/MaximizedPlayerPage.qml:1142
 #, kde-format
 msgid "Shuffle Queue"
 msgstr "대기열 무순서 재생"
 
-#: contents/ui/MaximizedPlayerPage.qml:1162
+#: contents/ui/MaximizedPlayerPage.qml:1175
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "다음에 재생될 곡"
@@ -459,16 +459,6 @@ msgstr "일치하는 이전 검색 없음"
 #, kde-format
 msgid "Share to"
 msgstr "다음으로 공유"
-
-#: contents/ui/ShareMenu.qml:49 contents/ui/ShareMenu.qml:103
-#, kde-format
-msgid "Copy Link"
-msgstr "링크 복사"
-
-#: contents/ui/ShareMenu.qml:54 contents/ui/ShareMenu.qml:108
-#, kde-format
-msgid "Link copied to clipboard"
-msgstr "클립보드에 링크 복사됨"
 
 #: contents/ui/Sidebar.qml:108
 #, kde-format
@@ -564,15 +554,21 @@ msgstr "YouTube Music 비공식 API"
 msgid "No description"
 msgstr "설명 없음"
 
-#: playlistimporter.cpp:62
+#: playlistimporter.cpp:68
 #, kde-format
 msgid "No title"
 msgstr "제목 없음"
 
-#: playlistimporter.cpp:64
+#: playlistimporter.cpp:71
 #, kde-format
 msgid "No album"
 msgstr "앨범 없음"
+
+#~ msgid "Copy Link"
+#~ msgstr "링크 복사"
+
+#~ msgid "Link copied to clipboard"
+#~ msgstr "클립보드에 링크 복사됨"
 
 #~ msgid "Remove Favorite"
 #~ msgstr "책갈피 삭제"
