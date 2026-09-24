@@ -568,9 +568,3 @@ msgstr "Utan tittel"
 #, kde-format
 msgid "No album"
 msgstr "Ingen album"
-
-#~ msgid "Copy Link"
-#~ msgstr "Kopier lenkje"
-
-#~ msgid "Link copied to clipboard"
-#~ msgstr "Lenkje kopiert til utklippstavla"
