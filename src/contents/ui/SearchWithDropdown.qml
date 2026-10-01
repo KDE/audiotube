@@ -44,7 +44,7 @@ Item {
             }
         }
 
-        Keys.onPressed: {
+        Keys.onPressed: (event) => {
             if(completionList.count > 0) {
                 if (event.key === Qt.Key_Down) {
                     if(completionList.selectedDelegate === -1 || completionList.selectedDelegate === completionList.count - 1) {
