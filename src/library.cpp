@@ -174,7 +174,7 @@ QFuture<void>
 Library::addSong(const QString &videoId, const QString &title, const QString &artistName, const QString &artistId, const QString &album, const QString &albumId)
 {
     // replace is used here to update songs from times when we didn't store artist and album
-    return m_database->execute(u"insert or replace into songs (video_id, title, artist, album) values (?, ?, ?, ?, ?, ?)"_s,
+    return m_database->execute(u"insert or replace into songs (video_id, title, artist, album, artist_id, album_id) values (?, ?, ?, ?, ?, ?)"_s,
                                videoId,
                                title,
                                artistName,

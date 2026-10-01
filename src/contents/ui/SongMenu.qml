@@ -110,7 +110,7 @@ Components.ConvergentContextMenu {
             if (favouriteWatcher.isFavourite) {
                 Library.removeFavourite(root.videoId)
             } else {
-                Library.addFavourite(root.videoId, root.songTitle, root.artistsDisplayString, "")
+                Library.addFavourite(root.videoId, root.songTitle, root.artistsDisplayString, null, null, null)
             }
             root.close()
         }

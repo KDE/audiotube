@@ -107,7 +107,9 @@ Flickable {
             let videoId = UserPlaylistModel.data(index, UserPlaylistModel.VideoId)
             let title = UserPlaylistModel.data(index, UserPlaylistModel.Title)
             let artist = UserPlaylistModel.data(index, UserPlaylistModel.Artists)
+            let artistId = UserPlaylistModel.data(index, UserPlaylistModel.ArtistId)
             let album = UserPlaylistModel.data(index, UserPlaylistModel.Album)
+            let albumId = UserPlaylistModel.data(index, UserPlaylistModel.AlbumId)
             let duration = UserPlaylistModel.data(index, UserPlaylistModel.Duration)
 
             syncedLyrics.song = title
@@ -116,7 +118,7 @@ Flickable {
             syncedLyrics.duration = duration
             syncedLyrics.fetchLyrics()
 
-            Library.addPlaybackHistoryItem(videoId, title, artist, album)
+            Library.addPlaybackHistoryItem(videoId, title, artist, artistId, album, albumId)
         }
     }
 

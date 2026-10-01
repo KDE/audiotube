@@ -93,6 +93,7 @@ ecm_add_qml_module(audiotube URI org.kde.audiotube
         migrations/2022-05-20-194850_init/up.sql
         migrations/2022-05-25-212054_playlists/down.sql
         migrations/2022-05-25-212054_playlists/up.sql
+        migrations/2026-09-22-211215-0000_ids//up.sql
         resources/favourites_placeholder.svg
         resources/played_placeholder.svg
         resources/playlist_placeholder.svg
