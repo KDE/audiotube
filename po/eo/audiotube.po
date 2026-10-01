@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-23 00:50+0000\n"
+"POT-Creation-Date: 2026-10-01 17:39+0000\n"
 "PO-Revision-Date: 2024-05-04 23:30+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: Esperanto <kde-i18n-eo@kde.org>\n"
@@ -308,88 +308,88 @@ msgstr "Fermi Maksimumigitan Ludanton"
 msgid "No media playing"
 msgstr "Neniu aŭdvidaĵo ludanta"
 
-#: contents/ui/MaximizedPlayerPage.qml:551 contents/ui/SongMenu.qml:107
+#: contents/ui/MaximizedPlayerPage.qml:553 contents/ui/SongMenu.qml:107
 #, fuzzy, kde-format
 #| msgid "Remove from Favourites"
 msgid "Remove from Favorites"
 msgstr "Forigi el Favoritoj"
 
-#: contents/ui/MaximizedPlayerPage.qml:551 contents/ui/SongMenu.qml:107
+#: contents/ui/MaximizedPlayerPage.qml:553 contents/ui/SongMenu.qml:107
 #, fuzzy, kde-format
 #| msgid "Add to Favourites"
 msgid "Add to Favorites"
 msgstr "Aldoni al Favoritoj"
 
-#: contents/ui/MaximizedPlayerPage.qml:576
+#: contents/ui/MaximizedPlayerPage.qml:578
 #, kde-format
 msgid "Open Volume Drawer"
 msgstr "Malfermi Laŭteckeston"
 
-#: contents/ui/MaximizedPlayerPage.qml:683
+#: contents/ui/MaximizedPlayerPage.qml:685
 #, kde-format
 msgid "Unmute Audio"
 msgstr "Malŝalti Audio"
 
-#: contents/ui/MaximizedPlayerPage.qml:683
+#: contents/ui/MaximizedPlayerPage.qml:685
 #, kde-format
 msgid "Mute Audio"
 msgstr "Silentigi Audio"
 
-#: contents/ui/MaximizedPlayerPage.qml:722
+#: contents/ui/MaximizedPlayerPage.qml:724
 #, fuzzy, kde-format
 #| msgid "%1%"
 msgctxt "%1 is the audio volume in percent"
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/ui/MaximizedPlayerPage.qml:752
+#: contents/ui/MaximizedPlayerPage.qml:754
 #, kde-format
 msgid "Hide Lyrics"
 msgstr "Kaŝi Kantotekstojn"
 
-#: contents/ui/MaximizedPlayerPage.qml:752
+#: contents/ui/MaximizedPlayerPage.qml:754
 #, kde-format
 msgid "Show Lyrics"
 msgstr "Montri kantotekstojn"
 
-#: contents/ui/MaximizedPlayerPage.qml:772 contents/ui/SongMenu.qml:139
+#: contents/ui/MaximizedPlayerPage.qml:774 contents/ui/SongMenu.qml:139
 #, kde-format
 msgid "Share Song"
 msgstr "Kunhavigi Kanton"
 
-#: contents/ui/MaximizedPlayerPage.qml:813
+#: contents/ui/MaximizedPlayerPage.qml:815
 #, kde-format
 msgid "Add to a local playlist"
 msgstr "Aldoni al loka ludlisto"
 
-#: contents/ui/MaximizedPlayerPage.qml:850
+#: contents/ui/MaximizedPlayerPage.qml:852
 #, kde-format
 msgid "Hide Queue"
 msgstr "Kaŝi Vicon"
 
-#: contents/ui/MaximizedPlayerPage.qml:850
+#: contents/ui/MaximizedPlayerPage.qml:852
 #, kde-format
 msgid "Show Queue"
 msgstr "Montri Vicon"
 
-#: contents/ui/MaximizedPlayerPage.qml:1082
-#: contents/ui/MaximizedPlayerPage.qml:1327
+#: contents/ui/MaximizedPlayerPage.qml:1084
+#: contents/ui/MaximizedPlayerPage.qml:1329
 #, fuzzy, kde-format
 #| msgid "Remove Favourite"
 msgid "Remove Song"
 msgstr "Forigi Favoriton"
 
-#: contents/ui/MaximizedPlayerPage.qml:1117
+#: contents/ui/MaximizedPlayerPage.qml:1119
 #, kde-format
 msgid "Clear Queue"
 msgstr "Viŝi Vicon"
 
-#: contents/ui/MaximizedPlayerPage.qml:1142
+#: contents/ui/MaximizedPlayerPage.qml:1144
 #, kde-format
 msgid "Shuffle Queue"
 msgstr "Miksi Vicon"
 
-#: contents/ui/MaximizedPlayerPage.qml:1175
+#: contents/ui/MaximizedPlayerPage.qml:1177
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "Venontaj Kantoj"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-23 00:50+0000\n"
+"POT-Creation-Date: 2026-10-01 17:39+0000\n"
 "PO-Revision-Date: 2026-03-04 14:41+0200\n"
 "Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -301,84 +301,84 @@ msgstr "Aizvērt maksimizēto atskaņotāju"
 msgid "No media playing"
 msgstr "Multividi neatskaņo"
 
-#: contents/ui/MaximizedPlayerPage.qml:551 contents/ui/SongMenu.qml:107
+#: contents/ui/MaximizedPlayerPage.qml:553 contents/ui/SongMenu.qml:107
 #, kde-format
 msgid "Remove from Favorites"
 msgstr "Noņemt no izlases"
 
-#: contents/ui/MaximizedPlayerPage.qml:551 contents/ui/SongMenu.qml:107
+#: contents/ui/MaximizedPlayerPage.qml:553 contents/ui/SongMenu.qml:107
 #, kde-format
 msgid "Add to Favorites"
 msgstr "Pievienot izlasei"
 
-#: contents/ui/MaximizedPlayerPage.qml:576
+#: contents/ui/MaximizedPlayerPage.qml:578
 #, kde-format
 msgid "Open Volume Drawer"
 msgstr "Atvērt skaļuma atvilktni"
 
-#: contents/ui/MaximizedPlayerPage.qml:683
+#: contents/ui/MaximizedPlayerPage.qml:685
 #, kde-format
 msgid "Unmute Audio"
 msgstr "Atjaunot skaņu"
 
-#: contents/ui/MaximizedPlayerPage.qml:683
+#: contents/ui/MaximizedPlayerPage.qml:685
 #, kde-format
 msgid "Mute Audio"
 msgstr "Apklusināt"
 
-#: contents/ui/MaximizedPlayerPage.qml:722
+#: contents/ui/MaximizedPlayerPage.qml:724
 #, kde-format
 msgctxt "%1 is the audio volume in percent"
 msgid "%1%"
 msgstr "%1 %"
 
-#: contents/ui/MaximizedPlayerPage.qml:752
+#: contents/ui/MaximizedPlayerPage.qml:754
 #, kde-format
 msgid "Hide Lyrics"
 msgstr "Slēpt vārdus"
 
-#: contents/ui/MaximizedPlayerPage.qml:752
+#: contents/ui/MaximizedPlayerPage.qml:754
 #, kde-format
 msgid "Show Lyrics"
 msgstr "Rādīt vārdus"
 
-#: contents/ui/MaximizedPlayerPage.qml:772 contents/ui/SongMenu.qml:139
+#: contents/ui/MaximizedPlayerPage.qml:774 contents/ui/SongMenu.qml:139
 #, kde-format
 msgid "Share Song"
 msgstr "Kopīgot dziesmu"
 
-#: contents/ui/MaximizedPlayerPage.qml:813
+#: contents/ui/MaximizedPlayerPage.qml:815
 #, kde-format
 msgid "Add to a local playlist"
 msgstr "Pievienot lokālajam repertuāram"
 
-#: contents/ui/MaximizedPlayerPage.qml:850
+#: contents/ui/MaximizedPlayerPage.qml:852
 #, kde-format
 msgid "Hide Queue"
 msgstr "Slēpt rindu"
 
-#: contents/ui/MaximizedPlayerPage.qml:850
+#: contents/ui/MaximizedPlayerPage.qml:852
 #, kde-format
 msgid "Show Queue"
 msgstr "Rādīt rindu"
 
-#: contents/ui/MaximizedPlayerPage.qml:1082
-#: contents/ui/MaximizedPlayerPage.qml:1327
+#: contents/ui/MaximizedPlayerPage.qml:1084
+#: contents/ui/MaximizedPlayerPage.qml:1329
 #, kde-format
 msgid "Remove Song"
 msgstr "Noņemt dziesmu"
 
-#: contents/ui/MaximizedPlayerPage.qml:1117
+#: contents/ui/MaximizedPlayerPage.qml:1119
 #, kde-format
 msgid "Clear Queue"
 msgstr "Notīrīt rindu"
 
-#: contents/ui/MaximizedPlayerPage.qml:1142
+#: contents/ui/MaximizedPlayerPage.qml:1144
 #, kde-format
 msgid "Shuffle Queue"
 msgstr "Jaukt rindu"
 
-#: contents/ui/MaximizedPlayerPage.qml:1175
+#: contents/ui/MaximizedPlayerPage.qml:1177
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "Nākamās dziesmas"

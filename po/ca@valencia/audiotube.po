@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-23 00:50+0000\n"
+"POT-Creation-Date: 2026-10-01 17:39+0000\n"
 "PO-Revision-Date: 2026-02-20 13:02+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -303,84 +303,84 @@ msgstr "Tanca el reproductor maximitzat"
 msgid "No media playing"
 msgstr "No s'està reproduint cap fitxer multimèdia"
 
-#: contents/ui/MaximizedPlayerPage.qml:551 contents/ui/SongMenu.qml:107
+#: contents/ui/MaximizedPlayerPage.qml:553 contents/ui/SongMenu.qml:107
 #, kde-format
 msgid "Remove from Favorites"
 msgstr "Elimina de les preferides"
 
-#: contents/ui/MaximizedPlayerPage.qml:551 contents/ui/SongMenu.qml:107
+#: contents/ui/MaximizedPlayerPage.qml:553 contents/ui/SongMenu.qml:107
 #, kde-format
 msgid "Add to Favorites"
 msgstr "Afig a les preferides"
 
-#: contents/ui/MaximizedPlayerPage.qml:576
+#: contents/ui/MaximizedPlayerPage.qml:578
 #, kde-format
 msgid "Open Volume Drawer"
 msgstr "Obri el calaix del volum"
 
-#: contents/ui/MaximizedPlayerPage.qml:683
+#: contents/ui/MaximizedPlayerPage.qml:685
 #, kde-format
 msgid "Unmute Audio"
 msgstr "Activa el so de l'àudio"
 
-#: contents/ui/MaximizedPlayerPage.qml:683
+#: contents/ui/MaximizedPlayerPage.qml:685
 #, kde-format
 msgid "Mute Audio"
 msgstr "Silencia l'àudio"
 
-#: contents/ui/MaximizedPlayerPage.qml:722
+#: contents/ui/MaximizedPlayerPage.qml:724
 #, kde-format
 msgctxt "%1 is the audio volume in percent"
 msgid "%1%"
 msgstr "%1%"
 
-#: contents/ui/MaximizedPlayerPage.qml:752
+#: contents/ui/MaximizedPlayerPage.qml:754
 #, kde-format
 msgid "Hide Lyrics"
 msgstr "Oculta la lletra"
 
-#: contents/ui/MaximizedPlayerPage.qml:752
+#: contents/ui/MaximizedPlayerPage.qml:754
 #, kde-format
 msgid "Show Lyrics"
 msgstr "Mostra la lletra"
 
-#: contents/ui/MaximizedPlayerPage.qml:772 contents/ui/SongMenu.qml:139
+#: contents/ui/MaximizedPlayerPage.qml:774 contents/ui/SongMenu.qml:139
 #, kde-format
 msgid "Share Song"
 msgstr "Compartix una cançó"
 
-#: contents/ui/MaximizedPlayerPage.qml:813
+#: contents/ui/MaximizedPlayerPage.qml:815
 #, kde-format
 msgid "Add to a local playlist"
 msgstr "Afig a una llista de reproducció local"
 
-#: contents/ui/MaximizedPlayerPage.qml:850
+#: contents/ui/MaximizedPlayerPage.qml:852
 #, kde-format
 msgid "Hide Queue"
 msgstr "Oculta la cua"
 
-#: contents/ui/MaximizedPlayerPage.qml:850
+#: contents/ui/MaximizedPlayerPage.qml:852
 #, kde-format
 msgid "Show Queue"
 msgstr "Mostra la cua"
 
-#: contents/ui/MaximizedPlayerPage.qml:1082
-#: contents/ui/MaximizedPlayerPage.qml:1327
+#: contents/ui/MaximizedPlayerPage.qml:1084
+#: contents/ui/MaximizedPlayerPage.qml:1329
 #, kde-format
 msgid "Remove Song"
 msgstr "Elimina la cançó"
 
-#: contents/ui/MaximizedPlayerPage.qml:1117
+#: contents/ui/MaximizedPlayerPage.qml:1119
 #, kde-format
 msgid "Clear Queue"
 msgstr "Neteja la cua"
 
-#: contents/ui/MaximizedPlayerPage.qml:1142
+#: contents/ui/MaximizedPlayerPage.qml:1144
 #, kde-format
 msgid "Shuffle Queue"
 msgstr "Barreja la cua"
 
-#: contents/ui/MaximizedPlayerPage.qml:1175
+#: contents/ui/MaximizedPlayerPage.qml:1177
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "Cançons següents"

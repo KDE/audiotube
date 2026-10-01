@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-23 00:50+0000\n"
+"POT-Creation-Date: 2026-10-01 17:39+0000\n"
 "PO-Revision-Date: 2021-09-17 20:09+0530\n"
 "Last-Translator: Raghavendra Kamath <raghu@raghukamath.com>\n"
 "Language-Team: kde-hindi\n"
@@ -316,90 +316,90 @@ msgstr ""
 msgid "No media playing"
 msgstr "कोई मीडिया नहीं बजा रहा है"
 
-#: contents/ui/MaximizedPlayerPage.qml:551 contents/ui/SongMenu.qml:107
+#: contents/ui/MaximizedPlayerPage.qml:553 contents/ui/SongMenu.qml:107
 #, fuzzy, kde-format
 #| msgid "Playlists"
 msgid "Remove from Favorites"
 msgstr "गीत-सूचीयाँ"
 
-#: contents/ui/MaximizedPlayerPage.qml:551 contents/ui/SongMenu.qml:107
+#: contents/ui/MaximizedPlayerPage.qml:553 contents/ui/SongMenu.qml:107
 #, fuzzy, kde-format
 #| msgid "Add to Playlist"
 msgid "Add to Favorites"
 msgstr "गीत-सूची में जोड़ें"
 
-#: contents/ui/MaximizedPlayerPage.qml:576
+#: contents/ui/MaximizedPlayerPage.qml:578
 #, kde-format
 msgid "Open Volume Drawer"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:683
+#: contents/ui/MaximizedPlayerPage.qml:685
 #, kde-format
 msgid "Unmute Audio"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:683
+#: contents/ui/MaximizedPlayerPage.qml:685
 #, kde-format
 msgid "Mute Audio"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:722
+#: contents/ui/MaximizedPlayerPage.qml:724
 #, kde-format
 msgctxt "%1 is the audio volume in percent"
 msgid "%1%"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:752
+#: contents/ui/MaximizedPlayerPage.qml:754
 #, kde-format
 msgid "Hide Lyrics"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:752
+#: contents/ui/MaximizedPlayerPage.qml:754
 #, kde-format
 msgid "Show Lyrics"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:772 contents/ui/SongMenu.qml:139
+#: contents/ui/MaximizedPlayerPage.qml:774 contents/ui/SongMenu.qml:139
 #, kde-format
 msgid "Share Song"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:813
+#: contents/ui/MaximizedPlayerPage.qml:815
 #, fuzzy, kde-format
 #| msgid "Add to Playlist"
 msgid "Add to a local playlist"
 msgstr "गीत-सूची में जोड़ें"
 
-#: contents/ui/MaximizedPlayerPage.qml:850
+#: contents/ui/MaximizedPlayerPage.qml:852
 #, kde-format
 msgid "Hide Queue"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:850
+#: contents/ui/MaximizedPlayerPage.qml:852
 #, kde-format
 msgid "Show Queue"
 msgstr ""
 
-#: contents/ui/MaximizedPlayerPage.qml:1082
-#: contents/ui/MaximizedPlayerPage.qml:1327
+#: contents/ui/MaximizedPlayerPage.qml:1084
+#: contents/ui/MaximizedPlayerPage.qml:1329
 #, fuzzy, kde-format
 #| msgid "Playlists"
 msgid "Remove Song"
 msgstr "गीत-सूचीयाँ"
 
-#: contents/ui/MaximizedPlayerPage.qml:1117
+#: contents/ui/MaximizedPlayerPage.qml:1119
 #, fuzzy, kde-format
 #| msgid "Clear"
 msgid "Clear Queue"
 msgstr "साफ करें"
 
-#: contents/ui/MaximizedPlayerPage.qml:1142
+#: contents/ui/MaximizedPlayerPage.qml:1144
 #, fuzzy, kde-format
 #| msgid "Shuffle"
 msgid "Shuffle Queue"
 msgstr "फेंटें"
 
-#: contents/ui/MaximizedPlayerPage.qml:1175
+#: contents/ui/MaximizedPlayerPage.qml:1177
 #, kde-format
 msgid "Upcoming Songs"
 msgstr ""

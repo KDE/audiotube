@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-23 00:50+0000\n"
+"POT-Creation-Date: 2026-10-01 17:39+0000\n"
 "PO-Revision-Date: 2026-05-02 19:10+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -300,84 +300,84 @@ msgstr "Büyütülmüş Çaları Kapat"
 msgid "No media playing"
 msgstr "Ortam çalmıyor"
 
-#: contents/ui/MaximizedPlayerPage.qml:551 contents/ui/SongMenu.qml:107
+#: contents/ui/MaximizedPlayerPage.qml:553 contents/ui/SongMenu.qml:107
 #, kde-format
 msgid "Remove from Favorites"
 msgstr "Favorilerden Kaldır"
 
-#: contents/ui/MaximizedPlayerPage.qml:551 contents/ui/SongMenu.qml:107
+#: contents/ui/MaximizedPlayerPage.qml:553 contents/ui/SongMenu.qml:107
 #, kde-format
 msgid "Add to Favorites"
 msgstr "Favorilere Ekle"
 
-#: contents/ui/MaximizedPlayerPage.qml:576
+#: contents/ui/MaximizedPlayerPage.qml:578
 #, kde-format
 msgid "Open Volume Drawer"
 msgstr "Ses Düzeyi Çekmecesini Aç"
 
-#: contents/ui/MaximizedPlayerPage.qml:683
+#: contents/ui/MaximizedPlayerPage.qml:685
 #, kde-format
 msgid "Unmute Audio"
 msgstr "Sesi Aç"
 
-#: contents/ui/MaximizedPlayerPage.qml:683
+#: contents/ui/MaximizedPlayerPage.qml:685
 #, kde-format
 msgid "Mute Audio"
 msgstr "Sesi Kapat"
 
-#: contents/ui/MaximizedPlayerPage.qml:722
+#: contents/ui/MaximizedPlayerPage.qml:724
 #, kde-format
 msgctxt "%1 is the audio volume in percent"
 msgid "%1%"
 msgstr "%​%1"
 
-#: contents/ui/MaximizedPlayerPage.qml:752
+#: contents/ui/MaximizedPlayerPage.qml:754
 #, kde-format
 msgid "Hide Lyrics"
 msgstr "Şarkı Sözlerini Gizle"
 
-#: contents/ui/MaximizedPlayerPage.qml:752
+#: contents/ui/MaximizedPlayerPage.qml:754
 #, kde-format
 msgid "Show Lyrics"
 msgstr "Şarkı Sözlerini Göster"
 
-#: contents/ui/MaximizedPlayerPage.qml:772 contents/ui/SongMenu.qml:139
+#: contents/ui/MaximizedPlayerPage.qml:774 contents/ui/SongMenu.qml:139
 #, kde-format
 msgid "Share Song"
 msgstr "Şarkıyı Paylaş"
 
-#: contents/ui/MaximizedPlayerPage.qml:813
+#: contents/ui/MaximizedPlayerPage.qml:815
 #, kde-format
 msgid "Add to a local playlist"
 msgstr "Yerel bir çalma listesine ekle"
 
-#: contents/ui/MaximizedPlayerPage.qml:850
+#: contents/ui/MaximizedPlayerPage.qml:852
 #, kde-format
 msgid "Hide Queue"
 msgstr "Kuyruğu Gizle"
 
-#: contents/ui/MaximizedPlayerPage.qml:850
+#: contents/ui/MaximizedPlayerPage.qml:852
 #, kde-format
 msgid "Show Queue"
 msgstr "Kuyruğu Göster"
 
-#: contents/ui/MaximizedPlayerPage.qml:1082
-#: contents/ui/MaximizedPlayerPage.qml:1327
+#: contents/ui/MaximizedPlayerPage.qml:1084
+#: contents/ui/MaximizedPlayerPage.qml:1329
 #, kde-format
 msgid "Remove Song"
 msgstr "Şarkıyı Kaldır"
 
-#: contents/ui/MaximizedPlayerPage.qml:1117
+#: contents/ui/MaximizedPlayerPage.qml:1119
 #, kde-format
 msgid "Clear Queue"
 msgstr "Kuyruğu Temizle"
 
-#: contents/ui/MaximizedPlayerPage.qml:1142
+#: contents/ui/MaximizedPlayerPage.qml:1144
 #, kde-format
 msgid "Shuffle Queue"
 msgstr "Kuyruğu Karıştır"
 
-#: contents/ui/MaximizedPlayerPage.qml:1175
+#: contents/ui/MaximizedPlayerPage.qml:1177
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "Sıradaki Şarkılar"
