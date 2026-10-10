@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-01 17:39+0000\n"
-"PO-Revision-Date: 2026-02-21 14:11+0200\n"
+"PO-Revision-Date: 2026-10-09 15:24+0200\n"
 "Last-Translator: Alexander Yavorskiy <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
 "Language: ru\n"
@@ -446,7 +446,7 @@ msgstr "Лучшие результаты"
 #: contents/ui/SearchPage.qml:41 playlistimporter.cpp:24
 #, kde-format
 msgid "Unknown"
-msgstr "Неизвестный тип"
+msgstr "Неизвестно"
 
 #: contents/ui/SearchPage.qml:74
 #, kde-format
