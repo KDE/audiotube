@@ -49,8 +49,15 @@ QUrl VideoInfoExtractor::audioUrl() const
         return (!format.acodec.has_value() || format.acodec != "none") && format.vcodec == "none";
     });
 
-    std::sort(audioFormats.begin(), audioFormats.end(), [](const video_info::Format &a, const video_info::Format &b) {
-        return a.quality > b.quality;
+    const auto isOpus = [](const video_info::Format &format) {
+        return format.acodec == "opus";
+    };
+
+    std::stable_sort(audioFormats.begin(), audioFormats.end(), [&](const video_info::Format &a, const video_info::Format &b) {
+        if (a.quality != b.quality) {
+            return a.quality > b.quality;
+        }
+        return isOpus(a) && !isOpus(b);
     });
 
     if (audioFormats.empty()) {
