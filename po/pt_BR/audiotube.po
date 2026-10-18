@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 17:39+0000\n"
+"POT-Creation-Date: 2026-10-18 00:48+0000\n"
 "PO-Revision-Date: 2026-02-20 09:14-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -171,7 +171,7 @@ msgstr "URL da lista de músicas (Youtube)"
 msgid "Add Song to Playlist"
 msgstr "Adicionar música à lista de músicas"
 
-#: contents/ui/dialogs/PlaylistDialog.qml:27
+#: contents/ui/dialogs/PlaylistDialog.qml:29
 #: contents/ui/LocalPlaylistsPage.qml:105
 #: contents/ui/LocalPlaylistsPage.qml:131
 #: contents/ui/LocalPlaylistsPage.qml:149
@@ -349,38 +349,38 @@ msgstr "Mostrar letras"
 msgid "Share Song"
 msgstr "Compartilhar música"
 
-#: contents/ui/MaximizedPlayerPage.qml:815
+#: contents/ui/MaximizedPlayerPage.qml:819
 #, kde-format
 msgid "Add to a local playlist"
 msgstr "Adicionar à lista de músicas local"
 
-#: contents/ui/MaximizedPlayerPage.qml:852
+#: contents/ui/MaximizedPlayerPage.qml:856
 #, kde-format
 msgid "Hide Queue"
 msgstr "Ocultar fila"
 
-#: contents/ui/MaximizedPlayerPage.qml:852
+#: contents/ui/MaximizedPlayerPage.qml:856
 #, kde-format
 msgid "Show Queue"
 msgstr "Mostrar fila"
 
-#: contents/ui/MaximizedPlayerPage.qml:1084
-#: contents/ui/MaximizedPlayerPage.qml:1329
+#: contents/ui/MaximizedPlayerPage.qml:1088
+#: contents/ui/MaximizedPlayerPage.qml:1333
 #, kde-format
 msgid "Remove Song"
 msgstr "Remover música"
 
-#: contents/ui/MaximizedPlayerPage.qml:1119
+#: contents/ui/MaximizedPlayerPage.qml:1123
 #, kde-format
 msgid "Clear Queue"
 msgstr "Limpar fila"
 
-#: contents/ui/MaximizedPlayerPage.qml:1144
+#: contents/ui/MaximizedPlayerPage.qml:1148
 #, kde-format
 msgid "Shuffle Queue"
 msgstr "Embaralhar fila"
 
-#: contents/ui/MaximizedPlayerPage.qml:1177
+#: contents/ui/MaximizedPlayerPage.qml:1181
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "Próximas músicas"

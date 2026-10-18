@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 17:39+0000\n"
+"POT-Creation-Date: 2026-10-18 00:48+0000\n"
 "PO-Revision-Date: 2026-03-16 11:35+0100\n"
 "Last-Translator:  Vít Pelčák <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -168,7 +168,7 @@ msgstr "URL seznamu skladeb (Youtube)"
 msgid "Add Song to Playlist"
 msgstr "Přidat píseň do seznamu skladeb"
 
-#: contents/ui/dialogs/PlaylistDialog.qml:27
+#: contents/ui/dialogs/PlaylistDialog.qml:29
 #: contents/ui/LocalPlaylistsPage.qml:105
 #: contents/ui/LocalPlaylistsPage.qml:131
 #: contents/ui/LocalPlaylistsPage.qml:149
@@ -346,38 +346,38 @@ msgstr "Zobrazit text písně"
 msgid "Share Song"
 msgstr "Sdílet píseň"
 
-#: contents/ui/MaximizedPlayerPage.qml:815
+#: contents/ui/MaximizedPlayerPage.qml:819
 #, kde-format
 msgid "Add to a local playlist"
 msgstr "Přidat do místního seznamu stop"
 
-#: contents/ui/MaximizedPlayerPage.qml:852
+#: contents/ui/MaximizedPlayerPage.qml:856
 #, kde-format
 msgid "Hide Queue"
 msgstr "Skrýt frontu"
 
-#: contents/ui/MaximizedPlayerPage.qml:852
+#: contents/ui/MaximizedPlayerPage.qml:856
 #, kde-format
 msgid "Show Queue"
 msgstr "Zobrazit frontu"
 
-#: contents/ui/MaximizedPlayerPage.qml:1084
-#: contents/ui/MaximizedPlayerPage.qml:1329
+#: contents/ui/MaximizedPlayerPage.qml:1088
+#: contents/ui/MaximizedPlayerPage.qml:1333
 #, kde-format
 msgid "Remove Song"
 msgstr "Odstranit skladbu"
 
-#: contents/ui/MaximizedPlayerPage.qml:1119
+#: contents/ui/MaximizedPlayerPage.qml:1123
 #, kde-format
 msgid "Clear Queue"
 msgstr "Vymazat frontu"
 
-#: contents/ui/MaximizedPlayerPage.qml:1144
+#: contents/ui/MaximizedPlayerPage.qml:1148
 #, kde-format
 msgid "Shuffle Queue"
 msgstr "Zamíchat frontu"
 
-#: contents/ui/MaximizedPlayerPage.qml:1177
+#: contents/ui/MaximizedPlayerPage.qml:1181
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "Nadcházející písně"

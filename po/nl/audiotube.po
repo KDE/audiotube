@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 17:39+0000\n"
+"POT-Creation-Date: 2026-10-18 00:48+0000\n"
 "PO-Revision-Date: 2026-02-20 13:39+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -168,7 +168,7 @@ msgstr "URL van afspeellijst (Youtube)"
 msgid "Add Song to Playlist"
 msgstr "Song aan afspeellijst toevoegen"
 
-#: contents/ui/dialogs/PlaylistDialog.qml:27
+#: contents/ui/dialogs/PlaylistDialog.qml:29
 #: contents/ui/LocalPlaylistsPage.qml:105
 #: contents/ui/LocalPlaylistsPage.qml:131
 #: contents/ui/LocalPlaylistsPage.qml:149
@@ -346,38 +346,38 @@ msgstr "Liedteksten tonen"
 msgid "Share Song"
 msgstr "Songs delen"
 
-#: contents/ui/MaximizedPlayerPage.qml:815
+#: contents/ui/MaximizedPlayerPage.qml:819
 #, kde-format
 msgid "Add to a local playlist"
 msgstr "Aan een lokale afspeellijst toevoegen"
 
-#: contents/ui/MaximizedPlayerPage.qml:852
+#: contents/ui/MaximizedPlayerPage.qml:856
 #, kde-format
 msgid "Hide Queue"
 msgstr "Wachtrij verbergen"
 
-#: contents/ui/MaximizedPlayerPage.qml:852
+#: contents/ui/MaximizedPlayerPage.qml:856
 #, kde-format
 msgid "Show Queue"
 msgstr "Wachtrij tonen"
 
-#: contents/ui/MaximizedPlayerPage.qml:1084
-#: contents/ui/MaximizedPlayerPage.qml:1329
+#: contents/ui/MaximizedPlayerPage.qml:1088
+#: contents/ui/MaximizedPlayerPage.qml:1333
 #, kde-format
 msgid "Remove Song"
 msgstr "Song verwijderen"
 
-#: contents/ui/MaximizedPlayerPage.qml:1119
+#: contents/ui/MaximizedPlayerPage.qml:1123
 #, kde-format
 msgid "Clear Queue"
 msgstr "Wachtrij wissen"
 
-#: contents/ui/MaximizedPlayerPage.qml:1144
+#: contents/ui/MaximizedPlayerPage.qml:1148
 #, kde-format
 msgid "Shuffle Queue"
 msgstr "Wachtrij voor willekeurig afspelen"
 
-#: contents/ui/MaximizedPlayerPage.qml:1177
+#: contents/ui/MaximizedPlayerPage.qml:1181
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "Aankomende songs"

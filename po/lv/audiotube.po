@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 17:39+0000\n"
+"POT-Creation-Date: 2026-10-18 00:48+0000\n"
 "PO-Revision-Date: 2026-03-04 14:41+0200\n"
 "Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -169,7 +169,7 @@ msgstr "Repertuāra URL („Youtube“)"
 msgid "Add Song to Playlist"
 msgstr "Pievienot repertuāram dziesmu"
 
-#: contents/ui/dialogs/PlaylistDialog.qml:27
+#: contents/ui/dialogs/PlaylistDialog.qml:29
 #: contents/ui/LocalPlaylistsPage.qml:105
 #: contents/ui/LocalPlaylistsPage.qml:131
 #: contents/ui/LocalPlaylistsPage.qml:149
@@ -347,38 +347,38 @@ msgstr "Rādīt vārdus"
 msgid "Share Song"
 msgstr "Kopīgot dziesmu"
 
-#: contents/ui/MaximizedPlayerPage.qml:815
+#: contents/ui/MaximizedPlayerPage.qml:819
 #, kde-format
 msgid "Add to a local playlist"
 msgstr "Pievienot lokālajam repertuāram"
 
-#: contents/ui/MaximizedPlayerPage.qml:852
+#: contents/ui/MaximizedPlayerPage.qml:856
 #, kde-format
 msgid "Hide Queue"
 msgstr "Slēpt rindu"
 
-#: contents/ui/MaximizedPlayerPage.qml:852
+#: contents/ui/MaximizedPlayerPage.qml:856
 #, kde-format
 msgid "Show Queue"
 msgstr "Rādīt rindu"
 
-#: contents/ui/MaximizedPlayerPage.qml:1084
-#: contents/ui/MaximizedPlayerPage.qml:1329
+#: contents/ui/MaximizedPlayerPage.qml:1088
+#: contents/ui/MaximizedPlayerPage.qml:1333
 #, kde-format
 msgid "Remove Song"
 msgstr "Noņemt dziesmu"
 
-#: contents/ui/MaximizedPlayerPage.qml:1119
+#: contents/ui/MaximizedPlayerPage.qml:1123
 #, kde-format
 msgid "Clear Queue"
 msgstr "Notīrīt rindu"
 
-#: contents/ui/MaximizedPlayerPage.qml:1144
+#: contents/ui/MaximizedPlayerPage.qml:1148
 #, kde-format
 msgid "Shuffle Queue"
 msgstr "Jaukt rindu"
 
-#: contents/ui/MaximizedPlayerPage.qml:1177
+#: contents/ui/MaximizedPlayerPage.qml:1181
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "Nākamās dziesmas"

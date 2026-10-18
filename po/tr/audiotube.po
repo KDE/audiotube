@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-01 17:39+0000\n"
+"POT-Creation-Date: 2026-10-18 00:48+0000\n"
 "PO-Revision-Date: 2026-05-02 19:10+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -168,7 +168,7 @@ msgstr "Çalma Listesi URL’si (YouTube)"
 msgid "Add Song to Playlist"
 msgstr "Çalma Listesine Şarkı Ekle"
 
-#: contents/ui/dialogs/PlaylistDialog.qml:27
+#: contents/ui/dialogs/PlaylistDialog.qml:29
 #: contents/ui/LocalPlaylistsPage.qml:105
 #: contents/ui/LocalPlaylistsPage.qml:131
 #: contents/ui/LocalPlaylistsPage.qml:149
@@ -346,38 +346,38 @@ msgstr "Şarkı Sözlerini Göster"
 msgid "Share Song"
 msgstr "Şarkıyı Paylaş"
 
-#: contents/ui/MaximizedPlayerPage.qml:815
+#: contents/ui/MaximizedPlayerPage.qml:819
 #, kde-format
 msgid "Add to a local playlist"
 msgstr "Yerel bir çalma listesine ekle"
 
-#: contents/ui/MaximizedPlayerPage.qml:852
+#: contents/ui/MaximizedPlayerPage.qml:856
 #, kde-format
 msgid "Hide Queue"
 msgstr "Kuyruğu Gizle"
 
-#: contents/ui/MaximizedPlayerPage.qml:852
+#: contents/ui/MaximizedPlayerPage.qml:856
 #, kde-format
 msgid "Show Queue"
 msgstr "Kuyruğu Göster"
 
-#: contents/ui/MaximizedPlayerPage.qml:1084
-#: contents/ui/MaximizedPlayerPage.qml:1329
+#: contents/ui/MaximizedPlayerPage.qml:1088
+#: contents/ui/MaximizedPlayerPage.qml:1333
 #, kde-format
 msgid "Remove Song"
 msgstr "Şarkıyı Kaldır"
 
-#: contents/ui/MaximizedPlayerPage.qml:1119
+#: contents/ui/MaximizedPlayerPage.qml:1123
 #, kde-format
 msgid "Clear Queue"
 msgstr "Kuyruğu Temizle"
 
-#: contents/ui/MaximizedPlayerPage.qml:1144
+#: contents/ui/MaximizedPlayerPage.qml:1148
 #, kde-format
 msgid "Shuffle Queue"
 msgstr "Kuyruğu Karıştır"
 
-#: contents/ui/MaximizedPlayerPage.qml:1177
+#: contents/ui/MaximizedPlayerPage.qml:1181
 #, kde-format
 msgid "Upcoming Songs"
 msgstr "Sıradaki Şarkılar"
