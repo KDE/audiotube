@@ -801,11 +801,15 @@ Item {
                             let videoId = UserPlaylistModel.data(index, UserPlaylistModel.VideoId)
                             let title = UserPlaylistModel.data(index, UserPlaylistModel.Title)
                             let artist = UserPlaylistModel.data(index, UserPlaylistModel.Artists)
+                            let artistId = UserPlaylistModel.data(index, UserPlaylistModel.ArtistId)
                             let album = UserPlaylistModel.data(index, UserPlaylistModel.Album)
+                            let albumId = UserPlaylistModel.data(index, UserPlaylistModel.AlbumId)
                             playlistsDialog.videoId = videoId
                             playlistsDialog.songTitle = title
                             playlistsDialog.artists = artist
+                            playlistsDialog.artistId = artistId
                             playlistsDialog.album = album
+                            playlistsDialog.albumId = albumId
 
                             playlistsDialog.open()
                         }

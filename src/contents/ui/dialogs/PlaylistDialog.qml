@@ -19,7 +19,9 @@ Kirigami.Dialog {
     property string videoId
     property string songTitle
     property string artists
+    property string artistId
     property string album: ""
+    property string albumId
 
     standardButtons: Kirigami.Dialog.NoButton
     customFooterActions: [
@@ -104,7 +106,7 @@ Kirigami.Dialog {
             }
 
             onClicked: {
-                localPlaylistsModel.addPlaylistEntry(playlistId, videoId, songTitle, artists, album )
+                localPlaylistsModel.addPlaylistEntry(playlistId, videoId, songTitle, artists, artistId, album, albumId)
                 playlistsDialog.close()
             }
         }
