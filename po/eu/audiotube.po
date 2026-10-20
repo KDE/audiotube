@@ -1,16 +1,16 @@
 # Translation for audiotube.po to Euskara/Basque (eu).
-# Copyright (C) 2021-2025 This file is copyright:
+# Copyright (C) 2021-2026 This file is copyright:
 # This file is distributed under the same license as the audiotube package.
-# KDE euskaratzeko proiektuaren arduraduna <xalba@ni.es>.
+# KDE euskaratzeko proiektuko arduraduna <xalba@ni.es>.
 #
 # Translators:
-# SPDX-FileCopyrightText: 2021, 2022, 2023, 2024, 2025 Iñigo Salvador Azurmendi <xalba@ni.eus>
+# SPDX-FileCopyrightText: 2021-2026 Iñigo Salvador Azurmendi <xalba@ni.eus>
 msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-18 00:48+0000\n"
-"PO-Revision-Date: 2025-10-18 16:52+0200\n"
+"PO-Revision-Date: 2026-10-19 23:54+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 25.08.1\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #: asyncytmusic.cpp:65
 #, kde-format
@@ -72,8 +72,7 @@ msgid "Share"
 msgstr "Partekatu"
 
 #: contents/ui/AlbumPage.qml:109
-#, fuzzy, kde-format
-#| msgid "Album • %1"
+#, kde-format
 msgctxt "%1 is the artist(s) featured in the album"
 msgid "Album • %1"
 msgstr "Albuma • %1"
@@ -96,10 +95,7 @@ msgid "Artist"
 msgstr "Artista"
 
 #: contents/ui/ArtistPage.qml:128
-#, fuzzy, kde-format
-#| msgid ""
-#| "Video playback is not supported yet. Do you want to play only the audio "
-#| "of \"%1\"?"
+#, kde-format
 msgctxt "%1 is a video title"
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
@@ -131,7 +127,7 @@ msgstr "Bideoak"
 #: contents/ui/BentoCard.qml:158
 #, kde-format
 msgid "More options"
-msgstr ""
+msgstr "Aukera gehiago"
 
 #: contents/ui/ConfirmationMessage.qml:16
 #, kde-format
@@ -192,24 +188,23 @@ msgstr "Berrizendatu jotze-zerrenda"
 #, kde-format
 msgctxt "@title:window"
 msgid "Explore"
-msgstr ""
+msgstr "Esploratu"
 
 #: contents/ui/HeroCard.qml:128
 #, kde-format
 msgid "Featured Pick"
-msgstr ""
+msgstr "Nabarmendutako aukera"
 
 #: contents/ui/HeroCard.qml:167
-#, fuzzy, kde-format
-#| msgid "Play Next"
+#, kde-format
 msgid "Play Now"
-msgstr "Jo hurrengoa"
+msgstr "Orain jo"
 
 #: contents/ui/HomePage.qml:18
 #, kde-format
 msgctxt "@title:window"
 msgid "Home"
-msgstr ""
+msgstr "Etxea"
 
 #: contents/ui/LibraryPage.qml:32 contents/ui/LibraryPage.qml:135
 #: contents/ui/NavigationBar.qml:47 contents/ui/NavigationBar.qml:53
@@ -334,8 +329,7 @@ msgid "Mute Audio"
 msgstr "Isilarazi audioa"
 
 #: contents/ui/MaximizedPlayerPage.qml:724
-#, fuzzy, kde-format
-#| msgid "%1%"
+#, kde-format
 msgctxt "%1 is the audio volume in percent"
 msgid "%1%"
 msgstr "%%1"
@@ -372,10 +366,9 @@ msgstr "Erakutsi ilara"
 
 #: contents/ui/MaximizedPlayerPage.qml:1088
 #: contents/ui/MaximizedPlayerPage.qml:1333
-#, fuzzy, kde-format
-#| msgid "Remove Favorite"
+#, kde-format
 msgid "Remove Song"
-msgstr "Kendu gogokoa"
+msgstr "Abestia kendu"
 
 #: contents/ui/MaximizedPlayerPage.qml:1123
 #, kde-format
@@ -397,8 +390,8 @@ msgstr "Hurrengo abestiak"
 msgctxt "song count"
 msgid "%1 song"
 msgid_plural "%1 songs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Abesti %1"
+msgstr[1] "%1 abesti"
 
 #: contents/ui/NavigationBar.qml:23 contents/ui/Sidebar.qml:124
 #, kde-format
@@ -456,10 +449,7 @@ msgid "Unknown"
 msgstr "Ezezaguna"
 
 #: contents/ui/SearchPage.qml:74
-#, fuzzy, kde-format
-#| msgid ""
-#| "Video playback is not supported yet. Do you want to play only the audio "
-#| "of \"%1\"?"
+#, kde-format
 msgctxt "%1 is a video title"
 msgid ""
 "Video playback is not supported yet. Do you want to play only the audio of "
@@ -481,12 +471,12 @@ msgstr "Partekatu honi,"
 #: contents/ui/Sidebar.qml:108
 #, kde-format
 msgid "Home"
-msgstr ""
+msgstr "Etxea"
 
 #: contents/ui/Sidebar.qml:176
 #, kde-format
 msgid "Explore"
-msgstr ""
+msgstr "Esploratu"
 
 #: contents/ui/Sidebar.qml:233
 #, kde-format
@@ -525,10 +515,9 @@ msgid "Stream music from YouTube Music"
 msgstr "«YouTube Music»etik musika korrontea"
 
 #: main.cpp:56
-#, fuzzy, kde-format
-#| msgid "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Community"
+#, kde-format
 msgid "© 2021–2024 Jonah Brüchert, 2021–2024 KDE Community"
-msgstr "© 2021-2024 Jonah Brüchert, 2021-2024 KDE Komunitatea"
+msgstr "© 2021–2024 Jonah Brüchert, 2021–2024 KDE Komunitatea"
 
 #: main.cpp:57
 #, kde-format
