@@ -332,7 +332,7 @@ msgstr "Silencia l'àudio"
 #, kde-format
 msgctxt "%1 is the audio volume in percent"
 msgid "%1%"
-msgstr "%1%"
+msgstr "%1 %"
 
 #: contents/ui/MaximizedPlayerPage.qml:739
 #, kde-format
