@@ -42,7 +42,11 @@ Kirigami.ApplicationWindow {
             pageStack.initialPage = pool.loadPage(Qt.resolvedUrl("./LocalPlaylistsPage.qml"))
             break;
         default:
-            pageStack.initialPage = pool.loadPage(Qt.resolvedUrl('./HomePage.qml'))
+            if (Kirigami.Settings.isMobile) {
+                pageStack.initialPage = pool.loadPage(Qt.resolvedUrl('./LibraryPage.qml'))
+            } else  {
+                pageStack.initialPage = pool.loadPage(Qt.resolvedUrl('./HomePage.qml'))
+            }
         }
     }
 
