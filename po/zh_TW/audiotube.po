@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-18 00:48+0000\n"
+"POT-Creation-Date: 2026-11-11 03:10+0000\n"
 "PO-Revision-Date: 2026-03-02 04:56+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -279,12 +279,12 @@ msgstr "尚未加入歌曲到此播放清單"
 msgid "Import Playlist"
 msgstr "匯入播放清單"
 
-#: contents/ui/Main.qml:160 main.cpp:52
+#: contents/ui/Main.qml:164 main.cpp:52
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
 
-#: contents/ui/Main.qml:311
+#: contents/ui/Main.qml:315
 #, kde-format
 msgid "No song playing"
 msgstr "沒有播放歌曲"

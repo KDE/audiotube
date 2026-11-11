@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-18 00:48+0000\n"
+"POT-Creation-Date: 2026-11-11 03:10+0000\n"
 "PO-Revision-Date: 2026-02-21 08:57+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: \n"
@@ -278,12 +278,12 @@ msgstr "La liste de lecture est vide pour l'instant."
 msgid "Import Playlist"
 msgstr "Importer une liste de lecture"
 
-#: contents/ui/Main.qml:160 main.cpp:52
+#: contents/ui/Main.qml:164 main.cpp:52
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
 
-#: contents/ui/Main.qml:311
+#: contents/ui/Main.qml:315
 #, kde-format
 msgid "No song playing"
 msgstr "Aucune chanson en lecture"
