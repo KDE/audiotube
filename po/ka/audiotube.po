@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: audiotube\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-18 00:48+0000\n"
+"POT-Creation-Date: 2026-11-11 01:00+0000\n"
 "PO-Revision-Date: 2026-02-20 06:32+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -279,12 +279,12 @@ msgstr "ეს დასაკრავი სია ჯერ კიდევ �
 msgid "Import Playlist"
 msgstr "დასაკრავი სიის შემოტანა"
 
-#: contents/ui/Main.qml:160 main.cpp:52
+#: contents/ui/Main.qml:164 main.cpp:52
 #, kde-format
 msgid "AudioTube"
 msgstr "AudioTube"
 
-#: contents/ui/Main.qml:311
+#: contents/ui/Main.qml:315
 #, kde-format
 msgid "No song playing"
 msgstr "არაფერს ვუკრავ"
