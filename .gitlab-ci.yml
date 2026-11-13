@@ -7,4 +7,5 @@ include:
     file:
      - /gitlab-templates/reuse-lint.yml
      - /gitlab-templates/flatpak.yml
+     - /gitlab-templates/flatpak-arm64.yml
      - /gitlab-templates/snap-snapcraft-lxd.yml
