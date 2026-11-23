@@ -562,9 +562,3 @@ msgstr "无标题"
 #, kde-format
 msgid "No album"
 msgstr "无专辑"
-
-#~ msgid "Copy Link"
-#~ msgstr "复制链接"
-
-#~ msgid "Link copied to clipboard"
-#~ msgstr "链接已复制到剪贴板"
